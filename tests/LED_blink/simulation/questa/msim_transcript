@@ -1,0 +1,1133 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:29:49 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 13:29:49 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:29:49 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 13:29:49 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 13:29:50 on Sep 10,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position 2  sim:/led_blink_tb/UUT/reset
+add wave -position 4  sim:/led_blink_tb/UUT/led_state
+add wave -position 0  sim:/led_blink_tb/UUT/clock
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:37:50 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 13:37:50 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:37:50 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 13:37:50 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 13:37:52 on Sep 10,2023, Elapsed time: 0:08:02
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 13:37:52 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:47:07 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 13:47:07 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:47:07 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 13:47:07 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 13:47:08 on Sep 10,2023, Elapsed time: 0:09:16
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 13:47:08 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+run
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:55:28 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 13:55:28 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:55:28 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 13:55:29 on Sep 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 13:55:30 on Sep 10,2023, Elapsed time: 0:08:22
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 13:55:30 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+run
+run
+run
+run
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:00:51 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:00:51 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:00:51 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:00:51 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:00:53 on Sep 10,2023, Elapsed time: 0:05:23
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:00:53 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:04:30 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:04:30 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:04:30 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:04:30 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:04:32 on Sep 10,2023, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:04:32 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:05:44 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:05:44 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:05:44 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:05:44 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:05:45 on Sep 10,2023, Elapsed time: 0:01:13
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:05:45 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/led_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:08:12 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:08:13 on Sep 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:08:13 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:08:13 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:08:14 on Sep 10,2023, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:08:14 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position 2  sim:/led_blink_tb/UUT/led_state
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:11:53 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:11:53 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:11:53 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:11:53 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:11:54 on Sep 10,2023, Elapsed time: 0:03:40
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:11:54 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/led_state
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+add wave -position 4  sim:/led_blink_tb/UUT/led_out
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:17:04 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:17:04 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:17:05 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:17:05 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:17:06 on Sep 10,2023, Elapsed time: 0:05:12
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:17:06 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+run
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:21:12 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:21:12 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:21:12 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:21:12 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:21:13 on Sep 10,2023, Elapsed time: 0:04:07
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:21:13 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position end  sim:/led_blink_tb/UUT/led_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:23:00 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:23:00 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:23:00 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:23:00 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:23:01 on Sep 10,2023, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:23:01 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+add wave -position 3  sim:/led_blink_tb/UUT/led_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:32:04 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:32:04 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:32:04 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:32:04 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:32:05 on Sep 10,2023, Elapsed time: 0:09:04
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:32:05 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position 2  sim:/led_blink_tb/UUT/led_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:35:42 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:35:43 on Sep 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:35:43 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:35:43 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:35:44 on Sep 10,2023, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:35:44 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:52:01 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 14:52:01 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:52:01 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 14:52:01 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 14:52:02 on Sep 10,2023, Elapsed time: 0:16:18
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 14:52:02 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/led
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:09:13 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 15:09:13 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:09:13 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 15:09:14 on Sep 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 15:09:14 on Sep 10,2023, Elapsed time: 0:17:12
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 15:09:14 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position 3  sim:/led_blink_tb/UUT/led
+add wave -position end  sim:/led_blink_tb/UUT/count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:54:36 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 15:54:36 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:54:36 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 15:54:36 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 15:54:37 on Sep 10,2023, Elapsed time: 0:45:23
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 15:54:37 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/led_out
+add wave -position 1  sim:/led_blink_tb/UUT/reset
+add wave -position 0  sim:/led_blink_tb/UUT/clock
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position 6  sim:/led_blink_tb/UUT/led_state
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+do LED_blink_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:12:07 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink
+# -- Compiling architecture rtl of LED_blink
+# End time: 16:12:07 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/LED_blink/LED_blink_TB.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:12:07 on Sep 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/LED_blink/LED_blink_TB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LED_blink_TB
+# -- Compiling architecture sim of LED_blink_TB
+# -- Loading entity LED_blink
+# End time: 16:12:07 on Sep 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  LED_blink_TB
+# End time: 16:12:09 on Sep 10,2023, Elapsed time: 0:17:32
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" LED_blink_TB 
+# Start time: 16:12:09 on Sep 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.led_blink_tb(sim)#1
+# Loading work.led_blink(rtl)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/led_blink_tb/UUT/count
+add wave -position 3  sim:/led_blink_tb/UUT/led_out
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+# End time: 14:14:01 on Sep 11,2023, Elapsed time: 22:01:52
+# Errors: 0, Warnings: 0

@@ -1,0 +1,122 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA/2023/LED_blink/simulation/questa
+T_opt
+!s110 1694376729
+VP8m`TDWIi`;Z>8=MAeJ5;2
+04 12 3 work led_blink_tb sim 1
+=1-d0509975fd67-64fe2319-1aa-555c
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Eled_blink
+Z2 w1694376161
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R1
+Z5 8C:/FPGA/2023/LED_blink/LED_blink.vhd
+Z6 FC:/FPGA/2023/LED_blink/LED_blink.vhd
+l0
+L10 1
+VhQzCAan6[KXaKUQWCcP4D3
+!s100 3Y1iX5eTnZFC2=Go8j^Rf1
+Z7 OL;C;2021.2;73
+31
+Z8 !s110 1694376727
+!i10b 1
+Z9 !s108 1694376727.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/LED_blink/LED_blink.vhd|
+Z11 !s107 C:/FPGA/2023/LED_blink/LED_blink.vhd|
+!i113 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+Z14 DEx4 work 9 led_blink 0 22 hQzCAan6[KXaKUQWCcP4D3
+!i122 0
+l21
+L18 28
+VanmNlO4H5Z3`U<]:l6EGH2
+!s100 fJ?jSm3McKjZ0jbiU>Cd72
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eled_blink_tb
+Z15 w1694375245
+R3
+R4
+!i122 1
+R1
+Z16 8C:/FPGA/2023/LED_blink/LED_blink_TB.vhd
+Z17 FC:/FPGA/2023/LED_blink/LED_blink_TB.vhd
+l0
+L4 1
+VC6oZPhTXTUFE^O6Uf4b6U0
+!s100 Fgf?7emUCG4bRTT?I9^n<3
+R7
+31
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/LED_blink/LED_blink_TB.vhd|
+Z19 !s107 C:/FPGA/2023/LED_blink/LED_blink_TB.vhd|
+!i113 0
+R12
+R13
+Asim
+R14
+R3
+R4
+DEx4 work 12 led_blink_tb 0 22 C6oZPhTXTUFE^O6Uf4b6U0
+!i122 1
+l13
+L7 22
+VZZcHiCOD@PNoza_en<KB30
+!s100 ;PW=?_NQ08S?K>>kE`:Hl3
+R7
+31
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 0
+R12
+R13

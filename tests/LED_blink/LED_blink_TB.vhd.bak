@@ -1,0 +1,37 @@
+-- https://vhdlwhiz.com/create-timer/
+-- https://github.com/vhdlf/blink/blob/master/blink.vhd
+-- https://www.youtube.com/watch?v=ypSjO5xVYOk
+-- LED_blink
+-- current configuration is 1/4 Hz
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity LED_blink is
+	port(
+    	clk_in  : in std_logic ; -- P11
+    	led_out : out std_logic := '1' -- A8
+     );
+end LED_blink;
+
+architecture rtl of LED_blink is
+    signal cnt: integer range 0 to 12500000;
+    signal led_state: std_logic := '0' ;  -- must be initialized to have toggleable value
+begin
+
+    process(clk_in, led_state) is
+    begin
+   	 led_out <= led_state ;
+   	 
+    	if rising_edge(clk_in) then
+        	if cnt < (12500000 - 1) then
+            	cnt <= cnt + 1 ;   		 
+        	else
+            	cnt <= 0 ;
+            	led_state <= NOT led_state ;
+        	end if;
+    	end if;
+
+	end process;
+end rtl;
