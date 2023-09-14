@@ -1,5 +1,5 @@
 # 1_proj_ADS
-EECE 5500 Advanced Digital Systems (FPGA)
+EECE 5500 Advanced Digital Systems Design (FPGA)
 
 ring_osc_gen.py : ring oscillator generator is the python file that generates ngspice files
 
@@ -11,8 +11,8 @@ it requires the following
   nand.cir
   inverter.cir
 
-i took a break from this project and have not re-verified functionality of it
-
 it uses ngspice 41
 
-use the command source <run_ring_osc_file> to
+double click ngspice.exe use the command:
+  source <run_ring_osc_file>
+  should overwrite existing generated files
