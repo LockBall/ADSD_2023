@@ -1,0 +1,33 @@
+*2-input NAND gate 
+* params are required defaults. Instance instantiation re-sets values.
+.SUBCKT nand inA inB out 1 0 params:
+    + tplv=65n tpwv=130n tpotv=1.95n
+    + tnln=65n tnwn=130n tnotv=1.85n
+    * Length   Width     toxe
+
+    * BSIM4 4.8.2 MOSFET models, parens optional
+    .model tp pmos (level = 54   version = 4.8.2   toxe = {tpotv})
+    .model tn nmos (level = 54   version = 4.8.2   toxe = {tnotv})
+
+    *pull-up transistors, original
+    *M1 1 inA out 1 tp L=56n W=448n AS=75.3f AD=75.3f PS=1.23u PD=1.23u 
+    *M2 1 inB out 1 tp L=56n W=448n AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+
+    *pull-up transistors, PMOS
+    * same as lecture
+    MP1 1 inA out 1 tp L={tplv} W={tpwv} AS=75.3f AD=75.3f PS=1.12u PD=1.23u
+    MP2 1 inB out 1 tp L={tplv} W={tpwv} AS=75.3f AD=75.3f PS=1.12u PD=1.23u
+    * adding in MP2 made output noisy
+
+
+    *pull-down transistors, original
+    *M3 out inA wC 0 tn L=56n W=224n AS=37.6f AD=37.6f PS= 784n PD=784n  
+    *M4 wC inB 0 0 tn L=56n W=224n AS=37.6f AD=37.6f PS= 784n PD=784n
+    * I swapped A & B to match the schematic in my report.
+    * this did not affect output
+
+    *pull-down transistors, NMOS
+    MN3 out inA wC 0 tn L={tnln} W={tnwn} AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+    MN4 wC  inB 0  0 tn L={tnln} W={tnwn}  AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+    * from lecture, inputs A & B were swapped, this does not affect output.
+.ENDS nand 

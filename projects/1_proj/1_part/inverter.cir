@@ -1,0 +1,15 @@
+* inverter
+* params are required defaults. Instance instantiation re-sets values.
+.SUBCKT inverter in out vdd 0 params:
+    + tplv=65n tpwv=130n tpotv=1.95n
+    + tnln=65n tnwn=130n tnotv=1.85n
+
+    * BSIM4 4.8.2 MOSFET models, parens optional
+    .model tp pmos level=54 version=4.8.2 toxe={tpotv}
+    .model tn nmos level=54 version=4.8.2 toxe={tnotv}
+
+    * transistor declaration, NO PARENS around 'variables'
+    MP vdd in out vdd tp L={tplv} W={tpwv} AS=75.3f AD=75.3f PS=1.23u PD=1.23u
+    MN out in 0    0  tn L={tnln} W={tnwn} AS=75.3f AD=75.3f PS=1.12u PD=1.23u
+
+.ENDS inverter
