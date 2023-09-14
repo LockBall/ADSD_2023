@@ -1,4 +1,4 @@
-# 1_proj_ADS
+# ADSD: 1_Proj, 1_part
 EECE 5500 Advanced Digital Systems Design (FPGA)
 
 ring_osc_gen.py (ring oscillator generator) is the python file that generates the ngspice files
