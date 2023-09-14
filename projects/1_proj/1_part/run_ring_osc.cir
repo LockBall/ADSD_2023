@@ -1,0 +1,35 @@
+* Generator created 01 Oct 2022 by John Lutz. Editeded 02 Oct 2022
+* This file generated on: 13 Sep 2023
+
+Vsup vdd 0 dc 1.2V
+
+    .include nand.cir
+    .include inverter.cir
+
+    .include ring_osc_0.cir
+    .include ring_osc_1.cir
+    .include ring_osc_2.cir
+    .include ring_osc_3.cir
+    .include ring_osc_4.cir
+    .include ring_osc_5.cir
+    .include ring_osc_6.cir
+    .include ring_osc_7.cir
+
+    x0 in0 out0_12 vdd 0 ring_osc_0
+    x1 in0 out1_12 vdd 0 ring_osc_1
+    x2 in0 out2_12 vdd 0 ring_osc_2
+    x3 in0 out3_12 vdd 0 ring_osc_3
+    x4 in0 out4_12 vdd 0 ring_osc_4
+    x5 in0 out5_12 vdd 0 ring_osc_5
+    x6 in0 out6_12 vdd 0 ring_osc_6
+    x7 in0 out7_12 vdd 0 ring_osc_7
+
+    Vin in0 0 pwl(0ns 0.00, 0.04ns 0) (0.05ns 1, 0.15ns 1) (0.16ns 0)
+
+    .control
+        option temp=27C
+        tran 0.1ns 0.5ns
+        run
+        plot v(in0) v(out0_12) v(out1_12) v(out2_12) v(out3_12) v(out4_12) v(out5_12) v(out6_12) v(out7_12) 
+    .endc
+.end

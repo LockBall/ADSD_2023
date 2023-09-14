@@ -2,7 +2,7 @@
 
 import random
 from datetime import date
-from tkinter.filedialog import askdirectory
+import os
 
 def rand_it(base_val, pct):
     upper_lim = base_val + (pct / 100 * base_val)
@@ -29,13 +29,13 @@ component_count = 13 # NAND & inverters total, nominal = 13, must be ODD, greate
 nand_exist = False
 ring_osc_subckt_count = 8 # makes the number
 
-user_selected_path = askdirectory()
-print("path is " + user_selected_path)
+current_directory = os.getcwd()
+print("path is " + current_directory)
 
 for count in range(ring_osc_subckt_count):
 
     file_name = '/ring_osc_' + str(count) + '.cir'
-    file_path_name = user_selected_path + file_name # use forward slashes !  'C:/FPGA/2023/ngspice/'
+    file_path_name = current_directory + file_name # use forward slashes !  'C:/FPGA/2023/ngspice/'
     ring_osc_cir_file = open(file_path_name, mode = 'w')
 
     intro = ['* Generator created 01 Oct 2022 by John Lutz. Editeded 02 Oct 2022\n',
@@ -110,7 +110,7 @@ for count in range(ring_osc_subckt_count):
 temp = '27C' # nominal 27, alts: 54, 13.5
 vdd = '1.2V' # nominal 1.2, alts: 1.5, 1.0
 tran_time = '0.5ns' # transient analysis duration
-filename = user_selected_path + '/run_ring_osc.cir' # 'C:/FPGA/2023/ngspice/
+filename = current_directory + '/run_ring_osc.cir' # 'C:/FPGA/2023/ngspice/
 run_ring_osc_file = open(filename, mode = 'w')
 
 supply = ['Vsup vdd 0 dc 1.2V\n\n']

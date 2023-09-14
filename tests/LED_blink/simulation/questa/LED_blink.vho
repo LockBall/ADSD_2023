@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "09/11/2023 11:09:08"
+-- DATE "09/13/2023 21:57:07"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
