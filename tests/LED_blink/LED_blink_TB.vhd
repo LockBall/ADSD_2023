@@ -8,7 +8,7 @@ architecture sim of LED_blink_TB is
 
 	signal clock_tb   : std_logic := '0' ; -- must be initialized to have toggleable value
 	signal reset_tb   : std_logic ;
-	signal led_tb : std_logic ;
+	signal led_tb     : std_logic ;
 
   begin
 

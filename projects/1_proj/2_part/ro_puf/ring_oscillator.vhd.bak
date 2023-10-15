@@ -1,0 +1,40 @@
+-- ring_oscillator.vhd
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ring_oscillator is
+
+	generic( -- needs to be first
+		constant inv_count : positive := 12 ; -- use EVEN # here to get ODD # of inverters
+	);
+	
+	port(
+		enable : in  std_logic;
+		ro_out 		 : out std_logic
+	);
+	
+end entity ring_oscillator;
+
+
+architecture rtl of ring_oscillator is
+
+	signal AND_out : STD_LOGIC;
+	
+   signal inv : std_logic_vector(0 to inv_count) := (others => '0'); -- all items set to 0
+	attribute keep : boolean;
+	attribute keep of inv : signal is true;
+
+  begin
+
+		AND_out <= enable AND inv(inv_count) after 0.01 ns; -- the output of the last inverter is applied as an input
+		inv(0) 	<= NOT AND_out  after 0.01 ns;
+
+		-- make all of the inverters except for the one for NAND
+		gen_inv: for i in 1 to inv_count generate -- dont start at 0 cause its for NAND
+			inv(i) <= not inv(i-1) after 0.01 ns;
+		end generate;
+		
+		o <= inv(inv_count); -- output is the last inverter
+	 
+end architecture;

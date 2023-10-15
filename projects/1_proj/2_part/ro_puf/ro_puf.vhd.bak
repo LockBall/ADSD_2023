@@ -1,0 +1,33 @@
+-- ro_puf.vhd
+-- instantiate 2 instances of a ring oscillator
+
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+
+entity ro_puf is
+
+	port(
+		enable : in  std_logic;
+		ro_out : in  std_logic;
+	);
+	
+end entity ro_puf;
+
+architecture rtl of ro_puf is 
+
+  begin
+	
+	inst_ro_0: entity work.ring_oscillator
+	port map(
+		enable => enable,
+		ro_out => ro_0_out
+	);
+	
+	inst_ro_1: entity work.ring_oscillator
+	port map(
+		enable => enable,
+		ro_out => ro_1_out
+	);
+
+end architecture;
