@@ -5,10 +5,10 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/FPGA/ro_puf/ring_oscillator.vhd}
-vcom -93 -work work {C:/FPGA/ro_puf/ro_puf.vhd}
+vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
+vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
 
-vcom -93 -work work {C:/FPGA/ro_puf/ro_puf_tb.vhd}
+vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
 
 vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
 

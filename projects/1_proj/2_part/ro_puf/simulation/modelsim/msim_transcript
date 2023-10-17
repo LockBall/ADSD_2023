@@ -10,10 +10,10 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/FPGA/ro_puf/ring_oscillator.vhd}
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:12:03 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ring_oscillator.vhd 
+# Start time: 14:21:46 on Oct 17,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -22,53 +22,49 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ring_oscillator
 # -- Compiling architecture rtl of ring_oscillator
-# End time: 13:12:03 on Oct 15,2023, Elapsed time: 0:00:00
+# End time: 14:21:46 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/ro_puf/ro_puf.vhd}
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:12:04 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ro_puf.vhd 
+# Start time: 14:21:46 on Oct 17,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package ro_ctr_ary
-# -- Loading package ro_ctr_ary
+# -- Loading package NUMERIC_STD
 # -- Compiling entity ro_puf
 # -- Compiling architecture rtl of ro_puf
 # -- Loading entity ring_oscillator
-# End time: 13:12:04 on Oct 15,2023, Elapsed time: 0:00:00
+# End time: 14:21:46 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/FPGA/ro_puf/ro_puf_tb.vhd}
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 13:12:04 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ro_puf_tb.vhd 
+# Start time: 14:21:46 on Oct 17,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package ro_ctr_ary
 # -- Compiling entity ro_puf_tb
 # -- Compiling architecture test_fixture of ro_puf_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
 # -- Loading entity ro_puf
-# End time: 13:12:04 on Oct 15,2023, Elapsed time: 0:00:00
+# End time: 14:21:46 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 13:12:04 on Oct 15,2023
+# Start time: 14:21:46 on Oct 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.ro_ctr_ary
+# Loading ieee.numeric_std(body)
 # Loading work.ro_puf_tb(test_fixture)
 # Loading work.ro_puf(rtl)
 # Loading work.ring_oscillator(rtl)
@@ -76,99 +72,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: D00D  Hostname: GAMEON  ProcessID: 20788
-#           Attempting to use alternate WLF file "./wlft93vv9a".
+#           Attempting to use alternate WLF file "./wlftyfsnv2".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft93vv9a
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
-do ro_puf_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/ro_puf/ring_oscillator.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:25:56 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ring_oscillator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ring_oscillator
-# -- Compiling architecture rtl of ring_oscillator
-# End time: 15:25:56 on Oct 15,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/ro_puf/ro_puf.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:25:56 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ro_puf.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package ro_ctr_ary
-# -- Loading package ro_ctr_ary
-# -- Compiling entity ro_puf
-# -- Compiling architecture rtl of ro_puf
-# -- Loading entity ring_oscillator
-# End time: 15:25:56 on Oct 15,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/ro_puf/ro_puf_tb.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:25:56 on Oct 15,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/ro_puf/ro_puf_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package ro_ctr_ary
-# -- Compiling entity ro_puf_tb
-# -- Compiling architecture test_fixture of ro_puf_tb
-# -- Loading entity ro_puf
-# End time: 15:25:56 on Oct 15,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
-# End time: 15:25:57 on Oct 15,2023, Elapsed time: 2:13:53
-# Errors: 0, Warnings: 4
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 15:25:57 on Oct 15,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.ro_ctr_ary
-# Loading work.ro_puf_tb(test_fixture)
-# Loading work.ro_puf(rtl)
-# Loading work.ring_oscillator(rtl)
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: D00D  Hostname: GAMEON  ProcessID: 20788
-#           Attempting to use alternate WLF file "./wlftfai9ni".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfai9ni
+#           Using alternate file: ./wlftyfsnv2
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals

@@ -1,16 +1,15 @@
 -- ro_puf.vhd
 
-library ieee;
-library work;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use ieee.std_logic_unsigned.all; -- https://stackoverflow.com/questions/37330329/vhdl-cant-determine-definition-of-operator
+--library ieee;
+--library work;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--use ieee.std_logic_unsigned.all; -- https://stackoverflow.com/questions/37330329/vhdl-cant-determine-definition-of-operator
 --use work.ro_ctr_ary.all;
 
-
-package ro_ctr_ary is
-	type t_ro_ctr_ary is array (natural range <>) of integer range 0 to 64;
-end package;
+--package ro_ctr_ary is 
+--	type t_ro_ctr_ary is array (natural range <>) of integer range 0 to 64;
+--end package;
 ------********************************************************
 
 library ieee;
@@ -18,7 +17,7 @@ library work;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all; -- https://stackoverflow.com/questions/37330329/vhdl-cant-determine-definition-of-operator
 use IEEE.numeric_std.all;
-use work.ro_ctr_ary.all;
+--use work.ro_ctr_ary.all;
 
 entity ro_puf is
 
@@ -30,34 +29,38 @@ entity ro_puf is
 
 	port(
 		enable         : in  	std_logic;
-		ro_ctr_ary_out : out 	t_ro_ctr_ary(0 to ro_num);	
-		ro_outs        : buffer std_logic_vector(0 to ro_num);
+		--ro_ctr_ary_out : out 	t_ro_ctr_ary(0 to ro_num);	
+		--ro_outs        : buffer std_logic_vector(0 to ro_num);
 		reset		      : in	   std_logic;
 		pulse_in	      : in		std_logic;
 		challenge	   : in		std_logic_vector(0 to 11);
-		chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
-		chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
-		response       : out	   std_logic;
-		req_resp_in	   : in		std_logic -- request response
+		--chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
+		--chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
+		req_resp_in	   : in		std_logic; -- request response
+		response       : out	   std_logic
 	);
 	
 end entity ro_puf;
 
 
 architecture rtl of ro_puf is
- -- https://surf-vhdl.com/vhdl-array/
-	--type t_ro_ctr_ary is array (0 to ro_num) of integer ;
+
+	type t_ro_ctr_ary is array (natural range <>) of integer range 0 to 64; -- https://surf-vhdl.com/vhdl-array/
 	signal ro_ctr_ary_sig : t_ro_ctr_ary(0 to ro_num);
+
 	signal chal_lft_val : integer  range 0 to 32;
 	signal chal_rit_val : integer  range 0 to 32;
 	signal req_resp_sig : std_logic;
 	
---	signal chal_lft_6   : integer  range 0 to 32 := 0; 
---	signal chal_rit_6   : integer  range 0 to 32 := 0; 
+	signal chal_lft_6   : integer  range 0 to 32 := 0;
+	signal chal_rit_6   : integer  range 0 to 32 := 0;
+	
+	signal ro_outs      : std_logic_vector(0 to ro_num);
+
 
   begin
   
-	ro_ctr_ary_out <= ro_ctr_ary_sig ;
+	--ro_ctr_ary_out <= ro_ctr_ary_sig ;
 	-- https://stackoverflow.com/questions/35102097/vhdl-type-conversion-found-4-possible-definitions
 	chal_lft_6 <= to_integer(unsigned(challenge(0 to 5))); -- left 6 bits of challenge
 	chal_rit_6 <= to_integer(unsigned(challenge(6 to 11))); -- right 6 bits of challenge
@@ -97,7 +100,3 @@ architecture rtl of ro_puf is
 	
 
 end architecture;
-
-
-
-

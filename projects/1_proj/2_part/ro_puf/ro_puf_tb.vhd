@@ -3,7 +3,7 @@
 library ieee;
 library work;
 use ieee.std_logic_1164.all;
-use work.ro_ctr_ary.all;
+--use work.ro_ctr_ary.all;
 
 entity ro_puf_tb is
 
@@ -20,26 +20,26 @@ architecture test_fixture of ro_puf_tb is
 	 signal tb_reset      : std_logic;
 	 signal tb_pulse_in   : std_logic;
 	 signal tb_challenge  : std_logic_vector(0 to 11);-- which two ro to compare
-	 signal tb_chal_lft_6 : integer range 0 to 32 := 0;
-	 signal tb_chal_rit_6 : integer range 0 to 32 := 0;
+	 --signal tb_chal_lft_6 : integer range 0 to 32 := 0;
+	 --signal tb_chal_rit_6 : integer range 0 to 32 := 0;
 	 signal tb_response   : std_logic;
 	 signal tb_req_resp_in	 : std_logic;
 
 	 
-	 signal tb_ro_outs: std_logic_vector(0 to ro_num); -- outputs
-	 signal tb_ro_ctr_ary_out : t_ro_ctr_ary(0 to ro_num);
+	 --signal tb_ro_outs: std_logic_vector(0 to ro_num); -- outputs
+	 --signal tb_ro_ctr_ary_out : t_ro_ctr_ary(0 to ro_num);
 
 begin
     -- connecting testbench signals with ro_puf.vhd
 	UUT : entity work.ro_puf port map (
 		enable  			=> tb_enable,
-		ro_outs			=> tb_ro_outs,
-		ro_ctr_ary_out => tb_ro_ctr_ary_out,
+		--ro_outs			=> tb_ro_outs,
+		--ro_ctr_ary_out => tb_ro_ctr_ary_out,
 		reset 			=> tb_reset,
 		pulse_in			=> tb_pulse_in,
 		challenge      => tb_challenge, -- 12 bits, 4095 max number
-		chal_lft_6     => tb_chal_lft_6,
-		chal_rit_6     => tb_chal_rit_6,
+		--chal_lft_6     => tb_chal_lft_6,
+		--chal_rit_6     => tb_chal_rit_6,
 		response       => tb_response,
 		req_resp_in		=> tb_req_resp_in
 	);
@@ -53,7 +53,7 @@ begin
 	 -- 3 = 000011, 6 = 000110 : 000011_000110
 	 -- 6 = 001100, 3 = 000011 : 001100000011
 	 -- 11 = 001011, 21 = 010101 : 001011010101
-	 tb_req_resp_in <= '0', '1' after 1.01 ns ;
+	 tb_req_resp_in <= '0', '1' after 0.895 ns ;
 	
 	 
 end test_fixture ;

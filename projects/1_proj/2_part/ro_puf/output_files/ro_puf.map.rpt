@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ro_puf
-Sun Oct 15 15:01:32 2023
+Tue Oct 17 14:19:08 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,44 +13,61 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Source assignments for ring_oscillator:\gen_ro:0:ro_inst
- 11. Source assignments for ring_oscillator:\gen_ro:1:ro_inst
- 12. Source assignments for ring_oscillator:\gen_ro:2:ro_inst
- 13. Source assignments for ring_oscillator:\gen_ro:3:ro_inst
- 14. Source assignments for ring_oscillator:\gen_ro:4:ro_inst
- 15. Source assignments for ring_oscillator:\gen_ro:5:ro_inst
- 16. Source assignments for ring_oscillator:\gen_ro:6:ro_inst
- 17. Source assignments for ring_oscillator:\gen_ro:7:ro_inst
- 18. Source assignments for ring_oscillator:\gen_ro:8:ro_inst
- 19. Source assignments for ring_oscillator:\gen_ro:9:ro_inst
- 20. Source assignments for ring_oscillator:\gen_ro:10:ro_inst
- 21. Source assignments for ring_oscillator:\gen_ro:11:ro_inst
- 22. Source assignments for ring_oscillator:\gen_ro:12:ro_inst
- 23. Source assignments for ring_oscillator:\gen_ro:13:ro_inst
- 24. Source assignments for ring_oscillator:\gen_ro:14:ro_inst
- 25. Source assignments for ring_oscillator:\gen_ro:15:ro_inst
- 26. Parameter Settings for User Entity Instance: Top-level Entity: |ro_puf
- 27. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:0:ro_inst
- 28. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:1:ro_inst
- 29. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:2:ro_inst
- 30. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:3:ro_inst
- 31. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:4:ro_inst
- 32. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:5:ro_inst
- 33. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:6:ro_inst
- 34. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:7:ro_inst
- 35. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:8:ro_inst
- 36. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:9:ro_inst
- 37. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:10:ro_inst
- 38. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:11:ro_inst
- 39. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:12:ro_inst
- 40. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:13:ro_inst
- 41. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:14:ro_inst
- 42. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:15:ro_inst
- 43. Post-Synthesis Netlist Statistics for Top Partition
- 44. Elapsed Time Per Partition
- 45. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for ring_oscillator:\gen_ro:0:ro_inst
+ 12. Source assignments for ring_oscillator:\gen_ro:1:ro_inst
+ 13. Source assignments for ring_oscillator:\gen_ro:2:ro_inst
+ 14. Source assignments for ring_oscillator:\gen_ro:3:ro_inst
+ 15. Source assignments for ring_oscillator:\gen_ro:4:ro_inst
+ 16. Source assignments for ring_oscillator:\gen_ro:5:ro_inst
+ 17. Source assignments for ring_oscillator:\gen_ro:6:ro_inst
+ 18. Source assignments for ring_oscillator:\gen_ro:7:ro_inst
+ 19. Source assignments for ring_oscillator:\gen_ro:8:ro_inst
+ 20. Source assignments for ring_oscillator:\gen_ro:9:ro_inst
+ 21. Source assignments for ring_oscillator:\gen_ro:10:ro_inst
+ 22. Source assignments for ring_oscillator:\gen_ro:11:ro_inst
+ 23. Source assignments for ring_oscillator:\gen_ro:12:ro_inst
+ 24. Source assignments for ring_oscillator:\gen_ro:13:ro_inst
+ 25. Source assignments for ring_oscillator:\gen_ro:14:ro_inst
+ 26. Source assignments for ring_oscillator:\gen_ro:15:ro_inst
+ 27. Parameter Settings for User Entity Instance: Top-level Entity: |ro_puf
+ 28. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:0:ro_inst
+ 29. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:1:ro_inst
+ 30. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:2:ro_inst
+ 31. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:3:ro_inst
+ 32. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:4:ro_inst
+ 33. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:5:ro_inst
+ 34. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:6:ro_inst
+ 35. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:7:ro_inst
+ 36. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:8:ro_inst
+ 37. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:9:ro_inst
+ 38. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:10:ro_inst
+ 39. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:11:ro_inst
+ 40. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:12:ro_inst
+ 41. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:13:ro_inst
+ 42. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:14:ro_inst
+ 43. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:15:ro_inst
+ 44. Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"
+ 45. Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"
+ 46. Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"
+ 47. Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"
+ 48. Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"
+ 49. Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"
+ 50. Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"
+ 51. Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"
+ 52. Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"
+ 53. Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"
+ 54. Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"
+ 55. Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"
+ 56. Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"
+ 57. Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"
+ 58. Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"
+ 59. Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
 
 
 
@@ -77,16 +94,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 15 15:01:32 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 17 14:19:08 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ro_puf                                      ;
 ; Top-level Entity Name              ; ro_puf                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 462                                         ;
-;     Total combinational functions  ; 462                                         ;
-;     Dedicated logic registers      ; 112                                         ;
-; Total registers                    ; 112                                         ;
-; Total pins                         ; 157                                         ;
+; Total logic elements               ; 446                                         ;
+;     Total combinational functions  ; 446                                         ;
+;     Dedicated logic registers      ; 96                                          ;
+; Total registers                    ; 96                                          ;
+; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -200,14 +217,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
-; ring_oscillator.vhd              ; yes             ; User VHDL File  ; C:/FPGA/ro_puf/ring_oscillator.vhd ;         ;
-; ro_puf.vhd                       ; yes             ; User VHDL File  ; C:/FPGA/ro_puf/ro_puf.vhd          ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; ring_oscillator.vhd              ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd ;         ;
+; ro_puf.vhd                       ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd          ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -215,30 +232,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 462         ;
+; Estimated Total logic elements              ; 446         ;
 ;                                             ;             ;
-; Total combinational functions               ; 462         ;
+; Total combinational functions               ; 446         ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 120         ;
 ;     -- 3 input functions                    ; 21          ;
-;     -- <=2 input functions                  ; 321         ;
+;     -- <=2 input functions                  ; 305         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
 ;     -- normal mode                          ; 377         ;
-;     -- arithmetic mode                      ; 85          ;
+;     -- arithmetic mode                      ; 69          ;
 ;                                             ;             ;
-; Total registers                             ; 112         ;
-;     -- Dedicated logic registers            ; 112         ;
+; Total registers                             ; 96          ;
+;     -- Dedicated logic registers            ; 96          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 157         ;
+; I/O pins                                    ; 17          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 112         ;
-; Total fan-out                               ; 1691        ;
-; Average fan-out                             ; 1.90        ;
+; Maximum fan-out                             ; 96          ;
+; Total fan-out                               ; 1315        ;
+; Average fan-out                             ; 2.28        ;
 +---------------------------------------------+-------------+
 
 
@@ -247,25 +264,50 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name     ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
-; |ro_puf                                 ; 462 (126)           ; 112 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 157  ; 0            ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
-;    |ring_oscillator:\gen_ro:0:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:0:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:10:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:10:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:11:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:11:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:12:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:12:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:13:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:13:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:14:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:14:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:15:ro_inst| ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:15:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:1:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:1:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:2:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:2:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:3:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:3:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:4:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:4:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:5:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:5:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:6:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:6:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:7:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:7:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:8:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:8:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:9:ro_inst|  ; 21 (21)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:9:ro_inst  ; ring_oscillator ; work         ;
+; |ro_puf                                 ; 446 (126)           ; 96 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
+;    |ring_oscillator:\gen_ro:0:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:0:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:10:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:10:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:11:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:11:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:12:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:12:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:13:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:13:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:14:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:14:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:15:ro_inst| ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:15:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:1:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:1:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:2:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:2:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:3:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:3:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:4:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:4:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:5:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:5:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:6:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:6:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:7:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:7:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:8:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:8:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:9:ro_inst|  ; 20 (20)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:9:ro_inst  ; ring_oscillator ; work         ;
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                    ;
++--------------------------------------------------+--------------------+
+; Register name                                    ; Reason for Removal ;
++--------------------------------------------------+--------------------+
+; ring_oscillator:\gen_ro:0:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:1:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:2:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:3:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:4:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:5:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:6:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:7:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:8:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:9:ro_inst|ro_counter[6]  ; Lost fanout        ;
+; ring_oscillator:\gen_ro:10:ro_inst|ro_counter[6] ; Lost fanout        ;
+; ring_oscillator:\gen_ro:11:ro_inst|ro_counter[6] ; Lost fanout        ;
+; ring_oscillator:\gen_ro:12:ro_inst|ro_counter[6] ; Lost fanout        ;
+; ring_oscillator:\gen_ro:13:ro_inst|ro_counter[6] ; Lost fanout        ;
+; ring_oscillator:\gen_ro:14:ro_inst|ro_counter[6] ; Lost fanout        ;
+; ring_oscillator:\gen_ro:15:ro_inst|ro_counter[6] ; Lost fanout        ;
+; Total Number of Removed Registers = 16           ;                    ;
++--------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -273,12 +315,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 112   ;
+; Total registers                              ; 96    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 112   ;
+; Number of registers using Asynchronous Clear ; 96    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 112   ;
+; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1057,17 +1099,177 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"                                                          ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 157                         ;
-; cycloneiii_ff         ; 112                         ;
-;     ENA CLR           ; 112                         ;
-; cycloneiii_lcell_comb ; 462                         ;
-;     arith             ; 85                          ;
-;         2 data inputs ; 64                          ;
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 96                          ;
+;     ENA CLR           ; 96                          ;
+; cycloneiii_lcell_comb ; 446                         ;
+;     arith             ; 69                          ;
+;         2 data inputs ; 48                          ;
 ;         3 data inputs ; 21                          ;
 ;     normal            ; 377                         ;
 ;         1 data inputs ; 240                         ;
@@ -1075,7 +1277,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 120                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 6.86                        ;
+; Average LUT depth     ; 7.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1094,246 +1296,267 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 15 15:01:23 2023
+    Info: Processing started: Tue Oct 17 14:18:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ro_puf -c ro_puf
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file ring_oscillator.vhd
-    Info (12022): Found design unit 1: ring_oscillator-rtl File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 27
-    Info (12023): Found entity 1: ring_oscillator File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 9
-Info (12021): Found 3 design units, including 1 entities, in source file ro_puf.vhd
-    Info (12022): Found design unit 1: ro_ctr_ary File: C:/FPGA/ro_puf/ro_puf.vhd Line: 11
-    Info (12022): Found design unit 2: ro_puf-rtl File: C:/FPGA/ro_puf/ro_puf.vhd Line: 47
-    Info (12023): Found entity 1: ro_puf File: C:/FPGA/ro_puf/ro_puf.vhd Line: 23
+    Info (12022): Found design unit 1: ring_oscillator-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 27
+    Info (12023): Found entity 1: ring_oscillator File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file ro_puf.vhd
+    Info (12022): Found design unit 1: ro_puf-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 46
+    Info (12023): Found entity 1: ro_puf File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file ro_puf_tb.vhd
-    Info (12022): Found design unit 1: ro_puf_tb-test_fixture File: C:/FPGA/ro_puf/ro_puf_tb.vhd Line: 17
-    Info (12023): Found entity 1: ro_puf_tb File: C:/FPGA/ro_puf/ro_puf_tb.vhd Line: 8
+    Info (12022): Found design unit 1: ro_puf_tb-test_fixture File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd Line: 17
+    Info (12023): Found entity 1: ro_puf_tb File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd Line: 8
 Info (12127): Elaborating entity "ro_puf" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(53): object "req_resp_sig" assigned a value but never read File: C:/FPGA/ro_puf/ro_puf.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at ro_puf.vhd(90): signal "chal_lft_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/ro_puf/ro_puf.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at ro_puf.vhd(90): signal "chal_rit_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/ro_puf/ro_puf.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at ro_puf.vhd(92): signal "chal_lft_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/ro_puf/ro_puf.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at ro_puf.vhd(92): signal "chal_rit_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/ro_puf/ro_puf.vhd Line: 92
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:0:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:1:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:2:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:3:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:4:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:5:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:6:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:7:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:8:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:9:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:10:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:11:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:12:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:13:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:14:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:15:ro_inst" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 71
+Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(53): object "req_resp_sig" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(58): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at ro_puf.vhd(93): signal "chal_lft_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at ro_puf.vhd(93): signal "chal_rit_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at ro_puf.vhd(95): signal "chal_lft_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at ro_puf.vhd(95): signal "chal_rit_val" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 95
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:2:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:3:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:4:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:5:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:6:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:7:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:8:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:9:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:10:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:11:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:12:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:13:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:14:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:15:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 74
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[12]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[11]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[10]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[9]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[8]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[7]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[6]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[5]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[4]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[3]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[2]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
-    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[1]" File: C:/FPGA/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[13]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[12]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:8:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:11:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:5:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:6:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:4:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:7:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:2:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:1:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:0:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:3:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:13:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:14:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:12:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ring_oscillator:\gen_ro:15:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "req_resp_in" File: C:/FPGA/ro_puf/ro_puf.vhd Line: 41
-Info (21057): Implemented 619 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "challenge[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 36
+    Warning (15610): No output dependent on input pin "challenge[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 36
+    Warning (15610): No output dependent on input pin "challenge[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 36
+    Warning (15610): No output dependent on input pin "challenge[0]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 36
+    Warning (15610): No output dependent on input pin "req_resp_in" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
+Info (21057): Implemented 463 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 141 output pins
-    Info (21061): Implemented 462 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Sun Oct 15 15:01:32 2023
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 446 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Tue Oct 17 14:19:08 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:20
 
