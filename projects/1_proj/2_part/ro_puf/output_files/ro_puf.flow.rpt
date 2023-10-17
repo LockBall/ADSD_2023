@@ -1,5 +1,5 @@
 Flow report for ro_puf
-Tue Oct 17 16:18:03 2023
+Tue Oct 17 18:52:32 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 17 16:18:03 2023          ;
+; Flow Status                        ; Successful - Tue Oct 17 18:52:32 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; ro_puf                                         ;
 ; Top-level Entity Name              ; ro_puf                                         ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 415 / 49,760 ( < 1 % )                         ;
-;     Total combinational functions  ; 415 / 49,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 96 / 49,760 ( < 1 % )                          ;
-; Total registers                    ; 96                                             ;
-; Total pins                         ; 17 / 360 ( 5 % )                               ;
+; Total logic elements               ; 416 / 49,760 ( < 1 % )                         ;
+;     Total combinational functions  ; 416 / 49,760 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 97 / 49,760 ( < 1 % )                          ;
+; Total registers                    ; 97                                             ;
+; Total pins                         ; 18 / 360 ( 5 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2023 16:17:38 ;
+; Start date & time ; 10/17/2023 18:52:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ro_puf              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 229044590607719.169757385813576        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 229044590607719.169758312503804        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ro_puf_tb                         ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -91,6 +91,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; ro_puf_tb.vhd                          ; --            ; --          ; ro_puf_tb                         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ro_puf_tb                              ; --            ; --          ; ro_puf_tb                         ;
 ; EDA_TEST_BENCH_NAME                  ; ro_puf_tb                              ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                 ; --            ; --          ; ro_puf_tb                         ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -109,12 +110,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4797 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:08     ; 1.1                     ; 5640 MB             ; 00:00:13                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4719 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4837 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4807 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:08     ; 1.1                     ; 5638 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4711 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4836 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4653 MB             ; 00:00:00                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:36                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

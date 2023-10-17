@@ -24,10 +24,13 @@ entity ro_puf is
 	generic( -- needs to be first
 		constant ro_count    : positive range 3 to 37 := 15; -- how many RO, use ODD # here to get EVEN # of ring osc
 		constant ro_length : positive range 2 to 66 := 11; -- how long ea ro, use ODD # here to get EVEN # of inverters
-		constant var_delay : time                   := 0.002 ns
+		constant var_delay : time                   := 0.050 ns
 	);
 
 	port(
+	
+	   clock          : in  std_logic ; -- P11 50 MHZ
+	
 		enable         : in  	std_logic;
 		--ro_ctr_ary_out : out 	t_ro_ctr_ary(0 to ro_count);	
 		--ro_outs        : buffer std_logic_vector(0 to ro_count);
@@ -91,15 +94,20 @@ architecture rtl of ro_puf is
 			
 	end generate;
 	
-	process(req_resp_sig) -- requires 13 mux
+	process(clock, req_resp_sig) -- requires 13 mux
 	 begin
-		if chal_lft_val < chal_rit_val then
-			response <= '1';
-		 elsif chal_lft_val > chal_rit_val then
-			response <= '0';
-		 else response <= 'X';
-		end if;
+	 
+		if rising_edge(clock) then
+			if req_resp_sig = '1' then
+				if chal_lft_val < chal_rit_val then -- compare
+					response <= '1';
+				elsif chal_lft_val > chal_rit_val then
+					response <= '0';
+				else response <= 'X';
+				end if; -- compare
+			end if;
+		end if; --rising_edge(clock)
+		
 	end process;
 	
-
 end architecture;

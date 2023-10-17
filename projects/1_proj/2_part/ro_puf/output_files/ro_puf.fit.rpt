@@ -1,5 +1,5 @@
 Fitter report for ro_puf
-Tue Oct 17 16:17:55 2023
+Tue Oct 17 18:52:24 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -68,18 +68,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 17 16:17:55 2023          ;
+; Fitter Status                      ; Successful - Tue Oct 17 18:52:24 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; ro_puf                                         ;
 ; Top-level Entity Name              ; ro_puf                                         ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 415 / 49,760 ( < 1 % )                         ;
-;     Total combinational functions  ; 415 / 49,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 96 / 49,760 ( < 1 % )                          ;
-; Total registers                    ; 96                                             ;
-; Total pins                         ; 17 / 360 ( 5 % )                               ;
+; Total logic elements               ; 416 / 49,760 ( < 1 % )                         ;
+;     Total combinational functions  ; 416 / 49,760 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 97 / 49,760 ( < 1 % )                          ;
+; Total registers                    ; 97                                             ;
+; Total pins                         ; 18 / 360 ( 5 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -155,14 +155,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.9%      ;
-;     Processor 3            ;   1.9%      ;
-;     Processor 4            ;   1.9%      ;
+;     Processor 2            ;   2.5%      ;
+;     Processor 3            ;   2.5%      ;
+;     Processor 4            ;   2.5%      ;
 +----------------------------+-------------+
 
 
@@ -172,8 +172,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 580 ) ; 0.00 % ( 0 / 580 )         ; 0.00 % ( 0 / 580 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 580 ) ; 0.00 % ( 0 / 580 )         ; 0.00 % ( 0 / 580 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 584 ) ; 0.00 % ( 0 / 584 )         ; 0.00 % ( 0 / 584 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 584 ) ; 0.00 % ( 0 / 584 )         ; 0.00 % ( 0 / 584 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -196,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 564 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 568 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -212,29 +212,29 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 415 / 49,760 ( < 1 % ) ;
+; Total logic elements                        ; 416 / 49,760 ( < 1 % ) ;
 ;     -- Combinational with no register       ; 319                    ;
 ;     -- Register only                        ; 0                      ;
-;     -- Combinational with a register        ; 96                     ;
+;     -- Combinational with a register        ; 97                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 120                    ;
-;     -- 3 input functions                    ; 21                     ;
+;     -- 3 input functions                    ; 22                     ;
 ;     -- <=2 input functions                  ; 274                    ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 346                    ;
+;     -- normal mode                          ; 347                    ;
 ;     -- arithmetic mode                      ; 69                     ;
 ;                                             ;                        ;
-; Total registers*                            ; 96 / 51,509 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 96 / 49,760 ( < 1 % )  ;
+; Total registers*                            ; 97 / 51,509 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 97 / 49,760 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 41 / 3,110 ( 1 % )     ;
+; Total LABs:  partially or completely used   ; 48 / 3,110 ( 2 % )     ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 17 / 360 ( 5 % )       ;
-;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
+; I/O pins                                    ; 18 / 360 ( 5 % )       ;
+;     -- Clock pins                           ; 3 / 8 ( 38 % )         ;
 ;     -- Dedicated input pins                 ; 1 / 1 ( 100 % )        ;
 ;                                             ;                        ;
 ; M9Ks                                        ; 0 / 182 ( 0 % )        ;
@@ -251,12 +251,12 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 2.3% / 1.8% / 3.1%     ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.1% / 0.2%     ;
+; Peak interconnect usage (total/H/V)         ; 3.1% / 2.0% / 4.6%     ;
 ; Maximum fan-out                             ; 96                     ;
 ; Highest non-global fan-out                  ; 96                     ;
-; Total fan-out                               ; 1310                   ;
-; Average fan-out                             ; 2.26                   ;
+; Total fan-out                               ; 1316                   ;
+; Average fan-out                             ; 2.25                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -269,29 +269,29 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 415 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total logic elements                        ; 416 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- Combinational with no register       ; 319                   ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
-;     -- Combinational with a register        ; 96                    ; 0                              ;
+;     -- Combinational with a register        ; 97                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
 ;     -- 4 input functions                    ; 120                   ; 0                              ;
-;     -- 3 input functions                    ; 21                    ; 0                              ;
+;     -- 3 input functions                    ; 22                    ; 0                              ;
 ;     -- <=2 input functions                  ; 274                   ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 346                   ; 0                              ;
+;     -- normal mode                          ; 347                   ; 0                              ;
 ;     -- arithmetic mode                      ; 69                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 96                    ; 0                              ;
-;     -- Dedicated logic registers            ; 96 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 97                    ; 0                              ;
+;     -- Dedicated logic registers            ; 97 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 41 / 3110 ( 1 % )     ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 48 / 3110 ( 2 % )     ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 17                    ; 0                              ;
+; I/O pins                                    ; 18                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -306,15 +306,15 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1316                  ; 8                              ;
-;     -- Registered Connections               ; 304                   ; 0                              ;
+;     -- Total Connections                    ; 1322                  ; 8                              ;
+;     -- Registered Connections               ; 306                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
-;     -- Input Ports                          ; 16                    ; 0                              ;
+;     -- Input Ports                          ; 17                    ; 0                              ;
 ;     -- Output Ports                         ; 1                     ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
@@ -339,21 +339,22 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard          ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
-; challenge[0]  ; G19   ; 6        ; 78           ; 31           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[10] ; D9    ; 8        ; 31           ; 39           ; 7            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[11] ; D10   ; 8        ; 31           ; 39           ; 28           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[1]  ; V15   ; 4        ; 58           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[2]  ; A6    ; 8        ; 34           ; 39           ; 28           ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[3]  ; E10   ; 8        ; 36           ; 39           ; 21           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[4]  ; E11   ; 8        ; 36           ; 39           ; 14           ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[5]  ; C7    ; 8        ; 34           ; 39           ; 0            ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[6]  ; N20   ; 6        ; 78           ; 34           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[7]  ; D1    ; 1B       ; 0            ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[8]  ; H11   ; 8        ; 34           ; 39           ; 14           ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; challenge[9]  ; B7    ; 8        ; 34           ; 39           ; 21           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; enable        ; J10   ; 8        ; 34           ; 39           ; 7            ; 96                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; pulse_in      ; C8    ; 8        ; 36           ; 39           ; 28           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
-; req_resp_in   ; T22   ; 5        ; 78           ; 18           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[0]  ; K22   ; 6        ; 78           ; 30           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[10] ; J10   ; 8        ; 34           ; 39           ; 7            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[11] ; H11   ; 8        ; 34           ; 39           ; 14           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[1]  ; C6    ; 8        ; 29           ; 39           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[2]  ; C8    ; 8        ; 36           ; 39           ; 28           ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[3]  ; A6    ; 8        ; 34           ; 39           ; 28           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[4]  ; D8    ; 8        ; 31           ; 39           ; 0            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[5]  ; D10   ; 8        ; 31           ; 39           ; 28           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[6]  ; AA2   ; 3        ; 18           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[7]  ; AB5   ; 3        ; 29           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[8]  ; C7    ; 8        ; 34           ; 39           ; 0            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; challenge[9]  ; A4    ; 8        ; 31           ; 39           ; 21           ; 22                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; clock         ; E10   ; 8        ; 36           ; 39           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; enable        ; B7    ; 8        ; 34           ; 39           ; 21           ; 96                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; pulse_in      ; E11   ; 8        ; 36           ; 39           ; 14           ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
+; req_resp_in   ; D9    ; 8        ; 31           ; 39           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V                 ; --                        ; Fitter               ; 0         ;
 ; reset         ; B8    ; 7        ; 46           ; 54           ; 28           ; 96                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 
@@ -376,8 +377,8 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; G2       ; DIFFIO_RX_L17p, DIFFOUT_L17p, TCK, Low_Speed       ; Reserved as secondary function ; ~ALTERA_TCK~        ; Dual Purpose Pin ;
 ; L4       ; DIFFIO_RX_L18n, DIFFOUT_L18n, TDI, Low_Speed       ; Reserved as secondary function ; ~ALTERA_TDI~        ; Dual Purpose Pin ;
 ; M5       ; DIFFIO_RX_L18p, DIFFOUT_L18p, TDO, Low_Speed       ; Reserved as secondary function ; ~ALTERA_TDO~        ; Dual Purpose Pin ;
-; D9       ; DIFFIO_RX_T42n, DIFFOUT_T42n, DEV_CLRn, Low_Speed  ; Use as regular IO              ; challenge[10]       ; Dual Purpose Pin ;
-; D10      ; DIFFIO_RX_T44p, DIFFOUT_T44p, DEV_OE, Low_Speed    ; Use as regular IO              ; challenge[11]       ; Dual Purpose Pin ;
+; D9       ; DIFFIO_RX_T42n, DIFFOUT_T42n, DEV_CLRn, Low_Speed  ; Use as regular IO              ; req_resp_in         ; Dual Purpose Pin ;
+; D10      ; DIFFIO_RX_T44p, DIFFOUT_T44p, DEV_OE, Low_Speed    ; Use as regular IO              ; challenge[5]        ; Dual Purpose Pin ;
 ; H10      ; CONFIG_SEL, Low_Speed                              ; Reserved as secondary function ; ~ALTERA_CONFIG_SEL~ ; Dual Purpose Pin ;
 ; H9       ; nCONFIG, Low_Speed                                 ; Reserved as secondary function ; ~ALTERA_nCONFIG~    ; Dual Purpose Pin ;
 ; G9       ; DIFFIO_RX_T50p, DIFFOUT_T50p, nSTATUS, Low_Speed   ; Reserved as secondary function ; ~ALTERA_nSTATUS~    ; Dual Purpose Pin ;
@@ -391,14 +392,14 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ;
-; 1B       ; 5 / 24 ( 21 % )  ; 2.5V          ; --           ;
+; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
 ; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
-; 3        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
-; 4        ; 1 / 48 ( 2 % )   ; 2.5V          ; --           ;
-; 5        ; 1 / 40 ( 3 % )   ; 2.5V          ; --           ;
-; 6        ; 2 / 60 ( 3 % )   ; 2.5V          ; --           ;
+; 3        ; 2 / 48 ( 4 % )   ; 2.5V          ; --           ;
+; 4        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
+; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
+; 6        ; 1 / 60 ( 2 % )   ; 2.5V          ; --           ;
 ; 7        ; 1 / 52 ( 2 % )   ; 3.3V          ; --           ;
-; 8        ; 15 / 36 ( 42 % ) ; 2.5V          ; --           ;
+; 8        ; 18 / 36 ( 50 % ) ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -410,9 +411,9 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; A1       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; A2       ; 481        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A3       ; 483        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; A4       ; 475        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; A4       ; 475        ; 8        ; challenge[9]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A5       ; 473        ; 8        ; response                                       ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; A6       ; 471        ; 8        ; challenge[2]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; A6       ; 471        ; 8        ; challenge[3]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A7       ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A8       ; 447        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A9       ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -430,7 +431,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; A21      ; 371        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; A22      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; AA1      ; 133        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AA2      ; 135        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; AA2      ; 135        ; 3        ; challenge[6]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA3      ; 153        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA4      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; AA5      ; 157        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -455,7 +456,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; AB2      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB3      ; 147        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB4      ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; AB5      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; AB5      ; 159        ; 3        ; challenge[7]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB6      ; 161        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB7      ; 163        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB8      ; 167        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -479,7 +480,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; B4       ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; B5       ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; B6       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; B7       ; 469        ; 8        ; challenge[9]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; B7       ; 469        ; 8        ; enable                                         ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B8       ; 451        ; 7        ; reset                                          ; input  ; 3.3 V Schmitt Trigger ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; B10      ; 448        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -500,9 +501,9 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; C3       ; 497        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C4       ; 487        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C5       ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C6       ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C7       ; 467        ; 8        ; challenge[5]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; C8       ; 465        ; 8        ; pulse_in                                       ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C6       ; 477        ; 8        ; challenge[1]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C7       ; 467        ; 8        ; challenge[8]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C8       ; 465        ; 8        ; challenge[2]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C9       ; 450        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C10      ; 442        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C11      ; 440        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -517,16 +518,16 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; C20      ; 357        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C21      ; 347        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C22      ; 343        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; D1       ; 35         ; 1B       ; challenge[7]                                   ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D1       ; 35         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D2       ; 31         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D3       ; 29         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D4       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 491        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D6       ; 496        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ; 479        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; --       ; --           ;
-; D8       ; 472        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; D9       ; 474        ; 8        ; challenge[10]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; D10      ; 476        ; 8        ; challenge[11]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; D8       ; 472        ; 8        ; challenge[4]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 474        ; 8        ; req_resp_in                                    ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 476        ; 8        ; challenge[5]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D11      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; D12      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D13      ; 431        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -548,8 +549,8 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; E7       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; E8       ; 488        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E9       ; 478        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; E10      ; 466        ; 8        ; challenge[3]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; E11      ; 464        ; 8        ; challenge[4]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; E10      ; 466        ; 8        ; clock                                          ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; E11      ; 464        ; 8        ; pulse_in                                       ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E12      ; 429        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E13      ; 430        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E14      ; 406        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -601,7 +602,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; G16      ;            ;          ; VCCD_PLL2                                      ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G17      ; 386        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G18      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; G19      ; 330        ; 6        ; challenge[0]                                   ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G19      ; 330        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G20      ; 328        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G21      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; G22      ; 329        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -615,7 +616,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; H8       ;            ; --       ; VCCA3                                          ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; H9       ; 482        ; 8        ; ~ALTERA_nCONFIG~ / RESERVED_INPUT              ; input  ; 2.5 V Schmitt Trigger ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H10      ; 480        ; 8        ; ~ALTERA_CONFIG_SEL~ / RESERVED_INPUT           ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; H11      ; 470        ; 8        ; challenge[8]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; H11      ; 470        ; 8        ; challenge[11]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H12      ; 444        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; H13      ; 432        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; H14      ; 420        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -636,7 +637,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; J7       ;            ;          ; VCCINT                                         ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J8       ; 4          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J9       ; 6          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; J10      ; 468        ; 8        ; enable                                         ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; J10      ; 468        ; 8        ; challenge[10]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J11      ; 446        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; J12      ; 434        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; J13      ; 422        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -670,7 +671,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; K19      ; 361        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K20      ; 363        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K21      ; 326        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; K22      ; 324        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; K22      ; 324        ; 6        ; challenge[0]                                   ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L1       ; 51         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L2       ; 39         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L3       ;            ;          ; DNU                                            ;        ;                       ;         ; --         ;                 ; --       ; --           ;
@@ -734,7 +735,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; N17      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; N18      ; 336        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N19      ; 338        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; N20      ; 339        ; 6        ; challenge[6]                                   ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N20      ; 339        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N21      ; 313        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N22      ; 307        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P1       ; 85         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -802,7 +803,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; T19      ; 296        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T20      ; 297        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T21      ; 293        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; T22      ; 295        ; 5        ; req_resp_in                                    ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T22      ; 295        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U1       ; 89         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U2       ; 90         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U3       ; 93         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -839,7 +840,7 @@ The pin-out file can be found in C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj
 ; V12      ; 174        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; V13      ; 192        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; V14      ; 204        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; V15      ; 216        ; 4        ; challenge[1]                                   ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; V15      ; 216        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; V16      ; 210        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; V17      ; 242        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; V18      ; 280        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -904,7 +905,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; challenge[6]  ; Incomplete set of assignments ;
 ; challenge[1]  ; Incomplete set of assignments ;
 ; challenge[0]  ; Incomplete set of assignments ;
-; req_resp_in   ; Incomplete set of assignments ;
 ; response      ; Incomplete set of assignments ;
 ; challenge[4]  ; Incomplete set of assignments ;
 ; challenge[5]  ; Incomplete set of assignments ;
@@ -914,13 +914,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; challenge[11] ; Incomplete set of assignments ;
 ; challenge[8]  ; Incomplete set of assignments ;
 ; challenge[9]  ; Incomplete set of assignments ;
+; req_resp_in   ; Incomplete set of assignments ;
+; clock         ; Incomplete set of assignments ;
 ; enable        ; Incomplete set of assignments ;
 ; pulse_in      ; Incomplete set of assignments ;
 ; challenge[7]  ; Missing location assignment   ;
 ; challenge[6]  ; Missing location assignment   ;
 ; challenge[1]  ; Missing location assignment   ;
 ; challenge[0]  ; Missing location assignment   ;
-; req_resp_in   ; Missing location assignment   ;
 ; response      ; Missing location assignment   ;
 ; challenge[4]  ; Missing location assignment   ;
 ; challenge[5]  ; Missing location assignment   ;
@@ -930,6 +931,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; challenge[11] ; Missing location assignment   ;
 ; challenge[8]  ; Missing location assignment   ;
 ; challenge[9]  ; Missing location assignment   ;
+; req_resp_in   ; Missing location assignment   ;
+; clock         ; Missing location assignment   ;
 ; enable        ; Missing location assignment   ;
 ; pulse_in      ; Missing location assignment   ;
 +---------------+-------------------------------+
@@ -940,7 +943,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node              ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                        ; Entity Name     ; Library Name ;
 +-----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------+-----------------+--------------+
-; |ro_puf                                 ; 415 (127)   ; 96 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 17   ; 0            ; 319 (127)    ; 0 (0)             ; 96 (0)           ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
+; |ro_puf                                 ; 416 (128)   ; 97 (1)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 18   ; 0            ; 319 (127)    ; 0 (0)             ; 97 (1)           ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
 ;    |ring_oscillator:\gen_ro:0:ro_inst|  ; 18 (18)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 6 (6)            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:0:ro_inst  ; ring_oscillator ; work         ;
 ;    |ring_oscillator:\gen_ro:10:ro_inst| ; 18 (18)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 6 (6)            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:10:ro_inst ; ring_oscillator ; work         ;
 ;    |ring_oscillator:\gen_ro:11:ro_inst| ; 18 (18)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 6 (6)            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:11:ro_inst ; ring_oscillator ; work         ;
@@ -970,19 +973,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; challenge[6]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; challenge[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; challenge[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; req_resp_in   ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; response      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; challenge[4]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; challenge[5]  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; challenge[4]  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; challenge[5]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; challenge[2]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; challenge[3]  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; challenge[10] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; challenge[3]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; challenge[10] ; Input    ; (6) 868 ps    ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; challenge[11] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; challenge[8]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; challenge[8]  ; Input    ; (6) 868 ps    ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; challenge[9]  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; req_resp_in   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; clock         ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
 ; reset         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; enable        ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; pulse_in      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; enable        ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; pulse_in      ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -995,54 +999,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; challenge[6]                                            ;                   ;         ;
 ; challenge[1]                                            ;                   ;         ;
 ; challenge[0]                                            ;                   ;         ;
-; req_resp_in                                             ;                   ;         ;
 ; challenge[4]                                            ;                   ;         ;
-;      - Mux0~0                                           ; 1                 ; 6       ;
-;      - Mux0~1                                           ; 1                 ; 6       ;
-;      - Mux0~2                                           ; 1                 ; 6       ;
-;      - Mux0~4                                           ; 1                 ; 6       ;
-;      - Mux0~5                                           ; 1                 ; 6       ;
-;      - Mux0~7                                           ; 1                 ; 6       ;
-;      - Mux1~6                                           ; 1                 ; 6       ;
-;      - Mux1~9                                           ; 1                 ; 6       ;
-;      - Mux2~0                                           ; 1                 ; 6       ;
-;      - Mux2~1                                           ; 1                 ; 6       ;
-;      - Mux2~2                                           ; 1                 ; 6       ;
-;      - Mux2~4                                           ; 1                 ; 6       ;
-;      - Mux2~7                                           ; 1                 ; 6       ;
-;      - Mux2~8                                           ; 1                 ; 6       ;
-;      - Mux3~6                                           ; 1                 ; 6       ;
-;      - Mux4~0                                           ; 1                 ; 6       ;
-;      - Mux4~1                                           ; 1                 ; 6       ;
-;      - Mux4~2                                           ; 1                 ; 6       ;
-;      - Mux4~4                                           ; 1                 ; 6       ;
-;      - Mux4~5                                           ; 1                 ; 6       ;
-;      - Mux4~7                                           ; 1                 ; 6       ;
-;      - Mux5~6                                           ; 1                 ; 6       ;
-;      - Mux5~9                                           ; 1                 ; 6       ;
-; challenge[5]                                            ;                   ;         ;
 ;      - Mux0~0                                           ; 0                 ; 6       ;
+;      - Mux0~1                                           ; 0                 ; 6       ;
 ;      - Mux0~2                                           ; 0                 ; 6       ;
-;      - Mux0~3                                           ; 0                 ; 6       ;
 ;      - Mux0~4                                           ; 0                 ; 6       ;
+;      - Mux0~5                                           ; 0                 ; 6       ;
 ;      - Mux0~7                                           ; 0                 ; 6       ;
-;      - Mux0~8                                           ; 0                 ; 6       ;
 ;      - Mux1~6                                           ; 0                 ; 6       ;
+;      - Mux1~9                                           ; 0                 ; 6       ;
 ;      - Mux2~0                                           ; 0                 ; 6       ;
+;      - Mux2~1                                           ; 0                 ; 6       ;
 ;      - Mux2~2                                           ; 0                 ; 6       ;
-;      - Mux2~3                                           ; 0                 ; 6       ;
 ;      - Mux2~4                                           ; 0                 ; 6       ;
-;      - Mux2~5                                           ; 0                 ; 6       ;
 ;      - Mux2~7                                           ; 0                 ; 6       ;
+;      - Mux2~8                                           ; 0                 ; 6       ;
 ;      - Mux3~6                                           ; 0                 ; 6       ;
-;      - Mux3~9                                           ; 0                 ; 6       ;
 ;      - Mux4~0                                           ; 0                 ; 6       ;
+;      - Mux4~1                                           ; 0                 ; 6       ;
 ;      - Mux4~2                                           ; 0                 ; 6       ;
-;      - Mux4~3                                           ; 0                 ; 6       ;
 ;      - Mux4~4                                           ; 0                 ; 6       ;
+;      - Mux4~5                                           ; 0                 ; 6       ;
 ;      - Mux4~7                                           ; 0                 ; 6       ;
-;      - Mux4~8                                           ; 0                 ; 6       ;
 ;      - Mux5~6                                           ; 0                 ; 6       ;
+;      - Mux5~9                                           ; 0                 ; 6       ;
+; challenge[5]                                            ;                   ;         ;
+;      - Mux0~0                                           ; 1                 ; 6       ;
+;      - Mux0~2                                           ; 1                 ; 6       ;
+;      - Mux0~3                                           ; 1                 ; 6       ;
+;      - Mux0~4                                           ; 1                 ; 6       ;
+;      - Mux0~7                                           ; 1                 ; 6       ;
+;      - Mux0~8                                           ; 1                 ; 6       ;
+;      - Mux1~6                                           ; 1                 ; 6       ;
+;      - Mux2~0                                           ; 1                 ; 6       ;
+;      - Mux2~2                                           ; 1                 ; 6       ;
+;      - Mux2~3                                           ; 1                 ; 6       ;
+;      - Mux2~4                                           ; 1                 ; 6       ;
+;      - Mux2~5                                           ; 1                 ; 6       ;
+;      - Mux2~7                                           ; 1                 ; 6       ;
+;      - Mux3~6                                           ; 1                 ; 6       ;
+;      - Mux3~9                                           ; 1                 ; 6       ;
+;      - Mux4~0                                           ; 1                 ; 6       ;
+;      - Mux4~2                                           ; 1                 ; 6       ;
+;      - Mux4~3                                           ; 1                 ; 6       ;
+;      - Mux4~4                                           ; 1                 ; 6       ;
+;      - Mux4~7                                           ; 1                 ; 6       ;
+;      - Mux4~8                                           ; 1                 ; 6       ;
+;      - Mux5~6                                           ; 1                 ; 6       ;
 ; challenge[2]                                            ;                   ;         ;
 ;      - Mux0~6                                           ; 1                 ; 6       ;
 ;      - Mux0~9                                           ; 1                 ; 6       ;
@@ -1068,28 +1071,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux5~7                                           ; 1                 ; 6       ;
 ;      - Mux5~8                                           ; 1                 ; 6       ;
 ; challenge[3]                                            ;                   ;         ;
-;      - Mux0~6                                           ; 0                 ; 6       ;
-;      - Mux1~0                                           ; 0                 ; 6       ;
-;      - Mux1~1                                           ; 0                 ; 6       ;
-;      - Mux1~2                                           ; 0                 ; 6       ;
-;      - Mux1~4                                           ; 0                 ; 6       ;
-;      - Mux1~5                                           ; 0                 ; 6       ;
-;      - Mux1~7                                           ; 0                 ; 6       ;
-;      - Mux2~6                                           ; 0                 ; 6       ;
-;      - Mux2~9                                           ; 0                 ; 6       ;
-;      - Mux3~0                                           ; 0                 ; 6       ;
-;      - Mux3~1                                           ; 0                 ; 6       ;
-;      - Mux3~2                                           ; 0                 ; 6       ;
-;      - Mux3~4                                           ; 0                 ; 6       ;
-;      - Mux3~7                                           ; 0                 ; 6       ;
-;      - Mux3~8                                           ; 0                 ; 6       ;
-;      - Mux4~6                                           ; 0                 ; 6       ;
-;      - Mux5~0                                           ; 0                 ; 6       ;
-;      - Mux5~1                                           ; 0                 ; 6       ;
-;      - Mux5~2                                           ; 0                 ; 6       ;
-;      - Mux5~4                                           ; 0                 ; 6       ;
-;      - Mux5~5                                           ; 0                 ; 6       ;
-;      - Mux5~7                                           ; 0                 ; 6       ;
+;      - Mux0~6                                           ; 1                 ; 6       ;
+;      - Mux1~0                                           ; 1                 ; 6       ;
+;      - Mux1~1                                           ; 1                 ; 6       ;
+;      - Mux1~2                                           ; 1                 ; 6       ;
+;      - Mux1~4                                           ; 1                 ; 6       ;
+;      - Mux1~5                                           ; 1                 ; 6       ;
+;      - Mux1~7                                           ; 1                 ; 6       ;
+;      - Mux2~6                                           ; 1                 ; 6       ;
+;      - Mux2~9                                           ; 1                 ; 6       ;
+;      - Mux3~0                                           ; 1                 ; 6       ;
+;      - Mux3~1                                           ; 1                 ; 6       ;
+;      - Mux3~2                                           ; 1                 ; 6       ;
+;      - Mux3~4                                           ; 1                 ; 6       ;
+;      - Mux3~7                                           ; 1                 ; 6       ;
+;      - Mux3~8                                           ; 1                 ; 6       ;
+;      - Mux4~6                                           ; 1                 ; 6       ;
+;      - Mux5~0                                           ; 1                 ; 6       ;
+;      - Mux5~1                                           ; 1                 ; 6       ;
+;      - Mux5~2                                           ; 1                 ; 6       ;
+;      - Mux5~4                                           ; 1                 ; 6       ;
+;      - Mux5~5                                           ; 1                 ; 6       ;
+;      - Mux5~7                                           ; 1                 ; 6       ;
 ; challenge[10]                                           ;                   ;         ;
 ;      - Mux6~0                                           ; 0                 ; 6       ;
 ;      - Mux6~1                                           ; 0                 ; 6       ;
@@ -1112,7 +1115,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux10~4                                          ; 0                 ; 6       ;
 ;      - Mux10~5                                          ; 0                 ; 6       ;
 ;      - Mux10~7                                          ; 0                 ; 6       ;
-;      - Mux11~6                                          ; 0                 ; 6       ;
+;      - Mux11~6                                          ; 1                 ; 6       ;
 ;      - Mux11~9                                          ; 0                 ; 6       ;
 ; challenge[11]                                           ;                   ;         ;
 ;      - Mux6~0                                           ; 1                 ; 6       ;
@@ -1138,28 +1141,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux10~8                                          ; 1                 ; 6       ;
 ;      - Mux11~6                                          ; 1                 ; 6       ;
 ; challenge[8]                                            ;                   ;         ;
-;      - Mux6~6                                           ; 1                 ; 6       ;
-;      - Mux6~9                                           ; 1                 ; 6       ;
-;      - Mux7~0                                           ; 1                 ; 6       ;
-;      - Mux7~2                                           ; 1                 ; 6       ;
-;      - Mux7~3                                           ; 1                 ; 6       ;
-;      - Mux7~4                                           ; 1                 ; 6       ;
-;      - Mux7~7                                           ; 1                 ; 6       ;
-;      - Mux7~8                                           ; 1                 ; 6       ;
-;      - Mux8~6                                           ; 1                 ; 6       ;
-;      - Mux9~0                                           ; 1                 ; 6       ;
+;      - Mux6~6                                           ; 0                 ; 6       ;
+;      - Mux6~9                                           ; 0                 ; 6       ;
+;      - Mux7~0                                           ; 0                 ; 6       ;
+;      - Mux7~2                                           ; 0                 ; 6       ;
+;      - Mux7~3                                           ; 0                 ; 6       ;
+;      - Mux7~4                                           ; 0                 ; 6       ;
+;      - Mux7~7                                           ; 0                 ; 6       ;
+;      - Mux7~8                                           ; 0                 ; 6       ;
+;      - Mux8~6                                           ; 0                 ; 6       ;
+;      - Mux9~0                                           ; 0                 ; 6       ;
 ;      - Mux9~2                                           ; 1                 ; 6       ;
 ;      - Mux9~3                                           ; 1                 ; 6       ;
-;      - Mux9~4                                           ; 1                 ; 6       ;
-;      - Mux9~5                                           ; 1                 ; 6       ;
-;      - Mux9~7                                           ; 1                 ; 6       ;
-;      - Mux10~6                                          ; 1                 ; 6       ;
-;      - Mux10~9                                          ; 1                 ; 6       ;
-;      - Mux11~0                                          ; 1                 ; 6       ;
-;      - Mux11~2                                          ; 1                 ; 6       ;
-;      - Mux11~3                                          ; 1                 ; 6       ;
-;      - Mux11~4                                          ; 1                 ; 6       ;
-;      - Mux11~7                                          ; 1                 ; 6       ;
+;      - Mux9~4                                           ; 0                 ; 6       ;
+;      - Mux9~5                                           ; 0                 ; 6       ;
+;      - Mux9~7                                           ; 0                 ; 6       ;
+;      - Mux10~6                                          ; 0                 ; 6       ;
+;      - Mux10~9                                          ; 0                 ; 6       ;
+;      - Mux11~0                                          ; 0                 ; 6       ;
+;      - Mux11~2                                          ; 0                 ; 6       ;
+;      - Mux11~3                                          ; 0                 ; 6       ;
+;      - Mux11~4                                          ; 0                 ; 6       ;
+;      - Mux11~7                                          ; 0                 ; 6       ;
 ;      - Mux11~8                                          ; 1                 ; 6       ;
 ; challenge[9]                                            ;                   ;         ;
 ;      - Mux6~6                                           ; 1                 ; 6       ;
@@ -1184,6 +1187,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux11~4                                          ; 1                 ; 6       ;
 ;      - Mux11~5                                          ; 1                 ; 6       ;
 ;      - Mux11~7                                          ; 1                 ; 6       ;
+; req_resp_in                                             ;                   ;         ;
+;      - response~0                                       ; 1                 ; 6       ;
+; clock                                                   ;                   ;         ;
+;      - response~reg0                                    ; 1                 ; 0       ;
 ; reset                                                   ;                   ;         ;
 ;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
 ;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
@@ -1282,119 +1289,114 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[1] ; 0                 ; 6       ;
 ;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[1] ; 0                 ; 6       ;
 ; enable                                                  ;                   ;         ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[0]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[0] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[5]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[5] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[4]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[4] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[3]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[3] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[2]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[2] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[1] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[1] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[1]  ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[1] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[1] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[1] ; 1                 ; 6       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[1] ; 1                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[0]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[0] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[5]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[5] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[4]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[4] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[3]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[3] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[2]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[2] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|ro_counter[1] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:9:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|ro_counter[1] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:6:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:1:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:0:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|ro_counter[1]  ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:13:ro_inst|ro_counter[1] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:14:ro_inst|ro_counter[1] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:12:ro_inst|ro_counter[1] ; 0                 ; 6       ;
+;      - ring_oscillator:\gen_ro:15:ro_inst|ro_counter[1] ; 0                 ; 6       ;
 ; pulse_in                                                ;                   ;         ;
-;      - ring_oscillator:\gen_ro:10:ro_inst|inv[0]        ; 0                 ; 0       ;
+;      - ring_oscillator:\gen_ro:10:ro_inst|inv[0]        ; 1                 ; 0       ;
 ;      - ring_oscillator:\gen_ro:9:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:8:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:11:ro_inst|inv[0]        ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:5:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:6:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:4:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:7:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:2:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:1:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:0:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:3:ro_inst|inv[0]         ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:13:ro_inst|inv[0]        ; 0                 ; 0       ;
+;      - ring_oscillator:\gen_ro:8:ro_inst|inv[0]         ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:11:ro_inst|inv[0]        ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:5:ro_inst|inv[0]         ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:4:ro_inst|inv[0]         ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:7:ro_inst|inv[0]         ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:2:ro_inst|inv[0]         ; 1                 ; 0       ;
+;      - ring_oscillator:\gen_ro:3:ro_inst|inv[0]         ; 1                 ; 0       ;
 ;      - ring_oscillator:\gen_ro:14:ro_inst|inv[0]        ; 0                 ; 0       ;
 ;      - ring_oscillator:\gen_ro:12:ro_inst|inv[0]        ; 0                 ; 0       ;
-;      - ring_oscillator:\gen_ro:15:ro_inst|inv[0]        ; 0                 ; 0       ;
 +---------------------------------------------------------+-------------------+---------+
 
 
@@ -1403,24 +1405,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; enable                                     ; PIN_J10            ; 96      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clock                                      ; PIN_E10            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; enable                                     ; PIN_B7             ; 96      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; reset                                      ; PIN_B8             ; 96      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; ring_oscillator:\gen_ro:0:ro_inst|inv[11]  ; LCCOMB_X44_Y52_N6  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; ring_oscillator:\gen_ro:10:ro_inst|inv[11] ; LCCOMB_X44_Y50_N4  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; ring_oscillator:\gen_ro:11:ro_inst|inv[11] ; LCCOMB_X77_Y39_N26 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; ring_oscillator:\gen_ro:12:ro_inst|inv[11] ; LCCOMB_X77_Y39_N24 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; ring_oscillator:\gen_ro:13:ro_inst|inv[11] ; LCCOMB_X77_Y39_N22 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; ring_oscillator:\gen_ro:14:ro_inst|inv[11] ; LCCOMB_X77_Y39_N20 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; ring_oscillator:\gen_ro:15:ro_inst|inv[11] ; LCCOMB_X44_Y50_N8  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; ring_oscillator:\gen_ro:1:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N18 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; ring_oscillator:\gen_ro:2:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N6   ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; ring_oscillator:\gen_ro:3:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N16  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; ring_oscillator:\gen_ro:4:ro_inst|inv[11]  ; LCCOMB_X43_Y4_N0   ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; ring_oscillator:\gen_ro:5:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N22  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; ring_oscillator:\gen_ro:6:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N30 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; ring_oscillator:\gen_ro:7:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N12  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; ring_oscillator:\gen_ro:8:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N16 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; ring_oscillator:\gen_ro:9:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N14  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; ring_oscillator:\gen_ro:0:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N26 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; ring_oscillator:\gen_ro:10:ro_inst|inv[11] ; LCCOMB_X77_Y39_N28 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; ring_oscillator:\gen_ro:11:ro_inst|inv[11] ; LCCOMB_X77_Y39_N2  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; ring_oscillator:\gen_ro:12:ro_inst|inv[11] ; LCCOMB_X1_Y38_N16  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; ring_oscillator:\gen_ro:13:ro_inst|inv[11] ; LCCOMB_X44_Y50_N26 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; ring_oscillator:\gen_ro:14:ro_inst|inv[11] ; LCCOMB_X1_Y38_N4   ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; ring_oscillator:\gen_ro:15:ro_inst|inv[11] ; LCCOMB_X44_Y53_N22 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; ring_oscillator:\gen_ro:1:ro_inst|inv[11]  ; LCCOMB_X45_Y52_N0  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; ring_oscillator:\gen_ro:2:ro_inst|inv[11]  ; LCCOMB_X45_Y4_N24  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; ring_oscillator:\gen_ro:3:ro_inst|inv[11]  ; LCCOMB_X43_Y1_N0   ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; ring_oscillator:\gen_ro:4:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N16 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; ring_oscillator:\gen_ro:5:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N22 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; ring_oscillator:\gen_ro:6:ro_inst|inv[11]  ; LCCOMB_X44_Y52_N0  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; ring_oscillator:\gen_ro:7:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N14 ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; ring_oscillator:\gen_ro:8:ro_inst|inv[11]  ; LCCOMB_X45_Y1_N14  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK16           ; --                        ;
+; ring_oscillator:\gen_ro:9:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N14  ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
 +--------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1429,22 +1432,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                       ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; ring_oscillator:\gen_ro:0:ro_inst|inv[11]  ; LCCOMB_X44_Y52_N6  ; 6       ; 0                                    ; Global Clock         ; GCLK12           ; --                        ;
-; ring_oscillator:\gen_ro:10:ro_inst|inv[11] ; LCCOMB_X44_Y50_N4  ; 6       ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
-; ring_oscillator:\gen_ro:11:ro_inst|inv[11] ; LCCOMB_X77_Y39_N26 ; 6       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; ring_oscillator:\gen_ro:12:ro_inst|inv[11] ; LCCOMB_X77_Y39_N24 ; 6       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
-; ring_oscillator:\gen_ro:13:ro_inst|inv[11] ; LCCOMB_X77_Y39_N22 ; 6       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-; ring_oscillator:\gen_ro:14:ro_inst|inv[11] ; LCCOMB_X77_Y39_N20 ; 6       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; ring_oscillator:\gen_ro:15:ro_inst|inv[11] ; LCCOMB_X44_Y50_N8  ; 6       ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
-; ring_oscillator:\gen_ro:1:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N18 ; 6       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-; ring_oscillator:\gen_ro:2:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N6   ; 6       ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
-; ring_oscillator:\gen_ro:3:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N16  ; 6       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; ring_oscillator:\gen_ro:4:ro_inst|inv[11]  ; LCCOMB_X43_Y4_N0   ; 6       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
-; ring_oscillator:\gen_ro:5:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N22  ; 6       ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; ring_oscillator:\gen_ro:6:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N30 ; 6       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
-; ring_oscillator:\gen_ro:7:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N12  ; 6       ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; ring_oscillator:\gen_ro:8:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N16 ; 6       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-; ring_oscillator:\gen_ro:9:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N14  ; 6       ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
+; ring_oscillator:\gen_ro:0:ro_inst|inv[11]  ; LCCOMB_X45_Y53_N26 ; 6       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
+; ring_oscillator:\gen_ro:10:ro_inst|inv[11] ; LCCOMB_X77_Y39_N28 ; 6       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; ring_oscillator:\gen_ro:11:ro_inst|inv[11] ; LCCOMB_X77_Y39_N2  ; 6       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
+; ring_oscillator:\gen_ro:12:ro_inst|inv[11] ; LCCOMB_X1_Y38_N16  ; 6       ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
+; ring_oscillator:\gen_ro:13:ro_inst|inv[11] ; LCCOMB_X44_Y50_N26 ; 6       ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; ring_oscillator:\gen_ro:14:ro_inst|inv[11] ; LCCOMB_X1_Y38_N4   ; 6       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; ring_oscillator:\gen_ro:15:ro_inst|inv[11] ; LCCOMB_X44_Y53_N22 ; 6       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
+; ring_oscillator:\gen_ro:1:ro_inst|inv[11]  ; LCCOMB_X45_Y52_N0  ; 6       ; 0                                    ; Global Clock         ; GCLK12           ; --                        ;
+; ring_oscillator:\gen_ro:2:ro_inst|inv[11]  ; LCCOMB_X45_Y4_N24  ; 6       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
+; ring_oscillator:\gen_ro:3:ro_inst|inv[11]  ; LCCOMB_X43_Y1_N0   ; 6       ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; ring_oscillator:\gen_ro:4:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N16 ; 6       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; ring_oscillator:\gen_ro:5:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N22 ; 6       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; ring_oscillator:\gen_ro:6:ro_inst|inv[11]  ; LCCOMB_X44_Y52_N0  ; 6       ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
+; ring_oscillator:\gen_ro:7:ro_inst|inv[11]  ; LCCOMB_X77_Y39_N14 ; 6       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; ring_oscillator:\gen_ro:8:ro_inst|inv[11]  ; LCCOMB_X45_Y1_N14  ; 6       ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
+; ring_oscillator:\gen_ro:9:ro_inst|inv[11]  ; LCCOMB_X1_Y38_N14  ; 6       ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
 +--------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1453,132 +1456,133 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 335 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 7 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 129 / 106,704 ( < 1 % ) ;
-; Direct links          ; 81 / 148,641 ( < 1 % )  ;
+; Block interconnects   ; 392 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 17 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 205 / 106,704 ( < 1 % ) ;
+; Direct links          ; 66 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 16 / 20 ( 80 % )        ;
-; Local interconnects   ; 289 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 309 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
 ; R24 interconnects     ; 11 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 159 / 147,764 ( < 1 % ) ;
+; R4 interconnects      ; 179 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.12) ; Number of LABs  (Total = 41) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 6                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 3                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 12                           ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 8.67) ; Number of LABs  (Total = 48) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 10                           ;
+; 2                                          ; 3                            ;
+; 3                                          ; 2                            ;
+; 4                                          ; 2                            ;
+; 5                                          ; 1                            ;
+; 6                                          ; 0                            ;
+; 7                                          ; 1                            ;
+; 8                                          ; 4                            ;
+; 9                                          ; 4                            ;
+; 10                                         ; 2                            ;
+; 11                                         ; 1                            ;
+; 12                                         ; 2                            ;
+; 13                                         ; 1                            ;
+; 14                                         ; 0                            ;
+; 15                                         ; 2                            ;
+; 16                                         ; 13                           ;
++--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.66) ; Number of LABs  (Total = 41) ;
+; LAB-wide Signals  (Average = 0.75) ; Number of LABs  (Total = 48) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 9                            ;
-; 1 Clock                            ; 2                            ;
-; 1 Clock enable                     ; 9                            ;
-; 2 Clocks                           ; 7                            ;
+; 1 Async. clear                     ; 12                           ;
+; 1 Clock                            ; 7                            ;
+; 1 Clock enable                     ; 12                           ;
+; 2 Clocks                           ; 5                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 12.34) ; Number of LABs  (Total = 41) ;
+; Number of Signals Sourced  (Average = 10.58) ; Number of LABs  (Total = 48) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 6                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 1                                            ; 10                           ;
+; 2                                            ; 3                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 2                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 4                            ;
+; 9                                            ; 4                            ;
 ; 10                                           ; 2                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 1                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 1                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 2                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 2                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 6                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 7                            ;
+; 28                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.24) ; Number of LABs  (Total = 41) ;
+; Number of Signals Sourced Out  (Average = 3.58) ; Number of LABs  (Total = 48) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 14                           ;
-; 2                                               ; 9                            ;
+; 1                                               ; 25                           ;
+; 2                                               ; 5                            ;
 ; 3                                               ; 4                            ;
-; 4                                               ; 2                            ;
+; 4                                               ; 0                            ;
 ; 5                                               ; 2                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 4                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 3                            ;
 ; 10                                              ; 0                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 5                            ;
-; 13                                              ; 2                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 6.93) ; Number of LABs  (Total = 41) ;
+; Number of Distinct Inputs  (Average = 7.21) ; Number of LABs  (Total = 48) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 11                           ;
-; 2                                           ; 8                            ;
-; 3                                           ; 3                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 3                            ;
-; 6                                           ; 0                            ;
+; 1                                           ; 21                           ;
+; 2                                           ; 3                            ;
+; 3                                           ; 4                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 2                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 3                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 1                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 0                            ;
 ; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
 ; 16                                          ; 0                            ;
@@ -1587,16 +1591,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 19                                          ; 0                            ;
 ; 20                                          ; 0                            ;
 ; 21                                          ; 1                            ;
-; 22                                          ; 2                            ;
+; 22                                          ; 5                            ;
 ; 23                                          ; 0                            ;
 ; 24                                          ; 0                            ;
-; 25                                          ; 1                            ;
-; 26                                          ; 1                            ;
-; 27                                          ; 0                            ;
+; 25                                          ; 2                            ;
+; 26                                          ; 0                            ;
+; 27                                          ; 1                            ;
 ; 28                                          ; 0                            ;
 ; 29                                          ; 0                            ;
 ; 30                                          ; 0                            ;
-; 31                                          ; 1                            ;
+; 31                                          ; 0                            ;
+; 32                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1657,15 +1662,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 1            ; 0            ; 1            ; 0            ; 0            ; 17        ; 1            ; 0            ; 17        ; 17        ; 1            ; 1            ; 0            ; 0            ; 16           ; 1            ; 1            ; 16           ; 0            ; 0            ; 0            ; 1            ; 2            ; 0            ; 0            ; 0            ; 0            ; 17        ; 0            ; 0            ;
+; Total Pass         ; 1            ; 0            ; 1            ; 0            ; 0            ; 18        ; 1            ; 0            ; 18        ; 18        ; 1            ; 1            ; 0            ; 0            ; 17           ; 1            ; 1            ; 17           ; 0            ; 0            ; 0            ; 1            ; 2            ; 0            ; 0            ; 0            ; 0            ; 18        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 16           ; 17           ; 16           ; 17           ; 17           ; 0         ; 16           ; 17           ; 0         ; 0         ; 16           ; 16           ; 17           ; 17           ; 1            ; 16           ; 16           ; 1            ; 17           ; 17           ; 17           ; 16           ; 15           ; 17           ; 17           ; 17           ; 17           ; 0         ; 17           ; 17           ;
+; Total Inapplicable ; 17           ; 18           ; 17           ; 18           ; 18           ; 0         ; 17           ; 18           ; 0         ; 0         ; 17           ; 17           ; 18           ; 18           ; 1            ; 17           ; 17           ; 1            ; 18           ; 18           ; 18           ; 17           ; 16           ; 18           ; 18           ; 18           ; 18           ; 0         ; 18           ; 18           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; challenge[7]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[6]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[1]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[0]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; req_resp_in        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; response           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[4]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[5]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1675,6 +1679,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; challenge[11]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[8]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; challenge[9]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; req_resp_in        ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clock              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; enable             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pulse_in           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1732,16 +1738,15 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------------------------+--------------------------------------------------+-------------------+
 ; Source Register                                  ; Destination Register                             ; Delay Added in ns ;
 +--------------------------------------------------+--------------------------------------------------+-------------------+
+; ring_oscillator:\gen_ro:15:ro_inst|ro_counter[5] ; ring_oscillator:\gen_ro:15:ro_inst|ro_counter[5] ; 0.060             ;
+; ring_oscillator:\gen_ro:12:ro_inst|ro_counter[5] ; ring_oscillator:\gen_ro:12:ro_inst|ro_counter[5] ; 0.060             ;
 ; ring_oscillator:\gen_ro:14:ro_inst|ro_counter[5] ; ring_oscillator:\gen_ro:14:ro_inst|ro_counter[5] ; 0.060             ;
-; ring_oscillator:\gen_ro:13:ro_inst|ro_counter[5] ; ring_oscillator:\gen_ro:13:ro_inst|ro_counter[5] ; 0.060             ;
-; ring_oscillator:\gen_ro:3:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:3:ro_inst|ro_counter[5]  ; 0.060             ;
 ; ring_oscillator:\gen_ro:0:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:0:ro_inst|ro_counter[5]  ; 0.060             ;
 ; ring_oscillator:\gen_ro:1:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:1:ro_inst|ro_counter[5]  ; 0.060             ;
-; ring_oscillator:\gen_ro:2:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:2:ro_inst|ro_counter[5]  ; 0.060             ;
-; ring_oscillator:\gen_ro:4:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:4:ro_inst|ro_counter[5]  ; 0.060             ;
-; ring_oscillator:\gen_ro:9:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:9:ro_inst|ro_counter[5]  ; 0.060             ;
+; ring_oscillator:\gen_ro:7:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:7:ro_inst|ro_counter[5]  ; 0.060             ;
+; ring_oscillator:\gen_ro:8:ro_inst|ro_counter[5]  ; ring_oscillator:\gen_ro:8:ro_inst|ro_counter[5]  ; 0.060             ;
 +--------------------------------------------------+--------------------------------------------------+-------------------+
-Note: This table only shows the top 8 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1781,11 +1786,11 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 16 pins of 17 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 17 pins of 18 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ro_puf.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node ring_oscillator:\gen_ro:0:ro_inst|inv[11]  File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
@@ -1855,7 +1860,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 16 (unused VREF, 2.5V VCCIO, 15 input, 1 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 17 (unused VREF, 2.5V VCCIO, 16 input, 1 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1868,7 +1873,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  60 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  51 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1881,18 +1886,18 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin reset uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 34
+    Info (169178): Pin reset uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 37
 Info (144001): Generated suppressed messages file C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/output_files/ro_puf.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5640 megabytes
-    Info: Processing ended: Tue Oct 17 16:17:56 2023
+    Info: Peak virtual memory: 5638 megabytes
+    Info: Processing ended: Tue Oct 17 18:52:25 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:13
 

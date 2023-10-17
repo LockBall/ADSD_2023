@@ -1,4 +1,5 @@
 |ro_puf
+clock => response~reg0.CLK
 enable => ring_oscillator:gen_ro:0:ro_inst.enable
 enable => ring_oscillator:gen_ro:1:ro_inst.enable
 enable => ring_oscillator:gen_ro:2:ro_inst.enable
@@ -99,8 +100,8 @@ challenge[2] => Mux4.IN16
 challenge[2] => Mux5.IN16
 challenge[1] => ~NO_FANOUT~
 challenge[0] => ~NO_FANOUT~
-req_resp_in => ~NO_FANOUT~
-response << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+req_resp_in => response~reg0.ENA
+response <= response~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ro_puf|ring_oscillator:\gen_ro:0:ro_inst

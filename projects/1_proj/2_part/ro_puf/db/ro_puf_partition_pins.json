@@ -40,6 +40,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "req_resp_in",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},

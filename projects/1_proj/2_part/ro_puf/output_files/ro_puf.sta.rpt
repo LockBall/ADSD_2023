@@ -1,5 +1,5 @@
 Timing Analyzer report for ro_puf
-Tue Oct 17 16:18:02 2023
+Tue Oct 17 18:52:31 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -93,14 +93,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.15        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.2%      ;
-;     Processor 3            ;   5.1%      ;
-;     Processor 4            ;   5.1%      ;
+;     Processor 2            ;   5.7%      ;
+;     Processor 3            ;   5.6%      ;
+;     Processor 4            ;   5.5%      ;
 +----------------------------+-------------+
 
 
@@ -109,27 +109,30 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }    ;
 ; pulse_in   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { pulse_in } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                        ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 453.72 MHz ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                         ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 446.43 MHz  ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1474.93 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +-------------------------------------+
 ; Slow 1200mV 85C Model Setup Summary ;
-+----------+--------+-----------------+
-; Clock    ; Slack  ; End Point TNS   ;
-+----------+--------+-----------------+
-; pulse_in ; -1.204 ; -65.706         ;
-+----------+--------+-----------------+
++----------+---------+----------------+
+; Clock    ; Slack   ; End Point TNS  ;
++----------+---------+----------------+
+; clock    ; -13.926 ; -13.926        ;
+; pulse_in ; -1.240  ; -63.323        ;
++----------+---------+----------------+
 
 
 +------------------------------------+
@@ -137,7 +140,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; pulse_in ; 0.354 ; 0.000           ;
+; pulse_in ; 0.355 ; 0.000           ;
+; clock    ; 0.378 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -159,6 +163,7 @@ No paths to report.
 ; Clock    ; Slack  ; End Point TNS                 ;
 +----------+--------+-------------------------------+
 ; pulse_in ; -3.000 ; -137.688                      ;
+; clock    ; -3.000 ; -4.403                        ;
 +----------+--------+-------------------------------+
 
 
@@ -168,23 +173,25 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                         ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 502.01 MHz ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 496.28 MHz  ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1607.72 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +------------------------------------+
 ; Slow 1200mV 0C Model Setup Summary ;
-+----------+--------+----------------+
-; Clock    ; Slack  ; End Point TNS  ;
-+----------+--------+----------------+
-; pulse_in ; -0.992 ; -52.241        ;
-+----------+--------+----------------+
++----------+---------+---------------+
+; Clock    ; Slack   ; End Point TNS ;
++----------+---------+---------------+
+; clock    ; -12.576 ; -12.576       ;
+; pulse_in ; -1.015  ; -50.074       ;
++----------+---------+---------------+
 
 
 +-----------------------------------+
@@ -193,6 +200,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
 ; pulse_in ; 0.321 ; 0.000          ;
+; clock    ; 0.339 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -214,6 +222,7 @@ No paths to report.
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
 ; pulse_in ; -3.000 ; -137.688                     ;
+; clock    ; -3.000 ; -4.403                       ;
 +----------+--------+------------------------------+
 
 
@@ -225,11 +234,12 @@ No synchronizer chains to report.
 
 +------------------------------------+
 ; Fast 1200mV 0C Model Setup Summary ;
-+----------+-------+-----------------+
-; Clock    ; Slack ; End Point TNS   ;
-+----------+-------+-----------------+
-; pulse_in ; 0.106 ; 0.000           ;
-+----------+-------+-----------------+
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; clock    ; -6.216 ; -6.216         ;
+; pulse_in ; 0.092  ; 0.000          ;
++----------+--------+----------------+
 
 
 +-----------------------------------+
@@ -238,6 +248,7 @@ No synchronizer chains to report.
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
 ; pulse_in ; 0.151 ; 0.000          ;
+; clock    ; 0.166 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -258,7 +269,8 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; pulse_in ; -3.000 ; -115.406                     ;
+; pulse_in ; -3.000 ; -110.069                     ;
+; clock    ; -3.000 ; -4.073                       ;
 +----------+--------+------------------------------+
 
 
@@ -273,10 +285,12 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.204  ; 0.151 ; N/A      ; N/A     ; -3.000              ;
-;  pulse_in        ; -1.204  ; 0.151 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -65.706 ; 0.0   ; 0.0      ; 0.0     ; -137.688            ;
-;  pulse_in        ; -65.706 ; 0.000 ; N/A      ; N/A     ; -137.688            ;
+; Worst-case Slack ; -13.926 ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+;  clock           ; -13.926 ; 0.166 ; N/A      ; N/A     ; -3.000              ;
+;  pulse_in        ; -1.240  ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -77.249 ; 0.0   ; 0.0      ; 0.0     ; -142.091            ;
+;  clock           ; -13.926 ; 0.000 ; N/A      ; N/A     ; -4.403              ;
+;  pulse_in        ; -63.323 ; 0.000 ; N/A      ; N/A     ; -137.688            ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -299,7 +313,6 @@ No synchronizer chains to report.
 ; challenge[6]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[1]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[0]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; req_resp_in         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[4]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[5]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[2]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -308,6 +321,8 @@ No synchronizer chains to report.
 ; challenge[11]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[8]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; challenge[9]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; req_resp_in         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; clock               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; reset               ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; enable              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; pulse_in            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -356,6 +371,8 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 1        ; 0        ; 0        ; 0        ;
+; pulse_in   ; clock    ; 0        ; 192      ; 0        ; 0        ;
 ; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 336      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -366,6 +383,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 1        ; 0        ; 0        ; 0        ;
+; pulse_in   ; clock    ; 0        ; 192      ; 0        ; 0        ;
 ; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 336      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -390,10 +409,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 200   ; 200  ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 201   ; 201  ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 104   ; 104  ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
@@ -402,6 +421,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------+----------+------+-------------+
 ; Target   ; Clock    ; Type ; Status      ;
 +----------+----------+------+-------------+
+; clock    ; clock    ; Base ; Constrained ;
 ; pulse_in ; pulse_in ; Base ; Constrained ;
 +----------+----------+------+-------------+
 
@@ -420,6 +440,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; challenge[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; challenge[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; enable        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_in   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+--------------------------------------------------------------------------------------+
 
@@ -447,6 +468,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; challenge[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; challenge[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; enable        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_in   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; reset         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+--------------------------------------------------------------------------------------+
 
@@ -466,7 +488,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 16:18:00 2023
+    Info: Processing started: Tue Oct 17 18:52:29 2023
 Info: Command: quartus_sta ro_puf -c ro_puf
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -476,68 +498,78 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'ro_
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name pulse_in pulse_in
+    Info (332105): create_clock -period 1.000 -name clock clock
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.204
+Info (332146): Worst-case setup slack is -13.926
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.204             -65.706 pulse_in 
-Info (332146): Worst-case hold slack is 0.354
+    Info (332119):   -13.926             -13.926 clock 
+    Info (332119):    -1.240             -63.323 pulse_in 
+Info (332146): Worst-case hold slack is 0.355
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.354               0.000 pulse_in 
+    Info (332119):     0.355               0.000 pulse_in 
+    Info (332119):     0.378               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -137.688 pulse_in 
+    Info (332119):    -3.000              -4.403 clock 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.992
+Info (332146): Worst-case setup slack is -12.576
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.992             -52.241 pulse_in 
+    Info (332119):   -12.576             -12.576 clock 
+    Info (332119):    -1.015             -50.074 pulse_in 
 Info (332146): Worst-case hold slack is 0.321
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.321               0.000 pulse_in 
+    Info (332119):     0.339               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -137.688 pulse_in 
+    Info (332119):    -3.000              -4.403 clock 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.106
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.216
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.106               0.000 pulse_in 
+    Info (332119):    -6.216              -6.216 clock 
+    Info (332119):     0.092               0.000 pulse_in 
 Info (332146): Worst-case hold slack is 0.151
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.151               0.000 pulse_in 
+    Info (332119):     0.166               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -115.406 pulse_in 
+    Info (332119):    -3.000            -110.069 pulse_in 
+    Info (332119):    -3.000              -4.073 clock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info (144001): Generated suppressed messages file C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/output_files/ro_puf.sta.smsg
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Tue Oct 17 16:18:02 2023
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Tue Oct 17 18:52:31 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

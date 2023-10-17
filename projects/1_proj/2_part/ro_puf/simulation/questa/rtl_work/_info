@@ -3,6 +3,19 @@ K4
 z2
 Z0 !s99 nomlopt
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -12,10 +25,10 @@ R0
 cModel Technology
 Z1 dC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/simulation/questa
 T_opt
-!s110 1697573991
-Vn:eIGC09kf`CB_93mkKhz1
+!s110 1697583180
+VZIjWlCRHAVUIPo2IiR7nT3
 04 9 12 work ro_puf_tb test_fixture 1
-=1-d0509975fd67-652eec67-202-4334
+=1-d0509975fd67-652f104c-1c0-4780
 !s124 OEM10U18 
 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
 tCvgOpt 0
@@ -38,9 +51,9 @@ VTz67EfUk12KDAkHenfD[N3
 !s100 mD:Njc;WiYIjo1AP8f8Gz2
 Z10 OL;C;2021.2;73
 31
-Z11 !s110 1697573990
+Z11 !s110 1697583179
 !i10b 1
-Z12 !s108 1697573990.000000
+Z12 !s108 1697583179.000000
 Z13 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd|
 Z14 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd|
 !i113 0
@@ -69,7 +82,7 @@ R14
 R15
 R16
 Ero_puf
-Z18 w1697571988
+Z18 w1697583125
 R3
 R4
 R5
@@ -81,8 +94,8 @@ Z19 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd
 Z20 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd
 l0
 L22 1
-VfYc4]Z^0K?c`kWP[dPQzl0
-!s100 =O]C=C0jF;oRXHLfX?<L10
+Vo7a_[DmD_TckbE3E]QPAa3
+!s100 cShZ6edaSO9MH]Qz9:U2R2
 R10
 31
 R11
@@ -100,12 +113,12 @@ R4
 R5
 R6
 R7
-Z23 DEx4 work 6 ro_puf 0 22 fYc4]Z^0K?c`kWP[dPQzl0
+Z23 DEx4 work 6 ro_puf 0 22 o7a_[DmD_TckbE3E]QPAa3
 !i122 1
-l60
-L46 60
-VBIe^Bc;:96lcSiTckHZC01
-!s100 TndkD_^B3^;RacnHB=A8i1
+l63
+L49 65
+VcU^=V5:Bik[8;c84VbdhI0
+!s100 ?V?e3Bg8adO_RT^^4@?A[1
 R10
 31
 R11
@@ -117,7 +130,7 @@ R22
 R15
 R16
 Ero_puf_tb
-Z24 w1697573857
+Z24 w1697583124
 R6
 R7
 !i122 2
@@ -147,10 +160,10 @@ R6
 R7
 DEx4 work 9 ro_puf_tb 0 22 A3]zKJSHe?2nHY;@X2;;33
 !i122 2
-l32
-L17 43
-VGTS3I6Y22a=]=UKCj7:GD2
-!s100 nSbRzZ6`;a51DJ52d<N?01
+l34
+L17 55
+VaAzzn<54M;kB`LTeaO8YC1
+!s100 25KE6<gLO2d`Tz6T`0[FG1
 R10
 31
 R11
