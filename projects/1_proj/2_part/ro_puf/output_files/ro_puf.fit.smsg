@@ -1,3 +1,19 @@
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
 Extra Info (176273): Performing register packing on registers with non-logic cell location assignments
 Extra Info (176274): Completed register packing on registers with non-logic cell location assignments
 Extra Info (176236): Started Fast Input/Output/OE register processing

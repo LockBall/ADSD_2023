@@ -8,7 +8,7 @@ use ieee.std_logic_1164.all;
 entity ro_puf_tb is
 
 	generic( -- needs to be first
-		constant ro_num: positive range 3 to 37 := 15 -- how many, use ODD # here to get EVEN # of ring osc -- 21
+		constant ro_count: positive range 3 to 37 := 15 -- how many, use ODD # here to get EVEN # of ring osc -- 21
 		-- minimum of 3, max of 37
 	);
 
@@ -26,8 +26,8 @@ architecture test_fixture of ro_puf_tb is
 	 signal tb_req_resp_in	 : std_logic;
 
 	 
-	 --signal tb_ro_outs: std_logic_vector(0 to ro_num); -- outputs
-	 --signal tb_ro_ctr_ary_out : t_ro_ctr_ary(0 to ro_num);
+	 --signal tb_ro_outs: std_logic_vector(0 to ro_count); -- outputs
+	 --signal tb_ro_ctr_ary_out : t_ro_ctr_ary(0 to ro_count);
 
 begin
     -- connecting testbench signals with ro_puf.vhd
@@ -53,7 +53,7 @@ begin
 	 -- 3 = 000011, 6 = 000110 : 000011_000110
 	 -- 6 = 001100, 3 = 000011 : 001100000011
 	 -- 11 = 001011, 21 = 010101 : 001011010101
-	 tb_req_resp_in <= '0', '1' after 0.895 ns ;
+	 tb_req_resp_in <= '0', '1' after 0.82 ns ;
 	
 	 
 end test_fixture ;

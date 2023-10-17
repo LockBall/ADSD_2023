@@ -40,7 +40,7 @@ architecture rtl of ring_oscillator is
 			severity failure;
 	
 		NAND_out <= pulse_in NAND inv(ro_length) after 0.01 ns; -- the output of the last inverter is applied as an input
-		inv(0)  <=          NOT NAND_out  	   after var_delay;
+		inv(0)   <= NOT NAND_out after var_delay;
 
 		gen_inv: for i in 1 to ro_length -- make all of the inverters except inv(0) for NAND
 		generate -- dont start at 0 cause its for NAND

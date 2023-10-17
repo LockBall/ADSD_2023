@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Oct 17 14:19:17 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Tue Oct 17 16:17:55 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ro_puf
 Top-level Entity Name : ro_puf
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 447 / 49,760 ( < 1 % )
-    Total combinational functions : 447 / 49,760 ( < 1 % )
+Total logic elements : 415 / 49,760 ( < 1 % )
+    Total combinational functions : 415 / 49,760 ( < 1 % )
     Dedicated logic registers : 96 / 49,760 ( < 1 % )
 Total registers : 96
 Total pins : 17 / 360 ( 5 % )

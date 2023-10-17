@@ -84,3 +84,5 @@
 #    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
+# End time: 14:26:56 on Oct 17,2023, Elapsed time: 0:05:10
+# Errors: 0, Warnings: 4

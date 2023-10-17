@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Oct 17 14:19:08 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Tue Oct 17 16:17:46 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ro_puf
 Top-level Entity Name : ro_puf
 Family : MAX 10
-Total logic elements : 446
-    Total combinational functions : 446
+Total logic elements : 414
+    Total combinational functions : 414
     Dedicated logic registers : 96
 Total registers : 96
 Total pins : 17
