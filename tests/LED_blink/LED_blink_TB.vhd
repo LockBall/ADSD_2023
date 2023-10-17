@@ -15,7 +15,7 @@ architecture sim of LED_blink_TB is
 	UUT : entity work.LED_blink port map(  -- connect main code to testbench
     	clock => clock_tb,
 		reset => reset_tb,
-		led_out   => led_tb
+		led   => led_tb
 	);    
 	 
 		reset_tb <= '1', '0' after 25 ns, '1' after 35 ns ; -- low resets counter, high allows counts

@@ -34,7 +34,7 @@ IO_RULES_MATRIX,Total Pass,3;0;3;0;0;3;3;0;3;3;3;0;0;0;2;3;0;2;0;0;0;0;0;0;0;0;0
 IO_RULES_MATRIX,Total Unchecked,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
 IO_RULES_MATRIX,Total Inapplicable,0;3;0;3;3;0;0;3;0;0;0;3;3;3;1;0;3;1;3;3;3;3;3;3;3;3;3;0;3;3,
 IO_RULES_MATRIX,Total Fail,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
-IO_RULES_MATRIX,led_out,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
+IO_RULES_MATRIX,led,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,clock,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,reset,Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
 IO_RULES_SUMMARY,Total I/O Rules,30,

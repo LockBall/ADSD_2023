@@ -5,8 +5,8 @@ use ieee.std_logic_1164.all;
 entity LED_blink is
 	port(
     	clock   : in  std_logic ;      -- P11
-    	led_out : buffer std_logic ;   -- A8
-		reset   : in  std_logic := '1' -- active low
+    	led     : out std_logic ;      -- A8
+		reset   : in  std_logic := '1' -- B8 active low
 	);
 end entity LED_blink;
 
@@ -37,7 +37,7 @@ architecture rtl of LED_blink is
 
     	end if; -- rising_edge(clock)
 		
-		led_out <= led_state ;
+		led <= led_state ;
 
 	end process;
 	
