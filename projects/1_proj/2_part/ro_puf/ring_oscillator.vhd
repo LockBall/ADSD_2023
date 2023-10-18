@@ -16,7 +16,7 @@ entity ring_oscillator is
 	port(
 		enable     : in     std_logic;
 		ro_out	  : buffer std_logic;
-		ro_counter : buffer integer range 0 to 64; -- integer
+		ro_counter : buffer natural; -- integer
 		reset		  : in	  std_logic;
 		pulse_in   : in	  std_logic
 	);

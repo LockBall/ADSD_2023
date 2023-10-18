@@ -8,39 +8,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "challenge[4]",
+					"name" : "done_LED",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[5]",
+					"name" : "challenge_lft[4]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[2]",
+					"name" : "challenge_lft[5]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[3]",
+					"name" : "challenge_lft[2]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[10]",
+					"name" : "challenge_lft[3]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[11]",
+					"name" : "challenge_rit[4]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[8]",
+					"name" : "challenge_rit[5]",
 					"strict" : false
 				},
 				{
-					"name" : "challenge[9]",
+					"name" : "challenge_rit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "challenge_rit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "req_resp_in",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "done_in",
 					"strict" : false
 				},
 				{

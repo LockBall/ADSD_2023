@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ro_puf
-Wed Oct 18 12:14:00 2023
+Wed Oct 18 17:48:39 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,61 +13,60 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Source assignments for ring_oscillator:\gen_ro:0:ro_inst
- 12. Source assignments for ring_oscillator:\gen_ro:1:ro_inst
- 13. Source assignments for ring_oscillator:\gen_ro:2:ro_inst
- 14. Source assignments for ring_oscillator:\gen_ro:3:ro_inst
- 15. Source assignments for ring_oscillator:\gen_ro:4:ro_inst
- 16. Source assignments for ring_oscillator:\gen_ro:5:ro_inst
- 17. Source assignments for ring_oscillator:\gen_ro:6:ro_inst
- 18. Source assignments for ring_oscillator:\gen_ro:7:ro_inst
- 19. Source assignments for ring_oscillator:\gen_ro:8:ro_inst
- 20. Source assignments for ring_oscillator:\gen_ro:9:ro_inst
- 21. Source assignments for ring_oscillator:\gen_ro:10:ro_inst
- 22. Source assignments for ring_oscillator:\gen_ro:11:ro_inst
- 23. Source assignments for ring_oscillator:\gen_ro:12:ro_inst
- 24. Source assignments for ring_oscillator:\gen_ro:13:ro_inst
- 25. Source assignments for ring_oscillator:\gen_ro:14:ro_inst
- 26. Source assignments for ring_oscillator:\gen_ro:15:ro_inst
- 27. Parameter Settings for User Entity Instance: Top-level Entity: |ro_puf
- 28. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:0:ro_inst
- 29. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:1:ro_inst
- 30. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:2:ro_inst
- 31. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:3:ro_inst
- 32. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:4:ro_inst
- 33. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:5:ro_inst
- 34. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:6:ro_inst
- 35. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:7:ro_inst
- 36. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:8:ro_inst
- 37. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:9:ro_inst
- 38. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:10:ro_inst
- 39. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:11:ro_inst
- 40. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:12:ro_inst
- 41. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:13:ro_inst
- 42. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:14:ro_inst
- 43. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:15:ro_inst
- 44. Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"
- 45. Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"
- 46. Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"
- 47. Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"
- 48. Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"
- 49. Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"
- 50. Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"
- 51. Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"
- 52. Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"
- 53. Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"
- 54. Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"
- 55. Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"
- 56. Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"
- 57. Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"
- 58. Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"
- 59. Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"
- 60. Post-Synthesis Netlist Statistics for Top Partition
- 61. Elapsed Time Per Partition
- 62. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Source assignments for ring_oscillator:\gen_ro:0:ro_inst
+ 11. Source assignments for ring_oscillator:\gen_ro:1:ro_inst
+ 12. Source assignments for ring_oscillator:\gen_ro:2:ro_inst
+ 13. Source assignments for ring_oscillator:\gen_ro:3:ro_inst
+ 14. Source assignments for ring_oscillator:\gen_ro:4:ro_inst
+ 15. Source assignments for ring_oscillator:\gen_ro:5:ro_inst
+ 16. Source assignments for ring_oscillator:\gen_ro:6:ro_inst
+ 17. Source assignments for ring_oscillator:\gen_ro:7:ro_inst
+ 18. Source assignments for ring_oscillator:\gen_ro:8:ro_inst
+ 19. Source assignments for ring_oscillator:\gen_ro:9:ro_inst
+ 20. Source assignments for ring_oscillator:\gen_ro:10:ro_inst
+ 21. Source assignments for ring_oscillator:\gen_ro:11:ro_inst
+ 22. Source assignments for ring_oscillator:\gen_ro:12:ro_inst
+ 23. Source assignments for ring_oscillator:\gen_ro:13:ro_inst
+ 24. Source assignments for ring_oscillator:\gen_ro:14:ro_inst
+ 25. Source assignments for ring_oscillator:\gen_ro:15:ro_inst
+ 26. Parameter Settings for User Entity Instance: Top-level Entity: |ro_puf
+ 27. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:0:ro_inst
+ 28. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:1:ro_inst
+ 29. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:2:ro_inst
+ 30. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:3:ro_inst
+ 31. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:4:ro_inst
+ 32. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:5:ro_inst
+ 33. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:6:ro_inst
+ 34. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:7:ro_inst
+ 35. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:8:ro_inst
+ 36. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:9:ro_inst
+ 37. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:10:ro_inst
+ 38. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:11:ro_inst
+ 39. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:12:ro_inst
+ 40. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:13:ro_inst
+ 41. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:14:ro_inst
+ 42. Parameter Settings for User Entity Instance: ring_oscillator:\gen_ro:15:ro_inst
+ 43. Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"
+ 44. Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"
+ 45. Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"
+ 46. Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"
+ 47. Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"
+ 48. Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"
+ 49. Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"
+ 50. Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"
+ 51. Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"
+ 52. Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"
+ 53. Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"
+ 54. Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"
+ 55. Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"
+ 56. Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"
+ 57. Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"
+ 58. Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"
+ 59. Post-Synthesis Netlist Statistics for Top Partition
+ 60. Elapsed Time Per Partition
+ 61. Analysis & Synthesis Messages
 
 
 
@@ -94,16 +93,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 18 12:14:00 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 18 17:48:39 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; ro_puf                                         ;
 ; Top-level Entity Name              ; ro_puf                                         ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 459                                            ;
-;     Total combinational functions  ; 459                                            ;
-;     Dedicated logic registers      ; 129                                            ;
-; Total registers                    ; 129                                            ;
-; Total pins                         ; 17                                             ;
+; Total logic elements               ; 1,341                                          ;
+;     Total combinational functions  ; 1,341                                          ;
+;     Dedicated logic registers      ; 498                                            ;
+; Total registers                    ; 498                                            ;
+; Total pins                         ; 20                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -213,7 +212,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -232,30 +233,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 459         ;
+; Estimated Total logic elements              ; 1,341       ;
 ;                                             ;             ;
-; Total combinational functions               ; 459         ;
+; Total combinational functions               ; 1341        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 130         ;
-;     -- 3 input functions                    ; 22          ;
-;     -- <=2 input functions                  ; 307         ;
+;     -- 4 input functions                    ; 620         ;
+;     -- 3 input functions                    ; 47          ;
+;     -- <=2 input functions                  ; 674         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 360         ;
-;     -- arithmetic mode                      ; 99          ;
+;     -- normal mode                          ; 847         ;
+;     -- arithmetic mode                      ; 494         ;
 ;                                             ;             ;
-; Total registers                             ; 129         ;
-;     -- Dedicated logic registers            ; 129         ;
+; Total registers                             ; 498         ;
+;     -- Dedicated logic registers            ; 498         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 17          ;
+; I/O pins                                    ; 20          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 96          ;
-; Total fan-out                               ; 1459        ;
-; Average fan-out                             ; 2.35        ;
+; Maximum fan-out                             ; 496         ;
+; Total fan-out                               ; 5771        ;
+; Average fan-out                             ; 3.07        ;
 +---------------------------------------------+-------------+
 
 
@@ -264,50 +265,25 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name     ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
-; |ro_puf                                 ; 459 (171)           ; 129 (33)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
-;    |ring_oscillator:\gen_ro:0:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:0:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:10:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:10:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:11:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:11:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:12:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:12:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:13:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:13:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:14:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:14:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:15:ro_inst| ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:15:ro_inst ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:1:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:1:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:2:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:2:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:3:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:3:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:4:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:4:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:5:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:5:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:6:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:6:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:7:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:7:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:8:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:8:ro_inst  ; ring_oscillator ; work         ;
-;    |ring_oscillator:\gen_ro:9:ro_inst|  ; 18 (18)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:9:ro_inst  ; ring_oscillator ; work         ;
+; |ro_puf                                 ; 1341 (653)          ; 498 (2)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |ro_puf                                    ; ro_puf          ; work         ;
+;    |ring_oscillator:\gen_ro:0:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:0:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:10:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:10:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:11:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:11:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:12:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:12:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:13:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:13:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:14:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:14:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:15:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:15:ro_inst ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:1:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:1:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:2:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:2:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:3:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:3:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:4:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:4:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:5:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:5:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:6:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:6:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:7:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:7:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:8:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:8:ro_inst  ; ring_oscillator ; work         ;
+;    |ring_oscillator:\gen_ro:9:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ro_puf|ring_oscillator:\gen_ro:9:ro_inst  ; ring_oscillator ; work         ;
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------+
-; Registers Removed During Synthesis                                    ;
-+--------------------------------------------------+--------------------+
-; Register name                                    ; Reason for Removal ;
-+--------------------------------------------------+--------------------+
-; ring_oscillator:\gen_ro:0:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:1:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:2:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:3:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:4:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:5:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:6:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:7:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:8:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:9:ro_inst|ro_counter[6]  ; Lost fanout        ;
-; ring_oscillator:\gen_ro:10:ro_inst|ro_counter[6] ; Lost fanout        ;
-; ring_oscillator:\gen_ro:11:ro_inst|ro_counter[6] ; Lost fanout        ;
-; ring_oscillator:\gen_ro:12:ro_inst|ro_counter[6] ; Lost fanout        ;
-; ring_oscillator:\gen_ro:13:ro_inst|ro_counter[6] ; Lost fanout        ;
-; ring_oscillator:\gen_ro:14:ro_inst|ro_counter[6] ; Lost fanout        ;
-; ring_oscillator:\gen_ro:15:ro_inst|ro_counter[6] ; Lost fanout        ;
-; Total Number of Removed Registers = 16           ;                    ;
-+--------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -315,12 +291,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 129   ;
+; Total registers                              ; 498   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 96    ;
+; Number of registers using Asynchronous Clear ; 496   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Clock Enable       ; 496   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -330,8 +306,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 16:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |ro_puf|Mux0               ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |ro_puf|Mux6               ;
+; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |ro_puf|Mux0               ;
+; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |ro_puf|Mux31              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -1035,164 +1011,148 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:15:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:14:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:13:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:12:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:11:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"                                                          ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:10:ro_inst"                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:9:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:8:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:7:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:6:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:5:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:4:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:3:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:2:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:1:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; ro_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ro_counter[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ring_oscillator:\gen_ro:0:ro_inst"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1200,22 +1160,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 129                         ;
-;     ENA CLR           ; 96                          ;
-;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 459                         ;
-;     arith             ; 99                          ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 21                          ;
-;     normal            ; 360                         ;
-;         1 data inputs ; 209                         ;
-;         2 data inputs ; 20                          ;
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 498                         ;
+;     ENA CLR           ; 496                         ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 1341                        ;
+;     arith             ; 494                         ;
+;         2 data inputs ; 448                         ;
+;         3 data inputs ; 46                          ;
+;     normal            ; 847                         ;
+;         1 data inputs ; 208                         ;
+;         2 data inputs ; 18                          ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 130                         ;
+;         4 data inputs ; 620                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.16                        ;
+; Average LUT depth     ; 5.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1224,7 +1184,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1234,38 +1194,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 18 12:13:50 2023
+    Info: Processing started: Wed Oct 18 17:48:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ro_puf -c ro_puf
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file ring_oscillator.vhd
     Info (12022): Found design unit 1: ring_oscillator-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 27
     Info (12023): Found entity 1: ring_oscillator File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file ro_puf.vhd
-    Info (12022): Found design unit 1: ro_puf-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 49
+    Info (12022): Found design unit 1: ro_puf-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 54
     Info (12023): Found entity 1: ro_puf File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file ro_puf_tb.vhd
     Info (12022): Found design unit 1: ro_puf_tb-test_fixture File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd Line: 17
     Info (12023): Found entity 1: ro_puf_tb File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd Line: 8
 Info (12127): Elaborating entity "ro_puf" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(62): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 62
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:2:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:3:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:4:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:5:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:6:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:7:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:8:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:9:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:10:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:11:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:12:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:13:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:14:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
-Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:15:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 82
+Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(66): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 66
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:2:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:3:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:4:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:5:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:6:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:7:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:8:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:9:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:10:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:11:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:12:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:13:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:14:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ring_oscillator:\gen_ro:15:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 86
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ring_oscillator:\gen_ro:10:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
     Info (17048): Logic cell "ring_oscillator:\gen_ro:9:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd Line: 30
@@ -1446,18 +1405,18 @@ Info (17016): Found the following redundant logic cells in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "challenge[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
-    Warning (15610): No output dependent on input pin "challenge[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
-    Warning (15610): No output dependent on input pin "challenge[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
-    Warning (15610): No output dependent on input pin "challenge[0]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
-Info (21057): Implemented 477 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 460 logic cells
+    Warning (15610): No output dependent on input pin "challenge_lft[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
+    Warning (15610): No output dependent on input pin "challenge_lft[0]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 39
+    Warning (15610): No output dependent on input pin "challenge_rit[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 40
+    Warning (15610): No output dependent on input pin "challenge_rit[0]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd Line: 40
+Info (21057): Implemented 1361 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 1341 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Wed Oct 18 12:14:00 2023
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Wed Oct 18 17:48:39 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:21
 
 

@@ -31,16 +31,21 @@ entity ro_puf is
 	
 	   clock          : in  std_logic ; -- P11 50 MHZ
 	
-		enable         : in  	std_logic;
+		enable         : in 	std_logic;
 		--ro_ctr_ary_out : out 	t_ro_ctr_ary(0 to ro_count);	
 		--ro_outs        : buffer std_logic_vector(0 to ro_count);
-		reset		      : in	   std_logic;
-		pulse_in	      : in		std_logic;
-		challenge	   : in		std_logic_vector(0 to 11);
+		reset		      : in	std_logic;
+		pulse_in	      : in	std_logic;
+		challenge_lft	: in	std_logic_vector(0 to 5);
+		challenge_rit	: in	std_logic_vector(0 to 5);
+
 		--chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
 		--chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
-		--req_resp_in	   : in		std_logic; -- request response
-		response       : out	   std_logic
+		req_resp_in	   : in	std_logic; -- request response
+		response       : out	std_logic;
+		done_in        : in  std_logic := '0';
+		done_LED			: out std_logic := '0'
+
 	);
 	
 end entity ro_puf;
@@ -48,15 +53,14 @@ end entity ro_puf;
 
 architecture rtl of ro_puf is
 
-	type t_ro_ctr_ary is array (natural range <>) of integer range 0 to 64; -- https://surf-vhdl.com/vhdl-array/
+	type t_ro_ctr_ary is array (natural range <>) of integer ; -- https://surf-vhdl.com/vhdl-array/
 	signal ro_ctr_ary_sig : t_ro_ctr_ary(0 to ro_count);
 
-	signal chal_lft_val : integer  range 0 to 32;
-	signal chal_rit_val : integer  range 0 to 32;
-	signal chal_lft_6   : integer  range 0 to 32 := 0;
-	signal chal_rit_6   : integer  range 0 to 32 := 0;
+	signal chal_lft_val : integer;--  range 0 to 32;
+	signal chal_rit_val : integer;--  range 0 to 32;
+	signal chal_lft_6   : integer := 0;--  range 0 to 32 := 0;
+	signal chal_rit_6   : integer := 0;--  range 0 to 32 := 0;
 	
-	signal resp_time    : natural := 10;
 	signal req_resp_sig : std_logic := '0';
 	signal count	     : natural := 0;
 	signal ro_outs      : std_logic_vector(0 to ro_count);
@@ -70,13 +74,13 @@ architecture rtl of ro_puf is
   
 	--ro_ctr_ary_out <= ro_ctr_ary_sig ;
 	-- https://stackoverflow.com/questions/35102097/vhdl-type-conversion-found-4-possible-definitions
-	chal_lft_6 <= to_integer(unsigned(challenge(0 to 5))); -- left 6 bits of challenge
-	chal_rit_6 <= to_integer(unsigned(challenge(6 to 11))); -- right 6 bits of challenge
+	chal_lft_6 <= to_integer(unsigned(challenge_lft));
+	chal_rit_6 <= to_integer(unsigned(challenge_rit));
 	
 	chal_lft_val <= ro_ctr_ary_sig(chal_lft_6); -- value from counter array at challenge left location
 	chal_rit_val <= ro_ctr_ary_sig(chal_rit_6); -- value from counter array at challenge right location
 	
-	--req_resp_sig <= req_resp_in;
+	req_resp_sig <= req_resp_in;
   
 	gen_ro: for i in 0 to ro_count generate -- generate the ring oscillators
 		ro_inst: entity work.ring_oscillator
@@ -96,17 +100,17 @@ architecture rtl of ro_puf is
 			
 	end generate;
 	
-	process(clock) -- requires 13 mux
+	process(clock, req_resp_in)
 	 begin
 	 
 		if rising_edge(clock) then
-
-			if count = 10 then
-				count <= 0;
-				req_resp_sig <= '1';
-			else
-				count <= count + 1 ;
-				req_resp_sig <= '0';
+		
+			if reset = '0' then
+				response <= 'X';
+			end if;
+			
+			if done_in = '1' then
+				done_LED <= '1';
 			end if;
 
 			if req_resp_sig = '1' then
@@ -117,8 +121,8 @@ architecture rtl of ro_puf is
 				else response <= 'X';
 				end if; -- compare
 			end if;
-		end if; --rising_edge(clock)
 		
+		end if; --rising_edge(clock)
 	end process;
 	
 end architecture;

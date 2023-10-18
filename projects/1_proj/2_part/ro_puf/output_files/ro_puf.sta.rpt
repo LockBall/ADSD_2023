@@ -1,5 +1,5 @@
 Timing Analyzer report for ro_puf
-Wed Oct 18 12:14:21 2023
+Wed Oct 18 17:48:59 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -93,14 +93,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.6%      ;
-;     Processor 3            ;   5.5%      ;
-;     Processor 4            ;   5.5%      ;
+;     Processor 2            ;  15.1%      ;
+;     Processor 3            ;  15.1%      ;
+;     Processor 4            ;  15.1%      ;
 +----------------------------+-------------+
 
 
@@ -114,14 +114,14 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                        ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 266.31 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 450.05 MHz ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                         ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 269.32 MHz  ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1326.26 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -130,8 +130,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+---------+----------------+
 ; Clock    ; Slack   ; End Point TNS  ;
 +----------+---------+----------------+
-; clock    ; -13.660 ; -75.194        ;
-; pulse_in ; -1.222  ; -63.185        ;
+; clock    ; -16.035 ; -16.035        ;
+; pulse_in ; -2.713  ; -853.328       ;
 +----------+---------+----------------+
 
 
@@ -140,8 +140,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; clock    ; 0.323 ; 0.000           ;
-; pulse_in ; 0.355 ; 0.000           ;
+; clock    ; 0.322 ; 0.000           ;
+; pulse_in ; 0.354 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -162,8 +162,8 @@ No paths to report.
 +----------+--------+-------------------------------+
 ; Clock    ; Slack  ; End Point TNS                 ;
 +----------+--------+-------------------------------+
-; pulse_in ; -3.000 ; -137.688                      ;
-; clock    ; -3.000 ; -49.299                       ;
+; pulse_in ; -3.000 ; -698.888                      ;
+; clock    ; -3.000 ; -5.806                        ;
 +----------+--------+-------------------------------+
 
 
@@ -173,14 +173,14 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                         ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 298.42 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 499.5 MHz  ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 301.48 MHz  ; 250.0 MHz       ; pulse_in   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1445.09 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -189,8 +189,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+---------+---------------+
 ; Clock    ; Slack   ; End Point TNS ;
 +----------+---------+---------------+
-; clock    ; -12.479 ; -64.692       ;
-; pulse_in ; -1.002  ; -50.007       ;
+; clock    ; -14.461 ; -14.461       ;
+; pulse_in ; -2.317  ; -715.780      ;
 +----------+---------+---------------+
 
 
@@ -199,7 +199,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; clock    ; 0.290 ; 0.000          ;
+; clock    ; 0.289 ; 0.000          ;
 ; pulse_in ; 0.320 ; 0.000          ;
 +----------+-------+----------------+
 
@@ -221,8 +221,8 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; pulse_in ; -3.000 ; -137.688                     ;
-; clock    ; -3.000 ; -49.299                      ;
+; pulse_in ; -3.000 ; -698.888                     ;
+; clock    ; -3.000 ; -5.806                       ;
 +----------+--------+------------------------------+
 
 
@@ -237,8 +237,8 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; clock    ; -5.751 ; -12.083        ;
-; pulse_in ; 0.094  ; 0.000          ;
+; clock    ; -6.929 ; -6.929         ;
+; pulse_in ; -0.490 ; -79.285        ;
 +----------+--------+----------------+
 
 
@@ -248,7 +248,7 @@ No synchronizer chains to report.
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
 ; clock    ; 0.140 ; 0.000          ;
-; pulse_in ; 0.150 ; 0.000          ;
+; pulse_in ; 0.151 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -269,8 +269,8 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; pulse_in ; -3.000 ; -112.983                     ;
-; clock    ; -3.000 ; -41.563                      ;
+; pulse_in ; -3.000 ; -546.592                     ;
+; clock    ; -3.000 ; -5.361                       ;
 +----------+--------+------------------------------+
 
 
@@ -285,12 +285,12 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -13.660  ; 0.140 ; N/A      ; N/A     ; -3.000              ;
-;  clock           ; -13.660  ; 0.140 ; N/A      ; N/A     ; -3.000              ;
-;  pulse_in        ; -1.222   ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -138.379 ; 0.0   ; 0.0      ; 0.0     ; -186.987            ;
-;  clock           ; -75.194  ; 0.000 ; N/A      ; N/A     ; -49.299             ;
-;  pulse_in        ; -63.185  ; 0.000 ; N/A      ; N/A     ; -137.688            ;
+; Worst-case Slack ; -16.035  ; 0.140 ; N/A      ; N/A     ; -3.000              ;
+;  clock           ; -16.035  ; 0.140 ; N/A      ; N/A     ; -3.000              ;
+;  pulse_in        ; -2.713   ; 0.151 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -869.363 ; 0.0   ; 0.0      ; 0.0     ; -704.694            ;
+;  clock           ; -16.035  ; 0.000 ; N/A      ; N/A     ; -5.806              ;
+;  pulse_in        ; -853.328 ; 0.000 ; N/A      ; N/A     ; -698.888            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -300,6 +300,7 @@ No synchronizer chains to report.
 ; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; response     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; done_LED     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -309,19 +310,21 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; challenge[7]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[6]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[1]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[0]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[4]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[5]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[2]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[3]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[10]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[11]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[8]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; challenge[9]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[1]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[0]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[1]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[0]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[4]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[5]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[2]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_lft[3]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[4]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[5]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[2]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; challenge_rit[3]    ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; req_resp_in         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clock               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; done_in             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; reset               ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; enable              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; pulse_in            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -340,7 +343,8 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.33 V              ; -0.00603 V          ; 0.237 V                              ; 0.191 V                              ; 3.94e-09 s                  ; 3.71e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.33 V             ; -0.00603 V         ; 0.237 V                             ; 0.191 V                             ; 3.94e-09 s                 ; 3.71e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -350,7 +354,8 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.33 V              ; -0.00314 V          ; 0.21 V                               ; 0.115 V                              ; 4.79e-09 s                  ; 4.41e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.33 V             ; -0.00314 V         ; 0.21 V                              ; 0.115 V                             ; 4.79e-09 s                 ; 4.41e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -360,7 +365,8 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.64 V              ; -0.00888 V          ; 0.249 V                              ; 0.203 V                              ; 3.12e-09 s                  ; 3.02e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.64 V             ; -0.00888 V         ; 0.249 V                             ; 0.203 V                             ; 3.12e-09 s                 ; 3.02e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -370,9 +376,9 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 622      ; 0        ; 0        ; 0        ;
-; pulse_in   ; clock    ; 0        ; 192      ; 0        ; 0        ;
-; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 336      ;
+; clock      ; clock    ; 2        ; 0        ; 0        ; 0        ;
+; pulse_in   ; clock    ; 0        ; 992      ; 0        ; 0        ;
+; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 7936     ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -382,9 +388,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 622      ; 0        ; 0        ; 0        ;
-; pulse_in   ; clock    ; 0        ; 192      ; 0        ; 0        ;
-; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 336      ;
+; clock      ; clock    ; 2        ; 0        ; 0        ; 0        ;
+; pulse_in   ; clock    ; 0        ; 992      ; 0        ; 0        ;
+; pulse_in   ; pulse_in ; 0        ; 0        ; 0        ; 7936     ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -408,10 +414,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 200   ; 200  ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 1002  ; 1002 ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
 
 
@@ -425,22 +431,24 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------+----------+------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                            ;
-+---------------+--------------------------------------------------------------------------------------+
-; Input Port    ; Comment                                                                              ;
-+---------------+--------------------------------------------------------------------------------------+
-; challenge[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; enable        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+---------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; challenge_lft[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; done_in          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enable           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_in      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -448,26 +456,29 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; done_LED    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; response    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                            ;
-+---------------+--------------------------------------------------------------------------------------+
-; Input Port    ; Comment                                                                              ;
-+---------------+--------------------------------------------------------------------------------------+
-; challenge[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[8]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[10] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; challenge[11] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; enable        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+---------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; challenge_lft[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_lft[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; challenge_rit[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; done_in          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enable           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_in      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -475,6 +486,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; done_LED    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; response    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
@@ -485,7 +497,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 18 12:14:19 2023
+    Info: Processing started: Wed Oct 18 17:48:57 2023
 Info: Command: quartus_sta ro_puf -c ro_puf
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -502,73 +514,73 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -13.660
+Info (332146): Worst-case setup slack is -16.035
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.660             -75.194 clock 
-    Info (332119):    -1.222             -63.185 pulse_in 
-Info (332146): Worst-case hold slack is 0.323
+    Info (332119):   -16.035             -16.035 clock 
+    Info (332119):    -2.713            -853.328 pulse_in 
+Info (332146): Worst-case hold slack is 0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.323               0.000 clock 
-    Info (332119):     0.355               0.000 pulse_in 
+    Info (332119):     0.322               0.000 clock 
+    Info (332119):     0.354               0.000 pulse_in 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -137.688 pulse_in 
-    Info (332119):    -3.000             -49.299 clock 
+    Info (332119):    -3.000            -698.888 pulse_in 
+    Info (332119):    -3.000              -5.806 clock 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -12.479
+Info (332146): Worst-case setup slack is -14.461
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.479             -64.692 clock 
-    Info (332119):    -1.002             -50.007 pulse_in 
-Info (332146): Worst-case hold slack is 0.290
+    Info (332119):   -14.461             -14.461 clock 
+    Info (332119):    -2.317            -715.780 pulse_in 
+Info (332146): Worst-case hold slack is 0.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.290               0.000 clock 
+    Info (332119):     0.289               0.000 clock 
     Info (332119):     0.320               0.000 pulse_in 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -137.688 pulse_in 
-    Info (332119):    -3.000             -49.299 clock 
+    Info (332119):    -3.000            -698.888 pulse_in 
+    Info (332119):    -3.000              -5.806 clock 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.751
+Info (332146): Worst-case setup slack is -6.929
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.751             -12.083 clock 
-    Info (332119):     0.094               0.000 pulse_in 
+    Info (332119):    -6.929              -6.929 clock 
+    Info (332119):    -0.490             -79.285 pulse_in 
 Info (332146): Worst-case hold slack is 0.140
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.140               0.000 clock 
-    Info (332119):     0.150               0.000 pulse_in 
+    Info (332119):     0.151               0.000 pulse_in 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -112.983 pulse_in 
-    Info (332119):    -3.000             -41.563 clock 
+    Info (332119):    -3.000            -546.592 pulse_in 
+    Info (332119):    -3.000              -5.361 clock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info (144001): Generated suppressed messages file C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/output_files/ro_puf.sta.smsg
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Wed Oct 18 12:14:21 2023
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Wed Oct 18 17:48:59 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +-------------------------------------+

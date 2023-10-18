@@ -3,6 +3,9 @@ K4
 z2
 Z0 !s99 nomlopt
 R0
+R0
+R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -12,17 +15,17 @@ R0
 cModel Technology
 Z1 dC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/simulation/questa
 T_opt
-!s110 1697645729
-VHGhGVKfH5<jilQ@12cS:E2
+!s110 1697665893
+VP=z6kj6bQkVzm7M0iCC`E1
 04 9 12 work ro_puf_tb test_fixture 1
-=1-d0509975fd67-653004a1-a3-3994
+=1-d0509975fd67-65305364-31b-1478
 !s124 OEM10U18 
 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
 Ering_oscillator
-Z2 w1697568556
+Z2 w1697659721
 Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
@@ -34,13 +37,13 @@ Z8 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillato
 Z9 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd
 l0
 L9 1
-VTz67EfUk12KDAkHenfD[N3
-!s100 mD:Njc;WiYIjo1AP8f8Gz2
+VnmVHdWD_Q6H:dHL5Io@ZS3
+!s100 1WV<`GCa:U7IeihUeam]J1
 Z10 OL;C;2021.2;73
 31
-Z11 !s110 1697645727
+Z11 !s110 1697665891
 !i10b 1
-Z12 !s108 1697645727.000000
+Z12 !s108 1697665891.000000
 Z13 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd|
 Z14 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd|
 !i113 0
@@ -52,7 +55,7 @@ R4
 R5
 R6
 R7
-Z17 DEx4 work 15 ring_oscillator 0 22 Tz67EfUk12KDAkHenfD[N3
+Z17 DEx4 work 15 ring_oscillator 0 22 nmVHdWD_Q6H:dHL5Io@ZS3
 !i122 0
 l36
 L27 39
@@ -69,7 +72,7 @@ R14
 R15
 R16
 Ero_puf
-Z18 w1697645629
+Z18 w1697664656
 R3
 R4
 R5
@@ -81,8 +84,8 @@ Z19 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd
 Z20 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd
 l0
 L22 1
-V:dY0>ej`F4<CZN>j`oJ<c0
-!s100 ]VK02C_JJFoEnb3UI[h?R1
+VBzXo^a4E?FX??_di8<;QE2
+!s100 ?N>kDXZ=DRI6IRWmJhM`M1
 R10
 31
 R11
@@ -100,12 +103,12 @@ R4
 R5
 R6
 R7
-Z23 DEx4 work 6 ro_puf 0 22 :dY0>ej`F4<CZN>j`oJ<c0
+Z23 DEx4 work 6 ro_puf 0 22 BzXo^a4E?FX??_di8<;QE2
 !i122 1
-l65
-L49 76
-V9HgB9MeNGc3ZT<K[TCMDA0
-!s100 c<_OA<EL2FS51g31kIUD`0
+l69
+L54 75
+VdaDccEiZ`mBD8QdA6C;3<3
+!s100 je3BM^i<97PLlUW=Tg7n51
 R10
 31
 R11
@@ -117,7 +120,7 @@ R22
 R15
 R16
 Ero_puf_tb
-Z24 w1697645594
+Z24 w1697665709
 R6
 R7
 !i122 2
@@ -147,10 +150,10 @@ R6
 R7
 DEx4 work 9 ro_puf_tb 0 22 A3]zKJSHe?2nHY;@X2;;33
 !i122 2
-l34
-L17 55
-VeNYfnV9n]U0gC>0WY7Cj93
-!s100 GZj@neEec0HPb2<^H]7PG0
+l40
+L17 120
+VU:G>dBA@cZkbUo32ACfL60
+!s100 @Fcc7kiY9aL@:FJ>:SUEJ2
 R10
 31
 R11
