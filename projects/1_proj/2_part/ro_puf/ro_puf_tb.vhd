@@ -45,8 +45,8 @@ begin
 		challenge      => tb_challenge, -- 12 bits, 4095 max number
 		--chal_lft_6     => tb_chal_lft_6,
 		--chal_rit_6     => tb_chal_rit_6,
-		response       => tb_response,
-		req_resp_in		=> tb_req_resp_in
+		response       => tb_response
+		--req_resp_in		=> tb_req_resp_in
 	);
 	
 	
@@ -65,7 +65,7 @@ begin
 	 -- 3 = 000011, 6 = 000110 : 000011000110
 	 -- 6 = 001100, 3 = 000011 : 001100000011
 	 -- 11 = 001011, 21 = 010101 : 001011010101
-	 tb_req_resp_in <= '0', '1' after 200 ns, '0' after 220 ns ;
+	 --tb_req_resp_in <= '0', '1' after 200 ns, '0' after 220 ns ;
 	
 	 
 end test_fixture ;

@@ -39,7 +39,7 @@ entity ro_puf is
 		challenge	   : in		std_logic_vector(0 to 11);
 		--chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
 		--chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
-		req_resp_in	   : in		std_logic; -- request response
+		--req_resp_in	   : in		std_logic; -- request response
 		response       : out	   std_logic
 	);
 	
@@ -56,7 +56,9 @@ architecture rtl of ro_puf is
 	signal chal_lft_6   : integer  range 0 to 32 := 0;
 	signal chal_rit_6   : integer  range 0 to 32 := 0;
 	
-	signal req_resp_sig : std_logic;
+	signal resp_time    : natural := 10;
+	signal req_resp_sig : std_logic := '0';
+	signal count	     : natural := 0;
 	signal ro_outs      : std_logic_vector(0 to ro_count);
 
 
@@ -74,7 +76,7 @@ architecture rtl of ro_puf is
 	chal_lft_val <= ro_ctr_ary_sig(chal_lft_6); -- value from counter array at challenge left location
 	chal_rit_val <= ro_ctr_ary_sig(chal_rit_6); -- value from counter array at challenge right location
 	
-	req_resp_sig <= req_resp_in;
+	--req_resp_sig <= req_resp_in;
   
 	gen_ro: for i in 0 to ro_count generate -- generate the ring oscillators
 		ro_inst: entity work.ring_oscillator
@@ -94,10 +96,19 @@ architecture rtl of ro_puf is
 			
 	end generate;
 	
-	process(clock, req_resp_sig) -- requires 13 mux
+	process(clock) -- requires 13 mux
 	 begin
 	 
 		if rising_edge(clock) then
+
+			if count = 10 then
+				count <= 0;
+				req_resp_sig <= '1';
+			else
+				count <= count + 1 ;
+				req_resp_sig <= '0';
+			end if;
+
 			if req_resp_sig = '1' then
 				if chal_lft_val < chal_rit_val then -- compare
 					response <= '1';
