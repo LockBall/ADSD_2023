@@ -1,5 +1,5 @@
 Timing Analyzer report for top_level
-Thu Oct 19 11:29:03 2023
+Thu Oct 19 17:38:56 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -36,11 +36,19 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  28. Signal Integrity Metrics (Slow 1200mv 0c Model)
  29. Signal Integrity Metrics (Slow 1200mv 85c Model)
  30. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 31. Clock Transfers
- 32. Report TCCS
- 33. Report RSKM
- 34. Unconstrained Paths Summary
- 35. Timing Analyzer Messages
+ 31. Setup Transfers
+ 32. Hold Transfers
+ 33. Recovery Transfers
+ 34. Removal Transfers
+ 35. Report TCCS
+ 36. Report RSKM
+ 37. Unconstrained Paths Summary
+ 38. Clock Status Summary
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Unconstrained Input Ports
+ 42. Unconstrained Output Ports
+ 43. Timing Analyzer Messages
 
 
 
@@ -86,55 +94,84 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processor 2            ;  11.4%      ;
+;     Processor 3            ;  11.2%      ;
+;     Processor 4            ;  11.2%      ;
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                 ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets        ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; pulse~reg0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { pulse~reg0 } ;
+; tl_clock   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { tl_clock }   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
 
 
---------------------------------------
-; Slow 1200mV 85C Model Fmax Summary ;
---------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 130.84 MHz ; 130.84 MHz      ; tl_clock   ;      ;
+; 272.33 MHz ; 272.33 MHz      ; pulse~reg0 ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
----------------------------------------
-; Slow 1200mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++--------------------------------------+
+; Slow 1200mV 85C Model Setup Summary  ;
++------------+---------+---------------+
+; Clock      ; Slack   ; End Point TNS ;
++------------+---------+---------------+
+; tl_clock   ; -14.477 ; -191.254      ;
+; pulse~reg0 ; -2.672  ; -851.828      ;
++------------+---------+---------------+
 
 
---------------------------------------
-; Slow 1200mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++-------------------------------------+
+; Slow 1200mV 85C Model Hold Summary  ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; pulse~reg0 ; -4.418 ; -1668.471     ;
+; tl_clock   ; 0.323  ; 0.000         ;
++------------+--------+---------------+
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow 1200mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; pulse~reg0 ; -0.861 ; -103.753         ;
++------------+--------+------------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Slow 1200mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++------------+--------+-----------------+
+; Clock      ; Slack  ; End Point TNS   ;
++------------+--------+-----------------+
+; pulse~reg0 ; -1.195 ; -150.114        ;
++------------+--------+-----------------+
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++------------+--------+-----------------------------+
+; Clock      ; Slack  ; End Point TNS               ;
++------------+--------+-----------------------------+
+; tl_clock   ; -3.000 ; -78.762                     ;
+; pulse~reg0 ; -1.403 ; -695.888                    ;
++------------+--------+-----------------------------+
 
 
 -----------------------------------------------
@@ -143,40 +180,63 @@ No paths to report.
 No synchronizer chains to report.
 
 
--------------------------------------
-; Slow 1200mV 0C Model Fmax Summary ;
--------------------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 144.01 MHz ; 144.01 MHz      ; tl_clock   ;      ;
+; 304.6 MHz  ; 304.6 MHz       ; pulse~reg0 ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
---------------------------------------
-; Slow 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++--------------------------------------+
+; Slow 1200mV 0C Model Setup Summary   ;
++------------+---------+---------------+
+; Clock      ; Slack   ; End Point TNS ;
++------------+---------+---------------+
+; tl_clock   ; -13.089 ; -171.127      ;
+; pulse~reg0 ; -2.283  ; -715.090      ;
++------------+---------+---------------+
 
 
--------------------------------------
-; Slow 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-------------------------------------+
+; Slow 1200mV 0C Model Hold Summary   ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; pulse~reg0 ; -3.956 ; -1466.617     ;
+; tl_clock   ; 0.289  ; 0.000         ;
++------------+--------+---------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Slow 1200mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++------------+--------+-----------------+
+; Clock      ; Slack  ; End Point TNS   ;
++------------+--------+-----------------+
+; pulse~reg0 ; -0.836 ; -112.886        ;
++------------+--------+-----------------+
 
 
-----------------------------------------
++--------------------------------------+
 ; Slow 1200mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++------------+--------+----------------+
+; Clock      ; Slack  ; End Point TNS  ;
++------------+--------+----------------+
+; pulse~reg0 ; -1.070 ; -125.400       ;
++------------+--------+----------------+
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++------------+--------+----------------------------+
+; Clock      ; Slack  ; End Point TNS              ;
++------------+--------+----------------------------+
+; tl_clock   ; -3.000 ; -78.762                    ;
+; pulse~reg0 ; -1.403 ; -695.888                   ;
++------------+--------+----------------------------+
 
 
 ----------------------------------------------
@@ -185,34 +245,52 @@ No paths to report.
 No synchronizer chains to report.
 
 
---------------------------------------
-; Fast 1200mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++-------------------------------------+
+; Fast 1200mV 0C Model Setup Summary  ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; tl_clock   ; -5.781 ; -51.656       ;
+; pulse~reg0 ; -0.470 ; -79.314       ;
++------------+--------+---------------+
 
 
--------------------------------------
-; Fast 1200mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++-------------------------------------+
+; Fast 1200mV 0C Model Hold Summary   ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; pulse~reg0 ; -1.558 ; -557.023      ;
+; tl_clock   ; 0.141  ; 0.000         ;
++------------+--------+---------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Fast 1200mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++------------+--------+-----------------+
+; Clock      ; Slack  ; End Point TNS   ;
++------------+--------+-----------------+
+; pulse~reg0 ; -0.694 ; -145.874        ;
++------------+--------+-----------------+
 
 
-----------------------------------------
++--------------------------------------+
 ; Fast 1200mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++------------+-------+-----------------+
+; Clock      ; Slack ; End Point TNS   ;
++------------+-------+-----------------+
+; pulse~reg0 ; 0.099 ; 0.000           ;
++------------+-------+-----------------+
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++------------+--------+----------------------------+
+; Clock      ; Slack  ; End Point TNS              ;
++------------+--------+----------------------------+
+; tl_clock   ; -3.000 ; -58.487                    ;
+; pulse~reg0 ; -1.000 ; -496.000                   ;
++------------+--------+----------------------------+
 
 
 ----------------------------------------------
@@ -221,14 +299,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                  ;
++------------------+-----------+-----------+----------+----------+---------------------+
+; Clock            ; Setup     ; Hold      ; Recovery ; Removal  ; Minimum Pulse Width ;
++------------------+-----------+-----------+----------+----------+---------------------+
+; Worst-case Slack ; -14.477   ; -4.418    ; -0.861   ; -1.195   ; -3.000              ;
+;  pulse~reg0      ; -2.672    ; -4.418    ; -0.861   ; -1.195   ; -1.403              ;
+;  tl_clock        ; -14.477   ; 0.141     ; N/A      ; N/A      ; -3.000              ;
+; Design-wide TNS  ; -1043.082 ; -1668.471 ; -145.874 ; -150.114 ; -774.65             ;
+;  pulse~reg0      ; -851.828  ; -1668.471 ; -145.874 ; -150.114 ; -695.888            ;
+;  tl_clock        ; -191.254  ; 0.000     ; N/A      ; N/A      ; -78.762             ;
++------------------+-----------+-----------+----------+----------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -236,6 +318,23 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; tl_enable    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_lft[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; chal_rit[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pulse        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; req_resp_out ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; done_LED     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; response     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -245,7 +344,8 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; clock               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; tl_clock            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; reset_btn           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -261,6 +361,23 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tl_enable    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; pulse        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; req_resp_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.33 V              ; -0.00603 V          ; 0.237 V                              ; 0.191 V                              ; 3.94e-09 s                  ; 3.71e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.33 V             ; -0.00603 V         ; 0.237 V                             ; 0.191 V                             ; 3.94e-09 s                 ; 3.71e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -270,6 +387,23 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tl_enable    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_lft[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_lft[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_lft[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_lft[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_lft[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_lft[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_rit[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_rit[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_rit[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_rit[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; chal_rit[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; chal_rit[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; pulse        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; req_resp_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.33 V              ; -0.00314 V          ; 0.21 V                               ; 0.115 V                              ; 4.79e-09 s                  ; 4.41e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.33 V             ; -0.00314 V         ; 0.21 V                              ; 0.115 V                             ; 4.79e-09 s                 ; 4.41e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -279,14 +413,71 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; tl_enable    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_lft[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; chal_rit[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; pulse        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; req_resp_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; done_LED     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; response     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.64 V              ; -0.00888 V          ; 0.249 V                              ; 0.203 V                              ; 3.12e-09 s                  ; 3.02e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.64 V             ; -0.00888 V         ; 0.249 V                             ; 0.203 V                             ; 3.12e-09 s                 ; 3.02e-09 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++---------------------------------------------------------------------+
+; Setup Transfers                                                     ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; pulse~reg0 ; pulse~reg0 ; 0        ; 0        ; 0        ; 7936     ;
+; tl_clock   ; pulse~reg0 ; 0        ; 0        ; 496      ; 0        ;
+; pulse~reg0 ; tl_clock   ; 0        ; 2976     ; 0        ; 0        ;
+; tl_clock   ; tl_clock   ; 4701     ; 0        ; 0        ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Hold Transfers                                                      ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; pulse~reg0 ; pulse~reg0 ; 0        ; 0        ; 0        ; 7936     ;
+; tl_clock   ; pulse~reg0 ; 0        ; 0        ; 496      ; 0        ;
+; pulse~reg0 ; tl_clock   ; 0        ; 2976     ; 0        ; 0        ;
+; tl_clock   ; tl_clock   ; 4701     ; 0        ; 0        ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Recovery Transfers                                                  ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; tl_clock   ; pulse~reg0 ; 0        ; 0        ; 496      ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------+
+; Removal Transfers                                                   ;
++------------+------------+----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+----------+----------+----------+----------+
+; tl_clock   ; pulse~reg0 ; 0        ; 0        ; 496      ; 0        ;
++------------+------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -308,11 +499,89 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
 +---------------------------------+-------+------+
+
+
++----------------------------------------------+
+; Clock Status Summary                         ;
++------------+------------+------+-------------+
+; Target     ; Clock      ; Type ; Status      ;
++------------+------------+------+-------------+
+; pulse~reg0 ; pulse~reg0 ; Base ; Constrained ;
+; tl_clock   ; tl_clock   ; Base ; Constrained ;
++------------+------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset_btn  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; chal_lft[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; done_LED     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pulse        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_out ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; response     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tl_enable    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset_btn  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; chal_lft[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_lft[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chal_rit[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; done_LED     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pulse        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; req_resp_out ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; response     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tl_enable    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -321,7 +590,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Oct 19 11:29:00 2023
+    Info: Processing started: Thu Oct 19 17:38:52 2023
 Info: Command: quartus_sta top_level -c top_level
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -329,49 +598,498 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name tl_clock tl_clock
+    Info (332105): create_clock -period 1.000 -name pulse~reg0 pulse~reg0
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:15:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[0]|datab"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:9:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:13:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[5]|datac"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:11:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[4]|datac"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:6:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[0]|dataa"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:0:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[0]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:2:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[0]|datab"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[9]|datac"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[10]|datac"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:4:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[0]|datab"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[8]|datac"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:7:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:1:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[0]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:3:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[0]|datab"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[2]|datac"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[8]|datac"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[9]|datac"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:5:ro_inst|inv[11]|datac"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[8]|datac"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:14:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[0]|datac"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:8:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[0]|datab"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:12:ro_inst|inv[11]|datad"
+Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[11]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[0]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[0]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[1]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[1]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[2]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[2]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[3]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[3]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[4]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[4]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[5]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[5]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[6]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[6]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[7]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[7]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[8]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[8]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[9]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[9]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[10]|datad"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[10]|combout"
+    Warning (332126): Node "ro_puf|\ro:10:ro_inst|inv[11]|datad"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow 1200mV 85C Model
-Info (332140): No fmax paths to report
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -14.477
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -14.477            -191.254 tl_clock 
+    Info (332119):    -2.672            -851.828 pulse~reg0 
+Info (332146): Worst-case hold slack is -4.418
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.418           -1668.471 pulse~reg0 
+    Info (332119):     0.323               0.000 tl_clock 
+Info (332146): Worst-case recovery slack is -0.861
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.861            -103.753 pulse~reg0 
+Info (332146): Worst-case removal slack is -1.195
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.195            -150.114 pulse~reg0 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -78.762 tl_clock 
+    Info (332119):    -1.403            -695.888 pulse~reg0 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -13.089
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -13.089            -171.127 tl_clock 
+    Info (332119):    -2.283            -715.090 pulse~reg0 
+Info (332146): Worst-case hold slack is -3.956
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.956           -1466.617 pulse~reg0 
+    Info (332119):     0.289               0.000 tl_clock 
+Info (332146): Worst-case recovery slack is -0.836
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.836            -112.886 pulse~reg0 
+Info (332146): Worst-case removal slack is -1.070
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.070            -125.400 pulse~reg0 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -78.762 tl_clock 
+    Info (332119):    -1.403            -695.888 pulse~reg0 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4833 megabytes
-    Info: Processing ended: Thu Oct 19 11:29:03 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.781
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.781             -51.656 tl_clock 
+    Info (332119):    -0.470             -79.314 pulse~reg0 
+Info (332146): Worst-case hold slack is -1.558
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.558            -557.023 pulse~reg0 
+    Info (332119):     0.141               0.000 tl_clock 
+Info (332146): Worst-case recovery slack is -0.694
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.694            -145.874 pulse~reg0 
+Info (332146): Worst-case removal slack is 0.099
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.099               0.000 pulse~reg0 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -58.487 tl_clock 
+    Info (332119):    -1.000            -496.000 pulse~reg0 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 404 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Thu Oct 19 17:38:56 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

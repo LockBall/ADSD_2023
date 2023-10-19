@@ -23,7 +23,7 @@ entity top_level is
 		pulse        : buffer std_logic := '0' ;
 		req_resp_out : buffer std_logic; -- request response
 		done_LED	    : out    std_logic := '0' ;
-		response     : out    std_logic
+		response     : buffer    std_logic
 
 	);
 
@@ -32,12 +32,16 @@ end entity top_level;
 
 architecture RTL of top_level is
 
-	signal tl_count       : integer := 0; --counter for timing of inputs
+	type t_resp_ary is array (natural range <>) of std_logic ; -- https://surf-vhdl.com/vhdl-array/
+	signal resp_ary : t_resp_ary(0 to 128);
+
+	signal tl_count       : natural := 0 ; --counter for timing of inputs
 	signal tl_count_reset : std_logic := '0';
-	signal done : std_logic := '0';
+	signal done           : std_logic := '0';
 	--signal tl_response : std_logic;
-	signal initial_reset : std_logic := '0';
-	signal reset : std_logic;
+	signal initial_reset  : std_logic := '0';
+	signal reset          : std_logic;
+	signal resp_cnt       : natural := 0 ;
 
 
   begin
@@ -77,16 +81,20 @@ architecture RTL of top_level is
 					
 					when 8 => -- this number functions as probe_delay
 						req_resp_out <= '1'; -- initial challenge is 0 : 1
-					
-					when 9 => -- no longer request response, disable coun
-						req_resp_out <= '0';
 						
 					when 10 =>
+						resp_ary(resp_cnt) <= response;
+						resp_cnt <= resp_cnt + 1;
+					
+					when 12 => -- no longer request response, disable coun
+						req_resp_out <= '0';
+						
+					when 13 =>
 						pulse <= '0'; -- pulse off
 						tl_enable <= '0'; -- count disabled
 						reset <= '0';
 
-					when 11 =>
+					when 15 =>
 						tl_count_reset <= '1'; -- flag to reset the count
 						
 						if to_integer(unsigned(chal_lft)) = ro_count - 1 then

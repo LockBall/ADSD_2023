@@ -29,21 +29,14 @@ entity ro_puf is
 	);
 
 	port(
-	
-	   clock     : in std_logic ; -- P11 50 MHZ
-		reset     : in std_logic;
-		enable    : in std_logic;
-		pulse	 : in std_logic;
-		chal_lft  : in std_logic_vector(0 to 5);
-		chal_rit  : in std_logic_vector(0 to 5);
-		--ro_ctr_ary_out : out 	t_ro_ctr_ary(0 to ro_count);	
-		--ro_outs        : buffer std_logic_vector(0 to ro_count);
-
-
-		--chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
-		--chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
-		req_resp_in	   : in	std_logic; -- request response
-		response       : out	std_logic
+	   clock       : in std_logic ; -- P11 50 MHZ
+		reset       : in std_logic;
+		enable      : in std_logic;
+		pulse	      : in std_logic;
+		chal_lft    : in std_logic_vector(0 to 5);
+		chal_rit    : in std_logic_vector(0 to 5);
+		req_resp_in	: in std_logic; -- request response
+		response    : out	std_logic
 
 	);
 	
@@ -60,8 +53,8 @@ architecture rtl of ro_puf is
 	signal chal_lft_6   : integer := 0;--  range 0 to 32 := 0;
 	signal chal_rit_6   : integer := 0;--  range 0 to 32 := 0;
 	
-	signal req_resp_sig : std_logic := '0';
-	--signal count	     : natural := 0;
+	signal req_resp_sig : std_logic := '0' ;
+	signal resp_acq     : std_logic := '0' ;
 	signal ro_outs      : std_logic_vector(0 to ro_count) := (others => '0');
 
 
@@ -71,7 +64,6 @@ architecture rtl of ro_puf is
 		report "ro_length must be an odd number"
 		severity failure;
   
-	--ro_ctr_ary_out <= ro_ctr_ary_sig ;
 	-- https://stackoverflow.com/questions/35102097/vhdl-type-conversion-found-4-possible-definitions
 	chal_lft_6 <= to_integer(unsigned(chal_lft));
 	chal_rit_6 <= to_integer(unsigned(chal_rit));
@@ -104,17 +96,21 @@ architecture rtl of ro_puf is
 		if rising_edge(clock) then
 		
 			if reset = '0' then
-				response <= 'X';
+				response <= 'X' ;
+				resp_acq <= '0' ;
 			end if;
 			
-			if req_resp_sig = '1' then
+			if req_resp_sig = '1' AND resp_acq = '0' then
+			
 				if chal_lft_val < chal_rit_val then -- compare
-					response <= '1';
-					
-				elsif chal_lft_val > chal_rit_val then
-					response <= '0';
-				else response <= 'X';
+					response <= '1' ;
+					resp_acq <= '1' ;
+				 elsif chal_lft_val > chal_rit_val then
+					response <= '0' ;
+					resp_acq <= '1' ;
+				 else response <= 'X';
 				end if; -- compare
+				
 			end if;
 		
 		end if; --rising_edge(clock)

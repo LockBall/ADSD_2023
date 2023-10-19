@@ -32,7 +32,6 @@ tl_clock => tl_count[27].CLK
 tl_clock => tl_count[28].CLK
 tl_clock => tl_count[29].CLK
 tl_clock => tl_count[30].CLK
-tl_clock => tl_count[31].CLK
 tl_clock => chal_rit[5]~reg0.CLK
 tl_clock => chal_rit[4]~reg0.CLK
 tl_clock => chal_rit[3]~reg0.CLK
@@ -70,10 +69,11 @@ chal_rit[0] << chal_rit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pulse << pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
 req_resp_out << req_resp_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done_LED <= done_LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
-response <= ro_puf:ro_puf.response
+response << ro_puf:ro_puf.response
 
 
 |top_level|ro_puf:ro_puf
+clock => resp_acq.CLK
 clock => response~reg0.CLK
 reset => ring_oscillator:ro:0:ro_inst.reset
 reset => ring_oscillator:ro:1:ro_inst.reset
@@ -91,6 +91,7 @@ reset => ring_oscillator:ro:12:ro_inst.reset
 reset => ring_oscillator:ro:13:ro_inst.reset
 reset => ring_oscillator:ro:14:ro_inst.reset
 reset => ring_oscillator:ro:15:ro_inst.reset
+reset => resp_acq.OUTPUTSELECT
 enable => ring_oscillator:ro:0:ro_inst.enable
 enable => ring_oscillator:ro:1:ro_inst.enable
 enable => ring_oscillator:ro:2:ro_inst.enable
@@ -375,7 +376,7 @@ chal_rit[2] => Mux60.IN16
 chal_rit[2] => Mux61.IN16
 chal_rit[1] => ~NO_FANOUT~
 chal_rit[0] => ~NO_FANOUT~
-req_resp_in => response~reg0.ENA
+req_resp_in => process_0.IN1
 response <= response~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
