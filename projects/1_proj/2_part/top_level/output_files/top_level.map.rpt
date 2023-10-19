@@ -1,0 +1,1437 @@
+Analysis & Synthesis report for top_level
+Thu Oct 19 16:31:17 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
+ 11. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
+ 12. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
+ 13. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
+ 14. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
+ 15. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
+ 16. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
+ 17. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
+ 18. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
+ 19. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
+ 20. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
+ 21. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
+ 22. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
+ 23. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
+ 24. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
+ 25. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
+ 26. Parameter Settings for User Entity Instance: Top-level Entity: |top_level
+ 27. Parameter Settings for User Entity Instance: ro_puf:ro_puf
+ 28. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
+ 29. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
+ 30. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
+ 31. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
+ 32. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
+ 33. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
+ 34. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
+ 35. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
+ 36. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
+ 37. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
+ 38. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
+ 39. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
+ 40. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
+ 41. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
+ 42. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
+ 43. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
+ 44. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst"
+ 45. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst"
+ 46. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst"
+ 47. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst"
+ 48. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst"
+ 49. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst"
+ 50. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst"
+ 51. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst"
+ 52. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst"
+ 53. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst"
+ 54. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst"
+ 55. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst"
+ 56. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst"
+ 57. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst"
+ 58. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst"
+ 59. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 19 16:31:17 2023          ;
+; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                      ; top_level                                      ;
+; Top-level Entity Name              ; top_level                                      ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 1,424                                          ;
+;     Total combinational functions  ; 1,423                                          ;
+;     Dedicated logic registers      ; 549                                            ;
+; Total registers                    ; 549                                            ;
+; Total pins                         ; 19                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; top_level          ; top_level          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; top_level.vhd                    ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd       ;         ;
+; ro_puf.vhd                       ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd          ;         ;
+; ring_oscillator.vhd              ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 1,424          ;
+;                                             ;                ;
+; Total combinational functions               ; 1423           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 644            ;
+;     -- 3 input functions                    ; 53             ;
+;     -- <=2 input functions                  ; 726            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 885            ;
+;     -- arithmetic mode                      ; 538            ;
+;                                             ;                ;
+; Total registers                             ; 549            ;
+;     -- Dedicated logic registers            ; 549            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 19             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; tl_enable~reg0 ;
+; Maximum fan-out                             ; 497            ;
+; Total fan-out                               ; 6192           ;
+; Average fan-out                             ; 3.08           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                     ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
+; |top_level                             ; 1423 (83)           ; 549 (52)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 19   ; 0            ; 0          ; |top_level                                              ; top_level       ; work         ;
+;    |ro_puf:ro_puf|                     ; 1340 (652)          ; 497 (1)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf                                ; ro_puf          ; work         ;
+;       |ring_oscillator:\ro:0:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:10:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:11:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:12:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:13:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:14:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:15:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:1:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:2:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:3:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:4:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:5:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:6:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:7:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:8:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst  ; ring_oscillator ; work         ;
+;       |ring_oscillator:\ro:9:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst  ; ring_oscillator ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 549   ;
+; Number of registers using Synchronous Clear  ; 33    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 496   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 542   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |top_level|ro_puf:ro_puf|Mux21 ;
+; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |top_level|ro_puf:ro_puf|Mux40 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst ;
++------------------------------+-------+------+----------------------+
+; Assignment                   ; Value ; From ; To                   ;
++------------------------------+-------+------+----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]              ;
++------------------------------+-------+------+----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst ;
++------------------------------+-------+------+-----------------------+
+; Assignment                   ; Value ; From ; To                    ;
++------------------------------+-------+------+-----------------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[4]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[4]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[5]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[5]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[6]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[6]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[7]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[7]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[8]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[8]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[9]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[9]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[10]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[10]               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; inv[11]               ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; inv[11]               ;
++------------------------------+-------+------+-----------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top_level ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; ro_count       ; 15    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf ;
++----------------+----------+--------------------------------+
+; Parameter Name ; Value    ; Type                           ;
++----------------+----------+--------------------------------+
+; ro_count       ; 15       ; Signed Integer                 ;
+; ro_length      ; 11       ; Signed Integer                 ;
+; var_delay      ; 50000 fs ; Physical                       ;
++----------------+----------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; ro_length      ; 11    ; Signed Integer                                                  ;
+; var_delay      ; 0 fs  ; Physical                                                        ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst ;
++----------------+----------+--------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                         ;
++----------------+----------+--------------------------------------------------------------+
+; ro_length      ; 11       ; Signed Integer                                               ;
+; var_delay      ; 50000 fs ; Physical                                                     ;
++----------------+----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 100000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 150000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 200000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 250000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 300000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 350000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 400000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst ;
++----------------+-----------+-------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                        ;
++----------------+-----------+-------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                              ;
+; var_delay      ; 450000 fs ; Physical                                                    ;
++----------------+-----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 500000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 550000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 600000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 650000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 700000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst ;
++----------------+-----------+--------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                         ;
++----------------+-----------+--------------------------------------------------------------+
+; ro_length      ; 11        ; Signed Integer                                               ;
+; var_delay      ; 750000 fs ; Physical                                                     ;
++----------------+-----------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst"                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ro_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 19                          ;
+; cycloneiii_ff         ; 549                         ;
+;     ENA               ; 7                           ;
+;     ENA CLR           ; 496                         ;
+;     ENA SCLR          ; 33                          ;
+;     ENA SLD           ; 6                           ;
+;     plain             ; 7                           ;
+; cycloneiii_lcell_comb ; 1423                        ;
+;     arith             ; 538                         ;
+;         2 data inputs ; 491                         ;
+;         3 data inputs ; 47                          ;
+;     normal            ; 885                         ;
+;         1 data inputs ; 212                         ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 644                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 5.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Thu Oct 19 16:31:06 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-RTL File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 33
+    Info (12023): Found entity 1: top_level File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file ro_puf.vhd
+    Info (12022): Found design unit 1: ro_puf-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 53
+    Info (12023): Found entity 1: ro_puf File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file ring_oscillator.vhd
+    Info (12022): Found design unit 1: ring_oscillator-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 27
+    Info (12023): Found entity 1: ring_oscillator File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file top_level_tb.vhd
+    Info (12022): Found design unit 1: top_level_tb-test_fixture File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd Line: 20
+    Info (12023): Found entity 1: top_level_tb File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd Line: 11
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "ro_puf" for hierarchy "ro_puf:ro_puf" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(65): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 65
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 85
+Info (286030): Timing-Driven Synthesis is running
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[11]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[10]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[9]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[8]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[7]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[6]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[5]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[4]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[3]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[2]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+    Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1444 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 1425 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Thu Oct 19 16:31:17 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
+
+

@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "tl_enable",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[5]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[4]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[3]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[2]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[1]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_lft[0]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "chal_rit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pulse",
+					"strict" : false
+				},
+				{
+					"name" : "req_resp_out",
+					"strict" : false
+				},
+				{
+					"name" : "done_LED",
+					"strict" : false
+				},
+				{
+					"name" : "response",
+					"strict" : false
+				},
+				{
+					"name" : "tl_clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset_btn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

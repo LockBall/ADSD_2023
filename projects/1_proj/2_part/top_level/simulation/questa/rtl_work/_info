@@ -1,0 +1,224 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/simulation/questa
+T_opt
+!s110 1697747486
+VjRZPNAbm>]9z=ER7MdKPZ0
+04 12 12 work top_level_tb test_fixture 1
+=1-d0509975fd67-6531921d-2b0-4088
+!s124 OEM10U19 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ering_oscillator
+Z2 w1697745912
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R1
+Z8 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd
+Z9 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd
+l0
+L9 1
+VVeLcEgNzOBFJ_bc[ZdDn:3
+!s100 aDLLz[LT2B[8[^H:8bf2D0
+Z10 OL;C;2021.2;73
+31
+Z11 !s110 1697747484
+!i10b 1
+Z12 !s108 1697747484.000000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd|
+Z14 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd|
+!i113 0
+Z15 o-93 -work work
+Z16 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 15 ring_oscillator 0 22 VeLcEgNzOBFJ_bc[ZdDn:3
+!i122 0
+l36
+L27 39
+Vk_Z6`f;f5Pk]6gW1G1l@]3
+!s100 U:322ILY1ldHD]nEhW[m10
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Ero_puf
+Z18 w1697745913
+R3
+R4
+R5
+R6
+R7
+!i122 1
+R1
+Z19 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd
+Z20 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd
+l0
+L23 1
+VS=CcNnRfbL[7<nLT`P>QJ2
+!s100 `XeTXQ7DlL]BM7EoNa7Yd1
+R10
+31
+R11
+!i10b 1
+R12
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd|
+Z22 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd|
+!i113 0
+R15
+R16
+Artl
+R17
+R3
+R4
+R5
+R6
+R7
+Z23 DEx4 work 6 ro_puf 0 22 S=CcNnRfbL[7<nLT`P>QJ2
+!i122 1
+l68
+L53 71
+VM:1_i5cJMfKXC1f?fc2Vk2
+!s100 GSooPfkR:]QmCRmeWm@1h1
+R10
+31
+R11
+!i10b 1
+R12
+R21
+R22
+!i113 0
+R15
+R16
+Etop_level
+Z24 w1697747466
+R3
+R4
+R5
+R6
+R7
+!i122 2
+R1
+Z25 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd
+Z26 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd
+l0
+Z27 L11 1
+V?^=0KdlcfC?g1:A4fZQYC0
+!s100 hZQ`M>UnEzjHnHCV13;?^0
+R10
+31
+R11
+!i10b 1
+R12
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd|
+Z29 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd|
+!i113 0
+R15
+R16
+Artl
+R23
+R3
+R4
+R5
+R6
+R7
+Z30 DEx4 work 9 top_level 0 22 ?^=0KdlcfC?g1:A4fZQYC0
+!i122 2
+l43
+L33 92
+V9:1><K8^IV4JM]a?N^1On0
+!s100 JX7VJcek35WZoNZ6H1RIl2
+R10
+31
+R11
+!i10b 1
+R12
+R28
+R29
+!i113 0
+R15
+R16
+Etop_level_tb
+R24
+R3
+R4
+R5
+R6
+R7
+!i122 3
+R1
+Z31 8C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd
+Z32 FC:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd
+l0
+R27
+V<UUdJ;P[<5Pcze==E@oRS0
+!s100 ENORcN131h4PG=8U25M3D0
+R10
+31
+R11
+!i10b 1
+R12
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd|
+Z34 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd|
+!i113 0
+R15
+R16
+Atest_fixture
+R30
+R3
+R4
+R5
+R6
+R7
+DEx4 work 12 top_level_tb 0 22 <UUdJ;P[<5Pcze==E@oRS0
+!i122 3
+l42
+L20 74
+VY0YHAi9K_SP?@`bWgn5H10
+!s100 Ggg@n:b2M@L?hQiGVQ??J3
+R10
+31
+R11
+!i10b 1
+R12
+R33
+R34
+!i113 0
+R15
+R16
