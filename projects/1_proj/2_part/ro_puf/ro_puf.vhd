@@ -116,6 +116,7 @@ architecture rtl of ro_puf is
 			if req_resp_sig = '1' then
 				if chal_lft_val < chal_rit_val then -- compare
 					response <= '1';
+					
 				elsif chal_lft_val > chal_rit_val then
 					response <= '0';
 				else response <= 'X';

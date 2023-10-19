@@ -302,9 +302,9 @@ chal_rit[2] => Mux61.IN16
 chal_rit[1] => ~NO_FANOUT~
 chal_rit[0] => ~NO_FANOUT~
 req_resp_in => response~reg0.ENA
-response << response~reg0.DB_MAX_OUTPUT_PORT_TYPE
+response <= response~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done_in => done_LED~reg0.ENA
-done_LED << done_LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done_LED <= done_LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ro_puf|ring_oscillator:\gen_ro:0:ro_inst

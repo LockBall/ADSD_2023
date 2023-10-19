@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ro_puf
-Wed Oct 18 20:16:46 2023
+Wed Oct 18 21:44:17 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -93,7 +93,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 18 20:16:46 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 18 21:44:17 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; ro_puf                                         ;
 ; Top-level Entity Name              ; ro_puf                                         ;
@@ -1194,7 +1194,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 18 20:16:36 2023
+    Info: Processing started: Wed Oct 18 21:44:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ro_puf -c ro_puf
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file ring_oscillator.vhd
@@ -1414,9 +1414,9 @@ Info (21057): Implemented 1361 device resources after synthesis - the final reso
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 1341 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Wed Oct 18 20:16:46 2023
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Wed Oct 18 21:44:17 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 

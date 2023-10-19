@@ -32,7 +32,8 @@ architecture test_fixture of ro_puf_tb is
 	 signal tb_req_resp_in : std_logic;
 	 signal tb_count       : integer := 0; --counter for timing of inputs
 	 --signal probe_delay    : natural := 10; -- 100 ns
-	 signal tb_done : std_logic := '0';
+	 signal tb_done_in : std_logic := '0';
+	 signal tb_done_LED : std_logic ;
 	 signal tb_count_reset : std_logic := '0';
 
 
@@ -55,6 +56,8 @@ begin
 		--chal_lft_6     => tb_chal_lft_6,
 		--chal_rit_6     => tb_chal_rit_6,
 		response       => tb_response,
+		done_in => tb_done_in,
+		done_LED => tb_done_LED,
 		req_resp_in		=> tb_req_resp_in
 	);
 
@@ -69,7 +72,7 @@ begin
 	 begin
 	 
 		if rising_edge(tb_clock) OR falling_edge(tb_clock) then
-			if tb_done = '0' then
+			if tb_done_in = '0' then
 			
 				case tb_count is
 					when 0 => -- @ 10 ns
@@ -98,7 +101,7 @@ begin
 						
 						
 						if to_integer(unsigned(tb_chal_lft)) = ro_count - 1 then
-							tb_done <= '1';
+							tb_done_in <= '1';
 						elsif to_integer(unsigned(tb_chal_rit)) = ro_count then
 							tb_chal_lft <= tb_chal_lft + 1 ;
 							tb_chal_rit <= tb_chal_lft + 2 ;
