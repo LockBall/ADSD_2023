@@ -3,6 +3,9 @@
 library ieee;
 library work;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+
 --use work.ro_ctr_ary.all;
 
 entity ro_puf_tb is
@@ -21,8 +24,8 @@ architecture test_fixture of ro_puf_tb is
     signal tb_enable      : std_logic := '0' ;
 	 signal tb_reset       : std_logic := '1' ;
 	 signal tb_pulse_in    : std_logic := '0' ;
-	 signal tb_challenge_lft   : std_logic_vector(0 to 5) := "000000" ;-- which two ro to compare
-	 signal tb_challenge_rit   : std_logic_vector(0 to 5) := "000001" ;-- which two ro to compare
+	 signal tb_chal_lft   : std_logic_vector(0 to 5) := "000000" ;-- which two ro to compare
+	 signal tb_chal_rit   : std_logic_vector(0 to 5) := "000001" ;-- which two ro to compare
 	 --signal tb_chal_lft_6 : integer range 0 to 32 := 0;
 	 --signal tb_chal_rit_6 : integer range 0 to 32 := 0;
 	 signal tb_response    : std_logic;
@@ -47,8 +50,8 @@ begin
 		--ro_ctr_ary_out => tb_ro_ctr_ary_out,
 		reset 			=> tb_reset,
 		pulse_in			=> tb_pulse_in,
-		challenge_lft  => tb_challenge_lft,
-		challenge_rit  => tb_challenge_rit,
+		chal_lft  => tb_chal_lft,
+		chal_rit  => tb_chal_rit,
 		--chal_lft_6     => tb_chal_lft_6,
 		--chal_rit_6     => tb_chal_rit_6,
 		response       => tb_response,
@@ -93,13 +96,15 @@ begin
 					when 16 =>
 						tb_count_reset <= '1';
 						
-					--	if tb_challenge_lft = (ro_count - 1) then
-					--		tb_done <= '1';
-							
-				--		else
-			--				tb_challenge_lft = tb_challenge_lft + '1';
-			
-		--				end if;
+						
+						if to_integer(unsigned(tb_chal_lft)) = ro_count - 1 then
+							tb_done <= '1';
+						elsif to_integer(unsigned(tb_chal_rit)) = ro_count then
+							tb_chal_lft <= tb_chal_lft + 1 ;
+							tb_chal_rit <= tb_chal_lft + 2 ;
+						else
+							tb_chal_rit <= tb_chal_rit + 1 ;
+						end if;
 								
 					when others =>
 					

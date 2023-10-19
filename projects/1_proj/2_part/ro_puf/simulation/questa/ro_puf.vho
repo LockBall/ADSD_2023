@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "10/18/2023 17:49:01"
+-- DATE "10/18/2023 20:17:07"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -94,8 +94,8 @@ ENTITY 	ro_puf IS
 	enable : IN std_logic;
 	reset : IN std_logic;
 	pulse_in : IN std_logic;
-	challenge_lft : IN std_logic_vector(0 TO 5);
-	challenge_rit : IN std_logic_vector(0 TO 5);
+	chal_lft : IN std_logic_vector(0 TO 5);
+	chal_rit : IN std_logic_vector(0 TO 5);
 	req_resp_in : IN std_logic;
 	response : BUFFER std_logic;
 	done_in : IN std_logic;
@@ -104,20 +104,20 @@ ENTITY 	ro_puf IS
 END ro_puf;
 
 -- Design Ports Information
--- challenge_lft[1]	=>  Location: PIN_N18,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_lft[0]	=>  Location: PIN_W19,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[1]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[0]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[1]	=>  Location: PIN_N18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[0]	=>  Location: PIN_W19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[1]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[0]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- response	=>  Location: PIN_V12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- done_LED	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_lft[4]	=>  Location: PIN_AB13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_lft[5]	=>  Location: PIN_AB10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_lft[2]	=>  Location: PIN_P12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_lft[3]	=>  Location: PIN_AB11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[4]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[5]	=>  Location: PIN_AA11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[2]	=>  Location: PIN_V11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- challenge_rit[3]	=>  Location: PIN_AA12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[4]	=>  Location: PIN_AB13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[5]	=>  Location: PIN_AB10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[2]	=>  Location: PIN_P12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_lft[3]	=>  Location: PIN_AB11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[4]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[5]	=>  Location: PIN_AA11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[2]	=>  Location: PIN_V11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- chal_rit[3]	=>  Location: PIN_AA12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- req_resp_in	=>  Location: PIN_R12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- clock	=>  Location: PIN_P11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- done_in	=>  Location: PIN_C6,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -140,8 +140,8 @@ SIGNAL ww_clock : std_logic;
 SIGNAL ww_enable : std_logic;
 SIGNAL ww_reset : std_logic;
 SIGNAL ww_pulse_in : std_logic;
-SIGNAL ww_challenge_lft : std_logic_vector(0 TO 5);
-SIGNAL ww_challenge_rit : std_logic_vector(0 TO 5);
+SIGNAL ww_chal_lft : std_logic_vector(0 TO 5);
+SIGNAL ww_chal_rit : std_logic_vector(0 TO 5);
 SIGNAL ww_req_resp_in : std_logic;
 SIGNAL ww_response : std_logic;
 SIGNAL ww_done_in : std_logic;
@@ -165,10 +165,10 @@ SIGNAL \gen_ro:14:ro_inst|inv[11]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO
 SIGNAL \gen_ro:3:ro_inst|inv[11]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \gen_ro:8:ro_inst|inv[11]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \gen_ro:9:ro_inst|inv[11]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \challenge_lft[1]~input_o\ : std_logic;
-SIGNAL \challenge_lft[0]~input_o\ : std_logic;
-SIGNAL \challenge_rit[1]~input_o\ : std_logic;
-SIGNAL \challenge_rit[0]~input_o\ : std_logic;
+SIGNAL \chal_lft[1]~input_o\ : std_logic;
+SIGNAL \chal_lft[0]~input_o\ : std_logic;
+SIGNAL \chal_rit[1]~input_o\ : std_logic;
+SIGNAL \chal_rit[0]~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~~eoc\ : std_logic;
@@ -178,7 +178,7 @@ SIGNAL \done_LED~output_o\ : std_logic;
 SIGNAL \clock~input_o\ : std_logic;
 SIGNAL \clock~inputclkctrl_outclk\ : std_logic;
 SIGNAL \req_resp_in~input_o\ : std_logic;
-SIGNAL \challenge_lft[2]~input_o\ : std_logic;
+SIGNAL \chal_lft[2]~input_o\ : std_logic;
 SIGNAL \pulse_in~input_o\ : std_logic;
 SIGNAL \gen_ro:11:ro_inst|inv[11]~clkctrl_outclk\ : std_logic;
 SIGNAL \gen_ro:11:ro_inst|ro_counter[0]~90_combout\ : std_logic;
@@ -304,7 +304,7 @@ SIGNAL \gen_ro:10:ro_inst|ro_counter[28]~85\ : std_logic;
 SIGNAL \gen_ro:10:ro_inst|ro_counter[29]~86_combout\ : std_logic;
 SIGNAL \gen_ro:10:ro_inst|ro_counter[29]~87\ : std_logic;
 SIGNAL \gen_ro:10:ro_inst|ro_counter[30]~88_combout\ : std_logic;
-SIGNAL \challenge_lft[4]~input_o\ : std_logic;
+SIGNAL \chal_lft[4]~input_o\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|inv[11]~clkctrl_outclk\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|ro_counter[0]~90_combout\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|ro_counter[1]~30_combout\ : std_logic;
@@ -366,7 +366,7 @@ SIGNAL \gen_ro:9:ro_inst|ro_counter[28]~85\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|ro_counter[29]~86_combout\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|ro_counter[29]~87\ : std_logic;
 SIGNAL \gen_ro:9:ro_inst|ro_counter[30]~88_combout\ : std_logic;
-SIGNAL \challenge_lft[5]~input_o\ : std_logic;
+SIGNAL \chal_lft[5]~input_o\ : std_logic;
 SIGNAL \gen_ro:8:ro_inst|inv[11]~clkctrl_outclk\ : std_logic;
 SIGNAL \gen_ro:8:ro_inst|ro_counter[0]~90_combout\ : std_logic;
 SIGNAL \gen_ro:8:ro_inst|ro_counter[1]~30_combout\ : std_logic;
@@ -922,7 +922,7 @@ SIGNAL \gen_ro:6:ro_inst|ro_counter[29]~87\ : std_logic;
 SIGNAL \gen_ro:6:ro_inst|ro_counter[30]~88_combout\ : std_logic;
 SIGNAL \Mux0~2_combout\ : std_logic;
 SIGNAL \Mux0~3_combout\ : std_logic;
-SIGNAL \challenge_lft[3]~input_o\ : std_logic;
+SIGNAL \chal_lft[3]~input_o\ : std_logic;
 SIGNAL \gen_ro:2:ro_inst|inv[11]~clkctrl_outclk\ : std_logic;
 SIGNAL \gen_ro:2:ro_inst|ro_counter[0]~90_combout\ : std_logic;
 SIGNAL \gen_ro:2:ro_inst|ro_counter[1]~30_combout\ : std_logic;
@@ -1171,16 +1171,16 @@ SIGNAL \Mux0~4_combout\ : std_logic;
 SIGNAL \Mux0~5_combout\ : std_logic;
 SIGNAL \Mux0~6_combout\ : std_logic;
 SIGNAL \Mux0~9_combout\ : std_logic;
-SIGNAL \challenge_rit[5]~input_o\ : std_logic;
-SIGNAL \challenge_rit[4]~input_o\ : std_logic;
+SIGNAL \chal_rit[5]~input_o\ : std_logic;
+SIGNAL \chal_rit[4]~input_o\ : std_logic;
 SIGNAL \Mux31~7_combout\ : std_logic;
 SIGNAL \Mux31~8_combout\ : std_logic;
-SIGNAL \challenge_rit[2]~input_o\ : std_logic;
+SIGNAL \chal_rit[2]~input_o\ : std_logic;
 SIGNAL \Mux31~0_combout\ : std_logic;
 SIGNAL \Mux31~1_combout\ : std_logic;
 SIGNAL \Mux31~2_combout\ : std_logic;
 SIGNAL \Mux31~3_combout\ : std_logic;
-SIGNAL \challenge_rit[3]~input_o\ : std_logic;
+SIGNAL \chal_rit[3]~input_o\ : std_logic;
 SIGNAL \Mux31~4_combout\ : std_logic;
 SIGNAL \Mux31~5_combout\ : std_logic;
 SIGNAL \Mux31~6_combout\ : std_logic;
@@ -1867,8 +1867,8 @@ ww_clock <= clock;
 ww_enable <= enable;
 ww_reset <= reset;
 ww_pulse_in <= pulse_in;
-ww_challenge_lft <= challenge_lft;
-ww_challenge_rit <= challenge_rit;
+ww_chal_lft <= chal_lft;
+ww_chal_rit <= chal_rit;
 ww_req_resp_in <= req_resp_in;
 response <= ww_response;
 ww_done_in <= done_in;
@@ -1995,7 +1995,7 @@ PORT MAP (
 	o => \req_resp_in~input_o\);
 
 -- Location: IOIBUF_X40_Y0_N29
-\challenge_lft[2]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[2]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -2003,8 +2003,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(2),
-	o => \challenge_lft[2]~input_o\);
+	i => ww_chal_lft(2),
+	o => \chal_lft[2]~input_o\);
 
 -- Location: IOIBUF_X36_Y39_N22
 \pulse_in~input\ : fiftyfivenm_io_ibuf
@@ -4501,7 +4501,7 @@ PORT MAP (
 	q => \gen_ro:10:ro_inst|ro_counter\(30));
 
 -- Location: IOIBUF_X40_Y0_N15
-\challenge_lft[4]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[4]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -4509,8 +4509,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(4),
-	o => \challenge_lft[4]~input_o\);
+	i => ww_chal_lft(4),
+	o => \chal_lft[4]~input_o\);
 
 -- Location: LCCOMB_X44_Y53_N12
 \gen_ro:9:ro_inst|inv[0]\ : fiftyfivenm_lcell_comb
@@ -5742,7 +5742,7 @@ PORT MAP (
 	q => \gen_ro:9:ro_inst|ro_counter\(30));
 
 -- Location: IOIBUF_X38_Y0_N15
-\challenge_lft[5]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[5]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -5750,8 +5750,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(5),
-	o => \challenge_lft[5]~input_o\);
+	i => ww_chal_lft(5),
+	o => \chal_lft[5]~input_o\);
 
 -- Location: LCCOMB_X44_Y50_N18
 \gen_ro:8:ro_inst|inv[0]\ : fiftyfivenm_lcell_comb
@@ -6985,8 +6985,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N24
 \Mux0~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~0_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(30))) # (!\challenge_lft[5]~input_o\ & 
--- ((\gen_ro:8:ro_inst|ro_counter\(30))))))
+-- \Mux0~0_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(30))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(30))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6995,15 +6994,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(30),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:8:ro_inst|ro_counter\(30),
 	combout => \Mux0~0_combout\);
 
 -- Location: LCCOMB_X43_Y8_N18
 \Mux0~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux0~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(30))) # (!\Mux0~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(30)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux0~0_combout\))))
+-- \Mux0~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux0~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(30))) # (!\Mux0~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(30)))))) # (!\chal_lft[4]~input_o\ & (((\Mux0~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7013,7 +7012,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(30),
 	datab => \gen_ro:10:ro_inst|ro_counter\(30),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \Mux0~0_combout\,
 	combout => \Mux0~1_combout\);
 
@@ -11936,8 +11935,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N0
 \Mux0~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~7_combout\ = (\challenge_lft[5]~input_o\ & (((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:14:ro_inst|ro_counter\(30))) # (!\challenge_lft[4]~input_o\ & 
--- ((\gen_ro:12:ro_inst|ro_counter\(30))))))
+-- \Mux0~7_combout\ = (\chal_lft[5]~input_o\ & (((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:14:ro_inst|ro_counter\(30))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(30))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -11945,16 +11943,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(30),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:12:ro_inst|ro_counter\(30),
 	combout => \Mux0~7_combout\);
 
 -- Location: LCCOMB_X43_Y8_N26
 \Mux0~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux0~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(30))) # (!\Mux0~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(30)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux0~7_combout\))))
+-- \Mux0~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux0~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(30))) # (!\Mux0~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(30)))))) # (!\chal_lft[5]~input_o\ & (((\Mux0~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -11964,7 +11962,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(30),
 	datab => \gen_ro:13:ro_inst|ro_counter\(30),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux0~7_combout\,
 	combout => \Mux0~8_combout\);
 
@@ -16887,7 +16885,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y8_N28
 \Mux0~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(30)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(30)))))
+-- \Mux0~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(30)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(30)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16895,8 +16893,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(30),
 	datad => \gen_ro:6:ro_inst|ro_counter\(30),
 	combout => \Mux0~2_combout\);
@@ -16904,7 +16902,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y8_N10
 \Mux0~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux0~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(30))) # (!\Mux0~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(30)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux0~2_combout\))))
+-- \Mux0~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux0~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(30))) # (!\Mux0~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(30)))))) # (!\chal_lft[5]~input_o\ & (((\Mux0~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16912,14 +16910,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(30),
 	datac => \gen_ro:5:ro_inst|ro_counter\(30),
 	datad => \Mux0~2_combout\,
 	combout => \Mux0~3_combout\);
 
 -- Location: IOIBUF_X38_Y0_N8
-\challenge_lft[3]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[3]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -16927,8 +16925,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(3),
-	o => \challenge_lft[3]~input_o\);
+	i => ww_chal_lft(3),
+	o => \chal_lft[3]~input_o\);
 
 -- Location: LCCOMB_X57_Y39_N14
 \gen_ro:2:ro_inst|inv[0]\ : fiftyfivenm_lcell_comb
@@ -21849,7 +21847,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N8
 \Mux0~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~4_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(30)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(30) & !\challenge_lft[4]~input_o\))))
+-- \Mux0~4_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(30)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(30) & !\chal_lft[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21857,16 +21855,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(30),
 	datac => \gen_ro:0:ro_inst|ro_counter\(30),
-	datad => \challenge_lft[4]~input_o\,
+	datad => \chal_lft[4]~input_o\,
 	combout => \Mux0~4_combout\);
 
 -- Location: LCCOMB_X43_Y8_N20
 \Mux0~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux0~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(30)))) # (!\Mux0~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(30))))) # (!\challenge_lft[4]~input_o\ & (((\Mux0~4_combout\))))
+-- \Mux0~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux0~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(30)))) # (!\Mux0~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(30))))) # (!\chal_lft[4]~input_o\ & (((\Mux0~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21875,7 +21873,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:2:ro_inst|ro_counter\(30),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(30),
 	datad => \Mux0~4_combout\,
 	combout => \Mux0~5_combout\);
@@ -21883,7 +21881,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N10
 \Mux0~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~6_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\Mux0~3_combout\)) # (!\challenge_lft[3]~input_o\ & ((\Mux0~5_combout\)))))
+-- \Mux0~6_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\Mux0~3_combout\)) # (!\chal_lft[3]~input_o\ & ((\Mux0~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21892,15 +21890,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux0~3_combout\,
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux0~5_combout\,
 	combout => \Mux0~6_combout\);
 
 -- Location: LCCOMB_X43_Y8_N28
 \Mux0~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux0~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux0~6_combout\ & ((\Mux0~8_combout\))) # (!\Mux0~6_combout\ & (\Mux0~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux0~6_combout\))))
+-- \Mux0~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux0~6_combout\ & ((\Mux0~8_combout\))) # (!\Mux0~6_combout\ & (\Mux0~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux0~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21908,14 +21906,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux0~1_combout\,
 	datac => \Mux0~8_combout\,
 	datad => \Mux0~6_combout\,
 	combout => \Mux0~9_combout\);
 
 -- Location: IOIBUF_X40_Y0_N8
-\challenge_rit[5]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[5]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -21923,11 +21921,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(5),
-	o => \challenge_rit[5]~input_o\);
+	i => ww_chal_rit(5),
+	o => \chal_rit[5]~input_o\);
 
 -- Location: IOIBUF_X40_Y0_N22
-\challenge_rit[4]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[4]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -21935,13 +21933,13 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(4),
-	o => \challenge_rit[4]~input_o\);
+	i => ww_chal_rit(4),
+	o => \chal_rit[4]~input_o\);
 
 -- Location: LCCOMB_X43_Y8_N2
 \Mux31~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~7_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(30))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(30)))))
+-- \Mux31~7_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(30))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(30)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21949,8 +21947,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(30),
 	datad => \gen_ro:12:ro_inst|ro_counter\(30),
 	combout => \Mux31~7_combout\);
@@ -21958,7 +21956,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N12
 \Mux31~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux31~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(30))) # (!\Mux31~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(30)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux31~7_combout\))))
+-- \Mux31~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux31~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(30))) # (!\Mux31~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(30)))))) # (!\chal_rit[5]~input_o\ & (((\Mux31~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21968,12 +21966,12 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(30),
 	datab => \gen_ro:13:ro_inst|ro_counter\(30),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux31~7_combout\,
 	combout => \Mux31~8_combout\);
 
 -- Location: IOIBUF_X38_Y0_N29
-\challenge_rit[2]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[2]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -21981,13 +21979,13 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(2),
-	o => \challenge_rit[2]~input_o\);
+	i => ww_chal_rit(2),
+	o => \chal_rit[2]~input_o\);
 
 -- Location: LCCOMB_X43_Y8_N22
 \Mux31~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~0_combout\ = (\challenge_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(30)) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((!\challenge_rit[4]~input_o\ & \gen_ro:8:ro_inst|ro_counter\(30)))))
+-- \Mux31~0_combout\ = (\chal_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(30)) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((!\chal_rit[4]~input_o\ & \gen_ro:8:ro_inst|ro_counter\(30)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -21996,15 +21994,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(30),
-	datab => \challenge_rit[5]~input_o\,
-	datac => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:8:ro_inst|ro_counter\(30),
 	combout => \Mux31~0_combout\);
 
 -- Location: LCCOMB_X43_Y8_N4
 \Mux31~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~1_combout\ = (\Mux31~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(30)) # (!\challenge_rit[4]~input_o\)))) # (!\Mux31~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(30) & ((\challenge_rit[4]~input_o\))))
+-- \Mux31~1_combout\ = (\Mux31~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(30)) # (!\chal_rit[4]~input_o\)))) # (!\Mux31~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(30) & ((\chal_rit[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22015,13 +22013,13 @@ PORT MAP (
 	dataa => \Mux31~0_combout\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(30),
 	datac => \gen_ro:11:ro_inst|ro_counter\(30),
-	datad => \challenge_rit[4]~input_o\,
+	datad => \chal_rit[4]~input_o\,
 	combout => \Mux31~1_combout\);
 
 -- Location: LCCOMB_X42_Y8_N16
 \Mux31~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~2_combout\ = (\challenge_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(30)) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((\gen_ro:4:ro_inst|ro_counter\(30) & !\challenge_rit[5]~input_o\))))
+-- \Mux31~2_combout\ = (\chal_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(30)) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((\gen_ro:4:ro_inst|ro_counter\(30) & !\chal_rit[5]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22029,16 +22027,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(30),
 	datac => \gen_ro:4:ro_inst|ro_counter\(30),
-	datad => \challenge_rit[5]~input_o\,
+	datad => \chal_rit[5]~input_o\,
 	combout => \Mux31~2_combout\);
 
 -- Location: LCCOMB_X42_Y8_N14
 \Mux31~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux31~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(30))) # (!\Mux31~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(30)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux31~2_combout\))))
+-- \Mux31~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux31~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(30))) # (!\Mux31~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(30)))))) # (!\chal_rit[5]~input_o\ & (((\Mux31~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22046,14 +22044,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(30),
 	datac => \gen_ro:5:ro_inst|ro_counter\(30),
 	datad => \Mux31~2_combout\,
 	combout => \Mux31~3_combout\);
 
 -- Location: IOIBUF_X40_Y0_N1
-\challenge_rit[3]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[3]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -22061,13 +22059,13 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(3),
-	o => \challenge_rit[3]~input_o\);
+	i => ww_chal_rit(3),
+	o => \chal_rit[3]~input_o\);
 
 -- Location: LCCOMB_X40_Y8_N26
 \Mux31~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~4_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(30)))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(30)))))
+-- \Mux31~4_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(30)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(30)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22075,8 +22073,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(30),
 	datad => \gen_ro:1:ro_inst|ro_counter\(30),
 	combout => \Mux31~4_combout\);
@@ -22084,7 +22082,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N6
 \Mux31~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux31~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(30)))) # (!\Mux31~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(30))))) # (!\challenge_rit[4]~input_o\ & (((\Mux31~4_combout\))))
+-- \Mux31~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux31~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(30)))) # (!\Mux31~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(30))))) # (!\chal_rit[4]~input_o\ & (((\Mux31~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22093,7 +22091,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:2:ro_inst|ro_counter\(30),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(30),
 	datad => \Mux31~4_combout\,
 	combout => \Mux31~5_combout\);
@@ -22101,7 +22099,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y8_N16
 \Mux31~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~6_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\Mux31~3_combout\)) # (!\challenge_rit[3]~input_o\ & ((\Mux31~5_combout\)))))
+-- \Mux31~6_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\Mux31~3_combout\)) # (!\chal_rit[3]~input_o\ & ((\Mux31~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22110,15 +22108,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux31~3_combout\,
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux31~5_combout\,
 	combout => \Mux31~6_combout\);
 
 -- Location: LCCOMB_X43_Y8_N14
 \Mux31~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux31~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux31~6_combout\ & (\Mux31~8_combout\)) # (!\Mux31~6_combout\ & ((\Mux31~1_combout\))))) # (!\challenge_rit[2]~input_o\ & (((\Mux31~6_combout\))))
+-- \Mux31~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux31~6_combout\ & (\Mux31~8_combout\)) # (!\Mux31~6_combout\ & ((\Mux31~1_combout\))))) # (!\chal_rit[2]~input_o\ & (((\Mux31~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22127,7 +22125,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux31~8_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux31~1_combout\,
 	datad => \Mux31~6_combout\,
 	combout => \Mux31~9_combout\);
@@ -22135,7 +22133,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N16
 \Mux32~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~0_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(29))) # (!\challenge_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(29))))))
+-- \Mux32~0_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(29))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(29))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22143,8 +22141,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(29),
 	datad => \gen_ro:2:ro_inst|ro_counter\(29),
 	combout => \Mux32~0_combout\);
@@ -22152,7 +22150,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N2
 \Mux32~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux32~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(29))) # (!\Mux32~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(29)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux32~0_combout\))))
+-- \Mux32~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux32~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(29))) # (!\Mux32~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(29)))))) # (!\chal_rit[3]~input_o\ & (((\Mux32~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22160,7 +22158,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(29),
 	datac => \gen_ro:6:ro_inst|ro_counter\(29),
 	datad => \Mux32~0_combout\,
@@ -22169,7 +22167,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N26
 \Mux32~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~7_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(29)))) # (!\challenge_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(29)))))
+-- \Mux32~7_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(29)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(29)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22177,8 +22175,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(29),
 	datad => \gen_ro:7:ro_inst|ro_counter\(29),
 	combout => \Mux32~7_combout\);
@@ -22186,7 +22184,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N4
 \Mux32~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux32~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(29)))) # (!\Mux32~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(29))))) # (!\challenge_rit[2]~input_o\ & (\Mux32~7_combout\))
+-- \Mux32~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux32~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(29)))) # (!\Mux32~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(29))))) # (!\chal_rit[2]~input_o\ & (\Mux32~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22194,7 +22192,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \Mux32~7_combout\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(29),
 	datad => \gen_ro:15:ro_inst|ro_counter\(29),
@@ -22203,8 +22201,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N30
 \Mux32~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~2_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(29)))) # (!\challenge_rit[3]~input_o\ & 
--- (\gen_ro:1:ro_inst|ro_counter\(29)))))
+-- \Mux32~2_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(29)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(29)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22212,16 +22209,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(29),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(29),
 	combout => \Mux32~2_combout\);
 
 -- Location: LCCOMB_X39_Y4_N28
 \Mux32~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux32~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(29)))) # (!\Mux32~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(29))))) # (!\challenge_rit[2]~input_o\ & (((\Mux32~2_combout\))))
+-- \Mux32~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux32~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(29)))) # (!\Mux32~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(29))))) # (!\chal_rit[2]~input_o\ & (((\Mux32~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22229,7 +22226,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(29),
 	datac => \Mux32~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(29),
@@ -22238,7 +22235,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N2
 \Mux32~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~4_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(29))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(29))))
+-- \Mux32~4_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(29))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(29))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22246,8 +22243,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(29),
 	datad => \gen_ro:8:ro_inst|ro_counter\(29),
 	combout => \Mux32~4_combout\);
@@ -22255,7 +22252,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N20
 \Mux32~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux32~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(29))) # (!\Mux32~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(29)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux32~4_combout\))))
+-- \Mux32~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux32~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(29))) # (!\Mux32~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(29)))))) # (!\chal_rit[3]~input_o\ & (((\Mux32~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22265,14 +22262,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(29),
 	datab => \gen_ro:4:ro_inst|ro_counter\(29),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux32~4_combout\,
 	combout => \Mux32~5_combout\);
 
 -- Location: LCCOMB_X39_Y4_N18
 \Mux32~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~6_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux32~3_combout\) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((!\challenge_rit[4]~input_o\ & \Mux32~5_combout\))))
+-- \Mux32~6_combout\ = (\chal_rit[5]~input_o\ & ((\Mux32~3_combout\) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((!\chal_rit[4]~input_o\ & \Mux32~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22280,16 +22277,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \Mux32~3_combout\,
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \Mux32~5_combout\,
 	combout => \Mux32~6_combout\);
 
 -- Location: LCCOMB_X39_Y4_N14
 \Mux32~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux32~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux32~6_combout\ & ((\Mux32~8_combout\))) # (!\Mux32~6_combout\ & (\Mux32~1_combout\)))) # (!\challenge_rit[4]~input_o\ & (((\Mux32~6_combout\))))
+-- \Mux32~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux32~6_combout\ & ((\Mux32~8_combout\))) # (!\Mux32~6_combout\ & (\Mux32~1_combout\)))) # (!\chal_rit[4]~input_o\ & (((\Mux32~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22297,7 +22294,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux32~1_combout\,
 	datac => \Mux32~8_combout\,
 	datad => \Mux32~6_combout\,
@@ -22306,7 +22303,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N28
 \Mux1~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(29))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(29))))))
+-- \Mux1~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(29))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(29))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22314,8 +22311,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(29),
 	datad => \gen_ro:2:ro_inst|ro_counter\(29),
 	combout => \Mux1~0_combout\);
@@ -22323,7 +22320,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N30
 \Mux1~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux1~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(29)))) # (!\Mux1~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(29))))) # (!\challenge_lft[3]~input_o\ & (((\Mux1~0_combout\))))
+-- \Mux1~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux1~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(29)))) # (!\Mux1~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(29))))) # (!\chal_lft[3]~input_o\ & (((\Mux1~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22332,7 +22329,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(29),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(29),
 	datad => \Mux1~0_combout\,
 	combout => \Mux1~1_combout\);
@@ -22340,7 +22337,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N20
 \Mux1~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~7_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(29)))) # (!\challenge_lft[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(29)))))
+-- \Mux1~7_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(29)))) # (!\chal_lft[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(29)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22348,8 +22345,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(29),
 	datad => \gen_ro:7:ro_inst|ro_counter\(29),
 	combout => \Mux1~7_combout\);
@@ -22357,7 +22354,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N26
 \Mux1~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux1~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(29)))) # (!\Mux1~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(29))))) # (!\challenge_lft[2]~input_o\ & (\Mux1~7_combout\))
+-- \Mux1~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux1~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(29)))) # (!\Mux1~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(29))))) # (!\chal_lft[2]~input_o\ & (\Mux1~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22365,7 +22362,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux1~7_combout\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(29),
 	datad => \gen_ro:15:ro_inst|ro_counter\(29),
@@ -22374,8 +22371,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N8
 \Mux1~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~2_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(29)))) # (!\challenge_lft[3]~input_o\ & 
--- (\gen_ro:1:ro_inst|ro_counter\(29)))))
+-- \Mux1~2_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(29)))) # (!\chal_lft[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(29)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22383,16 +22379,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(29),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(29),
 	combout => \Mux1~2_combout\);
 
 -- Location: LCCOMB_X39_Y4_N22
 \Mux1~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux1~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(29)))) # (!\Mux1~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(29))))) # (!\challenge_lft[2]~input_o\ & (((\Mux1~2_combout\))))
+-- \Mux1~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux1~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(29)))) # (!\Mux1~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(29))))) # (!\chal_lft[2]~input_o\ & (((\Mux1~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22400,7 +22396,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(29),
 	datac => \Mux1~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(29),
@@ -22409,7 +22405,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N12
 \Mux1~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~4_combout\ = (\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(29))))) # (!\challenge_lft[2]~input_o\ & (!\challenge_lft[3]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(29))))
+-- \Mux1~4_combout\ = (\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(29))))) # (!\chal_lft[2]~input_o\ & (!\chal_lft[3]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(29))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22417,8 +22413,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(29),
 	datad => \gen_ro:8:ro_inst|ro_counter\(29),
 	combout => \Mux1~4_combout\);
@@ -22426,7 +22422,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N6
 \Mux1~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux1~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(29))) # (!\Mux1~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(29)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux1~4_combout\))))
+-- \Mux1~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux1~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(29))) # (!\Mux1~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(29)))))) # (!\chal_lft[3]~input_o\ & (((\Mux1~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22435,7 +22431,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(29),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(29),
 	datad => \Mux1~4_combout\,
 	combout => \Mux1~5_combout\);
@@ -22443,7 +22439,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N24
 \Mux1~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~6_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\Mux1~3_combout\)) # (!\challenge_lft[5]~input_o\ & ((\Mux1~5_combout\)))))
+-- \Mux1~6_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\Mux1~3_combout\)) # (!\chal_lft[5]~input_o\ & ((\Mux1~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22451,8 +22447,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux1~3_combout\,
 	datad => \Mux1~5_combout\,
 	combout => \Mux1~6_combout\);
@@ -22460,7 +22456,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N16
 \Mux1~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux1~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux1~6_combout\ & ((\Mux1~8_combout\))) # (!\Mux1~6_combout\ & (\Mux1~1_combout\)))) # (!\challenge_lft[4]~input_o\ & (((\Mux1~6_combout\))))
+-- \Mux1~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux1~6_combout\ & ((\Mux1~8_combout\))) # (!\Mux1~6_combout\ & (\Mux1~1_combout\)))) # (!\chal_lft[4]~input_o\ & (((\Mux1~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22468,7 +22464,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux1~1_combout\,
 	datac => \Mux1~8_combout\,
 	datad => \Mux1~6_combout\,
@@ -22477,8 +22473,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N6
 \Mux33~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:13:ro_inst|ro_counter\(28))) # (!\challenge_rit[5]~input_o\ & 
--- ((\gen_ro:12:ro_inst|ro_counter\(28))))))
+-- \Mux33~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:13:ro_inst|ro_counter\(28))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(28))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22487,15 +22482,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(28),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:12:ro_inst|ro_counter\(28),
 	combout => \Mux33~7_combout\);
 
 -- Location: LCCOMB_X43_Y6_N12
 \Mux33~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~8_combout\ = (\Mux33~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(28))) # (!\challenge_rit[4]~input_o\))) # (!\Mux33~7_combout\ & (\challenge_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(28)))))
+-- \Mux33~8_combout\ = (\Mux33~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(28))) # (!\chal_rit[4]~input_o\))) # (!\Mux33~7_combout\ & (\chal_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(28)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22504,7 +22499,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux33~7_combout\,
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(28),
 	datad => \gen_ro:14:ro_inst|ro_counter\(28),
 	combout => \Mux33~8_combout\);
@@ -22512,7 +22507,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N4
 \Mux33~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~0_combout\ = (\challenge_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(28)) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((!\challenge_rit[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(28)))))
+-- \Mux33~0_combout\ = (\chal_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(28)) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((!\chal_rit[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(28)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22520,16 +22515,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(28),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:4:ro_inst|ro_counter\(28),
 	combout => \Mux33~0_combout\);
 
 -- Location: LCCOMB_X43_Y6_N14
 \Mux33~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux33~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(28))) # (!\Mux33~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(28)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux33~0_combout\))))
+-- \Mux33~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux33~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(28))) # (!\Mux33~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(28)))))) # (!\chal_rit[4]~input_o\ & (((\Mux33~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22538,7 +22533,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(28),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux33~0_combout\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(28),
 	combout => \Mux33~1_combout\);
@@ -22546,7 +22541,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y8_N12
 \Mux33~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(28))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(28))))
+-- \Mux33~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(28))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(28))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22554,8 +22549,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(28),
 	datad => \gen_ro:10:ro_inst|ro_counter\(28),
 	combout => \Mux33~2_combout\);
@@ -22563,7 +22558,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y8_N22
 \Mux33~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux33~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(28))) # (!\Mux33~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(28)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux33~2_combout\))))
+-- \Mux33~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux33~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(28))) # (!\Mux33~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(28)))))) # (!\chal_rit[5]~input_o\ & (((\Mux33~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22571,7 +22566,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:11:ro_inst|ro_counter\(28),
 	datac => \gen_ro:9:ro_inst|ro_counter\(28),
 	datad => \Mux33~2_combout\,
@@ -22580,7 +22575,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N0
 \Mux33~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~4_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(28))) # (!\challenge_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(28))))))
+-- \Mux33~4_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(28))) # (!\chal_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(28))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22588,8 +22583,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(28),
 	datad => \gen_ro:0:ro_inst|ro_counter\(28),
 	combout => \Mux33~4_combout\);
@@ -22597,7 +22592,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N10
 \Mux33~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux33~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(28)))) # (!\Mux33~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(28))))) # (!\challenge_rit[5]~input_o\ & (((\Mux33~4_combout\))))
+-- \Mux33~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux33~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(28)))) # (!\Mux33~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(28))))) # (!\chal_rit[5]~input_o\ & (((\Mux33~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22606,7 +22601,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(28),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(28),
 	datad => \Mux33~4_combout\,
 	combout => \Mux33~5_combout\);
@@ -22614,7 +22609,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N24
 \Mux33~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~6_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\Mux33~3_combout\)))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\Mux33~5_combout\))))
+-- \Mux33~6_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\Mux33~3_combout\)))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\Mux33~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22622,8 +22617,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux33~3_combout\,
 	datad => \Mux33~5_combout\,
 	combout => \Mux33~6_combout\);
@@ -22631,7 +22626,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N26
 \Mux33~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux33~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux33~6_combout\ & (\Mux33~8_combout\)) # (!\Mux33~6_combout\ & ((\Mux33~1_combout\))))) # (!\challenge_rit[3]~input_o\ & (((\Mux33~6_combout\))))
+-- \Mux33~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux33~6_combout\ & (\Mux33~8_combout\)) # (!\Mux33~6_combout\ & ((\Mux33~1_combout\))))) # (!\chal_rit[3]~input_o\ & (((\Mux33~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22640,7 +22635,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux33~8_combout\,
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux33~1_combout\,
 	datad => \Mux33~6_combout\,
 	combout => \Mux33~9_combout\);
@@ -22648,7 +22643,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N18
 \Mux2~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~7_combout\ = (\challenge_lft[5]~input_o\ & (((\challenge_lft[4]~input_o\) # (\gen_ro:13:ro_inst|ro_counter\(28))))) # (!\challenge_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(28) & (!\challenge_lft[4]~input_o\)))
+-- \Mux2~7_combout\ = (\chal_lft[5]~input_o\ & (((\chal_lft[4]~input_o\) # (\gen_ro:13:ro_inst|ro_counter\(28))))) # (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(28) & (!\chal_lft[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22656,16 +22651,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(28),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(28),
 	combout => \Mux2~7_combout\);
 
 -- Location: LCCOMB_X43_Y6_N8
 \Mux2~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux2~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(28)))) # (!\Mux2~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(28))))) # (!\challenge_lft[4]~input_o\ & (((\Mux2~7_combout\))))
+-- \Mux2~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux2~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(28)))) # (!\Mux2~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(28))))) # (!\chal_lft[4]~input_o\ & (((\Mux2~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22673,7 +22668,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(28),
 	datac => \gen_ro:15:ro_inst|ro_counter\(28),
 	datad => \Mux2~7_combout\,
@@ -22682,7 +22677,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N28
 \Mux2~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~0_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(28)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(28)))))
+-- \Mux2~0_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(28)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(28)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22690,16 +22685,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(28),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:4:ro_inst|ro_counter\(28),
 	combout => \Mux2~0_combout\);
 
 -- Location: LCCOMB_X43_Y6_N30
 \Mux2~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux2~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(28)))) # (!\Mux2~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(28))))) # (!\challenge_lft[4]~input_o\ & (((\Mux2~0_combout\))))
+-- \Mux2~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux2~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(28)))) # (!\Mux2~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(28))))) # (!\chal_lft[4]~input_o\ & (((\Mux2~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22707,7 +22702,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(28),
 	datac => \gen_ro:7:ro_inst|ro_counter\(28),
 	datad => \Mux2~0_combout\,
@@ -22716,7 +22711,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N20
 \Mux2~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~2_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\) # (\gen_ro:10:ro_inst|ro_counter\(28))))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(28) & (!\challenge_lft[5]~input_o\)))
+-- \Mux2~2_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\) # (\gen_ro:10:ro_inst|ro_counter\(28))))) # (!\chal_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(28) & (!\chal_lft[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22724,16 +22719,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(28),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:10:ro_inst|ro_counter\(28),
 	combout => \Mux2~2_combout\);
 
 -- Location: LCCOMB_X42_Y7_N30
 \Mux2~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux2~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(28)))) # (!\Mux2~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(28))))) # (!\challenge_lft[5]~input_o\ & (((\Mux2~2_combout\))))
+-- \Mux2~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux2~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(28)))) # (!\Mux2~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(28))))) # (!\chal_lft[5]~input_o\ & (((\Mux2~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22741,7 +22736,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(28),
 	datac => \gen_ro:11:ro_inst|ro_counter\(28),
 	datad => \Mux2~2_combout\,
@@ -22750,7 +22745,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N20
 \Mux2~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~4_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(28))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(28)))))
+-- \Mux2~4_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(28))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(28)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22758,8 +22753,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(28),
 	datad => \gen_ro:0:ro_inst|ro_counter\(28),
 	combout => \Mux2~4_combout\);
@@ -22767,7 +22762,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N2
 \Mux2~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux2~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(28))) # (!\Mux2~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(28)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux2~4_combout\))))
+-- \Mux2~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux2~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(28))) # (!\Mux2~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(28)))))) # (!\chal_lft[5]~input_o\ & (((\Mux2~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22775,7 +22770,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(28),
 	datac => \gen_ro:1:ro_inst|ro_counter\(28),
 	datad => \Mux2~4_combout\,
@@ -22784,7 +22779,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N16
 \Mux2~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~6_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux2~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux2~5_combout\)))))
+-- \Mux2~6_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux2~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux2~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22792,8 +22787,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux2~3_combout\,
 	datad => \Mux2~5_combout\,
 	combout => \Mux2~6_combout\);
@@ -22801,7 +22796,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y6_N22
 \Mux2~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux2~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux2~6_combout\ & (\Mux2~8_combout\)) # (!\Mux2~6_combout\ & ((\Mux2~1_combout\))))) # (!\challenge_lft[3]~input_o\ & (((\Mux2~6_combout\))))
+-- \Mux2~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux2~6_combout\ & (\Mux2~8_combout\)) # (!\Mux2~6_combout\ & ((\Mux2~1_combout\))))) # (!\chal_lft[3]~input_o\ & (((\Mux2~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22809,7 +22804,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux2~8_combout\,
 	datac => \Mux2~1_combout\,
 	datad => \Mux2~6_combout\,
@@ -22818,7 +22813,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y8_N24
 \Mux3~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~7_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(27))))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(27) & (!\challenge_lft[3]~input_o\)))
+-- \Mux3~7_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(27))))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(27) & (!\chal_lft[3]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22827,15 +22822,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:3:ro_inst|ro_counter\(27),
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(27),
 	combout => \Mux3~7_combout\);
 
 -- Location: LCCOMB_X36_Y8_N18
 \Mux3~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux3~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(27))) # (!\Mux3~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(27)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux3~7_combout\))))
+-- \Mux3~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux3~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(27))) # (!\Mux3~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(27)))))) # (!\chal_lft[3]~input_o\ & (((\Mux3~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22845,14 +22840,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(27),
 	datab => \gen_ro:7:ro_inst|ro_counter\(27),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux3~7_combout\,
 	combout => \Mux3~8_combout\);
 
 -- Location: LCCOMB_X36_Y8_N28
 \Mux3~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~0_combout\ = (\challenge_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(27)) # ((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & (((!\challenge_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(27)))))
+-- \Mux3~0_combout\ = (\chal_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(27)) # ((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & (((!\chal_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22861,15 +22856,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(27),
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(27),
 	combout => \Mux3~0_combout\);
 
 -- Location: LCCOMB_X36_Y8_N10
 \Mux3~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux3~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(27))) # (!\Mux3~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(27)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux3~0_combout\))))
+-- \Mux3~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux3~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(27))) # (!\Mux3~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(27)))))) # (!\chal_lft[3]~input_o\ & (((\Mux3~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22878,7 +22873,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(27),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(27),
 	datad => \Mux3~0_combout\,
 	combout => \Mux3~1_combout\);
@@ -22886,7 +22881,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N28
 \Mux3~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~2_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(27))) # (!\challenge_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(27))))))
+-- \Mux3~2_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(27))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(27))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22894,8 +22889,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(27),
 	datad => \gen_ro:2:ro_inst|ro_counter\(27),
 	combout => \Mux3~2_combout\);
@@ -22903,7 +22898,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N14
 \Mux3~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux3~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(27)))) # (!\Mux3~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(27))))) # (!\challenge_lft[2]~input_o\ & (\Mux3~2_combout\))
+-- \Mux3~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux3~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(27)))) # (!\Mux3~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(27))))) # (!\chal_lft[2]~input_o\ & (\Mux3~2_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22911,7 +22906,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux3~2_combout\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(27),
 	datad => \gen_ro:14:ro_inst|ro_counter\(27),
@@ -22920,7 +22915,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N12
 \Mux3~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~4_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(27))) # (!\challenge_lft[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(27))))))
+-- \Mux3~4_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(27))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(27))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22928,8 +22923,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(27),
 	datad => \gen_ro:0:ro_inst|ro_counter\(27),
 	combout => \Mux3~4_combout\);
@@ -22937,7 +22932,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N18
 \Mux3~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux3~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(27)))) # (!\Mux3~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(27))))) # (!\challenge_lft[2]~input_o\ & (((\Mux3~4_combout\))))
+-- \Mux3~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux3~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(27)))) # (!\Mux3~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(27))))) # (!\chal_lft[2]~input_o\ & (((\Mux3~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22945,7 +22940,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(27),
 	datac => \gen_ro:12:ro_inst|ro_counter\(27),
 	datad => \Mux3~4_combout\,
@@ -22954,7 +22949,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N16
 \Mux3~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~6_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux3~3_combout\) # ((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & (((!\challenge_lft[5]~input_o\ & \Mux3~5_combout\))))
+-- \Mux3~6_combout\ = (\chal_lft[4]~input_o\ & ((\Mux3~3_combout\) # ((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & (((!\chal_lft[5]~input_o\ & \Mux3~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22962,16 +22957,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux3~3_combout\,
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux3~5_combout\,
 	combout => \Mux3~6_combout\);
 
 -- Location: LCCOMB_X40_Y8_N2
 \Mux3~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux3~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux3~6_combout\ & (\Mux3~8_combout\)) # (!\Mux3~6_combout\ & ((\Mux3~1_combout\))))) # (!\challenge_lft[5]~input_o\ & (((\Mux3~6_combout\))))
+-- \Mux3~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux3~6_combout\ & (\Mux3~8_combout\)) # (!\Mux3~6_combout\ & ((\Mux3~1_combout\))))) # (!\chal_lft[5]~input_o\ & (((\Mux3~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22979,7 +22974,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux3~8_combout\,
 	datac => \Mux3~1_combout\,
 	datad => \Mux3~6_combout\,
@@ -22988,7 +22983,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y8_N16
 \Mux34~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~0_combout\ = (\challenge_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(27)) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(27)))))
+-- \Mux34~0_combout\ = (\chal_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(27)) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22996,16 +22991,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(27),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(27),
 	combout => \Mux34~0_combout\);
 
 -- Location: LCCOMB_X36_Y8_N14
 \Mux34~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux34~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(27)))) # (!\Mux34~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(27))))) # (!\challenge_rit[3]~input_o\ & (((\Mux34~0_combout\))))
+-- \Mux34~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux34~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(27)))) # (!\Mux34~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(27))))) # (!\chal_rit[3]~input_o\ & (((\Mux34~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23013,7 +23008,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(27),
 	datac => \gen_ro:13:ro_inst|ro_counter\(27),
 	datad => \Mux34~0_combout\,
@@ -23022,7 +23017,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y8_N20
 \Mux34~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~7_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(27)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(27)))))
+-- \Mux34~7_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(27)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23030,8 +23025,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(27),
 	datad => \gen_ro:11:ro_inst|ro_counter\(27),
 	combout => \Mux34~7_combout\);
@@ -23039,7 +23034,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y8_N2
 \Mux34~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux34~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(27))) # (!\Mux34~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(27)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux34~7_combout\))))
+-- \Mux34~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux34~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(27))) # (!\Mux34~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(27)))))) # (!\chal_rit[3]~input_o\ & (((\Mux34~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23049,14 +23044,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(27),
 	datab => \gen_ro:7:ro_inst|ro_counter\(27),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux34~7_combout\,
 	combout => \Mux34~8_combout\);
 
 -- Location: LCCOMB_X40_Y8_N4
 \Mux34~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~2_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(27))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(27)))))
+-- \Mux34~2_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(27))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23064,8 +23059,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(27),
 	datad => \gen_ro:2:ro_inst|ro_counter\(27),
 	combout => \Mux34~2_combout\);
@@ -23073,7 +23068,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N22
 \Mux34~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux34~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(27)))) # (!\Mux34~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(27))))) # (!\challenge_rit[2]~input_o\ & (((\Mux34~2_combout\))))
+-- \Mux34~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux34~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(27)))) # (!\Mux34~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(27))))) # (!\chal_rit[2]~input_o\ & (((\Mux34~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23082,7 +23077,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(27),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux34~2_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(27),
 	combout => \Mux34~3_combout\);
@@ -23090,7 +23085,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N24
 \Mux34~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~4_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(27))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(27)))))
+-- \Mux34~4_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(27))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(27)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23098,8 +23093,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(27),
 	datad => \gen_ro:0:ro_inst|ro_counter\(27),
 	combout => \Mux34~4_combout\);
@@ -23107,7 +23102,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N6
 \Mux34~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux34~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(27))) # (!\Mux34~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(27)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux34~4_combout\))))
+-- \Mux34~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux34~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(27))) # (!\Mux34~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(27)))))) # (!\chal_rit[2]~input_o\ & (((\Mux34~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23116,7 +23111,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(27),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(27),
 	datad => \Mux34~4_combout\,
 	combout => \Mux34~5_combout\);
@@ -23124,7 +23119,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N20
 \Mux34~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~6_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\Mux34~3_combout\)))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\Mux34~5_combout\))))
+-- \Mux34~6_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\Mux34~3_combout\)))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\Mux34~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23132,8 +23127,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux34~3_combout\,
 	datad => \Mux34~5_combout\,
 	combout => \Mux34~6_combout\);
@@ -23141,7 +23136,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y8_N30
 \Mux34~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux34~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux34~6_combout\ & ((\Mux34~8_combout\))) # (!\Mux34~6_combout\ & (\Mux34~1_combout\)))) # (!\challenge_rit[5]~input_o\ & (((\Mux34~6_combout\))))
+-- \Mux34~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux34~6_combout\ & ((\Mux34~8_combout\))) # (!\Mux34~6_combout\ & (\Mux34~1_combout\)))) # (!\chal_rit[5]~input_o\ & (((\Mux34~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23150,7 +23145,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux34~1_combout\,
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux34~8_combout\,
 	datad => \Mux34~6_combout\,
 	combout => \Mux34~9_combout\);
@@ -23158,7 +23153,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N4
 \Mux4~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~0_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(26))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(26))))
+-- \Mux4~0_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(26))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(26))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23166,8 +23161,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(26),
 	datad => \gen_ro:9:ro_inst|ro_counter\(26),
 	combout => \Mux4~0_combout\);
@@ -23175,7 +23170,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N26
 \Mux4~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux4~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(26))) # (!\Mux4~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(26)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux4~0_combout\))))
+-- \Mux4~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux4~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(26))) # (!\Mux4~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(26)))))) # (!\chal_lft[4]~input_o\ & (((\Mux4~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23184,7 +23179,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(26),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux4~0_combout\,
 	datad => \gen_ro:10:ro_inst|ro_counter\(26),
 	combout => \Mux4~1_combout\);
@@ -23192,7 +23187,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N6
 \Mux4~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~7_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(26))))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(26) & (!\challenge_lft[5]~input_o\)))
+-- \Mux4~7_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(26))))) # (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(26) & (!\chal_lft[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23201,15 +23196,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(26),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(26),
 	combout => \Mux4~7_combout\);
 
 -- Location: LCCOMB_X42_Y4_N8
 \Mux4~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux4~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(26)))) # (!\Mux4~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(26))))) # (!\challenge_lft[5]~input_o\ & (((\Mux4~7_combout\))))
+-- \Mux4~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux4~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(26)))) # (!\Mux4~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(26))))) # (!\chal_lft[5]~input_o\ & (((\Mux4~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23219,14 +23214,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(26),
 	datab => \gen_ro:15:ro_inst|ro_counter\(26),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux4~7_combout\,
 	combout => \Mux4~8_combout\);
 
 -- Location: LCCOMB_X42_Y4_N16
 \Mux4~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~2_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(26))))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(26) & (!\challenge_lft[5]~input_o\)))
+-- \Mux4~2_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(26))))) # (!\chal_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(26) & (!\chal_lft[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23235,15 +23230,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(26),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(26),
 	combout => \Mux4~2_combout\);
 
 -- Location: LCCOMB_X42_Y4_N14
 \Mux4~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux4~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(26)))) # (!\Mux4~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(26))))) # (!\challenge_lft[5]~input_o\ & (((\Mux4~2_combout\))))
+-- \Mux4~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux4~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(26)))) # (!\Mux4~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(26))))) # (!\chal_lft[5]~input_o\ & (((\Mux4~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23251,7 +23246,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(26),
 	datac => \gen_ro:7:ro_inst|ro_counter\(26),
 	datad => \Mux4~2_combout\,
@@ -23260,7 +23255,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N12
 \Mux4~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~4_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(26)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(26)))))
+-- \Mux4~4_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(26)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(26)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23268,16 +23263,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(26),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(26),
 	combout => \Mux4~4_combout\);
 
 -- Location: LCCOMB_X37_Y4_N10
 \Mux4~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux4~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(26)))) # (!\Mux4~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(26))))) # (!\challenge_lft[4]~input_o\ & (((\Mux4~4_combout\))))
+-- \Mux4~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux4~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(26)))) # (!\Mux4~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(26))))) # (!\chal_lft[4]~input_o\ & (((\Mux4~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23285,7 +23280,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(26),
 	datac => \gen_ro:3:ro_inst|ro_counter\(26),
 	datad => \Mux4~4_combout\,
@@ -23294,7 +23289,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N28
 \Mux4~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~6_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\Mux4~3_combout\)))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\Mux4~5_combout\))))
+-- \Mux4~6_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\Mux4~3_combout\)))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\Mux4~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23302,8 +23297,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux4~3_combout\,
 	datad => \Mux4~5_combout\,
 	combout => \Mux4~6_combout\);
@@ -23311,7 +23306,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N2
 \Mux4~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux4~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux4~6_combout\ & ((\Mux4~8_combout\))) # (!\Mux4~6_combout\ & (\Mux4~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux4~6_combout\))))
+-- \Mux4~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux4~6_combout\ & ((\Mux4~8_combout\))) # (!\Mux4~6_combout\ & (\Mux4~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux4~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23320,7 +23315,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux4~1_combout\,
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux4~8_combout\,
 	datad => \Mux4~6_combout\,
 	combout => \Mux4~9_combout\);
@@ -23328,7 +23323,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N18
 \Mux35~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(26))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(26) & (!\challenge_rit[5]~input_o\)))
+-- \Mux35~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(26))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(26) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23337,15 +23332,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(26),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(26),
 	combout => \Mux35~7_combout\);
 
 -- Location: LCCOMB_X42_Y4_N24
 \Mux35~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux35~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(26)))) # (!\Mux35~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(26))))) # (!\challenge_rit[5]~input_o\ & (((\Mux35~7_combout\))))
+-- \Mux35~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux35~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(26)))) # (!\Mux35~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(26))))) # (!\chal_rit[5]~input_o\ & (((\Mux35~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23355,14 +23350,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(26),
 	datab => \gen_ro:15:ro_inst|ro_counter\(26),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux35~7_combout\,
 	combout => \Mux35~8_combout\);
 
 -- Location: LCCOMB_X42_Y4_N12
 \Mux35~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(26))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(26))))
+-- \Mux35~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(26))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(26))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23370,8 +23365,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(26),
 	datad => \gen_ro:9:ro_inst|ro_counter\(26),
 	combout => \Mux35~0_combout\);
@@ -23379,7 +23374,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N30
 \Mux35~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux35~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(26))) # (!\Mux35~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(26)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux35~0_combout\))))
+-- \Mux35~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux35~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(26))) # (!\Mux35~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(26)))))) # (!\chal_rit[4]~input_o\ & (((\Mux35~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23389,14 +23384,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(26),
 	datab => \gen_ro:10:ro_inst|ro_counter\(26),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \Mux35~0_combout\,
 	combout => \Mux35~1_combout\);
 
 -- Location: LCCOMB_X42_Y4_N0
 \Mux35~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~2_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(26))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(26) & (!\challenge_rit[5]~input_o\)))
+-- \Mux35~2_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(26))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(26) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23405,15 +23400,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(26),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(26),
 	combout => \Mux35~2_combout\);
 
 -- Location: LCCOMB_X42_Y4_N22
 \Mux35~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux35~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(26)))) # (!\Mux35~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(26))))) # (!\challenge_rit[5]~input_o\ & (((\Mux35~2_combout\))))
+-- \Mux35~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux35~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(26)))) # (!\Mux35~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(26))))) # (!\chal_rit[5]~input_o\ & (((\Mux35~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23421,7 +23416,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(26),
 	datac => \gen_ro:7:ro_inst|ro_counter\(26),
 	datad => \Mux35~2_combout\,
@@ -23430,7 +23425,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N28
 \Mux35~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~4_combout\ = (\challenge_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(26)) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((!\challenge_rit[4]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(26)))))
+-- \Mux35~4_combout\ = (\chal_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(26)) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((!\chal_rit[4]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(26)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23438,16 +23433,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(26),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(26),
 	combout => \Mux35~4_combout\);
 
 -- Location: LCCOMB_X37_Y4_N22
 \Mux35~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux35~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(26))) # (!\Mux35~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(26)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux35~4_combout\))))
+-- \Mux35~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux35~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(26))) # (!\Mux35~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(26)))))) # (!\chal_rit[4]~input_o\ & (((\Mux35~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23457,14 +23452,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:3:ro_inst|ro_counter\(26),
 	datab => \gen_ro:2:ro_inst|ro_counter\(26),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \Mux35~4_combout\,
 	combout => \Mux35~5_combout\);
 
 -- Location: LCCOMB_X42_Y4_N20
 \Mux35~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~6_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\Mux35~3_combout\)) # (!\challenge_rit[3]~input_o\ & ((\Mux35~5_combout\)))))
+-- \Mux35~6_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\Mux35~3_combout\)) # (!\chal_rit[3]~input_o\ & ((\Mux35~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23472,8 +23467,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux35~3_combout\,
 	datad => \Mux35~5_combout\,
 	combout => \Mux35~6_combout\);
@@ -23481,7 +23476,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y4_N10
 \Mux35~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux35~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux35~6_combout\ & (\Mux35~8_combout\)) # (!\Mux35~6_combout\ & ((\Mux35~1_combout\))))) # (!\challenge_rit[2]~input_o\ & (((\Mux35~6_combout\))))
+-- \Mux35~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux35~6_combout\ & (\Mux35~8_combout\)) # (!\Mux35~6_combout\ & ((\Mux35~1_combout\))))) # (!\chal_rit[2]~input_o\ & (((\Mux35~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23489,7 +23484,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \Mux35~8_combout\,
 	datac => \Mux35~1_combout\,
 	datad => \Mux35~6_combout\,
@@ -23498,7 +23493,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N16
 \Mux5~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~0_combout\ = (\challenge_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(25)) # ((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & (((!\challenge_lft[3]~input_o\ & \gen_ro:2:ro_inst|ro_counter\(25)))))
+-- \Mux5~0_combout\ = (\chal_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(25)) # ((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & (((!\chal_lft[3]~input_o\ & \gen_ro:2:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23507,15 +23502,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(25),
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:2:ro_inst|ro_counter\(25),
 	combout => \Mux5~0_combout\);
 
 -- Location: LCCOMB_X37_Y6_N26
 \Mux5~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux5~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(25)))) # (!\Mux5~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(25))))) # (!\challenge_lft[3]~input_o\ & (((\Mux5~0_combout\))))
+-- \Mux5~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux5~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(25)))) # (!\Mux5~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(25))))) # (!\chal_lft[3]~input_o\ & (((\Mux5~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23523,7 +23518,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(25),
 	datac => \gen_ro:14:ro_inst|ro_counter\(25),
 	datad => \Mux5~0_combout\,
@@ -23532,7 +23527,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N16
 \Mux5~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~7_combout\ = (\challenge_lft[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(25)) # ((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & (((!\challenge_lft[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(25)))))
+-- \Mux5~7_combout\ = (\chal_lft[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(25)) # ((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & (((!\chal_lft[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23541,15 +23536,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(25),
-	datab => \challenge_lft[3]~input_o\,
-	datac => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(25),
 	combout => \Mux5~7_combout\);
 
 -- Location: LCCOMB_X36_Y6_N30
 \Mux5~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux5~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(25))) # (!\Mux5~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(25)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux5~7_combout\))))
+-- \Mux5~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux5~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(25))) # (!\Mux5~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(25)))))) # (!\chal_lft[2]~input_o\ & (((\Mux5~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23558,7 +23553,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(25),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(25),
 	datad => \Mux5~7_combout\,
 	combout => \Mux5~8_combout\);
@@ -23566,7 +23561,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N0
 \Mux5~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~2_combout\ = (\challenge_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(25)) # ((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & (((!\challenge_lft[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(25)))))
+-- \Mux5~2_combout\ = (\chal_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(25)) # ((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & (((!\chal_lft[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23574,16 +23569,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(25),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(25),
 	combout => \Mux5~2_combout\);
 
 -- Location: LCCOMB_X36_Y6_N0
 \Mux5~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux5~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(25))) # (!\Mux5~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(25)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux5~2_combout\))))
+-- \Mux5~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux5~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(25))) # (!\Mux5~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(25)))))) # (!\chal_lft[2]~input_o\ & (((\Mux5~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23592,7 +23587,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(25),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux5~2_combout\,
 	datad => \gen_ro:9:ro_inst|ro_counter\(25),
 	combout => \Mux5~3_combout\);
@@ -23600,8 +23595,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N24
 \Mux5~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~4_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(25))) # (!\challenge_lft[2]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(25))))))
+-- \Mux5~4_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(25))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(25))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23609,16 +23603,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(25),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(25),
 	combout => \Mux5~4_combout\);
 
 -- Location: LCCOMB_X37_Y6_N18
 \Mux5~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux5~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(25)))) # (!\Mux5~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(25))))) # (!\challenge_lft[3]~input_o\ & (((\Mux5~4_combout\))))
+-- \Mux5~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux5~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(25)))) # (!\Mux5~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(25))))) # (!\chal_lft[3]~input_o\ & (((\Mux5~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23626,7 +23620,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(25),
 	datac => \gen_ro:12:ro_inst|ro_counter\(25),
 	datad => \Mux5~4_combout\,
@@ -23635,7 +23629,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N2
 \Mux5~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~6_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\Mux5~3_combout\)) # (!\challenge_lft[5]~input_o\ & ((\Mux5~5_combout\)))))
+-- \Mux5~6_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\Mux5~3_combout\)) # (!\chal_lft[5]~input_o\ & ((\Mux5~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23643,16 +23637,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux5~3_combout\,
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux5~5_combout\,
 	combout => \Mux5~6_combout\);
 
 -- Location: LCCOMB_X36_Y6_N28
 \Mux5~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux5~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux5~6_combout\ & ((\Mux5~8_combout\))) # (!\Mux5~6_combout\ & (\Mux5~1_combout\)))) # (!\challenge_lft[4]~input_o\ & (((\Mux5~6_combout\))))
+-- \Mux5~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux5~6_combout\ & ((\Mux5~8_combout\))) # (!\Mux5~6_combout\ & (\Mux5~1_combout\)))) # (!\chal_lft[4]~input_o\ & (((\Mux5~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23660,7 +23654,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux5~1_combout\,
 	datac => \Mux5~8_combout\,
 	datad => \Mux5~6_combout\,
@@ -23669,7 +23663,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N0
 \Mux36~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~0_combout\ = (\challenge_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(25)) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \gen_ro:2:ro_inst|ro_counter\(25)))))
+-- \Mux36~0_combout\ = (\chal_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(25)) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \gen_ro:2:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23678,15 +23672,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(25),
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:2:ro_inst|ro_counter\(25),
 	combout => \Mux36~0_combout\);
 
 -- Location: LCCOMB_X37_Y6_N30
 \Mux36~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux36~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(25)))) # (!\Mux36~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(25))))) # (!\challenge_rit[3]~input_o\ & (((\Mux36~0_combout\))))
+-- \Mux36~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux36~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(25)))) # (!\Mux36~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(25))))) # (!\chal_rit[3]~input_o\ & (((\Mux36~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23694,7 +23688,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(25),
 	datac => \gen_ro:14:ro_inst|ro_counter\(25),
 	datad => \Mux36~0_combout\,
@@ -23703,7 +23697,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y2_N30
 \Mux36~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~7_combout\ = (\challenge_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(25)) # ((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & (((!\challenge_rit[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(25)))))
+-- \Mux36~7_combout\ = (\chal_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(25)) # ((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & (((!\chal_rit[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23711,16 +23705,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(25),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(25),
 	combout => \Mux36~7_combout\);
 
 -- Location: LCCOMB_X36_Y6_N4
 \Mux36~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux36~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(25))) # (!\Mux36~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(25)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux36~7_combout\))))
+-- \Mux36~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux36~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(25))) # (!\Mux36~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(25)))))) # (!\chal_rit[2]~input_o\ & (((\Mux36~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23728,7 +23722,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(25),
 	datac => \gen_ro:11:ro_inst|ro_counter\(25),
 	datad => \Mux36~7_combout\,
@@ -23737,8 +23731,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N22
 \Mux36~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~2_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(25))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(25))))))
+-- \Mux36~2_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(25))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(25))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23746,16 +23739,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(25),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(25),
 	combout => \Mux36~2_combout\);
 
 -- Location: LCCOMB_X36_Y6_N26
 \Mux36~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux36~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(25))) # (!\Mux36~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(25)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux36~2_combout\))))
+-- \Mux36~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux36~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(25))) # (!\Mux36~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(25)))))) # (!\chal_rit[2]~input_o\ & (((\Mux36~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23765,14 +23758,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(25),
 	datab => \gen_ro:9:ro_inst|ro_counter\(25),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \Mux36~2_combout\,
 	combout => \Mux36~3_combout\);
 
 -- Location: LCCOMB_X38_Y6_N18
 \Mux36~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~4_combout\ = (\challenge_rit[2]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(25)) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(25)))))
+-- \Mux36~4_combout\ = (\chal_rit[2]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(25)) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(25)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23780,16 +23773,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(25),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(25),
 	combout => \Mux36~4_combout\);
 
 -- Location: LCCOMB_X37_Y6_N20
 \Mux36~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux36~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(25))) # (!\Mux36~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(25)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux36~4_combout\))))
+-- \Mux36~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux36~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(25))) # (!\Mux36~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(25)))))) # (!\chal_rit[3]~input_o\ & (((\Mux36~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23799,14 +23792,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(25),
 	datab => \gen_ro:4:ro_inst|ro_counter\(25),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux36~4_combout\,
 	combout => \Mux36~5_combout\);
 
 -- Location: LCCOMB_X37_Y6_N2
 \Mux36~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~6_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\Mux36~3_combout\)) # (!\challenge_rit[5]~input_o\ & ((\Mux36~5_combout\)))))
+-- \Mux36~6_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\Mux36~3_combout\)) # (!\chal_rit[5]~input_o\ & ((\Mux36~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23815,15 +23808,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux36~3_combout\,
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux36~5_combout\,
 	combout => \Mux36~6_combout\);
 
 -- Location: LCCOMB_X37_Y6_N4
 \Mux36~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux36~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux36~6_combout\ & ((\Mux36~8_combout\))) # (!\Mux36~6_combout\ & (\Mux36~1_combout\)))) # (!\challenge_rit[4]~input_o\ & (((\Mux36~6_combout\))))
+-- \Mux36~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux36~6_combout\ & ((\Mux36~8_combout\))) # (!\Mux36~6_combout\ & (\Mux36~1_combout\)))) # (!\chal_rit[4]~input_o\ & (((\Mux36~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23833,15 +23826,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Mux36~1_combout\,
 	datab => \Mux36~8_combout\,
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \Mux36~6_combout\,
 	combout => \Mux36~9_combout\);
 
 -- Location: LCCOMB_X37_Y5_N8
 \Mux37~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(24)))) # (!\challenge_rit[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(24)))))
+-- \Mux37~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(24)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(24)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23849,16 +23841,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(24),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(24),
 	combout => \Mux37~7_combout\);
 
 -- Location: LCCOMB_X37_Y5_N10
 \Mux37~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux37~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(24))) # (!\Mux37~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(24)))))) # (!\challenge_rit[4]~input_o\ & (\Mux37~7_combout\))
+-- \Mux37~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux37~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(24))) # (!\Mux37~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(24)))))) # (!\chal_rit[4]~input_o\ & (\Mux37~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23866,7 +23858,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux37~7_combout\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(24),
 	datad => \gen_ro:14:ro_inst|ro_counter\(24),
@@ -23875,7 +23867,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N8
 \Mux37~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~0_combout\ = (\challenge_rit[5]~input_o\ & (((\challenge_rit[4]~input_o\) # (\gen_ro:5:ro_inst|ro_counter\(24))))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(24) & (!\challenge_rit[4]~input_o\)))
+-- \Mux37~0_combout\ = (\chal_rit[5]~input_o\ & (((\chal_rit[4]~input_o\) # (\gen_ro:5:ro_inst|ro_counter\(24))))) # (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(24) & (!\chal_rit[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23883,16 +23875,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(24),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(24),
 	combout => \Mux37~0_combout\);
 
 -- Location: LCCOMB_X38_Y5_N22
 \Mux37~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux37~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(24))) # (!\Mux37~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(24)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux37~0_combout\))))
+-- \Mux37~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux37~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(24))) # (!\Mux37~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(24)))))) # (!\chal_rit[4]~input_o\ & (((\Mux37~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23901,7 +23893,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(24),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux37~0_combout\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(24),
 	combout => \Mux37~1_combout\);
@@ -23909,7 +23901,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N12
 \Mux37~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~2_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(24)))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(24)))))
+-- \Mux37~2_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(24)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(24)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23917,8 +23909,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(24),
 	datad => \gen_ro:10:ro_inst|ro_counter\(24),
 	combout => \Mux37~2_combout\);
@@ -23926,7 +23918,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N30
 \Mux37~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux37~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(24)))) # (!\Mux37~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(24))))) # (!\challenge_rit[5]~input_o\ & (((\Mux37~2_combout\))))
+-- \Mux37~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux37~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(24)))) # (!\Mux37~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(24))))) # (!\chal_rit[5]~input_o\ & (((\Mux37~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23934,7 +23926,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(24),
 	datac => \gen_ro:11:ro_inst|ro_counter\(24),
 	datad => \Mux37~2_combout\,
@@ -23943,7 +23935,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N16
 \Mux37~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~4_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(24))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(24)))))
+-- \Mux37~4_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(24))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(24)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23951,8 +23943,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(24),
 	datad => \gen_ro:0:ro_inst|ro_counter\(24),
 	combout => \Mux37~4_combout\);
@@ -23960,7 +23952,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N18
 \Mux37~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux37~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(24)))) # (!\Mux37~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(24))))) # (!\challenge_rit[5]~input_o\ & (((\Mux37~4_combout\))))
+-- \Mux37~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux37~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(24)))) # (!\Mux37~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(24))))) # (!\chal_rit[5]~input_o\ & (((\Mux37~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23968,7 +23960,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(24),
 	datac => \gen_ro:3:ro_inst|ro_counter\(24),
 	datad => \Mux37~4_combout\,
@@ -23977,7 +23969,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N20
 \Mux37~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~6_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\Mux37~3_combout\)))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\Mux37~5_combout\))))
+-- \Mux37~6_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\Mux37~3_combout\)))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\Mux37~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23985,8 +23977,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux37~3_combout\,
 	datad => \Mux37~5_combout\,
 	combout => \Mux37~6_combout\);
@@ -23994,7 +23986,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N10
 \Mux37~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux37~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux37~6_combout\ & (\Mux37~8_combout\)) # (!\Mux37~6_combout\ & ((\Mux37~1_combout\))))) # (!\challenge_rit[3]~input_o\ & (((\Mux37~6_combout\))))
+-- \Mux37~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux37~6_combout\ & (\Mux37~8_combout\)) # (!\Mux37~6_combout\ & ((\Mux37~1_combout\))))) # (!\chal_rit[3]~input_o\ & (((\Mux37~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24003,7 +23995,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux37~8_combout\,
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux37~1_combout\,
 	datad => \Mux37~6_combout\,
 	combout => \Mux37~9_combout\);
@@ -24011,7 +24003,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N4
 \Mux6~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~7_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(24))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(24))))
+-- \Mux6~7_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(24))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(24))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24019,8 +24011,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(24),
 	datad => \gen_ro:13:ro_inst|ro_counter\(24),
 	combout => \Mux6~7_combout\);
@@ -24028,7 +24020,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N14
 \Mux6~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux6~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(24))) # (!\Mux6~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(24)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux6~7_combout\))))
+-- \Mux6~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux6~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(24))) # (!\Mux6~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(24)))))) # (!\chal_lft[4]~input_o\ & (((\Mux6~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24037,7 +24029,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(24),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux6~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(24),
 	combout => \Mux6~8_combout\);
@@ -24045,7 +24037,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N4
 \Mux6~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~0_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(24)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(24)))))
+-- \Mux6~0_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(24)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(24)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24054,15 +24046,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(24),
-	datab => \challenge_lft[5]~input_o\,
-	datac => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:4:ro_inst|ro_counter\(24),
 	combout => \Mux6~0_combout\);
 
 -- Location: LCCOMB_X38_Y5_N14
 \Mux6~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux6~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(24))) # (!\Mux6~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(24)))))) # (!\challenge_lft[4]~input_o\ & (\Mux6~0_combout\))
+-- \Mux6~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux6~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(24))) # (!\Mux6~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(24)))))) # (!\chal_lft[4]~input_o\ & (\Mux6~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24070,7 +24062,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux6~0_combout\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(24),
 	datad => \gen_ro:6:ro_inst|ro_counter\(24),
@@ -24079,7 +24071,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N28
 \Mux6~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~2_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(24))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(24))))
+-- \Mux6~2_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(24))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(24))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24087,8 +24079,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(24),
 	datad => \gen_ro:10:ro_inst|ro_counter\(24),
 	combout => \Mux6~2_combout\);
@@ -24096,7 +24088,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N6
 \Mux6~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux6~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(24)))) # (!\Mux6~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(24))))) # (!\challenge_lft[5]~input_o\ & (((\Mux6~2_combout\))))
+-- \Mux6~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux6~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(24)))) # (!\Mux6~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(24))))) # (!\chal_lft[5]~input_o\ & (((\Mux6~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24104,7 +24096,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(24),
 	datac => \gen_ro:11:ro_inst|ro_counter\(24),
 	datad => \Mux6~2_combout\,
@@ -24113,7 +24105,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N20
 \Mux6~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~4_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(24))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(24))))))
+-- \Mux6~4_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(24))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(24))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24121,8 +24113,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(24),
 	datad => \gen_ro:0:ro_inst|ro_counter\(24),
 	combout => \Mux6~4_combout\);
@@ -24130,7 +24122,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N30
 \Mux6~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux6~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(24)))) # (!\Mux6~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(24))))) # (!\challenge_lft[5]~input_o\ & (((\Mux6~4_combout\))))
+-- \Mux6~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux6~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(24)))) # (!\Mux6~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(24))))) # (!\chal_lft[5]~input_o\ & (((\Mux6~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24138,7 +24130,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(24),
 	datac => \gen_ro:3:ro_inst|ro_counter\(24),
 	datad => \Mux6~4_combout\,
@@ -24147,7 +24139,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N16
 \Mux6~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~6_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux6~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux6~5_combout\)))))
+-- \Mux6~6_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux6~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux6~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24156,15 +24148,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux6~3_combout\,
-	datab => \challenge_lft[3]~input_o\,
-	datac => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \Mux6~5_combout\,
 	combout => \Mux6~6_combout\);
 
 -- Location: LCCOMB_X38_Y5_N2
 \Mux6~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux6~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux6~6_combout\ & (\Mux6~8_combout\)) # (!\Mux6~6_combout\ & ((\Mux6~1_combout\))))) # (!\challenge_lft[3]~input_o\ & (((\Mux6~6_combout\))))
+-- \Mux6~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux6~6_combout\ & (\Mux6~8_combout\)) # (!\Mux6~6_combout\ & ((\Mux6~1_combout\))))) # (!\chal_lft[3]~input_o\ & (((\Mux6~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24173,7 +24165,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux6~8_combout\,
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux6~1_combout\,
 	datad => \Mux6~6_combout\,
 	combout => \Mux6~9_combout\);
@@ -24181,7 +24173,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N12
 \Mux38~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~0_combout\ = (\challenge_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(23)) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(23)))))
+-- \Mux38~0_combout\ = (\chal_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(23)) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24189,16 +24181,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(23),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(23),
 	combout => \Mux38~0_combout\);
 
 -- Location: LCCOMB_X35_Y6_N14
 \Mux38~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux38~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(23)))) # (!\Mux38~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(23))))) # (!\challenge_rit[3]~input_o\ & (((\Mux38~0_combout\))))
+-- \Mux38~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux38~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(23)))) # (!\Mux38~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(23))))) # (!\chal_rit[3]~input_o\ & (((\Mux38~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24207,7 +24199,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(23),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(23),
 	datad => \Mux38~0_combout\,
 	combout => \Mux38~1_combout\);
@@ -24215,7 +24207,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y6_N30
 \Mux38~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(23))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(23))))))
+-- \Mux38~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(23))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(23))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24223,8 +24215,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(23),
 	datad => \gen_ro:2:ro_inst|ro_counter\(23),
 	combout => \Mux38~2_combout\);
@@ -24232,7 +24224,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N12
 \Mux38~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux38~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(23))) # (!\Mux38~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(23)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux38~2_combout\))))
+-- \Mux38~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux38~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(23))) # (!\Mux38~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(23)))))) # (!\chal_rit[2]~input_o\ & (((\Mux38~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24240,7 +24232,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(23),
 	datac => \gen_ro:10:ro_inst|ro_counter\(23),
 	datad => \Mux38~2_combout\,
@@ -24249,7 +24241,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N6
 \Mux38~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~4_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(23))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(23)))))
+-- \Mux38~4_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(23))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24257,8 +24249,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(23),
 	datad => \gen_ro:0:ro_inst|ro_counter\(23),
 	combout => \Mux38~4_combout\);
@@ -24266,7 +24258,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N8
 \Mux38~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux38~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(23)))) # (!\Mux38~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(23))))) # (!\challenge_rit[2]~input_o\ & (((\Mux38~4_combout\))))
+-- \Mux38~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux38~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(23)))) # (!\Mux38~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(23))))) # (!\chal_rit[2]~input_o\ & (((\Mux38~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24274,7 +24266,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(23),
 	datac => \gen_ro:12:ro_inst|ro_counter\(23),
 	datad => \Mux38~4_combout\,
@@ -24283,7 +24275,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N14
 \Mux38~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~6_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux38~3_combout\) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((!\challenge_rit[5]~input_o\ & \Mux38~5_combout\))))
+-- \Mux38~6_combout\ = (\chal_rit[4]~input_o\ & ((\Mux38~3_combout\) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((!\chal_rit[5]~input_o\ & \Mux38~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24292,15 +24284,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux38~3_combout\,
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux38~5_combout\,
 	combout => \Mux38~6_combout\);
 
 -- Location: LCCOMB_X35_Y6_N20
 \Mux38~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~7_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(23))))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(23) & (!\challenge_rit[3]~input_o\)))
+-- \Mux38~7_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(23))))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(23) & (!\chal_rit[3]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24308,16 +24300,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(23),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(23),
 	combout => \Mux38~7_combout\);
 
 -- Location: LCCOMB_X35_Y6_N30
 \Mux38~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux38~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(23))) # (!\Mux38~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(23)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux38~7_combout\))))
+-- \Mux38~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux38~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(23))) # (!\Mux38~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(23)))))) # (!\chal_rit[3]~input_o\ & (((\Mux38~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24327,14 +24319,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(23),
 	datab => \gen_ro:7:ro_inst|ro_counter\(23),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux38~7_combout\,
 	combout => \Mux38~8_combout\);
 
 -- Location: LCCOMB_X38_Y6_N8
 \Mux38~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux38~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux38~6_combout\ & ((\Mux38~8_combout\))) # (!\Mux38~6_combout\ & (\Mux38~1_combout\)))) # (!\challenge_rit[5]~input_o\ & (((\Mux38~6_combout\))))
+-- \Mux38~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux38~6_combout\ & ((\Mux38~8_combout\))) # (!\Mux38~6_combout\ & (\Mux38~1_combout\)))) # (!\chal_rit[5]~input_o\ & (((\Mux38~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24343,7 +24335,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux38~1_combout\,
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux38~6_combout\,
 	datad => \Mux38~8_combout\,
 	combout => \Mux38~9_combout\);
@@ -24351,7 +24343,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N8
 \Mux7~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~7_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(23)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(23)))))
+-- \Mux7~7_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(23)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24359,8 +24351,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(23),
 	datad => \gen_ro:11:ro_inst|ro_counter\(23),
 	combout => \Mux7~7_combout\);
@@ -24368,7 +24360,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N2
 \Mux7~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux7~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(23)))) # (!\Mux7~7_combout\ & (\gen_ro:7:ro_inst|ro_counter\(23))))) # (!\challenge_lft[3]~input_o\ & (((\Mux7~7_combout\))))
+-- \Mux7~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux7~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(23)))) # (!\Mux7~7_combout\ & (\gen_ro:7:ro_inst|ro_counter\(23))))) # (!\chal_lft[3]~input_o\ & (((\Mux7~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24376,7 +24368,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(23),
 	datac => \Mux7~7_combout\,
 	datad => \gen_ro:15:ro_inst|ro_counter\(23),
@@ -24385,8 +24377,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y6_N28
 \Mux7~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~0_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(23))) # (!\challenge_lft[2]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(23))))))
+-- \Mux7~0_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(23))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(23))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24394,16 +24385,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(23),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(23),
 	combout => \Mux7~0_combout\);
 
 -- Location: LCCOMB_X35_Y6_N6
 \Mux7~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux7~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(23))) # (!\Mux7~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(23)))))) # (!\challenge_lft[3]~input_o\ & (\Mux7~0_combout\))
+-- \Mux7~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux7~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(23))) # (!\Mux7~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(23)))))) # (!\chal_lft[3]~input_o\ & (\Mux7~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24411,7 +24402,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux7~0_combout\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(23),
 	datad => \gen_ro:5:ro_inst|ro_counter\(23),
@@ -24420,7 +24411,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N10
 \Mux7~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~4_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(23))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(23)))))
+-- \Mux7~4_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(23))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24428,8 +24419,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(23),
 	datad => \gen_ro:0:ro_inst|ro_counter\(23),
 	combout => \Mux7~4_combout\);
@@ -24437,7 +24428,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N12
 \Mux7~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux7~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(23))) # (!\Mux7~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(23)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux7~4_combout\))))
+-- \Mux7~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux7~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(23))) # (!\Mux7~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(23)))))) # (!\chal_lft[2]~input_o\ & (((\Mux7~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24446,7 +24437,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(23),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(23),
 	datad => \Mux7~4_combout\,
 	combout => \Mux7~5_combout\);
@@ -24454,7 +24445,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N6
 \Mux7~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~2_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(23)))) # (!\challenge_lft[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(23)))))
+-- \Mux7~2_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(23)))) # (!\chal_lft[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(23)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24462,8 +24453,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(23),
 	datad => \gen_ro:6:ro_inst|ro_counter\(23),
 	combout => \Mux7~2_combout\);
@@ -24471,7 +24462,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N20
 \Mux7~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux7~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(23)))) # (!\Mux7~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(23))))) # (!\challenge_lft[2]~input_o\ & (((\Mux7~2_combout\))))
+-- \Mux7~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux7~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(23)))) # (!\Mux7~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(23))))) # (!\chal_lft[2]~input_o\ & (((\Mux7~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24479,7 +24470,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(23),
 	datac => \gen_ro:14:ro_inst|ro_counter\(23),
 	datad => \Mux7~2_combout\,
@@ -24488,7 +24479,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N10
 \Mux7~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~6_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\Mux7~3_combout\)))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & (\Mux7~5_combout\)))
+-- \Mux7~6_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\Mux7~3_combout\)))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & (\Mux7~5_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24496,8 +24487,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux7~5_combout\,
 	datad => \Mux7~3_combout\,
 	combout => \Mux7~6_combout\);
@@ -24505,7 +24496,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N8
 \Mux7~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux7~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux7~6_combout\ & (\Mux7~8_combout\)) # (!\Mux7~6_combout\ & ((\Mux7~1_combout\))))) # (!\challenge_lft[5]~input_o\ & (((\Mux7~6_combout\))))
+-- \Mux7~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux7~6_combout\ & (\Mux7~8_combout\)) # (!\Mux7~6_combout\ & ((\Mux7~1_combout\))))) # (!\chal_lft[5]~input_o\ & (((\Mux7~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24514,7 +24505,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux7~8_combout\,
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux7~1_combout\,
 	datad => \Mux7~6_combout\,
 	combout => \Mux7~9_combout\);
@@ -24522,7 +24513,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y2_N28
 \Mux8~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~7_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(22))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(22))))
+-- \Mux8~7_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(22))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(22))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24530,8 +24521,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(22),
 	datad => \gen_ro:14:ro_inst|ro_counter\(22),
 	combout => \Mux8~7_combout\);
@@ -24539,7 +24530,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y2_N30
 \Mux8~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux8~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(22))) # (!\Mux8~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(22)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux8~7_combout\))))
+-- \Mux8~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux8~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(22))) # (!\Mux8~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(22)))))) # (!\chal_lft[5]~input_o\ & (((\Mux8~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24548,7 +24539,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(22),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(22),
 	datad => \Mux8~7_combout\,
 	combout => \Mux8~8_combout\);
@@ -24556,7 +24547,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N28
 \Mux8~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(22)))) # (!\challenge_lft[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(22)))))
+-- \Mux8~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(22)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(22)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24564,8 +24555,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(22),
 	datad => \gen_ro:9:ro_inst|ro_counter\(22),
 	combout => \Mux8~0_combout\);
@@ -24573,7 +24564,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N22
 \Mux8~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux8~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(22)))) # (!\Mux8~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(22))))) # (!\challenge_lft[4]~input_o\ & (\Mux8~0_combout\))
+-- \Mux8~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux8~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(22)))) # (!\Mux8~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(22))))) # (!\chal_lft[4]~input_o\ & (\Mux8~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24581,7 +24572,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux8~0_combout\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(22),
 	datad => \gen_ro:11:ro_inst|ro_counter\(22),
@@ -24590,7 +24581,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N4
 \Mux8~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~2_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(22))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(22))))
+-- \Mux8~2_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(22))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(22))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24598,8 +24589,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(22),
 	datad => \gen_ro:6:ro_inst|ro_counter\(22),
 	combout => \Mux8~2_combout\);
@@ -24607,7 +24598,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N26
 \Mux8~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux8~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(22)))) # (!\Mux8~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(22))))) # (!\challenge_lft[5]~input_o\ & (((\Mux8~2_combout\))))
+-- \Mux8~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux8~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(22)))) # (!\Mux8~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(22))))) # (!\chal_lft[5]~input_o\ & (((\Mux8~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24616,7 +24607,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(22),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux8~2_combout\,
 	datad => \gen_ro:7:ro_inst|ro_counter\(22),
 	combout => \Mux8~3_combout\);
@@ -24624,7 +24615,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N20
 \Mux8~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~4_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(22))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(22))))))
+-- \Mux8~4_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(22))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(22))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24632,8 +24623,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(22),
 	datad => \gen_ro:0:ro_inst|ro_counter\(22),
 	combout => \Mux8~4_combout\);
@@ -24641,7 +24632,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N6
 \Mux8~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux8~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(22))) # (!\Mux8~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(22)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux8~4_combout\))))
+-- \Mux8~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux8~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(22))) # (!\Mux8~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(22)))))) # (!\chal_lft[4]~input_o\ & (((\Mux8~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24649,7 +24640,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(22),
 	datac => \gen_ro:2:ro_inst|ro_counter\(22),
 	datad => \Mux8~4_combout\,
@@ -24658,7 +24649,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N16
 \Mux8~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~6_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\Mux8~3_combout\)) # (!\challenge_lft[3]~input_o\ & ((\Mux8~5_combout\)))))
+-- \Mux8~6_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\Mux8~3_combout\)) # (!\chal_lft[3]~input_o\ & ((\Mux8~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24666,8 +24657,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux8~3_combout\,
 	datad => \Mux8~5_combout\,
 	combout => \Mux8~6_combout\);
@@ -24675,7 +24666,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N2
 \Mux8~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux8~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux8~6_combout\ & (\Mux8~8_combout\)) # (!\Mux8~6_combout\ & ((\Mux8~1_combout\))))) # (!\challenge_lft[2]~input_o\ & (((\Mux8~6_combout\))))
+-- \Mux8~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux8~6_combout\ & (\Mux8~8_combout\)) # (!\Mux8~6_combout\ & ((\Mux8~1_combout\))))) # (!\chal_lft[2]~input_o\ & (((\Mux8~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24683,7 +24674,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux8~8_combout\,
 	datac => \Mux8~1_combout\,
 	datad => \Mux8~6_combout\,
@@ -24692,7 +24683,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y2_N16
 \Mux39~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(22))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(22) & (!\challenge_rit[5]~input_o\)))
+-- \Mux39~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(22))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(22) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24701,15 +24692,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(22),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(22),
 	combout => \Mux39~7_combout\);
 
 -- Location: LCCOMB_X37_Y2_N2
 \Mux39~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux39~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(22))) # (!\Mux39~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(22)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux39~7_combout\))))
+-- \Mux39~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux39~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(22))) # (!\Mux39~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(22)))))) # (!\chal_rit[5]~input_o\ & (((\Mux39~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24717,7 +24708,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(22),
 	datac => \gen_ro:13:ro_inst|ro_counter\(22),
 	datad => \Mux39~7_combout\,
@@ -24726,7 +24717,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N8
 \Mux39~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~0_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(22)))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(22)))))
+-- \Mux39~0_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(22)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(22)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24734,8 +24725,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(22),
 	datad => \gen_ro:9:ro_inst|ro_counter\(22),
 	combout => \Mux39~0_combout\);
@@ -24743,7 +24734,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N14
 \Mux39~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux39~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(22)))) # (!\Mux39~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(22))))) # (!\challenge_rit[4]~input_o\ & (\Mux39~0_combout\))
+-- \Mux39~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux39~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(22)))) # (!\Mux39~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(22))))) # (!\chal_rit[4]~input_o\ & (\Mux39~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24751,7 +24742,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux39~0_combout\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(22),
 	datad => \gen_ro:11:ro_inst|ro_counter\(22),
@@ -24760,7 +24751,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N12
 \Mux39~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(22))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(22))))
+-- \Mux39~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(22))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(22))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24768,8 +24759,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(22),
 	datad => \gen_ro:6:ro_inst|ro_counter\(22),
 	combout => \Mux39~2_combout\);
@@ -24777,7 +24768,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N30
 \Mux39~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~3_combout\ = (\Mux39~2_combout\ & (((\gen_ro:7:ro_inst|ro_counter\(22))) # (!\challenge_rit[5]~input_o\))) # (!\Mux39~2_combout\ & (\challenge_rit[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(22))))
+-- \Mux39~3_combout\ = (\Mux39~2_combout\ & (((\gen_ro:7:ro_inst|ro_counter\(22))) # (!\chal_rit[5]~input_o\))) # (!\Mux39~2_combout\ & (\chal_rit[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(22))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24786,7 +24777,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux39~2_combout\,
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(22),
 	datad => \gen_ro:7:ro_inst|ro_counter\(22),
 	combout => \Mux39~3_combout\);
@@ -24794,7 +24785,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N24
 \Mux39~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~4_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(22))) # (!\challenge_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(22))))))
+-- \Mux39~4_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(22))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(22))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24802,8 +24793,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(22),
 	datad => \gen_ro:0:ro_inst|ro_counter\(22),
 	combout => \Mux39~4_combout\);
@@ -24811,7 +24802,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N10
 \Mux39~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux39~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(22))) # (!\Mux39~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(22)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux39~4_combout\))))
+-- \Mux39~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux39~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(22))) # (!\Mux39~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(22)))))) # (!\chal_rit[4]~input_o\ & (((\Mux39~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24819,7 +24810,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(22),
 	datac => \gen_ro:2:ro_inst|ro_counter\(22),
 	datad => \Mux39~4_combout\,
@@ -24828,7 +24819,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N0
 \Mux39~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~6_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\Mux39~3_combout\)))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\Mux39~5_combout\))))
+-- \Mux39~6_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\Mux39~3_combout\)))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\Mux39~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24836,8 +24827,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux39~3_combout\,
 	datad => \Mux39~5_combout\,
 	combout => \Mux39~6_combout\);
@@ -24845,7 +24836,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y2_N18
 \Mux39~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux39~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux39~6_combout\ & (\Mux39~8_combout\)) # (!\Mux39~6_combout\ & ((\Mux39~1_combout\))))) # (!\challenge_rit[2]~input_o\ & (((\Mux39~6_combout\))))
+-- \Mux39~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux39~6_combout\ & (\Mux39~8_combout\)) # (!\Mux39~6_combout\ & ((\Mux39~1_combout\))))) # (!\chal_rit[2]~input_o\ & (((\Mux39~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24854,7 +24845,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux39~8_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux39~1_combout\,
 	datad => \Mux39~6_combout\,
 	combout => \Mux39~9_combout\);
@@ -24862,7 +24853,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N4
 \Mux40~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~7_combout\ = (\challenge_rit[3]~input_o\ & (((\gen_ro:7:ro_inst|ro_counter\(21)) # (\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(21) & ((!\challenge_rit[2]~input_o\))))
+-- \Mux40~7_combout\ = (\chal_rit[3]~input_o\ & (((\gen_ro:7:ro_inst|ro_counter\(21)) # (\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(21) & ((!\chal_rit[2]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24871,15 +24862,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:3:ro_inst|ro_counter\(21),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(21),
-	datad => \challenge_rit[2]~input_o\,
+	datad => \chal_rit[2]~input_o\,
 	combout => \Mux40~7_combout\);
 
 -- Location: LCCOMB_X35_Y5_N26
 \Mux40~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux40~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(21))) # (!\Mux40~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(21)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux40~7_combout\))))
+-- \Mux40~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux40~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(21))) # (!\Mux40~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(21)))))) # (!\chal_rit[2]~input_o\ & (((\Mux40~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24888,7 +24879,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(21),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux40~7_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(21),
 	combout => \Mux40~8_combout\);
@@ -24896,7 +24887,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N0
 \Mux40~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~0_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(21)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(21)))))
+-- \Mux40~0_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(21)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24904,8 +24895,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(21),
 	datad => \gen_ro:10:ro_inst|ro_counter\(21),
 	combout => \Mux40~0_combout\);
@@ -24913,7 +24904,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N14
 \Mux40~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux40~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(21))) # (!\Mux40~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(21)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux40~0_combout\))))
+-- \Mux40~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux40~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(21))) # (!\Mux40~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(21)))))) # (!\chal_rit[3]~input_o\ & (((\Mux40~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24921,7 +24912,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(21),
 	datac => \gen_ro:6:ro_inst|ro_counter\(21),
 	datad => \Mux40~0_combout\,
@@ -24930,7 +24921,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N4
 \Mux40~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~2_combout\ = (\challenge_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(21)) # ((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & (((!\challenge_rit[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(21)))))
+-- \Mux40~2_combout\ = (\chal_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(21)) # ((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & (((!\chal_rit[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24938,16 +24929,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(21),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(21),
 	combout => \Mux40~2_combout\);
 
 -- Location: LCCOMB_X35_Y4_N26
 \Mux40~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux40~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(21))) # (!\Mux40~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(21)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux40~2_combout\))))
+-- \Mux40~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux40~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(21))) # (!\Mux40~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(21)))))) # (!\chal_rit[2]~input_o\ & (((\Mux40~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24956,7 +24947,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(21),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(21),
 	datad => \Mux40~2_combout\,
 	combout => \Mux40~3_combout\);
@@ -24964,8 +24955,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N12
 \Mux40~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~4_combout\ = (\challenge_rit[3]~input_o\ & (((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(21))) # (!\challenge_rit[2]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(21))))))
+-- \Mux40~4_combout\ = (\chal_rit[3]~input_o\ & (((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(21))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(21))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24973,16 +24963,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(21),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(21),
 	combout => \Mux40~4_combout\);
 
 -- Location: LCCOMB_X35_Y4_N18
 \Mux40~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux40~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(21)))) # (!\Mux40~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(21))))) # (!\challenge_rit[3]~input_o\ & (((\Mux40~4_combout\))))
+-- \Mux40~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux40~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(21)))) # (!\Mux40~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(21))))) # (!\chal_rit[3]~input_o\ & (((\Mux40~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -24990,7 +24980,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(21),
 	datac => \gen_ro:12:ro_inst|ro_counter\(21),
 	datad => \Mux40~4_combout\,
@@ -24999,7 +24989,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N28
 \Mux40~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~6_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\Mux40~3_combout\)))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\Mux40~5_combout\))))
+-- \Mux40~6_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\Mux40~3_combout\)))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\Mux40~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25007,8 +24997,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux40~3_combout\,
 	datad => \Mux40~5_combout\,
 	combout => \Mux40~6_combout\);
@@ -25016,7 +25006,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N2
 \Mux40~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux40~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux40~6_combout\ & (\Mux40~8_combout\)) # (!\Mux40~6_combout\ & ((\Mux40~1_combout\))))) # (!\challenge_rit[4]~input_o\ & (((\Mux40~6_combout\))))
+-- \Mux40~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux40~6_combout\ & (\Mux40~8_combout\)) # (!\Mux40~6_combout\ & ((\Mux40~1_combout\))))) # (!\chal_rit[4]~input_o\ & (((\Mux40~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25025,7 +25015,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux40~8_combout\,
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux40~1_combout\,
 	datad => \Mux40~6_combout\,
 	combout => \Mux40~9_combout\);
@@ -25033,7 +25023,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N8
 \Mux9~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~7_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(21))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(21)))))
+-- \Mux9~7_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(21))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25041,8 +25031,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(21),
 	datad => \gen_ro:3:ro_inst|ro_counter\(21),
 	combout => \Mux9~7_combout\);
@@ -25050,7 +25040,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N30
 \Mux9~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux9~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(21))) # (!\Mux9~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(21)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux9~7_combout\))))
+-- \Mux9~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux9~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(21))) # (!\Mux9~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(21)))))) # (!\chal_lft[2]~input_o\ & (((\Mux9~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25059,7 +25049,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(21),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux9~7_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(21),
 	combout => \Mux9~8_combout\);
@@ -25067,8 +25057,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N16
 \Mux9~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~0_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(21)))) # (!\challenge_lft[2]~input_o\ & 
--- (\gen_ro:2:ro_inst|ro_counter\(21)))))
+-- \Mux9~0_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(21)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25076,16 +25065,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(21),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:10:ro_inst|ro_counter\(21),
 	combout => \Mux9~0_combout\);
 
 -- Location: LCCOMB_X35_Y4_N22
 \Mux9~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux9~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(21))) # (!\Mux9~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(21)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux9~0_combout\))))
+-- \Mux9~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux9~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(21))) # (!\Mux9~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(21)))))) # (!\chal_lft[3]~input_o\ & (((\Mux9~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25093,7 +25082,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(21),
 	datac => \gen_ro:6:ro_inst|ro_counter\(21),
 	datad => \Mux9~0_combout\,
@@ -25102,7 +25091,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N8
 \Mux9~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~2_combout\ = (\challenge_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(21)) # ((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & (((!\challenge_lft[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(21)))))
+-- \Mux9~2_combout\ = (\chal_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(21)) # ((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & (((!\chal_lft[2]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(21)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25110,16 +25099,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(21),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(21),
 	combout => \Mux9~2_combout\);
 
 -- Location: LCCOMB_X35_Y4_N30
 \Mux9~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux9~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(21)))) # (!\Mux9~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(21))))) # (!\challenge_lft[2]~input_o\ & (((\Mux9~2_combout\))))
+-- \Mux9~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux9~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(21)))) # (!\Mux9~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(21))))) # (!\chal_lft[2]~input_o\ & (((\Mux9~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25127,7 +25116,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(21),
 	datac => \Mux9~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(21),
@@ -25136,8 +25125,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N24
 \Mux9~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~4_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(21))) # (!\challenge_lft[2]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(21))))))
+-- \Mux9~4_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(21))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(21))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25145,16 +25133,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(21),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(21),
 	combout => \Mux9~4_combout\);
 
 -- Location: LCCOMB_X35_Y4_N6
 \Mux9~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux9~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(21)))) # (!\Mux9~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(21))))) # (!\challenge_lft[3]~input_o\ & (((\Mux9~4_combout\))))
+-- \Mux9~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux9~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(21)))) # (!\Mux9~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(21))))) # (!\chal_lft[3]~input_o\ & (((\Mux9~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25162,7 +25150,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(21),
 	datac => \gen_ro:12:ro_inst|ro_counter\(21),
 	datad => \Mux9~4_combout\,
@@ -25171,7 +25159,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y4_N20
 \Mux9~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~6_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux9~3_combout\) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \Mux9~5_combout\))))
+-- \Mux9~6_combout\ = (\chal_lft[5]~input_o\ & ((\Mux9~3_combout\) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \Mux9~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25180,15 +25168,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux9~3_combout\,
-	datab => \challenge_lft[5]~input_o\,
-	datac => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \Mux9~5_combout\,
 	combout => \Mux9~6_combout\);
 
 -- Location: LCCOMB_X35_Y4_N10
 \Mux9~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux9~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux9~6_combout\ & (\Mux9~8_combout\)) # (!\Mux9~6_combout\ & ((\Mux9~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux9~6_combout\))))
+-- \Mux9~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux9~6_combout\ & (\Mux9~8_combout\)) # (!\Mux9~6_combout\ & ((\Mux9~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux9~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25197,7 +25185,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux9~8_combout\,
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux9~1_combout\,
 	datad => \Mux9~6_combout\,
 	combout => \Mux9~9_combout\);
@@ -25205,7 +25193,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N28
 \Mux10~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~0_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(20))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(20)))))
+-- \Mux10~0_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(20))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25213,8 +25201,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(20),
 	datad => \gen_ro:4:ro_inst|ro_counter\(20),
 	combout => \Mux10~0_combout\);
@@ -25222,7 +25210,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N10
 \Mux10~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux10~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(20)))) # (!\Mux10~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(20))))) # (!\challenge_lft[4]~input_o\ & (((\Mux10~0_combout\))))
+-- \Mux10~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux10~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(20)))) # (!\Mux10~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(20))))) # (!\chal_lft[4]~input_o\ & (((\Mux10~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25231,7 +25219,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(20),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(20),
 	datad => \Mux10~0_combout\,
 	combout => \Mux10~1_combout\);
@@ -25239,7 +25227,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N22
 \Mux10~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~7_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(20))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(20)))))
+-- \Mux10~7_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(20))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25247,8 +25235,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(20),
 	datad => \gen_ro:12:ro_inst|ro_counter\(20),
 	combout => \Mux10~7_combout\);
@@ -25256,7 +25244,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N4
 \Mux10~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~8_combout\ = (\Mux10~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(20))) # (!\challenge_lft[4]~input_o\))) # (!\Mux10~7_combout\ & (\challenge_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(20)))))
+-- \Mux10~8_combout\ = (\Mux10~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(20))) # (!\chal_lft[4]~input_o\))) # (!\Mux10~7_combout\ & (\chal_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25265,7 +25253,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux10~7_combout\,
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(20),
 	datad => \gen_ro:14:ro_inst|ro_counter\(20),
 	combout => \Mux10~8_combout\);
@@ -25273,7 +25261,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N0
 \Mux10~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(20)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(20)))))
+-- \Mux10~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(20)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25281,8 +25269,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(20),
 	datad => \gen_ro:10:ro_inst|ro_counter\(20),
 	combout => \Mux10~2_combout\);
@@ -25290,7 +25278,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N26
 \Mux10~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux10~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(20)))) # (!\Mux10~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(20))))) # (!\challenge_lft[5]~input_o\ & (\Mux10~2_combout\))
+-- \Mux10~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux10~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(20)))) # (!\Mux10~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(20))))) # (!\chal_lft[5]~input_o\ & (\Mux10~2_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25298,7 +25286,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux10~2_combout\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(20),
 	datad => \gen_ro:11:ro_inst|ro_counter\(20),
@@ -25307,7 +25295,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N20
 \Mux10~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~4_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(20))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(20))))))
+-- \Mux10~4_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(20))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(20))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25315,8 +25303,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(20),
 	datad => \gen_ro:0:ro_inst|ro_counter\(20),
 	combout => \Mux10~4_combout\);
@@ -25324,7 +25312,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N2
 \Mux10~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux10~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(20)))) # (!\Mux10~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(20))))) # (!\challenge_lft[5]~input_o\ & (((\Mux10~4_combout\))))
+-- \Mux10~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux10~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(20)))) # (!\Mux10~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(20))))) # (!\chal_lft[5]~input_o\ & (((\Mux10~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25332,7 +25320,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(20),
 	datac => \gen_ro:3:ro_inst|ro_counter\(20),
 	datad => \Mux10~4_combout\,
@@ -25341,7 +25329,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N28
 \Mux10~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~6_combout\ = (\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\) # ((\Mux10~3_combout\)))) # (!\challenge_lft[2]~input_o\ & (!\challenge_lft[3]~input_o\ & ((\Mux10~5_combout\))))
+-- \Mux10~6_combout\ = (\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\) # ((\Mux10~3_combout\)))) # (!\chal_lft[2]~input_o\ & (!\chal_lft[3]~input_o\ & ((\Mux10~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25349,8 +25337,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux10~3_combout\,
 	datad => \Mux10~5_combout\,
 	combout => \Mux10~6_combout\);
@@ -25358,7 +25346,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N10
 \Mux10~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux10~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux10~6_combout\ & ((\Mux10~8_combout\))) # (!\Mux10~6_combout\ & (\Mux10~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux10~6_combout\))))
+-- \Mux10~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux10~6_combout\ & ((\Mux10~8_combout\))) # (!\Mux10~6_combout\ & (\Mux10~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux10~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25367,7 +25355,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux10~1_combout\,
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux10~8_combout\,
 	datad => \Mux10~6_combout\,
 	combout => \Mux10~9_combout\);
@@ -25375,7 +25363,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N0
 \Mux41~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(20))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(20)))))
+-- \Mux41~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(20))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25383,8 +25371,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(20),
 	datad => \gen_ro:4:ro_inst|ro_counter\(20),
 	combout => \Mux41~0_combout\);
@@ -25392,7 +25380,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N26
 \Mux41~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux41~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(20)))) # (!\Mux41~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(20))))) # (!\challenge_rit[4]~input_o\ & (((\Mux41~0_combout\))))
+-- \Mux41~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux41~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(20)))) # (!\Mux41~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(20))))) # (!\chal_rit[4]~input_o\ & (((\Mux41~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25401,7 +25389,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(20),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(20),
 	datad => \Mux41~0_combout\,
 	combout => \Mux41~1_combout\);
@@ -25409,7 +25397,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N6
 \Mux41~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~7_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(20))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(20)))))
+-- \Mux41~7_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(20))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25417,8 +25405,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(20),
 	datad => \gen_ro:12:ro_inst|ro_counter\(20),
 	combout => \Mux41~7_combout\);
@@ -25426,7 +25414,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N8
 \Mux41~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~8_combout\ = (\Mux41~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(20))) # (!\challenge_rit[4]~input_o\))) # (!\Mux41~7_combout\ & (\challenge_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(20)))))
+-- \Mux41~8_combout\ = (\Mux41~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(20))) # (!\chal_rit[4]~input_o\))) # (!\Mux41~7_combout\ & (\chal_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25435,7 +25423,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux41~7_combout\,
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(20),
 	datad => \gen_ro:14:ro_inst|ro_counter\(20),
 	combout => \Mux41~8_combout\);
@@ -25443,7 +25431,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N12
 \Mux41~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~2_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(20)))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(20)))))
+-- \Mux41~2_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(20)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(20)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25451,8 +25439,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(20),
 	datad => \gen_ro:10:ro_inst|ro_counter\(20),
 	combout => \Mux41~2_combout\);
@@ -25460,7 +25448,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N30
 \Mux41~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux41~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(20))) # (!\Mux41~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(20)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux41~2_combout\))))
+-- \Mux41~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux41~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(20))) # (!\Mux41~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(20)))))) # (!\chal_rit[5]~input_o\ & (((\Mux41~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25468,7 +25456,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:11:ro_inst|ro_counter\(20),
 	datac => \gen_ro:9:ro_inst|ro_counter\(20),
 	datad => \Mux41~2_combout\,
@@ -25477,7 +25465,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N16
 \Mux41~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~4_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(20))) # (!\challenge_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(20))))))
+-- \Mux41~4_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(20))) # (!\chal_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(20))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25485,8 +25473,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(20),
 	datad => \gen_ro:0:ro_inst|ro_counter\(20),
 	combout => \Mux41~4_combout\);
@@ -25494,7 +25482,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N18
 \Mux41~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux41~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(20)))) # (!\Mux41~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(20))))) # (!\challenge_rit[5]~input_o\ & (((\Mux41~4_combout\))))
+-- \Mux41~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux41~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(20)))) # (!\Mux41~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(20))))) # (!\chal_rit[5]~input_o\ & (((\Mux41~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25502,7 +25490,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(20),
 	datac => \gen_ro:3:ro_inst|ro_counter\(20),
 	datad => \Mux41~4_combout\,
@@ -25511,7 +25499,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N24
 \Mux41~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~6_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\Mux41~3_combout\)))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\Mux41~5_combout\))))
+-- \Mux41~6_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\Mux41~3_combout\)))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\Mux41~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25519,8 +25507,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux41~3_combout\,
 	datad => \Mux41~5_combout\,
 	combout => \Mux41~6_combout\);
@@ -25528,7 +25516,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y3_N14
 \Mux41~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux41~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux41~6_combout\ & ((\Mux41~8_combout\))) # (!\Mux41~6_combout\ & (\Mux41~1_combout\)))) # (!\challenge_rit[3]~input_o\ & (((\Mux41~6_combout\))))
+-- \Mux41~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux41~6_combout\ & ((\Mux41~8_combout\))) # (!\Mux41~6_combout\ & (\Mux41~1_combout\)))) # (!\chal_rit[3]~input_o\ & (((\Mux41~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25536,7 +25524,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \Mux41~1_combout\,
 	datac => \Mux41~8_combout\,
 	datad => \Mux41~6_combout\,
@@ -25545,7 +25533,7 @@ PORT MAP (
 -- Location: LCCOMB_X34_Y8_N8
 \Mux42~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~0_combout\ = (\challenge_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(19)) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(19)))))
+-- \Mux42~0_combout\ = (\chal_rit[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(19)) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25554,15 +25542,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(19),
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(19),
 	combout => \Mux42~0_combout\);
 
 -- Location: LCCOMB_X34_Y8_N6
 \Mux42~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux42~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(19)))) # (!\Mux42~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(19))))) # (!\challenge_rit[3]~input_o\ & (((\Mux42~0_combout\))))
+-- \Mux42~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux42~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(19)))) # (!\Mux42~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(19))))) # (!\chal_rit[3]~input_o\ & (((\Mux42~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25570,7 +25558,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(19),
 	datac => \Mux42~0_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(19),
@@ -25579,7 +25567,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N30
 \Mux42~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~7_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(19)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(19)))))
+-- \Mux42~7_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(19)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25587,8 +25575,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(19),
 	datad => \gen_ro:11:ro_inst|ro_counter\(19),
 	combout => \Mux42~7_combout\);
@@ -25596,7 +25584,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N4
 \Mux42~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux42~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(19))) # (!\Mux42~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(19)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux42~7_combout\))))
+-- \Mux42~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux42~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(19))) # (!\Mux42~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(19)))))) # (!\chal_rit[3]~input_o\ & (((\Mux42~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25604,7 +25592,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(19),
 	datac => \Mux42~7_combout\,
 	datad => \gen_ro:7:ro_inst|ro_counter\(19),
@@ -25613,8 +25601,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N0
 \Mux42~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~4_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(19))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(19))))))
+-- \Mux42~4_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(19))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(19))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25622,16 +25609,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(19),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(19),
 	combout => \Mux42~4_combout\);
 
 -- Location: LCCOMB_X40_Y2_N26
 \Mux42~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux42~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(19))) # (!\Mux42~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(19)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux42~4_combout\))))
+-- \Mux42~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux42~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(19))) # (!\Mux42~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(19)))))) # (!\chal_rit[2]~input_o\ & (((\Mux42~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25639,7 +25626,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(19),
 	datac => \gen_ro:8:ro_inst|ro_counter\(19),
 	datad => \Mux42~4_combout\,
@@ -25648,7 +25635,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N16
 \Mux42~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~2_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(19))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(19)))))
+-- \Mux42~2_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(19))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25656,8 +25643,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(19),
 	datad => \gen_ro:2:ro_inst|ro_counter\(19),
 	combout => \Mux42~2_combout\);
@@ -25665,7 +25652,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N2
 \Mux42~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux42~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(19)))) # (!\Mux42~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(19))))) # (!\challenge_rit[2]~input_o\ & (((\Mux42~2_combout\))))
+-- \Mux42~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux42~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(19)))) # (!\Mux42~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(19))))) # (!\chal_rit[2]~input_o\ & (((\Mux42~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25673,7 +25660,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(19),
 	datac => \gen_ro:14:ro_inst|ro_counter\(19),
 	datad => \Mux42~2_combout\,
@@ -25682,7 +25669,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N12
 \Mux42~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~6_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\Mux42~3_combout\))) # (!\challenge_rit[4]~input_o\ & (\Mux42~5_combout\))))
+-- \Mux42~6_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\Mux42~3_combout\))) # (!\chal_rit[4]~input_o\ & (\Mux42~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25690,8 +25677,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux42~5_combout\,
 	datad => \Mux42~3_combout\,
 	combout => \Mux42~6_combout\);
@@ -25699,7 +25686,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N6
 \Mux42~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux42~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux42~6_combout\ & ((\Mux42~8_combout\))) # (!\Mux42~6_combout\ & (\Mux42~1_combout\)))) # (!\challenge_rit[5]~input_o\ & (((\Mux42~6_combout\))))
+-- \Mux42~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux42~6_combout\ & ((\Mux42~8_combout\))) # (!\Mux42~6_combout\ & (\Mux42~1_combout\)))) # (!\chal_rit[5]~input_o\ & (((\Mux42~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25707,7 +25694,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \Mux42~1_combout\,
 	datac => \Mux42~8_combout\,
 	datad => \Mux42~6_combout\,
@@ -25716,7 +25703,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N18
 \Mux11~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~7_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(19)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(19)))))
+-- \Mux11~7_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(19)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25724,8 +25711,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(19),
 	datad => \gen_ro:11:ro_inst|ro_counter\(19),
 	combout => \Mux11~7_combout\);
@@ -25733,7 +25720,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N28
 \Mux11~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux11~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(19)))) # (!\Mux11~7_combout\ & (\gen_ro:7:ro_inst|ro_counter\(19))))) # (!\challenge_lft[3]~input_o\ & (((\Mux11~7_combout\))))
+-- \Mux11~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux11~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(19)))) # (!\Mux11~7_combout\ & (\gen_ro:7:ro_inst|ro_counter\(19))))) # (!\chal_lft[3]~input_o\ & (((\Mux11~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25743,15 +25730,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(19),
 	datab => \gen_ro:15:ro_inst|ro_counter\(19),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux11~7_combout\,
 	combout => \Mux11~8_combout\);
 
 -- Location: LCCOMB_X34_Y8_N28
 \Mux11~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~0_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(19))) # (!\challenge_lft[2]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(19))))))
+-- \Mux11~0_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(19))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(19))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25760,15 +25746,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(19),
-	datab => \challenge_lft[3]~input_o\,
-	datac => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(19),
 	combout => \Mux11~0_combout\);
 
 -- Location: LCCOMB_X34_Y8_N26
 \Mux11~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux11~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(19))) # (!\Mux11~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(19)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux11~0_combout\))))
+-- \Mux11~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux11~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(19))) # (!\Mux11~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(19)))))) # (!\chal_lft[3]~input_o\ & (((\Mux11~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25778,14 +25764,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(19),
 	datab => \gen_ro:5:ro_inst|ro_counter\(19),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux11~0_combout\,
 	combout => \Mux11~1_combout\);
 
 -- Location: LCCOMB_X40_Y2_N8
 \Mux11~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(19))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(19)))))
+-- \Mux11~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(19))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25793,8 +25779,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(19),
 	datad => \gen_ro:2:ro_inst|ro_counter\(19),
 	combout => \Mux11~2_combout\);
@@ -25802,7 +25788,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N14
 \Mux11~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux11~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(19))) # (!\Mux11~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(19)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux11~2_combout\))))
+-- \Mux11~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux11~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(19))) # (!\Mux11~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(19)))))) # (!\chal_lft[2]~input_o\ & (((\Mux11~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25810,7 +25796,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(19),
 	datac => \Mux11~2_combout\,
 	datad => \gen_ro:10:ro_inst|ro_counter\(19),
@@ -25819,7 +25805,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N24
 \Mux11~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~4_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(19))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(19)))))
+-- \Mux11~4_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(19))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(19)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25827,8 +25813,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(19),
 	datad => \gen_ro:0:ro_inst|ro_counter\(19),
 	combout => \Mux11~4_combout\);
@@ -25836,7 +25822,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N10
 \Mux11~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux11~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(19))) # (!\Mux11~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(19)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux11~4_combout\))))
+-- \Mux11~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux11~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(19))) # (!\Mux11~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(19)))))) # (!\chal_lft[2]~input_o\ & (((\Mux11~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25844,7 +25830,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(19),
 	datac => \gen_ro:8:ro_inst|ro_counter\(19),
 	datad => \Mux11~4_combout\,
@@ -25853,7 +25839,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N20
 \Mux11~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~6_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\Mux11~3_combout\)) # (!\challenge_lft[4]~input_o\ & ((\Mux11~5_combout\)))))
+-- \Mux11~6_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\Mux11~3_combout\)) # (!\chal_lft[4]~input_o\ & ((\Mux11~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25861,8 +25847,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux11~3_combout\,
 	datad => \Mux11~5_combout\,
 	combout => \Mux11~6_combout\);
@@ -25870,7 +25856,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y2_N22
 \Mux11~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux11~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux11~6_combout\ & (\Mux11~8_combout\)) # (!\Mux11~6_combout\ & ((\Mux11~1_combout\))))) # (!\challenge_lft[5]~input_o\ & (((\Mux11~6_combout\))))
+-- \Mux11~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux11~6_combout\ & (\Mux11~8_combout\)) # (!\Mux11~6_combout\ & ((\Mux11~1_combout\))))) # (!\chal_lft[5]~input_o\ & (((\Mux11~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25878,7 +25864,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux11~8_combout\,
 	datac => \Mux11~1_combout\,
 	datad => \Mux11~6_combout\,
@@ -25887,7 +25873,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y8_N30
 \Mux43~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(18))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(18)))))
+-- \Mux43~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(18))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(18)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25895,8 +25881,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(18),
 	datad => \gen_ro:8:ro_inst|ro_counter\(18),
 	combout => \Mux43~0_combout\);
@@ -25904,7 +25890,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N12
 \Mux43~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux43~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(18))) # (!\Mux43~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(18)))))) # (!\challenge_rit[4]~input_o\ & (\Mux43~0_combout\))
+-- \Mux43~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux43~0_combout\ & (\gen_ro:11:ro_inst|ro_counter\(18))) # (!\Mux43~0_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(18)))))) # (!\chal_rit[4]~input_o\ & (\Mux43~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25912,7 +25898,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux43~0_combout\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(18),
 	datad => \gen_ro:10:ro_inst|ro_counter\(18),
@@ -25921,7 +25907,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N14
 \Mux43~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(18))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(18) & (!\challenge_rit[5]~input_o\)))
+-- \Mux43~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(18))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(18) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25929,16 +25915,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(18),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(18),
 	combout => \Mux43~7_combout\);
 
 -- Location: LCCOMB_X38_Y4_N8
 \Mux43~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux43~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(18))) # (!\Mux43~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(18)))))) # (!\challenge_rit[5]~input_o\ & (\Mux43~7_combout\))
+-- \Mux43~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux43~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(18))) # (!\Mux43~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(18)))))) # (!\chal_rit[5]~input_o\ & (\Mux43~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25946,7 +25932,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \Mux43~7_combout\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(18),
 	datad => \gen_ro:13:ro_inst|ro_counter\(18),
@@ -25955,7 +25941,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y2_N30
 \Mux43~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(18))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(18))))
+-- \Mux43~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(18))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(18))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25963,8 +25949,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(18),
 	datad => \gen_ro:6:ro_inst|ro_counter\(18),
 	combout => \Mux43~2_combout\);
@@ -25972,7 +25958,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N22
 \Mux43~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux43~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(18))) # (!\Mux43~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(18)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux43~2_combout\))))
+-- \Mux43~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux43~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(18))) # (!\Mux43~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(18)))))) # (!\chal_rit[5]~input_o\ & (((\Mux43~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25980,7 +25966,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(18),
 	datac => \Mux43~2_combout\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(18),
@@ -25989,8 +25975,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N24
 \Mux43~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~4_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(18))) # (!\challenge_rit[5]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(18))))))
+-- \Mux43~4_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(18))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(18))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25998,16 +25983,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(18),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(18),
 	combout => \Mux43~4_combout\);
 
 -- Location: LCCOMB_X38_Y4_N2
 \Mux43~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux43~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(18)))) # (!\Mux43~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(18))))) # (!\challenge_rit[4]~input_o\ & (((\Mux43~4_combout\))))
+-- \Mux43~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux43~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(18)))) # (!\Mux43~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(18))))) # (!\chal_rit[4]~input_o\ & (((\Mux43~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26017,14 +26002,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:2:ro_inst|ro_counter\(18),
 	datab => \gen_ro:3:ro_inst|ro_counter\(18),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \Mux43~4_combout\,
 	combout => \Mux43~5_combout\);
 
 -- Location: LCCOMB_X38_Y4_N0
 \Mux43~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~6_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\Mux43~3_combout\)))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\Mux43~5_combout\))))
+-- \Mux43~6_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\Mux43~3_combout\)))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\Mux43~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26032,8 +26017,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux43~3_combout\,
 	datad => \Mux43~5_combout\,
 	combout => \Mux43~6_combout\);
@@ -26041,7 +26026,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N18
 \Mux43~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux43~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux43~6_combout\ & ((\Mux43~8_combout\))) # (!\Mux43~6_combout\ & (\Mux43~1_combout\)))) # (!\challenge_rit[2]~input_o\ & (((\Mux43~6_combout\))))
+-- \Mux43~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux43~6_combout\ & ((\Mux43~8_combout\))) # (!\Mux43~6_combout\ & (\Mux43~1_combout\)))) # (!\chal_rit[2]~input_o\ & (((\Mux43~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26050,7 +26035,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux43~1_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux43~8_combout\,
 	datad => \Mux43~6_combout\,
 	combout => \Mux43~9_combout\);
@@ -26058,7 +26043,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y8_N12
 \Mux12~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(18))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(18))))))
+-- \Mux12~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(18))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(18))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26066,8 +26051,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(18),
 	datad => \gen_ro:8:ro_inst|ro_counter\(18),
 	combout => \Mux12~0_combout\);
@@ -26075,7 +26060,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N8
 \Mux12~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~1_combout\ = (\Mux12~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(18)) # (!\challenge_lft[4]~input_o\)))) # (!\Mux12~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(18) & (\challenge_lft[4]~input_o\)))
+-- \Mux12~1_combout\ = (\Mux12~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(18)) # (!\chal_lft[4]~input_o\)))) # (!\Mux12~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(18) & (\chal_lft[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26085,14 +26070,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(18),
 	datab => \Mux12~0_combout\,
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(18),
 	combout => \Mux12~1_combout\);
 
 -- Location: LCCOMB_X38_Y4_N30
 \Mux12~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~7_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(18))))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(18) & (!\challenge_lft[5]~input_o\)))
+-- \Mux12~7_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(18))))) # (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(18) & (!\chal_lft[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26101,15 +26086,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(18),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(18),
 	combout => \Mux12~7_combout\);
 
 -- Location: LCCOMB_X38_Y4_N4
 \Mux12~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~8_combout\ = (\Mux12~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(18))) # (!\challenge_lft[5]~input_o\))) # (!\Mux12~7_combout\ & (\challenge_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(18)))))
+-- \Mux12~8_combout\ = (\Mux12~7_combout\ & (((\gen_ro:15:ro_inst|ro_counter\(18))) # (!\chal_lft[5]~input_o\))) # (!\Mux12~7_combout\ & (\chal_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(18)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26118,7 +26103,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux12~7_combout\,
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(18),
 	datad => \gen_ro:13:ro_inst|ro_counter\(18),
 	combout => \Mux12~8_combout\);
@@ -26126,7 +26111,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N16
 \Mux12~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(18))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(18))))))
+-- \Mux12~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(18))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(18))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26134,8 +26119,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(18),
 	datad => \gen_ro:4:ro_inst|ro_counter\(18),
 	combout => \Mux12~2_combout\);
@@ -26143,7 +26128,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N26
 \Mux12~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux12~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(18)))) # (!\Mux12~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(18))))) # (!\challenge_lft[5]~input_o\ & (((\Mux12~2_combout\))))
+-- \Mux12~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux12~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(18)))) # (!\Mux12~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(18))))) # (!\chal_lft[5]~input_o\ & (((\Mux12~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26151,7 +26136,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(18),
 	datac => \gen_ro:7:ro_inst|ro_counter\(18),
 	datad => \Mux12~2_combout\,
@@ -26160,7 +26145,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N28
 \Mux12~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~4_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(18))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(18)))))
+-- \Mux12~4_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(18))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(18)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26168,8 +26153,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(18),
 	datad => \gen_ro:0:ro_inst|ro_counter\(18),
 	combout => \Mux12~4_combout\);
@@ -26177,7 +26162,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N6
 \Mux12~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux12~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(18)))) # (!\Mux12~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(18))))) # (!\challenge_lft[4]~input_o\ & (((\Mux12~4_combout\))))
+-- \Mux12~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux12~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(18)))) # (!\Mux12~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(18))))) # (!\chal_lft[4]~input_o\ & (((\Mux12~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26186,7 +26171,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:2:ro_inst|ro_counter\(18),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(18),
 	datad => \Mux12~4_combout\,
 	combout => \Mux12~5_combout\);
@@ -26194,7 +26179,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N20
 \Mux12~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~6_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\Mux12~3_combout\)))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\Mux12~5_combout\))))
+-- \Mux12~6_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\Mux12~3_combout\)))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\Mux12~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26202,8 +26187,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux12~3_combout\,
 	datad => \Mux12~5_combout\,
 	combout => \Mux12~6_combout\);
@@ -26211,7 +26196,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y4_N10
 \Mux12~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux12~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux12~6_combout\ & ((\Mux12~8_combout\))) # (!\Mux12~6_combout\ & (\Mux12~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux12~6_combout\))))
+-- \Mux12~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux12~6_combout\ & ((\Mux12~8_combout\))) # (!\Mux12~6_combout\ & (\Mux12~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux12~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26220,7 +26205,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux12~1_combout\,
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux12~8_combout\,
 	datad => \Mux12~6_combout\,
 	combout => \Mux12~9_combout\);
@@ -26228,7 +26213,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N22
 \Mux13~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~7_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(17))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(17)))))
+-- \Mux13~7_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(17))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(17)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26236,8 +26221,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(17),
 	datad => \gen_ro:3:ro_inst|ro_counter\(17),
 	combout => \Mux13~7_combout\);
@@ -26245,7 +26230,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N0
 \Mux13~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux13~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(17)))) # (!\Mux13~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(17))))) # (!\challenge_lft[2]~input_o\ & (\Mux13~7_combout\))
+-- \Mux13~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux13~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(17)))) # (!\Mux13~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(17))))) # (!\chal_lft[2]~input_o\ & (\Mux13~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26253,7 +26238,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux13~7_combout\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(17),
 	datad => \gen_ro:15:ro_inst|ro_counter\(17),
@@ -26262,7 +26247,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N18
 \Mux13~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~2_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(17)))) # (!\challenge_lft[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(17)))))
+-- \Mux13~2_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(17)))) # (!\chal_lft[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(17)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26270,8 +26255,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(17),
 	datad => \gen_ro:5:ro_inst|ro_counter\(17),
 	combout => \Mux13~2_combout\);
@@ -26279,7 +26264,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N8
 \Mux13~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux13~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(17)))) # (!\Mux13~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(17))))) # (!\challenge_lft[2]~input_o\ & (((\Mux13~2_combout\))))
+-- \Mux13~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux13~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(17)))) # (!\Mux13~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(17))))) # (!\chal_lft[2]~input_o\ & (((\Mux13~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26287,7 +26272,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(17),
 	datac => \gen_ro:13:ro_inst|ro_counter\(17),
 	datad => \Mux13~2_combout\,
@@ -26296,8 +26281,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N10
 \Mux13~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~4_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(17))) # (!\challenge_lft[2]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(17))))))
+-- \Mux13~4_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(17))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(17))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26305,16 +26289,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(17),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(17),
 	combout => \Mux13~4_combout\);
 
 -- Location: LCCOMB_X42_Y6_N20
 \Mux13~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux13~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(17))) # (!\Mux13~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(17)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux13~4_combout\))))
+-- \Mux13~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux13~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(17))) # (!\Mux13~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(17)))))) # (!\chal_lft[3]~input_o\ & (((\Mux13~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26322,7 +26306,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(17),
 	datac => \gen_ro:4:ro_inst|ro_counter\(17),
 	datad => \Mux13~4_combout\,
@@ -26331,7 +26315,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N26
 \Mux13~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~6_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\Mux13~3_combout\)) # (!\challenge_lft[5]~input_o\ & ((\Mux13~5_combout\)))))
+-- \Mux13~6_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\Mux13~3_combout\)) # (!\chal_lft[5]~input_o\ & ((\Mux13~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26339,8 +26323,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux13~3_combout\,
 	datad => \Mux13~5_combout\,
 	combout => \Mux13~6_combout\);
@@ -26348,7 +26332,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y8_N30
 \Mux13~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~0_combout\ = (\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(17))))) # (!\challenge_lft[2]~input_o\ & (!\challenge_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(17)))))
+-- \Mux13~0_combout\ = (\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(17))))) # (!\chal_lft[2]~input_o\ & (!\chal_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(17)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26356,8 +26340,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(17),
 	datad => \gen_ro:2:ro_inst|ro_counter\(17),
 	combout => \Mux13~0_combout\);
@@ -26365,7 +26349,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N28
 \Mux13~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux13~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(17))) # (!\Mux13~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(17)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux13~0_combout\))))
+-- \Mux13~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux13~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(17))) # (!\Mux13~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(17)))))) # (!\chal_lft[3]~input_o\ & (((\Mux13~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26373,7 +26357,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(17),
 	datac => \gen_ro:6:ro_inst|ro_counter\(17),
 	datad => \Mux13~0_combout\,
@@ -26382,7 +26366,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N14
 \Mux13~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux13~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux13~6_combout\ & (\Mux13~8_combout\)) # (!\Mux13~6_combout\ & ((\Mux13~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux13~6_combout\))))
+-- \Mux13~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux13~6_combout\ & (\Mux13~8_combout\)) # (!\Mux13~6_combout\ & ((\Mux13~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux13~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26390,7 +26374,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux13~8_combout\,
 	datac => \Mux13~6_combout\,
 	datad => \Mux13~1_combout\,
@@ -26399,8 +26383,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N28
 \Mux44~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~7_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(17))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:3:ro_inst|ro_counter\(17))))))
+-- \Mux44~7_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(17))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(17))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26409,15 +26392,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(17),
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(17),
 	combout => \Mux44~7_combout\);
 
 -- Location: LCCOMB_X42_Y6_N12
 \Mux44~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux44~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(17)))) # (!\Mux44~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(17))))) # (!\challenge_rit[2]~input_o\ & (\Mux44~7_combout\))
+-- \Mux44~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux44~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(17)))) # (!\Mux44~7_combout\ & (\gen_ro:11:ro_inst|ro_counter\(17))))) # (!\chal_rit[2]~input_o\ & (\Mux44~7_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26425,7 +26408,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \Mux44~7_combout\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(17),
 	datad => \gen_ro:15:ro_inst|ro_counter\(17),
@@ -26434,7 +26417,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N2
 \Mux44~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~2_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(17))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(17))))
+-- \Mux44~2_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(17))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(17))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26442,8 +26425,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(17),
 	datad => \gen_ro:5:ro_inst|ro_counter\(17),
 	combout => \Mux44~2_combout\);
@@ -26451,7 +26434,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N4
 \Mux44~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux44~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(17)))) # (!\Mux44~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(17))))) # (!\challenge_rit[2]~input_o\ & (((\Mux44~2_combout\))))
+-- \Mux44~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux44~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(17)))) # (!\Mux44~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(17))))) # (!\chal_rit[2]~input_o\ & (((\Mux44~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26459,7 +26442,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(17),
 	datac => \gen_ro:13:ro_inst|ro_counter\(17),
 	datad => \Mux44~2_combout\,
@@ -26468,7 +26451,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N6
 \Mux44~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~4_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(17))) # (!\challenge_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(17))))))
+-- \Mux44~4_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(17))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(17))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26476,8 +26459,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(17),
 	datad => \gen_ro:0:ro_inst|ro_counter\(17),
 	combout => \Mux44~4_combout\);
@@ -26485,7 +26468,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N16
 \Mux44~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux44~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(17))) # (!\Mux44~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(17)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux44~4_combout\))))
+-- \Mux44~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux44~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(17))) # (!\Mux44~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(17)))))) # (!\chal_rit[3]~input_o\ & (((\Mux44~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26493,7 +26476,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(17),
 	datac => \gen_ro:4:ro_inst|ro_counter\(17),
 	datad => \Mux44~4_combout\,
@@ -26502,7 +26485,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N22
 \Mux44~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~6_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\Mux44~3_combout\)))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\Mux44~5_combout\))))
+-- \Mux44~6_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\Mux44~3_combout\)))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\Mux44~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26510,8 +26493,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux44~3_combout\,
 	datad => \Mux44~5_combout\,
 	combout => \Mux44~6_combout\);
@@ -26519,7 +26502,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y4_N30
 \Mux44~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~0_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(17)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(17)))))
+-- \Mux44~0_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(17)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(17)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26527,8 +26510,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(17),
 	datad => \gen_ro:10:ro_inst|ro_counter\(17),
 	combout => \Mux44~0_combout\);
@@ -26536,7 +26519,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y6_N24
 \Mux44~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~1_combout\ = (\Mux44~0_combout\ & (((\gen_ro:14:ro_inst|ro_counter\(17)) # (!\challenge_rit[3]~input_o\)))) # (!\Mux44~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(17) & ((\challenge_rit[3]~input_o\))))
+-- \Mux44~1_combout\ = (\Mux44~0_combout\ & (((\gen_ro:14:ro_inst|ro_counter\(17)) # (!\chal_rit[3]~input_o\)))) # (!\Mux44~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(17) & ((\chal_rit[3]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26547,13 +26530,13 @@ PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(17),
 	datab => \gen_ro:14:ro_inst|ro_counter\(17),
 	datac => \Mux44~0_combout\,
-	datad => \challenge_rit[3]~input_o\,
+	datad => \chal_rit[3]~input_o\,
 	combout => \Mux44~1_combout\);
 
 -- Location: LCCOMB_X42_Y6_N30
 \Mux44~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux44~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux44~6_combout\ & (\Mux44~8_combout\)) # (!\Mux44~6_combout\ & ((\Mux44~1_combout\))))) # (!\challenge_rit[4]~input_o\ & (((\Mux44~6_combout\))))
+-- \Mux44~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux44~6_combout\ & (\Mux44~8_combout\)) # (!\Mux44~6_combout\ & ((\Mux44~1_combout\))))) # (!\chal_rit[4]~input_o\ & (((\Mux44~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26562,7 +26545,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux44~8_combout\,
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux44~6_combout\,
 	datad => \Mux44~1_combout\,
 	combout => \Mux44~9_combout\);
@@ -26570,8 +26553,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N14
 \Mux45~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(16)))) # (!\challenge_rit[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(16)))))
+-- \Mux45~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(16)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26580,15 +26562,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(16),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(16),
 	combout => \Mux45~7_combout\);
 
 -- Location: LCCOMB_X40_Y4_N4
 \Mux45~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux45~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(16))) # (!\Mux45~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(16)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux45~7_combout\))))
+-- \Mux45~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux45~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(16))) # (!\Mux45~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(16)))))) # (!\chal_rit[4]~input_o\ & (((\Mux45~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26596,7 +26578,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(16),
 	datac => \Mux45~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(16),
@@ -26605,7 +26587,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N2
 \Mux45~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~0_combout\ = (\challenge_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(16)) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((!\challenge_rit[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(16)))))
+-- \Mux45~0_combout\ = (\chal_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(16)) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((!\chal_rit[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26613,16 +26595,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(16),
-	datac => \challenge_rit[4]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:4:ro_inst|ro_counter\(16),
 	combout => \Mux45~0_combout\);
 
 -- Location: LCCOMB_X37_Y4_N24
 \Mux45~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux45~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(16))) # (!\Mux45~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(16)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux45~0_combout\))))
+-- \Mux45~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux45~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(16))) # (!\Mux45~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(16)))))) # (!\chal_rit[4]~input_o\ & (((\Mux45~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26631,7 +26613,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(16),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(16),
 	datad => \Mux45~0_combout\,
 	combout => \Mux45~1_combout\);
@@ -26639,7 +26621,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N16
 \Mux45~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~2_combout\ = (\challenge_rit[4]~input_o\ & (((\gen_ro:10:ro_inst|ro_counter\(16)) # (\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(16) & ((!\challenge_rit[5]~input_o\))))
+-- \Mux45~2_combout\ = (\chal_rit[4]~input_o\ & (((\gen_ro:10:ro_inst|ro_counter\(16)) # (\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(16) & ((!\chal_rit[5]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26648,15 +26630,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(16),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(16),
-	datad => \challenge_rit[5]~input_o\,
+	datad => \chal_rit[5]~input_o\,
 	combout => \Mux45~2_combout\);
 
 -- Location: LCCOMB_X40_Y4_N26
 \Mux45~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux45~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(16)))) # (!\Mux45~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(16))))) # (!\challenge_rit[5]~input_o\ & (((\Mux45~2_combout\))))
+-- \Mux45~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux45~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(16)))) # (!\Mux45~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(16))))) # (!\chal_rit[5]~input_o\ & (((\Mux45~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26665,7 +26647,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(16),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(16),
 	datad => \Mux45~2_combout\,
 	combout => \Mux45~3_combout\);
@@ -26673,7 +26655,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N0
 \Mux45~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~4_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(16))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(16)))))
+-- \Mux45~4_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(16))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26681,8 +26663,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(16),
 	datad => \gen_ro:0:ro_inst|ro_counter\(16),
 	combout => \Mux45~4_combout\);
@@ -26690,7 +26672,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N2
 \Mux45~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux45~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(16))) # (!\Mux45~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(16)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux45~4_combout\))))
+-- \Mux45~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux45~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(16))) # (!\Mux45~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(16)))))) # (!\chal_rit[5]~input_o\ & (((\Mux45~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26698,7 +26680,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(16),
 	datac => \gen_ro:1:ro_inst|ro_counter\(16),
 	datad => \Mux45~4_combout\,
@@ -26707,7 +26689,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N24
 \Mux45~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~6_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\Mux45~3_combout\)) # (!\challenge_rit[2]~input_o\ & ((\Mux45~5_combout\)))))
+-- \Mux45~6_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\Mux45~3_combout\)) # (!\chal_rit[2]~input_o\ & ((\Mux45~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26715,8 +26697,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux45~3_combout\,
 	datad => \Mux45~5_combout\,
 	combout => \Mux45~6_combout\);
@@ -26724,7 +26706,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N6
 \Mux45~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux45~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux45~6_combout\ & (\Mux45~8_combout\)) # (!\Mux45~6_combout\ & ((\Mux45~1_combout\))))) # (!\challenge_rit[3]~input_o\ & (((\Mux45~6_combout\))))
+-- \Mux45~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux45~6_combout\ & (\Mux45~8_combout\)) # (!\Mux45~6_combout\ & ((\Mux45~1_combout\))))) # (!\chal_rit[3]~input_o\ & (((\Mux45~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26732,7 +26714,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \Mux45~8_combout\,
 	datac => \Mux45~1_combout\,
 	datad => \Mux45~6_combout\,
@@ -26741,7 +26723,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y4_N18
 \Mux14~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~0_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(16)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(16)))))
+-- \Mux14~0_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(16)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \gen_ro:4:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26749,16 +26731,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(16),
-	datac => \challenge_lft[4]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:4:ro_inst|ro_counter\(16),
 	combout => \Mux14~0_combout\);
 
 -- Location: LCCOMB_X37_Y4_N16
 \Mux14~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux14~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(16))) # (!\Mux14~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(16)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux14~0_combout\))))
+-- \Mux14~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux14~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(16))) # (!\Mux14~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(16)))))) # (!\chal_lft[4]~input_o\ & (((\Mux14~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26767,7 +26749,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(16),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(16),
 	datad => \Mux14~0_combout\,
 	combout => \Mux14~1_combout\);
@@ -26775,8 +26757,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N22
 \Mux14~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~7_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(16)))) # (!\challenge_lft[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(16)))))
+-- \Mux14~7_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(16)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26785,15 +26766,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(16),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(16),
 	combout => \Mux14~7_combout\);
 
 -- Location: LCCOMB_X40_Y4_N8
 \Mux14~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux14~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(16))) # (!\Mux14~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(16)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux14~7_combout\))))
+-- \Mux14~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux14~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(16))) # (!\Mux14~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(16)))))) # (!\chal_lft[4]~input_o\ & (((\Mux14~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26801,7 +26782,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(16),
 	datac => \Mux14~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(16),
@@ -26810,8 +26791,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N28
 \Mux14~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~2_combout\ = (\challenge_lft[5]~input_o\ & (((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(16)))) # (!\challenge_lft[4]~input_o\ & 
--- (\gen_ro:8:ro_inst|ro_counter\(16)))))
+-- \Mux14~2_combout\ = (\chal_lft[5]~input_o\ & (((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(16)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26820,15 +26800,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(16),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(16),
-	datad => \challenge_lft[4]~input_o\,
+	datad => \chal_lft[4]~input_o\,
 	combout => \Mux14~2_combout\);
 
 -- Location: LCCOMB_X40_Y4_N30
 \Mux14~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux14~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(16)))) # (!\Mux14~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(16))))) # (!\challenge_lft[5]~input_o\ & (((\Mux14~2_combout\))))
+-- \Mux14~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux14~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(16)))) # (!\Mux14~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(16))))) # (!\chal_lft[5]~input_o\ & (((\Mux14~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26837,7 +26817,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(16),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(16),
 	datad => \Mux14~2_combout\,
 	combout => \Mux14~3_combout\);
@@ -26845,7 +26825,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N20
 \Mux14~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~4_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(16))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(16)))))
+-- \Mux14~4_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(16))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(16)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26853,8 +26833,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(16),
 	datad => \gen_ro:0:ro_inst|ro_counter\(16),
 	combout => \Mux14~4_combout\);
@@ -26862,7 +26842,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N18
 \Mux14~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux14~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(16))) # (!\Mux14~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(16)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux14~4_combout\))))
+-- \Mux14~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux14~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(16))) # (!\Mux14~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(16)))))) # (!\chal_lft[5]~input_o\ & (((\Mux14~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26870,7 +26850,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(16),
 	datac => \gen_ro:1:ro_inst|ro_counter\(16),
 	datad => \Mux14~4_combout\,
@@ -26879,7 +26859,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N12
 \Mux14~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~6_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux14~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux14~5_combout\)))))
+-- \Mux14~6_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux14~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux14~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26887,8 +26867,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux14~3_combout\,
 	datad => \Mux14~5_combout\,
 	combout => \Mux14~6_combout\);
@@ -26896,7 +26876,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y4_N10
 \Mux14~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux14~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux14~6_combout\ & ((\Mux14~8_combout\))) # (!\Mux14~6_combout\ & (\Mux14~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux14~6_combout\))))
+-- \Mux14~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux14~6_combout\ & ((\Mux14~8_combout\))) # (!\Mux14~6_combout\ & (\Mux14~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux14~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26904,7 +26884,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux14~1_combout\,
 	datac => \Mux14~8_combout\,
 	datad => \Mux14~6_combout\,
@@ -26913,7 +26893,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N18
 \Mux15~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~0_combout\ = (\challenge_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(15)) # ((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & (((!\challenge_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(15)))))
+-- \Mux15~0_combout\ = (\chal_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(15)) # ((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & (((!\chal_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(15)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26921,16 +26901,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(15),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(15),
 	combout => \Mux15~0_combout\);
 
 -- Location: LCCOMB_X36_Y6_N12
 \Mux15~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux15~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(15)))) # (!\Mux15~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(15))))) # (!\challenge_lft[3]~input_o\ & (((\Mux15~0_combout\))))
+-- \Mux15~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux15~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(15)))) # (!\Mux15~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(15))))) # (!\chal_lft[3]~input_o\ & (((\Mux15~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26939,7 +26919,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(15),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(15),
 	datad => \Mux15~0_combout\,
 	combout => \Mux15~1_combout\);
@@ -26947,7 +26927,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N0
 \Mux15~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~7_combout\ = (\challenge_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(15)) # ((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & (((!\challenge_lft[3]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(15)))))
+-- \Mux15~7_combout\ = (\chal_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(15)) # ((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & (((!\chal_lft[3]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(15)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26956,15 +26936,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(15),
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(15),
 	combout => \Mux15~7_combout\);
 
 -- Location: LCCOMB_X37_Y5_N22
 \Mux15~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux15~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(15))) # (!\Mux15~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(15)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux15~7_combout\))))
+-- \Mux15~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux15~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(15))) # (!\Mux15~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(15)))))) # (!\chal_lft[3]~input_o\ & (((\Mux15~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26973,7 +26953,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(15),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(15),
 	datad => \Mux15~7_combout\,
 	combout => \Mux15~8_combout\);
@@ -26981,7 +26961,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N10
 \Mux15~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~2_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(15))) # (!\challenge_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(15))))))
+-- \Mux15~2_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(15))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(15))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26989,8 +26969,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(15),
 	datad => \gen_ro:2:ro_inst|ro_counter\(15),
 	combout => \Mux15~2_combout\);
@@ -26998,7 +26978,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N4
 \Mux15~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux15~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(15)))) # (!\Mux15~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(15))))) # (!\challenge_lft[2]~input_o\ & (((\Mux15~2_combout\))))
+-- \Mux15~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux15~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(15)))) # (!\Mux15~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(15))))) # (!\chal_lft[2]~input_o\ & (((\Mux15~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27007,7 +26987,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(15),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(15),
 	datad => \Mux15~2_combout\,
 	combout => \Mux15~3_combout\);
@@ -27015,7 +26995,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y6_N14
 \Mux15~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~4_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(15))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(15))))
+-- \Mux15~4_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(15))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(15))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27023,8 +27003,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(15),
 	datad => \gen_ro:4:ro_inst|ro_counter\(15),
 	combout => \Mux15~4_combout\);
@@ -27032,7 +27012,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N2
 \Mux15~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux15~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(15)))) # (!\Mux15~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(15))))) # (!\challenge_lft[2]~input_o\ & (((\Mux15~4_combout\))))
+-- \Mux15~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux15~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(15)))) # (!\Mux15~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(15))))) # (!\chal_lft[2]~input_o\ & (((\Mux15~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27040,7 +27020,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(15),
 	datac => \gen_ro:12:ro_inst|ro_counter\(15),
 	datad => \Mux15~4_combout\,
@@ -27049,7 +27029,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N28
 \Mux15~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~6_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\Mux15~3_combout\)) # (!\challenge_lft[4]~input_o\ & ((\Mux15~5_combout\)))))
+-- \Mux15~6_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\Mux15~3_combout\)) # (!\chal_lft[4]~input_o\ & ((\Mux15~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27057,8 +27037,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux15~3_combout\,
 	datad => \Mux15~5_combout\,
 	combout => \Mux15~6_combout\);
@@ -27066,7 +27046,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N26
 \Mux15~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux15~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux15~6_combout\ & ((\Mux15~8_combout\))) # (!\Mux15~6_combout\ & (\Mux15~1_combout\)))) # (!\challenge_lft[5]~input_o\ & (((\Mux15~6_combout\))))
+-- \Mux15~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux15~6_combout\ & ((\Mux15~8_combout\))) # (!\Mux15~6_combout\ & (\Mux15~1_combout\)))) # (!\chal_lft[5]~input_o\ & (((\Mux15~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27074,7 +27054,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux15~1_combout\,
 	datac => \Mux15~8_combout\,
 	datad => \Mux15~6_combout\,
@@ -27083,8 +27063,7 @@ PORT MAP (
 -- Location: LCCOMB_X34_Y5_N28
 \Mux46~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~7_combout\ = (\challenge_rit[3]~input_o\ & (((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(15)))) # (!\challenge_rit[2]~input_o\ & 
--- (\gen_ro:3:ro_inst|ro_counter\(15)))))
+-- \Mux46~7_combout\ = (\chal_rit[3]~input_o\ & (((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(15)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(15)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27093,15 +27072,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:3:ro_inst|ro_counter\(15),
-	datab => \challenge_rit[3]~input_o\,
-	datac => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(15),
 	combout => \Mux46~7_combout\);
 
 -- Location: LCCOMB_X34_Y5_N6
 \Mux46~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux46~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(15))) # (!\Mux46~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(15)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux46~7_combout\))))
+-- \Mux46~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux46~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(15))) # (!\Mux46~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(15)))))) # (!\chal_rit[3]~input_o\ & (((\Mux46~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27110,7 +27089,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(15),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(15),
 	datad => \Mux46~7_combout\,
 	combout => \Mux46~8_combout\);
@@ -27118,8 +27097,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y6_N14
 \Mux46~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~0_combout\ = (\challenge_rit[3]~input_o\ & (((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(15))) # (!\challenge_rit[2]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(15))))))
+-- \Mux46~0_combout\ = (\chal_rit[3]~input_o\ & (((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(15))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(15))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27127,16 +27105,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(15),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(15),
 	combout => \Mux46~0_combout\);
 
 -- Location: LCCOMB_X36_Y6_N24
 \Mux46~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux46~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(15))) # (!\Mux46~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(15)))))) # (!\challenge_rit[3]~input_o\ & (\Mux46~0_combout\))
+-- \Mux46~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux46~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(15))) # (!\Mux46~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(15)))))) # (!\chal_rit[3]~input_o\ & (\Mux46~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27144,7 +27122,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \Mux46~0_combout\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(15),
 	datad => \gen_ro:5:ro_inst|ro_counter\(15),
@@ -27153,7 +27131,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N16
 \Mux46~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(15))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(15))))))
+-- \Mux46~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(15))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(15))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27161,8 +27139,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(15),
 	datad => \gen_ro:2:ro_inst|ro_counter\(15),
 	combout => \Mux46~2_combout\);
@@ -27170,7 +27148,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N22
 \Mux46~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux46~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(15)))) # (!\Mux46~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(15))))) # (!\challenge_rit[2]~input_o\ & (((\Mux46~2_combout\))))
+-- \Mux46~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux46~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(15)))) # (!\Mux46~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(15))))) # (!\chal_rit[2]~input_o\ & (((\Mux46~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27179,7 +27157,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(15),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(15),
 	datad => \Mux46~2_combout\,
 	combout => \Mux46~3_combout\);
@@ -27187,7 +27165,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N24
 \Mux46~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~4_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(15))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(15))))))
+-- \Mux46~4_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(15))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(15))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27195,8 +27173,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(15),
 	datad => \gen_ro:0:ro_inst|ro_counter\(15),
 	combout => \Mux46~4_combout\);
@@ -27204,7 +27182,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N6
 \Mux46~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux46~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(15)))) # (!\Mux46~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(15))))) # (!\challenge_rit[2]~input_o\ & (((\Mux46~4_combout\))))
+-- \Mux46~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux46~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(15)))) # (!\Mux46~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(15))))) # (!\chal_rit[2]~input_o\ & (((\Mux46~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27212,7 +27190,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:8:ro_inst|ro_counter\(15),
 	datac => \gen_ro:12:ro_inst|ro_counter\(15),
 	datad => \Mux46~4_combout\,
@@ -27221,7 +27199,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y6_N20
 \Mux46~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~6_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux46~3_combout\) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((!\challenge_rit[5]~input_o\ & \Mux46~5_combout\))))
+-- \Mux46~6_combout\ = (\chal_rit[4]~input_o\ & ((\Mux46~3_combout\) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((!\chal_rit[5]~input_o\ & \Mux46~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27230,15 +27208,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux46~3_combout\,
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux46~5_combout\,
 	combout => \Mux46~6_combout\);
 
 -- Location: LCCOMB_X38_Y6_N30
 \Mux46~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux46~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux46~6_combout\ & (\Mux46~8_combout\)) # (!\Mux46~6_combout\ & ((\Mux46~1_combout\))))) # (!\challenge_rit[5]~input_o\ & (((\Mux46~6_combout\))))
+-- \Mux46~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux46~6_combout\ & (\Mux46~8_combout\)) # (!\Mux46~6_combout\ & ((\Mux46~1_combout\))))) # (!\chal_rit[5]~input_o\ & (((\Mux46~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27247,7 +27225,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux46~8_combout\,
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux46~1_combout\,
 	datad => \Mux46~6_combout\,
 	combout => \Mux46~9_combout\);
@@ -27255,7 +27233,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N28
 \Mux47~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(14))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(14)))))
+-- \Mux47~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(14))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27263,8 +27241,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(14),
 	datad => \gen_ro:8:ro_inst|ro_counter\(14),
 	combout => \Mux47~0_combout\);
@@ -27272,7 +27250,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N26
 \Mux47~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux47~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(14)))) # (!\Mux47~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(14))))) # (!\challenge_rit[4]~input_o\ & (\Mux47~0_combout\))
+-- \Mux47~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux47~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(14)))) # (!\Mux47~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(14))))) # (!\chal_rit[4]~input_o\ & (\Mux47~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27280,7 +27258,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux47~0_combout\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(14),
 	datad => \gen_ro:11:ro_inst|ro_counter\(14),
@@ -27289,7 +27267,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N14
 \Mux47~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~7_combout\ = (\challenge_rit[4]~input_o\ & (((\gen_ro:14:ro_inst|ro_counter\(14)) # (\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(14) & ((!\challenge_rit[5]~input_o\))))
+-- \Mux47~7_combout\ = (\chal_rit[4]~input_o\ & (((\gen_ro:14:ro_inst|ro_counter\(14)) # (\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(14) & ((!\chal_rit[5]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27298,15 +27276,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(14),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(14),
-	datad => \challenge_rit[5]~input_o\,
+	datad => \chal_rit[5]~input_o\,
 	combout => \Mux47~7_combout\);
 
 -- Location: LCCOMB_X40_Y6_N4
 \Mux47~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux47~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(14))) # (!\Mux47~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(14)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux47~7_combout\))))
+-- \Mux47~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux47~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(14))) # (!\Mux47~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(14)))))) # (!\chal_rit[5]~input_o\ & (((\Mux47~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27314,7 +27292,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(14),
 	datac => \Mux47~7_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(14),
@@ -27323,7 +27301,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N12
 \Mux47~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~2_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(14)))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(14)))))
+-- \Mux47~2_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(14)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27331,8 +27309,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(14),
 	datad => \gen_ro:6:ro_inst|ro_counter\(14),
 	combout => \Mux47~2_combout\);
@@ -27340,7 +27318,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N22
 \Mux47~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux47~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(14))) # (!\Mux47~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(14)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux47~2_combout\))))
+-- \Mux47~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux47~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(14))) # (!\Mux47~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(14)))))) # (!\chal_rit[5]~input_o\ & (((\Mux47~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27348,7 +27326,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(14),
 	datac => \gen_ro:5:ro_inst|ro_counter\(14),
 	datad => \Mux47~2_combout\,
@@ -27357,7 +27335,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N0
 \Mux47~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~4_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(14))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(14)))))
+-- \Mux47~4_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(14))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27365,8 +27343,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(14),
 	datad => \gen_ro:0:ro_inst|ro_counter\(14),
 	combout => \Mux47~4_combout\);
@@ -27374,7 +27352,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N18
 \Mux47~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux47~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(14)))) # (!\Mux47~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(14))))) # (!\challenge_rit[4]~input_o\ & (((\Mux47~4_combout\))))
+-- \Mux47~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux47~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(14)))) # (!\Mux47~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(14))))) # (!\chal_rit[4]~input_o\ & (((\Mux47~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27382,7 +27360,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(14),
 	datac => \gen_ro:3:ro_inst|ro_counter\(14),
 	datad => \Mux47~4_combout\,
@@ -27391,7 +27369,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N24
 \Mux47~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~6_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\Mux47~3_combout\)) # (!\challenge_rit[3]~input_o\ & ((\Mux47~5_combout\)))))
+-- \Mux47~6_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\Mux47~3_combout\)) # (!\chal_rit[3]~input_o\ & ((\Mux47~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27400,15 +27378,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux47~3_combout\,
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux47~5_combout\,
 	combout => \Mux47~6_combout\);
 
 -- Location: LCCOMB_X40_Y6_N2
 \Mux47~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux47~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux47~6_combout\ & ((\Mux47~8_combout\))) # (!\Mux47~6_combout\ & (\Mux47~1_combout\)))) # (!\challenge_rit[2]~input_o\ & (((\Mux47~6_combout\))))
+-- \Mux47~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux47~6_combout\ & ((\Mux47~8_combout\))) # (!\Mux47~6_combout\ & (\Mux47~1_combout\)))) # (!\chal_rit[2]~input_o\ & (((\Mux47~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27417,7 +27395,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux47~1_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux47~8_combout\,
 	datad => \Mux47~6_combout\,
 	combout => \Mux47~9_combout\);
@@ -27425,7 +27403,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N30
 \Mux16~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~7_combout\ = (\challenge_lft[4]~input_o\ & (((\gen_ro:14:ro_inst|ro_counter\(14)) # (\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(14) & ((!\challenge_lft[5]~input_o\))))
+-- \Mux16~7_combout\ = (\chal_lft[4]~input_o\ & (((\gen_ro:14:ro_inst|ro_counter\(14)) # (\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(14) & ((!\chal_lft[5]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27434,15 +27412,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(14),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(14),
-	datad => \challenge_lft[5]~input_o\,
+	datad => \chal_lft[5]~input_o\,
 	combout => \Mux16~7_combout\);
 
 -- Location: LCCOMB_X40_Y6_N8
 \Mux16~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux16~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(14))) # (!\Mux16~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(14)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux16~7_combout\))))
+-- \Mux16~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux16~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(14))) # (!\Mux16~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(14)))))) # (!\chal_lft[5]~input_o\ & (((\Mux16~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27450,7 +27428,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(14),
 	datac => \Mux16~7_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(14),
@@ -27459,7 +27437,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N12
 \Mux16~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~0_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(14))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(14)))))
+-- \Mux16~0_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(14))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27467,8 +27445,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(14),
 	datad => \gen_ro:8:ro_inst|ro_counter\(14),
 	combout => \Mux16~0_combout\);
@@ -27476,7 +27454,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N22
 \Mux16~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~1_combout\ = (\Mux16~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(14))) # (!\challenge_lft[4]~input_o\))) # (!\Mux16~0_combout\ & (\challenge_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(14))))
+-- \Mux16~1_combout\ = (\Mux16~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(14))) # (!\chal_lft[4]~input_o\))) # (!\Mux16~0_combout\ & (\chal_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(14))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27485,7 +27463,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux16~0_combout\,
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(14),
 	datad => \gen_ro:11:ro_inst|ro_counter\(14),
 	combout => \Mux16~1_combout\);
@@ -27493,7 +27471,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N16
 \Mux16~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(14)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(14)))))
+-- \Mux16~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(14)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27501,8 +27479,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(14),
 	datad => \gen_ro:6:ro_inst|ro_counter\(14),
 	combout => \Mux16~2_combout\);
@@ -27510,7 +27488,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N18
 \Mux16~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux16~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(14))) # (!\Mux16~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(14)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux16~2_combout\))))
+-- \Mux16~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux16~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(14))) # (!\Mux16~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(14)))))) # (!\chal_lft[5]~input_o\ & (((\Mux16~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27518,7 +27496,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(14),
 	datac => \gen_ro:5:ro_inst|ro_counter\(14),
 	datad => \Mux16~2_combout\,
@@ -27527,7 +27505,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N16
 \Mux16~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~4_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(14))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(14)))))
+-- \Mux16~4_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(14))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(14)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27535,8 +27513,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(14),
 	datad => \gen_ro:0:ro_inst|ro_counter\(14),
 	combout => \Mux16~4_combout\);
@@ -27544,7 +27522,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N10
 \Mux16~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux16~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(14)))) # (!\Mux16~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(14))))) # (!\challenge_lft[4]~input_o\ & (((\Mux16~4_combout\))))
+-- \Mux16~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux16~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(14)))) # (!\Mux16~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(14))))) # (!\chal_lft[4]~input_o\ & (((\Mux16~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27552,7 +27530,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(14),
 	datac => \gen_ro:3:ro_inst|ro_counter\(14),
 	datad => \Mux16~4_combout\,
@@ -27561,7 +27539,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N20
 \Mux16~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~6_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\Mux16~3_combout\)) # (!\challenge_lft[3]~input_o\ & ((\Mux16~5_combout\)))))
+-- \Mux16~6_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\Mux16~3_combout\)) # (!\chal_lft[3]~input_o\ & ((\Mux16~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27569,8 +27547,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux16~3_combout\,
 	datad => \Mux16~5_combout\,
 	combout => \Mux16~6_combout\);
@@ -27578,7 +27556,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y6_N6
 \Mux16~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux16~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux16~6_combout\ & (\Mux16~8_combout\)) # (!\Mux16~6_combout\ & ((\Mux16~1_combout\))))) # (!\challenge_lft[2]~input_o\ & (((\Mux16~6_combout\))))
+-- \Mux16~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux16~6_combout\ & (\Mux16~8_combout\)) # (!\Mux16~6_combout\ & ((\Mux16~1_combout\))))) # (!\chal_lft[2]~input_o\ & (((\Mux16~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27586,7 +27564,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux16~8_combout\,
 	datac => \Mux16~1_combout\,
 	datad => \Mux16~6_combout\,
@@ -27595,7 +27573,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N26
 \Mux48~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~7_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(13))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(13))))))
+-- \Mux48~7_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(13))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(13))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27603,8 +27581,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(13),
 	datad => \gen_ro:3:ro_inst|ro_counter\(13),
 	combout => \Mux48~7_combout\);
@@ -27612,7 +27590,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N0
 \Mux48~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux48~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(13))) # (!\Mux48~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(13)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux48~7_combout\))))
+-- \Mux48~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux48~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(13))) # (!\Mux48~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(13)))))) # (!\chal_rit[2]~input_o\ & (((\Mux48~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27620,7 +27598,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(13),
 	datac => \Mux48~7_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(13),
@@ -27629,7 +27607,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N24
 \Mux48~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~0_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(13))) # (!\challenge_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(13))))))
+-- \Mux48~0_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(13))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(13))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27637,8 +27615,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(13),
 	datad => \gen_ro:2:ro_inst|ro_counter\(13),
 	combout => \Mux48~0_combout\);
@@ -27646,7 +27624,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N22
 \Mux48~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux48~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(13)))) # (!\Mux48~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(13))))) # (!\challenge_rit[3]~input_o\ & (((\Mux48~0_combout\))))
+-- \Mux48~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux48~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(13)))) # (!\Mux48~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(13))))) # (!\chal_rit[3]~input_o\ & (((\Mux48~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27654,7 +27632,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(13),
 	datac => \gen_ro:14:ro_inst|ro_counter\(13),
 	datad => \Mux48~0_combout\,
@@ -27663,7 +27641,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N12
 \Mux48~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(13)))) # (!\challenge_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(13)))))
+-- \Mux48~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(13)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(13)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27671,8 +27649,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(13),
 	datad => \gen_ro:5:ro_inst|ro_counter\(13),
 	combout => \Mux48~2_combout\);
@@ -27680,7 +27658,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N30
 \Mux48~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux48~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(13)))) # (!\Mux48~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(13))))) # (!\challenge_rit[2]~input_o\ & (((\Mux48~2_combout\))))
+-- \Mux48~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux48~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(13)))) # (!\Mux48~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(13))))) # (!\chal_rit[2]~input_o\ & (((\Mux48~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27690,14 +27668,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(13),
 	datab => \gen_ro:13:ro_inst|ro_counter\(13),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \Mux48~2_combout\,
 	combout => \Mux48~3_combout\);
 
 -- Location: LCCOMB_X38_Y9_N20
 \Mux48~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~4_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(13))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(13)))))
+-- \Mux48~4_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(13))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(13)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27705,8 +27683,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(13),
 	datad => \gen_ro:0:ro_inst|ro_counter\(13),
 	combout => \Mux48~4_combout\);
@@ -27714,7 +27692,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N6
 \Mux48~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux48~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(13)))) # (!\Mux48~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(13))))) # (!\challenge_rit[3]~input_o\ & (((\Mux48~4_combout\))))
+-- \Mux48~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux48~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(13)))) # (!\Mux48~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(13))))) # (!\chal_rit[3]~input_o\ & (((\Mux48~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27724,14 +27702,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(13),
 	datab => \gen_ro:12:ro_inst|ro_counter\(13),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux48~4_combout\,
 	combout => \Mux48~5_combout\);
 
 -- Location: LCCOMB_X38_Y9_N28
 \Mux48~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~6_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\Mux48~3_combout\)) # (!\challenge_rit[5]~input_o\ & ((\Mux48~5_combout\)))))
+-- \Mux48~6_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\Mux48~3_combout\)) # (!\chal_rit[5]~input_o\ & ((\Mux48~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27739,8 +27717,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux48~3_combout\,
 	datad => \Mux48~5_combout\,
 	combout => \Mux48~6_combout\);
@@ -27748,7 +27726,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N10
 \Mux48~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux48~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux48~6_combout\ & (\Mux48~8_combout\)) # (!\Mux48~6_combout\ & ((\Mux48~1_combout\))))) # (!\challenge_rit[4]~input_o\ & (((\Mux48~6_combout\))))
+-- \Mux48~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux48~6_combout\ & (\Mux48~8_combout\)) # (!\Mux48~6_combout\ & ((\Mux48~1_combout\))))) # (!\chal_rit[4]~input_o\ & (((\Mux48~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27756,7 +27734,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux48~8_combout\,
 	datac => \Mux48~1_combout\,
 	datad => \Mux48~6_combout\,
@@ -27765,7 +27743,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N14
 \Mux17~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~7_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(13))) # (!\challenge_lft[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(13))))))
+-- \Mux17~7_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(13))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(13))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27773,8 +27751,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(13),
 	datad => \gen_ro:3:ro_inst|ro_counter\(13),
 	combout => \Mux17~7_combout\);
@@ -27782,7 +27760,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N4
 \Mux17~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux17~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(13))) # (!\Mux17~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(13)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux17~7_combout\))))
+-- \Mux17~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux17~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(13))) # (!\Mux17~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(13)))))) # (!\chal_lft[2]~input_o\ & (((\Mux17~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27790,7 +27768,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(13),
 	datac => \Mux17~7_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(13),
@@ -27799,7 +27777,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N0
 \Mux17~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(13))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(13))))))
+-- \Mux17~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(13))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(13))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27807,8 +27785,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(13),
 	datad => \gen_ro:2:ro_inst|ro_counter\(13),
 	combout => \Mux17~0_combout\);
@@ -27816,7 +27794,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N14
 \Mux17~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux17~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(13)))) # (!\Mux17~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(13))))) # (!\challenge_lft[3]~input_o\ & (((\Mux17~0_combout\))))
+-- \Mux17~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux17~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(13)))) # (!\Mux17~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(13))))) # (!\chal_lft[3]~input_o\ & (((\Mux17~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27824,7 +27802,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(13),
 	datac => \gen_ro:14:ro_inst|ro_counter\(13),
 	datad => \Mux17~0_combout\,
@@ -27833,7 +27811,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N8
 \Mux17~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~2_combout\ = (\challenge_lft[2]~input_o\ & (\challenge_lft[3]~input_o\)) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(13)))) # (!\challenge_lft[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(13)))))
+-- \Mux17~2_combout\ = (\chal_lft[2]~input_o\ & (\chal_lft[3]~input_o\)) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(13)))) # (!\chal_lft[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(13)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27841,8 +27819,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(13),
 	datad => \gen_ro:5:ro_inst|ro_counter\(13),
 	combout => \Mux17~2_combout\);
@@ -27850,7 +27828,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N22
 \Mux17~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux17~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(13)))) # (!\Mux17~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(13))))) # (!\challenge_lft[2]~input_o\ & (\Mux17~2_combout\))
+-- \Mux17~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux17~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(13)))) # (!\Mux17~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(13))))) # (!\chal_lft[2]~input_o\ & (\Mux17~2_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27858,7 +27836,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux17~2_combout\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(13),
 	datad => \gen_ro:13:ro_inst|ro_counter\(13),
@@ -27867,7 +27845,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N24
 \Mux17~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~4_combout\ = (\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(13))))) # (!\challenge_lft[2]~input_o\ & (!\challenge_lft[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(13)))))
+-- \Mux17~4_combout\ = (\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(13))))) # (!\chal_lft[2]~input_o\ & (!\chal_lft[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(13)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27875,8 +27853,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(13),
 	datad => \gen_ro:0:ro_inst|ro_counter\(13),
 	combout => \Mux17~4_combout\);
@@ -27884,7 +27862,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N18
 \Mux17~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux17~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(13)))) # (!\Mux17~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(13))))) # (!\challenge_lft[3]~input_o\ & (((\Mux17~4_combout\))))
+-- \Mux17~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux17~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(13)))) # (!\Mux17~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(13))))) # (!\chal_lft[3]~input_o\ & (((\Mux17~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27894,14 +27872,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(13),
 	datab => \gen_ro:12:ro_inst|ro_counter\(13),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux17~4_combout\,
 	combout => \Mux17~5_combout\);
 
 -- Location: LCCOMB_X38_Y9_N16
 \Mux17~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~6_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\Mux17~3_combout\)) # (!\challenge_lft[5]~input_o\ & ((\Mux17~5_combout\)))))
+-- \Mux17~6_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\Mux17~3_combout\)) # (!\chal_lft[5]~input_o\ & ((\Mux17~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27909,8 +27887,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux17~3_combout\,
 	datad => \Mux17~5_combout\,
 	combout => \Mux17~6_combout\);
@@ -27918,7 +27896,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y9_N2
 \Mux17~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux17~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux17~6_combout\ & (\Mux17~8_combout\)) # (!\Mux17~6_combout\ & ((\Mux17~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux17~6_combout\))))
+-- \Mux17~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux17~6_combout\ & (\Mux17~8_combout\)) # (!\Mux17~6_combout\ & ((\Mux17~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux17~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27926,7 +27904,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux17~8_combout\,
 	datac => \Mux17~1_combout\,
 	datad => \Mux17~6_combout\,
@@ -27935,7 +27913,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N8
 \Mux18~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(12))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(12))))))
+-- \Mux18~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(12))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(12))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27943,8 +27921,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(12),
 	datad => \gen_ro:4:ro_inst|ro_counter\(12),
 	combout => \Mux18~0_combout\);
@@ -27952,7 +27930,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N10
 \Mux18~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux18~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(12))) # (!\Mux18~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(12)))))) # (!\challenge_lft[4]~input_o\ & (\Mux18~0_combout\))
+-- \Mux18~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux18~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(12))) # (!\Mux18~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(12)))))) # (!\chal_lft[4]~input_o\ & (\Mux18~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27960,7 +27938,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux18~0_combout\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(12),
 	datad => \gen_ro:6:ro_inst|ro_counter\(12),
@@ -27969,8 +27947,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N22
 \Mux18~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~7_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(12)))) # (!\challenge_lft[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(12)))))
+-- \Mux18~7_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(12)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27978,16 +27955,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(12),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(12),
 	combout => \Mux18~7_combout\);
 
 -- Location: LCCOMB_X40_Y10_N0
 \Mux18~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux18~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(12))) # (!\Mux18~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(12)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux18~7_combout\))))
+-- \Mux18~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux18~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(12))) # (!\Mux18~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(12)))))) # (!\chal_lft[4]~input_o\ & (((\Mux18~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27995,7 +27972,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(12),
 	datac => \Mux18~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(12),
@@ -28004,7 +27981,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y10_N16
 \Mux18~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(12)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(12)))))
+-- \Mux18~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(12)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28012,8 +27989,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(12),
 	datad => \gen_ro:10:ro_inst|ro_counter\(12),
 	combout => \Mux18~2_combout\);
@@ -28021,7 +27998,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y10_N10
 \Mux18~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux18~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(12)))) # (!\Mux18~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(12))))) # (!\challenge_lft[5]~input_o\ & (((\Mux18~2_combout\))))
+-- \Mux18~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux18~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(12)))) # (!\Mux18~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(12))))) # (!\chal_lft[5]~input_o\ & (((\Mux18~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28030,7 +28007,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(12),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(12),
 	datad => \Mux18~2_combout\,
 	combout => \Mux18~3_combout\);
@@ -28038,7 +28015,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N20
 \Mux18~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~4_combout\ = (\challenge_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(12)) # ((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & (((!\challenge_lft[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(12)))))
+-- \Mux18~4_combout\ = (\chal_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(12)) # ((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & (((!\chal_lft[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28046,16 +28023,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(12),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(12),
 	combout => \Mux18~4_combout\);
 
 -- Location: LCCOMB_X40_Y10_N2
 \Mux18~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux18~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(12)))) # (!\Mux18~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(12))))) # (!\challenge_lft[5]~input_o\ & (((\Mux18~4_combout\))))
+-- \Mux18~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux18~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(12)))) # (!\Mux18~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(12))))) # (!\chal_lft[5]~input_o\ & (((\Mux18~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28063,7 +28040,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(12),
 	datac => \gen_ro:3:ro_inst|ro_counter\(12),
 	datad => \Mux18~4_combout\,
@@ -28072,7 +28049,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N28
 \Mux18~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~6_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux18~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux18~5_combout\)))))
+-- \Mux18~6_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux18~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux18~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28080,8 +28057,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux18~3_combout\,
 	datad => \Mux18~5_combout\,
 	combout => \Mux18~6_combout\);
@@ -28089,7 +28066,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N18
 \Mux18~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux18~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux18~6_combout\ & ((\Mux18~8_combout\))) # (!\Mux18~6_combout\ & (\Mux18~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux18~6_combout\))))
+-- \Mux18~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux18~6_combout\ & ((\Mux18~8_combout\))) # (!\Mux18~6_combout\ & (\Mux18~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux18~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28099,15 +28076,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Mux18~1_combout\,
 	datab => \Mux18~8_combout\,
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux18~6_combout\,
 	combout => \Mux18~9_combout\);
 
 -- Location: LCCOMB_X40_Y10_N30
 \Mux49~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(12)))) # (!\challenge_rit[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(12)))))
+-- \Mux49~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(12)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28115,16 +28091,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(12),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(12),
 	combout => \Mux49~7_combout\);
 
 -- Location: LCCOMB_X40_Y10_N12
 \Mux49~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux49~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(12))) # (!\Mux49~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(12)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux49~7_combout\))))
+-- \Mux49~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux49~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(12))) # (!\Mux49~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(12)))))) # (!\chal_rit[4]~input_o\ & (((\Mux49~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28132,7 +28108,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(12),
 	datac => \Mux49~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(12),
@@ -28141,7 +28117,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N4
 \Mux49~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(12))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(12)))))
+-- \Mux49~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(12))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28149,8 +28125,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(12),
 	datad => \gen_ro:4:ro_inst|ro_counter\(12),
 	combout => \Mux49~0_combout\);
@@ -28158,7 +28134,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N26
 \Mux49~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux49~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(12))) # (!\Mux49~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(12)))))) # (!\challenge_rit[4]~input_o\ & (\Mux49~0_combout\))
+-- \Mux49~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux49~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(12))) # (!\Mux49~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(12)))))) # (!\chal_rit[4]~input_o\ & (\Mux49~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28166,7 +28142,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux49~0_combout\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(12),
 	datad => \gen_ro:6:ro_inst|ro_counter\(12),
@@ -28175,8 +28151,7 @@ PORT MAP (
 -- Location: LCCOMB_X41_Y10_N28
 \Mux49~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~2_combout\ = (\challenge_rit[5]~input_o\ & (((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(12)))) # (!\challenge_rit[4]~input_o\ & 
--- (\gen_ro:8:ro_inst|ro_counter\(12)))))
+-- \Mux49~2_combout\ = (\chal_rit[5]~input_o\ & (((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(12)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28185,15 +28160,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(12),
-	datab => \challenge_rit[5]~input_o\,
-	datac => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:10:ro_inst|ro_counter\(12),
 	combout => \Mux49~2_combout\);
 
 -- Location: LCCOMB_X41_Y10_N18
 \Mux49~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux49~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(12)))) # (!\Mux49~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(12))))) # (!\challenge_rit[5]~input_o\ & (((\Mux49~2_combout\))))
+-- \Mux49~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux49~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(12)))) # (!\Mux49~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(12))))) # (!\chal_rit[5]~input_o\ & (((\Mux49~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28202,7 +28177,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(12),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(12),
 	datad => \Mux49~2_combout\,
 	combout => \Mux49~3_combout\);
@@ -28210,7 +28185,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N16
 \Mux49~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~4_combout\ = (\challenge_rit[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(12)) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((!\challenge_rit[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(12)))))
+-- \Mux49~4_combout\ = (\chal_rit[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(12)) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((!\chal_rit[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(12)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28218,16 +28193,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(12),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(12),
 	combout => \Mux49~4_combout\);
 
 -- Location: LCCOMB_X40_Y10_N6
 \Mux49~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux49~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(12)))) # (!\Mux49~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(12))))) # (!\challenge_rit[5]~input_o\ & (((\Mux49~4_combout\))))
+-- \Mux49~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux49~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(12)))) # (!\Mux49~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(12))))) # (!\chal_rit[5]~input_o\ & (((\Mux49~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28235,7 +28210,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(12),
 	datac => \gen_ro:3:ro_inst|ro_counter\(12),
 	datad => \Mux49~4_combout\,
@@ -28244,7 +28219,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y10_N24
 \Mux49~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~6_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux49~3_combout\) # ((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & (((!\challenge_rit[3]~input_o\ & \Mux49~5_combout\))))
+-- \Mux49~6_combout\ = (\chal_rit[2]~input_o\ & ((\Mux49~3_combout\) # ((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & (((!\chal_rit[3]~input_o\ & \Mux49~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28252,16 +28227,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \Mux49~3_combout\,
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux49~5_combout\,
 	combout => \Mux49~6_combout\);
 
 -- Location: LCCOMB_X40_Y10_N14
 \Mux49~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux49~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux49~6_combout\ & (\Mux49~8_combout\)) # (!\Mux49~6_combout\ & ((\Mux49~1_combout\))))) # (!\challenge_rit[3]~input_o\ & (((\Mux49~6_combout\))))
+-- \Mux49~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux49~6_combout\ & (\Mux49~8_combout\)) # (!\Mux49~6_combout\ & ((\Mux49~1_combout\))))) # (!\chal_rit[3]~input_o\ & (((\Mux49~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28270,7 +28245,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux49~8_combout\,
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux49~1_combout\,
 	datad => \Mux49~6_combout\,
 	combout => \Mux49~9_combout\);
@@ -28278,7 +28253,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N6
 \Mux19~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~7_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(11))))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(11) & (!\challenge_lft[3]~input_o\)))
+-- \Mux19~7_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\) # (\gen_ro:11:ro_inst|ro_counter\(11))))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(11) & (!\chal_lft[3]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28286,16 +28261,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(11),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(11),
 	combout => \Mux19~7_combout\);
 
 -- Location: LCCOMB_X40_Y3_N4
 \Mux19~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux19~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(11))) # (!\Mux19~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(11)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux19~7_combout\))))
+-- \Mux19~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux19~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(11))) # (!\Mux19~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(11)))))) # (!\chal_lft[3]~input_o\ & (((\Mux19~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28303,7 +28278,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(11),
 	datac => \gen_ro:7:ro_inst|ro_counter\(11),
 	datad => \Mux19~7_combout\,
@@ -28312,7 +28287,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N28
 \Mux19~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~0_combout\ = (\challenge_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(11)) # ((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & (((!\challenge_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(11)))))
+-- \Mux19~0_combout\ = (\chal_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(11)) # ((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & (((!\chal_lft[3]~input_o\ & \gen_ro:1:ro_inst|ro_counter\(11)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28320,16 +28295,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(11),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(11),
 	combout => \Mux19~0_combout\);
 
 -- Location: LCCOMB_X40_Y3_N14
 \Mux19~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux19~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(11)))) # (!\Mux19~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(11))))) # (!\challenge_lft[3]~input_o\ & (((\Mux19~0_combout\))))
+-- \Mux19~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux19~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(11)))) # (!\Mux19~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(11))))) # (!\chal_lft[3]~input_o\ & (((\Mux19~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28338,7 +28313,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(11),
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(11),
 	datad => \Mux19~0_combout\,
 	combout => \Mux19~1_combout\);
@@ -28346,7 +28321,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N12
 \Mux19~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(11))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(11))))
+-- \Mux19~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(11))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(11))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28354,8 +28329,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(11),
 	datad => \gen_ro:6:ro_inst|ro_counter\(11),
 	combout => \Mux19~2_combout\);
@@ -28363,7 +28338,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N18
 \Mux19~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux19~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(11)))) # (!\Mux19~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(11))))) # (!\challenge_lft[2]~input_o\ & (((\Mux19~2_combout\))))
+-- \Mux19~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux19~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(11)))) # (!\Mux19~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(11))))) # (!\chal_lft[2]~input_o\ & (((\Mux19~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28371,7 +28346,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(11),
 	datac => \gen_ro:14:ro_inst|ro_counter\(11),
 	datad => \Mux19~2_combout\,
@@ -28380,8 +28355,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N0
 \Mux19~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~4_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(11))) # (!\challenge_lft[3]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(11))))))
+-- \Mux19~4_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(11))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(11))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28389,16 +28363,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(11),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(11),
 	combout => \Mux19~4_combout\);
 
 -- Location: LCCOMB_X40_Y3_N10
 \Mux19~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux19~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(11)))) # (!\Mux19~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(11))))) # (!\challenge_lft[2]~input_o\ & (((\Mux19~4_combout\))))
+-- \Mux19~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux19~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(11)))) # (!\Mux19~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(11))))) # (!\chal_lft[2]~input_o\ & (((\Mux19~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28407,7 +28381,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(11),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(11),
 	datad => \Mux19~4_combout\,
 	combout => \Mux19~5_combout\);
@@ -28415,7 +28389,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N24
 \Mux19~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~6_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\Mux19~3_combout\)) # (!\challenge_lft[4]~input_o\ & ((\Mux19~5_combout\)))))
+-- \Mux19~6_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\Mux19~3_combout\)) # (!\chal_lft[4]~input_o\ & ((\Mux19~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28423,8 +28397,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux19~3_combout\,
 	datad => \Mux19~5_combout\,
 	combout => \Mux19~6_combout\);
@@ -28432,7 +28406,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N30
 \Mux19~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux19~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux19~6_combout\ & (\Mux19~8_combout\)) # (!\Mux19~6_combout\ & ((\Mux19~1_combout\))))) # (!\challenge_lft[5]~input_o\ & (((\Mux19~6_combout\))))
+-- \Mux19~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux19~6_combout\ & (\Mux19~8_combout\)) # (!\Mux19~6_combout\ & ((\Mux19~1_combout\))))) # (!\chal_lft[5]~input_o\ & (((\Mux19~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28440,7 +28414,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux19~8_combout\,
 	datac => \Mux19~1_combout\,
 	datad => \Mux19~6_combout\,
@@ -28449,7 +28423,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N2
 \Mux50~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~7_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:11:ro_inst|ro_counter\(11))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(11))))
+-- \Mux50~7_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:11:ro_inst|ro_counter\(11))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(11))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28457,8 +28431,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(11),
 	datad => \gen_ro:11:ro_inst|ro_counter\(11),
 	combout => \Mux50~7_combout\);
@@ -28466,7 +28440,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N8
 \Mux50~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux50~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(11))) # (!\Mux50~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(11)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux50~7_combout\))))
+-- \Mux50~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux50~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(11))) # (!\Mux50~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(11)))))) # (!\chal_rit[3]~input_o\ & (((\Mux50~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28474,7 +28448,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(11),
 	datac => \gen_ro:7:ro_inst|ro_counter\(11),
 	datad => \Mux50~7_combout\,
@@ -28483,8 +28457,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N16
 \Mux50~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~0_combout\ = (\challenge_rit[3]~input_o\ & (((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(11))) # (!\challenge_rit[2]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(11))))))
+-- \Mux50~0_combout\ = (\chal_rit[3]~input_o\ & (((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(11))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(11))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28493,15 +28466,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(11),
-	datab => \challenge_rit[3]~input_o\,
-	datac => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:1:ro_inst|ro_counter\(11),
 	combout => \Mux50~0_combout\);
 
 -- Location: LCCOMB_X40_Y3_N26
 \Mux50~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux50~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(11)))) # (!\Mux50~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(11))))) # (!\challenge_rit[3]~input_o\ & (((\Mux50~0_combout\))))
+-- \Mux50~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux50~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(11)))) # (!\Mux50~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(11))))) # (!\chal_rit[3]~input_o\ & (((\Mux50~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28510,7 +28483,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(11),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(11),
 	datad => \Mux50~0_combout\,
 	combout => \Mux50~1_combout\);
@@ -28518,7 +28491,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N20
 \Mux50~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~2_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(11))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(11))))
+-- \Mux50~2_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(11))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(11))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28526,8 +28499,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(11),
 	datad => \gen_ro:6:ro_inst|ro_counter\(11),
 	combout => \Mux50~2_combout\);
@@ -28535,7 +28508,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y5_N26
 \Mux50~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux50~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(11)))) # (!\Mux50~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(11))))) # (!\challenge_rit[2]~input_o\ & (((\Mux50~2_combout\))))
+-- \Mux50~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux50~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(11)))) # (!\Mux50~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(11))))) # (!\chal_rit[2]~input_o\ & (((\Mux50~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28543,7 +28516,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(11),
 	datac => \gen_ro:14:ro_inst|ro_counter\(11),
 	datad => \Mux50~2_combout\,
@@ -28552,8 +28525,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N12
 \Mux50~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~4_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(11))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(11))))))
+-- \Mux50~4_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(11))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(11))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28561,16 +28533,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(11),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(11),
 	combout => \Mux50~4_combout\);
 
 -- Location: LCCOMB_X40_Y3_N18
 \Mux50~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux50~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(11))) # (!\Mux50~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(11)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux50~4_combout\))))
+-- \Mux50~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux50~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(11))) # (!\Mux50~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(11)))))) # (!\chal_rit[2]~input_o\ & (((\Mux50~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28579,7 +28551,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(11),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(11),
 	datad => \Mux50~4_combout\,
 	combout => \Mux50~5_combout\);
@@ -28587,7 +28559,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N20
 \Mux50~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~6_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & (\Mux50~3_combout\)) # (!\challenge_rit[4]~input_o\ & ((\Mux50~5_combout\)))))
+-- \Mux50~6_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & (\Mux50~3_combout\)) # (!\chal_rit[4]~input_o\ & ((\Mux50~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28595,8 +28567,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux50~3_combout\,
 	datad => \Mux50~5_combout\,
 	combout => \Mux50~6_combout\);
@@ -28604,7 +28576,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y3_N22
 \Mux50~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux50~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux50~6_combout\ & (\Mux50~8_combout\)) # (!\Mux50~6_combout\ & ((\Mux50~1_combout\))))) # (!\challenge_rit[5]~input_o\ & (((\Mux50~6_combout\))))
+-- \Mux50~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux50~6_combout\ & (\Mux50~8_combout\)) # (!\Mux50~6_combout\ & ((\Mux50~1_combout\))))) # (!\chal_rit[5]~input_o\ & (((\Mux50~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28612,7 +28584,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \Mux50~8_combout\,
 	datac => \Mux50~1_combout\,
 	datad => \Mux50~6_combout\,
@@ -28621,7 +28593,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N8
 \Mux20~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~0_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(10))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(10)))))
+-- \Mux20~0_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(10))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(10)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28629,8 +28601,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(10),
 	datad => \gen_ro:8:ro_inst|ro_counter\(10),
 	combout => \Mux20~0_combout\);
@@ -28638,7 +28610,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N10
 \Mux20~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux20~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(10)))) # (!\Mux20~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(10))))) # (!\challenge_lft[4]~input_o\ & (((\Mux20~0_combout\))))
+-- \Mux20~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux20~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(10)))) # (!\Mux20~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(10))))) # (!\chal_lft[4]~input_o\ & (((\Mux20~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28647,7 +28619,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(10),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux20~0_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(10),
 	combout => \Mux20~1_combout\);
@@ -28655,8 +28627,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N24
 \Mux20~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~7_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(10)))) # (!\challenge_lft[4]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(10)))))
+-- \Mux20~7_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(10)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(10)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28664,8 +28635,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(10),
 	datad => \gen_ro:14:ro_inst|ro_counter\(10),
 	combout => \Mux20~7_combout\);
@@ -28673,7 +28644,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N6
 \Mux20~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux20~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(10))) # (!\Mux20~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(10)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux20~7_combout\))))
+-- \Mux20~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux20~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(10))) # (!\Mux20~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(10)))))) # (!\chal_lft[5]~input_o\ & (((\Mux20~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28682,7 +28653,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(10),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(10),
 	datad => \Mux20~7_combout\,
 	combout => \Mux20~8_combout\);
@@ -28690,7 +28661,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N28
 \Mux20~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(10)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(10)))))
+-- \Mux20~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(10)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(10)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28698,8 +28669,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(10),
 	datad => \gen_ro:6:ro_inst|ro_counter\(10),
 	combout => \Mux20~2_combout\);
@@ -28707,7 +28678,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N30
 \Mux20~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux20~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(10))) # (!\Mux20~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(10)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux20~2_combout\))))
+-- \Mux20~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux20~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(10))) # (!\Mux20~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(10)))))) # (!\chal_lft[5]~input_o\ & (((\Mux20~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28715,7 +28686,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(10),
 	datac => \gen_ro:5:ro_inst|ro_counter\(10),
 	datad => \Mux20~2_combout\,
@@ -28724,7 +28695,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N20
 \Mux20~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~4_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(10))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(10)))))
+-- \Mux20~4_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:1:ro_inst|ro_counter\(10))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(10)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28732,8 +28703,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(10),
 	datad => \gen_ro:0:ro_inst|ro_counter\(10),
 	combout => \Mux20~4_combout\);
@@ -28741,7 +28712,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N2
 \Mux20~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux20~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(10)))) # (!\Mux20~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(10))))) # (!\challenge_lft[4]~input_o\ & (((\Mux20~4_combout\))))
+-- \Mux20~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux20~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(10)))) # (!\Mux20~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(10))))) # (!\chal_lft[4]~input_o\ & (((\Mux20~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28749,7 +28720,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(10),
 	datac => \gen_ro:3:ro_inst|ro_counter\(10),
 	datad => \Mux20~4_combout\,
@@ -28758,7 +28729,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N12
 \Mux20~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~6_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\Mux20~3_combout\)))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\Mux20~5_combout\))))
+-- \Mux20~6_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\Mux20~3_combout\)))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\Mux20~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28766,8 +28737,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux20~3_combout\,
 	datad => \Mux20~5_combout\,
 	combout => \Mux20~6_combout\);
@@ -28775,7 +28746,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N14
 \Mux20~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux20~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux20~6_combout\ & ((\Mux20~8_combout\))) # (!\Mux20~6_combout\ & (\Mux20~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux20~6_combout\))))
+-- \Mux20~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux20~6_combout\ & ((\Mux20~8_combout\))) # (!\Mux20~6_combout\ & (\Mux20~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux20~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28784,7 +28755,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux20~1_combout\,
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux20~8_combout\,
 	datad => \Mux20~6_combout\,
 	combout => \Mux20~9_combout\);
@@ -28792,8 +28763,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N20
 \Mux51~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~7_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(10)))) # (!\challenge_rit[4]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(10)))))
+-- \Mux51~7_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(10)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(10)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28801,8 +28771,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(10),
 	datad => \gen_ro:14:ro_inst|ro_counter\(10),
 	combout => \Mux51~7_combout\);
@@ -28810,7 +28780,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y3_N14
 \Mux51~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux51~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(10))) # (!\Mux51~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(10)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux51~7_combout\))))
+-- \Mux51~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux51~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(10))) # (!\Mux51~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(10)))))) # (!\chal_rit[5]~input_o\ & (((\Mux51~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28818,7 +28788,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(10),
 	datac => \gen_ro:13:ro_inst|ro_counter\(10),
 	datad => \Mux51~7_combout\,
@@ -28827,7 +28797,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N4
 \Mux51~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~0_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(10))) # (!\challenge_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(10))))))
+-- \Mux51~0_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(10))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(10))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28835,8 +28805,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(10),
 	datad => \gen_ro:8:ro_inst|ro_counter\(10),
 	combout => \Mux51~0_combout\);
@@ -28844,7 +28814,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N26
 \Mux51~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux51~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(10)))) # (!\Mux51~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(10))))) # (!\challenge_rit[4]~input_o\ & (\Mux51~0_combout\))
+-- \Mux51~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux51~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(10)))) # (!\Mux51~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(10))))) # (!\chal_rit[4]~input_o\ & (\Mux51~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28852,7 +28822,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux51~0_combout\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(10),
 	datad => \gen_ro:11:ro_inst|ro_counter\(10),
@@ -28861,7 +28831,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N16
 \Mux51~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(10))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(10))))
+-- \Mux51~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(10))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(10))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28869,8 +28839,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(10),
 	datad => \gen_ro:6:ro_inst|ro_counter\(10),
 	combout => \Mux51~2_combout\);
@@ -28878,7 +28848,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N22
 \Mux51~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux51~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(10)))) # (!\Mux51~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(10))))) # (!\challenge_rit[5]~input_o\ & (((\Mux51~2_combout\))))
+-- \Mux51~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux51~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(10)))) # (!\Mux51~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(10))))) # (!\chal_rit[5]~input_o\ & (((\Mux51~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28887,7 +28857,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(10),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(10),
 	datad => \Mux51~2_combout\,
 	combout => \Mux51~3_combout\);
@@ -28895,7 +28865,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N24
 \Mux51~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~4_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(10))) # (!\challenge_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(10))))))
+-- \Mux51~4_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(10))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(10))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28903,8 +28873,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(10),
 	datad => \gen_ro:0:ro_inst|ro_counter\(10),
 	combout => \Mux51~4_combout\);
@@ -28912,7 +28882,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N6
 \Mux51~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux51~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(10)))) # (!\Mux51~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(10))))) # (!\challenge_rit[4]~input_o\ & (((\Mux51~4_combout\))))
+-- \Mux51~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux51~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(10)))) # (!\Mux51~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(10))))) # (!\chal_rit[4]~input_o\ & (((\Mux51~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28920,7 +28890,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(10),
 	datac => \gen_ro:3:ro_inst|ro_counter\(10),
 	datad => \Mux51~4_combout\,
@@ -28929,7 +28899,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N0
 \Mux51~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~6_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\Mux51~3_combout\)))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\Mux51~5_combout\))))
+-- \Mux51~6_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\Mux51~3_combout\)))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\Mux51~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28937,8 +28907,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux51~3_combout\,
 	datad => \Mux51~5_combout\,
 	combout => \Mux51~6_combout\);
@@ -28946,7 +28916,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y3_N18
 \Mux51~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux51~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux51~6_combout\ & (\Mux51~8_combout\)) # (!\Mux51~6_combout\ & ((\Mux51~1_combout\))))) # (!\challenge_rit[2]~input_o\ & (((\Mux51~6_combout\))))
+-- \Mux51~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux51~6_combout\ & (\Mux51~8_combout\)) # (!\Mux51~6_combout\ & ((\Mux51~1_combout\))))) # (!\chal_rit[2]~input_o\ & (((\Mux51~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28955,7 +28925,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux51~8_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux51~1_combout\,
 	datad => \Mux51~6_combout\,
 	combout => \Mux51~9_combout\);
@@ -28963,7 +28933,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N28
 \Mux21~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~7_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(9))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(9)))))
+-- \Mux21~7_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(9))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28971,8 +28941,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(9),
 	datad => \gen_ro:3:ro_inst|ro_counter\(9),
 	combout => \Mux21~7_combout\);
@@ -28980,7 +28950,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N6
 \Mux21~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux21~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(9))) # (!\Mux21~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(9)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux21~7_combout\))))
+-- \Mux21~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux21~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(9))) # (!\Mux21~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(9)))))) # (!\chal_lft[2]~input_o\ & (((\Mux21~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28989,7 +28959,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(9),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(9),
 	datad => \Mux21~7_combout\,
 	combout => \Mux21~8_combout\);
@@ -28997,7 +28967,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N12
 \Mux21~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(9)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(9)))))
+-- \Mux21~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(9)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29005,8 +28975,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(9),
 	datad => \gen_ro:10:ro_inst|ro_counter\(9),
 	combout => \Mux21~0_combout\);
@@ -29014,7 +28984,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N26
 \Mux21~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux21~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(9))) # (!\Mux21~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(9)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux21~0_combout\))))
+-- \Mux21~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux21~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(9))) # (!\Mux21~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(9)))))) # (!\chal_lft[3]~input_o\ & (((\Mux21~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29022,7 +28992,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(9),
 	datac => \gen_ro:6:ro_inst|ro_counter\(9),
 	datad => \Mux21~0_combout\,
@@ -29031,7 +29001,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N8
 \Mux21~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(9))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(9))))
+-- \Mux21~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(9))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29039,8 +29009,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(9),
 	datad => \gen_ro:5:ro_inst|ro_counter\(9),
 	combout => \Mux21~2_combout\);
@@ -29048,7 +29018,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N22
 \Mux21~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux21~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(9)))) # (!\Mux21~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(9))))) # (!\challenge_lft[2]~input_o\ & (((\Mux21~2_combout\))))
+-- \Mux21~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux21~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(9)))) # (!\Mux21~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(9))))) # (!\chal_lft[2]~input_o\ & (((\Mux21~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29057,7 +29027,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(9),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux21~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(9),
 	combout => \Mux21~3_combout\);
@@ -29065,7 +29035,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N0
 \Mux21~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~4_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(9))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(9))))))
+-- \Mux21~4_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(9))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(9))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29073,8 +29043,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(9),
 	datad => \gen_ro:0:ro_inst|ro_counter\(9),
 	combout => \Mux21~4_combout\);
@@ -29082,7 +29052,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N10
 \Mux21~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux21~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(9)))) # (!\Mux21~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(9))))) # (!\challenge_lft[3]~input_o\ & (((\Mux21~4_combout\))))
+-- \Mux21~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux21~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(9)))) # (!\Mux21~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(9))))) # (!\chal_lft[3]~input_o\ & (((\Mux21~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29090,7 +29060,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(9),
 	datac => \gen_ro:12:ro_inst|ro_counter\(9),
 	datad => \Mux21~4_combout\,
@@ -29099,7 +29069,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N24
 \Mux21~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~6_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\Mux21~3_combout\)) # (!\challenge_lft[5]~input_o\ & ((\Mux21~5_combout\)))))
+-- \Mux21~6_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\Mux21~3_combout\)) # (!\chal_lft[5]~input_o\ & ((\Mux21~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29107,8 +29077,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \Mux21~3_combout\,
 	datad => \Mux21~5_combout\,
 	combout => \Mux21~6_combout\);
@@ -29116,7 +29086,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N30
 \Mux21~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux21~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux21~6_combout\ & (\Mux21~8_combout\)) # (!\Mux21~6_combout\ & ((\Mux21~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux21~6_combout\))))
+-- \Mux21~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux21~6_combout\ & (\Mux21~8_combout\)) # (!\Mux21~6_combout\ & ((\Mux21~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux21~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29124,7 +29094,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \Mux21~8_combout\,
 	datac => \Mux21~1_combout\,
 	datad => \Mux21~6_combout\,
@@ -29133,7 +29103,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N20
 \Mux52~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~0_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(9))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(9))))
+-- \Mux52~0_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(9))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29141,8 +29111,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(9),
 	datad => \gen_ro:10:ro_inst|ro_counter\(9),
 	combout => \Mux52~0_combout\);
@@ -29150,7 +29120,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N6
 \Mux52~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux52~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(9))) # (!\Mux52~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(9)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux52~0_combout\))))
+-- \Mux52~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux52~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(9))) # (!\Mux52~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(9)))))) # (!\chal_rit[3]~input_o\ & (((\Mux52~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29159,7 +29129,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:14:ro_inst|ro_counter\(9),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(9),
 	datad => \Mux52~0_combout\,
 	combout => \Mux52~1_combout\);
@@ -29167,7 +29137,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N0
 \Mux52~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~7_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(9))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(9))))))
+-- \Mux52~7_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(9))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(9))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29175,8 +29145,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(9),
 	datad => \gen_ro:3:ro_inst|ro_counter\(9),
 	combout => \Mux52~7_combout\);
@@ -29184,7 +29154,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N14
 \Mux52~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux52~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(9))) # (!\Mux52~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(9)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux52~7_combout\))))
+-- \Mux52~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux52~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(9))) # (!\Mux52~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(9)))))) # (!\chal_rit[2]~input_o\ & (((\Mux52~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29193,7 +29163,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(9),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(9),
 	datad => \Mux52~7_combout\,
 	combout => \Mux52~8_combout\);
@@ -29201,7 +29171,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N4
 \Mux52~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(9)))) # (!\challenge_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(9)))))
+-- \Mux52~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(9)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29209,8 +29179,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(9),
 	datad => \gen_ro:5:ro_inst|ro_counter\(9),
 	combout => \Mux52~2_combout\);
@@ -29218,7 +29188,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N14
 \Mux52~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux52~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(9)))) # (!\Mux52~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(9))))) # (!\challenge_rit[2]~input_o\ & (((\Mux52~2_combout\))))
+-- \Mux52~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux52~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(9)))) # (!\Mux52~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(9))))) # (!\chal_rit[2]~input_o\ & (((\Mux52~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29226,7 +29196,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(9),
 	datac => \Mux52~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(9),
@@ -29235,7 +29205,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N16
 \Mux52~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~4_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(9))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(9)))))
+-- \Mux52~4_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(9))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29243,8 +29213,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(9),
 	datad => \gen_ro:0:ro_inst|ro_counter\(9),
 	combout => \Mux52~4_combout\);
@@ -29252,7 +29222,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N18
 \Mux52~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux52~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(9))) # (!\Mux52~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(9)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux52~4_combout\))))
+-- \Mux52~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux52~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(9))) # (!\Mux52~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(9)))))) # (!\chal_rit[3]~input_o\ & (((\Mux52~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29261,7 +29231,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(9),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(9),
 	datad => \Mux52~4_combout\,
 	combout => \Mux52~5_combout\);
@@ -29269,7 +29239,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N28
 \Mux52~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~6_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\Mux52~3_combout\)) # (!\challenge_rit[5]~input_o\ & ((\Mux52~5_combout\)))))
+-- \Mux52~6_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\Mux52~3_combout\)) # (!\chal_rit[5]~input_o\ & ((\Mux52~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29277,8 +29247,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux52~3_combout\,
 	datad => \Mux52~5_combout\,
 	combout => \Mux52~6_combout\);
@@ -29286,7 +29256,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y8_N2
 \Mux52~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux52~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux52~6_combout\ & ((\Mux52~8_combout\))) # (!\Mux52~6_combout\ & (\Mux52~1_combout\)))) # (!\challenge_rit[4]~input_o\ & (((\Mux52~6_combout\))))
+-- \Mux52~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux52~6_combout\ & ((\Mux52~8_combout\))) # (!\Mux52~6_combout\ & (\Mux52~1_combout\)))) # (!\chal_rit[4]~input_o\ & (((\Mux52~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29295,7 +29265,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux52~1_combout\,
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \Mux52~8_combout\,
 	datad => \Mux52~6_combout\,
 	combout => \Mux52~9_combout\);
@@ -29303,7 +29273,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N0
 \Mux22~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(8))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(8))))))
+-- \Mux22~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(8))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(8))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29311,8 +29281,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(8),
 	datad => \gen_ro:4:ro_inst|ro_counter\(8),
 	combout => \Mux22~0_combout\);
@@ -29320,7 +29290,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N18
 \Mux22~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux22~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(8))) # (!\Mux22~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(8)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux22~0_combout\))))
+-- \Mux22~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux22~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(8))) # (!\Mux22~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(8)))))) # (!\chal_lft[4]~input_o\ & (((\Mux22~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29329,7 +29299,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(8),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(8),
 	datad => \Mux22~0_combout\,
 	combout => \Mux22~1_combout\);
@@ -29337,7 +29307,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N26
 \Mux22~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~7_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(8))))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(8))))
+-- \Mux22~7_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(8))))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29345,8 +29315,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(8),
 	datad => \gen_ro:13:ro_inst|ro_counter\(8),
 	combout => \Mux22~7_combout\);
@@ -29354,7 +29324,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N4
 \Mux22~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux22~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(8))) # (!\Mux22~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(8)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux22~7_combout\))))
+-- \Mux22~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux22~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(8))) # (!\Mux22~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(8)))))) # (!\chal_lft[4]~input_o\ & (((\Mux22~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29363,7 +29333,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(8),
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux22~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(8),
 	combout => \Mux22~8_combout\);
@@ -29371,7 +29341,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N8
 \Mux22~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(8))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(8))))))
+-- \Mux22~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(8))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(8))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29379,8 +29349,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(8),
 	datad => \gen_ro:8:ro_inst|ro_counter\(8),
 	combout => \Mux22~2_combout\);
@@ -29388,7 +29358,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N18
 \Mux22~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux22~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(8)))) # (!\Mux22~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(8))))) # (!\challenge_lft[5]~input_o\ & (((\Mux22~2_combout\))))
+-- \Mux22~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux22~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(8)))) # (!\Mux22~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(8))))) # (!\chal_lft[5]~input_o\ & (((\Mux22~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29396,7 +29366,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(8),
 	datac => \Mux22~2_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(8),
@@ -29405,7 +29375,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N20
 \Mux22~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~4_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(8))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(8))))))
+-- \Mux22~4_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(8))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(8))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29413,8 +29383,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(8),
 	datad => \gen_ro:0:ro_inst|ro_counter\(8),
 	combout => \Mux22~4_combout\);
@@ -29422,7 +29392,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N6
 \Mux22~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux22~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(8)))) # (!\Mux22~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(8))))) # (!\challenge_lft[5]~input_o\ & (((\Mux22~4_combout\))))
+-- \Mux22~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux22~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(8)))) # (!\Mux22~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(8))))) # (!\chal_lft[5]~input_o\ & (((\Mux22~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29432,14 +29402,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(8),
 	datab => \gen_ro:3:ro_inst|ro_counter\(8),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux22~4_combout\,
 	combout => \Mux22~5_combout\);
 
 -- Location: LCCOMB_X39_Y5_N28
 \Mux22~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~6_combout\ = (\challenge_lft[3]~input_o\ & (((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux22~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux22~5_combout\)))))
+-- \Mux22~6_combout\ = (\chal_lft[3]~input_o\ & (((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux22~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux22~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29447,16 +29417,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux22~3_combout\,
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \Mux22~5_combout\,
 	combout => \Mux22~6_combout\);
 
 -- Location: LCCOMB_X39_Y5_N22
 \Mux22~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux22~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux22~6_combout\ & ((\Mux22~8_combout\))) # (!\Mux22~6_combout\ & (\Mux22~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux22~6_combout\))))
+-- \Mux22~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux22~6_combout\ & ((\Mux22~8_combout\))) # (!\Mux22~6_combout\ & (\Mux22~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux22~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29464,7 +29434,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux22~1_combout\,
 	datac => \Mux22~8_combout\,
 	datad => \Mux22~6_combout\,
@@ -29473,7 +29443,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N24
 \Mux53~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~0_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(8))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(8)))))
+-- \Mux53~0_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(8))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(8)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29481,8 +29451,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(8),
 	datad => \gen_ro:4:ro_inst|ro_counter\(8),
 	combout => \Mux53~0_combout\);
@@ -29490,7 +29460,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y5_N26
 \Mux53~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux53~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(8))) # (!\Mux53~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(8)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux53~0_combout\))))
+-- \Mux53~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux53~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(8))) # (!\Mux53~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(8)))))) # (!\chal_rit[4]~input_o\ & (((\Mux53~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29499,7 +29469,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(8),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(8),
 	datad => \Mux53~0_combout\,
 	combout => \Mux53~1_combout\);
@@ -29507,7 +29477,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N14
 \Mux53~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~7_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(8)))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(8)))))
+-- \Mux53~7_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(8)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(8)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29515,8 +29485,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(8),
 	datad => \gen_ro:13:ro_inst|ro_counter\(8),
 	combout => \Mux53~7_combout\);
@@ -29524,7 +29494,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N0
 \Mux53~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux53~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(8))) # (!\Mux53~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(8)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux53~7_combout\))))
+-- \Mux53~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux53~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(8))) # (!\Mux53~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(8)))))) # (!\chal_rit[4]~input_o\ & (((\Mux53~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29532,7 +29502,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(8),
 	datac => \Mux53~7_combout\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(8),
@@ -29541,7 +29511,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N16
 \Mux53~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(8))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(8)))))
+-- \Mux53~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(8))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(8)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29549,8 +29519,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(8),
 	datad => \gen_ro:8:ro_inst|ro_counter\(8),
 	combout => \Mux53~2_combout\);
@@ -29558,7 +29528,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N30
 \Mux53~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux53~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(8))) # (!\Mux53~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(8)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux53~2_combout\))))
+-- \Mux53~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux53~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(8))) # (!\Mux53~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(8)))))) # (!\chal_rit[5]~input_o\ & (((\Mux53~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29567,7 +29537,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(8),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(8),
 	datad => \Mux53~2_combout\,
 	combout => \Mux53~3_combout\);
@@ -29575,7 +29545,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N12
 \Mux53~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~4_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(8))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(8)))))
+-- \Mux53~4_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(8))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(8)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29583,8 +29553,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(8),
 	datad => \gen_ro:0:ro_inst|ro_counter\(8),
 	combout => \Mux53~4_combout\);
@@ -29592,7 +29562,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N2
 \Mux53~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux53~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(8)))) # (!\Mux53~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(8))))) # (!\challenge_rit[5]~input_o\ & (((\Mux53~4_combout\))))
+-- \Mux53~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux53~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(8)))) # (!\Mux53~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(8))))) # (!\chal_rit[5]~input_o\ & (((\Mux53~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29602,14 +29572,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(8),
 	datab => \gen_ro:3:ro_inst|ro_counter\(8),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \Mux53~4_combout\,
 	combout => \Mux53~5_combout\);
 
 -- Location: LCCOMB_X39_Y5_N24
 \Mux53~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~6_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\Mux53~3_combout\)))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\Mux53~5_combout\))))
+-- \Mux53~6_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\Mux53~3_combout\)))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\Mux53~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29617,8 +29587,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux53~3_combout\,
 	datad => \Mux53~5_combout\,
 	combout => \Mux53~6_combout\);
@@ -29626,7 +29596,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y5_N10
 \Mux53~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux53~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux53~6_combout\ & ((\Mux53~8_combout\))) # (!\Mux53~6_combout\ & (\Mux53~1_combout\)))) # (!\challenge_rit[3]~input_o\ & (((\Mux53~6_combout\))))
+-- \Mux53~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux53~6_combout\ & ((\Mux53~8_combout\))) # (!\Mux53~6_combout\ & (\Mux53~1_combout\)))) # (!\chal_rit[3]~input_o\ & (((\Mux53~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29636,15 +29606,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Mux53~1_combout\,
 	datab => \Mux53~8_combout\,
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux53~6_combout\,
 	combout => \Mux53~9_combout\);
 
 -- Location: LCCOMB_X35_Y5_N12
 \Mux54~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~0_combout\ = (\challenge_rit[3]~input_o\ & (((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(7))) # (!\challenge_rit[2]~input_o\ & 
--- ((\gen_ro:1:ro_inst|ro_counter\(7))))))
+-- \Mux54~0_combout\ = (\chal_rit[3]~input_o\ & (((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(7))) # (!\chal_rit[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(7))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29653,15 +29622,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:9:ro_inst|ro_counter\(7),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(7),
-	datad => \challenge_rit[2]~input_o\,
+	datad => \chal_rit[2]~input_o\,
 	combout => \Mux54~0_combout\);
 
 -- Location: LCCOMB_X35_Y5_N10
 \Mux54~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux54~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(7)))) # (!\Mux54~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(7))))) # (!\challenge_rit[3]~input_o\ & (((\Mux54~0_combout\))))
+-- \Mux54~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux54~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(7)))) # (!\Mux54~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(7))))) # (!\chal_rit[3]~input_o\ & (((\Mux54~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29670,7 +29639,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(7),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(7),
 	datad => \Mux54~0_combout\,
 	combout => \Mux54~1_combout\);
@@ -29678,7 +29647,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N2
 \Mux54~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~7_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(7)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(7)))))
+-- \Mux54~7_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(7)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29686,8 +29655,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(7),
 	datad => \gen_ro:11:ro_inst|ro_counter\(7),
 	combout => \Mux54~7_combout\);
@@ -29695,7 +29664,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N4
 \Mux54~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux54~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(7))) # (!\Mux54~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(7)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux54~7_combout\))))
+-- \Mux54~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux54~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(7))) # (!\Mux54~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(7)))))) # (!\chal_rit[3]~input_o\ & (((\Mux54~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29703,7 +29672,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(7),
 	datac => \gen_ro:7:ro_inst|ro_counter\(7),
 	datad => \Mux54~7_combout\,
@@ -29712,8 +29681,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N16
 \Mux54~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~2_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(7))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:2:ro_inst|ro_counter\(7))))))
+-- \Mux54~2_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:6:ro_inst|ro_counter\(7))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(7))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29721,16 +29689,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(7),
 	datac => \gen_ro:2:ro_inst|ro_counter\(7),
-	datad => \challenge_rit[3]~input_o\,
+	datad => \chal_rit[3]~input_o\,
 	combout => \Mux54~2_combout\);
 
 -- Location: LCCOMB_X40_Y5_N30
 \Mux54~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux54~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(7))) # (!\Mux54~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(7)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux54~2_combout\))))
+-- \Mux54~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux54~2_combout\ & (\gen_ro:14:ro_inst|ro_counter\(7))) # (!\Mux54~2_combout\ & ((\gen_ro:10:ro_inst|ro_counter\(7)))))) # (!\chal_rit[2]~input_o\ & (((\Mux54~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29738,7 +29706,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(7),
 	datac => \gen_ro:10:ro_inst|ro_counter\(7),
 	datad => \Mux54~2_combout\,
@@ -29747,7 +29715,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N28
 \Mux54~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~4_combout\ = (\challenge_rit[3]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(7)) # ((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & (((!\challenge_rit[2]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(7)))))
+-- \Mux54~4_combout\ = (\chal_rit[3]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(7)) # ((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & (((!\chal_rit[2]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29755,16 +29723,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(7),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(7),
 	combout => \Mux54~4_combout\);
 
 -- Location: LCCOMB_X40_Y5_N10
 \Mux54~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux54~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(7)))) # (!\Mux54~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(7))))) # (!\challenge_rit[2]~input_o\ & (((\Mux54~4_combout\))))
+-- \Mux54~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux54~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(7)))) # (!\Mux54~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(7))))) # (!\chal_rit[2]~input_o\ & (((\Mux54~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29774,14 +29742,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(7),
 	datab => \gen_ro:12:ro_inst|ro_counter\(7),
-	datac => \challenge_rit[2]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \Mux54~4_combout\,
 	combout => \Mux54~5_combout\);
 
 -- Location: LCCOMB_X40_Y5_N20
 \Mux54~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~6_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\Mux54~3_combout\)))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\Mux54~5_combout\))))
+-- \Mux54~6_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\Mux54~3_combout\)))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\Mux54~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29789,8 +29757,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux54~3_combout\,
 	datad => \Mux54~5_combout\,
 	combout => \Mux54~6_combout\);
@@ -29798,7 +29766,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N14
 \Mux54~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux54~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux54~6_combout\ & ((\Mux54~8_combout\))) # (!\Mux54~6_combout\ & (\Mux54~1_combout\)))) # (!\challenge_rit[5]~input_o\ & (((\Mux54~6_combout\))))
+-- \Mux54~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux54~6_combout\ & ((\Mux54~8_combout\))) # (!\Mux54~6_combout\ & (\Mux54~1_combout\)))) # (!\chal_rit[5]~input_o\ & (((\Mux54~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29807,7 +29775,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux54~1_combout\,
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux54~8_combout\,
 	datad => \Mux54~6_combout\,
 	combout => \Mux54~9_combout\);
@@ -29815,7 +29783,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N24
 \Mux23~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(7)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(7)))))
+-- \Mux23~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(7)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29823,8 +29791,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(7),
 	datad => \gen_ro:9:ro_inst|ro_counter\(7),
 	combout => \Mux23~0_combout\);
@@ -29832,7 +29800,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N18
 \Mux23~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux23~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(7)))) # (!\Mux23~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(7))))) # (!\challenge_lft[3]~input_o\ & (((\Mux23~0_combout\))))
+-- \Mux23~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux23~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(7)))) # (!\Mux23~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(7))))) # (!\chal_lft[3]~input_o\ & (((\Mux23~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29842,14 +29810,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(7),
 	datab => \gen_ro:13:ro_inst|ro_counter\(7),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux23~0_combout\,
 	combout => \Mux23~1_combout\);
 
 -- Location: LCCOMB_X40_Y5_N26
 \Mux23~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~7_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(7)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(7)))))
+-- \Mux23~7_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(7)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29857,8 +29825,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(7),
 	datad => \gen_ro:11:ro_inst|ro_counter\(7),
 	combout => \Mux23~7_combout\);
@@ -29866,7 +29834,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N8
 \Mux23~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux23~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(7))) # (!\Mux23~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(7)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux23~7_combout\))))
+-- \Mux23~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux23~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(7))) # (!\Mux23~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(7)))))) # (!\chal_lft[3]~input_o\ & (((\Mux23~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29874,7 +29842,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(7),
 	datac => \Mux23~7_combout\,
 	datad => \gen_ro:7:ro_inst|ro_counter\(7),
@@ -29883,7 +29851,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N12
 \Mux23~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~2_combout\ = (\challenge_lft[3]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(7)) # ((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & (((\gen_ro:2:ro_inst|ro_counter\(7) & !\challenge_lft[2]~input_o\))))
+-- \Mux23~2_combout\ = (\chal_lft[3]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(7)) # ((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & (((\gen_ro:2:ro_inst|ro_counter\(7) & !\chal_lft[2]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29891,16 +29859,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(7),
 	datac => \gen_ro:2:ro_inst|ro_counter\(7),
-	datad => \challenge_lft[2]~input_o\,
+	datad => \chal_lft[2]~input_o\,
 	combout => \Mux23~2_combout\);
 
 -- Location: LCCOMB_X40_Y5_N22
 \Mux23~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~3_combout\ = (\Mux23~2_combout\ & (((\gen_ro:14:ro_inst|ro_counter\(7)) # (!\challenge_lft[2]~input_o\)))) # (!\Mux23~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(7) & (\challenge_lft[2]~input_o\)))
+-- \Mux23~3_combout\ = (\Mux23~2_combout\ & (((\gen_ro:14:ro_inst|ro_counter\(7)) # (!\chal_lft[2]~input_o\)))) # (!\Mux23~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(7) & (\chal_lft[2]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29910,14 +29878,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Mux23~2_combout\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(7),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(7),
 	combout => \Mux23~3_combout\);
 
 -- Location: LCCOMB_X40_Y5_N24
 \Mux23~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~4_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(7))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(7)))))
+-- \Mux23~4_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:4:ro_inst|ro_counter\(7))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29925,8 +29893,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(7),
 	datad => \gen_ro:0:ro_inst|ro_counter\(7),
 	combout => \Mux23~4_combout\);
@@ -29934,7 +29902,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N6
 \Mux23~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux23~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(7)))) # (!\Mux23~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(7))))) # (!\challenge_lft[2]~input_o\ & (((\Mux23~4_combout\))))
+-- \Mux23~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux23~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(7)))) # (!\Mux23~4_combout\ & (\gen_ro:8:ro_inst|ro_counter\(7))))) # (!\chal_lft[2]~input_o\ & (((\Mux23~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29944,14 +29912,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(7),
 	datab => \gen_ro:12:ro_inst|ro_counter\(7),
-	datac => \challenge_lft[2]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \Mux23~4_combout\,
 	combout => \Mux23~5_combout\);
 
 -- Location: LCCOMB_X40_Y5_N0
 \Mux23~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~6_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\Mux23~3_combout\)) # (!\challenge_lft[4]~input_o\ & ((\Mux23~5_combout\)))))
+-- \Mux23~6_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\Mux23~3_combout\)) # (!\chal_lft[4]~input_o\ & ((\Mux23~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29959,8 +29927,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux23~3_combout\,
 	datad => \Mux23~5_combout\,
 	combout => \Mux23~6_combout\);
@@ -29968,7 +29936,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y5_N18
 \Mux23~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux23~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux23~6_combout\ & ((\Mux23~8_combout\))) # (!\Mux23~6_combout\ & (\Mux23~1_combout\)))) # (!\challenge_lft[5]~input_o\ & (((\Mux23~6_combout\))))
+-- \Mux23~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux23~6_combout\ & ((\Mux23~8_combout\))) # (!\Mux23~6_combout\ & (\Mux23~1_combout\)))) # (!\chal_lft[5]~input_o\ & (((\Mux23~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29976,7 +29944,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux23~1_combout\,
 	datac => \Mux23~8_combout\,
 	datad => \Mux23~6_combout\,
@@ -29985,7 +29953,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N2
 \Mux55~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~7_combout\ = (\challenge_rit[5]~input_o\ & (\challenge_rit[4]~input_o\)) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & (\gen_ro:14:ro_inst|ro_counter\(6))) # (!\challenge_rit[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(6))))))
+-- \Mux55~7_combout\ = (\chal_rit[5]~input_o\ & (\chal_rit[4]~input_o\)) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & (\gen_ro:14:ro_inst|ro_counter\(6))) # (!\chal_rit[4]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(6))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29993,8 +29961,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(6),
 	datad => \gen_ro:12:ro_inst|ro_counter\(6),
 	combout => \Mux55~7_combout\);
@@ -30002,7 +29970,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N8
 \Mux55~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux55~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(6))) # (!\Mux55~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(6)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux55~7_combout\))))
+-- \Mux55~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux55~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(6))) # (!\Mux55~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(6)))))) # (!\chal_rit[5]~input_o\ & (((\Mux55~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30010,7 +29978,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(6),
 	datac => \gen_ro:13:ro_inst|ro_counter\(6),
 	datad => \Mux55~7_combout\,
@@ -30019,8 +29987,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N22
 \Mux55~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~0_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(6)))) # (!\challenge_rit[5]~input_o\ & 
--- (\gen_ro:8:ro_inst|ro_counter\(6)))))
+-- \Mux55~0_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:9:ro_inst|ro_counter\(6)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30029,15 +29996,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:8:ro_inst|ro_counter\(6),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:9:ro_inst|ro_counter\(6),
 	combout => \Mux55~0_combout\);
 
 -- Location: LCCOMB_X42_Y7_N4
 \Mux55~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~1_combout\ = (\Mux55~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(6)) # (!\challenge_rit[4]~input_o\)))) # (!\Mux55~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(6) & ((\challenge_rit[4]~input_o\))))
+-- \Mux55~1_combout\ = (\Mux55~0_combout\ & (((\gen_ro:11:ro_inst|ro_counter\(6)) # (!\chal_rit[4]~input_o\)))) # (!\Mux55~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(6) & ((\chal_rit[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30048,13 +30015,13 @@ PORT MAP (
 	dataa => \Mux55~0_combout\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(6),
 	datac => \gen_ro:11:ro_inst|ro_counter\(6),
-	datad => \challenge_rit[4]~input_o\,
+	datad => \chal_rit[4]~input_o\,
 	combout => \Mux55~1_combout\);
 
 -- Location: LCCOMB_X43_Y7_N18
 \Mux55~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~2_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(6))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(6) & (!\challenge_rit[5]~input_o\)))
+-- \Mux55~2_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(6))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(6) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30063,15 +30030,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(6),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(6),
 	combout => \Mux55~2_combout\);
 
 -- Location: LCCOMB_X43_Y7_N4
 \Mux55~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux55~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(6)))) # (!\Mux55~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(6))))) # (!\challenge_rit[5]~input_o\ & (((\Mux55~2_combout\))))
+-- \Mux55~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux55~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(6)))) # (!\Mux55~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(6))))) # (!\chal_rit[5]~input_o\ & (((\Mux55~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30079,7 +30046,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:5:ro_inst|ro_counter\(6),
 	datac => \gen_ro:7:ro_inst|ro_counter\(6),
 	datad => \Mux55~2_combout\,
@@ -30088,8 +30055,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N6
 \Mux55~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~4_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(6))) # (!\challenge_rit[5]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(6))))))
+-- \Mux55~4_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(6))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(6))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30097,16 +30063,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(6),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(6),
 	combout => \Mux55~4_combout\);
 
 -- Location: LCCOMB_X42_Y7_N28
 \Mux55~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux55~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(6)))) # (!\Mux55~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(6))))) # (!\challenge_rit[4]~input_o\ & (((\Mux55~4_combout\))))
+-- \Mux55~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux55~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(6)))) # (!\Mux55~4_combout\ & (\gen_ro:2:ro_inst|ro_counter\(6))))) # (!\chal_rit[4]~input_o\ & (((\Mux55~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30115,7 +30081,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:2:ro_inst|ro_counter\(6),
-	datab => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(6),
 	datad => \Mux55~4_combout\,
 	combout => \Mux55~5_combout\);
@@ -30123,7 +30089,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N2
 \Mux55~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~6_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\Mux55~3_combout\)) # (!\challenge_rit[3]~input_o\ & ((\Mux55~5_combout\)))))
+-- \Mux55~6_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\Mux55~3_combout\)) # (!\chal_rit[3]~input_o\ & ((\Mux55~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30132,15 +30098,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux55~3_combout\,
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux55~5_combout\,
 	combout => \Mux55~6_combout\);
 
 -- Location: LCCOMB_X42_Y7_N18
 \Mux55~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux55~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux55~6_combout\ & (\Mux55~8_combout\)) # (!\Mux55~6_combout\ & ((\Mux55~1_combout\))))) # (!\challenge_rit[2]~input_o\ & (((\Mux55~6_combout\))))
+-- \Mux55~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux55~6_combout\ & (\Mux55~8_combout\)) # (!\Mux55~6_combout\ & ((\Mux55~1_combout\))))) # (!\chal_rit[2]~input_o\ & (((\Mux55~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30148,7 +30114,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \Mux55~8_combout\,
 	datac => \Mux55~1_combout\,
 	datad => \Mux55~6_combout\,
@@ -30157,8 +30123,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N12
 \Mux24~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~0_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(6))) # (!\challenge_lft[5]~input_o\ & 
--- ((\gen_ro:8:ro_inst|ro_counter\(6))))))
+-- \Mux24~0_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(6))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(6))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30166,16 +30131,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(6),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:8:ro_inst|ro_counter\(6),
 	combout => \Mux24~0_combout\);
 
 -- Location: LCCOMB_X42_Y7_N14
 \Mux24~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux24~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(6)))) # (!\Mux24~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(6))))) # (!\challenge_lft[4]~input_o\ & (((\Mux24~0_combout\))))
+-- \Mux24~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux24~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(6)))) # (!\Mux24~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(6))))) # (!\chal_lft[4]~input_o\ & (((\Mux24~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30183,7 +30148,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(6),
 	datac => \gen_ro:11:ro_inst|ro_counter\(6),
 	datad => \Mux24~0_combout\,
@@ -30192,7 +30157,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N28
 \Mux24~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~7_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(6))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(6)))))
+-- \Mux24~7_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:14:ro_inst|ro_counter\(6))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30200,8 +30165,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(6),
 	datad => \gen_ro:12:ro_inst|ro_counter\(6),
 	combout => \Mux24~7_combout\);
@@ -30209,7 +30174,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N26
 \Mux24~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux24~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(6))) # (!\Mux24~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(6)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux24~7_combout\))))
+-- \Mux24~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux24~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(6))) # (!\Mux24~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(6)))))) # (!\chal_lft[5]~input_o\ & (((\Mux24~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30217,7 +30182,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(6),
 	datac => \gen_ro:13:ro_inst|ro_counter\(6),
 	datad => \Mux24~7_combout\,
@@ -30226,7 +30191,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N20
 \Mux24~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~2_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(6))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(6))))
+-- \Mux24~2_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(6))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30234,8 +30199,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(6),
 	datad => \gen_ro:6:ro_inst|ro_counter\(6),
 	combout => \Mux24~2_combout\);
@@ -30243,7 +30208,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N26
 \Mux24~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux24~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(6)))) # (!\Mux24~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(6))))) # (!\challenge_lft[5]~input_o\ & (((\Mux24~2_combout\))))
+-- \Mux24~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux24~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(6)))) # (!\Mux24~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(6))))) # (!\chal_lft[5]~input_o\ & (((\Mux24~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30252,7 +30217,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(6),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(6),
 	datad => \Mux24~2_combout\,
 	combout => \Mux24~3_combout\);
@@ -30260,8 +30225,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N24
 \Mux24~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~4_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(6))) # (!\challenge_lft[5]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(6))))))
+-- \Mux24~4_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(6))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(6))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30269,16 +30233,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:1:ro_inst|ro_counter\(6),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(6),
 	combout => \Mux24~4_combout\);
 
 -- Location: LCCOMB_X42_Y7_N10
 \Mux24~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux24~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(6))) # (!\Mux24~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(6)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux24~4_combout\))))
+-- \Mux24~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux24~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(6))) # (!\Mux24~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(6)))))) # (!\chal_lft[4]~input_o\ & (((\Mux24~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30286,7 +30250,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(6),
 	datac => \gen_ro:2:ro_inst|ro_counter\(6),
 	datad => \Mux24~4_combout\,
@@ -30295,7 +30259,7 @@ PORT MAP (
 -- Location: LCCOMB_X42_Y7_N0
 \Mux24~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~6_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\Mux24~3_combout\)) # (!\challenge_lft[3]~input_o\ & ((\Mux24~5_combout\)))))
+-- \Mux24~6_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\Mux24~3_combout\)) # (!\chal_lft[3]~input_o\ & ((\Mux24~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30303,16 +30267,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux24~3_combout\,
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux24~5_combout\,
 	combout => \Mux24~6_combout\);
 
 -- Location: LCCOMB_X42_Y7_N16
 \Mux24~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux24~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux24~6_combout\ & ((\Mux24~8_combout\))) # (!\Mux24~6_combout\ & (\Mux24~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux24~6_combout\))))
+-- \Mux24~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux24~6_combout\ & ((\Mux24~8_combout\))) # (!\Mux24~6_combout\ & (\Mux24~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux24~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30320,7 +30284,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \Mux24~1_combout\,
 	datac => \Mux24~8_combout\,
 	datad => \Mux24~6_combout\,
@@ -30329,7 +30293,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N16
 \Mux56~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~0_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(5))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(5)))))
+-- \Mux56~0_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(5))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30337,8 +30301,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(5),
 	datad => \gen_ro:2:ro_inst|ro_counter\(5),
 	combout => \Mux56~0_combout\);
@@ -30346,7 +30310,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N2
 \Mux56~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux56~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(5)))) # (!\Mux56~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(5))))) # (!\challenge_rit[3]~input_o\ & (((\Mux56~0_combout\))))
+-- \Mux56~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux56~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(5)))) # (!\Mux56~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(5))))) # (!\chal_rit[3]~input_o\ & (((\Mux56~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30355,7 +30319,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(5),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(5),
 	datad => \Mux56~0_combout\,
 	combout => \Mux56~1_combout\);
@@ -30363,7 +30327,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N12
 \Mux56~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~7_combout\ = (\challenge_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(5)) # ((\challenge_rit[2]~input_o\)))) # (!\challenge_rit[3]~input_o\ & (((!\challenge_rit[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(5)))))
+-- \Mux56~7_combout\ = (\chal_rit[3]~input_o\ & ((\gen_ro:7:ro_inst|ro_counter\(5)) # ((\chal_rit[2]~input_o\)))) # (!\chal_rit[3]~input_o\ & (((!\chal_rit[2]~input_o\ & \gen_ro:3:ro_inst|ro_counter\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30372,15 +30336,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(5),
-	datab => \challenge_rit[3]~input_o\,
-	datac => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
+	datac => \chal_rit[2]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(5),
 	combout => \Mux56~7_combout\);
 
 -- Location: LCCOMB_X37_Y5_N26
 \Mux56~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux56~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(5))) # (!\Mux56~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(5)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux56~7_combout\))))
+-- \Mux56~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux56~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(5))) # (!\Mux56~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(5)))))) # (!\chal_rit[2]~input_o\ & (((\Mux56~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30389,7 +30353,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(5),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(5),
 	datad => \Mux56~7_combout\,
 	combout => \Mux56~8_combout\);
@@ -30397,7 +30361,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N8
 \Mux56~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(5)))) # (!\challenge_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(5)))))
+-- \Mux56~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(5)))) # (!\chal_rit[3]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30405,8 +30369,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(5),
 	datad => \gen_ro:5:ro_inst|ro_counter\(5),
 	combout => \Mux56~2_combout\);
@@ -30414,7 +30378,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N26
 \Mux56~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux56~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(5)))) # (!\Mux56~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(5))))) # (!\challenge_rit[2]~input_o\ & (((\Mux56~2_combout\))))
+-- \Mux56~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux56~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(5)))) # (!\Mux56~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(5))))) # (!\chal_rit[2]~input_o\ & (((\Mux56~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30422,7 +30386,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(5),
 	datac => \Mux56~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(5),
@@ -30431,7 +30395,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N28
 \Mux56~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~4_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(5))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(5)))))
+-- \Mux56~4_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(5))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30439,8 +30403,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(5),
 	datad => \gen_ro:0:ro_inst|ro_counter\(5),
 	combout => \Mux56~4_combout\);
@@ -30448,7 +30412,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N10
 \Mux56~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux56~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(5)))) # (!\Mux56~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(5))))) # (!\challenge_rit[3]~input_o\ & (((\Mux56~4_combout\))))
+-- \Mux56~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux56~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(5)))) # (!\Mux56~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(5))))) # (!\chal_rit[3]~input_o\ & (((\Mux56~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30458,14 +30422,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(5),
 	datab => \gen_ro:12:ro_inst|ro_counter\(5),
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux56~4_combout\,
 	combout => \Mux56~5_combout\);
 
 -- Location: LCCOMB_X35_Y7_N20
 \Mux56~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~6_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\Mux56~3_combout\)) # (!\challenge_rit[5]~input_o\ & ((\Mux56~5_combout\)))))
+-- \Mux56~6_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\Mux56~3_combout\)) # (!\chal_rit[5]~input_o\ & ((\Mux56~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30473,8 +30437,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux56~3_combout\,
 	datad => \Mux56~5_combout\,
 	combout => \Mux56~6_combout\);
@@ -30482,7 +30446,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N14
 \Mux56~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux56~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux56~6_combout\ & ((\Mux56~8_combout\))) # (!\Mux56~6_combout\ & (\Mux56~1_combout\)))) # (!\challenge_rit[4]~input_o\ & (((\Mux56~6_combout\))))
+-- \Mux56~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux56~6_combout\ & ((\Mux56~8_combout\))) # (!\Mux56~6_combout\ & (\Mux56~1_combout\)))) # (!\chal_rit[4]~input_o\ & (((\Mux56~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30490,7 +30454,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux56~1_combout\,
 	datac => \Mux56~8_combout\,
 	datad => \Mux56~6_combout\,
@@ -30499,8 +30463,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y5_N24
 \Mux25~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~7_combout\ = (\challenge_lft[2]~input_o\ & (((\challenge_lft[3]~input_o\)))) # (!\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(5))) # (!\challenge_lft[3]~input_o\ & 
--- ((\gen_ro:3:ro_inst|ro_counter\(5))))))
+-- \Mux25~7_combout\ = (\chal_lft[2]~input_o\ & (((\chal_lft[3]~input_o\)))) # (!\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(5))) # (!\chal_lft[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(5))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30509,15 +30472,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:7:ro_inst|ro_counter\(5),
-	datab => \challenge_lft[2]~input_o\,
-	datac => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \gen_ro:3:ro_inst|ro_counter\(5),
 	combout => \Mux25~7_combout\);
 
 -- Location: LCCOMB_X37_Y5_N6
 \Mux25~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux25~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(5))) # (!\Mux25~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(5)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux25~7_combout\))))
+-- \Mux25~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux25~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(5))) # (!\Mux25~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(5)))))) # (!\chal_lft[2]~input_o\ & (((\Mux25~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30526,7 +30489,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(5),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(5),
 	datad => \Mux25~7_combout\,
 	combout => \Mux25~8_combout\);
@@ -30534,7 +30497,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N12
 \Mux25~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(5))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(5))))))
+-- \Mux25~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(5))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(5))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30542,8 +30505,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(5),
 	datad => \gen_ro:2:ro_inst|ro_counter\(5),
 	combout => \Mux25~0_combout\);
@@ -30551,7 +30514,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N22
 \Mux25~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux25~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(5))) # (!\Mux25~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(5)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux25~0_combout\))))
+-- \Mux25~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux25~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(5))) # (!\Mux25~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(5)))))) # (!\chal_lft[3]~input_o\ & (((\Mux25~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30559,7 +30522,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(5),
 	datac => \gen_ro:6:ro_inst|ro_counter\(5),
 	datad => \Mux25~0_combout\,
@@ -30568,7 +30531,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N4
 \Mux25~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(5))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(5))))
+-- \Mux25~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(5))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & (\gen_ro:1:ro_inst|ro_counter\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30576,8 +30539,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:1:ro_inst|ro_counter\(5),
 	datad => \gen_ro:5:ro_inst|ro_counter\(5),
 	combout => \Mux25~2_combout\);
@@ -30585,7 +30548,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N30
 \Mux25~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux25~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(5)))) # (!\Mux25~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(5))))) # (!\challenge_lft[2]~input_o\ & (((\Mux25~2_combout\))))
+-- \Mux25~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux25~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(5)))) # (!\Mux25~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(5))))) # (!\chal_lft[2]~input_o\ & (((\Mux25~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30593,7 +30556,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(5),
 	datac => \Mux25~2_combout\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(5),
@@ -30602,7 +30565,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N24
 \Mux25~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~4_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(5))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(5))))))
+-- \Mux25~4_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(5))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(5))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30610,8 +30573,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(5),
 	datad => \gen_ro:0:ro_inst|ro_counter\(5),
 	combout => \Mux25~4_combout\);
@@ -30619,7 +30582,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N6
 \Mux25~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux25~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(5)))) # (!\Mux25~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(5))))) # (!\challenge_lft[3]~input_o\ & (((\Mux25~4_combout\))))
+-- \Mux25~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux25~4_combout\ & ((\gen_ro:12:ro_inst|ro_counter\(5)))) # (!\Mux25~4_combout\ & (\gen_ro:4:ro_inst|ro_counter\(5))))) # (!\chal_lft[3]~input_o\ & (((\Mux25~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30627,7 +30590,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:4:ro_inst|ro_counter\(5),
 	datac => \gen_ro:12:ro_inst|ro_counter\(5),
 	datad => \Mux25~4_combout\,
@@ -30636,7 +30599,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y7_N0
 \Mux25~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~6_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux25~3_combout\) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((!\challenge_lft[4]~input_o\ & \Mux25~5_combout\))))
+-- \Mux25~6_combout\ = (\chal_lft[5]~input_o\ & ((\Mux25~3_combout\) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((!\chal_lft[4]~input_o\ & \Mux25~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30645,15 +30608,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux25~3_combout\,
-	datab => \challenge_lft[5]~input_o\,
-	datac => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \Mux25~5_combout\,
 	combout => \Mux25~6_combout\);
 
 -- Location: LCCOMB_X35_Y7_N18
 \Mux25~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux25~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux25~6_combout\ & (\Mux25~8_combout\)) # (!\Mux25~6_combout\ & ((\Mux25~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux25~6_combout\))))
+-- \Mux25~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux25~6_combout\ & (\Mux25~8_combout\)) # (!\Mux25~6_combout\ & ((\Mux25~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux25~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30662,7 +30625,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux25~8_combout\,
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux25~1_combout\,
 	datad => \Mux25~6_combout\,
 	combout => \Mux25~9_combout\);
@@ -30670,8 +30633,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N8
 \Mux26~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~0_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(4)))) # (!\challenge_lft[5]~input_o\ & 
--- (\gen_ro:4:ro_inst|ro_counter\(4)))))
+-- \Mux26~0_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(4)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30680,15 +30642,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(4),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(4),
 	combout => \Mux26~0_combout\);
 
 -- Location: LCCOMB_X40_Y7_N14
 \Mux26~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux26~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(4)))) # (!\Mux26~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(4))))) # (!\challenge_lft[4]~input_o\ & (((\Mux26~0_combout\))))
+-- \Mux26~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux26~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(4)))) # (!\Mux26~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(4))))) # (!\chal_lft[4]~input_o\ & (((\Mux26~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30696,7 +30658,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(4),
 	datac => \Mux26~0_combout\,
 	datad => \gen_ro:7:ro_inst|ro_counter\(4),
@@ -30705,7 +30667,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N24
 \Mux26~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~7_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(4)))) # (!\challenge_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(4)))))
+-- \Mux26~7_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(4)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30713,8 +30675,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(4),
 	datad => \gen_ro:13:ro_inst|ro_counter\(4),
 	combout => \Mux26~7_combout\);
@@ -30722,7 +30684,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N22
 \Mux26~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux26~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(4))) # (!\Mux26~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(4)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux26~7_combout\))))
+-- \Mux26~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux26~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(4))) # (!\Mux26~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(4)))))) # (!\chal_lft[4]~input_o\ & (((\Mux26~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30730,7 +30692,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(4),
 	datac => \gen_ro:14:ro_inst|ro_counter\(4),
 	datad => \Mux26~7_combout\,
@@ -30739,7 +30701,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N20
 \Mux26~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~2_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(4))) # (!\challenge_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(4))))))
+-- \Mux26~2_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\gen_ro:10:ro_inst|ro_counter\(4))) # (!\chal_lft[4]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(4))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30747,8 +30709,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(4),
 	datad => \gen_ro:8:ro_inst|ro_counter\(4),
 	combout => \Mux26~2_combout\);
@@ -30756,7 +30718,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N26
 \Mux26~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux26~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(4)))) # (!\Mux26~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(4))))) # (!\challenge_lft[5]~input_o\ & (((\Mux26~2_combout\))))
+-- \Mux26~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux26~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(4)))) # (!\Mux26~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(4))))) # (!\chal_lft[5]~input_o\ & (((\Mux26~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30764,7 +30726,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(4),
 	datac => \gen_ro:11:ro_inst|ro_counter\(4),
 	datad => \Mux26~2_combout\,
@@ -30773,7 +30735,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N28
 \Mux26~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~4_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(4)))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(4)))))
+-- \Mux26~4_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(4)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30781,8 +30743,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(4),
 	datad => \gen_ro:2:ro_inst|ro_counter\(4),
 	combout => \Mux26~4_combout\);
@@ -30790,7 +30752,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N30
 \Mux26~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux26~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(4))) # (!\Mux26~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(4)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux26~4_combout\))))
+-- \Mux26~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux26~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(4))) # (!\Mux26~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(4)))))) # (!\chal_lft[5]~input_o\ & (((\Mux26~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30798,7 +30760,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(4),
 	datac => \gen_ro:1:ro_inst|ro_counter\(4),
 	datad => \Mux26~4_combout\,
@@ -30807,7 +30769,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N12
 \Mux26~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~6_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\Mux26~3_combout\)) # (!\challenge_lft[2]~input_o\ & ((\Mux26~5_combout\)))))
+-- \Mux26~6_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\Mux26~3_combout\)) # (!\chal_lft[2]~input_o\ & ((\Mux26~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30815,8 +30777,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux26~3_combout\,
 	datad => \Mux26~5_combout\,
 	combout => \Mux26~6_combout\);
@@ -30824,7 +30786,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N2
 \Mux26~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux26~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux26~6_combout\ & ((\Mux26~8_combout\))) # (!\Mux26~6_combout\ & (\Mux26~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux26~6_combout\))))
+-- \Mux26~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux26~6_combout\ & ((\Mux26~8_combout\))) # (!\Mux26~6_combout\ & (\Mux26~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux26~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30832,7 +30794,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \Mux26~1_combout\,
 	datac => \Mux26~8_combout\,
 	datad => \Mux26~6_combout\,
@@ -30841,7 +30803,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N4
 \Mux57~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~0_combout\ = (\challenge_rit[5]~input_o\ & (((\challenge_rit[4]~input_o\) # (\gen_ro:5:ro_inst|ro_counter\(4))))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(4) & (!\challenge_rit[4]~input_o\)))
+-- \Mux57~0_combout\ = (\chal_rit[5]~input_o\ & (((\chal_rit[4]~input_o\) # (\gen_ro:5:ro_inst|ro_counter\(4))))) # (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(4) & (!\chal_rit[4]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30850,15 +30812,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(4),
-	datab => \challenge_rit[5]~input_o\,
-	datac => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(4),
 	combout => \Mux57~0_combout\);
 
 -- Location: LCCOMB_X40_Y7_N10
 \Mux57~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux57~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(4)))) # (!\Mux57~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(4))))) # (!\challenge_rit[4]~input_o\ & (((\Mux57~0_combout\))))
+-- \Mux57~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux57~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(4)))) # (!\Mux57~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(4))))) # (!\chal_rit[4]~input_o\ & (((\Mux57~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30866,7 +30828,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(4),
 	datac => \Mux57~0_combout\,
 	datad => \gen_ro:7:ro_inst|ro_counter\(4),
@@ -30875,7 +30837,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N0
 \Mux57~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~7_combout\ = (\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(4))))) # (!\challenge_rit[5]~input_o\ & (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(4))))
+-- \Mux57~7_combout\ = (\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\) # ((\gen_ro:13:ro_inst|ro_counter\(4))))) # (!\chal_rit[5]~input_o\ & (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30883,8 +30845,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
-	datab => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
 	datac => \gen_ro:12:ro_inst|ro_counter\(4),
 	datad => \gen_ro:13:ro_inst|ro_counter\(4),
 	combout => \Mux57~7_combout\);
@@ -30892,7 +30854,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N14
 \Mux57~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux57~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(4))) # (!\Mux57~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(4)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux57~7_combout\))))
+-- \Mux57~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux57~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(4))) # (!\Mux57~7_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(4)))))) # (!\chal_rit[4]~input_o\ & (((\Mux57~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30900,7 +30862,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(4),
 	datac => \gen_ro:14:ro_inst|ro_counter\(4),
 	datad => \Mux57~7_combout\,
@@ -30909,7 +30871,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N16
 \Mux57~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~2_combout\ = (\challenge_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(4)) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((!\challenge_rit[5]~input_o\ & \gen_ro:8:ro_inst|ro_counter\(4)))))
+-- \Mux57~2_combout\ = (\chal_rit[4]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(4)) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((!\chal_rit[5]~input_o\ & \gen_ro:8:ro_inst|ro_counter\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30917,16 +30879,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(4),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:8:ro_inst|ro_counter\(4),
 	combout => \Mux57~2_combout\);
 
 -- Location: LCCOMB_X40_Y7_N22
 \Mux57~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux57~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(4)))) # (!\Mux57~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(4))))) # (!\challenge_rit[5]~input_o\ & (((\Mux57~2_combout\))))
+-- \Mux57~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux57~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(4)))) # (!\Mux57~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(4))))) # (!\chal_rit[5]~input_o\ & (((\Mux57~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30934,7 +30896,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(4),
 	datac => \gen_ro:11:ro_inst|ro_counter\(4),
 	datad => \Mux57~2_combout\,
@@ -30943,7 +30905,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N24
 \Mux57~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~4_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(4))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(4))))
+-- \Mux57~4_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:2:ro_inst|ro_counter\(4))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & (\gen_ro:0:ro_inst|ro_counter\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30951,8 +30913,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(4),
 	datad => \gen_ro:2:ro_inst|ro_counter\(4),
 	combout => \Mux57~4_combout\);
@@ -30960,7 +30922,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N6
 \Mux57~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux57~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(4))) # (!\Mux57~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(4)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux57~4_combout\))))
+-- \Mux57~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux57~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(4))) # (!\Mux57~4_combout\ & ((\gen_ro:1:ro_inst|ro_counter\(4)))))) # (!\chal_rit[5]~input_o\ & (((\Mux57~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30968,7 +30930,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(4),
 	datac => \gen_ro:1:ro_inst|ro_counter\(4),
 	datad => \Mux57~4_combout\,
@@ -30977,7 +30939,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N0
 \Mux57~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~6_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\Mux57~3_combout\)))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\Mux57~5_combout\))))
+-- \Mux57~6_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\Mux57~3_combout\)))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\Mux57~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30985,8 +30947,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux57~3_combout\,
 	datad => \Mux57~5_combout\,
 	combout => \Mux57~6_combout\);
@@ -30994,7 +30956,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y7_N18
 \Mux57~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux57~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux57~6_combout\ & ((\Mux57~8_combout\))) # (!\Mux57~6_combout\ & (\Mux57~1_combout\)))) # (!\challenge_rit[3]~input_o\ & (((\Mux57~6_combout\))))
+-- \Mux57~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux57~6_combout\ & ((\Mux57~8_combout\))) # (!\Mux57~6_combout\ & (\Mux57~1_combout\)))) # (!\chal_rit[3]~input_o\ & (((\Mux57~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31003,7 +30965,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux57~1_combout\,
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \Mux57~8_combout\,
 	datad => \Mux57~6_combout\,
 	combout => \Mux57~9_combout\);
@@ -31011,7 +30973,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N24
 \Mux58~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~7_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(3)))) # (!\challenge_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(3)))))
+-- \Mux58~7_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(3)))) # (!\chal_rit[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31019,8 +30981,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(3),
 	datad => \gen_ro:11:ro_inst|ro_counter\(3),
 	combout => \Mux58~7_combout\);
@@ -31028,7 +30990,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N30
 \Mux58~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~8_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux58~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(3))) # (!\Mux58~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(3)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux58~7_combout\))))
+-- \Mux58~8_combout\ = (\chal_rit[3]~input_o\ & ((\Mux58~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(3))) # (!\Mux58~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(3)))))) # (!\chal_rit[3]~input_o\ & (((\Mux58~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31036,7 +30998,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(3),
 	datac => \gen_ro:7:ro_inst|ro_counter\(3),
 	datad => \Mux58~7_combout\,
@@ -31045,7 +31007,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y9_N16
 \Mux58~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~0_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(3))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(3)))))
+-- \Mux58~0_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:9:ro_inst|ro_counter\(3))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31053,8 +31015,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(3),
 	datad => \gen_ro:1:ro_inst|ro_counter\(3),
 	combout => \Mux58~0_combout\);
@@ -31062,7 +31024,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y9_N14
 \Mux58~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux58~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(3)))) # (!\Mux58~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(3))))) # (!\challenge_rit[3]~input_o\ & (((\Mux58~0_combout\))))
+-- \Mux58~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux58~0_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(3)))) # (!\Mux58~0_combout\ & (\gen_ro:5:ro_inst|ro_counter\(3))))) # (!\chal_rit[3]~input_o\ & (((\Mux58~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31071,7 +31033,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(3),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(3),
 	datad => \Mux58~0_combout\,
 	combout => \Mux58~1_combout\);
@@ -31079,7 +31041,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N2
 \Mux58~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~2_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(3))))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(3)))))
+-- \Mux58~2_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(3))))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31087,8 +31049,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(3),
 	datad => \gen_ro:2:ro_inst|ro_counter\(3),
 	combout => \Mux58~2_combout\);
@@ -31096,7 +31058,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N8
 \Mux58~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux58~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(3)))) # (!\Mux58~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(3))))) # (!\challenge_rit[2]~input_o\ & (((\Mux58~2_combout\))))
+-- \Mux58~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux58~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(3)))) # (!\Mux58~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(3))))) # (!\chal_rit[2]~input_o\ & (((\Mux58~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31105,7 +31067,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(3),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(3),
 	datad => \Mux58~2_combout\,
 	combout => \Mux58~3_combout\);
@@ -31113,8 +31075,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N10
 \Mux58~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~4_combout\ = (\challenge_rit[2]~input_o\ & (((\challenge_rit[3]~input_o\)))) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(3))) # (!\challenge_rit[3]~input_o\ & 
--- ((\gen_ro:0:ro_inst|ro_counter\(3))))))
+-- \Mux58~4_combout\ = (\chal_rit[2]~input_o\ & (((\chal_rit[3]~input_o\)))) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(3))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(3))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31123,15 +31084,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(3),
-	datab => \challenge_rit[2]~input_o\,
-	datac => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(3),
 	combout => \Mux58~4_combout\);
 
 -- Location: LCCOMB_X37_Y7_N0
 \Mux58~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~5_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux58~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(3))) # (!\Mux58~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(3)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux58~4_combout\))))
+-- \Mux58~5_combout\ = (\chal_rit[2]~input_o\ & ((\Mux58~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(3))) # (!\Mux58~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(3)))))) # (!\chal_rit[2]~input_o\ & (((\Mux58~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31140,7 +31101,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(3),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(3),
 	datad => \Mux58~4_combout\,
 	combout => \Mux58~5_combout\);
@@ -31148,7 +31109,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N22
 \Mux58~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~6_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\Mux58~3_combout\)))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\Mux58~5_combout\))))
+-- \Mux58~6_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\Mux58~3_combout\)))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\Mux58~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31156,8 +31117,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux58~3_combout\,
 	datad => \Mux58~5_combout\,
 	combout => \Mux58~6_combout\);
@@ -31165,7 +31126,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N2
 \Mux58~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux58~9_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux58~6_combout\ & (\Mux58~8_combout\)) # (!\Mux58~6_combout\ & ((\Mux58~1_combout\))))) # (!\challenge_rit[5]~input_o\ & (((\Mux58~6_combout\))))
+-- \Mux58~9_combout\ = (\chal_rit[5]~input_o\ & ((\Mux58~6_combout\ & (\Mux58~8_combout\)) # (!\Mux58~6_combout\ & ((\Mux58~1_combout\))))) # (!\chal_rit[5]~input_o\ & (((\Mux58~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31173,7 +31134,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \Mux58~8_combout\,
 	datac => \Mux58~1_combout\,
 	datad => \Mux58~6_combout\,
@@ -31182,7 +31143,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y9_N28
 \Mux27~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(3))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(3))))))
+-- \Mux27~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(3))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(3))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31190,8 +31151,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(3),
 	datad => \gen_ro:1:ro_inst|ro_counter\(3),
 	combout => \Mux27~0_combout\);
@@ -31199,7 +31160,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y9_N22
 \Mux27~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux27~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(3))) # (!\Mux27~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(3)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux27~0_combout\))))
+-- \Mux27~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux27~0_combout\ & (\gen_ro:13:ro_inst|ro_counter\(3))) # (!\Mux27~0_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(3)))))) # (!\chal_lft[3]~input_o\ & (((\Mux27~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31207,7 +31168,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:13:ro_inst|ro_counter\(3),
 	datac => \gen_ro:5:ro_inst|ro_counter\(3),
 	datad => \Mux27~0_combout\,
@@ -31216,7 +31177,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N18
 \Mux27~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~7_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(3)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(3)))))
+-- \Mux27~7_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:11:ro_inst|ro_counter\(3)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:3:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31224,8 +31185,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(3),
 	datad => \gen_ro:11:ro_inst|ro_counter\(3),
 	combout => \Mux27~7_combout\);
@@ -31233,7 +31194,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N4
 \Mux27~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~8_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux27~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(3))) # (!\Mux27~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(3)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux27~7_combout\))))
+-- \Mux27~8_combout\ = (\chal_lft[3]~input_o\ & ((\Mux27~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(3))) # (!\Mux27~7_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(3)))))) # (!\chal_lft[3]~input_o\ & (((\Mux27~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31241,7 +31202,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:15:ro_inst|ro_counter\(3),
 	datac => \gen_ro:7:ro_inst|ro_counter\(3),
 	datad => \Mux27~7_combout\,
@@ -31250,7 +31211,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N12
 \Mux27~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(3))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(3)))))
+-- \Mux27~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:6:ro_inst|ro_counter\(3))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31258,8 +31219,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:6:ro_inst|ro_counter\(3),
 	datad => \gen_ro:2:ro_inst|ro_counter\(3),
 	combout => \Mux27~2_combout\);
@@ -31267,7 +31228,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N26
 \Mux27~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux27~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(3)))) # (!\Mux27~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(3))))) # (!\challenge_lft[2]~input_o\ & (((\Mux27~2_combout\))))
+-- \Mux27~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux27~2_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(3)))) # (!\Mux27~2_combout\ & (\gen_ro:10:ro_inst|ro_counter\(3))))) # (!\chal_lft[2]~input_o\ & (((\Mux27~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31276,7 +31237,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:10:ro_inst|ro_counter\(3),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(3),
 	datad => \Mux27~2_combout\,
 	combout => \Mux27~3_combout\);
@@ -31284,7 +31245,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N16
 \Mux27~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~4_combout\ = (\challenge_lft[3]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(3)) # ((\challenge_lft[2]~input_o\)))) # (!\challenge_lft[3]~input_o\ & (((!\challenge_lft[2]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(3)))))
+-- \Mux27~4_combout\ = (\chal_lft[3]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(3)) # ((\chal_lft[2]~input_o\)))) # (!\chal_lft[3]~input_o\ & (((!\chal_lft[2]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31293,15 +31254,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(3),
-	datab => \challenge_lft[3]~input_o\,
-	datac => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
+	datac => \chal_lft[2]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(3),
 	combout => \Mux27~4_combout\);
 
 -- Location: LCCOMB_X37_Y7_N6
 \Mux27~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~5_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux27~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(3))) # (!\Mux27~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(3)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux27~4_combout\))))
+-- \Mux27~5_combout\ = (\chal_lft[2]~input_o\ & ((\Mux27~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(3))) # (!\Mux27~4_combout\ & ((\gen_ro:8:ro_inst|ro_counter\(3)))))) # (!\chal_lft[2]~input_o\ & (((\Mux27~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31310,7 +31271,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(3),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(3),
 	datad => \Mux27~4_combout\,
 	combout => \Mux27~5_combout\);
@@ -31318,7 +31279,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N28
 \Mux27~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~6_combout\ = (\challenge_lft[5]~input_o\ & (\challenge_lft[4]~input_o\)) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & (\Mux27~3_combout\)) # (!\challenge_lft[4]~input_o\ & ((\Mux27~5_combout\)))))
+-- \Mux27~6_combout\ = (\chal_lft[5]~input_o\ & (\chal_lft[4]~input_o\)) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & (\Mux27~3_combout\)) # (!\chal_lft[4]~input_o\ & ((\Mux27~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31326,8 +31287,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux27~3_combout\,
 	datad => \Mux27~5_combout\,
 	combout => \Mux27~6_combout\);
@@ -31335,7 +31296,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N24
 \Mux27~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux27~9_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux27~6_combout\ & ((\Mux27~8_combout\))) # (!\Mux27~6_combout\ & (\Mux27~1_combout\)))) # (!\challenge_lft[5]~input_o\ & (((\Mux27~6_combout\))))
+-- \Mux27~9_combout\ = (\chal_lft[5]~input_o\ & ((\Mux27~6_combout\ & ((\Mux27~8_combout\))) # (!\Mux27~6_combout\ & (\Mux27~1_combout\)))) # (!\chal_lft[5]~input_o\ & (((\Mux27~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31343,7 +31304,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
 	datab => \Mux27~1_combout\,
 	datac => \Mux27~8_combout\,
 	datad => \Mux27~6_combout\,
@@ -31352,7 +31313,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N8
 \Mux28~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(2))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(2))))))
+-- \Mux28~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(2))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(2))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31360,8 +31321,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(2),
 	datad => \gen_ro:8:ro_inst|ro_counter\(2),
 	combout => \Mux28~0_combout\);
@@ -31369,7 +31330,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N26
 \Mux28~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux28~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(2)))) # (!\Mux28~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(2))))) # (!\challenge_lft[4]~input_o\ & (((\Mux28~0_combout\))))
+-- \Mux28~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux28~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(2)))) # (!\Mux28~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(2))))) # (!\chal_lft[4]~input_o\ & (((\Mux28~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31377,7 +31338,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(2),
 	datac => \Mux28~0_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(2),
@@ -31386,8 +31347,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N16
 \Mux28~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~7_combout\ = (\challenge_lft[5]~input_o\ & (((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(2)))) # (!\challenge_lft[4]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(2)))))
+-- \Mux28~7_combout\ = (\chal_lft[5]~input_o\ & (((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\ & ((\gen_ro:14:ro_inst|ro_counter\(2)))) # (!\chal_lft[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31396,15 +31356,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(2),
-	datab => \challenge_lft[5]~input_o\,
-	datac => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
+	datac => \chal_lft[4]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(2),
 	combout => \Mux28~7_combout\);
 
 -- Location: LCCOMB_X43_Y7_N6
 \Mux28~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~8_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux28~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(2)))) # (!\Mux28~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(2))))) # (!\challenge_lft[5]~input_o\ & (((\Mux28~7_combout\))))
+-- \Mux28~8_combout\ = (\chal_lft[5]~input_o\ & ((\Mux28~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(2)))) # (!\Mux28~7_combout\ & (\gen_ro:13:ro_inst|ro_counter\(2))))) # (!\chal_lft[5]~input_o\ & (((\Mux28~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31413,7 +31373,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(2),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:15:ro_inst|ro_counter\(2),
 	datad => \Mux28~7_combout\,
 	combout => \Mux28~8_combout\);
@@ -31421,7 +31381,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N0
 \Mux28~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~2_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(2))))) # (!\challenge_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(2) & (!\challenge_lft[5]~input_o\)))
+-- \Mux28~2_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\) # (\gen_ro:6:ro_inst|ro_counter\(2))))) # (!\chal_lft[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(2) & (!\chal_lft[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31430,15 +31390,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(2),
-	datab => \challenge_lft[4]~input_o\,
-	datac => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(2),
 	combout => \Mux28~2_combout\);
 
 -- Location: LCCOMB_X38_Y7_N30
 \Mux28~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux28~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(2)))) # (!\Mux28~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(2))))) # (!\challenge_lft[5]~input_o\ & (((\Mux28~2_combout\))))
+-- \Mux28~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux28~2_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(2)))) # (!\Mux28~2_combout\ & (\gen_ro:5:ro_inst|ro_counter\(2))))) # (!\chal_lft[5]~input_o\ & (((\Mux28~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31448,14 +31408,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:5:ro_inst|ro_counter\(2),
 	datab => \gen_ro:7:ro_inst|ro_counter\(2),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \Mux28~2_combout\,
 	combout => \Mux28~3_combout\);
 
 -- Location: LCCOMB_X37_Y7_N20
 \Mux28~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~4_combout\ = (\challenge_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(2)) # ((\challenge_lft[4]~input_o\)))) # (!\challenge_lft[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(2) & !\challenge_lft[4]~input_o\))))
+-- \Mux28~4_combout\ = (\chal_lft[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(2)) # ((\chal_lft[4]~input_o\)))) # (!\chal_lft[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(2) & !\chal_lft[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31464,15 +31424,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(2),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(2),
-	datad => \challenge_lft[4]~input_o\,
+	datad => \chal_lft[4]~input_o\,
 	combout => \Mux28~4_combout\);
 
 -- Location: LCCOMB_X38_Y7_N20
 \Mux28~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~5_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux28~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(2))) # (!\Mux28~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(2)))))) # (!\challenge_lft[4]~input_o\ & (((\Mux28~4_combout\))))
+-- \Mux28~5_combout\ = (\chal_lft[4]~input_o\ & ((\Mux28~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(2))) # (!\Mux28~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(2)))))) # (!\chal_lft[4]~input_o\ & (((\Mux28~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31480,7 +31440,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(2),
 	datac => \gen_ro:2:ro_inst|ro_counter\(2),
 	datad => \Mux28~4_combout\,
@@ -31489,7 +31449,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N10
 \Mux28~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~6_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\Mux28~3_combout\)))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\Mux28~5_combout\))))
+-- \Mux28~6_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\Mux28~3_combout\)))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\Mux28~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31497,8 +31457,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux28~3_combout\,
 	datad => \Mux28~5_combout\,
 	combout => \Mux28~6_combout\);
@@ -31506,7 +31466,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N16
 \Mux28~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux28~9_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux28~6_combout\ & ((\Mux28~8_combout\))) # (!\Mux28~6_combout\ & (\Mux28~1_combout\)))) # (!\challenge_lft[2]~input_o\ & (((\Mux28~6_combout\))))
+-- \Mux28~9_combout\ = (\chal_lft[2]~input_o\ & ((\Mux28~6_combout\ & ((\Mux28~8_combout\))) # (!\Mux28~6_combout\ & (\Mux28~1_combout\)))) # (!\chal_lft[2]~input_o\ & (((\Mux28~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31515,7 +31475,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux28~1_combout\,
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux28~8_combout\,
 	datad => \Mux28~6_combout\,
 	combout => \Mux28~9_combout\);
@@ -31523,7 +31483,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N14
 \Mux59~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~0_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(2))) # (!\challenge_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(2))))))
+-- \Mux59~0_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:9:ro_inst|ro_counter\(2))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(2))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31531,8 +31491,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(2),
 	datad => \gen_ro:8:ro_inst|ro_counter\(2),
 	combout => \Mux59~0_combout\);
@@ -31540,7 +31500,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N12
 \Mux59~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux59~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(2)))) # (!\Mux59~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(2))))) # (!\challenge_rit[4]~input_o\ & (((\Mux59~0_combout\))))
+-- \Mux59~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux59~0_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(2)))) # (!\Mux59~0_combout\ & (\gen_ro:10:ro_inst|ro_counter\(2))))) # (!\chal_rit[4]~input_o\ & (((\Mux59~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31548,7 +31508,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:10:ro_inst|ro_counter\(2),
 	datac => \Mux59~0_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(2),
@@ -31557,7 +31517,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y7_N12
 \Mux59~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~7_combout\ = (\challenge_rit[4]~input_o\ & (((\challenge_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(2))))) # (!\challenge_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(2) & (!\challenge_rit[5]~input_o\)))
+-- \Mux59~7_combout\ = (\chal_rit[4]~input_o\ & (((\chal_rit[5]~input_o\) # (\gen_ro:14:ro_inst|ro_counter\(2))))) # (!\chal_rit[4]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(2) & (!\chal_rit[5]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31566,15 +31526,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(2),
-	datab => \challenge_rit[4]~input_o\,
-	datac => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[4]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:14:ro_inst|ro_counter\(2),
 	combout => \Mux59~7_combout\);
 
 -- Location: LCCOMB_X43_Y7_N10
 \Mux59~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~8_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux59~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(2))) # (!\Mux59~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(2)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux59~7_combout\))))
+-- \Mux59~8_combout\ = (\chal_rit[5]~input_o\ & ((\Mux59~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(2))) # (!\Mux59~7_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(2)))))) # (!\chal_rit[5]~input_o\ & (((\Mux59~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31583,7 +31543,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(2),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(2),
 	datad => \Mux59~7_combout\,
 	combout => \Mux59~8_combout\);
@@ -31591,8 +31551,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N22
 \Mux59~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~2_combout\ = (\challenge_rit[5]~input_o\ & (((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & ((\challenge_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(2)))) # (!\challenge_rit[4]~input_o\ & 
--- (\gen_ro:4:ro_inst|ro_counter\(2)))))
+-- \Mux59~2_combout\ = (\chal_rit[5]~input_o\ & (((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & ((\chal_rit[4]~input_o\ & ((\gen_ro:6:ro_inst|ro_counter\(2)))) # (!\chal_rit[4]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31601,15 +31560,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:4:ro_inst|ro_counter\(2),
-	datab => \challenge_rit[5]~input_o\,
-	datac => \challenge_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
+	datac => \chal_rit[4]~input_o\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(2),
 	combout => \Mux59~2_combout\);
 
 -- Location: LCCOMB_X38_Y7_N4
 \Mux59~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux59~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(2))) # (!\Mux59~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(2)))))) # (!\challenge_rit[5]~input_o\ & (((\Mux59~2_combout\))))
+-- \Mux59~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux59~2_combout\ & (\gen_ro:7:ro_inst|ro_counter\(2))) # (!\Mux59~2_combout\ & ((\gen_ro:5:ro_inst|ro_counter\(2)))))) # (!\chal_rit[5]~input_o\ & (((\Mux59~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31617,7 +31576,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(2),
 	datac => \Mux59~2_combout\,
 	datad => \gen_ro:5:ro_inst|ro_counter\(2),
@@ -31626,7 +31585,7 @@ PORT MAP (
 -- Location: LCCOMB_X37_Y7_N14
 \Mux59~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~4_combout\ = (\challenge_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(2)) # ((\challenge_rit[4]~input_o\)))) # (!\challenge_rit[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(2) & !\challenge_rit[4]~input_o\))))
+-- \Mux59~4_combout\ = (\chal_rit[5]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(2)) # ((\chal_rit[4]~input_o\)))) # (!\chal_rit[5]~input_o\ & (((\gen_ro:0:ro_inst|ro_counter\(2) & !\chal_rit[4]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31635,15 +31594,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(2),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:0:ro_inst|ro_counter\(2),
-	datad => \challenge_rit[4]~input_o\,
+	datad => \chal_rit[4]~input_o\,
 	combout => \Mux59~4_combout\);
 
 -- Location: LCCOMB_X38_Y7_N18
 \Mux59~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~5_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux59~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(2))) # (!\Mux59~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(2)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux59~4_combout\))))
+-- \Mux59~5_combout\ = (\chal_rit[4]~input_o\ & ((\Mux59~4_combout\ & (\gen_ro:3:ro_inst|ro_counter\(2))) # (!\Mux59~4_combout\ & ((\gen_ro:2:ro_inst|ro_counter\(2)))))) # (!\chal_rit[4]~input_o\ & (((\Mux59~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31651,7 +31610,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:3:ro_inst|ro_counter\(2),
 	datac => \gen_ro:2:ro_inst|ro_counter\(2),
 	datad => \Mux59~4_combout\,
@@ -31660,7 +31619,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N28
 \Mux59~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~6_combout\ = (\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\) # ((\Mux59~3_combout\)))) # (!\challenge_rit[3]~input_o\ & (!\challenge_rit[2]~input_o\ & ((\Mux59~5_combout\))))
+-- \Mux59~6_combout\ = (\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\) # ((\Mux59~3_combout\)))) # (!\chal_rit[3]~input_o\ & (!\chal_rit[2]~input_o\ & ((\Mux59~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31668,8 +31627,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux59~3_combout\,
 	datad => \Mux59~5_combout\,
 	combout => \Mux59~6_combout\);
@@ -31677,7 +31636,7 @@ PORT MAP (
 -- Location: LCCOMB_X38_Y7_N6
 \Mux59~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux59~9_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux59~6_combout\ & ((\Mux59~8_combout\))) # (!\Mux59~6_combout\ & (\Mux59~1_combout\)))) # (!\challenge_rit[2]~input_o\ & (((\Mux59~6_combout\))))
+-- \Mux59~9_combout\ = (\chal_rit[2]~input_o\ & ((\Mux59~6_combout\ & ((\Mux59~8_combout\))) # (!\Mux59~6_combout\ & (\Mux59~1_combout\)))) # (!\chal_rit[2]~input_o\ & (((\Mux59~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31686,7 +31645,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux59~1_combout\,
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux59~8_combout\,
 	datad => \Mux59~6_combout\,
 	combout => \Mux59~9_combout\);
@@ -31694,7 +31653,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N20
 \Mux60~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~7_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(1))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(1))))))
+-- \Mux60~7_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:7:ro_inst|ro_counter\(1))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31702,8 +31661,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(1),
 	datad => \gen_ro:3:ro_inst|ro_counter\(1),
 	combout => \Mux60~7_combout\);
@@ -31711,7 +31670,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N2
 \Mux60~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~8_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux60~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(1))) # (!\Mux60~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(1)))))) # (!\challenge_rit[2]~input_o\ & (((\Mux60~7_combout\))))
+-- \Mux60~8_combout\ = (\chal_rit[2]~input_o\ & ((\Mux60~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(1))) # (!\Mux60~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(1)))))) # (!\chal_rit[2]~input_o\ & (((\Mux60~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31720,7 +31679,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(1),
-	datab => \challenge_rit[2]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(1),
 	datad => \Mux60~7_combout\,
 	combout => \Mux60~8_combout\);
@@ -31728,7 +31687,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N16
 \Mux60~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~0_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(1))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(1))))
+-- \Mux60~0_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(1))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31736,8 +31695,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(1),
 	datad => \gen_ro:10:ro_inst|ro_counter\(1),
 	combout => \Mux60~0_combout\);
@@ -31745,7 +31704,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N26
 \Mux60~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~1_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux60~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(1)))) # (!\Mux60~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(1))))) # (!\challenge_rit[3]~input_o\ & (((\Mux60~0_combout\))))
+-- \Mux60~1_combout\ = (\chal_rit[3]~input_o\ & ((\Mux60~0_combout\ & ((\gen_ro:14:ro_inst|ro_counter\(1)))) # (!\Mux60~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(1))))) # (!\chal_rit[3]~input_o\ & (((\Mux60~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31754,7 +31713,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:6:ro_inst|ro_counter\(1),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:14:ro_inst|ro_counter\(1),
 	datad => \Mux60~0_combout\,
 	combout => \Mux60~1_combout\);
@@ -31762,7 +31721,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N20
 \Mux60~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~2_combout\ = (\challenge_rit[2]~input_o\ & (\challenge_rit[3]~input_o\)) # (!\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(1))) # (!\challenge_rit[3]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(1))))))
+-- \Mux60~2_combout\ = (\chal_rit[2]~input_o\ & (\chal_rit[3]~input_o\)) # (!\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(1))) # (!\chal_rit[3]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31770,8 +31729,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(1),
 	datad => \gen_ro:1:ro_inst|ro_counter\(1),
 	combout => \Mux60~2_combout\);
@@ -31779,7 +31738,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N14
 \Mux60~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~3_combout\ = (\challenge_rit[2]~input_o\ & ((\Mux60~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(1)))) # (!\Mux60~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(1))))) # (!\challenge_rit[2]~input_o\ & (((\Mux60~2_combout\))))
+-- \Mux60~3_combout\ = (\chal_rit[2]~input_o\ & ((\Mux60~2_combout\ & ((\gen_ro:13:ro_inst|ro_counter\(1)))) # (!\Mux60~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(1))))) # (!\chal_rit[2]~input_o\ & (((\Mux60~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31787,7 +31746,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(1),
 	datac => \gen_ro:13:ro_inst|ro_counter\(1),
 	datad => \Mux60~2_combout\,
@@ -31796,7 +31755,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N12
 \Mux60~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~4_combout\ = (\challenge_rit[2]~input_o\ & ((\challenge_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(1))))) # (!\challenge_rit[2]~input_o\ & (!\challenge_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(1)))))
+-- \Mux60~4_combout\ = (\chal_rit[2]~input_o\ & ((\chal_rit[3]~input_o\) # ((\gen_ro:8:ro_inst|ro_counter\(1))))) # (!\chal_rit[2]~input_o\ & (!\chal_rit[3]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31804,8 +31763,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[2]~input_o\,
-	datab => \challenge_rit[3]~input_o\,
+	dataa => \chal_rit[2]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(1),
 	datad => \gen_ro:0:ro_inst|ro_counter\(1),
 	combout => \Mux60~4_combout\);
@@ -31813,7 +31772,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N6
 \Mux60~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~5_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux60~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(1))) # (!\Mux60~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(1)))))) # (!\challenge_rit[3]~input_o\ & (((\Mux60~4_combout\))))
+-- \Mux60~5_combout\ = (\chal_rit[3]~input_o\ & ((\Mux60~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(1))) # (!\Mux60~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(1)))))) # (!\chal_rit[3]~input_o\ & (((\Mux60~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31822,7 +31781,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(1),
-	datab => \challenge_rit[3]~input_o\,
+	datab => \chal_rit[3]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(1),
 	datad => \Mux60~4_combout\,
 	combout => \Mux60~5_combout\);
@@ -31830,7 +31789,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N28
 \Mux60~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~6_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\Mux60~3_combout\)) # (!\challenge_rit[5]~input_o\ & ((\Mux60~5_combout\)))))
+-- \Mux60~6_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\Mux60~3_combout\)) # (!\chal_rit[5]~input_o\ & ((\Mux60~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31838,8 +31797,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \Mux60~3_combout\,
 	datad => \Mux60~5_combout\,
 	combout => \Mux60~6_combout\);
@@ -31847,7 +31806,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N18
 \Mux60~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux60~9_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux60~6_combout\ & (\Mux60~8_combout\)) # (!\Mux60~6_combout\ & ((\Mux60~1_combout\))))) # (!\challenge_rit[4]~input_o\ & (((\Mux60~6_combout\))))
+-- \Mux60~9_combout\ = (\chal_rit[4]~input_o\ & ((\Mux60~6_combout\ & (\Mux60~8_combout\)) # (!\Mux60~6_combout\ & ((\Mux60~1_combout\))))) # (!\chal_rit[4]~input_o\ & (((\Mux60~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31855,7 +31814,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \Mux60~8_combout\,
 	datac => \Mux60~1_combout\,
 	datad => \Mux60~6_combout\,
@@ -31864,7 +31823,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N16
 \Mux29~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~7_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(1))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(1)))))
+-- \Mux29~7_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:7:ro_inst|ro_counter\(1))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:3:ro_inst|ro_counter\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31872,8 +31831,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:7:ro_inst|ro_counter\(1),
 	datad => \gen_ro:3:ro_inst|ro_counter\(1),
 	combout => \Mux29~7_combout\);
@@ -31881,7 +31840,7 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y5_N22
 \Mux29~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~8_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux29~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(1))) # (!\Mux29~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(1)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux29~7_combout\))))
+-- \Mux29~8_combout\ = (\chal_lft[2]~input_o\ & ((\Mux29~7_combout\ & (\gen_ro:15:ro_inst|ro_counter\(1))) # (!\Mux29~7_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(1)))))) # (!\chal_lft[2]~input_o\ & (((\Mux29~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31890,7 +31849,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:15:ro_inst|ro_counter\(1),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:11:ro_inst|ro_counter\(1),
 	datad => \Mux29~7_combout\,
 	combout => \Mux29~8_combout\);
@@ -31898,7 +31857,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N8
 \Mux29~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~0_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(1)))) # (!\challenge_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(1)))))
+-- \Mux29~0_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & ((\gen_ro:10:ro_inst|ro_counter\(1)))) # (!\chal_lft[2]~input_o\ & (\gen_ro:2:ro_inst|ro_counter\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31906,8 +31865,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:2:ro_inst|ro_counter\(1),
 	datad => \gen_ro:10:ro_inst|ro_counter\(1),
 	combout => \Mux29~0_combout\);
@@ -31915,7 +31874,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N22
 \Mux29~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~1_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux29~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(1))) # (!\Mux29~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(1)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux29~0_combout\))))
+-- \Mux29~1_combout\ = (\chal_lft[3]~input_o\ & ((\Mux29~0_combout\ & (\gen_ro:14:ro_inst|ro_counter\(1))) # (!\Mux29~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(1)))))) # (!\chal_lft[3]~input_o\ & (((\Mux29~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31923,7 +31882,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(1),
 	datac => \Mux29~0_combout\,
 	datad => \gen_ro:6:ro_inst|ro_counter\(1),
@@ -31932,7 +31891,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N4
 \Mux29~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~2_combout\ = (\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(1))))) # (!\challenge_lft[3]~input_o\ & (!\challenge_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(1)))))
+-- \Mux29~2_combout\ = (\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\) # ((\gen_ro:5:ro_inst|ro_counter\(1))))) # (!\chal_lft[3]~input_o\ & (!\chal_lft[2]~input_o\ & ((\gen_ro:1:ro_inst|ro_counter\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31940,8 +31899,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(1),
 	datad => \gen_ro:1:ro_inst|ro_counter\(1),
 	combout => \Mux29~2_combout\);
@@ -31949,7 +31908,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N30
 \Mux29~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~3_combout\ = (\challenge_lft[2]~input_o\ & ((\Mux29~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(1))) # (!\Mux29~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(1)))))) # (!\challenge_lft[2]~input_o\ & (((\Mux29~2_combout\))))
+-- \Mux29~3_combout\ = (\chal_lft[2]~input_o\ & ((\Mux29~2_combout\ & (\gen_ro:13:ro_inst|ro_counter\(1))) # (!\Mux29~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(1)))))) # (!\chal_lft[2]~input_o\ & (((\Mux29~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31958,7 +31917,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:13:ro_inst|ro_counter\(1),
-	datab => \challenge_lft[2]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \Mux29~2_combout\,
 	datad => \gen_ro:9:ro_inst|ro_counter\(1),
 	combout => \Mux29~3_combout\);
@@ -31966,7 +31925,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N24
 \Mux29~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~4_combout\ = (\challenge_lft[3]~input_o\ & (\challenge_lft[2]~input_o\)) # (!\challenge_lft[3]~input_o\ & ((\challenge_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(1))) # (!\challenge_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(1))))))
+-- \Mux29~4_combout\ = (\chal_lft[3]~input_o\ & (\chal_lft[2]~input_o\)) # (!\chal_lft[3]~input_o\ & ((\chal_lft[2]~input_o\ & (\gen_ro:8:ro_inst|ro_counter\(1))) # (!\chal_lft[2]~input_o\ & ((\gen_ro:0:ro_inst|ro_counter\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31974,8 +31933,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[3]~input_o\,
-	datab => \challenge_lft[2]~input_o\,
+	dataa => \chal_lft[3]~input_o\,
+	datab => \chal_lft[2]~input_o\,
 	datac => \gen_ro:8:ro_inst|ro_counter\(1),
 	datad => \gen_ro:0:ro_inst|ro_counter\(1),
 	combout => \Mux29~4_combout\);
@@ -31983,7 +31942,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N2
 \Mux29~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~5_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux29~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(1))) # (!\Mux29~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(1)))))) # (!\challenge_lft[3]~input_o\ & (((\Mux29~4_combout\))))
+-- \Mux29~5_combout\ = (\chal_lft[3]~input_o\ & ((\Mux29~4_combout\ & (\gen_ro:12:ro_inst|ro_counter\(1))) # (!\Mux29~4_combout\ & ((\gen_ro:4:ro_inst|ro_counter\(1)))))) # (!\chal_lft[3]~input_o\ & (((\Mux29~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31993,14 +31952,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \gen_ro:12:ro_inst|ro_counter\(1),
 	datab => \gen_ro:4:ro_inst|ro_counter\(1),
-	datac => \challenge_lft[3]~input_o\,
+	datac => \chal_lft[3]~input_o\,
 	datad => \Mux29~4_combout\,
 	combout => \Mux29~5_combout\);
 
 -- Location: LCCOMB_X36_Y7_N0
 \Mux29~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~6_combout\ = (\challenge_lft[5]~input_o\ & ((\challenge_lft[4]~input_o\) # ((\Mux29~3_combout\)))) # (!\challenge_lft[5]~input_o\ & (!\challenge_lft[4]~input_o\ & ((\Mux29~5_combout\))))
+-- \Mux29~6_combout\ = (\chal_lft[5]~input_o\ & ((\chal_lft[4]~input_o\) # ((\Mux29~3_combout\)))) # (!\chal_lft[5]~input_o\ & (!\chal_lft[4]~input_o\ & ((\Mux29~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32008,8 +31967,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[5]~input_o\,
-	datab => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[5]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux29~3_combout\,
 	datad => \Mux29~5_combout\,
 	combout => \Mux29~6_combout\);
@@ -32017,7 +31976,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y7_N10
 \Mux29~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux29~9_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux29~6_combout\ & (\Mux29~8_combout\)) # (!\Mux29~6_combout\ & ((\Mux29~1_combout\))))) # (!\challenge_lft[4]~input_o\ & (((\Mux29~6_combout\))))
+-- \Mux29~9_combout\ = (\chal_lft[4]~input_o\ & ((\Mux29~6_combout\ & (\Mux29~8_combout\)) # (!\Mux29~6_combout\ & ((\Mux29~1_combout\))))) # (!\chal_lft[4]~input_o\ & (((\Mux29~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32026,7 +31985,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux29~8_combout\,
-	datab => \challenge_lft[4]~input_o\,
+	datab => \chal_lft[4]~input_o\,
 	datac => \Mux29~1_combout\,
 	datad => \Mux29~6_combout\,
 	combout => \Mux29~9_combout\);
@@ -32034,7 +31993,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N4
 \Mux61~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~0_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(0)))) # (!\challenge_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(0)))))
+-- \Mux61~0_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & ((\gen_ro:5:ro_inst|ro_counter\(0)))) # (!\chal_rit[5]~input_o\ & (\gen_ro:4:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32042,8 +32001,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:4:ro_inst|ro_counter\(0),
 	datad => \gen_ro:5:ro_inst|ro_counter\(0),
 	combout => \Mux61~0_combout\);
@@ -32051,7 +32010,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N6
 \Mux61~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~1_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux61~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(0))) # (!\Mux61~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(0)))))) # (!\challenge_rit[4]~input_o\ & (((\Mux61~0_combout\))))
+-- \Mux61~1_combout\ = (\chal_rit[4]~input_o\ & ((\Mux61~0_combout\ & (\gen_ro:7:ro_inst|ro_counter\(0))) # (!\Mux61~0_combout\ & ((\gen_ro:6:ro_inst|ro_counter\(0)))))) # (!\chal_rit[4]~input_o\ & (((\Mux61~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32059,7 +32018,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:7:ro_inst|ro_counter\(0),
 	datac => \gen_ro:6:ro_inst|ro_counter\(0),
 	datad => \Mux61~0_combout\,
@@ -32068,7 +32027,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N10
 \Mux61~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~7_combout\ = (\challenge_rit[4]~input_o\ & (\challenge_rit[5]~input_o\)) # (!\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\ & (\gen_ro:13:ro_inst|ro_counter\(0))) # (!\challenge_rit[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(0))))))
+-- \Mux61~7_combout\ = (\chal_rit[4]~input_o\ & (\chal_rit[5]~input_o\)) # (!\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\ & (\gen_ro:13:ro_inst|ro_counter\(0))) # (!\chal_rit[5]~input_o\ & ((\gen_ro:12:ro_inst|ro_counter\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32076,8 +32035,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:13:ro_inst|ro_counter\(0),
 	datad => \gen_ro:12:ro_inst|ro_counter\(0),
 	combout => \Mux61~7_combout\);
@@ -32085,7 +32044,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N0
 \Mux61~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~8_combout\ = (\challenge_rit[4]~input_o\ & ((\Mux61~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(0)))) # (!\Mux61~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(0))))) # (!\challenge_rit[4]~input_o\ & (((\Mux61~7_combout\))))
+-- \Mux61~8_combout\ = (\chal_rit[4]~input_o\ & ((\Mux61~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(0)))) # (!\Mux61~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(0))))) # (!\chal_rit[4]~input_o\ & (((\Mux61~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32093,7 +32052,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(0),
 	datac => \gen_ro:15:ro_inst|ro_counter\(0),
 	datad => \Mux61~7_combout\,
@@ -32102,7 +32061,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N8
 \Mux61~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~2_combout\ = (\challenge_rit[4]~input_o\ & ((\challenge_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(0))))) # (!\challenge_rit[4]~input_o\ & (!\challenge_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(0)))))
+-- \Mux61~2_combout\ = (\chal_rit[4]~input_o\ & ((\chal_rit[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(0))))) # (!\chal_rit[4]~input_o\ & (!\chal_rit[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32110,8 +32069,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
-	datab => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(0),
 	datad => \gen_ro:8:ro_inst|ro_counter\(0),
 	combout => \Mux61~2_combout\);
@@ -32119,7 +32078,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N22
 \Mux61~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~3_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux61~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(0)))) # (!\Mux61~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(0))))) # (!\challenge_rit[5]~input_o\ & (((\Mux61~2_combout\))))
+-- \Mux61~3_combout\ = (\chal_rit[5]~input_o\ & ((\Mux61~2_combout\ & ((\gen_ro:11:ro_inst|ro_counter\(0)))) # (!\Mux61~2_combout\ & (\gen_ro:9:ro_inst|ro_counter\(0))))) # (!\chal_rit[5]~input_o\ & (((\Mux61~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32127,7 +32086,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[5]~input_o\,
+	dataa => \chal_rit[5]~input_o\,
 	datab => \gen_ro:9:ro_inst|ro_counter\(0),
 	datac => \Mux61~2_combout\,
 	datad => \gen_ro:11:ro_inst|ro_counter\(0),
@@ -32136,7 +32095,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N20
 \Mux61~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~4_combout\ = (\challenge_rit[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(0)) # ((\challenge_rit[5]~input_o\)))) # (!\challenge_rit[4]~input_o\ & (((!\challenge_rit[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(0)))))
+-- \Mux61~4_combout\ = (\chal_rit[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(0)) # ((\chal_rit[5]~input_o\)))) # (!\chal_rit[4]~input_o\ & (((!\chal_rit[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32144,16 +32103,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[4]~input_o\,
+	dataa => \chal_rit[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(0),
-	datac => \challenge_rit[5]~input_o\,
+	datac => \chal_rit[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(0),
 	combout => \Mux61~4_combout\);
 
 -- Location: LCCOMB_X40_Y9_N18
 \Mux61~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~5_combout\ = (\challenge_rit[5]~input_o\ & ((\Mux61~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(0)))) # (!\Mux61~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(0))))) # (!\challenge_rit[5]~input_o\ & (((\Mux61~4_combout\))))
+-- \Mux61~5_combout\ = (\chal_rit[5]~input_o\ & ((\Mux61~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(0)))) # (!\Mux61~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(0))))) # (!\chal_rit[5]~input_o\ & (((\Mux61~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32162,7 +32121,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(0),
-	datab => \challenge_rit[5]~input_o\,
+	datab => \chal_rit[5]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(0),
 	datad => \Mux61~4_combout\,
 	combout => \Mux61~5_combout\);
@@ -32170,7 +32129,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N12
 \Mux61~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~6_combout\ = (\challenge_rit[3]~input_o\ & (\challenge_rit[2]~input_o\)) # (!\challenge_rit[3]~input_o\ & ((\challenge_rit[2]~input_o\ & (\Mux61~3_combout\)) # (!\challenge_rit[2]~input_o\ & ((\Mux61~5_combout\)))))
+-- \Mux61~6_combout\ = (\chal_rit[3]~input_o\ & (\chal_rit[2]~input_o\)) # (!\chal_rit[3]~input_o\ & ((\chal_rit[2]~input_o\ & (\Mux61~3_combout\)) # (!\chal_rit[2]~input_o\ & ((\Mux61~5_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32178,8 +32137,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_rit[3]~input_o\,
-	datab => \challenge_rit[2]~input_o\,
+	dataa => \chal_rit[3]~input_o\,
+	datab => \chal_rit[2]~input_o\,
 	datac => \Mux61~3_combout\,
 	datad => \Mux61~5_combout\,
 	combout => \Mux61~6_combout\);
@@ -32187,7 +32146,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N30
 \Mux61~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux61~9_combout\ = (\challenge_rit[3]~input_o\ & ((\Mux61~6_combout\ & ((\Mux61~8_combout\))) # (!\Mux61~6_combout\ & (\Mux61~1_combout\)))) # (!\challenge_rit[3]~input_o\ & (((\Mux61~6_combout\))))
+-- \Mux61~9_combout\ = (\chal_rit[3]~input_o\ & ((\Mux61~6_combout\ & ((\Mux61~8_combout\))) # (!\Mux61~6_combout\ & (\Mux61~1_combout\)))) # (!\chal_rit[3]~input_o\ & (((\Mux61~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32197,14 +32156,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Mux61~1_combout\,
 	datab => \Mux61~8_combout\,
-	datac => \challenge_rit[3]~input_o\,
+	datac => \chal_rit[3]~input_o\,
 	datad => \Mux61~6_combout\,
 	combout => \Mux61~9_combout\);
 
 -- Location: LCCOMB_X39_Y4_N0
 \Mux30~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~0_combout\ = (\challenge_lft[4]~input_o\ & (\challenge_lft[5]~input_o\)) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(0))) # (!\challenge_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(0))))))
+-- \Mux30~0_combout\ = (\chal_lft[4]~input_o\ & (\chal_lft[5]~input_o\)) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & (\gen_ro:5:ro_inst|ro_counter\(0))) # (!\chal_lft[5]~input_o\ & ((\gen_ro:4:ro_inst|ro_counter\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32212,8 +32171,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:5:ro_inst|ro_counter\(0),
 	datad => \gen_ro:4:ro_inst|ro_counter\(0),
 	combout => \Mux30~0_combout\);
@@ -32221,7 +32180,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y4_N10
 \Mux30~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~1_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux30~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(0)))) # (!\Mux30~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(0))))) # (!\challenge_lft[4]~input_o\ & (((\Mux30~0_combout\))))
+-- \Mux30~1_combout\ = (\chal_lft[4]~input_o\ & ((\Mux30~0_combout\ & ((\gen_ro:7:ro_inst|ro_counter\(0)))) # (!\Mux30~0_combout\ & (\gen_ro:6:ro_inst|ro_counter\(0))))) # (!\chal_lft[4]~input_o\ & (((\Mux30~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32229,7 +32188,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:6:ro_inst|ro_counter\(0),
 	datac => \gen_ro:7:ro_inst|ro_counter\(0),
 	datad => \Mux30~0_combout\,
@@ -32238,8 +32197,7 @@ PORT MAP (
 -- Location: LCCOMB_X43_Y9_N28
 \Mux30~7\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~7_combout\ = (\challenge_lft[4]~input_o\ & (((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(0)))) # (!\challenge_lft[5]~input_o\ & 
--- (\gen_ro:12:ro_inst|ro_counter\(0)))))
+-- \Mux30~7_combout\ = (\chal_lft[4]~input_o\ & (((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\ & ((\gen_ro:13:ro_inst|ro_counter\(0)))) # (!\chal_lft[5]~input_o\ & (\gen_ro:12:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32247,16 +32205,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:12:ro_inst|ro_counter\(0),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:13:ro_inst|ro_counter\(0),
 	combout => \Mux30~7_combout\);
 
 -- Location: LCCOMB_X43_Y9_N18
 \Mux30~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~8_combout\ = (\challenge_lft[4]~input_o\ & ((\Mux30~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(0)))) # (!\Mux30~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(0))))) # (!\challenge_lft[4]~input_o\ & (((\Mux30~7_combout\))))
+-- \Mux30~8_combout\ = (\chal_lft[4]~input_o\ & ((\Mux30~7_combout\ & ((\gen_ro:15:ro_inst|ro_counter\(0)))) # (!\Mux30~7_combout\ & (\gen_ro:14:ro_inst|ro_counter\(0))))) # (!\chal_lft[4]~input_o\ & (((\Mux30~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32264,7 +32222,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:14:ro_inst|ro_counter\(0),
 	datac => \gen_ro:15:ro_inst|ro_counter\(0),
 	datad => \Mux30~7_combout\,
@@ -32273,7 +32231,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N24
 \Mux30~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~2_combout\ = (\challenge_lft[4]~input_o\ & ((\challenge_lft[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(0))))) # (!\challenge_lft[4]~input_o\ & (!\challenge_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(0)))))
+-- \Mux30~2_combout\ = (\chal_lft[4]~input_o\ & ((\chal_lft[5]~input_o\) # ((\gen_ro:10:ro_inst|ro_counter\(0))))) # (!\chal_lft[4]~input_o\ & (!\chal_lft[5]~input_o\ & ((\gen_ro:8:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32281,8 +32239,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
-	datab => \challenge_lft[5]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:10:ro_inst|ro_counter\(0),
 	datad => \gen_ro:8:ro_inst|ro_counter\(0),
 	combout => \Mux30~2_combout\);
@@ -32290,7 +32248,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N26
 \Mux30~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~3_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux30~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(0))) # (!\Mux30~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(0)))))) # (!\challenge_lft[5]~input_o\ & (((\Mux30~2_combout\))))
+-- \Mux30~3_combout\ = (\chal_lft[5]~input_o\ & ((\Mux30~2_combout\ & (\gen_ro:11:ro_inst|ro_counter\(0))) # (!\Mux30~2_combout\ & ((\gen_ro:9:ro_inst|ro_counter\(0)))))) # (!\chal_lft[5]~input_o\ & (((\Mux30~2_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32299,7 +32257,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:11:ro_inst|ro_counter\(0),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:9:ro_inst|ro_counter\(0),
 	datad => \Mux30~2_combout\,
 	combout => \Mux30~3_combout\);
@@ -32307,7 +32265,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N2
 \Mux30~4\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~4_combout\ = (\challenge_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(0)) # ((\challenge_lft[5]~input_o\)))) # (!\challenge_lft[4]~input_o\ & (((!\challenge_lft[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(0)))))
+-- \Mux30~4_combout\ = (\chal_lft[4]~input_o\ & ((\gen_ro:2:ro_inst|ro_counter\(0)) # ((\chal_lft[5]~input_o\)))) # (!\chal_lft[4]~input_o\ & (((!\chal_lft[5]~input_o\ & \gen_ro:0:ro_inst|ro_counter\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32315,16 +32273,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[4]~input_o\,
+	dataa => \chal_lft[4]~input_o\,
 	datab => \gen_ro:2:ro_inst|ro_counter\(0),
-	datac => \challenge_lft[5]~input_o\,
+	datac => \chal_lft[5]~input_o\,
 	datad => \gen_ro:0:ro_inst|ro_counter\(0),
 	combout => \Mux30~4_combout\);
 
 -- Location: LCCOMB_X40_Y9_N28
 \Mux30~5\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~5_combout\ = (\challenge_lft[5]~input_o\ & ((\Mux30~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(0)))) # (!\Mux30~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(0))))) # (!\challenge_lft[5]~input_o\ & (((\Mux30~4_combout\))))
+-- \Mux30~5_combout\ = (\chal_lft[5]~input_o\ & ((\Mux30~4_combout\ & ((\gen_ro:3:ro_inst|ro_counter\(0)))) # (!\Mux30~4_combout\ & (\gen_ro:1:ro_inst|ro_counter\(0))))) # (!\chal_lft[5]~input_o\ & (((\Mux30~4_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32333,7 +32291,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \gen_ro:1:ro_inst|ro_counter\(0),
-	datab => \challenge_lft[5]~input_o\,
+	datab => \chal_lft[5]~input_o\,
 	datac => \gen_ro:3:ro_inst|ro_counter\(0),
 	datad => \Mux30~4_combout\,
 	combout => \Mux30~5_combout\);
@@ -32341,7 +32299,7 @@ PORT MAP (
 -- Location: LCCOMB_X40_Y9_N14
 \Mux30~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~6_combout\ = (\challenge_lft[2]~input_o\ & ((\challenge_lft[3]~input_o\) # ((\Mux30~3_combout\)))) # (!\challenge_lft[2]~input_o\ & (!\challenge_lft[3]~input_o\ & ((\Mux30~5_combout\))))
+-- \Mux30~6_combout\ = (\chal_lft[2]~input_o\ & ((\chal_lft[3]~input_o\) # ((\Mux30~3_combout\)))) # (!\chal_lft[2]~input_o\ & (!\chal_lft[3]~input_o\ & ((\Mux30~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32349,8 +32307,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \challenge_lft[2]~input_o\,
-	datab => \challenge_lft[3]~input_o\,
+	dataa => \chal_lft[2]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux30~3_combout\,
 	datad => \Mux30~5_combout\,
 	combout => \Mux30~6_combout\);
@@ -32358,7 +32316,7 @@ PORT MAP (
 -- Location: LCCOMB_X39_Y7_N0
 \Mux30~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Mux30~9_combout\ = (\challenge_lft[3]~input_o\ & ((\Mux30~6_combout\ & ((\Mux30~8_combout\))) # (!\Mux30~6_combout\ & (\Mux30~1_combout\)))) # (!\challenge_lft[3]~input_o\ & (((\Mux30~6_combout\))))
+-- \Mux30~9_combout\ = (\chal_lft[3]~input_o\ & ((\Mux30~6_combout\ & ((\Mux30~8_combout\))) # (!\Mux30~6_combout\ & (\Mux30~1_combout\)))) # (!\chal_lft[3]~input_o\ & (((\Mux30~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32367,7 +32325,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Mux30~1_combout\,
-	datab => \challenge_lft[3]~input_o\,
+	datab => \chal_lft[3]~input_o\,
 	datac => \Mux30~8_combout\,
 	datad => \Mux30~6_combout\,
 	combout => \Mux30~9_combout\);
@@ -32969,7 +32927,7 @@ PORT MAP (
 	q => \done_LED~reg0_q\);
 
 -- Location: IOIBUF_X78_Y34_N23
-\challenge_lft[1]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[1]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -32977,11 +32935,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(1),
-	o => \challenge_lft[1]~input_o\);
+	i => ww_chal_lft(1),
+	o => \chal_lft[1]~input_o\);
 
 -- Location: IOIBUF_X78_Y16_N23
-\challenge_lft[0]~input\ : fiftyfivenm_io_ibuf
+\chal_lft[0]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -32989,11 +32947,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_lft(0),
-	o => \challenge_lft[0]~input_o\);
+	i => ww_chal_lft(0),
+	o => \chal_lft[0]~input_o\);
 
 -- Location: IOIBUF_X51_Y0_N22
-\challenge_rit[1]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[1]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -33001,11 +32959,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(1),
-	o => \challenge_rit[1]~input_o\);
+	i => ww_chal_rit(1),
+	o => \chal_rit[1]~input_o\);
 
 -- Location: IOIBUF_X34_Y0_N8
-\challenge_rit[0]~input\ : fiftyfivenm_io_ibuf
+\chal_rit[0]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -33013,8 +32971,8 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_challenge_rit(0),
-	o => \challenge_rit[0]~input_o\);
+	i => ww_chal_rit(0),
+	o => \chal_rit[0]~input_o\);
 
 -- Location: UNVM_X0_Y40_N40
 \~QUARTUS_CREATED_UNVM~\ : fiftyfivenm_unvm

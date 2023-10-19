@@ -26,7 +26,7 @@
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:37:57 on Oct 18,2023
+# Start time: 20:09:22 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,11 +36,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ring_oscillator
 # -- Compiling architecture rtl of ring_oscillator
-# End time: 16:37:57 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:09:22 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:37:57 on Oct 18,2023
+# Start time: 20:09:22 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -51,12 +51,12 @@
 # -- Compiling entity ro_puf
 # -- Compiling architecture rtl of ro_puf
 # -- Loading entity ring_oscillator
-# End time: 16:37:57 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:09:22 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:37:57 on Oct 18,2023
+# Start time: 20:09:22 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,12 +67,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading package NUMERIC_STD
 # -- Loading entity ro_puf
-# End time: 16:37:57 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:09:22 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 16:37:58 on Oct 18,2023
+# Start time: 20:09:22 on Oct 18,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -105,10 +105,6 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 400 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /ro_puf_tb/UUT
 do ro_puf_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -124,7 +120,7 @@ do ro_puf_run_msim_rtl_vhdl.do
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:42:28 on Oct 18,2023
+# Start time: 20:15:23 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -134,11 +130,11 @@ do ro_puf_run_msim_rtl_vhdl.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ring_oscillator
 # -- Compiling architecture rtl of ring_oscillator
-# End time: 16:42:28 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:15:23 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:42:28 on Oct 18,2023
+# Start time: 20:15:23 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -149,95 +145,30 @@ do ro_puf_run_msim_rtl_vhdl.do
 # -- Compiling entity ro_puf
 # -- Compiling architecture rtl of ro_puf
 # -- Loading entity ring_oscillator
-# End time: 16:42:28 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:15:23 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:42:29 on Oct 18,2023
+# Start time: 20:15:23 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
 # -- Compiling entity ro_puf_tb
 # -- Compiling architecture test_fixture of ro_puf_tb
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
 # -- Loading entity ro_puf
-# ** Error (suppressible): C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd(87): (vcom-1937) Choice in CASE statement alternative must be locally static.
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd(114): VHDL Compiler exiting
-# End time: 16:42:29 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./ro_puf_run_msim_rtl_vhdl.do line 11
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}"
-do ro_puf_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:50:34 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ring_oscillator
-# -- Compiling architecture rtl of ring_oscillator
-# End time: 16:50:34 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:50:34 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ro_puf
-# -- Compiling architecture rtl of ro_puf
-# -- Loading entity ring_oscillator
-# End time: 16:50:34 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 16:50:34 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ro_puf_tb
-# -- Compiling architecture test_fixture of ro_puf_tb
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading entity ro_puf
-# End time: 16:50:34 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:15:23 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
-# End time: 16:50:35 on Oct 18,2023, Elapsed time: 0:12:37
-# Errors: 1, Warnings: 2
+# End time: 20:15:24 on Oct 18,2023, Elapsed time: 0:06:02
+# Errors: 0, Warnings: 0
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 16:50:35 on Oct 18,2023
+# Start time: 20:15:24 on Oct 18,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -270,6 +201,7 @@ do ro_puf_run_msim_rtl_vhdl.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 400 ns
+run
 do ro_puf_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -285,7 +217,7 @@ do ro_puf_run_msim_rtl_vhdl.do
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:35:36 on Oct 18,2023
+# Start time: 20:19:05 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -295,11 +227,11 @@ do ro_puf_run_msim_rtl_vhdl.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ring_oscillator
 # -- Compiling architecture rtl of ring_oscillator
-# End time: 17:35:36 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:19:05 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:35:36 on Oct 18,2023
+# Start time: 20:19:05 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -310,30 +242,30 @@ do ro_puf_run_msim_rtl_vhdl.do
 # -- Compiling entity ro_puf
 # -- Compiling architecture rtl of ro_puf
 # -- Loading entity ring_oscillator
-# End time: 17:35:36 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:19:05 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:35:36 on Oct 18,2023
+# Start time: 20:19:05 on Oct 18,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity ro_puf_tb
-# -- Compiling architecture test_fixture of ro_puf_tb
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading package NUMERIC_STD
+# -- Compiling entity ro_puf_tb
+# -- Compiling architecture test_fixture of ro_puf_tb
 # -- Loading entity ro_puf
-# End time: 17:35:36 on Oct 18,2023, Elapsed time: 0:00:00
+# End time: 20:19:05 on Oct 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
-# End time: 17:35:37 on Oct 18,2023, Elapsed time: 0:45:02
+# End time: 20:19:06 on Oct 18,2023, Elapsed time: 0:03:42
 # Errors: 0, Warnings: 0
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 17:35:37 on Oct 18,2023
+# Start time: 20:19:06 on Oct 18,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -366,197 +298,6 @@ do ro_puf_run_msim_rtl_vhdl.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 400 ns
-do ro_puf_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:45:08 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ring_oscillator
-# -- Compiling architecture rtl of ring_oscillator
-# End time: 17:45:08 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:45:08 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ro_puf
-# -- Compiling architecture rtl of ro_puf
-# -- Loading entity ring_oscillator
-# End time: 17:45:08 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:45:08 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ro_puf_tb
-# -- Compiling architecture test_fixture of ro_puf_tb
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading entity ro_puf
-# End time: 17:45:08 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
-# End time: 17:45:09 on Oct 18,2023, Elapsed time: 0:09:32
-# Errors: 0, Warnings: 0
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 17:45:09 on Oct 18,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.ro_puf_tb(test_fixture)#1
-# Loading work.ro_puf(rtl)#1
-# Loading work.ring_oscillator(rtl)#1
-# Loading work.ring_oscillator(rtl)#2
-# Loading work.ring_oscillator(rtl)#3
-# Loading work.ring_oscillator(rtl)#4
-# Loading work.ring_oscillator(rtl)#5
-# Loading work.ring_oscillator(rtl)#6
-# Loading work.ring_oscillator(rtl)#7
-# Loading work.ring_oscillator(rtl)#8
-# Loading work.ring_oscillator(rtl)#9
-# Loading work.ring_oscillator(rtl)#10
-# Loading work.ring_oscillator(rtl)#11
-# Loading work.ring_oscillator(rtl)#12
-# Loading work.ring_oscillator(rtl)#13
-# Loading work.ring_oscillator(rtl)#14
-# Loading work.ring_oscillator(rtl)#15
-# Loading work.ring_oscillator(rtl)#16
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 400 ns
-do ro_puf_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:51:31 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ring_oscillator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ring_oscillator
-# -- Compiling architecture rtl of ring_oscillator
-# End time: 17:51:31 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:51:31 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ro_puf
-# -- Compiling architecture rtl of ro_puf
-# -- Loading entity ring_oscillator
-# End time: 17:51:31 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 17:51:31 on Oct 18,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/ro_puf/ro_puf_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ro_puf_tb
-# -- Compiling architecture test_fixture of ro_puf_tb
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading entity ro_puf
-# End time: 17:51:31 on Oct 18,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  ro_puf_tb
-# End time: 17:51:32 on Oct 18,2023, Elapsed time: 0:06:23
-# Errors: 0, Warnings: 0
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" ro_puf_tb 
-# Start time: 17:51:32 on Oct 18,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.ro_puf_tb(test_fixture)#1
-# Loading work.ro_puf(rtl)#1
-# Loading work.ring_oscillator(rtl)#1
-# Loading work.ring_oscillator(rtl)#2
-# Loading work.ring_oscillator(rtl)#3
-# Loading work.ring_oscillator(rtl)#4
-# Loading work.ring_oscillator(rtl)#5
-# Loading work.ring_oscillator(rtl)#6
-# Loading work.ring_oscillator(rtl)#7
-# Loading work.ring_oscillator(rtl)#8
-# Loading work.ring_oscillator(rtl)#9
-# Loading work.ring_oscillator(rtl)#10
-# Loading work.ring_oscillator(rtl)#11
-# Loading work.ring_oscillator(rtl)#12
-# Loading work.ring_oscillator(rtl)#13
-# Loading work.ring_oscillator(rtl)#14
-# Loading work.ring_oscillator(rtl)#15
-# Loading work.ring_oscillator(rtl)#16
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 400 ns
-# End time: 17:54:50 on Oct 18,2023, Elapsed time: 0:03:18
+run
+# End time: 20:20:46 on Oct 18,2023, Elapsed time: 0:01:40
 # Errors: 0, Warnings: 0

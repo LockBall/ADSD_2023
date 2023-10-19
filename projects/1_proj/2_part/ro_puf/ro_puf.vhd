@@ -36,8 +36,8 @@ entity ro_puf is
 		--ro_outs        : buffer std_logic_vector(0 to ro_count);
 		reset		      : in	std_logic;
 		pulse_in	      : in	std_logic;
-		challenge_lft	: in	std_logic_vector(0 to 5);
-		challenge_rit	: in	std_logic_vector(0 to 5);
+		chal_lft	: in	std_logic_vector(0 to 5);
+		chal_rit	: in	std_logic_vector(0 to 5);
 
 		--chal_lft_6     : buffer integer range 0 to 32; -- left 6 bits of challenge
 		--chal_rit_6     : buffer integer range 0 to 32; -- right 6 bits of challenge
@@ -74,8 +74,8 @@ architecture rtl of ro_puf is
   
 	--ro_ctr_ary_out <= ro_ctr_ary_sig ;
 	-- https://stackoverflow.com/questions/35102097/vhdl-type-conversion-found-4-possible-definitions
-	chal_lft_6 <= to_integer(unsigned(challenge_lft));
-	chal_rit_6 <= to_integer(unsigned(challenge_rit));
+	chal_lft_6 <= to_integer(unsigned(chal_lft));
+	chal_rit_6 <= to_integer(unsigned(chal_rit));
 	
 	chal_lft_val <= ro_ctr_ary_sig(chal_lft_6); -- value from counter array at challenge left location
 	chal_rit_val <= ro_ctr_ary_sig(chal_rit_6); -- value from counter array at challenge right location
