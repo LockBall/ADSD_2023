@@ -14,11 +14,3 @@ Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_g
 Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
 Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
 Warning (332125): Found combinational loop of 24 nodes File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
-Extra Info (176273): Performing register packing on registers with non-logic cell location assignments
-Extra Info (176274): Completed register packing on registers with non-logic cell location assignments
-Extra Info (176236): Started Fast Input/Output/OE register processing
-Extra Info (176237): Finished Fast Input/Output/OE register processing
-Extra Info (176238): Start inferring scan chains for DSP blocks
-Extra Info (176239): Inferring scan chains for DSP blocks is complete
-Extra Info (176248): Moving registers into I/O cells, Multiplier Blocks, and RAM blocks to improve timing and density
-Extra Info (176249): Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks

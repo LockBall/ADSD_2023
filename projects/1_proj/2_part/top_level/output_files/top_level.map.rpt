@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Oct 19 18:34:52 2023
+Thu Oct 19 18:58:38 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,60 +14,61 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
- 11. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
- 12. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
- 13. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
- 14. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
- 15. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
- 16. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
- 17. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
- 18. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
- 19. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
- 20. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
- 21. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
- 22. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
- 23. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
- 24. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
- 25. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
- 26. Parameter Settings for User Entity Instance: Top-level Entity: |top_level
- 27. Parameter Settings for User Entity Instance: ro_puf:ro_puf
- 28. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
- 29. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
- 30. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
- 31. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
- 32. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
- 33. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
- 34. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
- 35. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
- 36. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
- 37. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
- 38. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
- 39. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
- 40. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
- 41. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
- 42. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
- 43. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
- 44. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst"
- 45. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst"
- 46. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst"
- 47. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst"
- 48. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst"
- 49. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst"
- 50. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst"
- 51. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst"
- 52. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst"
- 53. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst"
- 54. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst"
- 55. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst"
- 56. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst"
- 57. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst"
- 58. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst"
- 59. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst"
- 60. Post-Synthesis Netlist Statistics for Top Partition
- 61. Elapsed Time Per Partition
- 62. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
+ 12. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
+ 13. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
+ 14. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
+ 15. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
+ 16. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
+ 17. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
+ 18. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
+ 19. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
+ 20. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
+ 21. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
+ 22. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
+ 23. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
+ 24. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
+ 25. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
+ 26. Source assignments for ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
+ 27. Parameter Settings for User Entity Instance: Top-level Entity: |top_level
+ 28. Parameter Settings for User Entity Instance: ro_puf:ro_puf
+ 29. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst
+ 30. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst
+ 31. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst
+ 32. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst
+ 33. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst
+ 34. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst
+ 35. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst
+ 36. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst
+ 37. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst
+ 38. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst
+ 39. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst
+ 40. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst
+ 41. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst
+ 42. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst
+ 43. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst
+ 44. Parameter Settings for User Entity Instance: ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst
+ 45. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst"
+ 46. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:14:ro_inst"
+ 47. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:13:ro_inst"
+ 48. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:12:ro_inst"
+ 49. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:11:ro_inst"
+ 50. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst"
+ 51. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:9:ro_inst"
+ 52. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:8:ro_inst"
+ 53. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:7:ro_inst"
+ 54. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:6:ro_inst"
+ 55. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:5:ro_inst"
+ 56. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:4:ro_inst"
+ 57. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:3:ro_inst"
+ 58. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:2:ro_inst"
+ 59. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst"
+ 60. Port Connectivity Checks: "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst"
+ 61. Post-Synthesis Netlist Statistics for Top Partition
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
 
 
 
@@ -94,16 +95,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 19 18:34:52 2023          ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 19 18:58:38 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top_level                                      ;
 ; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 1,459                                          ;
-;     Total combinational functions  ; 1,458                                          ;
+; Total logic elements               ; 1,465                                          ;
+;     Total combinational functions  ; 1,464                                          ;
 ;     Dedicated logic registers      ; 549                                            ;
 ; Total registers                    ; 549                                            ;
-; Total pins                         ; 19                                             ;
+; Total pins                         ; 7                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -235,30 +236,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,459 ;
+; Estimated Total logic elements              ; 1,465 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1458  ;
+; Total combinational functions               ; 1464  ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 649   ;
-;     -- 3 input functions                    ; 83    ;
+;     -- 3 input functions                    ; 89    ;
 ;     -- <=2 input functions                  ; 726   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 891   ;
+;     -- normal mode                          ; 897   ;
 ;     -- arithmetic mode                      ; 567   ;
 ;                                             ;       ;
 ; Total registers                             ; 549   ;
 ;     -- Dedicated logic registers            ; 549   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 19    ;
+; I/O pins                                    ; 7     ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 499   ;
-; Total fan-out                               ; 6300  ;
-; Average fan-out                             ; 3.08  ;
+; Total fan-out                               ; 6282  ;
+; Average fan-out                             ; 3.10  ;
 +---------------------------------------------+-------+
 
 
@@ -267,7 +268,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                     ; Entity Name     ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
-; |top_level                             ; 1458 (85)           ; 549 (51)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 19   ; 0            ; 0          ; |top_level                                              ; top_level       ; work         ;
+; |top_level                             ; 1464 (91)           ; 549 (51)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |top_level                                              ; top_level       ; work         ;
 ;    |ro_puf:ro_puf|                     ; 1373 (685)          ; 498 (2)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf                                ; ro_puf          ; work         ;
 ;       |ring_oscillator:\ro:0:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst  ; ring_oscillator ; work         ;
 ;       |ring_oscillator:\ro:10:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst ; ring_oscillator ; work         ;
@@ -296,12 +297,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 549   ;
 ; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 496   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 541   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; chal_rit[5]                            ; 118     ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -310,7 +321,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |top_level|ro_puf:ro_puf|Mux21 ;
-; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |top_level|ro_puf:ro_puf|Mux40 ;
+; 16:1               ; 31 bits   ; 310 LEs       ; 310 LEs              ; 0 LEs                  ; No         ; |top_level|ro_puf:ro_puf|Mux41 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
@@ -1173,25 +1184,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 19                          ;
+; boundary_port         ; 7                           ;
 ; cycloneiii_ff         ; 549                         ;
-;     ENA               ; 7                           ;
+;     ENA               ; 13                          ;
 ;     ENA CLR           ; 496                         ;
 ;     ENA SCLR          ; 32                          ;
-;     ENA SLD           ; 6                           ;
 ;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 1458                        ;
+; cycloneiii_lcell_comb ; 1464                        ;
 ;     arith             ; 567                         ;
 ;         2 data inputs ; 490                         ;
 ;         3 data inputs ; 77                          ;
-;     normal            ; 891                         ;
+;     normal            ; 897                         ;
 ;         1 data inputs ; 212                         ;
 ;         2 data inputs ; 24                          ;
-;         3 data inputs ; 6                           ;
+;         3 data inputs ; 12                          ;
 ;         4 data inputs ; 649                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.23                        ;
+; Average LUT depth     ; 6.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1210,11 +1220,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Oct 19 18:34:42 2023
+    Info: Processing started: Thu Oct 19 18:58:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-RTL File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 33
+    Info (12022): Found design unit 1: top_level-RTL File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 31
     Info (12023): Found entity 1: top_level File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file ro_puf.vhd
     Info (12022): Found design unit 1: ro_puf-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 46
@@ -1226,8 +1236,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file top_lev
     Info (12022): Found design unit 1: top_level_tb-test_fixture File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd Line: 20
     Info (12023): Found entity 1: top_level_tb File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd Line: 11
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(36): object "resp_ary" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 36
-Info (12128): Elaborating entity "ro_puf" for hierarchy "ro_puf:ro_puf" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 50
+Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(34): object "resp_ary" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 34
+Info (12128): Elaborating entity "ro_puf" for hierarchy "ro_puf:ro_puf" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 49
 Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(58): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 58
 Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 77
 Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 77
@@ -1425,14 +1435,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1479 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1473 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 1460 logic cells
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 1466 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Thu Oct 19 18:34:52 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Thu Oct 19 18:58:38 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

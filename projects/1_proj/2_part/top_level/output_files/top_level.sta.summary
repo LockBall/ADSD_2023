@@ -3,96 +3,96 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'tl_clock'
-Slack : -14.477
-TNS   : -191.254
+Slack : -14.349
+TNS   : -170.780
 
 Type  : Slow 1200mV 85C Model Setup 'pulse~reg0'
-Slack : -2.672
-TNS   : -851.828
+Slack : -2.846
+TNS   : -858.818
 
 Type  : Slow 1200mV 85C Model Hold 'pulse~reg0'
-Slack : -4.418
-TNS   : -1668.471
+Slack : -4.502
+TNS   : -1829.996
 
 Type  : Slow 1200mV 85C Model Hold 'tl_clock'
-Slack : 0.323
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'pulse~reg0'
-Slack : -0.861
-TNS   : -103.753
+Slack : -0.155
+TNS   : -4.757
 
 Type  : Slow 1200mV 85C Model Removal 'pulse~reg0'
-Slack : -1.195
-TNS   : -150.114
+Slack : -1.737
+TNS   : -448.585
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'tl_clock'
 Slack : -3.000
-TNS   : -78.762
+TNS   : -77.359
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pulse~reg0'
 Slack : -1.403
 TNS   : -695.888
 
 Type  : Slow 1200mV 0C Model Setup 'tl_clock'
-Slack : -13.089
-TNS   : -171.127
+Slack : -12.962
+TNS   : -152.115
 
 Type  : Slow 1200mV 0C Model Setup 'pulse~reg0'
-Slack : -2.283
-TNS   : -715.090
+Slack : -2.435
+TNS   : -720.565
 
 Type  : Slow 1200mV 0C Model Hold 'pulse~reg0'
-Slack : -3.956
-TNS   : -1466.617
+Slack : -4.046
+TNS   : -1635.965
 
 Type  : Slow 1200mV 0C Model Hold 'tl_clock'
 Slack : 0.289
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'pulse~reg0'
-Slack : -0.836
-TNS   : -112.886
+Slack : -0.149
+TNS   : -4.619
 
 Type  : Slow 1200mV 0C Model Removal 'pulse~reg0'
-Slack : -1.070
-TNS   : -125.400
+Slack : -1.563
+TNS   : -394.461
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'tl_clock'
 Slack : -3.000
-TNS   : -78.762
+TNS   : -77.359
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pulse~reg0'
 Slack : -1.403
 TNS   : -695.888
 
 Type  : Fast 1200mV 0C Model Setup 'tl_clock'
-Slack : -5.781
-TNS   : -51.656
+Slack : -5.865
+TNS   : -42.676
 
 Type  : Fast 1200mV 0C Model Setup 'pulse~reg0'
-Slack : -0.470
-TNS   : -79.314
+Slack : -0.560
+TNS   : -82.024
 
 Type  : Fast 1200mV 0C Model Hold 'pulse~reg0'
-Slack : -1.558
-TNS   : -557.023
+Slack : -1.684
+TNS   : -642.385
 
 Type  : Fast 1200mV 0C Model Hold 'tl_clock'
 Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'pulse~reg0'
-Slack : -0.694
-TNS   : -145.874
+Slack : -0.395
+TNS   : -24.706
 
 Type  : Fast 1200mV 0C Model Removal 'pulse~reg0'
-Slack : 0.099
-TNS   : 0.000
+Slack : -0.223
+TNS   : -26.103
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'tl_clock'
 Slack : -3.000
-TNS   : -58.487
+TNS   : -57.514
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pulse~reg0'
 Slack : -1.000

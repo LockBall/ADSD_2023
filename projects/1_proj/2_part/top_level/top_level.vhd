@@ -15,11 +15,9 @@ entity top_level is
 	);
 
 	port(
-		tl_clock     : in     std_logic; -- P11 50 MHZ
+		clock     : in     std_logic; -- P11 50 MHZ
 		reset_btn    : in     std_logic;
 		tl_enable    : buffer std_logic := '0';
-		chal_lft     : buffer std_logic_vector(0 to 5) := "000000" ;
-		chal_rit     : buffer std_logic_vector(0 to 5) := "000001" ;		
 		pulse        : buffer std_logic := '0' ;
 		req_resp_out : buffer std_logic; -- request response
 		done_LED	    : out    std_logic := '0' ;
@@ -33,22 +31,23 @@ end entity top_level;
 architecture RTL of top_level is
 
 	type t_resp_ary is array (natural range <>) of std_logic ; -- https://surf-vhdl.com/vhdl-array/
-	signal resp_ary : t_resp_ary(0 to 128);
+		signal resp_ary : t_resp_ary(0 to 128);
 
 	signal tl_count       : natural := 0 ; --counter for timing of inputs
 	signal tl_count_reset : std_logic := '0';
 	signal done           : std_logic := '0';
-	--signal tl_response : std_logic;
 	signal initial_reset  : std_logic := '0';
 	signal reset          : std_logic;
 	signal resp_cnt       : natural := 0 ;
+	signal chal_lft       : std_logic_vector(0 to 5) := "000000" ;
+	signal chal_rit       : std_logic_vector(0 to 5) := "000001" ;
 
 
   begin
   
   
   	ro_puf : entity work.ro_puf port map ( -- ro_puf => top_level
-		clock    => tl_clock,
+		clock    => clock,
 		reset => reset,
 	   enable   => tl_enable,
 		pulse => pulse,
@@ -59,10 +58,10 @@ architecture RTL of top_level is
 	);
   
   
-	process(tl_clock)
+	process(clock)
 	  begin
 	  
-		if rising_edge(tl_clock) then
+		if rising_edge(clock) then
 		
 			if (reset_btn = '0') then
 				initial_reset <= '1' ;
@@ -124,9 +123,9 @@ architecture RTL of top_level is
 				done_LED <= '1';
 			end if;
 			
-		end if;	-- rise tl_clock		
+		end if;	-- rise clock		
 
 
-	end process; -- tl_clock
+	end process; -- clock
 
 end architecture RTL;

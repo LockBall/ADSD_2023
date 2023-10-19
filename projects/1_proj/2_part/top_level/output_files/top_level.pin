@@ -71,14 +71,14 @@ CHIP  "top_level"  ASSIGNED TO AN: 10M50DAF484C7G
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
-chal_lft[2]                  : A2        : output : 2.5 V             :         : 8         : N              
-chal_lft[5]                  : A3        : output : 2.5 V             :         : 8         : N              
-chal_lft[3]                  : A4        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
-chal_lft[4]                  : A6        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
+chal_rit[5]                  : A3        : output : 2.5 V             :         : 8         : N              
+chal_lft[2]                  : A4        : output : 2.5 V             :         : 8         : N              
+chal_lft[0]                  : A5        : output : 2.5 V             :         : 8         : N              
+chal_rit[0]                  : A6        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
+done_LED                     : A9        : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
@@ -138,11 +138,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :      
 GND                          : AB22      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B2        :        :                   :         : 8         :                
-chal_rit[5]                  : B3        : output : 2.5 V             :         : 8         : N              
-chal_rit[2]                  : B4        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
-chal_lft[0]                  : B7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
@@ -161,11 +161,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 8         :                
+pulse                        : C4        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
-chal_rit[4]                  : C6        : output : 2.5 V             :         : 8         : N              
-chal_rit[0]                  : C7        : output : 2.5 V             :         : 8         : N              
-req_resp_out                 : C8        : output : 2.5 V             :         : 8         : N              
+chal_lft[3]                  : C6        : output : 2.5 V             :         : 8         : N              
+chal_rit[4]                  : C7        : output : 2.5 V             :         : 8         : N              
+reset_btn                    : C8        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
@@ -186,10 +186,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :      
 GND                          : D4        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
-response                     : D7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
-chal_lft[1]                  : D10       : output : 2.5 V             :         : 8         : N              
+chal_lft[4]                  : D7        : output : 2.5 V             :         : 8         : N              
+response                     : D8        : output : 2.5 V             :         : 8         : N              
+chal_lft[1]                  : D9        : output : 2.5 V             :         : 8         : N              
+chal_rit[2]                  : D10       : output : 2.5 V             :         : 8         : N              
 GND                          : D11       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
@@ -210,9 +210,9 @@ NC                           : E5        :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
 GND                          : E7        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-chal_rit[3]                  : E9        : output : 2.5 V             :         : 8         : N              
-done_LED                     : E10       : output : 2.5 V             :         : 8         : N              
-reset_btn                    : E11       : input  : 2.5 V             :         : 8         : N              
+chal_lft[5]                  : E9        : output : 2.5 V             :         : 8         : N              
+chal_rit[3]                  : E10       : output : 2.5 V             :         : 8         : N              
+req_resp_out                 : E11       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
@@ -230,7 +230,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1A        :                
 NC                           : F6        :        :                   :         :           :                
-pulse                        : F7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
 VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
 GND                          : F10       : gnd    :                   :         :           :                

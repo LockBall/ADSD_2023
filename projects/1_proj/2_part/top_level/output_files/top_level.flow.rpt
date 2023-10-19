@@ -1,5 +1,5 @@
 Flow report for top_level
-Thu Oct 19 18:34:52 2023
+Thu Oct 19 18:58:38 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 19 18:34:52 2023          ;
+; Flow Status                        ; Successful - Thu Oct 19 18:58:38 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top_level                                      ;
 ; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 1,459                                          ;
-;     Total combinational functions  ; 1,458                                          ;
+; Total logic elements               ; 1,465                                          ;
+;     Total combinational functions  ; 1,464                                          ;
 ;     Dedicated logic registers      ; 549                                            ;
 ; Total registers                    ; 549                                            ;
-; Total pins                         ; 19                                             ;
+; Total pins                         ; 7                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/19/2023 18:34:42 ;
+; Start date & time ; 10/19/2023 18:58:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_level           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 229044590607719.169775488217596        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 229044590607719.169775630703788        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; top_level_tb                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -110,8 +110,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4821 MB             ; 00:00:23                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4818 MB             ; 00:00:24                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
