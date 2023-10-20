@@ -24,7 +24,7 @@ architecture test_fixture of top_level_tb is
     signal tb_enable       : std_logic ;
 	 --signal tb_chal_lft     : std_logic_vector(0 to 5) ;-- which two ro to compare
 	 --signal tb_chal_rit     : std_logic_vector(0 to 5) ;-- which two ro to compare	 
-	 signal tb_pulse        : std_logic ;
+	 --signal tb_pulse        : std_logic ;
 	 signal tb_req_resp_out : std_logic ;
 	 signal tb_done_LED     : std_logic ;
 	 signal tb_response     : std_logic ;
@@ -39,8 +39,8 @@ begin
 		tl_enable    => tb_enable,
 		--chal_lft     => tb_chal_lft,
 		--chal_rit     => tb_chal_rit,
-		pulse        => tb_pulse,
-		req_resp_out => tb_req_resp_out,
+		--pulse        => tb_pulse,
+		--req_resp_out => tb_req_resp_out,
 		done_LED     => tb_done_LED,
 		response     => tb_response
 

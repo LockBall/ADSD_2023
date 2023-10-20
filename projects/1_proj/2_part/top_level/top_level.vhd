@@ -18,8 +18,8 @@ entity top_level is
 		clock     : in     std_logic; -- P11 50 MHZ
 		reset_btn    : in     std_logic;
 		tl_enable    : buffer std_logic := '0';
-		pulse        : buffer std_logic := '0' ;
-		req_resp_out : buffer std_logic; -- request response
+		--pulse        : buffer std_logic := '0' ;
+		--req_resp_out : buffer std_logic; -- request response
 		done_LED	    : out    std_logic := '0' ;
 		response     : buffer    std_logic
 
@@ -34,27 +34,29 @@ architecture RTL of top_level is
 		signal resp_ary : t_resp_ary(0 to 128);
 
 	signal tl_count       : natural := 0 ; --counter for timing of inputs
-	signal tl_count_reset : std_logic := '0';
-	signal done           : std_logic := '0';
-	signal initial_reset  : std_logic := '0';
+	signal tl_count_reset : std_logic := '0' ;
+	signal done           : std_logic := '0' ;
+	signal initial_reset  : std_logic := '0' ;
 	signal reset          : std_logic;
-	signal resp_cnt       : natural := 0 ;
+	signal pulse			 : std_logic := '0' ;
 	signal chal_lft       : std_logic_vector(0 to 5) := "000000" ;
 	signal chal_rit       : std_logic_vector(0 to 5) := "000001" ;
+	signal resp_cnt       : natural := 0 ;
+	signal req_resp   : std_logic; -- request response
 
 
   begin
   
   
   	ro_puf : entity work.ro_puf port map ( -- ro_puf => top_level
-		clock    => clock,
-		reset => reset,
-	   enable   => tl_enable,
-		pulse => pulse,
-		chal_lft => chal_lft,
-		chal_rit => chal_rit,
-		req_resp_in => req_resp_out,
-		response => response
+		clock       => clock,
+		reset       => reset,
+	   enable      => tl_enable,
+		pulse       => pulse,
+		chal_lft    => chal_lft,
+		chal_rit    => chal_rit,
+		req_resp_in => req_resp,
+		response    => response
 	);
   
   
@@ -79,14 +81,14 @@ architecture RTL of top_level is
 						pulse <= '1'; -- ro's go fast !
 					
 					when 8 => -- this number functions as probe_delay
-						req_resp_out <= '1'; -- initial challenge is 0 : 1
+						req_resp <= '1'; -- initial challenge is 0 : 1
 						
 					when 10 =>
 						resp_ary(resp_cnt) <= response;
 						resp_cnt <= resp_cnt + 1;
 					
 					when 12 => -- no longer request response, disable coun
-						req_resp_out <= '0';
+						req_resp <= '0';
 						
 					when 13 =>
 						pulse <= '0'; -- pulse off

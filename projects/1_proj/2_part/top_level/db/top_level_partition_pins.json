@@ -8,14 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "pulse",
-					"strict" : false
-				},
-				{
-					"name" : "req_resp_out",
-					"strict" : false
-				},
-				{
 					"name" : "done_LED",
 					"strict" : false
 				},
