@@ -146,7 +146,7 @@ begin
     ram_data_in <= resp_ary(resp_cnt); --write data => RAM
     ram_address <= challenge;
     ram_we <= '1'; 
-
+end if; 
     
     if ram_we = '0' then
 	 
