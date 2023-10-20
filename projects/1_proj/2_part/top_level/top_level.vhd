@@ -40,6 +40,12 @@ architecture RTL of top_level is
     signal probe_delay     : time := 0.0 ms;  -- probe delay set to 0 for now
 	 signal read_data       : std_logic_vector(7 downto 0); -- read_data function for output of RAM data
     signal store_result    : std_logic;
+	 
+	 signal ram_data_in     : std_logic_vector(7 downto 0);
+	 signal ram_address     : std_logic_vector(7 downto 0);
+	 signal ram_we          : std_logic;
+	 signal ram_data_out    : std_logic_vector(7 downto 0);
+
 
 begin
 
@@ -56,7 +62,7 @@ begin
     );
 	 
 	 
-	 RAM_inst : RAM port map (
+	 RAM_inst : entity work.RAM port map (
 		data_in     => ram_data_in,
 		address     => ram_address,
 		we          => ram_we,

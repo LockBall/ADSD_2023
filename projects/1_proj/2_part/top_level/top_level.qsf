@@ -66,13 +66,11 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_level_tb -section_id 
 set_global_assignment -name EDA_TEST_BENCH_FILE top_level_tb.vhd -section_id top_level_tb
 set_location_assignment PIN_P11 -to clock
 set_location_assignment PIN_A8 -to done_LED
-set_global_assignment -name VHDL_FILE ring_osc_tb.vhd
 set_global_assignment -name VHDL_FILE RAM.vhd
 set_global_assignment -name VHDL_FILE top_level.vhd
 set_global_assignment -name VHDL_FILE ro_puf.vhd
 set_global_assignment -name VHDL_FILE ring_oscillator.vhd
 set_global_assignment -name VHDL_FILE top_level_tb.vhd
-set_global_assignment -name VHDL_FILE sample.vhd
 set_global_assignment -name TCL_SCRIPT_FILE place_inverters.tcl
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clock
 set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to clock
