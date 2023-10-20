@@ -1,0 +1,24 @@
+
+proc place_inverters {num_inverters num_chains} {
+    # Calculate the number of inverters per chain
+    set inverters_per_chain [expr {$num_inverters / $num_chains}]
+
+    # Get the design unit name (modify this to match your design hierarchy)
+    set design_unit_name "top_level.vhd"
+
+    # Iterate over the number of chains
+    for {set chain_idx 0} {$chain_idx < $num_chains} {incr chain_idx} {
+        # Calculate the start and end indices for the inverters in this chain
+        set start_idx [expr {$chain_idx * $inverters_per_chain}]
+        set end_idx [expr {($chain_idx + 1) * $inverters_per_chain - 1}]
+
+        # Get a list of all instances of the inverter in the current chain
+        set inverter_list [get_cells -hierarchical $design_unit_name/*ring_oscillators/inverters[$start_idx:$end_idx]]
+
+        # Place the inverters symmetrically (modify this to suit your placement strategy)
+        place -symmetric $inverter_list
+    }
+}
+
+# Call the place_inverters function with the desired parameters
+place_inverters 12 16
