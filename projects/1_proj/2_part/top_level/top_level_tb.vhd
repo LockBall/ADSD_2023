@@ -21,11 +21,11 @@ architecture test_fixture of top_level_tb is
 
 	 signal tb_clock        : std_logic := '0' ; -- must be initialized to have toggleable
 	 signal tb_reset_btn    : std_logic := '0' ; -- active low
-    signal tb_enable       : std_logic ;
+    --signal tb_enable       : std_logic ;
 	 --signal tb_chal_lft     : std_logic_vector(0 to 5) ;-- which two ro to compare
 	 --signal tb_chal_rit     : std_logic_vector(0 to 5) ;-- which two ro to compare	 
 	 --signal tb_pulse        : std_logic ;
-	 signal tb_req_resp_out : std_logic ;
+	 --signal tb_req_resp_out : std_logic ;
 	 signal tb_done_LED     : std_logic ;
 	 signal tb_response     : std_logic ;
 	 
@@ -35,14 +35,14 @@ begin
 	UUT : entity work.top_level port map (
 	
 		clock     => tb_clock,
-		reset_btn    => tb_reset_btn,		
-		tl_enable    => tb_enable,
+		reset_btn => tb_reset_btn,		
+		--enable    => tb_enable,
 		--chal_lft     => tb_chal_lft,
 		--chal_rit     => tb_chal_rit,
 		--pulse        => tb_pulse,
 		--req_resp_out => tb_req_resp_out,
-		done_LED     => tb_done_LED,
-		response     => tb_response
+		done_LED  => tb_done_LED,
+		response  => tb_response
 
 	);
 
@@ -55,9 +55,6 @@ begin
 	
 	--process(tb_clock)
 	-- begin
-	 
-
-	 
 	--end process; -- tb_clock
 	
 		
@@ -72,7 +69,6 @@ begin
     -- 3 = 000011, 6 = 000110 : 000011000110
 	 -- 6 = 001100, 3 = 000011 : 001100000011
 	 -- 11 = 001011, 21 = 010101 : 001011010101
-	 
 	 
 	 
 end test_fixture ;

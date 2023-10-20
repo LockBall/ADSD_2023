@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Oct 19 20:09:15 2023
+Fri Oct 20 10:35:39 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -95,16 +95,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 19 20:09:15 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 20 10:35:39 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top_level                                      ;
 ; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 1,465                                          ;
-;     Total combinational functions  ; 1,464                                          ;
+; Total logic elements               ; 1,464                                          ;
+;     Total combinational functions  ; 1,463                                          ;
 ;     Dedicated logic registers      ; 549                                            ;
 ; Total registers                    ; 549                                            ;
-; Total pins                         ; 5                                              ;
+; Total pins                         ; 4                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -236,30 +236,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,465 ;
+; Estimated Total logic elements              ; 1,464 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1464  ;
+; Total combinational functions               ; 1463  ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 649   ;
-;     -- 3 input functions                    ; 89    ;
+;     -- 3 input functions                    ; 88    ;
 ;     -- <=2 input functions                  ; 726   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 897   ;
+;     -- normal mode                          ; 896   ;
 ;     -- arithmetic mode                      ; 567   ;
 ;                                             ;       ;
 ; Total registers                             ; 549   ;
 ;     -- Dedicated logic registers            ; 549   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 5     ;
+; I/O pins                                    ; 4     ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 499   ;
-; Total fan-out                               ; 6278  ;
-; Average fan-out                             ; 3.10  ;
+; Total fan-out                               ; 6273  ;
+; Average fan-out                             ; 3.11  ;
 +---------------------------------------------+-------+
 
 
@@ -268,7 +268,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                     ; Entity Name     ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------+-----------------+--------------+
-; |top_level                             ; 1464 (91)           ; 549 (51)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 5    ; 0            ; 0          ; |top_level                                              ; top_level       ; work         ;
+; |top_level                             ; 1463 (90)           ; 549 (51)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |top_level                                              ; top_level       ; work         ;
 ;    |ro_puf:ro_puf|                     ; 1373 (685)          ; 498 (2)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf                                ; ro_puf          ; work         ;
 ;       |ring_oscillator:\ro:0:ro_inst|  ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst  ; ring_oscillator ; work         ;
 ;       |ring_oscillator:\ro:10:ro_inst| ; 43 (43)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|ro_puf:ro_puf|ring_oscillator:\ro:10:ro_inst ; ring_oscillator ; work         ;
@@ -1184,24 +1184,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 5                           ;
+; boundary_port         ; 4                           ;
 ; cycloneiii_ff         ; 549                         ;
 ;     ENA               ; 13                          ;
 ;     ENA CLR           ; 496                         ;
 ;     ENA SCLR          ; 32                          ;
 ;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 1464                        ;
+; cycloneiii_lcell_comb ; 1463                        ;
 ;     arith             ; 567                         ;
 ;         2 data inputs ; 490                         ;
 ;         3 data inputs ; 77                          ;
-;     normal            ; 897                         ;
+;     normal            ; 896                         ;
 ;         1 data inputs ; 212                         ;
 ;         2 data inputs ; 24                          ;
-;         3 data inputs ; 12                          ;
+;         3 data inputs ; 11                          ;
 ;         4 data inputs ; 649                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.23                        ;
+; Average LUT depth     ; 6.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1220,7 +1220,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Oct 19 20:09:04 2023
+    Info: Processing started: Fri Oct 20 10:35:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
@@ -1237,7 +1237,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file top_lev
     Info (12023): Found entity 1: top_level_tb File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd Line: 11
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(34): object "resp_ary" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 34
-Info (12128): Elaborating entity "ro_puf" for hierarchy "ro_puf:ro_puf" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 51
+Info (12128): Elaborating entity "ro_puf" for hierarchy "ro_puf:ro_puf" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd Line: 52
 Warning (10036): Verilog HDL or VHDL warning at ro_puf.vhd(58): object "ro_outs" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 58
 Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:0:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 77
 Info (12128): Elaborating entity "ring_oscillator" for hierarchy "ro_puf:ro_puf|ring_oscillator:\ro:1:ro_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd Line: 77
@@ -1435,14 +1435,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ro_puf:ro_puf|ring_oscillator:\ro:15:ro_inst|inv[1]" File: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd Line: 30
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1471 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1469 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 1466 logic cells
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 1465 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Thu Oct 19 20:09:15 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Fri Oct 20 10:35:39 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

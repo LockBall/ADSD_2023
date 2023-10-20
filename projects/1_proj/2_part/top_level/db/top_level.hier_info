@@ -48,12 +48,11 @@ clock => done.CLK
 clock => tl_count_reset.CLK
 clock => req_resp.CLK
 clock => pulse.CLK
-clock => tl_enable~reg0.CLK
+clock => enable.CLK
 clock => reset.CLK
 clock => initial_reset.CLK
 reset_btn => reset.OUTPUTSELECT
 reset_btn => initial_reset.ENA
-tl_enable << tl_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done_LED << done_LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
 response << ro_puf:ro_puf.response
 

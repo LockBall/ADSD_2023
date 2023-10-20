@@ -16,8 +16,8 @@ entity top_level is
 
 	port(
 		clock     : in     std_logic; -- P11 50 MHZ
-		reset_btn    : in     std_logic;
-		tl_enable    : buffer std_logic := '0';
+		reset_btn : in     std_logic;
+		--enable    : buffer std_logic := '0';
 		--pulse        : buffer std_logic := '0' ;
 		--req_resp_out : buffer std_logic; -- request response
 		done_LED	    : out    std_logic := '0' ;
@@ -38,6 +38,7 @@ architecture RTL of top_level is
 	signal done           : std_logic := '0' ;
 	signal initial_reset  : std_logic := '0' ;
 	signal reset          : std_logic;
+	signal enable         : std_logic := '0' ;
 	signal pulse			 : std_logic := '0' ;
 	signal chal_lft       : std_logic_vector(0 to 5) := "000000" ;
 	signal chal_rit       : std_logic_vector(0 to 5) := "000001" ;
@@ -51,7 +52,7 @@ architecture RTL of top_level is
   	ro_puf : entity work.ro_puf port map ( -- ro_puf => top_level
 		clock       => clock,
 		reset       => reset,
-	   enable      => tl_enable,
+	   enable      => enable,
 		pulse       => pulse,
 		chal_lft    => chal_lft,
 		chal_rit    => chal_rit,
@@ -77,7 +78,7 @@ architecture RTL of top_level is
 						reset <= '1'; -- active low, disable reset
 					
 					when 3 =>
-						tl_enable <= '1'; -- enable count
+						enable <= '1'; -- enable count
 						pulse <= '1'; -- ro's go fast !
 					
 					when 8 => -- this number functions as probe_delay
@@ -92,7 +93,7 @@ architecture RTL of top_level is
 						
 					when 13 =>
 						pulse <= '0'; -- pulse off
-						tl_enable <= '0'; -- count disabled
+						enable <= '0'; -- count disabled
 						reset <= '0';
 
 					when 15 =>
