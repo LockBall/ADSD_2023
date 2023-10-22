@@ -1,5 +1,5 @@
 Timing Analyzer report for fixed
-Sun Oct 22 16:48:39 2023
+Sun Oct 22 19:29:48 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -335,7 +335,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct 22 16:48:37 2023
+    Info: Processing started: Sun Oct 22 19:29:46 2023
 Info: Command: quartus_sta fixed -c fixed
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -383,8 +383,8 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Sun Oct 22 16:48:39 2023
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Sun Oct 22 19:29:48 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -26,7 +26,7 @@
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:16:33 on Oct 22,2023
+# Start time: 18:47:23 on Oct 22,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,228 +36,12 @@
 # -- Loading package fixed_pkg
 # -- Compiling entity fixed
 # -- Compiling architecture arch of fixed
-# End time: 14:16:33 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 18:47:23 on Oct 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:16:33 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): (vcom-1360) Array type of "s_val" does not have an index constraint.
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): (vcom-1360) Array type of "u_val" does not have an index constraint.
-# -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:16:33 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:17:48 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:17:48 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:17:48 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): (vcom-1360) Array type of "s_val" does not have an index constraint.
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): (vcom-1360) Array type of "u_val" does not have an index constraint.
-# -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:17:48 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:30:04 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:30:04 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:30:04 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): (vcom-1360) Array type of "s_val" does not have an index constraint.
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): (vcom-1360) Array type of "u_val" does not have an index constraint.
-# -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:30:04 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:31:14 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:31:15 on Oct 22,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:31:15 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): (vcom-1360) Array type of "s_val" does not have an index constraint.
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): (vcom-1360) Array type of "u_val" does not have an index constraint.
-# -- Loading entity fixed
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:31:15 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:32:18 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:32:18 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:32:18 on Oct 22,2023
+# Start time: 18:47:24 on Oct 22,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -268,12 +52,12 @@ do fixed_run_msim_rtl_vhdl.do
 # -- Compiling entity tb_fixed
 # -- Compiling architecture test_bench of tb_fixed
 # -- Loading entity fixed
-# End time: 14:32:18 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 18:47:24 on Oct 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_fixed
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_fixed 
-# Start time: 14:32:18 on Oct 22,2023
+# Start time: 18:47:24 on Oct 22,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -306,7 +90,7 @@ do fixed_run_msim_rtl_vhdl.do
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:34:23 on Oct 22,2023
+# Start time: 19:30:00 on Oct 22,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -316,12 +100,12 @@ do fixed_run_msim_rtl_vhdl.do
 # -- Loading package fixed_pkg
 # -- Compiling entity fixed
 # -- Compiling architecture arch of fixed
-# End time: 14:34:23 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 19:30:00 on Oct 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:34:23 on Oct 22,2023
+# Start time: 19:30:00 on Oct 22,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -332,251 +116,14 @@ do fixed_run_msim_rtl_vhdl.do
 # -- Compiling entity tb_fixed
 # -- Compiling architecture test_bench of tb_fixed
 # -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:34:23 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:35:18 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:35:18 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:35:18 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:35:18 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:36:26 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:36:26 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:36:26 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# -- Loading entity fixed
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(22): Nonresolved signal 's_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(49):Conditional signal assignment line__49
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Error: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(23): Nonresolved signal 'u_val' has multiple sources.
-#   Drivers:
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(50):Conditional signal assignment line__50
-#     C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(27):Statement UUT
-# ** Note: C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd(53): VHDL Compiler exiting
-# End time: 14:36:26 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-# Error in macro ./fixed_run_msim_rtl_vhdl.do line 10
-# c:/intelfpga_lite/22.1std/questa_fse/win64/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}"
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:37:58 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:37:58 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:37:58 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# -- Loading entity fixed
-# End time: 14:37:58 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 19:30:00 on Oct 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_fixed
-# End time: 14:37:59 on Oct 22,2023, Elapsed time: 0:05:41
-# Errors: 3, Warnings: 0
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_fixed 
-# Start time: 14:37:59 on Oct 22,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading floatfixlib.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading floatfixlib.fixed_pkg(body)
-# Loading work.tb_fixed(test_bench)#1
-# Loading work.fixed(arch)#1
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 50 ns
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:38:43 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 14:38:43 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 14:38:43 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# -- Loading entity fixed
-# End time: 14:38:43 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_fixed
-# End time: 14:38:44 on Oct 22,2023, Elapsed time: 0:00:45
+# End time: 19:30:01 on Oct 22,2023, Elapsed time: 0:42:37
 # Errors: 0, Warnings: 0
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_fixed 
-# Start time: 14:38:44 on Oct 22,2023
+# Start time: 19:30:01 on Oct 22,2023
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
@@ -594,5 +141,5 @@ do fixed_run_msim_rtl_vhdl.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 50 ns
-# End time: 18:45:09 on Oct 22,2023, Elapsed time: 4:06:25
+# End time: 19:30:15 on Oct 22,2023, Elapsed time: 0:00:14
 # Errors: 0, Warnings: 0
