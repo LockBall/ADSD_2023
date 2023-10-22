@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library ieee_proposed;
+use ieee_proposed.fixed_pkg.all;
+
+entity tb_fixed is
+end entity tb_fixed;
+
+architecture test_bench of tb_fixed is
+
+	signal tb_clock : std_logic := '0'       ; -- must be initialized to have toggleable
+    signal value    : sfixed    := "0000000" ;
+
+begin
+
+
+	UUT : entity work.fixed port map (
+
+    s_test => value
+    --u_test => value
+    
+    );
+    
+    
+    tb_clock <= not tb_clock after 10 ns; -- 50 MHz
+
+    
+    test : process is
+      begin
+        
+		-- test creation using signed
+        report "test 1" severity note;
+		value <= to_sfixed(to_signed(0, value'length));
+		wait for 1 ns;
+        
+        wait;
+    end process test;
+    
+end architecture test_bench;

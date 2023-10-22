@@ -21,110 +21,121 @@
 # vmap work rtl_work
 # Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
 # vmap work rtl_work 
-# Copying c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:08:34 on Oct 20,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ring_oscillator.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ring_oscillator
-# -- Compiling architecture rtl of ring_oscillator
-# End time: 12:08:34 on Oct 20,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:08:35 on Oct 20,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/ro_puf.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ro_puf
-# -- Compiling architecture rtl of ro_puf
-# -- Loading entity ring_oscillator
-# End time: 12:08:35 on Oct 20,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:08:35 on Oct 20,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity top_level
-# -- Compiling architecture RTL of top_level
-# -- Loading entity ro_puf
-# ** Warning: C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level.vhd(61): Cannot associate port "response" of mode OUT with port "response" of mode BUFFER.
-# End time: 12:08:35 on Oct 20,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:08:35 on Oct 20,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/1_proj/2_part/top_level/top_level_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package NUMERIC_STD
-# -- Compiling entity top_level_tb
-# -- Compiling architecture test_fixture of top_level_tb
-# -- Loading entity top_level
-# End time: 12:08:35 on Oct 20,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  top_level_tb
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" top_level_tb 
-# Start time: 12:08:35 on Oct 20,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.top_level_tb(test_fixture)#1
-# Loading work.top_level(rtl)#1
-# Loading work.ro_puf(rtl)#1
-# Loading work.ring_oscillator(rtl)#1
-# Loading work.ring_oscillator(rtl)#2
-# Loading work.ring_oscillator(rtl)#3
-# Loading work.ring_oscillator(rtl)#4
-# Loading work.ring_oscillator(rtl)#5
-# Loading work.ring_oscillator(rtl)#6
-# Loading work.ring_oscillator(rtl)#7
-# Loading work.ring_oscillator(rtl)#8
-# Loading work.ring_oscillator(rtl)#9
-# Loading work.ring_oscillator(rtl)#10
-# Loading work.ring_oscillator(rtl)#11
-# Loading work.ring_oscillator(rtl)#12
-# Loading work.ring_oscillator(rtl)#13
-# Loading work.ring_oscillator(rtl)#14
-# Loading work.ring_oscillator(rtl)#15
-# Loading work.ring_oscillator(rtl)#16
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 400 ns
-add wave -position end  sim:/top_level_tb/UUT/pulse
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-run
-# End time: 13:30:37 on Oct 20,2023, Elapsed time: 1:22:02
-# Errors: 0, Warnings: 0
+# Modifying c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# -- Giving up waiting on lock. Lockfile is "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock".
+# ** Error: WriteIniString c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini failed: 2
+# Error in macro ./top_level_run_msim_rtl_vhdl.do line 6
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vmap-7) Failed to open lock file "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# -- Giving up waiting on lock. Lockfile is "c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini_lock".
+# ** Error: WriteIniString c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini failed: 2
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vmap" line 29)
+#     invoked from within
+# "vmap work rtl_work"
