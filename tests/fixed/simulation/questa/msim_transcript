@@ -26,7 +26,7 @@
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:47:23 on Oct 22,2023
+# Start time: 00:12:54 on Oct 24,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,12 +36,12 @@
 # -- Loading package fixed_pkg
 # -- Compiling entity fixed
 # -- Compiling architecture arch of fixed
-# End time: 18:47:23 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 00:12:55 on Oct 24,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 18:47:24 on Oct 22,2023
+# Start time: 00:12:55 on Oct 24,2023
 # vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -52,12 +52,12 @@
 # -- Compiling entity tb_fixed
 # -- Compiling architecture test_bench of tb_fixed
 # -- Loading entity fixed
-# End time: 18:47:24 on Oct 22,2023, Elapsed time: 0:00:00
+# End time: 00:12:55 on Oct 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_fixed
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_fixed 
-# Start time: 18:47:24 on Oct 22,2023
+# Start time: 00:12:55 on Oct 24,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -75,71 +75,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 50 ns
-do fixed_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
-# vlib rtl_work
-# ** Warning: (vlib-34) Library already exists at "rtl_work".
-# Errors: 0, Warnings: 1
-# vmap work rtl_work
-# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 19:30:00 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity fixed
-# -- Compiling architecture arch of fixed
-# End time: 19:30:00 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 19:30:00 on Oct 22,2023
-# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/fixed/tb_fixed.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package fixed_float_types
-# -- Loading package fixed_pkg
-# -- Compiling entity tb_fixed
-# -- Compiling architecture test_bench of tb_fixed
-# -- Loading entity fixed
-# End time: 19:30:00 on Oct 22,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_fixed
-# End time: 19:30:01 on Oct 22,2023, Elapsed time: 0:42:37
-# Errors: 0, Warnings: 0
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_fixed 
-# Start time: 19:30:01 on Oct 22,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading floatfixlib.fixed_float_types
-# Loading ieee.math_real(body)
-# Loading floatfixlib.fixed_pkg(body)
-# Loading work.tb_fixed(test_bench)#1
-# Loading work.fixed(arch)#1
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 50 ns
-# End time: 19:30:15 on Oct 22,2023, Elapsed time: 0:00:14
+# End time: 00:13:14 on Oct 24,2023, Elapsed time: 0:00:19
 # Errors: 0, Warnings: 0
