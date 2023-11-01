@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Nov  1 16:55:52 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : VGA_86
+Top-level Entity Name : VGA_86
+Family : MAX 10
+Total logic elements : 285
+    Total combinational functions : 248
+    Dedicated logic registers : 152
+Total registers : 152
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 2
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
