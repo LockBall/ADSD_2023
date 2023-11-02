@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk_25'
-Slack : -6.234
-TNS   : -557.243
+Slack : -6.281
+TNS   : -589.304
 
 Type  : Slow 1200mV 85C Model Setup 'max10_clk1_50'
-Slack : -1.435
-TNS   : -1.674
+Slack : -1.566
+TNS   : -1.852
 
 Type  : Slow 1200mV 85C Model Hold 'clk_25'
-Slack : 0.358
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'max10_clk1_50'
-Slack : 0.428
+Slack : 0.425
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'max10_clk1_50'
@@ -27,19 +27,19 @@ Slack : -2.846
 TNS   : -339.163
 
 Type  : Slow 1200mV 0C Model Setup 'clk_25'
-Slack : -5.542
-TNS   : -495.165
+Slack : -5.586
+TNS   : -524.269
 
 Type  : Slow 1200mV 0C Model Setup 'max10_clk1_50'
-Slack : -1.247
-TNS   : -1.410
+Slack : -1.401
+TNS   : -1.598
 
 Type  : Slow 1200mV 0C Model Hold 'clk_25'
-Slack : 0.325
+Slack : 0.323
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'max10_clk1_50'
-Slack : 0.393
+Slack : 0.390
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'max10_clk1_50'
@@ -51,24 +51,24 @@ Slack : -2.846
 TNS   : -339.163
 
 Type  : Fast 1200mV 0C Model Setup 'clk_25'
-Slack : -2.099
-TNS   : -126.318
+Slack : -2.122
+TNS   : -144.376
 
 Type  : Fast 1200mV 0C Model Setup 'max10_clk1_50'
-Slack : -0.315
-TNS   : -0.315
+Slack : -0.400
+TNS   : -0.400
 
 Type  : Fast 1200mV 0C Model Hold 'clk_25'
-Slack : 0.155
+Slack : 0.153
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'max10_clk1_50'
-Slack : 0.161
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'max10_clk1_50'
 Slack : -3.000
-TNS   : -9.991
+TNS   : -10.037
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_25'
 Slack : -1.000

@@ -193,17 +193,18 @@ architecture behave of VGA_86_image is
         -- blanking time, required, blank when not active
         -- output needs to be blank between the end of the final visible line of a frame
         -- and the beginning of the first visible line of the next frame
-        if( 
-        --(h_count >= 0 and <= h_active_max) AND (v_count >= 0 and <= v_active_max)
+        if(  
         
-                ( h_count  > (h_sync + h_b_porch) )  -- 144, end of blanking time
-            and
-                ( h_count < 784 )
-            and
-                ( v_count > 0 )  AND ( v_count <= v_active_max) -- v_active_max = 480, v_count MUST be > 0
+           -- ( h_count > (h_sync + h_b_porch) )
+            
+            (h_count > h_sync + h_b_porch ) -- 144
+            AND (h_count <= h_active_max)
+            
+            AND (v_count > 0)
+            AND (v_count <= v_active_max) -- v_active_max = 480, v_count MUST be > 0
 
-
-        ) then
+        )
+        then
             v_blank_1 <= '0';
             
         else
