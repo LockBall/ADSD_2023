@@ -8,22 +8,32 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
+use ieee.std_logic_unsigned.all;
 
 entity VGA_86_image is
 
     generic(
-        h_pixels : integer := 800; -- total horiztonal display width in pixels
-        v_lines : integer := 525   -- total vertical display height in lines
+        h_pixels  : natural range 640 to 1920 := 800 ; -- total horiztonal display width in pixels
+        h_f_porch : natural range  16 to 88   := 16  ; -- horiztonal front porch width in pixels
+        h_sync    : natural range  44 to 136  := 96  ; -- horiztonal sync pulse width in pixels
+        h_b_porch : natural range  48 to 160  := 48  ; -- vertical back porch in lines
+
+        v_lines   : natural range 525 to 1125 := 525 ; -- total 'scanned' height in lines
+        v_f_porch : natural range   1 to 10   := 10  ; -- horiztonal front porch width in pixels
+        v_sync    : natural range   2 to 6    := 2   ; -- vertical sync pulse in lines
+        v_b_porch : natural range  23 to 36   := 33    -- vertical back porch in lines
+
     );
 
-    port (clk_25 : in  std_logic;
-        reset    : in  std_logic;
-        v_sync_out   : out std_logic;
-        h_sync_out   : out std_logic;
-        de_out   : out std_logic; -- unused outside this file, included for testbench
-        r_out    : out std_logic_vector(7 downto 0);
-        g_out    : out std_logic_vector(7 downto 0);
-        b_out    : out std_logic_vector(7 downto 0)
+    port (
+        clk_25      : in  std_logic;
+        reset       : in  std_logic;
+        v_sync_out  : out std_logic;
+        h_sync_out  : out std_logic;
+        de_out      : out std_logic; -- unused outside this file, included for testbench
+        r_out       : out std_logic_vector(7 downto 0);
+        g_out       : out std_logic_vector(7 downto 0);
+        b_out       : out std_logic_vector(7 downto 0)
     );
     
 end entity VGA_86_image;
@@ -52,14 +62,6 @@ architecture behave of VGA_86_image is
                 -- sync: 0 -  3
                 -- active:  36 - 515
 
-    
-    -- rgb values
-    constant rgb_sky  : std_logic_vector(23 downto 0) := x"A0D0F0";
-    constant rgb_gras : std_logic_vector(23 downto 0) := x"20C040";
-    constant rgb_road : std_logic_vector(23 downto 0) := x"808080";
-    constant rgb_line : std_logic_vector(23 downto 0) := x"FFFF80";
-
-    
     -- 640 x 480 # of pixels
     -- h_count 799 ∵ 800
     -- v_count 524 ∵ 525
@@ -68,8 +70,15 @@ architecture behave of VGA_86_image is
     -- 800 x 600 # of pixels
     -- h_count 1055 ∵ 1056
     -- v_count 627 ∵ 628
-    -- frame_num   
-
+    -- frame_num    
+  
+  
+    -- rgb values
+    signal   rgb_sky   : std_logic_vector(23 downto 0) := x"A0D0F0" ;  -- 24 bit, A0D0F0
+    constant rgb_grass : std_logic_vector(23 downto 0) := x"20C040" ;
+    constant rgb_road  : std_logic_vector(23 downto 0) := x"808080" ;
+    constant rgb_line  : std_logic_vector(23 downto 0) := x"FFFF80" ;
+    signal   color_shift_count : natural := 0 ;
     
     signal h_count   : integer range 0 to (h_pixels - 1) := 0; 
     signal v_count   : integer range 0 to (v_lines - 1)  := 0;
@@ -79,8 +88,8 @@ architecture behave of VGA_86_image is
     signal center_pos : integer range 0 to (h_pixels - 1);
 
     -- signals for pipeline stages
-    signal h_sync_1, v_sync_1, disp_enable_1 : std_logic;
-    signal h_sync_2, v_sync_2, disp_enable_2 : std_logic;
+    signal h_sync_1, v_sync_1, v_blank_1 : std_logic;
+    signal h_sync_2, v_sync_2, v_blank_2 : std_logic;
 
     signal h_pos_1   : integer range -200 to (h_pixels - 1);
     signal v_pos_1   : integer range -200 to (v_lines - 1) ;
@@ -104,36 +113,41 @@ architecture behave of VGA_86_image is
         wait until rising_edge(clk_25);
 
         if (reset = '1') then
+        
             h_count     <= 0;
             v_count     <= 0;
             new_frame   <= '0';
             frame_num   <= 500;
         else
 
-        new_frame  <= '0'; -- default
+            new_frame  <= '0'; -- default
 
-        if (h_count = (h_pixels - 1)) then
-          h_count <= 0;
-          if ( v_count = (v_lines - 1)  ) then
-            v_count     <= 0;
-            new_frame   <= '1';                
-          else
-            v_count <= v_count + 1;
-          end if; -- v_count
-        else  
-          h_count <= h_count + 1;
-        end if; -- h_count
+            if (h_count = (h_pixels - 1)) then
+                h_count <= 0; -- reset h_count for next line
+              
+                if ( v_count = (v_lines - 1)  ) then
+                    v_count     <= 0;
+                    new_frame   <= '1'; -- 1 frame / all lines                
+                else
+                    v_count <= v_count + 1; -- increments on new line
+                end if;
+              
+            else  
+                h_count <= h_count + 1; -- 1 pixel / rising edge
+            end if;
             
             
-        if (new_frame = '1') then
-          if (frame_num = 1023) then
-            frame_num <= 0;
-          else
-            frame_num <= frame_num + 1;
-          end if;
-        end if;
+            if (new_frame = '1') then
+            
+                if (frame_num = 1023) then
+                    frame_num <= 0;
+                else
+                    frame_num <= frame_num + 1;
+                end if;
+            end if;
 
         end if; -- reset
+        
     end process;  
             
             
@@ -158,45 +172,57 @@ architecture behave of VGA_86_image is
         end if;
 
 
-      if (v_pos_1 >= 160) and (v_pos_1 < 480) then
-        v_factor_a <= 520 - v_pos_1; -- maximum value is 360
-      else 
-        v_factor_a <= 0;
-      end if;
-      
-      v_factor_b <= (v_factor_a * v_factor_a)/512; -- maximum value is 253
-      -- combine factor_b (depending on the line) and curve (depending on the frame)
-      this_curve <= (curve * v_factor_b)/256;
-      -- lane is shifted from center of the image (320 pixel plus offset 144)
-      center_pos <= 464 + this_curve;
-      
-      ------------------------------------ pipeline stage 1
-      if ( h_count < 96 ) then
-        h_sync_1 <= '1';
-      else
-        h_sync_1 <= '0';
-      end if;
-
-      
-      if ( v_count < 2 ) then
-        v_sync_1 <= '1';
-      else
-        v_sync_1 <= '0';
-      end if;
-
-      -- enable signal, determines if image is active
-        if ( h_count >= 144 ) and
-            ( h_count <  784 ) and
-            ( v_count >=  36 ) and
-            ( v_count <  516 ) then
-            disp_enable_1 <= '1';
-        else
-            disp_enable_1 <= '0';
+        if (v_pos_1 >= 160) and (v_pos_1 < 480) then -- 
+            v_factor_a <= 520 - v_pos_1; -- maximum value is 360
+        else 
+            v_factor_a <= 0;
         end if;
+
+        v_factor_b <= (v_factor_a * v_factor_a)/512; -- maximum value is 253
+        -- combine factor_b (depending on the line) and curve (depending on the frame)
+        this_curve <= (curve * v_factor_b)/256;
+        -- lane is shifted from center of the image (320 pixel plus offset 144)
+        center_pos <= 464 + this_curve;
+
         
-      h_pos_1 <= h_count - 144;
-      v_pos_1 <= v_count -  36;
-      
+------------------------ pipeline stage 1 ------------------------
+        
+        h_pos_1 <= h_count - 144;
+        v_pos_1 <= v_count -  36;        
+        
+        if ( h_count < h_sync ) then  -- 96
+            h_sync_1 <= '1'; else     -- havent reached h_sync yet
+            h_sync_1 <= '0'; end if;  -- 640 is negative sync pulse
+        
+
+
+        if ( v_count < v_sync ) then
+            v_sync_1 <= '1';  -- havent reached v_sync yet
+        else
+            v_sync_1 <= '0';  -- 640 is negative sync pulse
+        end if;
+
+  
+      -- enable signal, determines if image is active, blanking time
+        if
+        (
+                ( h_count  > (h_sync + h_b_porch) )  -- 144, end of blanking time
+            and
+                ( h_count < 784 )
+            and
+                ( v_count > 0 ) --(v_sync + v_b_porch) 35, end of blanking time
+            and
+                ( v_count < (v_lines - (v_f_porch + v_sync + v_b_porch) ))
+               
+        ) then
+            v_blank_1 <= '0';
+            
+        else
+            v_blank_1 <= '1';  -- rgb black
+        end if;
+            
+
+
 -- calculate distance of this position from center of the lane
         if (h_count > center_pos) then
             h_gap_1 <= h_count - center_pos;
@@ -205,37 +231,52 @@ architecture behave of VGA_86_image is
         end if;  
 
       
-        x_value_a <= v_count/4 + 20;
-        x_value_b <= v_count/4 + 25;
-        x_value_c <= v_count/4 + 32;
+        x_value_a <= v_count / 4 + 20;
+        x_value_b <= v_count / 4 + 25;
+        x_value_c <= v_count / 4 + 32;
 
------------------------------------- pipeline stage 2
-        h_sync_2 <= h_sync_1;
-        v_sync_2 <= v_sync_1;
-        disp_enable_2 <= disp_enable_1;
-          
-        if (disp_enable_2 = '0') then
+        
+------------------------ pipeline stage 2 ------------------------
+        h_sync_2      <= h_sync_1 ;
+        v_sync_2      <= v_sync_1 ;
+        v_blank_2 <= v_blank_1 ; -- de2 unused outside this file
+        
+        -- output needs to be blank between the end of the final visible line of a frame
+        -- and the beginning of the first visible line of the next frame
+        
+        if (v_blank_2 = '1') then 
             rgb_2 <= x"000000";
+     
         elsif (v_pos_1 < 160) then
             rgb_2 <= rgb_sky;
+            
         elsif (h_gap_1 < x_value_a) then
             rgb_2 <= rgb_road;
+            
         elsif (h_gap_1 < x_value_b) then
             rgb_2 <= rgb_line;
+            
         elsif (h_gap_1 < x_value_c) then
             rgb_2 <= rgb_road;
+            
         else
-            rgb_2 <= rgb_gras;
+            rgb_2 <= rgb_grass;
         end if;  
           
------------------------------------- pipeline stage 3 (out)
+          
+------------------------ pipeline stage 3 (out) ------------------------
         h_sync_out  <= h_sync_2;
         v_sync_out  <= v_sync_2;
-        de_out  <= disp_enable_2; -- unused outside this file, included for testbench
+        de_out  <= v_blank_2; -- de2 unused outside this file
         r_out   <= rgb_2(23 downto 16);
         g_out   <= rgb_2(15 downto  8);
         b_out   <= rgb_2( 7 downto  0);
-          
+        
+        color_shift_count <= color_shift_count +  1;
+        if color_shift_count = 1000000 then
+            color_shift_count <= 0 ;
+            rgb_sky <= rgb_sky + "1" ;
+        end if;
     end process;
 
 end architecture behave;
