@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_86
-Thu Nov  2 00:48:19 2023
+Thu Nov  2 12:07:18 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -52,12 +52,12 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov  2 00:48:19 2023          ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov  2 12:07:18 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; VGA_86                                         ;
 ; Top-level Entity Name              ; VGA_86                                         ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 375                                            ;
+; Total logic elements               ; 372                                            ;
 ;     Total combinational functions  ; 339                                            ;
 ;     Dedicated logic registers      ; 212                                            ;
 ; Total registers                    ; 212                                            ;
@@ -171,7 +171,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -198,17 +199,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 375    ;
+; Estimated Total logic elements              ; 372    ;
 ;                                             ;        ;
 ; Total combinational functions               ; 339    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 68     ;
-;     -- 3 input functions                    ; 79     ;
-;     -- <=2 input functions                  ; 192    ;
+;     -- 4 input functions                    ; 64     ;
+;     -- 3 input functions                    ; 76     ;
+;     -- <=2 input functions                  ; 199    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 157    ;
-;     -- arithmetic mode                      ; 182    ;
+;     -- normal mode                          ; 149    ;
+;     -- arithmetic mode                      ; 190    ;
 ;                                             ;        ;
 ; Total registers                             ; 212    ;
 ;     -- Dedicated logic registers            ; 212    ;
@@ -220,8 +221,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;        ;
 ; Maximum fan-out node                        ; clk_25 ;
 ; Maximum fan-out                             ; 207    ;
-; Total fan-out                               ; 1449   ;
-; Average fan-out                             ; 2.47   ;
+; Total fan-out                               ; 1438   ;
+; Average fan-out                             ; 2.45   ;
 +---------------------------------------------+--------+
 
 
@@ -306,7 +307,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; VGA_86_image:street|rgb_sky[5]          ; 2       ;
 ; VGA_86_image:street|rgb_sky[6]          ; 2       ;
 ; VGA_86_image:street|rgb_sky[7]          ; 2       ;
-; VGA_86_image:street|this_curve[7]       ; 2       ;
+; VGA_86_image:street|this_curve[7]       ; 3       ;
 ; VGA_86_image:street|curve[7]            ; 1       ;
 ; VGA_86_image:street|v_pos_1[3]          ; 1       ;
 ; VGA_86_image:street|v_pos_1[4]          ; 1       ;
@@ -336,12 +337,14 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------+-------+-----------------------------------------+
 ; h_pixels       ; 800   ; Signed Integer                          ;
 ; h_f_porch      ; 16    ; Signed Integer                          ;
-; h_sync         ; 96    ; Signed Integer                          ;
+; h_pulse        ; 96    ; Signed Integer                          ;
 ; h_b_porch      ; 48    ; Signed Integer                          ;
+; h_sync_pol     ; '0'   ; Enumerated                              ;
 ; v_lines        ; 525   ; Signed Integer                          ;
 ; v_f_porch      ; 10    ; Signed Integer                          ;
-; v_sync         ; 2     ; Signed Integer                          ;
+; v_pulse        ; 2     ; Signed Integer                          ;
 ; v_b_porch      ; 33    ; Signed Integer                          ;
+; v_sync_pol     ; '0'   ; Enumerated                              ;
 +----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -452,7 +455,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
-; de_out      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; blank_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; r_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; g_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; b_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -473,20 +476,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 10                          ;
 ;     plain             ; 131                         ;
 ; cycloneiii_lcell_comb ; 339                         ;
-;     arith             ; 182                         ;
-;         2 data inputs ; 125                         ;
+;     arith             ; 190                         ;
+;         2 data inputs ; 133                         ;
 ;         3 data inputs ; 57                          ;
-;     normal            ; 157                         ;
+;     normal            ; 149                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 32                          ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 68                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 64                          ;
 ; cycloneiii_mac_mult   ; 2                           ;
 ; cycloneiii_mac_out    ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.68                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -495,7 +498,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -505,22 +508,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Nov  2 00:48:09 2023
+    Info: Processing started: Thu Nov  2 12:07:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_86 -c VGA_86
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file vga_86.vhd
     Info (12022): Found design unit 1: VGA_86-shell File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 29
     Info (12023): Found entity 1: VGA_86 File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file vga_86_image.vhd
-    Info (12022): Found design unit 1: VGA_86_image-behave File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 42
+    Info (12022): Found design unit 1: VGA_86_image-behave File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 45
     Info (12023): Found entity 1: VGA_86_image File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 13
 Info (12127): Elaborating entity "VGA_86" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_86_image" for hierarchy "VGA_86_image:street" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 68
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:street|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 169
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:street|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 167
-Info (12130): Elaborated megafunction instantiation "VGA_86_image:street|lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 169
-Info (12133): Instantiated megafunction "VGA_86_image:street|lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 169
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:street|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 172
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:street|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 170
+Info (12130): Elaborated megafunction instantiation "VGA_86_image:street|lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 172
+Info (12133): Instantiated megafunction "VGA_86_image:street|lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 172
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "17"
@@ -532,8 +535,8 @@ Info (12133): Instantiated megafunction "VGA_86_image:street|lpm_mult:Mult1" wit
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vds.tdf
     Info (12023): Found entity 1: mult_vds File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/mult_vds.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "VGA_86_image:street|lpm_mult:Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 167
-Info (12133): Instantiated megafunction "VGA_86_image:street|lpm_mult:Mult0" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 167
+Info (12130): Elaborated megafunction instantiation "VGA_86_image:street|lpm_mult:Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 170
+Info (12133): Instantiated megafunction "VGA_86_image:street|lpm_mult:Mult0" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 170
     Info (12134): Parameter "LPM_WIDTHA" = "9"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "18"
@@ -548,15 +551,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mult
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 390 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 376 logic cells
+    Info (21061): Implemented 372 logic cells
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Thu Nov  2 00:48:19 2023
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Thu Nov  2 12:07:18 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:23
 
 

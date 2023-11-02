@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Nov  2 00:48:29 2023
+Fitter Status : Successful - Thu Nov  2 12:07:28 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : VGA_86
 Top-level Entity Name : VGA_86
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 369 / 49,760 ( < 1 % )
+Total logic elements : 368 / 49,760 ( < 1 % )
     Total combinational functions : 348 / 49,760 ( < 1 % )
     Dedicated logic registers : 195 / 49,760 ( < 1 % )
 Total registers : 195

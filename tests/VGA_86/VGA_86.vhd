@@ -72,7 +72,7 @@ architecture shell of VGA_86 is
             reset     => reset_e,
             h_sync_out    => vga_hs,
             v_sync_out    => vga_vs,
-            de_out    => open, 
+            blank_out    => open, 
             r_out     => r,
             g_out     => g,
             b_out     => b
