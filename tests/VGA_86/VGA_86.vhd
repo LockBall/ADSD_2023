@@ -1,10 +1,14 @@
--- street_de10.vhd
+-- VGA_86.vhd
 --
--- generate an VGA-image of a street scene
 -- top level for DE10-Lite board
 --
 -- FPGA Vision Remote Lab http://h-brs.de/fpga-vision-lab
 -- (c) Marco Winzker, Hochschule Bonn-Rhein-Sieg, 02.05.2019
+--
+-- Scott Larson, Version 1.0 05/10/2013
+-- https://forum.digikey.com/t/vga-controller-vhdl/12794
+--
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -28,32 +32,36 @@ end entity VGA_86;
 
 architecture shell of VGA_86 is
 
-    signal clk_25   : std_logic;
+    signal clock_25 : std_logic;
+    signal clock_50 : std_logic;
+    signal clock_40 : std_logic;
     signal reset    : std_logic;
     signal reset_a, reset_b, reset_c, reset_d, reset_e : std_logic;
-    signal r, g, b  : std_logic_vector(7 downto 0);
+    signal r_sig, g_sig, b_sig  : std_logic_vector(7 downto 0);
 
   begin
 
+    clock_50 <= max10_clk1_50;
+    
     reset <= not key(0);
-    vga_r <= r(7 downto 4);
-    vga_g <= g(7 downto 4);
-    vga_b <= b(7 downto 4);
-
+    vga_r <= r_sig(7 downto 4);
+    vga_g <= g_sig(7 downto 4);
+    vga_b <= b_sig(7 downto 4);
+    
     
     process
       begin
         wait until rising_edge(max10_clk1_50);
         
         if (reset = '1') then
-            clk_25 <= '0';
+            clock_25 <= '0';
             reset_a <= '1';
             reset_b <= '1';
             reset_c <= '1';
             reset_d <= '1';
             reset_e <= '1';
         else
-            clk_25 <= not clk_25;
+            clock_25 <= not clock_25;
             reset_a <= '0';
             reset_b <= reset_a;
             reset_c <= reset_b;
@@ -64,19 +72,30 @@ architecture shell of VGA_86 is
     end process;
 
     
-    -- generic submodule
-    street: entity work.VGA_86_image
-    
+    -- generic submodules
+    -- image => this
+    VGA_86_image : entity work.VGA_86_image
         port map (
-            clk_25    => clk_25,
-            reset     => reset_e,
-            h_sync_out    => vga_hs,
-            v_sync_out    => vga_vs,
-            blank_out    => open, 
-            r_out     => r,
-            g_out     => g,
-            b_out     => b
+            clock_25   => clock_25,
+            clock_40   => clock_40,
+            reset      => reset_e,
+            h_sync_out => vga_hs,
+            v_sync_out => vga_vs,
+            blank_out  => open, 
+            r_out      => r_sig,
+            g_out      => g_sig,
+            b_out      => b_sig
         );
+
+    
+    clock_40_inst : entity work.clock_40 PORT MAP (
+    --clock_40_inst : clock_40 PORT MAP (
+		areset	 => reset,
+		inclk0	 => clock_50,
+		c0	     => clock_40,
+		locked	 => open -- locked_sig
+	);
+
 
 
 end architecture shell;

@@ -25,11 +25,13 @@ entity VGA_86_image is
         v_pulse    : natural range   2 to 6    := 2   ; -- vertical sync pulse in lines
         v_b_porch  : natural range  23 to 36   := 33  ; -- vertical back porch in lines
         v_sync_pol : std_logic := '0'
+        
     );
 
     
     port (
-        clk_25     : in  std_logic;
+        clock_25   : in  std_logic;
+        clock_40   : in  std_logic;
         reset      : in  std_logic;
         v_sync_out : out std_logic;
         h_sync_out : out std_logic;
@@ -44,18 +46,8 @@ end entity VGA_86_image;
 
 architecture behave of VGA_86_image is
 
-    -- timing of VGA signal
-    
-    -- 640 x 480 60 Hz, 25 MHz pixel frequency
-        -- horizontal timing
-                -- sync: 0 - 95
-                -- active: 144 - 783
-                
-        -- vertical timing:
-                -- sync: 0 -  9
-                -- active:  36 - 515
+    signal clock : std_logic ;
 
-  
     -- rgb values
     signal   rgb_sky   : std_logic_vector(23 downto 0) := x"A0D0F0" ;  -- 24 bit, A0D0F0
     constant rgb_grass : std_logic_vector(23 downto 0) := x"20C040" ;
@@ -93,13 +85,14 @@ architecture behave of VGA_86_image is
     signal this_curve   : integer range -128 to 127;
     
 
-
   begin
 
+    clock <= clock_25;
+  
     -- process for primary counters with reset
     process
       begin
-        wait until rising_edge(clk_25);
+        wait until rising_edge(clock);
 
         if (reset = '1') then
         
@@ -143,7 +136,7 @@ architecture behave of VGA_86_image is
     -- process with pipeline-stages for generation of image content and sync-signals
     process
       begin
-        wait until rising_edge(clk_25);
+        wait until rising_edge(clock);
       
         -- make a parabolic curve, so we calculate
         --    curve is the bend for this frame
@@ -217,9 +210,9 @@ architecture behave of VGA_86_image is
 
         
 ------------------------ pipeline stage 2 ------------------------
-        h_sync_2      <= h_sync_1 ;
-        v_sync_2      <= v_sync_1 ;
-        blank_2 <= blank_1 ; -- de2 unused outside this file
+        h_sync_2 <= h_sync_1 ;
+        v_sync_2 <= v_sync_1 ;
+        blank_2  <= blank_1  ;
         
         if (blank_2 = '1') then 
             rgb_2 <= x"000000";
@@ -242,12 +235,12 @@ architecture behave of VGA_86_image is
           
           
 ------------------------ pipeline stage 3 (out) ------------------------
-        h_sync_out  <= h_sync_2;
-        v_sync_out  <= v_sync_2;
-        blank_out  <= blank_2; -- de2 unused outside this file
-        r_out   <= rgb_2(23 downto 16);
-        g_out   <= rgb_2(15 downto  8);
-        b_out   <= rgb_2( 7 downto  0);
+        h_sync_out <= h_sync_2;
+        v_sync_out <= v_sync_2;
+        blank_out  <= blank_2;
+        r_out      <= rgb_2(23 downto 16);
+        g_out      <= rgb_2(15 downto  8);
+        b_out      <= rgb_2( 7 downto  0);
         
         color_shift_count <= color_shift_count +  1;
         if color_shift_count = 1000000 then
