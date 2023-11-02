@@ -13,7 +13,7 @@ use ieee.std_logic_unsigned.all;
 entity VGA_86_image is
 
     generic(
-        h_pixels  : natural range 640 to 1920 := 800 ; -- total horiztonal display width in pixels
+        h_pixels  : natural range 800 to 2200 := 800 ; -- total horiztonal width in pixels
         h_f_porch : natural range  16 to 88   := 16  ; -- horiztonal front porch width in pixels
         h_sync    : natural range  44 to 136  := 96  ; -- horiztonal sync pulse width in pixels
         h_b_porch : natural range  48 to 160  := 48  ; -- vertical back porch in lines
@@ -22,9 +22,9 @@ entity VGA_86_image is
         v_f_porch : natural range   1 to 10   := 10  ; -- horiztonal front porch width in pixels
         v_sync    : natural range   2 to 6    := 2   ; -- vertical sync pulse in lines
         v_b_porch : natural range  23 to 36   := 33    -- vertical back porch in lines
-
     );
 
+    
     port (
         clk_25      : in  std_logic;
         reset       : in  std_logic;
@@ -51,33 +51,18 @@ architecture behave of VGA_86_image is
         -- vertical timing:
                 -- sync: 0 -  9
                 -- active:  36 - 515
- 
- 
-    -- 800 x 600, 60 Hz, 40 MHz pixel frequency
-        -- horizontal timing:
-                -- sync: 0 - 127
-                -- active: 144 - 783
-                
-        -- vertical timing:
-                -- sync: 0 -  3
-                -- active:  36 - 515
 
-    -- 640 x 480 # of pixels
-    -- h_count 799 ∵ 800
-    -- v_count 524 ∵ 525
-    -- frame_num 1023
-    
-    -- 800 x 600 # of pixels
-    -- h_count 1055 ∵ 1056
-    -- v_count 627 ∵ 628
-    -- frame_num    
-  
   
     -- rgb values
     signal   rgb_sky   : std_logic_vector(23 downto 0) := x"A0D0F0" ;  -- 24 bit, A0D0F0
     constant rgb_grass : std_logic_vector(23 downto 0) := x"20C040" ;
     constant rgb_road  : std_logic_vector(23 downto 0) := x"808080" ;
     constant rgb_line  : std_logic_vector(23 downto 0) := x"FFFF80" ;
+    
+    constant h_active_max  : natural := (h_pixels - (h_f_porch + h_sync + h_b_porch) );
+    constant v_active_max  : natural := (v_lines - (v_f_porch + v_sync + v_b_porch) );
+
+    
     signal   color_shift_count : natural := 0 ;
     
     signal h_count   : integer range 0 to (h_pixels - 1) := 0; 
@@ -91,7 +76,7 @@ architecture behave of VGA_86_image is
     signal h_sync_1, v_sync_1, v_blank_1 : std_logic;
     signal h_sync_2, v_sync_2, v_blank_2 : std_logic;
 
-    signal h_pos_1   : integer range -200 to (h_pixels - 1);
+    --signal h_pos_1   : integer range -200 to (h_pixels - 1);
     signal v_pos_1   : integer range -200 to (v_lines - 1) ;
     signal h_gap_1                          : integer range    0 to 1023;
     signal x_value_a, x_value_b, x_value_c  : integer range    0 to 1023;
@@ -103,6 +88,7 @@ architecture behave of VGA_86_image is
     signal v_factor_b   : integer range 0 to 255;
     signal curve        : integer range -128 to 127;
     signal this_curve   : integer range -128 to 127;
+    
 
 
   begin
@@ -172,7 +158,7 @@ architecture behave of VGA_86_image is
         end if;
 
 
-        if (v_pos_1 >= 160) and (v_pos_1 < 480) then -- 
+        if (v_pos_1 >= 160) and (v_pos_1 < v_active_max) then
             v_factor_a <= 520 - v_pos_1; -- maximum value is 360
         else 
             v_factor_a <= 0;
@@ -187,12 +173,14 @@ architecture behave of VGA_86_image is
         
 ------------------------ pipeline stage 1 ------------------------
         
-        h_pos_1 <= h_count - 144;
+        --h_pos_1 <= h_count - 144;
         v_pos_1 <= v_count -  36;        
         
         if ( h_count < h_sync ) then  -- 96
-            h_sync_1 <= '1'; else     -- havent reached h_sync yet
-            h_sync_1 <= '0'; end if;  -- 640 is negative sync pulse
+            h_sync_1 <= '1';
+        else     -- havent reached h_sync yet
+            h_sync_1 <= '0';
+        end if;  -- 640 is negative sync pulse
         
 
 
@@ -202,23 +190,24 @@ architecture behave of VGA_86_image is
             v_sync_1 <= '0';  -- 640 is negative sync pulse
         end if;
 
-  
-      -- enable signal, determines if image is active, blanking time
-        if
-        (
+        -- blanking time, required, blank when not active
+        -- output needs to be blank between the end of the final visible line of a frame
+        -- and the beginning of the first visible line of the next frame
+        if( 
+        --(h_count >= 0 and <= h_active_max) AND (v_count >= 0 and <= v_active_max)
+        
                 ( h_count  > (h_sync + h_b_porch) )  -- 144, end of blanking time
             and
                 ( h_count < 784 )
             and
-                ( v_count > 0 ) --(v_sync + v_b_porch) 35, end of blanking time
-            and
-                ( v_count < (v_lines - (v_f_porch + v_sync + v_b_porch) ))
-               
+                ( v_count > 0 )  AND ( v_count <= v_active_max) -- v_active_max = 480, v_count MUST be > 0
+
+
         ) then
             v_blank_1 <= '0';
             
         else
-            v_blank_1 <= '1';  -- rgb black
+            v_blank_1 <= '1';  -- active blank, rgb black
         end if;
             
 
@@ -240,9 +229,6 @@ architecture behave of VGA_86_image is
         h_sync_2      <= h_sync_1 ;
         v_sync_2      <= v_sync_1 ;
         v_blank_2 <= v_blank_1 ; -- de2 unused outside this file
-        
-        -- output needs to be blank between the end of the final visible line of a frame
-        -- and the beginning of the first visible line of the next frame
         
         if (v_blank_2 = '1') then 
             rgb_2 <= x"000000";
