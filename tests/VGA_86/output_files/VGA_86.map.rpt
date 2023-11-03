@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_86
-Thu Nov  2 13:55:46 2023
+Fri Nov  3 00:51:26 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,23 +13,18 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: VGA_86_image:VGA_86_image
- 15. Parameter Settings for User Entity Instance: clock_40:clock_40_inst|altpll:altpll_component
- 16. Parameter Settings for Inferred Entity Instance: VGA_86_image:VGA_86_image|lpm_mult:Mult1
- 17. Parameter Settings for Inferred Entity Instance: VGA_86_image:VGA_86_image|lpm_mult:Mult0
- 18. altpll Parameter Settings by Entity Instance
- 19. lpm_mult Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "clock_40:clock_40_inst"
- 21. Port Connectivity Checks: "VGA_86_image:VGA_86_image"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA_86_image:VGA_86_image
+ 13. Parameter Settings for User Entity Instance: clock_40:clock_40_inst|altpll:altpll_component
+ 14. altpll Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "clock_40:clock_40_inst"
+ 16. Port Connectivity Checks: "VGA_86_image:VGA_86_image"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -56,20 +51,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov  2 13:55:46 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov  3 00:51:26 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; VGA_86                                         ;
 ; Top-level Entity Name              ; VGA_86                                         ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 372                                            ;
-;     Total combinational functions  ; 339                                            ;
-;     Dedicated logic registers      ; 212                                            ;
-; Total registers                    ; 212                                            ;
+; Total logic elements               ; 141                                            ;
+;     Total combinational functions  ; 132                                            ;
+;     Dedicated logic registers      ; 96                                             ;
+; Total registers                    ; 96                                             ;
 ; Total pins                         ; 16                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 2                                              ;
-; Total PLLs                         ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 1                                              ;
 ; UFM blocks                         ; 0                                              ;
 ; ADC blocks                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
@@ -175,8 +170,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -194,79 +188,56 @@ https://fpgasoftware.intel.com/eula.
 ; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
 ; db/clock_40_altpll.v             ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v        ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/lpm_mult.tdf      ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/lpm_add_sub.inc   ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/multcore.inc      ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/bypassff.inc      ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altshift.inc      ;         ;
-; db/mult_vds.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/mult_vds.tdf             ;         ;
-; db/mult_4ls.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/mult_4ls.tdf             ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 372      ;
-;                                             ;          ;
-; Total combinational functions               ; 339      ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 64       ;
-;     -- 3 input functions                    ; 76       ;
-;     -- <=2 input functions                  ; 199      ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 149      ;
-;     -- arithmetic mode                      ; 190      ;
-;                                             ;          ;
-; Total registers                             ; 212      ;
-;     -- Dedicated logic registers            ; 212      ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 16       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 2        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; clock_25 ;
-; Maximum fan-out                             ; 207      ;
-; Total fan-out                               ; 1438     ;
-; Average fan-out                             ; 2.45     ;
-+---------------------------------------------+----------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                  ;
++---------------------------------------------+------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                          ;
++---------------------------------------------+------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 141                                                                                            ;
+;                                             ;                                                                                                ;
+; Total combinational functions               ; 132                                                                                            ;
+; Logic element usage by number of LUT inputs ;                                                                                                ;
+;     -- 4 input functions                    ; 35                                                                                             ;
+;     -- 3 input functions                    ; 12                                                                                             ;
+;     -- <=2 input functions                  ; 85                                                                                             ;
+;                                             ;                                                                                                ;
+; Logic elements by mode                      ;                                                                                                ;
+;     -- normal mode                          ; 83                                                                                             ;
+;     -- arithmetic mode                      ; 49                                                                                             ;
+;                                             ;                                                                                                ;
+; Total registers                             ; 96                                                                                             ;
+;     -- Dedicated logic registers            ; 96                                                                                             ;
+;     -- I/O registers                        ; 0                                                                                              ;
+;                                             ;                                                                                                ;
+; I/O pins                                    ; 16                                                                                             ;
+;                                             ;                                                                                                ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                              ;
+;                                             ;                                                                                                ;
+; Total PLLs                                  ; 1                                                                                              ;
+;     -- PLLs                                 ; 1                                                                                              ;
+;                                             ;                                                                                                ;
+; Maximum fan-out node                        ; clock_40:clock_40_inst|altpll:altpll_component|clock_40_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 97                                                                                             ;
+; Total fan-out                               ; 622                                                                                            ;
+; Average fan-out                             ; 2.38                                                                                           ;
++---------------------------------------------+------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                      ; Entity Name  ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------+--------------+--------------+
-; |VGA_86                            ; 339 (7)             ; 212 (6)                   ; 0           ; 0          ; 2            ; 2       ; 0         ; 16   ; 0            ; 0          ; |VGA_86                                                                  ; VGA_86       ; work         ;
-;    |VGA_86_image:VGA_86_image|     ; 332 (332)           ; 206 (206)                 ; 0           ; 0          ; 2            ; 2       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image                                        ; VGA_86_image ; work         ;
-;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image|lpm_mult:Mult0                         ; lpm_mult     ; work         ;
-;          |mult_4ls:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image|lpm_mult:Mult0|mult_4ls:auto_generated ; mult_4ls     ; work         ;
-;       |lpm_mult:Mult1|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image|lpm_mult:Mult1                         ; lpm_mult     ; work         ;
-;          |mult_vds:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image|lpm_mult:Mult1|mult_vds:auto_generated ; mult_vds     ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                   ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------+--------------+
+; |VGA_86                                   ; 132 (0)             ; 96 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |VGA_86                                                                               ; VGA_86          ; work         ;
+;    |VGA_86_image:VGA_86_image|            ; 132 (132)           ; 96 (96)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|VGA_86_image:VGA_86_image                                                     ; VGA_86_image    ; work         ;
+;    |clock_40:clock_40_inst|               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|clock_40:clock_40_inst                                                        ; clock_40        ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|clock_40:clock_40_inst|altpll:altpll_component                                ; altpll          ; work         ;
+;          |clock_40_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGA_86|clock_40:clock_40_inst|altpll:altpll_component|clock_40_altpll:auto_generated ; clock_40_altpll ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 2           ;
-; Simple Multipliers (18-bit)           ; 0           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 1           ;
-; Unsigned Embedded Multipliers         ; 1           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -278,75 +249,46 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+----------------------------------------+----------------------------------------------------+
-; Register name                          ; Reason for Removal                                 ;
-+----------------------------------------+----------------------------------------------------+
-; VGA_86_image:VGA_86_image|x_value_c[9] ; Stuck at GND due to stuck port data_in             ;
-; VGA_86_image:VGA_86_image|x_value_b[9] ; Stuck at GND due to stuck port data_in             ;
-; VGA_86_image:VGA_86_image|x_value_a[9] ; Stuck at GND due to stuck port data_in             ;
-; VGA_86_image:VGA_86_image|x_value_a[0] ; Merged with VGA_86_image:VGA_86_image|x_value_c[0] ;
-; VGA_86_image:VGA_86_image|x_value_a[1] ; Merged with VGA_86_image:VGA_86_image|x_value_c[1] ;
-; VGA_86_image:VGA_86_image|v_pos_1[2]   ; Merged with VGA_86_image:VGA_86_image|x_value_b[0] ;
-; Total Number of Removed Registers = 6  ;                                                    ;
-+----------------------------------------+----------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 212   ;
-; Number of registers using Synchronous Clear  ; 29    ;
-; Number of registers using Synchronous Load   ; 20    ;
+; Total registers                              ; 96    ;
+; Number of registers using Synchronous Clear  ; 21    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 52    ;
+; Number of registers using Clock Enable       ; 41    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; VGA_86_image:VGA_86_image|v_pos_1[9]    ; 2       ;
-; VGA_86_image:VGA_86_image|v_pos_1[8]    ; 3       ;
-; VGA_86_image:VGA_86_image|v_pos_1[5]    ; 3       ;
-; VGA_86_image:VGA_86_image|v_pos_1[10]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[21]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[23]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[12]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[14]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[15]   ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[4]    ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[5]    ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[6]    ; 2       ;
-; VGA_86_image:VGA_86_image|rgb_sky[7]    ; 2       ;
-; VGA_86_image:VGA_86_image|this_curve[7] ; 3       ;
-; VGA_86_image:VGA_86_image|curve[7]      ; 1       ;
-; VGA_86_image:VGA_86_image|v_pos_1[3]    ; 1       ;
-; VGA_86_image:VGA_86_image|v_pos_1[4]    ; 1       ;
-; Total number of inverted registers = 17 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; VGA_86_image:VGA_86_image|r_out[0]     ; 1       ;
+; VGA_86_image:VGA_86_image|r_out[1]     ; 1       ;
+; VGA_86_image:VGA_86_image|r_out[2]     ; 1       ;
+; VGA_86_image:VGA_86_image|r_out[3]     ; 1       ;
+; VGA_86_image:VGA_86_image|b_out[0]     ; 1       ;
+; VGA_86_image:VGA_86_image|b_out[1]     ; 1       ;
+; VGA_86_image:VGA_86_image|b_out[2]     ; 1       ;
+; VGA_86_image:VGA_86_image|b_out[3]     ; 1       ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|h_count[9]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|rgb_2[4]     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|rgb_2[21]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|v_count[9]   ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|frame_num[7] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|curve[6]     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VGA_86|VGA_86_image:VGA_86_image|rgb_2        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|h_count[10] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGA_86|VGA_86_image:VGA_86_image|v_count[9]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -354,16 +296,16 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; h_pixels       ; 800   ; Signed Integer                                ;
-; h_f_porch      ; 16    ; Signed Integer                                ;
-; h_pulse        ; 96    ; Signed Integer                                ;
-; h_b_porch      ; 48    ; Signed Integer                                ;
-; h_sync_pol     ; '0'   ; Enumerated                                    ;
-; v_lines        ; 525   ; Signed Integer                                ;
-; v_f_porch      ; 10    ; Signed Integer                                ;
-; v_pulse        ; 2     ; Signed Integer                                ;
-; v_b_porch      ; 33    ; Signed Integer                                ;
-; v_sync_pol     ; '0'   ; Enumerated                                    ;
+; h_pixels       ; 1056  ; Signed Integer                                ;
+; h_f_porch      ; 40    ; Signed Integer                                ;
+; h_pulse        ; 128   ; Signed Integer                                ;
+; h_b_porch      ; 88    ; Signed Integer                                ;
+; h_sync_pol     ; '1'   ; Enumerated                                    ;
+; v_lines        ; 628   ; Signed Integer                                ;
+; v_f_porch      ; 1     ; Signed Integer                                ;
+; v_pulse        ; 4     ; Signed Integer                                ;
+; v_b_porch      ; 23    ; Signed Integer                                ;
+; v_sync_pol     ; '1'   ; Enumerated                                    ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -742,76 +684,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: VGA_86_image:VGA_86_image|lpm_mult:Mult1 ;
-+------------------------------------------------+----------+-------------------------------+
-; Parameter Name                                 ; Value    ; Type                          ;
-+------------------------------------------------+----------+-------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                ;
-; LPM_WIDTHA                                     ; 8        ; Untyped                       ;
-; LPM_WIDTHB                                     ; 9        ; Untyped                       ;
-; LPM_WIDTHP                                     ; 17       ; Untyped                       ;
-; LPM_WIDTHR                                     ; 17       ; Untyped                       ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                       ;
-; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                       ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                       ;
-; LATENCY                                        ; 0        ; Untyped                       ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                       ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                       ;
-; USE_EAB                                        ; OFF      ; Untyped                       ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                       ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                       ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                       ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K           ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                       ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                       ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                       ;
-; CBXI_PARAMETER                                 ; mult_vds ; Untyped                       ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                       ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                       ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                       ;
-+------------------------------------------------+----------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: VGA_86_image:VGA_86_image|lpm_mult:Mult0 ;
-+------------------------------------------------+----------+-------------------------------+
-; Parameter Name                                 ; Value    ; Type                          ;
-+------------------------------------------------+----------+-------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                ;
-; LPM_WIDTHA                                     ; 9        ; Untyped                       ;
-; LPM_WIDTHB                                     ; 9        ; Untyped                       ;
-; LPM_WIDTHP                                     ; 18       ; Untyped                       ;
-; LPM_WIDTHR                                     ; 18       ; Untyped                       ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                       ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                       ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                       ;
-; LATENCY                                        ; 0        ; Untyped                       ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                       ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                       ;
-; USE_EAB                                        ; OFF      ; Untyped                       ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                       ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                       ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                       ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K           ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                       ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                       ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                       ;
-; CBXI_PARAMETER                                 ; mult_4ls ; Untyped                       ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                       ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                       ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                       ;
-+------------------------------------------------+----------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                   ;
 +-------------------------------+------------------------------------------------+
@@ -829,37 +701,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                   ;
-+---------------------------------------+------------------------------------------+
-; Name                                  ; Value                                    ;
-+---------------------------------------+------------------------------------------+
-; Number of entity instances            ; 2                                        ;
-; Entity Instance                       ; VGA_86_image:VGA_86_image|lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 8                                        ;
-;     -- LPM_WIDTHB                     ; 9                                        ;
-;     -- LPM_WIDTHP                     ; 17                                       ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                   ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                       ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                       ;
-;     -- USE_EAB                        ; OFF                                      ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                     ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                       ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                       ;
-; Entity Instance                       ; VGA_86_image:VGA_86_image|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 9                                        ;
-;     -- LPM_WIDTHB                     ; 9                                        ;
-;     -- LPM_WIDTHP                     ; 18                                       ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                 ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                       ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                       ;
-;     -- USE_EAB                        ; OFF                                      ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                     ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                       ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                       ;
-+---------------------------------------+------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "clock_40:clock_40_inst"                                                               ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -869,16 +710,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VGA_86_image:VGA_86_image"                                                                 ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; blank_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; r_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; g_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; b_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_86_image:VGA_86_image"                                                               ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; blank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -887,28 +725,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 212                         ;
-;     ENA               ; 32                          ;
+; cycloneiii_ff         ; 96                          ;
+;     ENA               ; 31                          ;
 ;     ENA SCLR          ; 10                          ;
-;     ENA SLD           ; 10                          ;
-;     SCLR              ; 19                          ;
-;     SLD               ; 10                          ;
-;     plain             ; 131                         ;
-; cycloneiii_lcell_comb ; 339                         ;
-;     arith             ; 190                         ;
-;         2 data inputs ; 133                         ;
-;         3 data inputs ; 57                          ;
-;     normal            ; 149                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 32                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 64                          ;
-; cycloneiii_mac_mult   ; 2                           ;
-; cycloneiii_mac_out    ; 2                           ;
+;     SCLR              ; 11                          ;
+;     plain             ; 44                          ;
+; cycloneiii_lcell_comb ; 140                         ;
+;     arith             ; 49                          ;
+;         2 data inputs ; 49                          ;
+;     normal            ; 91                          ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 35                          ;
+; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.66                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -927,21 +760,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Nov  2 13:55:36 2023
+    Info: Processing started: Fri Nov  3 00:51:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_86 -c VGA_86
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file vga_86.vhd
     Info (12022): Found design unit 1: VGA_86-shell File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 33
     Info (12023): Found entity 1: VGA_86 File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file vga_86_image.vhd
-    Info (12022): Found design unit 1: VGA_86_image-behave File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 47
+    Info (12022): Found design unit 1: VGA_86_image-behave File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 49
     Info (12023): Found entity 1: VGA_86_image File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file clock_40.vhd
     Info (12022): Found design unit 1: clock_40-SYN File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd Line: 54
     Info (12023): Found entity 1: clock_40 File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd Line: 43
 Info (12127): Elaborating entity "VGA_86" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_86_image" for hierarchy "VGA_86_image:VGA_86_image" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 77
-Info (12128): Elaborating entity "clock_40" for hierarchy "clock_40:clock_40_inst" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 91
+Info (12128): Elaborating entity "VGA_86_image" for hierarchy "VGA_86_image:VGA_86_image" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 70
+Warning (10036): Verilog HDL or VHDL warning at VGA_86_image.vhd(76): object "frame_count" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at VGA_86_image.vhd(77): object "new_frame" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 77
+Info (12128): Elaborating entity "clock_40" for hierarchy "clock_40:clock_40_inst" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 84
 Info (12128): Elaborating entity "altpll" for hierarchy "clock_40:clock_40_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd Line: 141
 Info (12130): Elaborated megafunction instantiation "clock_40:clock_40_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd Line: 141
 Info (12133): Instantiated megafunction "clock_40:clock_40_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd Line: 141
@@ -1003,50 +838,18 @@ Info (12133): Instantiated megafunction "clock_40:clock_40_inst|altpll:altpll_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/clock_40_altpll.v
     Info (12023): Found entity 1: clock_40_altpll File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v Line: 31
 Info (12128): Elaborating entity "clock_40_altpll" for hierarchy "clock_40:clock_40_inst|altpll:altpll_component|clock_40_altpll:auto_generated" File: c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "clock_40:clock_40_inst|altpll:altpll_component|clock_40_altpll:auto_generated|wire_pll1_clk[0]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v Line: 93
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:VGA_86_image|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 165
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_86_image:VGA_86_image|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 163
-Info (12130): Elaborated megafunction instantiation "VGA_86_image:VGA_86_image|lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 165
-Info (12133): Instantiated megafunction "VGA_86_image:VGA_86_image|lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 165
-    Info (12134): Parameter "LPM_WIDTHA" = "8"
-    Info (12134): Parameter "LPM_WIDTHB" = "9"
-    Info (12134): Parameter "LPM_WIDTHP" = "17"
-    Info (12134): Parameter "LPM_WIDTHR" = "17"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vds.tdf
-    Info (12023): Found entity 1: mult_vds File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/mult_vds.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "VGA_86_image:VGA_86_image|lpm_mult:Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 163
-Info (12133): Instantiated megafunction "VGA_86_image:VGA_86_image|lpm_mult:Mult0" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd Line: 163
-    Info (12134): Parameter "LPM_WIDTHA" = "9"
-    Info (12134): Parameter "LPM_WIDTHB" = "9"
-    Info (12134): Parameter "LPM_WIDTHP" = "18"
-    Info (12134): Parameter "LPM_WIDTHR" = "18"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_4ls.tdf
-    Info (12023): Found entity 1: mult_4ls File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/mult_4ls.tdf Line: 29
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 390 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 372 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Thu Nov  2 13:55:46 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 141 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Fri Nov  3 00:51:26 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

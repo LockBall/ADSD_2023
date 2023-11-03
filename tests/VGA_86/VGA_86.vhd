@@ -37,16 +37,17 @@ architecture shell of VGA_86 is
     signal clock_40 : std_logic;
     signal reset    : std_logic;
     signal reset_a, reset_b, reset_c, reset_d, reset_e : std_logic;
-    signal r_sig, g_sig, b_sig  : std_logic_vector(7 downto 0);
+    signal r_sig, g_sig, b_sig    : std_logic_vector(3 downto 0);
 
   begin
 
     clock_50 <= max10_clk1_50;
     
     reset <= not key(0);
-    vga_r <= r_sig(7 downto 4);
-    vga_g <= g_sig(7 downto 4);
-    vga_b <= b_sig(7 downto 4);
+    
+    vga_r <= r_sig;
+    vga_g <= g_sig;
+    vga_b <= b_sig;
     
     
     process
@@ -55,18 +56,10 @@ architecture shell of VGA_86 is
         
         if (reset = '1') then
             clock_25 <= '0';
-            reset_a <= '1';
-            reset_b <= '1';
-            reset_c <= '1';
-            reset_d <= '1';
-            reset_e <= '1';
+
         else
             clock_25 <= not clock_25;
-            reset_a <= '0';
-            reset_b <= reset_a;
-            reset_c <= reset_b;
-            reset_d <= reset_c;
-            reset_e <= reset_d;
+
       end if;
       
     end process;
@@ -78,7 +71,7 @@ architecture shell of VGA_86 is
         port map (
             clock_25   => clock_25,
             clock_40   => clock_40,
-            reset      => reset_e,
+            reset      => reset,
             h_sync_out => vga_hs,
             v_sync_out => vga_vs,
             blank_out  => open, 
@@ -89,13 +82,10 @@ architecture shell of VGA_86 is
 
     
     clock_40_inst : entity work.clock_40 PORT MAP (
-    --clock_40_inst : clock_40 PORT MAP (
 		areset	 => reset,
 		inclk0	 => clock_50,
 		c0	     => clock_40,
 		locked	 => open -- locked_sig
 	);
-
-
 
 end architecture shell;

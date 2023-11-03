@@ -1,4 +1,1 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,VGA_86_image:VGA_86_image|lpm_mult:Mult0|mult_4ls:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,VGA_86_image:VGA_86_image|lpm_mult:Mult1|mult_vds:auto_generated|mac_out2,
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,VGA_86_image:VGA_86_image|lpm_mult:Mult1|mult_vds:auto_generated|mac_mult1,
