@@ -1,5 +1,5 @@
 Assembler report for VGA_86
-Fri Nov  3 00:51:37 2023
+Fri Nov  3 11:44:09 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov  3 00:51:37 2023 ;
+; Assembler Status      ; Successful - Fri Nov  3 11:44:09 2023 ;
 ; Revision Name         ; VGA_86                                ;
 ; Top-level Entity Name ; VGA_86                                ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                       ;
 +----------------+-------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00280F1F                                                                    ;
-; Checksum       ; 0x00280F1F                                                                    ;
+; JTAG usercode  ; 0x002927AB                                                                    ;
+; Checksum       ; 0x002927AB                                                                    ;
 +----------------+-------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Nov  3 00:51:35 2023
+    Info: Processing started: Fri Nov  3 11:44:06 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off VGA_86 -c VGA_86
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4713 megabytes
-    Info: Processing ended: Fri Nov  3 00:51:37 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4720 megabytes
+    Info: Processing ended: Fri Nov  3 11:44:09 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
