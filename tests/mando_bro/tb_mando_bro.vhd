@@ -33,26 +33,30 @@ begin
 		file out_file : text open write_mode is "my_generated_file.ppm";
 		variable out_line : line;
 		variable red, grn, blu: natural range 0 to 15;
-	begin
-		write(out_file, "P3" & LF);
-		write(out_file, "40 20" & LF);
-		write(out_file, "15" & LF);
+	  begin
+        -- ppm file header
+		write(out_file, "P3" & LF); -- magic number, , full color PPM, ASCII characters
+		write(out_file, "64 64" & LF); -- image width & height
+		write(out_file, "15" & LF); -- max colors
 
-		for j in 0 to 19 loop -- 19
-			for i in 0 to 39 loop -- 39
-
-				-- generate colors
-				red := i mod 16;
-				grn := (i + j) mod 16;
-				blu := (15 - j) mod 16;
+		-- generate colors
+		for i in 0 to 15 loop -- 19
+            red := i ;
+			    for j in 0 to 15 loop -- 39
+                    grn := j ;     
+                    for k in 0 to 15 loop
+                        blu := k ;
 				
-				-- write them to a file
-				write(out_line,
-						integer'image(red) & " "
-							& integer'image(grn) & " "
-							& integer'image(blu));
-				writeline(out_file, out_line);
-			end loop;
+                        --for n in 0 to 7 loop
+                            write(-- write them to a file
+                                out_line, 
+                                integer'image(red) & " "
+                                & integer'image(grn) & " "
+                                & integer'image(blu));
+                            writeline(out_file, out_line);
+                        --end loop;    
+                    end loop;
+			    end loop;
 		end loop;
 
 		wait;
