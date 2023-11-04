@@ -1,0 +1,18 @@
+|mando_bro
+clock => ~NO_FANOUT~
+u_test[-3] => ~NO_FANOUT~
+u_test[-2] => ~NO_FANOUT~
+u_test[-1] => ~NO_FANOUT~
+u_test[0] => ~NO_FANOUT~
+u_test[1] => ~NO_FANOUT~
+u_test[2] => ~NO_FANOUT~
+u_test[3] => ~NO_FANOUT~
+s_test[-3] => ~NO_FANOUT~
+s_test[-2] => ~NO_FANOUT~
+s_test[-1] => ~NO_FANOUT~
+s_test[0] => ~NO_FANOUT~
+s_test[1] => ~NO_FANOUT~
+s_test[2] => ~NO_FANOUT~
+s_test[3] => ~NO_FANOUT~
+
+

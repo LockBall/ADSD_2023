@@ -1,0 +1,7 @@
+v 4
+file . "hello_world.vhd" "6449484df3b20374de464637fd4abfdb4836f14d" "20231103212415.398":
+  entity hello_world at 1( 0) + 0 on 11;
+  architecture sim of hello_world at 6( 61) + 0 on 12;
+file . "write_file.vhd" "b23d508524d6a8398032fbe89c0ed95573b58595" "20231103230739.992":
+  entity write_file at 1( 0) + 0 on 39;
+  architecture test of write_file at 10( 145) + 0 on 40;

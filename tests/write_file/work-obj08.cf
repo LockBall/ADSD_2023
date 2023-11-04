@@ -1,0 +1,4 @@
+v 4
+file . "write_file.vhd" "ccd714014c99d60a7e82ff570f6e41bbd3909c3f" "20231104002722.969":
+  entity write_file at 1( 0) + 0 on 13;
+  architecture test of write_file at 15( 279) + 0 on 14;

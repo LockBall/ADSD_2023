@@ -1,0 +1,117 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/simulation/questa
+T_opt
+!s110 1699035157
+VC@7YVN:Q2`X^cVaSPHSE=1
+04 12 10 work tb_mando_bro test_bench 1
+=1-d0509975fd67-65453814-2b4-4214
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Emando_bro
+Z1 w1699033172
+Z2 DPx11 floatfixlib 17 fixed_float_types 0 22 cW]eNFhGGd5lB:5@0FCJB2
+Z3 DPx11 floatfixlib 9 fixed_pkg 0 22 d`HgzG9]=BHLjHi8[PCmg3
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z7 8C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd
+Z8 FC:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd
+l0
+L10 1
+VdXKejkZ^:e?7PGkDbi_kF0
+!s100 VAl]<8a^BC2eS0GmjnEaE3
+Z9 OL;C;2021.2;73
+31
+Z10 !s110 1699035156
+!i10b 1
+Z11 !s108 1699035155.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd|
+Z13 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd|
+!i113 0
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+R5
+R6
+Z16 DEx4 work 9 mando_bro 0 22 dXKejkZ^:e?7PGkDbi_kF0
+!i122 0
+l27
+L23 9
+V@fUL?eOjSFBoP8fZQO8YC2
+!s100 @613F]oIEXSzmA01jJW?@0
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Etb_mando_bro
+Z17 w1699035121
+R2
+R3
+R4
+R5
+R6
+!i122 1
+R0
+Z18 8C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd
+Z19 FC:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd
+l0
+L9 1
+V]BozVhXj_]1fhJl56:CNK2
+!s100 BUSNf6MI_OC`2lzA<BUgV0
+R9
+31
+R10
+!i10b 1
+Z20 !s108 1699035156.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd|
+Z22 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd|
+!i113 0
+R14
+R15
+Atest_bench
+R16
+R2
+R3
+R4
+R5
+R6
+DEx4 work 12 tb_mando_bro 0 22 ]BozVhXj_]1fhJl56:CNK2
+!i122 1
+l18
+L12 46
+V9o^WzdhoFFN55ace?BRYY3
+!s100 SHoSBN@38oZJi4d>VR4aH1
+R9
+31
+R10
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R14
+R15
