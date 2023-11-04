@@ -1,6 +1,6 @@
 
 GHDL=ghdl
-FLAGS="--std=93"
+FLAGS="--std=08"
 
 all:
 	@$(GHDL) -a $(FLAGS) tb_mando_bro.vhd

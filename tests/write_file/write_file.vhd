@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use std.textio.all;
 
--- thesee two ARE mutually exclusive yah know !
+-- these two ARE mutually exclusive yah know !
 use ieee.fixed_pkg.all;
 --library floatfixlib;
 --use floatfixlib.fixed_pkg.all;
