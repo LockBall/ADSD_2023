@@ -3,23 +3,22 @@
 from PIL import Image
 import colorsys
 import math
-import os
-import time
+import os # file handling
+import time # assessing performance
 
 for num_runs in range(1):
 
     start = time.time()
-    print("starting")
     # os.remove("output.png")
     #frame parameters
-    width = 80 # pixels, 1000, 800
-    height = 60
-    ppm_max_colors = 255 # 15, 255
+    width = 800 # pixels, 1000, 800
+    height = 600
+    ppm_max_colors = 15 # 15, 255
     x = -0.65
     y = 0
     xRange = 3.4
     aspectRatio = 4/3
-    max_iters = 75 # 500
+    max_iters = 500 # 500
 
     #height = round(width / aspectRatio)
     yRange = xRange / aspectRatio
@@ -34,16 +33,32 @@ for num_runs in range(1):
     ppm_header = ["P3\n", str(width), ' ', str(height), "\n", str(ppm_max_colors), "\n" ]
     file = open(f'{width}' + '_' + f'{height}.ppm', 'a')
     file.writelines(ppm_header)
+
+    dist_list =[]
     
     #def logColor(distance, base, const, scale):
     #    color = -1 * math.log(distance, base)
     #    rgb = colorsys.hsv_to_rgb(const + scale * color,0.8,0.9)
     #    return tuple(round(i * 255) for i in rgb)
 
-    def powerColor(distance, exp, const, scale):
-        color = distance**exp
-        rgb = colorsys.hsv_to_rgb(const + scale * color, 1 - 0.6 * color, 0.9)
-        return tuple(round(i * 255) for i in rgb)
+    #def powerColor(distance, exp, const, scale):
+    #    color = distance**exp
+    #    rgb = colorsys.hsv_to_rgb(const + scale * color, 1 - 0.6 * color, 0.9)
+    #    return tuple(round(i * 255) for i in rgb)
+    
+    def color_4bit(distance):
+        #print(distance)
+        dist_str = (str(distance)[2:8]).ljust(8, '0')
+        #print(dist_str)
+        red = round(float(dist_str[0:2]) / 100 * 15)
+        #print('red: ', red)
+        green = round(float(dist_str[2:4]) / 100 * 15)
+        #print('green: ', green)
+        blue = round(float(dist_str[4:6]) / 100 * 15)
+        #print('blue: ', blue)
+        rgb = (red, green, blue)
+        return tuple(rgb)
+
 
     for row in range(height):
         for col in range(width):
@@ -63,10 +78,15 @@ for num_runs in range(1):
 
             if iters < max_iters:
                 distance = (iters + 1) / (max_iters + 1)
-                rgb = powerColor(distance, 0.2, 0.27, 1.0)
-                pixels[col, row] = rgb
+                #print(distance)
+                dist_list.append(distance * 10) # to determine min & max values
+                #rgb = powerColor(distance, 0.2, 0.27, 1.0)
+                rgb_4bit = color_4bit(distance)
+                #print(rgb_4bit, '\n')
+                #print(type(rgb_4bit))
+                pixels[col, row] = rgb_4bit # rgb
 
-                rgb_str_clean = str(rgb).replace(',', '').replace('(', '').replace(')', '')
+                rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
                 rgb_line=[rgb_str_clean, "\n"]
                 file.writelines(rgb_line)
             
@@ -76,14 +96,17 @@ for num_runs in range(1):
                 file.writelines(rgb_line)
 
             index = row * width + col + 1
-            print("{} / {}, {}%".format(index, width * height, round(index / width / height * 100 * 10) / 10))
+           # print("{} / {}, {}%".format(index, width * height, round(index / width / height * 100 * 10) / 10))
 
 
     file.close
     end = time.time()
     elapsed = end - start
-    img.save(str(width) + "_" + str(height) + "_" + str(max_iters) + '_' + str(round(elapsed, 2)) + '_output.png')
+    print(elapsed)
+    #img.save(str(width) + "_" + str(height) + "_" + str(max_iters) + '_' + str(round(elapsed, 2)) + '_output.png')
     print("run", num_runs + 1, "done")
+    #print("min: ", min(dist_list))
+    #print("max: ", max(dist_list))
 
 
 # currently running this on WSL ubuntu so no opening images
