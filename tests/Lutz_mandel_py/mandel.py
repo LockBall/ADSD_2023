@@ -11,14 +11,14 @@ for num_runs in range(1):
     start = time.time()
     # os.remove("output.png")
     #frame parameters
-    width = 800 # pixels, 1000, 800
-    height = 600
+    width = 1920 # pixels, 1000, 800
+    height = 1080
+    aspectRatio = 16/9 # 4/3
     ppm_max_colors = 15 # 15, 255
     x = -0.65
     y = 0
     xRange = 3.4
-    aspectRatio = 4/3
-    max_iters = 500 # 500
+    max_iters = 2000 # 500
 
     #height = round(width / aspectRatio)
     yRange = xRange / aspectRatio
@@ -31,7 +31,7 @@ for num_runs in range(1):
     pixels = img.load()
 
     ppm_header = ["P3\n", str(width), ' ', str(height), "\n", str(ppm_max_colors), "\n" ]
-    file = open(f'{width}' + '_' + f'{height}.ppm', 'a')
+    file = open(f'{width}' + '_' + f'{height}' + '_' + f'{max_iters}' + '.ppm', 'a')
     file.writelines(ppm_header)
 
     dist_list =[]
