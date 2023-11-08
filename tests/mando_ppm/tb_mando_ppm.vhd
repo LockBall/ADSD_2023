@@ -8,7 +8,8 @@ use std.textio.all;
 -- these two ARE mutually exclusive yah know !
 
 library floatfixlib;  -- use for quartus / questa sim
-use floatfixlib.fixed_pkg.all;use floatfixlib.float_pkg.all;
+use floatfixlib.fixed_pkg.all;
+use floatfixlib.float_pkg.all;
 
 
 entity tb_mando_ppm is
@@ -20,7 +21,6 @@ architecture test_bench of tb_mando_ppm is
     signal s_val : sfixed(3 downto -3) := "0101010" ;
     signal u_val : ufixed(3 downto -3) := "0011000" ;
     
-
     constant width_pix  : natural range 0 to 1920 := 80;
     constant height_pix : natural range 0 to 1080 := 60;
     constant ppm_colors : natural range 0 to 15   := 15;
@@ -89,12 +89,15 @@ architecture test_bench of tb_mando_ppm is
                     if iters < max_iters then
                         distance <= (to_float(iters) + 1.0) / (to_float(max_iters) + 1.0) ;
                         
+                       -- need to parse distance to RGB values
                        -- write(brot_out_line, distance); -- Write value to line
-                        
                        -- writeline(brot_out_file, brot_out_line); -- Write line to the file
 
                     else
-                        -- rgb <= 0 0 0
+                        -- red <= 0;
+                        -- grn <= 0;
+                        -- blu <= 0;
+                        -- writleline
                     
                     end if;
                     
@@ -128,9 +131,9 @@ architecture test_bench of tb_mando_ppm is
 				
                             write(  
                                 out_line, 
-                                integer'image(red) & " " &
-                                integer'image(grn) & " " &
-                                integer'image(blu)
+                                natural'image(red) & " " &
+                                natural'image(grn) & " " &
+                                natural'image(blu)
                             );
                                 
                             writeline(out_file, out_line);
