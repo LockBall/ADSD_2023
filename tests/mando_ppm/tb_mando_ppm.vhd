@@ -94,10 +94,18 @@ architecture test_bench of tb_mando_ppm is
                        -- writeline(brot_out_file, brot_out_line); -- Write line to the file
 
                     else
-                        -- red <= 0;
-                        -- grn <= 0;
-                        -- blu <= 0;
-                        -- writleline
+                        brot_red := 0;
+                        brot_grn := 0;
+                        brot_blu := 0;
+                        
+                        write(
+                            brot_out_line,
+                            natural'image(brot_red) & " " &
+                            natural'image(brot_grn) & " " &
+                            natural'image(brot_blu)
+                        );
+                        
+                        writeline(brot_out_file, brot_out_line);
                     
                     end if;
                     
