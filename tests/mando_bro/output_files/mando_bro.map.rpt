@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mando_bro
-Fri Nov  3 16:53:49 2023
+Mon Nov  6 18:36:43 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov  3 16:53:49 2023          ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov  6 18:36:43 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; mando_bro                                      ;
 ; Top-level Entity Name              ; mando_bro                                      ;
@@ -257,15 +257,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Nov  3 16:53:39 2023
+    Info: Processing started: Mon Nov  6 18:36:34 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mando_bro -c mando_bro
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file mando_bro.vhd
     Info (12022): Found design unit 1: mando_bro-arch File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 23
     Info (12023): Found entity 1: mando_bro File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file tb_mando_bro.vhd
-    Info (12022): Found design unit 1: tb_mando_bro-test_bench File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 12
-    Info (12023): Found entity 1: tb_mando_bro File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 9
+    Info (12022): Found design unit 1: tb_mando_bro-test_bench File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 15
+    Info (12023): Found entity 1: tb_mando_bro File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 12
 Info (12127): Elaborating entity "mando_bro" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -290,8 +290,8 @@ Info (21057): Implemented 15 device resources after synthesis - the final resour
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Fri Nov  3 16:53:49 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Mon Nov  6 18:36:43 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 

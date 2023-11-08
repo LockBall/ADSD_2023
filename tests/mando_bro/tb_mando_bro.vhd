@@ -5,6 +5,7 @@ use std.textio.all;
 
 -- these two ARE mutually exclusive yah know !
 use ieee.fixed_pkg.all;
+
 --library floatfixlib;
 --use floatfixlib.fixed_pkg.all;
 
