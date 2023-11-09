@@ -11,16 +11,16 @@ for num_runs in range(1):
     start = time.time()
     # os.remove("output.png")
     #frame parameters
-    width_pix = 80 # pixels, 1000, 800
-    height_pix = 60
-    aspectRatio = 4/3 # 4/3, 16/9
+    width_pix = 16 # pixels, 1000, 800
+    height_pix = 16
+    aspectRatio = 1/1 # 4/3, 16/9
     ppm_max_colors = 15 # 15, 255
     x_coord = -0.5 # centers image of interest within frame
     y_coord = 0
     x_range = 4 # 3.4
     y_range = 3
-    max_iters = 75 # 500
-
+    max_iters = 20 # 500
+    iters_count = 0
     #height_pix = round(width_pix / aspectRatio)
     
     min_x = x_coord - x_range / 2
@@ -37,6 +37,7 @@ for num_runs in range(1):
 
     dist_list =[]
     x_list = []
+    esc_list =[]
     
     #def logColor(distance, base, const, scale):
     #    color = -1 * math.log(distance, base)
@@ -64,26 +65,34 @@ for num_runs in range(1):
 
     for row in range(height_pix):
         for col in range(width_pix):
+            print(x_coord)
             x_coord = min_x + col * x_range / width_pix
             #x_list.append(x_coord)
-            #print(x)
             y_coord = max_y - row * y_range / height_pix
             old_x = x_coord
             old_y = y_coord
             
             for iters in range(max_iters + 1):
+                #print("for", iters)
                 a_comp = x_coord * x_coord - y_coord * y_coord #real component of z^2
                 b_comp = 2 * x_coord * y_coord #imaginary component of z^2
                 x_coord = a_comp + old_x #real component of new z
                 #print(x)
                 #x_list.append(x_coord)
                 y_coord = b_comp + old_y #imaginary component of new z
-
-                if x_coord * x_coord + y_coord * y_coord > 4:
+                iters_cnt = iters #_cnt + 1
+                escape = x_coord * x_coord + y_coord * y_coord
+                esc_list.append(escape)
+                #print("escape", escape)
+                if escape > 4:
                     break
+                # end if
+            # end for
 
-            if iters < max_iters:
-                distance = (iters + 1) / (max_iters + 1)
+
+            if iters_cnt < max_iters:
+                #print("if", iters_cnt)
+                distance = (iters_cnt + 1) / (max_iters + 1)
                 #print(distance)
                 #dist_list.append(distance * 10) # to determine min & max values
                 #rgb = powerColor(distance, 0.2, 0.27, 1.0)
@@ -94,12 +103,14 @@ for num_runs in range(1):
 
                 rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
                 rgb_line=[rgb_str_clean, "\n"]
-                file.writelines(rgb_line)
             
             else:
                 rgb_str_clean = '0 0 0'
                 rgb_line=[rgb_str_clean, "\n"]
-                file.writelines(rgb_line)
+            # end if
+
+            file.writelines(rgb_line)
+
 
             #index = row * width_pix + col + 1
            # print("{} / {}, {}%".format(index, width_pix * height_pix, round(index / width_pix / height_pix * 100 * 10) / 10))
@@ -111,10 +122,11 @@ for num_runs in range(1):
     print(elapsed)
     #img.save(str(width_pix) + "_" + str(height_pix) + "_" + str(max_iters) + '_' + str(round(elapsed, 2)) + '_output.png')
     print("run", num_runs + 1, "done")
-    #print("min_dist: ", min(dist_list))
-    #print("max_dist: ", max(dist_list))
-    print("min_x: ", min(x_list))
-    print("max_x: ", max(x_list))
-
+    #print("dist_min: ", min(dist_list))
+    #print("dist_max: ", max(dist_list))
+    #print("x_min: ", min(x_list))
+    #print("x_max: ", max(x_list))
+    #print("esc_min: ", min(esc_list))
+    #print("esc_max: ", max(esc_list))
 # currently running this on WSL ubuntu so no opening images
 #os.system('open output.png')
