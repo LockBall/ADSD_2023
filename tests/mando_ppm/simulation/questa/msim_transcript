@@ -466,3 +466,5 @@ add wave -position 5  /tb_mando_ppm/write_ppm_test/grn
 restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 run
+# End time: 02:04:59 on Nov 10,2023, Elapsed time: 16:26:28
+# Errors: 0, Warnings: 0

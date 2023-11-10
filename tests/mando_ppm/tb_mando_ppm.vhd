@@ -5,12 +5,12 @@ use std.textio.all;
 use ieee.MATH_REAL.ALL;
 
  --these two ARE mutually exclusive yah know !
---use ieee.fixed_pkg.all; -- use for GHDL sim
---use ieee.float_pkg.all;
+use ieee.fixed_pkg.all; -- use for GHDL sim
+use ieee.float_pkg.all;
 
-library floatfixlib;  -- use for quartus / questa sim
-use floatfixlib.fixed_pkg.all;
-use floatfixlib.float_pkg.all;
+--library floatfixlib;  -- use for quartus / questa sim
+--use floatfixlib.fixed_pkg.all;
+--use floatfixlib.float_pkg.all;
 
 
 entity tb_mando_ppm is
@@ -22,15 +22,16 @@ architecture test_bench of tb_mando_ppm is
     signal s_val : sfixed(3 downto -3) := "0101010" ;
     signal u_val : ufixed(3 downto -3) := "0011000" ;
     
-    constant width_pix  : natural range 0 to 1920 := 16;
-    constant height_pix : natural range 0 to 1080 := 16;
+    constant height_pix : natural range 0 to 1080 := 40;
+    constant width_pix  : natural range 0 to 1920 := 30;
+    constant max_iters  : natural range 0 to 500 := 20;
     constant ppm_colors : natural range 0 to 15   := 15;
     
-    constant x_range    : natural range 4 to 5 := 4;
-    constant y_range    : natural range 3 to 4 := 3;
-    constant max_iters  : natural range 20 to 500 := 20;
+    constant x_range    : float32 := to_float(4.0);
+    constant y_range    : float32 := to_float(3.0);
+
     
-    signal iters_cnt : natural ;--range 0 to max_iters := 0 ;
+    --signal iters_cnt : natural ;--range 0 to max_iters := 0 ;
 
    
   begin
@@ -50,13 +51,14 @@ architecture test_bench of tb_mando_ppm is
         variable x_coord   : float32 := to_float(-0.5); -- float32, same as "float (8 downto –23)" --(5 downto -7) ;
         variable y_coord   : float32 := to_float(0.0);
         variable esc       : float32 ;
+        variable esc_cnt   : natural := 0 ;
         
-        --variable iters_cnt : natural ;--range 0 to max_iters := 0 ;
+        variable iters_cnt : natural ;--range 0 to max_iters := 0 ;
     
-        variable min_x     : float32 := (x_coord - x_range / 2);
-        variable max_x     : float32 := (x_coord + x_range / 2);
-        variable min_y     : float32 := (y_coord - y_range / 2);
-        variable max_y     : float32 := (y_coord - y_range / 2);    
+        constant min_x     : float32 := x_coord - (x_range / 2.0 );
+        --variable max_x     : float32 := x_coord + (x_range / 2.0 );
+        --variable min_y     : float32 := y_coord - (y_range / 2.0 );
+        constant max_y     : float32 := y_coord + (y_range / 2.0 );    
     
         variable old_x     : float32 ; -- related to x_coord
         variable old_y     : float32 ; -- related to y_coord
@@ -76,54 +78,97 @@ architecture test_bench of tb_mando_ppm is
 	  begin
         -- ppm file header
 		write(brot_out_file, "P3" & LF); -- magic number, , full color PPM, ASCII characters
-		write(brot_out_file, "80 60" & LF); -- image width & height
+		write(brot_out_file, "40 30" & LF); -- image width & height
 		write(brot_out_file, "15" & LF); -- max colors
-		
-        -- generate colors
-        for row in 0 to height_pix loop
-           -- write(brot_out_file, "row" & LF);
-           -- write(    
-           --     brot_out_line,
-           --     natural'image(row) 
-           -- );
-           -- writeline(brot_out_file, brot_out_line); -- Write line to the file
-
         
-            for col in 0 to width_pix loop
+--        write(brot_out_file, LF & "float_test" & LF);  -- -1.359375 correct
+--        write(    
+--            brot_out_line,
+--            to_real((2.175 * 1.25 * x_coord))
+--        );
+--        writeline(brot_out_file, brot_out_line);
+        
+--        write(brot_out_file, LF & "ini_x_coord" & LF);
+--        write(    
+--            brot_out_line,
+--            to_real(float(x_coord))
+--        );
+--        writeline(brot_out_file, brot_out_line);
 
-            --    write(brot_out_file, "x_coord" & LF);
-            --    write(    
-            --        brot_out_line,
-            --        real'image(to_real(x_coord)) 
-            --    );
-            --    writeline(brot_out_file, brot_out_line);
+
+        -- generate colors
+        for row in 0 to (height_pix - 1) loop
+--            write(brot_out_file, LF & "row" & LF);
+--            write(    
+--                brot_out_line,
+--                natural'image(row) 
+--            );
+--            writeline(brot_out_file, brot_out_line); -- Write line to the file
+            
+            for col in 0 to (width_pix - 1) loop
+--                write(brot_out_file,"    col" & LF);
+--                write(    
+--                    brot_out_line,
+--                    natural'image(col) 
+--                );
+--                writeline(brot_out_file, brot_out_line);
                 
-                x_coord := (min_x + (col * x_range / width_pix)) ;
+
+--                write(brot_out_file, LF & "pre_x_coord" & LF);
+--                write(    
+--                    brot_out_line,
+--                    to_real(float(x_coord))
+--                );
+--                writeline(brot_out_file, brot_out_line);
                 
-                y_coord := max_y - row * y_range / height_pix ;
+                
+--                write(brot_out_file, LF & "min_x" & LF);  -- -2.5 checks out
+--                write(    
+--                    brot_out_line,
+--                    to_real(min_x)
+--                );
+--                writeline(brot_out_file, brot_out_line);
+                
+                
+--                write(brot_out_file, LF & "x_range" & LF);
+--                write(    
+--                    brot_out_line,
+--                    to_real(x_range)
+--                );
+--                writeline(brot_out_file, brot_out_line);                
+    
+
+                x_coord := min_x + (col * x_range / width_pix) ;
+                y_coord := max_y - (row * y_range / height_pix) ;
+                
                 old_x   := x_coord ;
                 old_y   := y_coord ;
                 
-                --iters_cnt := 0 ;
-                for iters in 0 to (max_iters + 1) loop
-                
+                --write(brot_out_file, "        iters" & LF);
+                for iters in 0 to max_iters loop  -- not including a "+ 1" equivs the - 1 from python
+                    iters_cnt := iters;
 
-                    a_comp  := ((x_coord * x_coord) - (y_coord * y_coord)) ; --real component of z^2
-                    b_comp  := 2.0 * x_coord * y_coord ; --imaginary component of z^2
+                    a_comp  := (x_coord * x_coord) - (y_coord * y_coord) ; --real component of z^2
+                    b_comp  := (2.0 * x_coord * y_coord) ; --imaginary component of z^2
                     x_coord := a_comp + old_x ; --real component of new z
                     y_coord := b_comp + old_y ; --imaginary component of new z
-                    iters_cnt <= iters; --iters_cnt + 1 ;
                     
-                    write(brot_out_file, "iters_cnt" & LF);
-                    write(    
-                        brot_out_line,
-                        natural'image(iters_cnt) 
-                    );
-                    writeline(brot_out_file, brot_out_line);                    
+                    --write(brot_out_file, "a_comp" & LF);
+--                    write(    
+--                        brot_out_line,
+--                        to_real(float(y_coord))
+--                    );
+--                    writeline(brot_out_file, brot_out_line);                      
                     
-                    esc := ((x_coord * x_coord) + (y_coord * y_coord));
                     
-
+                    esc := (x_coord * x_coord) + (y_coord * y_coord);
+--                    
+                    --write(brot_out_file, LF & "esc" & LF);
+--                    write(    
+--                        brot_out_line,
+--                        to_real(float(esc))
+--                    );
+--                    writeline(brot_out_file, brot_out_line);
                         
                 --        
                 --    write(brot_out_file, "for iters" & LF);
@@ -134,79 +179,74 @@ architecture test_bench of tb_mando_ppm is
                  --   writeline(brot_out_file, brot_out_line);                    
 
                     
-                    if esc > 4.0 then
-                    
-                        write(brot_out_file, "esc" & LF);
-                   --     write(    
-                   --         brot_out_line,
-                   --         integer'image(to_integer(esc)) 
-                    --    );
-                   --     writeline(brot_out_file, brot_out_line);
-                       --exit;
-                        
-                    elsif esc < 4.0 then
-                        write(brot_out_file, "NO_esc" & LF);
-                    --    write(    
-                    --        brot_out_line,
-                    --        natural'image(to_integer(esc)) 
-                    --   );
-                    --    writeline(brot_out_file, brot_out_line);
-                        
-                    else
-                    --    write(brot_out_file, "unknown" & LF);
-                    --    write(    
-                    --        brot_out_line,
-                    --        natural'image(to_integer(esc)) 
-                    --   );
-                    --    writeline(brot_out_file, brot_out_line);
+                    if esc > to_float(4.0) then
+                        esc_cnt := esc_cnt + 1 ;
+                       exit;
                     end if;
 
-                end loop;
-                
+                end loop;  -- for iters in 0 to (max_iters + 1) loop
 
-                    
+                                    
                 if (iters_cnt < max_iters) then
-                    distance := (to_float(iters_cnt) + 1.0) / (to_float(max_iters) + 1.0) ;
+                   -- distance := (to_float(iters_cnt) + 1.0) / (to_float(max_iters) + 1.0) ;
                     
-                    --write(brot_out_file, "num_iters_cnt" & LF);
+                    --write(brot_out_file, "distance" & LF);
+--                    write(    
+--                        brot_out_line,
+--                        to_real(float(distance * 100))
+--                    );
+--                    writeline(brot_out_file, brot_out_line);    
+                    
 
                    -- need to parse distance to RGB values
-                    brot_red := 2 ;-- to_real(distance * 1000) ;
-                    brot_grn := 4 ;--to_real(iters_cnt); --1.0 ; --to_integer(distance) ;
+                    brot_red := 2 ;
+                    brot_grn := 4 ;
                     brot_blu := 8 ;
+                    
+                    write(
+                        brot_out_line,
+                        natural'image(brot_red)  & " " &
+                        natural'image(brot_grn)  & " " &
+                        natural'image(brot_blu)
+                    );
+                    writeline(brot_out_file, brot_out_line);                    
                    
-                    -- Write value to line
-                   -- write(    
-                   --     brot_out_line,
-                   --     natural'image(iters_cnt)                   
-                   -- ); 
-                    -- write line to file
-                   -- writeline(brot_out_file, brot_out_line); -- Write line to the file
-
                 else
-                    brot_red := 0 ; --to_integer(to_float(100.0));
+                    brot_red := 0 ;
                     brot_grn := 0 ;
                     brot_blu := 0 ;
                     
+                    write(
+                        brot_out_line,
+                        natural'image(brot_red)  & " " &
+                        natural'image(brot_grn)  & " " &
+                        natural'image(brot_blu)
+                    );
+                    writeline(brot_out_file, brot_out_line);  
+                
                 end if;
                 
-             --   write(
-             --       brot_out_line,
-             --       natural'image(brot_red)  & " " &
-             --       natural'image(brot_grn)  & " " &
-             --       natural'image(brot_blu)
-             --   );
-             --   writeline(brot_out_file, brot_out_line);                
+               
+                
+                
                 
                     
-            end loop;
-        end loop;
+            end loop;  -- for col in 0 to width_pix loop
+        end loop;  -- for row in 0 to height_pix loop
 
-    
-        wait;
+        write(brot_out_file, "esc_cnt" & LF);
+        write(    
+            brot_out_line,
+            natural'image(esc_cnt) 
+        );
+        writeline(brot_out_file, brot_out_line);        
+
+      wait;
     end process write_brot;
     
 
+    
+    
     write_ppm_test : process is
 		file out_file : text open write_mode is "my_generated_file.ppm";
 		variable out_line : line;

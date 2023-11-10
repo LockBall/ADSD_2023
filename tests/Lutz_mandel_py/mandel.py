@@ -11,22 +11,24 @@ for num_runs in range(1):
     start = time.time()
     # os.remove("output.png")
     #frame parameters
-    width_pix = 16 # pixels, 1000, 800
-    height_pix = 16
-    aspectRatio = 1/1 # 4/3, 16/9
+    width_pix = 40 # pixels, 1000, 800
+    height_pix = 30
+    max_iters = 20 # 500
+    aspectRatio = 4/3 # 16/9
     ppm_max_colors = 15 # 15, 255
     x_coord = -0.5 # centers image of interest within frame
     y_coord = 0
     x_range = 4 # 3.4
     y_range = 3
-    max_iters = 20 # 500
+ 
     iters_count = 0
     #height_pix = round(width_pix / aspectRatio)
     
-    min_x = x_coord - x_range / 2
-    max_x = x_coord + x_range / 2
-    min_y = y_coord - y_range / 2
-    max_y = y_coord + y_range / 2
+    min_x = x_coord - (x_range / 2)
+    #print("min_x: ", min_x)
+    #max_x = x_coord + (x_range / 2)
+    #min_y = y_coord - (y_range / 2)
+    max_y = y_coord + (y_range / 2)
 
     img = Image.new('RGB', (width_pix, height_pix), color = 'black')
     pixels = img.load()
@@ -38,6 +40,7 @@ for num_runs in range(1):
     dist_list =[]
     x_list = []
     esc_list =[]
+    esc_cnt = 0
     
     #def logColor(distance, base, const, scale):
     #    color = -1 * math.log(distance, base)
@@ -64,27 +67,33 @@ for num_runs in range(1):
 
 
     for row in range(height_pix):
+        #print("row", row)
         for col in range(width_pix):
-            print(x_coord)
+            #print("col", col)
+            #print("pre_x_coord: ", x_coord)
             x_coord = min_x + col * x_range / width_pix
+            #print("post_x_coord: ", x_coord, "\n")
             #x_list.append(x_coord)
-            y_coord = max_y - row * y_range / height_pix
+            y_coord = max_y - (row * y_range / height_pix)
+            #print("post_y_coord: ", y_coord)
             old_x = x_coord
             old_y = y_coord
             
             for iters in range(max_iters + 1):
+                iters_cnt = iters #_cnt + 1
                 #print("for", iters)
-                a_comp = x_coord * x_coord - y_coord * y_coord #real component of z^2
+                a_comp = (x_coord * x_coord) - (y_coord * y_coord) #real component of z^2
                 b_comp = 2 * x_coord * y_coord #imaginary component of z^2
                 x_coord = a_comp + old_x #real component of new z
-                #print(x)
                 #x_list.append(x_coord)
                 y_coord = b_comp + old_y #imaginary component of new z
-                iters_cnt = iters #_cnt + 1
-                escape = x_coord * x_coord + y_coord * y_coord
+                #print("y_coord", y_coord)
+
+                escape = (x_coord * x_coord) + (y_coord * y_coord)
                 esc_list.append(escape)
                 #print("escape", escape)
                 if escape > 4:
+                    esc_cnt = esc_cnt + 1
                     break
                 # end if
             # end for
@@ -101,16 +110,18 @@ for num_runs in range(1):
                 #print(type(rgb_4bit))
                 pixels[col, row] = rgb_4bit # rgb
 
-                rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
+                #rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
+                rgb_str_clean = '2 4 8'
                 rgb_line=[rgb_str_clean, "\n"]
+
             
             else:
                 rgb_str_clean = '0 0 0'
                 rgb_line=[rgb_str_clean, "\n"]
             # end if
 
-            file.writelines(rgb_line)
 
+            file.writelines(rgb_line)
 
             #index = row * width_pix + col + 1
            # print("{} / {}, {}%".format(index, width_pix * height_pix, round(index / width_pix / height_pix * 100 * 10) / 10))
@@ -124,9 +135,12 @@ for num_runs in range(1):
     print("run", num_runs + 1, "done")
     #print("dist_min: ", min(dist_list))
     #print("dist_max: ", max(dist_list))
+
     #print("x_min: ", min(x_list))
     #print("x_max: ", max(x_list))
-    #print("esc_min: ", min(esc_list))
-    #print("esc_max: ", max(esc_list))
+
+    print("esc_cnt: ", esc_cnt)
+    print("esc_min: ", min(esc_list))
+    print("esc_max: ", max(esc_list))
 # currently running this on WSL ubuntu so no opening images
 #os.system('open output.png')
