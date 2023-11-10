@@ -14,7 +14,7 @@ for num_runs in range(1):
     width_pix = 40 # pixels, 1000, 800
     height_pix = 30
     max_iters = 20 # 500
-    aspectRatio = 4/3 # 16/9
+    #aspectRatio = 4/3 # 16/9
     ppm_max_colors = 15 # 15, 255
     x_coord = -0.5 # centers image of interest within frame
     y_coord = 0
@@ -78,7 +78,8 @@ for num_runs in range(1):
             #print("post_y_coord: ", y_coord)
             old_x = x_coord
             old_y = y_coord
-            
+            #print("old_y", old_y)
+
             for iters in range(max_iters + 1):
                 iters_cnt = iters #_cnt + 1
                 #print("for", iters)
@@ -110,8 +111,8 @@ for num_runs in range(1):
                 #print(type(rgb_4bit))
                 pixels[col, row] = rgb_4bit # rgb
 
-                #rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
-                rgb_str_clean = '2 4 8'
+                rgb_str_clean = str(rgb_4bit).replace(',', '').replace('(', '').replace(')', '')
+                #rgb_str_clean = '2 4 8'
                 rgb_line=[rgb_str_clean, "\n"]
 
             

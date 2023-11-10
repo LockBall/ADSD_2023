@@ -22,8 +22,9 @@ architecture test_bench of tb_mando_ppm is
     signal s_val : sfixed(3 downto -3) := "0101010" ;
     signal u_val : ufixed(3 downto -3) := "0011000" ;
     
-    constant height_pix : natural range 0 to 1080 := 40;
-    constant width_pix  : natural range 0 to 1920 := 30;
+    constant width_pix  : natural range 0 to 1920 := 40;  -- MUST ALSO CHANGE ppm file header 
+    constant height_pix : natural range 0 to 1080 := 30;  -- width & height
+    
     constant max_iters  : natural range 0 to 500 := 20;
     constant ppm_colors : natural range 0 to 15   := 15;
     
@@ -53,7 +54,7 @@ architecture test_bench of tb_mando_ppm is
         variable esc       : float32 ;
         variable esc_cnt   : natural := 0 ;
         
-        variable iters_cnt : natural ;--range 0 to max_iters := 0 ;
+        variable iters_cnt : natural := 0 ;--range 0 to max_iters := 0 ;
     
         constant min_x     : float32 := x_coord - (x_range / 2.0 );
         --variable max_x     : float32 := x_coord + (x_range / 2.0 );
@@ -144,6 +145,14 @@ architecture test_bench of tb_mando_ppm is
                 old_x   := x_coord ;
                 old_y   := y_coord ;
                 
+                --write(brot_out_file, LF & "old_x" & LF);
+--                write(    
+--                    brot_out_line,
+--                    to_real(old_y)
+--                );
+--                writeline(brot_out_file, brot_out_line);                 
+                
+                
                 --write(brot_out_file, "        iters" & LF);
                 for iters in 0 to max_iters loop  -- not including a "+ 1" equivs the - 1 from python
                     iters_cnt := iters;
@@ -203,30 +212,30 @@ architecture test_bench of tb_mando_ppm is
                     brot_grn := 4 ;
                     brot_blu := 8 ;
                     
-                    write(
-                        brot_out_line,
-                        natural'image(brot_red)  & " " &
-                        natural'image(brot_grn)  & " " &
-                        natural'image(brot_blu)
-                    );
-                    writeline(brot_out_file, brot_out_line);                    
+--                    write(
+--                        brot_out_line,
+--                        natural'image(brot_red)  & " " &
+--                        natural'image(brot_grn)  & " " &
+--                        natural'image(brot_blu)
+--                    );
+--                    writeline(brot_out_file, brot_out_line);                    
                    
                 else
                     brot_red := 0 ;
                     brot_grn := 0 ;
                     brot_blu := 0 ;
                     
-                    write(
-                        brot_out_line,
-                        natural'image(brot_red)  & " " &
-                        natural'image(brot_grn)  & " " &
-                        natural'image(brot_blu)
-                    );
-                    writeline(brot_out_file, brot_out_line);  
+
                 
                 end if;
                 
-               
+                write(
+                    brot_out_line,
+                    natural'image(brot_red)  & " " &
+                    natural'image(brot_grn)  & " " &
+                    natural'image(brot_blu)
+                );
+                writeline(brot_out_file, brot_out_line);                 
                 
                 
                 
@@ -234,17 +243,15 @@ architecture test_bench of tb_mando_ppm is
             end loop;  -- for col in 0 to width_pix loop
         end loop;  -- for row in 0 to height_pix loop
 
-        write(brot_out_file, "esc_cnt" & LF);
-        write(    
-            brot_out_line,
-            natural'image(esc_cnt) 
-        );
-        writeline(brot_out_file, brot_out_line);        
+--        write(brot_out_file, "esc_cnt" & LF);
+--        write(    
+--            brot_out_line,
+--            natural'image(esc_cnt) 
+--        );
+--        writeline(brot_out_file, brot_out_line);        
 
       wait;
     end process write_brot;
-    
-
     
     
     write_ppm_test : process is
