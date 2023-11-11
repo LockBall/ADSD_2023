@@ -11,9 +11,9 @@ for num_runs in range(1):
     start = time.time()
     # os.remove("output.png")
     #frame parameters
-    width_pix = 40 # pixels, 1000, 800
-    height_pix = 30
-    max_iters = 20 # 500
+    width_pix = 20 # pixels, 1000, 800
+    height_pix = 15
+    max_iters = 10 # 500
     #aspectRatio = 4/3 # 16/9
     ppm_max_colors = 15 # 15, 255
     x_coord = -0.5 # centers image of interest within frame
@@ -53,7 +53,7 @@ for num_runs in range(1):
     #    return tuple(round(i * 255) for i in rgb)
     
     def color_4bit(distance):
-        #print(distance)
+        print(distance)
         dist_str = (str(distance)[2:8]).ljust(8, '0')
         #print(dist_str)
         red = round(float(dist_str[0:2]) / 100 * 15)
@@ -104,7 +104,7 @@ for num_runs in range(1):
                 #print("if", iters_cnt)
                 distance = (iters_cnt + 1) / (max_iters + 1)
                 #print(distance)
-                #dist_list.append(distance * 10) # to determine min & max values
+                dist_list.append(distance) # to determine min & max values
                 #rgb = powerColor(distance, 0.2, 0.27, 1.0)
                 rgb_4bit = color_4bit(distance)
                 #print(rgb_4bit, '\n')
@@ -134,8 +134,9 @@ for num_runs in range(1):
     print(elapsed)
     #img.save(str(width_pix) + "_" + str(height_pix) + "_" + str(max_iters) + '_' + str(round(elapsed, 2)) + '_output.png')
     print("run", num_runs + 1, "done")
-    #print("dist_min: ", min(dist_list))
-    #print("dist_max: ", max(dist_list))
+
+    print("dist_min: ", min(dist_list))
+    print("dist_max: ", max(dist_list))
 
     #print("x_min: ", min(x_list))
     #print("x_max: ", max(x_list))
