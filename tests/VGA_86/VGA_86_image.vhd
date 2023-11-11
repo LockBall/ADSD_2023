@@ -28,7 +28,7 @@ entity VGA_86_image is
 
     
     port (
-        clock_25   : in  std_logic;
+        clock_25   : in  std_logic; -- pick a clock, after "begin"
         clock_40   : in  std_logic;
         reset      : in  std_logic;
         

@@ -1,5 +1,5 @@
 Fitter report for VGA_86
-Fri Nov  3 11:44:05 2023
+Sat Nov 11 00:10:59 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov  3 11:44:05 2023          ;
+; Fitter Status                      ; Successful - Sat Nov 11 00:10:59 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; VGA_86                                         ;
 ; Top-level Entity Name              ; VGA_86                                         ;
@@ -159,7 +159,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   1.7%      ;
+;     Processors 2-4         ;   1.5%      ;
 +----------------------------+-------------+
 
 
@@ -1365,10 +1365,10 @@ Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin max10_clk1_50 uses I/O standard 3.3-V LVTTL at P11 File: C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd Line: 21
 Info (144001): Generated suppressed messages file C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/output_files/VGA_86.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 5643 megabytes
-    Info: Processing ended: Fri Nov  3 11:44:06 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 5642 megabytes
+    Info: Processing ended: Sat Nov 11 00:11:00 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +----------------------------+
