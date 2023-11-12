@@ -112,9 +112,10 @@ architecture behave of VGA_86_image is
         end if; -- rising_edge(clock)
             
     end process; -- primary counters with reset
-            
-            
-    process(clock) -- pipeline-stages for generation of image content and sync-signals
+ 
+ 
+-- pipeline-stages for generation of image content and sync-signals
+    process(clock) 
       begin
         if rising_edge(clock) then
       
