@@ -22,9 +22,8 @@ entity VGA_86 is
         key            : in  std_logic_vector(0 downto 0);  -- push button for reset
         vga_vs         : out std_logic;                     -- video out (4 bit resolution)
         vga_hs         : out std_logic;
-        vga_r          : out std_logic_vector(3 downto 0);
-        vga_g          : out std_logic_vector(3 downto 0);
-        vga_b          : out std_logic_vector(3 downto 0)
+        
+        vga_r, vga_g, vga_b : out std_logic_vector(0 to 3)
     );
     
 end entity VGA_86;
@@ -37,7 +36,7 @@ architecture shell of VGA_86 is
     signal clock_40 : std_logic;
     signal reset    : std_logic;
     signal reset_a, reset_b, reset_c, reset_d, reset_e : std_logic;
-    signal r_sig, g_sig, b_sig    : std_logic_vector(3 downto 0);
+    signal r_sig, g_sig, b_sig : std_logic_vector(0 to 3);
 
   begin
 

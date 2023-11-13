@@ -36,9 +36,7 @@ entity VGA_86_image is
         h_sync_out : out std_logic;
         blank_out  : out std_logic;
         
-        r_out      : out std_logic_vector(3 downto 0) := "0001";
-        g_out      : out std_logic_vector(3 downto 0) := "0001";
-        b_out      : out std_logic_vector(3 downto 0) := "1111"
+        r_out, g_out, b_out : out std_logic_vector(0 to 3) := "0000"
     );
     
 end entity VGA_86_image;
@@ -62,14 +60,15 @@ architecture behave of VGA_86_image is
     signal square_h_pos     : natural range 0 to h_active := 0;
     signal square_v_pos     : natural range 0 to v_active := 0;
     
-    signal rgb_count : std_logic_vector(11 downto 0) := "000000000000"; -- r, g, b
-
+    signal rgb_count                 : std_logic_vector(0 to 11) := "000000000000" ; -- r, g, b
+    signal r_count, g_count, b_count : std_logic_vector(0 to 3)  := "0000" ; 
+    signal which_color_count         : natural range 0 to 2  := 0 ;
 
     -- signals for pipeline stages
     signal h_sync_1, v_sync_1, blank_1 : std_logic;
     signal h_sync_2, v_sync_2, blank_2 : std_logic;
 
-    signal rgb_2     : std_logic_vector(11 downto 0);
+    signal rgb_2     : std_logic_vector(0 to 11);
 
 
   begin
@@ -151,28 +150,32 @@ architecture behave of VGA_86_image is
             blank_2  <= blank_1  ;
             
             
-            if (blank_2 = '1') then 
-                rgb_2 <= "000000000000";
+            if blank_2 = '0' then -- not blanking
+
                 
-            elsif 
+              if 
                 h_count >= square_h_pos + 100 AND
                 h_count <= square_h_pos + 200 AND
                 v_count >= square_v_pos + 100 AND
                 v_count <= square_v_pos + 200 
               then
                 rgb_2 <= NOT rgb_count ; --"001100110111" ; -- blurple
-                
-
-            else 
+              
+              else
                 rgb_2 <= rgb_count ;
                 
-                if color_shift_count = 2000000 then
+              end if;
+
+                
+                if color_shift_count = 20000000 then  -- 20000000 
+                    
                    rgb_count <= rgb_count + "1";
                    
-                   
                     color_shift_count <= 0 ;
+                    
                 else
                     color_shift_count <= color_shift_count +  1;
+                    
                 end if;
                 
                 
@@ -194,13 +197,23 @@ architecture behave of VGA_86_image is
             
   
 ------------------------ pipeline stage 3 (out) ------------------------
-            h_sync_out <= h_sync_2;
-            v_sync_out <= v_sync_2;
-            blank_out  <= blank_2;
+            h_sync_out <= h_sync_2 ;
+            v_sync_out <= v_sync_2 ;
+            blank_out  <= blank_2  ;
             
-            r_out <= rgb_2(11 downto 8);
-            g_out <= rgb_2( 7 downto 4);
-            b_out <= rgb_2( 3 downto 0);
+            if blank_2 = '1' then
+                r_out <= "0000";
+                g_out <= "0000";
+                b_out <= "0000";
+            
+            else
+                r_out <= rgb_2(0 to 3);
+                g_out <= rgb_2(4 to 7);
+                b_out <= rgb_2(8 to 11);            
+                
+            end if;
+
+
             
         end if; -- rising_edge(clock) pipeline stages
     end process;

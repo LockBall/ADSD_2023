@@ -1,0 +1,236 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e MIXED_VERSIONS
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/simulation/questa
+T_opt
+!s110 1699842844
+Vl8PaDbXQl7:NkE:RB=gDd3
+04 9 3 work vga_86_tb sim 1
+=1-d0509975fd67-65518b1c-1f5-374c
+!s124 OEM10U4 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Eclock_40
+Z3 w1698946780
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R1
+Z6 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
+Z7 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
+l0
+L43 1
+VB`bo7V`5z5;W4^ad]E]Vn2
+!s100 12X7PU[mdZhhMWzg9;^K@1
+Z8 OL;C;2021.2;73
+31
+Z9 !s110 1699842843
+!i10b 1
+Z10 !s108 1699842843.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
+Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
+!i113 0
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Asyn
+R4
+R5
+Z15 DEx4 work 8 clock_40 0 22 B`bo7V`5z5;W4^ad]E]Vn2
+!i122 2
+l132
+L54 155
+VGPE>=LD0cVLP_0f^X0>GK1
+!s100 D[28Gko7T8=l0fZ?3hSlF1
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+vclock_40_altpll
+!s110 1699842842
+!i10b 1
+!s100 ZJ1kLg_;BAK8lZ?_ehJW33
+I:XVD?F6FX6fFHj]Y7J1ng0
+R1
+w1698947006
+8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v
+!i122 0
+L0 31 79
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+Z16 !s108 1699842842.000000
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Evga_86
+Z17 w1699837513
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R4
+R5
+!i122 3
+R1
+Z19 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd
+Z20 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd
+l0
+L18 1
+VhFSJmlkkQ:6A[5d;nQE5U1
+!s100 mV7C0?LWa3P`?OG]j6M6L0
+R8
+31
+R9
+!i10b 1
+R10
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd|
+Z22 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd|
+!i113 0
+R13
+R14
+Ashell
+R15
+Z23 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z24 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z25 DEx4 work 12 vga_86_image 0 22 RbDP^g3Ng<JI[h^i>5hF30
+R18
+R4
+R5
+Z26 DEx4 work 6 vga_86 0 22 hFSJmlkkQ:6A[5d;nQE5U1
+!i122 3
+l41
+L32 59
+VOPZ1S3C?z>cb42F>95c8V1
+!s100 oRU`5SB5kPKJRdgUTk_=G3
+R8
+31
+R9
+!i10b 1
+R10
+R21
+R22
+!i113 0
+R13
+R14
+Evga_86_image
+Z27 w1699842808
+R23
+R24
+R18
+R4
+R5
+!i122 1
+R1
+Z28 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd
+Z29 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd
+l0
+L13 1
+VRbDP^g3Ng<JI[h^i>5hF30
+!s100 kj>6h31Y[<ZU;Sh_^WROI2
+R8
+31
+R9
+!i10b 1
+R16
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd|
+Z31 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd|
+!i113 0
+R13
+R14
+Abehave
+R23
+R24
+R18
+R4
+R5
+R25
+!i122 1
+l74
+L45 177
+V<EHk:CFzWKaVBJPo;dB:l1
+!s100 >]ZUj2GAAg7M?S?HB=b[c3
+R8
+31
+R9
+!i10b 1
+R16
+R30
+R31
+!i113 0
+R13
+R14
+Evga_86_tb
+Z32 w1699827451
+R4
+R5
+!i122 4
+R1
+Z33 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd
+Z34 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd
+l0
+L4 1
+VEelJM=k0oZJU<kjRaBKeU1
+!s100 G=76XcPNAX;YXGzE9>U?P3
+R8
+31
+R9
+!i10b 1
+R10
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
+Z36 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
+!i113 0
+R13
+R14
+Asim
+R18
+R26
+R4
+R5
+DEx4 work 9 vga_86_tb 0 22 EelJM=k0oZJU<kjRaBKeU1
+!i122 4
+l17
+L7 29
+VX?=A`^CG5S1_YH_BK`^b60
+!s100 H;A=8aELE3<`P_A^mgAgn2
+R8
+31
+R9
+!i10b 1
+R10
+R35
+R36
+!i113 0
+R13
+R14
