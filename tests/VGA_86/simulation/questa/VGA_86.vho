@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "11/12/2023 21:31:29"
+-- DATE "11/13/2023 22:00:45"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -38,11 +38,11 @@ ENTITY 	VGA_86 IS
     PORT (
 	max10_clk1_50 : IN std_logic;
 	key : IN std_logic_vector(0 DOWNTO 0);
-	vga_vs : OUT std_logic;
-	vga_hs : OUT std_logic;
-	vga_r : OUT std_logic_vector(0 TO 3);
-	vga_g : OUT std_logic_vector(0 TO 3);
-	vga_b : OUT std_logic_vector(0 TO 3)
+	vga_vs : BUFFER std_logic;
+	vga_hs : BUFFER std_logic;
+	vga_r : BUFFER std_logic_vector(0 TO 3);
+	vga_g : BUFFER std_logic_vector(0 TO 3);
+	vga_b : BUFFER std_logic_vector(0 TO 3)
 	);
 END VGA_86;
 
@@ -112,35 +112,35 @@ SIGNAL \max10_clk1_50~input_o\ : std_logic;
 SIGNAL \clock_40_inst|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
 SIGNAL \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
 SIGNAL \VGA_86_image|v_count[0]~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal1~1_combout\ : std_logic;
 SIGNAL \VGA_86_image|Equal1~2_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal1~1_combout\ : std_logic;
 SIGNAL \VGA_86_image|Equal1~0_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_count[9]~30_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[0]~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[0]~13\ : std_logic;
-SIGNAL \VGA_86_image|h_count[1]~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[1]~15\ : std_logic;
-SIGNAL \VGA_86_image|h_count[2]~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[2]~17\ : std_logic;
-SIGNAL \VGA_86_image|h_count[3]~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[3]~19\ : std_logic;
-SIGNAL \VGA_86_image|h_count[4]~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[4]~21\ : std_logic;
-SIGNAL \VGA_86_image|h_count[5]~22_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[5]~23\ : std_logic;
-SIGNAL \VGA_86_image|h_count[6]~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[6]~25\ : std_logic;
-SIGNAL \VGA_86_image|h_count[7]~26_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[7]~27\ : std_logic;
-SIGNAL \VGA_86_image|h_count[8]~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal0~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[8]~29\ : std_logic;
-SIGNAL \VGA_86_image|h_count[9]~30_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[9]~31\ : std_logic;
-SIGNAL \VGA_86_image|h_count[10]~32_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal0~1_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[0]~11_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[0]~12\ : std_logic;
+SIGNAL \VGA_86_image|h_count[1]~13_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[1]~14\ : std_logic;
+SIGNAL \VGA_86_image|h_count[2]~15_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[2]~16\ : std_logic;
+SIGNAL \VGA_86_image|h_count[3]~17_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[3]~18\ : std_logic;
+SIGNAL \VGA_86_image|h_count[4]~19_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[4]~20\ : std_logic;
+SIGNAL \VGA_86_image|h_count[5]~21_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[5]~22\ : std_logic;
+SIGNAL \VGA_86_image|h_count[6]~23_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[6]~24\ : std_logic;
+SIGNAL \VGA_86_image|h_count[7]~25_combout\ : std_logic;
 SIGNAL \VGA_86_image|process_1~21_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_count[10]~11_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[7]~26\ : std_logic;
+SIGNAL \VGA_86_image|h_count[8]~27_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[8]~28\ : std_logic;
+SIGNAL \VGA_86_image|h_count[9]~29_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_count[9]~30\ : std_logic;
+SIGNAL \VGA_86_image|h_count[10]~31_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal0~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal0~1_combout\ : std_logic;
+SIGNAL \VGA_86_image|v_count[9]~31_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_count[0]~11\ : std_logic;
 SIGNAL \VGA_86_image|v_count[1]~12_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_count[1]~13\ : std_logic;
@@ -160,323 +160,109 @@ SIGNAL \VGA_86_image|v_count[8]~26_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_count[8]~27\ : std_logic;
 SIGNAL \VGA_86_image|v_count[9]~28_combout\ : std_logic;
 SIGNAL \VGA_86_image|LessThan5~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|process_1~15_combout\ : std_logic;
 SIGNAL \VGA_86_image|process_1~16_combout\ : std_logic;
 SIGNAL \VGA_86_image|process_1~17_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~18_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_sync_1~q\ : std_logic;
+SIGNAL \VGA_86_image|v_sync_2~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_sync_2~q\ : std_logic;
 SIGNAL \VGA_86_image|v_sync_out~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|v_sync_out~q\ : std_logic;
+SIGNAL \VGA_86_image|process_1~18_combout\ : std_logic;
 SIGNAL \VGA_86_image|process_1~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~19_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|h_sync_1~q\ : std_logic;
-SIGNAL \VGA_86_image|h_sync_2~q\ : std_logic;
-SIGNAL \VGA_86_image|h_sync_out~q\ : std_logic;
-SIGNAL \VGA_86_image|Add10~9\ : std_logic;
-SIGNAL \VGA_86_image|Add10~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan5~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~22_combout\ : std_logic;
 SIGNAL \VGA_86_image|process_1~23_combout\ : std_logic;
+SIGNAL \VGA_86_image|process_1~19_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_sync_1~q\ : std_logic;
+SIGNAL \VGA_86_image|h_sync_2~feeder_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_sync_2~q\ : std_logic;
+SIGNAL \VGA_86_image|h_sync_out~feeder_combout\ : std_logic;
+SIGNAL \VGA_86_image|h_sync_out~q\ : std_logic;
+SIGNAL \VGA_86_image|LessThan5~1_combout\ : std_logic;
+SIGNAL \VGA_86_image|process_1~20_combout\ : std_logic;
+SIGNAL \VGA_86_image|process_1~22_combout\ : std_logic;
 SIGNAL \VGA_86_image|blank_1~q\ : std_logic;
 SIGNAL \VGA_86_image|blank_2~q\ : std_logic;
-SIGNAL \VGA_86_image|Add10~11\ : std_logic;
-SIGNAL \VGA_86_image|Add10~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~13\ : std_logic;
-SIGNAL \VGA_86_image|Add10~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~15\ : std_logic;
-SIGNAL \VGA_86_image|Add10~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~17\ : std_logic;
-SIGNAL \VGA_86_image|Add10~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~19\ : std_logic;
-SIGNAL \VGA_86_image|Add10~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~21\ : std_logic;
-SIGNAL \VGA_86_image|Add10~22_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~23\ : std_logic;
-SIGNAL \VGA_86_image|Add10~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~25\ : std_logic;
-SIGNAL \VGA_86_image|Add10~26_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~27\ : std_logic;
-SIGNAL \VGA_86_image|Add10~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~29\ : std_logic;
-SIGNAL \VGA_86_image|Add10~30_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~31\ : std_logic;
-SIGNAL \VGA_86_image|Add10~33\ : std_logic;
-SIGNAL \VGA_86_image|Add10~34_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~35\ : std_logic;
-SIGNAL \VGA_86_image|Add10~36_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~7_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~37\ : std_logic;
-SIGNAL \VGA_86_image|Add10~38_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~39\ : std_logic;
-SIGNAL \VGA_86_image|Add10~40_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~41\ : std_logic;
-SIGNAL \VGA_86_image|Add10~42_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~43\ : std_logic;
-SIGNAL \VGA_86_image|Add10~44_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~45\ : std_logic;
-SIGNAL \VGA_86_image|Add10~46_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~47\ : std_logic;
-SIGNAL \VGA_86_image|Add10~48_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~49\ : std_logic;
-SIGNAL \VGA_86_image|Add10~50_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~51\ : std_logic;
-SIGNAL \VGA_86_image|Add10~52_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~53\ : std_logic;
-SIGNAL \VGA_86_image|Add10~54_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~55\ : std_logic;
-SIGNAL \VGA_86_image|Add10~56_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~57\ : std_logic;
-SIGNAL \VGA_86_image|Add10~58_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~59\ : std_logic;
-SIGNAL \VGA_86_image|Add10~60_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~9_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~1\ : std_logic;
-SIGNAL \VGA_86_image|Add10~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~3\ : std_logic;
-SIGNAL \VGA_86_image|Add10~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~5\ : std_logic;
-SIGNAL \VGA_86_image|Add10~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~7\ : std_logic;
-SIGNAL \VGA_86_image|Add10~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add10~32_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_pos_count~5_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~5_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal3~7_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[3]~9_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[0]~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[1]~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[1]~11\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[2]~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[2]~13\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[3]~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[3]~15\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[4]~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[4]~17\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[5]~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[5]~19\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[6]~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[6]~21\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[7]~22_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[7]~23\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[8]~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[8]~25\ : std_logic;
-SIGNAL \VGA_86_image|square_h_pos[9]~26_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~1\ : std_logic;
-SIGNAL \VGA_86_image|Add2~3\ : std_logic;
-SIGNAL \VGA_86_image|Add2~5\ : std_logic;
-SIGNAL \VGA_86_image|Add2~7\ : std_logic;
-SIGNAL \VGA_86_image|Add2~9\ : std_logic;
-SIGNAL \VGA_86_image|Add2~11\ : std_logic;
-SIGNAL \VGA_86_image|Add2~13\ : std_logic;
-SIGNAL \VGA_86_image|Add2~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add2~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~1_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~3_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~5_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~7_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~9_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~11_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~13_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~15_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~17_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~19_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan6~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~25_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~26_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[1]~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[2]~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~27_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[2]~9\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[3]~11\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[4]~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[4]~13\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[5]~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[5]~15\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[6]~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[6]~17\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[7]~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[7]~19\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[8]~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[8]~21\ : std_logic;
-SIGNAL \VGA_86_image|square_v_pos[9]~22_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~1\ : std_logic;
-SIGNAL \VGA_86_image|Add5~3\ : std_logic;
-SIGNAL \VGA_86_image|Add5~5\ : std_logic;
-SIGNAL \VGA_86_image|Add5~7\ : std_logic;
-SIGNAL \VGA_86_image|Add5~9\ : std_logic;
-SIGNAL \VGA_86_image|Add5~11\ : std_logic;
-SIGNAL \VGA_86_image|Add5~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add5~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~1_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~3_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~5_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~7_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~9_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~11_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~13_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~15_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~17_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan9~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~1\ : std_logic;
-SIGNAL \VGA_86_image|Add3~3\ : std_logic;
-SIGNAL \VGA_86_image|Add3~5\ : std_logic;
-SIGNAL \VGA_86_image|Add3~7\ : std_logic;
-SIGNAL \VGA_86_image|Add3~9\ : std_logic;
-SIGNAL \VGA_86_image|Add3~11\ : std_logic;
-SIGNAL \VGA_86_image|Add3~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add3~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~1_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~3_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~5_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~7_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~9_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~11_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~13_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~15_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~17_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~19_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan7~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|process_1~15_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~1\ : std_logic;
-SIGNAL \VGA_86_image|Add4~3\ : std_logic;
-SIGNAL \VGA_86_image|Add4~5\ : std_logic;
-SIGNAL \VGA_86_image|Add4~7\ : std_logic;
-SIGNAL \VGA_86_image|Add4~9\ : std_logic;
-SIGNAL \VGA_86_image|Add4~11\ : std_logic;
-SIGNAL \VGA_86_image|Add4~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~1_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~3_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~5_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~7_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~9_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~11_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~13_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~15_cout\ : std_logic;
-SIGNAL \VGA_86_image|LessThan8~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~1\ : std_logic;
-SIGNAL \VGA_86_image|Add7~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~3\ : std_logic;
-SIGNAL \VGA_86_image|Add7~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~5\ : std_logic;
-SIGNAL \VGA_86_image|Add7~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~7\ : std_logic;
-SIGNAL \VGA_86_image|Add7~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~9\ : std_logic;
-SIGNAL \VGA_86_image|Add7~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~11\ : std_logic;
-SIGNAL \VGA_86_image|Add7~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~13\ : std_logic;
-SIGNAL \VGA_86_image|Add7~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~15\ : std_logic;
-SIGNAL \VGA_86_image|Add7~16_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~17\ : std_logic;
-SIGNAL \VGA_86_image|Add7~18_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~19\ : std_logic;
-SIGNAL \VGA_86_image|Add7~20_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~21\ : std_logic;
-SIGNAL \VGA_86_image|Add7~22_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~23\ : std_logic;
-SIGNAL \VGA_86_image|Add7~24_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~25\ : std_logic;
-SIGNAL \VGA_86_image|Add7~26_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~27\ : std_logic;
-SIGNAL \VGA_86_image|Add7~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~29\ : std_logic;
-SIGNAL \VGA_86_image|Add7~30_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~31\ : std_logic;
-SIGNAL \VGA_86_image|Add7~32_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~4_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~33\ : std_logic;
-SIGNAL \VGA_86_image|Add7~34_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~5_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~35\ : std_logic;
-SIGNAL \VGA_86_image|Add7~36_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~37\ : std_logic;
-SIGNAL \VGA_86_image|Add7~38_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~39\ : std_logic;
-SIGNAL \VGA_86_image|Add7~40_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~41\ : std_logic;
-SIGNAL \VGA_86_image|Add7~42_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~7_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~43\ : std_logic;
-SIGNAL \VGA_86_image|Add7~44_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~8_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~45\ : std_logic;
-SIGNAL \VGA_86_image|Add7~46_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~9_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~6_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~5_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~47\ : std_logic;
-SIGNAL \VGA_86_image|Add7~48_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~10_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~49\ : std_logic;
-SIGNAL \VGA_86_image|Add7~50_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~11_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~51\ : std_logic;
-SIGNAL \VGA_86_image|Add7~52_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~53\ : std_logic;
-SIGNAL \VGA_86_image|Add7~54_combout\ : std_logic;
-SIGNAL \VGA_86_image|color_shift_count~12_combout\ : std_logic;
-SIGNAL \VGA_86_image|Equal2~7_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~55\ : std_logic;
-SIGNAL \VGA_86_image|Add7~56_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~57\ : std_logic;
-SIGNAL \VGA_86_image|Add7~58_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add7~59\ : std_logic;
-SIGNAL \VGA_86_image|Add7~60_combout\ : std_logic;
 SIGNAL \VGA_86_image|Equal2~8_combout\ : std_logic;
 SIGNAL \VGA_86_image|Equal2~9_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~6_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~5_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~7_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~8_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~1\ : std_logic;
+SIGNAL \VGA_86_image|Add3~2_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~3\ : std_logic;
+SIGNAL \VGA_86_image|Add3~4_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~5\ : std_logic;
+SIGNAL \VGA_86_image|Add3~6_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~7\ : std_logic;
+SIGNAL \VGA_86_image|Add3~8_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~9\ : std_logic;
+SIGNAL \VGA_86_image|Add3~10_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~11\ : std_logic;
+SIGNAL \VGA_86_image|Add3~12_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~13\ : std_logic;
+SIGNAL \VGA_86_image|Add3~14_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~15\ : std_logic;
+SIGNAL \VGA_86_image|Add3~16_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~7_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~17\ : std_logic;
+SIGNAL \VGA_86_image|Add3~18_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~19\ : std_logic;
+SIGNAL \VGA_86_image|Add3~20_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~6_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~21\ : std_logic;
+SIGNAL \VGA_86_image|Add3~22_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~5_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~23\ : std_logic;
+SIGNAL \VGA_86_image|Add3~24_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~25\ : std_logic;
+SIGNAL \VGA_86_image|Add3~26_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~4_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~27\ : std_logic;
+SIGNAL \VGA_86_image|Add3~28_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~29\ : std_logic;
+SIGNAL \VGA_86_image|Add3~30_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~31\ : std_logic;
+SIGNAL \VGA_86_image|Add3~32_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~3_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~33\ : std_logic;
+SIGNAL \VGA_86_image|Add3~34_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~35\ : std_logic;
+SIGNAL \VGA_86_image|Add3~36_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~37\ : std_logic;
+SIGNAL \VGA_86_image|Add3~38_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~39\ : std_logic;
+SIGNAL \VGA_86_image|Add3~40_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~2_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~41\ : std_logic;
+SIGNAL \VGA_86_image|Add3~42_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~1_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~43\ : std_logic;
+SIGNAL \VGA_86_image|Add3~44_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~2_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~45\ : std_logic;
+SIGNAL \VGA_86_image|Add3~46_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~47\ : std_logic;
+SIGNAL \VGA_86_image|Add3~48_combout\ : std_logic;
+SIGNAL \VGA_86_image|color_shift_count~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~49\ : std_logic;
+SIGNAL \VGA_86_image|Add3~50_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~51\ : std_logic;
+SIGNAL \VGA_86_image|Add3~52_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~1_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~53\ : std_logic;
+SIGNAL \VGA_86_image|Add3~54_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~55\ : std_logic;
+SIGNAL \VGA_86_image|Add3~56_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~57\ : std_logic;
+SIGNAL \VGA_86_image|Add3~58_combout\ : std_logic;
+SIGNAL \VGA_86_image|Add3~59\ : std_logic;
+SIGNAL \VGA_86_image|Add3~60_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~3_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~4_combout\ : std_logic;
+SIGNAL \VGA_86_image|Equal2~10_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[11]~34_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[10]~11_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[3]~27_combout\ : std_logic;
@@ -494,50 +280,39 @@ SIGNAL \VGA_86_image|rgb_count[5]~22\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[4]~23_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[4]~24\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[3]~25_combout\ : std_logic;
-SIGNAL \VGA_86_image|Add4~13\ : std_logic;
-SIGNAL \VGA_86_image|Add4~14_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~0_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[3]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|r_out~0_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[3]~26\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[2]~28_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~1_combout\ : std_logic;
 SIGNAL \VGA_86_image|r_out~1_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[2]~29\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[1]~30_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~2_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[1]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|r_out~2_combout\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[1]~31\ : std_logic;
 SIGNAL \VGA_86_image|rgb_count[0]~32_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~3_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[0]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|r_out~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~4_combout\ : std_logic;
 SIGNAL \VGA_86_image|g_out~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~5_combout\ : std_logic;
 SIGNAL \VGA_86_image|g_out~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~6_combout\ : std_logic;
 SIGNAL \VGA_86_image|g_out~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~7_combout\ : std_logic;
 SIGNAL \VGA_86_image|g_out~3_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~8_combout\ : std_logic;
 SIGNAL \VGA_86_image|b_out~0_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~9_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[10]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|b_out~1_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~10_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[9]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|b_out~2_combout\ : std_logic;
-SIGNAL \VGA_86_image|rgb_2~11_combout\ : std_logic;
+SIGNAL \VGA_86_image|rgb_2[8]~feeder_combout\ : std_logic;
 SIGNAL \VGA_86_image|b_out~3_combout\ : std_logic;
 SIGNAL \VGA_86_image|h_count\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \VGA_86_image|rgb_count\ : std_logic_vector(0 TO 11);
-SIGNAL \VGA_86_image|g_out\ : std_logic_vector(0 TO 3);
 SIGNAL \VGA_86_image|v_count\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \VGA_86_image|square_v_pos\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \VGA_86_image|square_h_pos\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \VGA_86_image|r_out\ : std_logic_vector(0 TO 3);
+SIGNAL \VGA_86_image|g_out\ : std_logic_vector(0 TO 3);
 SIGNAL \VGA_86_image|b_out\ : std_logic_vector(0 TO 3);
 SIGNAL \VGA_86_image|rgb_2\ : std_logic_vector(0 TO 11);
 SIGNAL \VGA_86_image|color_shift_count\ : std_logic_vector(30 DOWNTO 0);
-SIGNAL \VGA_86_image|square_pos_count\ : std_logic_vector(30 DOWNTO 0);
 SIGNAL \ALT_INV_key[0]~input_o\ : std_logic;
 SIGNAL \VGA_86_image|ALT_INV_blank_2~q\ : std_logic;
 
@@ -570,7 +345,7 @@ ww_devpor <= devpor;
 \ALT_INV_key[0]~input_o\ <= NOT \key[0]~input_o\;
 \VGA_86_image|ALT_INV_blank_2~q\ <= NOT \VGA_86_image|blank_2~q\;
 
--- Location: LCCOMB_X44_Y46_N16
+-- Location: LCCOMB_X44_Y45_N16
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \~QUARTUS_CREATED_GND~I_combout\ = GND
@@ -880,7 +655,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
 
--- Location: LCCOMB_X47_Y30_N0
+-- Location: LCCOMB_X22_Y24_N0
 \VGA_86_image|v_count[0]~10\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[0]~10_combout\ = \VGA_86_image|v_count\(0) $ (VCC)
@@ -897,7 +672,22 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[0]~10_combout\,
 	cout => \VGA_86_image|v_count[0]~11\);
 
--- Location: LCCOMB_X47_Y30_N26
+-- Location: LCCOMB_X21_Y22_N12
+\VGA_86_image|Equal1~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal1~2_combout\ = (!\VGA_86_image|v_count\(6)) # (!\VGA_86_image|v_count\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101111101011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|v_count\(9),
+	datac => \VGA_86_image|v_count\(6),
+	combout => \VGA_86_image|Equal1~2_combout\);
+
+-- Location: LCCOMB_X22_Y24_N30
 \VGA_86_image|Equal1~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|Equal1~1_combout\ = (((\VGA_86_image|v_count\(2)) # (\VGA_86_image|v_count\(3))) # (!\VGA_86_image|v_count\(4))) # (!\VGA_86_image|v_count\(5))
@@ -914,42 +704,27 @@ PORT MAP (
 	datad => \VGA_86_image|v_count\(3),
 	combout => \VGA_86_image|Equal1~1_combout\);
 
--- Location: LCCOMB_X47_Y30_N20
-\VGA_86_image|Equal1~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal1~2_combout\ = (!\VGA_86_image|v_count\(6)) # (!\VGA_86_image|v_count\(9))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|v_count\(9),
-	datad => \VGA_86_image|v_count\(6),
-	combout => \VGA_86_image|Equal1~2_combout\);
-
--- Location: LCCOMB_X47_Y30_N24
+-- Location: LCCOMB_X22_Y24_N20
 \VGA_86_image|Equal1~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal1~0_combout\ = (\VGA_86_image|v_count\(8)) # (((\VGA_86_image|v_count\(7)) # (!\VGA_86_image|v_count\(1))) # (!\VGA_86_image|v_count\(0)))
+-- \VGA_86_image|Equal1~0_combout\ = ((\VGA_86_image|v_count\(8)) # ((\VGA_86_image|v_count\(7)) # (!\VGA_86_image|v_count\(0)))) # (!\VGA_86_image|v_count\(1))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101111111111",
+	lut_mask => "1111110111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|v_count\(8),
-	datab => \VGA_86_image|v_count\(0),
+	dataa => \VGA_86_image|v_count\(1),
+	datab => \VGA_86_image|v_count\(8),
 	datac => \VGA_86_image|v_count\(7),
-	datad => \VGA_86_image|v_count\(1),
+	datad => \VGA_86_image|v_count\(0),
 	combout => \VGA_86_image|Equal1~0_combout\);
 
--- Location: LCCOMB_X47_Y30_N22
+-- Location: LCCOMB_X21_Y22_N22
 \VGA_86_image|v_count[9]~30\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|v_count[9]~30_combout\ = ((!\VGA_86_image|Equal1~1_combout\ & (!\VGA_86_image|Equal1~2_combout\ & !\VGA_86_image|Equal1~0_combout\))) # (!\key[0]~input_o\)
+-- \VGA_86_image|v_count[9]~30_combout\ = ((!\VGA_86_image|Equal1~2_combout\ & (!\VGA_86_image|Equal1~1_combout\ & !\VGA_86_image|Equal1~0_combout\))) # (!\key[0]~input_o\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -957,17 +732,17 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Equal1~1_combout\,
-	datab => \VGA_86_image|Equal1~2_combout\,
+	dataa => \VGA_86_image|Equal1~2_combout\,
+	datab => \VGA_86_image|Equal1~1_combout\,
 	datac => \key[0]~input_o\,
 	datad => \VGA_86_image|Equal1~0_combout\,
 	combout => \VGA_86_image|v_count[9]~30_combout\);
 
--- Location: LCCOMB_X49_Y31_N4
-\VGA_86_image|h_count[0]~12\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N2
+\VGA_86_image|h_count[0]~11\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[0]~12_combout\ = \VGA_86_image|h_count\(0) $ (VCC)
--- \VGA_86_image|h_count[0]~13\ = CARRY(\VGA_86_image|h_count\(0))
+-- \VGA_86_image|h_count[0]~11_combout\ = \VGA_86_image|h_count\(0) $ (VCC)
+-- \VGA_86_image|h_count[0]~12\ = CARRY(\VGA_86_image|h_count\(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -977,10 +752,10 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|h_count\(0),
 	datad => VCC,
-	combout => \VGA_86_image|h_count[0]~12_combout\,
-	cout => \VGA_86_image|h_count[0]~13\);
+	combout => \VGA_86_image|h_count[0]~11_combout\,
+	cout => \VGA_86_image|h_count[0]~12\);
 
--- Location: FF_X49_Y31_N5
+-- Location: FF_X21_Y20_N3
 \VGA_86_image|h_count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -989,17 +764,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[0]~12_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[0]~11_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(0));
 
--- Location: LCCOMB_X49_Y31_N6
-\VGA_86_image|h_count[1]~14\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N4
+\VGA_86_image|h_count[1]~13\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[1]~14_combout\ = (\VGA_86_image|h_count\(1) & (!\VGA_86_image|h_count[0]~13\)) # (!\VGA_86_image|h_count\(1) & ((\VGA_86_image|h_count[0]~13\) # (GND)))
--- \VGA_86_image|h_count[1]~15\ = CARRY((!\VGA_86_image|h_count[0]~13\) # (!\VGA_86_image|h_count\(1)))
+-- \VGA_86_image|h_count[1]~13_combout\ = (\VGA_86_image|h_count\(1) & (!\VGA_86_image|h_count[0]~12\)) # (!\VGA_86_image|h_count\(1) & ((\VGA_86_image|h_count[0]~12\) # (GND)))
+-- \VGA_86_image|h_count[1]~14\ = CARRY((!\VGA_86_image|h_count[0]~12\) # (!\VGA_86_image|h_count\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1009,11 +784,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|h_count\(1),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[0]~13\,
-	combout => \VGA_86_image|h_count[1]~14_combout\,
-	cout => \VGA_86_image|h_count[1]~15\);
+	cin => \VGA_86_image|h_count[0]~12\,
+	combout => \VGA_86_image|h_count[1]~13_combout\,
+	cout => \VGA_86_image|h_count[1]~14\);
 
--- Location: FF_X49_Y31_N7
+-- Location: FF_X21_Y20_N5
 \VGA_86_image|h_count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1022,31 +797,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[1]~14_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[1]~13_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(1));
 
--- Location: LCCOMB_X49_Y31_N8
-\VGA_86_image|h_count[2]~16\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N6
+\VGA_86_image|h_count[2]~15\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[2]~16_combout\ = (\VGA_86_image|h_count\(2) & (\VGA_86_image|h_count[1]~15\ $ (GND))) # (!\VGA_86_image|h_count\(2) & (!\VGA_86_image|h_count[1]~15\ & VCC))
--- \VGA_86_image|h_count[2]~17\ = CARRY((\VGA_86_image|h_count\(2) & !\VGA_86_image|h_count[1]~15\))
+-- \VGA_86_image|h_count[2]~15_combout\ = (\VGA_86_image|h_count\(2) & (\VGA_86_image|h_count[1]~14\ $ (GND))) # (!\VGA_86_image|h_count\(2) & (!\VGA_86_image|h_count[1]~14\ & VCC))
+-- \VGA_86_image|h_count[2]~16\ = CARRY((\VGA_86_image|h_count\(2) & !\VGA_86_image|h_count[1]~14\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|h_count\(2),
+	dataa => \VGA_86_image|h_count\(2),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[1]~15\,
-	combout => \VGA_86_image|h_count[2]~16_combout\,
-	cout => \VGA_86_image|h_count[2]~17\);
+	cin => \VGA_86_image|h_count[1]~14\,
+	combout => \VGA_86_image|h_count[2]~15_combout\,
+	cout => \VGA_86_image|h_count[2]~16\);
 
--- Location: FF_X49_Y31_N9
+-- Location: FF_X21_Y20_N7
 \VGA_86_image|h_count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1055,31 +830,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[2]~16_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[2]~15_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(2));
 
--- Location: LCCOMB_X49_Y31_N10
-\VGA_86_image|h_count[3]~18\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N8
+\VGA_86_image|h_count[3]~17\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[3]~18_combout\ = (\VGA_86_image|h_count\(3) & (!\VGA_86_image|h_count[2]~17\)) # (!\VGA_86_image|h_count\(3) & ((\VGA_86_image|h_count[2]~17\) # (GND)))
--- \VGA_86_image|h_count[3]~19\ = CARRY((!\VGA_86_image|h_count[2]~17\) # (!\VGA_86_image|h_count\(3)))
+-- \VGA_86_image|h_count[3]~17_combout\ = (\VGA_86_image|h_count\(3) & (!\VGA_86_image|h_count[2]~16\)) # (!\VGA_86_image|h_count\(3) & ((\VGA_86_image|h_count[2]~16\) # (GND)))
+-- \VGA_86_image|h_count[3]~18\ = CARRY((!\VGA_86_image|h_count[2]~16\) # (!\VGA_86_image|h_count\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(3),
+	datab => \VGA_86_image|h_count\(3),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[2]~17\,
-	combout => \VGA_86_image|h_count[3]~18_combout\,
-	cout => \VGA_86_image|h_count[3]~19\);
+	cin => \VGA_86_image|h_count[2]~16\,
+	combout => \VGA_86_image|h_count[3]~17_combout\,
+	cout => \VGA_86_image|h_count[3]~18\);
 
--- Location: FF_X49_Y31_N11
+-- Location: FF_X21_Y20_N9
 \VGA_86_image|h_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1088,17 +863,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[3]~18_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[3]~17_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(3));
 
--- Location: LCCOMB_X49_Y31_N12
-\VGA_86_image|h_count[4]~20\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N10
+\VGA_86_image|h_count[4]~19\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[4]~20_combout\ = (\VGA_86_image|h_count\(4) & (\VGA_86_image|h_count[3]~19\ $ (GND))) # (!\VGA_86_image|h_count\(4) & (!\VGA_86_image|h_count[3]~19\ & VCC))
--- \VGA_86_image|h_count[4]~21\ = CARRY((\VGA_86_image|h_count\(4) & !\VGA_86_image|h_count[3]~19\))
+-- \VGA_86_image|h_count[4]~19_combout\ = (\VGA_86_image|h_count\(4) & (\VGA_86_image|h_count[3]~18\ $ (GND))) # (!\VGA_86_image|h_count\(4) & (!\VGA_86_image|h_count[3]~18\ & VCC))
+-- \VGA_86_image|h_count[4]~20\ = CARRY((\VGA_86_image|h_count\(4) & !\VGA_86_image|h_count[3]~18\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1108,11 +883,11 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \VGA_86_image|h_count\(4),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[3]~19\,
-	combout => \VGA_86_image|h_count[4]~20_combout\,
-	cout => \VGA_86_image|h_count[4]~21\);
+	cin => \VGA_86_image|h_count[3]~18\,
+	combout => \VGA_86_image|h_count[4]~19_combout\,
+	cout => \VGA_86_image|h_count[4]~20\);
 
--- Location: FF_X49_Y31_N13
+-- Location: FF_X21_Y20_N11
 \VGA_86_image|h_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1121,31 +896,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[4]~20_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[4]~19_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(4));
 
--- Location: LCCOMB_X49_Y31_N14
-\VGA_86_image|h_count[5]~22\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N12
+\VGA_86_image|h_count[5]~21\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[5]~22_combout\ = (\VGA_86_image|h_count\(5) & (!\VGA_86_image|h_count[4]~21\)) # (!\VGA_86_image|h_count\(5) & ((\VGA_86_image|h_count[4]~21\) # (GND)))
--- \VGA_86_image|h_count[5]~23\ = CARRY((!\VGA_86_image|h_count[4]~21\) # (!\VGA_86_image|h_count\(5)))
+-- \VGA_86_image|h_count[5]~21_combout\ = (\VGA_86_image|h_count\(5) & (!\VGA_86_image|h_count[4]~20\)) # (!\VGA_86_image|h_count\(5) & ((\VGA_86_image|h_count[4]~20\) # (GND)))
+-- \VGA_86_image|h_count[5]~22\ = CARRY((!\VGA_86_image|h_count[4]~20\) # (!\VGA_86_image|h_count\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|h_count\(5),
+	dataa => \VGA_86_image|h_count\(5),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[4]~21\,
-	combout => \VGA_86_image|h_count[5]~22_combout\,
-	cout => \VGA_86_image|h_count[5]~23\);
+	cin => \VGA_86_image|h_count[4]~20\,
+	combout => \VGA_86_image|h_count[5]~21_combout\,
+	cout => \VGA_86_image|h_count[5]~22\);
 
--- Location: FF_X49_Y31_N15
+-- Location: FF_X21_Y20_N13
 \VGA_86_image|h_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1154,17 +929,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[5]~22_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[5]~21_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(5));
 
--- Location: LCCOMB_X49_Y31_N16
-\VGA_86_image|h_count[6]~24\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N14
+\VGA_86_image|h_count[6]~23\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[6]~24_combout\ = (\VGA_86_image|h_count\(6) & (\VGA_86_image|h_count[5]~23\ $ (GND))) # (!\VGA_86_image|h_count\(6) & (!\VGA_86_image|h_count[5]~23\ & VCC))
--- \VGA_86_image|h_count[6]~25\ = CARRY((\VGA_86_image|h_count\(6) & !\VGA_86_image|h_count[5]~23\))
+-- \VGA_86_image|h_count[6]~23_combout\ = (\VGA_86_image|h_count\(6) & (\VGA_86_image|h_count[5]~22\ $ (GND))) # (!\VGA_86_image|h_count\(6) & (!\VGA_86_image|h_count[5]~22\ & VCC))
+-- \VGA_86_image|h_count[6]~24\ = CARRY((\VGA_86_image|h_count\(6) & !\VGA_86_image|h_count[5]~22\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1174,11 +949,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|h_count\(6),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[5]~23\,
-	combout => \VGA_86_image|h_count[6]~24_combout\,
-	cout => \VGA_86_image|h_count[6]~25\);
+	cin => \VGA_86_image|h_count[5]~22\,
+	combout => \VGA_86_image|h_count[6]~23_combout\,
+	cout => \VGA_86_image|h_count[6]~24\);
 
--- Location: FF_X49_Y31_N17
+-- Location: FF_X21_Y20_N15
 \VGA_86_image|h_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1187,17 +962,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[6]~24_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[6]~23_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(6));
 
--- Location: LCCOMB_X49_Y31_N18
-\VGA_86_image|h_count[7]~26\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N16
+\VGA_86_image|h_count[7]~25\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[7]~26_combout\ = (\VGA_86_image|h_count\(7) & (!\VGA_86_image|h_count[6]~25\)) # (!\VGA_86_image|h_count\(7) & ((\VGA_86_image|h_count[6]~25\) # (GND)))
--- \VGA_86_image|h_count[7]~27\ = CARRY((!\VGA_86_image|h_count[6]~25\) # (!\VGA_86_image|h_count\(7)))
+-- \VGA_86_image|h_count[7]~25_combout\ = (\VGA_86_image|h_count\(7) & (!\VGA_86_image|h_count[6]~24\)) # (!\VGA_86_image|h_count\(7) & ((\VGA_86_image|h_count[6]~24\) # (GND)))
+-- \VGA_86_image|h_count[7]~26\ = CARRY((!\VGA_86_image|h_count[6]~24\) # (!\VGA_86_image|h_count\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1207,11 +982,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|h_count\(7),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[6]~25\,
-	combout => \VGA_86_image|h_count[7]~26_combout\,
-	cout => \VGA_86_image|h_count[7]~27\);
+	cin => \VGA_86_image|h_count[6]~24\,
+	combout => \VGA_86_image|h_count[7]~25_combout\,
+	cout => \VGA_86_image|h_count[7]~26\);
 
--- Location: FF_X49_Y31_N19
+-- Location: FF_X21_Y20_N17
 \VGA_86_image|h_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1220,31 +995,47 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[7]~26_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[7]~25_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(7));
 
--- Location: LCCOMB_X49_Y31_N20
-\VGA_86_image|h_count[8]~28\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N24
+\VGA_86_image|process_1~21\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[8]~28_combout\ = (\VGA_86_image|h_count\(8) & (\VGA_86_image|h_count[7]~27\ $ (GND))) # (!\VGA_86_image|h_count\(8) & (!\VGA_86_image|h_count[7]~27\ & VCC))
--- \VGA_86_image|h_count[8]~29\ = CARRY((\VGA_86_image|h_count\(8) & !\VGA_86_image|h_count[7]~27\))
+-- \VGA_86_image|process_1~21_combout\ = (!\VGA_86_image|h_count\(7) & (!\VGA_86_image|h_count\(6) & !\VGA_86_image|h_count\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "0000000000000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|h_count\(7),
+	datac => \VGA_86_image|h_count\(6),
+	datad => \VGA_86_image|h_count\(5),
+	combout => \VGA_86_image|process_1~21_combout\);
+
+-- Location: LCCOMB_X21_Y20_N18
+\VGA_86_image|h_count[8]~27\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|h_count[8]~27_combout\ = (\VGA_86_image|h_count\(8) & (\VGA_86_image|h_count[7]~26\ $ (GND))) # (!\VGA_86_image|h_count\(8) & (!\VGA_86_image|h_count[7]~26\ & VCC))
+-- \VGA_86_image|h_count[8]~28\ = CARRY((\VGA_86_image|h_count\(8) & !\VGA_86_image|h_count[7]~26\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
+	datab => \VGA_86_image|h_count\(8),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[7]~27\,
-	combout => \VGA_86_image|h_count[8]~28_combout\,
-	cout => \VGA_86_image|h_count[8]~29\);
+	cin => \VGA_86_image|h_count[7]~26\,
+	combout => \VGA_86_image|h_count[8]~27_combout\,
+	cout => \VGA_86_image|h_count[8]~28\);
 
--- Location: FF_X49_Y31_N21
+-- Location: FF_X21_Y20_N19
 \VGA_86_image|h_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1253,48 +1044,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[8]~28_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[8]~27_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(8));
 
--- Location: LCCOMB_X49_Y31_N2
-\VGA_86_image|Equal0~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N20
+\VGA_86_image|h_count[9]~29\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal0~0_combout\ = (((!\VGA_86_image|h_count\(4)) # (!\VGA_86_image|h_count\(2))) # (!\VGA_86_image|h_count\(1))) # (!\VGA_86_image|h_count\(3))
+-- \VGA_86_image|h_count[9]~29_combout\ = (\VGA_86_image|h_count\(9) & (!\VGA_86_image|h_count[8]~28\)) # (!\VGA_86_image|h_count\(9) & ((\VGA_86_image|h_count[8]~28\) # (GND)))
+-- \VGA_86_image|h_count[9]~30\ = CARRY((!\VGA_86_image|h_count[8]~28\) # (!\VGA_86_image|h_count\(9)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(3),
-	datab => \VGA_86_image|h_count\(1),
-	datac => \VGA_86_image|h_count\(2),
-	datad => \VGA_86_image|h_count\(4),
-	combout => \VGA_86_image|Equal0~0_combout\);
-
--- Location: LCCOMB_X49_Y31_N22
-\VGA_86_image|h_count[9]~30\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|h_count[9]~30_combout\ = (\VGA_86_image|h_count\(9) & (!\VGA_86_image|h_count[8]~29\)) # (!\VGA_86_image|h_count\(9) & ((\VGA_86_image|h_count[8]~29\) # (GND)))
--- \VGA_86_image|h_count[9]~31\ = CARRY((!\VGA_86_image|h_count[8]~29\) # (!\VGA_86_image|h_count\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(9),
+	datab => \VGA_86_image|h_count\(9),
 	datad => VCC,
-	cin => \VGA_86_image|h_count[8]~29\,
-	combout => \VGA_86_image|h_count[9]~30_combout\,
-	cout => \VGA_86_image|h_count[9]~31\);
+	cin => \VGA_86_image|h_count[8]~28\,
+	combout => \VGA_86_image|h_count[9]~29_combout\,
+	cout => \VGA_86_image|h_count[9]~30\);
 
--- Location: FF_X49_Y31_N23
+-- Location: FF_X21_Y20_N21
 \VGA_86_image|h_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1303,28 +1077,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[9]~30_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[9]~29_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(9));
 
--- Location: LCCOMB_X49_Y31_N24
-\VGA_86_image|h_count[10]~32\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N22
+\VGA_86_image|h_count[10]~31\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|h_count[10]~32_combout\ = \VGA_86_image|h_count[9]~31\ $ (!\VGA_86_image|h_count\(10))
+-- \VGA_86_image|h_count[10]~31_combout\ = \VGA_86_image|h_count\(10) $ (!\VGA_86_image|h_count[9]~30\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000000001111",
+	lut_mask => "1010010110100101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datad => \VGA_86_image|h_count\(10),
-	cin => \VGA_86_image|h_count[9]~31\,
-	combout => \VGA_86_image|h_count[10]~32_combout\);
+	dataa => \VGA_86_image|h_count\(10),
+	cin => \VGA_86_image|h_count[9]~30\,
+	combout => \VGA_86_image|h_count[10]~31_combout\);
 
--- Location: FF_X49_Y31_N25
+-- Location: FF_X21_Y20_N23
 \VGA_86_image|h_count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1333,63 +1107,64 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|h_count[10]~32_combout\,
-	sclr => \VGA_86_image|h_count[10]~11_combout\,
+	d => \VGA_86_image|h_count[10]~31_combout\,
+	sclr => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_count\(10));
 
--- Location: LCCOMB_X49_Y31_N26
+-- Location: LCCOMB_X21_Y20_N26
+\VGA_86_image|Equal0~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal0~0_combout\ = (((!\VGA_86_image|h_count\(2)) # (!\VGA_86_image|h_count\(3))) # (!\VGA_86_image|h_count\(1))) # (!\VGA_86_image|h_count\(4))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|h_count\(4),
+	datab => \VGA_86_image|h_count\(1),
+	datac => \VGA_86_image|h_count\(3),
+	datad => \VGA_86_image|h_count\(2),
+	combout => \VGA_86_image|Equal0~0_combout\);
+
+-- Location: LCCOMB_X21_Y22_N24
 \VGA_86_image|Equal0~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal0~1_combout\ = (\VGA_86_image|h_count\(8)) # ((\VGA_86_image|Equal0~0_combout\) # ((\VGA_86_image|h_count\(9)) # (!\VGA_86_image|h_count\(10))))
+-- \VGA_86_image|Equal0~1_combout\ = (\VGA_86_image|h_count\(9)) # (((\VGA_86_image|h_count\(8)) # (\VGA_86_image|Equal0~0_combout\)) # (!\VGA_86_image|h_count\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111011111111",
+	lut_mask => "1111111111111011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
-	datab => \VGA_86_image|Equal0~0_combout\,
-	datac => \VGA_86_image|h_count\(9),
-	datad => \VGA_86_image|h_count\(10),
+	dataa => \VGA_86_image|h_count\(9),
+	datab => \VGA_86_image|h_count\(10),
+	datac => \VGA_86_image|h_count\(8),
+	datad => \VGA_86_image|Equal0~0_combout\,
 	combout => \VGA_86_image|Equal0~1_combout\);
 
--- Location: LCCOMB_X50_Y31_N22
-\VGA_86_image|process_1~21\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y22_N10
+\VGA_86_image|v_count[9]~31\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~21_combout\ = (!\VGA_86_image|h_count\(7) & (!\VGA_86_image|h_count\(6) & !\VGA_86_image|h_count\(5)))
+-- \VGA_86_image|v_count[9]~31_combout\ = ((\VGA_86_image|h_count\(0) & (\VGA_86_image|process_1~21_combout\ & !\VGA_86_image|Equal0~1_combout\))) # (!\key[0]~input_o\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000010001",
+	lut_mask => "0101010111010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(7),
-	datab => \VGA_86_image|h_count\(6),
-	datad => \VGA_86_image|h_count\(5),
-	combout => \VGA_86_image|process_1~21_combout\);
+	dataa => \key[0]~input_o\,
+	datab => \VGA_86_image|h_count\(0),
+	datac => \VGA_86_image|process_1~21_combout\,
+	datad => \VGA_86_image|Equal0~1_combout\,
+	combout => \VGA_86_image|v_count[9]~31_combout\);
 
--- Location: LCCOMB_X49_Y31_N28
-\VGA_86_image|h_count[10]~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|h_count[10]~11_combout\ = ((!\VGA_86_image|Equal0~1_combout\ & (\VGA_86_image|h_count\(0) & \VGA_86_image|process_1~21_combout\))) # (!\key[0]~input_o\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111001100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal0~1_combout\,
-	datab => \key[0]~input_o\,
-	datac => \VGA_86_image|h_count\(0),
-	datad => \VGA_86_image|process_1~21_combout\,
-	combout => \VGA_86_image|h_count[10]~11_combout\);
-
--- Location: FF_X47_Y30_N1
+-- Location: FF_X22_Y24_N1
 \VGA_86_image|v_count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1400,12 +1175,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[0]~10_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(0));
 
--- Location: LCCOMB_X47_Y30_N2
+-- Location: LCCOMB_X22_Y24_N2
 \VGA_86_image|v_count[1]~12\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[1]~12_combout\ = (\VGA_86_image|v_count\(1) & (!\VGA_86_image|v_count[0]~11\)) # (!\VGA_86_image|v_count\(1) & ((\VGA_86_image|v_count[0]~11\) # (GND)))
@@ -1423,7 +1198,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[1]~12_combout\,
 	cout => \VGA_86_image|v_count[1]~13\);
 
--- Location: FF_X47_Y30_N3
+-- Location: FF_X22_Y24_N3
 \VGA_86_image|v_count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1434,12 +1209,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[1]~12_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(1));
 
--- Location: LCCOMB_X47_Y30_N4
+-- Location: LCCOMB_X22_Y24_N4
 \VGA_86_image|v_count[2]~14\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[2]~14_combout\ = (\VGA_86_image|v_count\(2) & (\VGA_86_image|v_count[1]~13\ $ (GND))) # (!\VGA_86_image|v_count\(2) & (!\VGA_86_image|v_count[1]~13\ & VCC))
@@ -1457,7 +1232,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[2]~14_combout\,
 	cout => \VGA_86_image|v_count[2]~15\);
 
--- Location: FF_X47_Y30_N5
+-- Location: FF_X22_Y24_N5
 \VGA_86_image|v_count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1468,12 +1243,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[2]~14_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(2));
 
--- Location: LCCOMB_X47_Y30_N6
+-- Location: LCCOMB_X22_Y24_N6
 \VGA_86_image|v_count[3]~16\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[3]~16_combout\ = (\VGA_86_image|v_count\(3) & (!\VGA_86_image|v_count[2]~15\)) # (!\VGA_86_image|v_count\(3) & ((\VGA_86_image|v_count[2]~15\) # (GND)))
@@ -1491,7 +1266,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[3]~16_combout\,
 	cout => \VGA_86_image|v_count[3]~17\);
 
--- Location: FF_X47_Y30_N7
+-- Location: FF_X22_Y24_N7
 \VGA_86_image|v_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1502,12 +1277,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[3]~16_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(3));
 
--- Location: LCCOMB_X47_Y30_N8
+-- Location: LCCOMB_X22_Y24_N8
 \VGA_86_image|v_count[4]~18\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[4]~18_combout\ = (\VGA_86_image|v_count\(4) & (\VGA_86_image|v_count[3]~17\ $ (GND))) # (!\VGA_86_image|v_count\(4) & (!\VGA_86_image|v_count[3]~17\ & VCC))
@@ -1525,7 +1300,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[4]~18_combout\,
 	cout => \VGA_86_image|v_count[4]~19\);
 
--- Location: FF_X47_Y30_N9
+-- Location: FF_X22_Y24_N9
 \VGA_86_image|v_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1536,12 +1311,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[4]~18_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(4));
 
--- Location: LCCOMB_X47_Y30_N10
+-- Location: LCCOMB_X22_Y24_N10
 \VGA_86_image|v_count[5]~20\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[5]~20_combout\ = (\VGA_86_image|v_count\(5) & (!\VGA_86_image|v_count[4]~19\)) # (!\VGA_86_image|v_count\(5) & ((\VGA_86_image|v_count[4]~19\) # (GND)))
@@ -1559,7 +1334,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[5]~20_combout\,
 	cout => \VGA_86_image|v_count[5]~21\);
 
--- Location: FF_X47_Y30_N11
+-- Location: FF_X22_Y24_N11
 \VGA_86_image|v_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1570,12 +1345,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[5]~20_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(5));
 
--- Location: LCCOMB_X47_Y30_N12
+-- Location: LCCOMB_X22_Y24_N12
 \VGA_86_image|v_count[6]~22\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[6]~22_combout\ = (\VGA_86_image|v_count\(6) & (\VGA_86_image|v_count[5]~21\ $ (GND))) # (!\VGA_86_image|v_count\(6) & (!\VGA_86_image|v_count[5]~21\ & VCC))
@@ -1593,7 +1368,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[6]~22_combout\,
 	cout => \VGA_86_image|v_count[6]~23\);
 
--- Location: FF_X47_Y30_N13
+-- Location: FF_X22_Y24_N13
 \VGA_86_image|v_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1604,12 +1379,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[6]~22_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(6));
 
--- Location: LCCOMB_X47_Y30_N14
+-- Location: LCCOMB_X22_Y24_N14
 \VGA_86_image|v_count[7]~24\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[7]~24_combout\ = (\VGA_86_image|v_count\(7) & (!\VGA_86_image|v_count[6]~23\)) # (!\VGA_86_image|v_count\(7) & ((\VGA_86_image|v_count[6]~23\) # (GND)))
@@ -1627,7 +1402,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[7]~24_combout\,
 	cout => \VGA_86_image|v_count[7]~25\);
 
--- Location: FF_X47_Y30_N15
+-- Location: FF_X22_Y24_N15
 \VGA_86_image|v_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1638,12 +1413,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[7]~24_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(7));
 
--- Location: LCCOMB_X47_Y30_N16
+-- Location: LCCOMB_X22_Y24_N16
 \VGA_86_image|v_count[8]~26\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[8]~26_combout\ = (\VGA_86_image|v_count\(8) & (\VGA_86_image|v_count[7]~25\ $ (GND))) # (!\VGA_86_image|v_count\(8) & (!\VGA_86_image|v_count[7]~25\ & VCC))
@@ -1661,7 +1436,7 @@ PORT MAP (
 	combout => \VGA_86_image|v_count[8]~26_combout\,
 	cout => \VGA_86_image|v_count[8]~27\);
 
--- Location: FF_X47_Y30_N17
+-- Location: FF_X22_Y24_N17
 \VGA_86_image|v_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1672,12 +1447,12 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[8]~26_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(8));
 
--- Location: LCCOMB_X47_Y30_N18
+-- Location: LCCOMB_X22_Y24_N18
 \VGA_86_image|v_count[9]~28\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_count[9]~28_combout\ = \VGA_86_image|v_count[8]~27\ $ (\VGA_86_image|v_count\(9))
@@ -1692,7 +1467,7 @@ PORT MAP (
 	cin => \VGA_86_image|v_count[8]~27\,
 	combout => \VGA_86_image|v_count[9]~28_combout\);
 
--- Location: FF_X47_Y30_N19
+-- Location: FF_X22_Y24_N19
 \VGA_86_image|v_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1703,15 +1478,15 @@ PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
 	d => \VGA_86_image|v_count[9]~28_combout\,
 	sclr => \VGA_86_image|v_count[9]~30_combout\,
-	ena => \VGA_86_image|h_count[10]~11_combout\,
+	ena => \VGA_86_image|v_count[9]~31_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_count\(9));
 
--- Location: LCCOMB_X49_Y30_N30
+-- Location: LCCOMB_X22_Y24_N24
 \VGA_86_image|LessThan5~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|LessThan5~0_combout\ = (!\VGA_86_image|v_count\(8) & !\VGA_86_image|v_count\(7))
+-- \VGA_86_image|LessThan5~0_combout\ = (!\VGA_86_image|v_count\(7) & !\VGA_86_image|v_count\(8))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1719,14 +1494,14 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|v_count\(8),
-	datad => \VGA_86_image|v_count\(7),
+	datac => \VGA_86_image|v_count\(7),
+	datad => \VGA_86_image|v_count\(8),
 	combout => \VGA_86_image|LessThan5~0_combout\);
 
--- Location: LCCOMB_X47_Y30_N28
-\VGA_86_image|process_1~16\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X22_Y24_N28
+\VGA_86_image|process_1~15\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~16_combout\ = (\VGA_86_image|v_count\(0)) # ((\VGA_86_image|v_count\(2)) # (\VGA_86_image|v_count\(1)))
+-- \VGA_86_image|process_1~15_combout\ = (\VGA_86_image|v_count\(1)) # ((\VGA_86_image|v_count\(2)) # (\VGA_86_image|v_count\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1734,15 +1509,15 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|v_count\(0),
+	datab => \VGA_86_image|v_count\(1),
 	datac => \VGA_86_image|v_count\(2),
-	datad => \VGA_86_image|v_count\(1),
-	combout => \VGA_86_image|process_1~16_combout\);
+	datad => \VGA_86_image|v_count\(0),
+	combout => \VGA_86_image|process_1~15_combout\);
 
--- Location: LCCOMB_X47_Y30_N30
-\VGA_86_image|process_1~17\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X22_Y24_N22
+\VGA_86_image|process_1~16\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~17_combout\ = (\VGA_86_image|v_count\(5)) # ((\VGA_86_image|process_1~16_combout\ & (\VGA_86_image|v_count\(4) & \VGA_86_image|v_count\(3))))
+-- \VGA_86_image|process_1~16_combout\ = (\VGA_86_image|v_count\(5)) # ((\VGA_86_image|process_1~15_combout\ & (\VGA_86_image|v_count\(4) & \VGA_86_image|v_count\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1751,29 +1526,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \VGA_86_image|v_count\(5),
-	datab => \VGA_86_image|process_1~16_combout\,
+	datab => \VGA_86_image|process_1~15_combout\,
 	datac => \VGA_86_image|v_count\(4),
 	datad => \VGA_86_image|v_count\(3),
-	combout => \VGA_86_image|process_1~17_combout\);
+	combout => \VGA_86_image|process_1~16_combout\);
 
--- Location: LCCOMB_X49_Y30_N4
-\VGA_86_image|process_1~18\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y22_N20
+\VGA_86_image|process_1~17\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~18_combout\ = ((\VGA_86_image|LessThan5~0_combout\ & ((!\VGA_86_image|process_1~17_combout\) # (!\VGA_86_image|v_count\(6))))) # (!\VGA_86_image|v_count\(9))
+-- \VGA_86_image|process_1~17_combout\ = ((\VGA_86_image|LessThan5~0_combout\ & ((!\VGA_86_image|process_1~16_combout\) # (!\VGA_86_image|v_count\(6))))) # (!\VGA_86_image|v_count\(9))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111010111110101",
+	lut_mask => "0101110111011101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \VGA_86_image|v_count\(9),
-	datab => \VGA_86_image|v_count\(6),
-	datac => \VGA_86_image|LessThan5~0_combout\,
-	datad => \VGA_86_image|process_1~17_combout\,
-	combout => \VGA_86_image|process_1~18_combout\);
+	datab => \VGA_86_image|LessThan5~0_combout\,
+	datac => \VGA_86_image|v_count\(6),
+	datad => \VGA_86_image|process_1~16_combout\,
+	combout => \VGA_86_image|process_1~17_combout\);
 
--- Location: FF_X49_Y30_N5
+-- Location: FF_X21_Y22_N21
 \VGA_86_image|v_sync_1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1782,12 +1557,26 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|process_1~18_combout\,
+	d => \VGA_86_image|process_1~17_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_sync_1~q\);
 
--- Location: FF_X49_Y30_N3
+-- Location: LCCOMB_X21_Y22_N18
+\VGA_86_image|v_sync_2~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|v_sync_2~feeder_combout\ = \VGA_86_image|v_sync_1~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \VGA_86_image|v_sync_1~q\,
+	combout => \VGA_86_image|v_sync_2~feeder_combout\);
+
+-- Location: FF_X21_Y22_N19
 \VGA_86_image|v_sync_2\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1796,13 +1585,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \VGA_86_image|v_sync_1~q\,
-	sload => VCC,
+	d => \VGA_86_image|v_sync_2~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_sync_2~q\);
 
--- Location: LCCOMB_X49_Y30_N8
+-- Location: LCCOMB_X21_Y22_N0
 \VGA_86_image|v_sync_out~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|v_sync_out~feeder_combout\ = \VGA_86_image|v_sync_2~q\
@@ -1816,7 +1604,7 @@ PORT MAP (
 	datad => \VGA_86_image|v_sync_2~q\,
 	combout => \VGA_86_image|v_sync_out~feeder_combout\);
 
--- Location: FF_X49_Y30_N9
+-- Location: FF_X21_Y22_N1
 \VGA_86_image|v_sync_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1830,44 +1618,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|v_sync_out~q\);
 
--- Location: LCCOMB_X50_Y31_N28
-\VGA_86_image|process_1~3\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y22_N16
+\VGA_86_image|process_1~18\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~3_combout\ = (\VGA_86_image|h_count\(2)) # ((\VGA_86_image|h_count\(0)) # ((\VGA_86_image|h_count\(1)) # (!\VGA_86_image|h_count\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111101111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(2),
-	datab => \VGA_86_image|h_count\(0),
-	datac => \VGA_86_image|h_count\(7),
-	datad => \VGA_86_image|h_count\(1),
-	combout => \VGA_86_image|process_1~3_combout\);
-
--- Location: LCCOMB_X50_Y31_N26
-\VGA_86_image|process_1~24\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|process_1~24_combout\ = (\VGA_86_image|h_count\(5)) # ((\VGA_86_image|h_count\(4)) # ((\VGA_86_image|h_count\(3) & \VGA_86_image|process_1~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111111000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(3),
-	datab => \VGA_86_image|process_1~3_combout\,
-	datac => \VGA_86_image|h_count\(5),
-	datad => \VGA_86_image|h_count\(4),
-	combout => \VGA_86_image|process_1~24_combout\);
-
--- Location: LCCOMB_X50_Y31_N24
-\VGA_86_image|process_1~19\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|process_1~19_combout\ = ((\VGA_86_image|h_count\(10)) # (!\VGA_86_image|h_count\(9))) # (!\VGA_86_image|h_count\(8))
+-- \VGA_86_image|process_1~18_combout\ = ((\VGA_86_image|h_count\(10)) # (!\VGA_86_image|h_count\(8))) # (!\VGA_86_image|h_count\(9))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1875,29 +1629,63 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
-	datac => \VGA_86_image|h_count\(9),
+	dataa => \VGA_86_image|h_count\(9),
+	datac => \VGA_86_image|h_count\(8),
 	datad => \VGA_86_image|h_count\(10),
-	combout => \VGA_86_image|process_1~19_combout\);
+	combout => \VGA_86_image|process_1~18_combout\);
 
--- Location: LCCOMB_X50_Y31_N30
-\VGA_86_image|process_1~20\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y20_N30
+\VGA_86_image|process_1~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~20_combout\ = (!\VGA_86_image|process_1~19_combout\ & (\VGA_86_image|h_count\(7) $ (((\VGA_86_image|h_count\(6) & \VGA_86_image|process_1~24_combout\)))))
+-- \VGA_86_image|process_1~3_combout\ = (\VGA_86_image|h_count\(2)) # (((\VGA_86_image|h_count\(1)) # (\VGA_86_image|h_count\(0))) # (!\VGA_86_image|h_count\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001101010",
+	lut_mask => "1111111111111011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|h_count\(7),
-	datab => \VGA_86_image|h_count\(6),
-	datac => \VGA_86_image|process_1~24_combout\,
-	datad => \VGA_86_image|process_1~19_combout\,
-	combout => \VGA_86_image|process_1~20_combout\);
+	dataa => \VGA_86_image|h_count\(2),
+	datab => \VGA_86_image|h_count\(7),
+	datac => \VGA_86_image|h_count\(1),
+	datad => \VGA_86_image|h_count\(0),
+	combout => \VGA_86_image|process_1~3_combout\);
 
--- Location: FF_X50_Y31_N31
+-- Location: LCCOMB_X21_Y20_N28
+\VGA_86_image|process_1~23\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|process_1~23_combout\ = (\VGA_86_image|h_count\(4)) # ((\VGA_86_image|h_count\(5)) # ((\VGA_86_image|process_1~3_combout\ & \VGA_86_image|h_count\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|h_count\(4),
+	datab => \VGA_86_image|process_1~3_combout\,
+	datac => \VGA_86_image|h_count\(3),
+	datad => \VGA_86_image|h_count\(5),
+	combout => \VGA_86_image|process_1~23_combout\);
+
+-- Location: LCCOMB_X21_Y20_N0
+\VGA_86_image|process_1~19\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|process_1~19_combout\ = (!\VGA_86_image|process_1~18_combout\ & (\VGA_86_image|h_count\(7) $ (((\VGA_86_image|process_1~23_combout\ & \VGA_86_image|h_count\(6))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001010101000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|process_1~18_combout\,
+	datab => \VGA_86_image|process_1~23_combout\,
+	datac => \VGA_86_image|h_count\(6),
+	datad => \VGA_86_image|h_count\(7),
+	combout => \VGA_86_image|process_1~19_combout\);
+
+-- Location: FF_X21_Y20_N1
 \VGA_86_image|h_sync_1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1906,12 +1694,26 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|process_1~20_combout\,
+	d => \VGA_86_image|process_1~19_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_sync_1~q\);
 
--- Location: FF_X50_Y31_N23
+-- Location: LCCOMB_X18_Y19_N24
+\VGA_86_image|h_sync_2~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|h_sync_2~feeder_combout\ = \VGA_86_image|h_sync_1~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \VGA_86_image|h_sync_1~q\,
+	combout => \VGA_86_image|h_sync_2~feeder_combout\);
+
+-- Location: FF_X18_Y19_N25
 \VGA_86_image|h_sync_2\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1920,13 +1722,26 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \VGA_86_image|h_sync_1~q\,
-	sload => VCC,
+	d => \VGA_86_image|h_sync_2~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_sync_2~q\);
 
--- Location: FF_X50_Y31_N11
+-- Location: LCCOMB_X15_Y18_N8
+\VGA_86_image|h_sync_out~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|h_sync_out~feeder_combout\ = \VGA_86_image|h_sync_2~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \VGA_86_image|h_sync_2~q\,
+	combout => \VGA_86_image|h_sync_out~feeder_combout\);
+
+-- Location: FF_X15_Y18_N9
 \VGA_86_image|h_sync_out\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1935,69 +1750,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \VGA_86_image|h_sync_2~q\,
-	sload => VCC,
+	d => \VGA_86_image|h_sync_out~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|h_sync_out~q\);
 
--- Location: LCCOMB_X63_Y33_N10
-\VGA_86_image|Add10~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~8_combout\ = (\VGA_86_image|square_pos_count\(4) & (\VGA_86_image|Add10~7\ $ (GND))) # (!\VGA_86_image|square_pos_count\(4) & (!\VGA_86_image|Add10~7\ & VCC))
--- \VGA_86_image|Add10~9\ = CARRY((\VGA_86_image|square_pos_count\(4) & !\VGA_86_image|Add10~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(4),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~7\,
-	combout => \VGA_86_image|Add10~8_combout\,
-	cout => \VGA_86_image|Add10~9\);
-
--- Location: LCCOMB_X63_Y33_N12
-\VGA_86_image|Add10~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~10_combout\ = (\VGA_86_image|square_pos_count\(5) & (!\VGA_86_image|Add10~9\)) # (!\VGA_86_image|square_pos_count\(5) & ((\VGA_86_image|Add10~9\) # (GND)))
--- \VGA_86_image|Add10~11\ = CARRY((!\VGA_86_image|Add10~9\) # (!\VGA_86_image|square_pos_count\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~9\,
-	combout => \VGA_86_image|Add10~10_combout\,
-	cout => \VGA_86_image|Add10~11\);
-
--- Location: LCCOMB_X62_Y33_N2
-\VGA_86_image|square_pos_count~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~1_combout\ = (\VGA_86_image|Add10~10_combout\ & (((!\VGA_86_image|Equal3~7_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~9_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~9_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Add10~10_combout\,
-	datad => \VGA_86_image|Equal3~7_combout\,
-	combout => \VGA_86_image|square_pos_count~1_combout\);
-
--- Location: LCCOMB_X49_Y30_N0
+-- Location: LCCOMB_X22_Y24_N26
 \VGA_86_image|LessThan5~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|LessThan5~1_combout\ = ((!\VGA_86_image|v_count\(5) & ((!\VGA_86_image|v_count\(3)) # (!\VGA_86_image|v_count\(4))))) # (!\VGA_86_image|v_count\(6))
+-- \VGA_86_image|LessThan5~1_combout\ = ((!\VGA_86_image|v_count\(5) & ((!\VGA_86_image|v_count\(4)) # (!\VGA_86_image|v_count\(3))))) # (!\VGA_86_image|v_count\(6))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2005,47 +1766,47 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|v_count\(4),
+	dataa => \VGA_86_image|v_count\(3),
 	datab => \VGA_86_image|v_count\(5),
-	datac => \VGA_86_image|v_count\(3),
+	datac => \VGA_86_image|v_count\(4),
 	datad => \VGA_86_image|v_count\(6),
 	combout => \VGA_86_image|LessThan5~1_combout\);
 
--- Location: LCCOMB_X49_Y30_N6
+-- Location: LCCOMB_X21_Y22_N26
+\VGA_86_image|process_1~20\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|process_1~20_combout\ = (!\VGA_86_image|h_count\(10) & (((\VGA_86_image|LessThan5~1_combout\ & \VGA_86_image|LessThan5~0_combout\)) # (!\VGA_86_image|v_count\(9))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000100010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|v_count\(9),
+	datab => \VGA_86_image|h_count\(10),
+	datac => \VGA_86_image|LessThan5~1_combout\,
+	datad => \VGA_86_image|LessThan5~0_combout\,
+	combout => \VGA_86_image|process_1~20_combout\);
+
+-- Location: LCCOMB_X21_Y22_N6
 \VGA_86_image|process_1~22\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|process_1~22_combout\ = (!\VGA_86_image|h_count\(10) & (((\VGA_86_image|LessThan5~0_combout\ & \VGA_86_image|LessThan5~1_combout\)) # (!\VGA_86_image|v_count\(9))))
+-- \VGA_86_image|process_1~22_combout\ = ((!\VGA_86_image|process_1~21_combout\ & (\VGA_86_image|h_count\(8) & \VGA_86_image|h_count\(9)))) # (!\VGA_86_image|process_1~20_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010001111",
+	lut_mask => "0100111100001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|LessThan5~0_combout\,
-	datab => \VGA_86_image|LessThan5~1_combout\,
-	datac => \VGA_86_image|v_count\(9),
-	datad => \VGA_86_image|h_count\(10),
+	dataa => \VGA_86_image|process_1~21_combout\,
+	datab => \VGA_86_image|h_count\(8),
+	datac => \VGA_86_image|process_1~20_combout\,
+	datad => \VGA_86_image|h_count\(9),
 	combout => \VGA_86_image|process_1~22_combout\);
 
--- Location: LCCOMB_X49_Y31_N0
-\VGA_86_image|process_1~23\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|process_1~23_combout\ = ((\VGA_86_image|h_count\(8) & (\VGA_86_image|h_count\(9) & !\VGA_86_image|process_1~21_combout\))) # (!\VGA_86_image|process_1~22_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001110110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
-	datab => \VGA_86_image|process_1~22_combout\,
-	datac => \VGA_86_image|h_count\(9),
-	datad => \VGA_86_image|process_1~21_combout\,
-	combout => \VGA_86_image|process_1~23_combout\);
-
--- Location: FF_X49_Y31_N1
+-- Location: FF_X21_Y22_N7
 \VGA_86_image|blank_1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2054,12 +1815,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|process_1~23_combout\,
+	d => \VGA_86_image|process_1~22_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|blank_1~q\);
 
--- Location: FF_X50_Y31_N15
+-- Location: FF_X24_Y19_N1
 \VGA_86_image|blank_2\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2074,821 +1835,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|blank_2~q\);
 
--- Location: FF_X62_Y33_N3
-\VGA_86_image|square_pos_count[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~1_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(5));
-
--- Location: LCCOMB_X63_Y33_N14
-\VGA_86_image|Add10~12\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y25_N0
+\VGA_86_image|Equal2~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add10~12_combout\ = (\VGA_86_image|square_pos_count\(6) & (\VGA_86_image|Add10~11\ $ (GND))) # (!\VGA_86_image|square_pos_count\(6) & (!\VGA_86_image|Add10~11\ & VCC))
--- \VGA_86_image|Add10~13\ = CARRY((\VGA_86_image|square_pos_count\(6) & !\VGA_86_image|Add10~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~11\,
-	combout => \VGA_86_image|Add10~12_combout\,
-	cout => \VGA_86_image|Add10~13\);
-
--- Location: FF_X63_Y33_N15
-\VGA_86_image|square_pos_count[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~12_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(6));
-
--- Location: LCCOMB_X63_Y33_N16
-\VGA_86_image|Add10~14\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~14_combout\ = (\VGA_86_image|square_pos_count\(7) & (!\VGA_86_image|Add10~13\)) # (!\VGA_86_image|square_pos_count\(7) & ((\VGA_86_image|Add10~13\) # (GND)))
--- \VGA_86_image|Add10~15\ = CARRY((!\VGA_86_image|Add10~13\) # (!\VGA_86_image|square_pos_count\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~13\,
-	combout => \VGA_86_image|Add10~14_combout\,
-	cout => \VGA_86_image|Add10~15\);
-
--- Location: FF_X63_Y33_N17
-\VGA_86_image|square_pos_count[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~14_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(7));
-
--- Location: LCCOMB_X63_Y33_N18
-\VGA_86_image|Add10~16\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~16_combout\ = (\VGA_86_image|square_pos_count\(8) & (\VGA_86_image|Add10~15\ $ (GND))) # (!\VGA_86_image|square_pos_count\(8) & (!\VGA_86_image|Add10~15\ & VCC))
--- \VGA_86_image|Add10~17\ = CARRY((\VGA_86_image|square_pos_count\(8) & !\VGA_86_image|Add10~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~15\,
-	combout => \VGA_86_image|Add10~16_combout\,
-	cout => \VGA_86_image|Add10~17\);
-
--- Location: LCCOMB_X62_Y33_N16
-\VGA_86_image|square_pos_count~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~0_combout\ = (\VGA_86_image|Add10~16_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~16_combout\,
-	combout => \VGA_86_image|square_pos_count~0_combout\);
-
--- Location: FF_X62_Y33_N17
-\VGA_86_image|square_pos_count[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~0_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(8));
-
--- Location: LCCOMB_X63_Y33_N20
-\VGA_86_image|Add10~18\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~18_combout\ = (\VGA_86_image|square_pos_count\(9) & (!\VGA_86_image|Add10~17\)) # (!\VGA_86_image|square_pos_count\(9) & ((\VGA_86_image|Add10~17\) # (GND)))
--- \VGA_86_image|Add10~19\ = CARRY((!\VGA_86_image|Add10~17\) # (!\VGA_86_image|square_pos_count\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~17\,
-	combout => \VGA_86_image|Add10~18_combout\,
-	cout => \VGA_86_image|Add10~19\);
-
--- Location: FF_X63_Y33_N21
-\VGA_86_image|square_pos_count[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~18_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(9));
-
--- Location: LCCOMB_X63_Y33_N22
-\VGA_86_image|Add10~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~20_combout\ = (\VGA_86_image|square_pos_count\(10) & (\VGA_86_image|Add10~19\ $ (GND))) # (!\VGA_86_image|square_pos_count\(10) & (!\VGA_86_image|Add10~19\ & VCC))
--- \VGA_86_image|Add10~21\ = CARRY((\VGA_86_image|square_pos_count\(10) & !\VGA_86_image|Add10~19\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(10),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~19\,
-	combout => \VGA_86_image|Add10~20_combout\,
-	cout => \VGA_86_image|Add10~21\);
-
--- Location: FF_X63_Y33_N23
-\VGA_86_image|square_pos_count[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~20_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(10));
-
--- Location: LCCOMB_X63_Y33_N24
-\VGA_86_image|Add10~22\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~22_combout\ = (\VGA_86_image|square_pos_count\(11) & (!\VGA_86_image|Add10~21\)) # (!\VGA_86_image|square_pos_count\(11) & ((\VGA_86_image|Add10~21\) # (GND)))
--- \VGA_86_image|Add10~23\ = CARRY((!\VGA_86_image|Add10~21\) # (!\VGA_86_image|square_pos_count\(11)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(11),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~21\,
-	combout => \VGA_86_image|Add10~22_combout\,
-	cout => \VGA_86_image|Add10~23\);
-
--- Location: FF_X63_Y33_N25
-\VGA_86_image|square_pos_count[11]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~22_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(11));
-
--- Location: LCCOMB_X63_Y33_N26
-\VGA_86_image|Add10~24\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~24_combout\ = (\VGA_86_image|square_pos_count\(12) & (\VGA_86_image|Add10~23\ $ (GND))) # (!\VGA_86_image|square_pos_count\(12) & (!\VGA_86_image|Add10~23\ & VCC))
--- \VGA_86_image|Add10~25\ = CARRY((\VGA_86_image|square_pos_count\(12) & !\VGA_86_image|Add10~23\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(12),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~23\,
-	combout => \VGA_86_image|Add10~24_combout\,
-	cout => \VGA_86_image|Add10~25\);
-
--- Location: FF_X63_Y33_N27
-\VGA_86_image|square_pos_count[12]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~24_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(12));
-
--- Location: LCCOMB_X63_Y33_N28
-\VGA_86_image|Add10~26\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~26_combout\ = (\VGA_86_image|square_pos_count\(13) & (!\VGA_86_image|Add10~25\)) # (!\VGA_86_image|square_pos_count\(13) & ((\VGA_86_image|Add10~25\) # (GND)))
--- \VGA_86_image|Add10~27\ = CARRY((!\VGA_86_image|Add10~25\) # (!\VGA_86_image|square_pos_count\(13)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(13),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~25\,
-	combout => \VGA_86_image|Add10~26_combout\,
-	cout => \VGA_86_image|Add10~27\);
-
--- Location: LCCOMB_X62_Y33_N18
-\VGA_86_image|square_pos_count~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~3_combout\ = (\VGA_86_image|Add10~26_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~26_combout\,
-	combout => \VGA_86_image|square_pos_count~3_combout\);
-
--- Location: FF_X62_Y33_N19
-\VGA_86_image|square_pos_count[13]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~3_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(13));
-
--- Location: LCCOMB_X63_Y33_N30
-\VGA_86_image|Add10~28\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~28_combout\ = (\VGA_86_image|square_pos_count\(14) & (\VGA_86_image|Add10~27\ $ (GND))) # (!\VGA_86_image|square_pos_count\(14) & (!\VGA_86_image|Add10~27\ & VCC))
--- \VGA_86_image|Add10~29\ = CARRY((\VGA_86_image|square_pos_count\(14) & !\VGA_86_image|Add10~27\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(14),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~27\,
-	combout => \VGA_86_image|Add10~28_combout\,
-	cout => \VGA_86_image|Add10~29\);
-
--- Location: FF_X63_Y33_N31
-\VGA_86_image|square_pos_count[14]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~28_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(14));
-
--- Location: LCCOMB_X63_Y32_N0
-\VGA_86_image|Add10~30\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~30_combout\ = (\VGA_86_image|square_pos_count\(15) & (!\VGA_86_image|Add10~29\)) # (!\VGA_86_image|square_pos_count\(15) & ((\VGA_86_image|Add10~29\) # (GND)))
--- \VGA_86_image|Add10~31\ = CARRY((!\VGA_86_image|Add10~29\) # (!\VGA_86_image|square_pos_count\(15)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(15),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~29\,
-	combout => \VGA_86_image|Add10~30_combout\,
-	cout => \VGA_86_image|Add10~31\);
-
--- Location: LCCOMB_X62_Y33_N20
-\VGA_86_image|square_pos_count~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~4_combout\ = (\VGA_86_image|Add10~30_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~30_combout\,
-	combout => \VGA_86_image|square_pos_count~4_combout\);
-
--- Location: FF_X62_Y33_N21
-\VGA_86_image|square_pos_count[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~4_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(15));
-
--- Location: LCCOMB_X63_Y32_N2
-\VGA_86_image|Add10~32\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~32_combout\ = (\VGA_86_image|square_pos_count\(16) & (\VGA_86_image|Add10~31\ $ (GND))) # (!\VGA_86_image|square_pos_count\(16) & (!\VGA_86_image|Add10~31\ & VCC))
--- \VGA_86_image|Add10~33\ = CARRY((\VGA_86_image|square_pos_count\(16) & !\VGA_86_image|Add10~31\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(16),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~31\,
-	combout => \VGA_86_image|Add10~32_combout\,
-	cout => \VGA_86_image|Add10~33\);
-
--- Location: LCCOMB_X63_Y32_N4
-\VGA_86_image|Add10~34\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~34_combout\ = (\VGA_86_image|square_pos_count\(17) & (!\VGA_86_image|Add10~33\)) # (!\VGA_86_image|square_pos_count\(17) & ((\VGA_86_image|Add10~33\) # (GND)))
--- \VGA_86_image|Add10~35\ = CARRY((!\VGA_86_image|Add10~33\) # (!\VGA_86_image|square_pos_count\(17)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(17),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~33\,
-	combout => \VGA_86_image|Add10~34_combout\,
-	cout => \VGA_86_image|Add10~35\);
-
--- Location: LCCOMB_X62_Y33_N28
-\VGA_86_image|square_pos_count~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~6_combout\ = (\VGA_86_image|Add10~34_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~34_combout\,
-	combout => \VGA_86_image|square_pos_count~6_combout\);
-
--- Location: FF_X62_Y33_N29
-\VGA_86_image|square_pos_count[17]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~6_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(17));
-
--- Location: LCCOMB_X63_Y32_N6
-\VGA_86_image|Add10~36\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~36_combout\ = (\VGA_86_image|square_pos_count\(18) & (\VGA_86_image|Add10~35\ $ (GND))) # (!\VGA_86_image|square_pos_count\(18) & (!\VGA_86_image|Add10~35\ & VCC))
--- \VGA_86_image|Add10~37\ = CARRY((\VGA_86_image|square_pos_count\(18) & !\VGA_86_image|Add10~35\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(18),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~35\,
-	combout => \VGA_86_image|Add10~36_combout\,
-	cout => \VGA_86_image|Add10~37\);
-
--- Location: LCCOMB_X62_Y33_N30
-\VGA_86_image|square_pos_count~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~7_combout\ = (\VGA_86_image|Add10~36_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~36_combout\,
-	combout => \VGA_86_image|square_pos_count~7_combout\);
-
--- Location: FF_X62_Y33_N31
-\VGA_86_image|square_pos_count[18]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~7_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(18));
-
--- Location: LCCOMB_X63_Y32_N8
-\VGA_86_image|Add10~38\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~38_combout\ = (\VGA_86_image|square_pos_count\(19) & (!\VGA_86_image|Add10~37\)) # (!\VGA_86_image|square_pos_count\(19) & ((\VGA_86_image|Add10~37\) # (GND)))
--- \VGA_86_image|Add10~39\ = CARRY((!\VGA_86_image|Add10~37\) # (!\VGA_86_image|square_pos_count\(19)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(19),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~37\,
-	combout => \VGA_86_image|Add10~38_combout\,
-	cout => \VGA_86_image|Add10~39\);
-
--- Location: FF_X63_Y32_N9
-\VGA_86_image|square_pos_count[19]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~38_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(19));
-
--- Location: LCCOMB_X63_Y32_N10
-\VGA_86_image|Add10~40\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~40_combout\ = (\VGA_86_image|square_pos_count\(20) & (\VGA_86_image|Add10~39\ $ (GND))) # (!\VGA_86_image|square_pos_count\(20) & (!\VGA_86_image|Add10~39\ & VCC))
--- \VGA_86_image|Add10~41\ = CARRY((\VGA_86_image|square_pos_count\(20) & !\VGA_86_image|Add10~39\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(20),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~39\,
-	combout => \VGA_86_image|Add10~40_combout\,
-	cout => \VGA_86_image|Add10~41\);
-
--- Location: FF_X63_Y32_N11
-\VGA_86_image|square_pos_count[20]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~40_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(20));
-
--- Location: LCCOMB_X63_Y32_N12
-\VGA_86_image|Add10~42\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~42_combout\ = (\VGA_86_image|square_pos_count\(21) & (!\VGA_86_image|Add10~41\)) # (!\VGA_86_image|square_pos_count\(21) & ((\VGA_86_image|Add10~41\) # (GND)))
--- \VGA_86_image|Add10~43\ = CARRY((!\VGA_86_image|Add10~41\) # (!\VGA_86_image|square_pos_count\(21)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(21),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~41\,
-	combout => \VGA_86_image|Add10~42_combout\,
-	cout => \VGA_86_image|Add10~43\);
-
--- Location: FF_X63_Y32_N13
-\VGA_86_image|square_pos_count[21]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~42_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(21));
-
--- Location: LCCOMB_X63_Y32_N14
-\VGA_86_image|Add10~44\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~44_combout\ = (\VGA_86_image|square_pos_count\(22) & (\VGA_86_image|Add10~43\ $ (GND))) # (!\VGA_86_image|square_pos_count\(22) & (!\VGA_86_image|Add10~43\ & VCC))
--- \VGA_86_image|Add10~45\ = CARRY((\VGA_86_image|square_pos_count\(22) & !\VGA_86_image|Add10~43\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(22),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~43\,
-	combout => \VGA_86_image|Add10~44_combout\,
-	cout => \VGA_86_image|Add10~45\);
-
--- Location: FF_X63_Y32_N15
-\VGA_86_image|square_pos_count[22]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~44_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(22));
-
--- Location: LCCOMB_X63_Y32_N16
-\VGA_86_image|Add10~46\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~46_combout\ = (\VGA_86_image|square_pos_count\(23) & (!\VGA_86_image|Add10~45\)) # (!\VGA_86_image|square_pos_count\(23) & ((\VGA_86_image|Add10~45\) # (GND)))
--- \VGA_86_image|Add10~47\ = CARRY((!\VGA_86_image|Add10~45\) # (!\VGA_86_image|square_pos_count\(23)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(23),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~45\,
-	combout => \VGA_86_image|Add10~46_combout\,
-	cout => \VGA_86_image|Add10~47\);
-
--- Location: FF_X63_Y32_N17
-\VGA_86_image|square_pos_count[23]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~46_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(23));
-
--- Location: LCCOMB_X63_Y32_N18
-\VGA_86_image|Add10~48\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~48_combout\ = (\VGA_86_image|square_pos_count\(24) & (\VGA_86_image|Add10~47\ $ (GND))) # (!\VGA_86_image|square_pos_count\(24) & (!\VGA_86_image|Add10~47\ & VCC))
--- \VGA_86_image|Add10~49\ = CARRY((\VGA_86_image|square_pos_count\(24) & !\VGA_86_image|Add10~47\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(24),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~47\,
-	combout => \VGA_86_image|Add10~48_combout\,
-	cout => \VGA_86_image|Add10~49\);
-
--- Location: FF_X63_Y32_N19
-\VGA_86_image|square_pos_count[24]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~48_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(24));
-
--- Location: LCCOMB_X63_Y32_N20
-\VGA_86_image|Add10~50\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~50_combout\ = (\VGA_86_image|square_pos_count\(25) & (!\VGA_86_image|Add10~49\)) # (!\VGA_86_image|square_pos_count\(25) & ((\VGA_86_image|Add10~49\) # (GND)))
--- \VGA_86_image|Add10~51\ = CARRY((!\VGA_86_image|Add10~49\) # (!\VGA_86_image|square_pos_count\(25)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(25),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~49\,
-	combout => \VGA_86_image|Add10~50_combout\,
-	cout => \VGA_86_image|Add10~51\);
-
--- Location: FF_X63_Y32_N21
-\VGA_86_image|square_pos_count[25]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~50_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(25));
-
--- Location: LCCOMB_X63_Y32_N22
-\VGA_86_image|Add10~52\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~52_combout\ = (\VGA_86_image|square_pos_count\(26) & (\VGA_86_image|Add10~51\ $ (GND))) # (!\VGA_86_image|square_pos_count\(26) & (!\VGA_86_image|Add10~51\ & VCC))
--- \VGA_86_image|Add10~53\ = CARRY((\VGA_86_image|square_pos_count\(26) & !\VGA_86_image|Add10~51\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(26),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~51\,
-	combout => \VGA_86_image|Add10~52_combout\,
-	cout => \VGA_86_image|Add10~53\);
-
--- Location: FF_X63_Y32_N23
-\VGA_86_image|square_pos_count[26]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~52_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(26));
-
--- Location: LCCOMB_X63_Y32_N24
-\VGA_86_image|Add10~54\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~54_combout\ = (\VGA_86_image|square_pos_count\(27) & (!\VGA_86_image|Add10~53\)) # (!\VGA_86_image|square_pos_count\(27) & ((\VGA_86_image|Add10~53\) # (GND)))
--- \VGA_86_image|Add10~55\ = CARRY((!\VGA_86_image|Add10~53\) # (!\VGA_86_image|square_pos_count\(27)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(27),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~53\,
-	combout => \VGA_86_image|Add10~54_combout\,
-	cout => \VGA_86_image|Add10~55\);
-
--- Location: FF_X63_Y32_N25
-\VGA_86_image|square_pos_count[27]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~54_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(27));
-
--- Location: LCCOMB_X62_Y32_N10
-\VGA_86_image|Equal3~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~8_combout\ = (!\VGA_86_image|square_pos_count\(27) & (!\VGA_86_image|square_pos_count\(26) & (!\VGA_86_image|square_pos_count\(25) & !\VGA_86_image|square_pos_count\(24))))
+-- \VGA_86_image|Equal2~8_combout\ = (!\VGA_86_image|color_shift_count\(4) & (!\VGA_86_image|color_shift_count\(6) & (!\VGA_86_image|color_shift_count\(3) & !\VGA_86_image|color_shift_count\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2896,112 +1846,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(27),
-	datab => \VGA_86_image|square_pos_count\(26),
-	datac => \VGA_86_image|square_pos_count\(25),
-	datad => \VGA_86_image|square_pos_count\(24),
-	combout => \VGA_86_image|Equal3~8_combout\);
+	dataa => \VGA_86_image|color_shift_count\(4),
+	datab => \VGA_86_image|color_shift_count\(6),
+	datac => \VGA_86_image|color_shift_count\(3),
+	datad => \VGA_86_image|color_shift_count\(5),
+	combout => \VGA_86_image|Equal2~8_combout\);
 
--- Location: LCCOMB_X63_Y32_N26
-\VGA_86_image|Add10~56\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X27_Y25_N2
+\VGA_86_image|Equal2~9\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add10~56_combout\ = (\VGA_86_image|square_pos_count\(28) & (\VGA_86_image|Add10~55\ $ (GND))) # (!\VGA_86_image|square_pos_count\(28) & (!\VGA_86_image|Add10~55\ & VCC))
--- \VGA_86_image|Add10~57\ = CARRY((\VGA_86_image|square_pos_count\(28) & !\VGA_86_image|Add10~55\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(28),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~55\,
-	combout => \VGA_86_image|Add10~56_combout\,
-	cout => \VGA_86_image|Add10~57\);
-
--- Location: FF_X63_Y32_N27
-\VGA_86_image|square_pos_count[28]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~56_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(28));
-
--- Location: LCCOMB_X63_Y32_N28
-\VGA_86_image|Add10~58\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~58_combout\ = (\VGA_86_image|square_pos_count\(29) & (!\VGA_86_image|Add10~57\)) # (!\VGA_86_image|square_pos_count\(29) & ((\VGA_86_image|Add10~57\) # (GND)))
--- \VGA_86_image|Add10~59\ = CARRY((!\VGA_86_image|Add10~57\) # (!\VGA_86_image|square_pos_count\(29)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(29),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~57\,
-	combout => \VGA_86_image|Add10~58_combout\,
-	cout => \VGA_86_image|Add10~59\);
-
--- Location: FF_X63_Y32_N29
-\VGA_86_image|square_pos_count[29]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~58_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(29));
-
--- Location: LCCOMB_X63_Y32_N30
-\VGA_86_image|Add10~60\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~60_combout\ = \VGA_86_image|square_pos_count\(30) $ (!\VGA_86_image|Add10~59\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010110100101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(30),
-	cin => \VGA_86_image|Add10~59\,
-	combout => \VGA_86_image|Add10~60_combout\);
-
--- Location: FF_X63_Y32_N31
-\VGA_86_image|square_pos_count[30]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~60_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(30));
-
--- Location: LCCOMB_X62_Y32_N4
-\VGA_86_image|Equal3~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~9_combout\ = (\VGA_86_image|Equal3~8_combout\ & (!\VGA_86_image|square_pos_count\(29) & (!\VGA_86_image|square_pos_count\(30) & !\VGA_86_image|square_pos_count\(28))))
+-- \VGA_86_image|Equal2~9_combout\ = (\VGA_86_image|Equal2~8_combout\ & (!\VGA_86_image|color_shift_count\(1) & (!\VGA_86_image|color_shift_count\(2) & !\VGA_86_image|color_shift_count\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3009,17 +1863,66 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Equal3~8_combout\,
-	datab => \VGA_86_image|square_pos_count\(29),
-	datac => \VGA_86_image|square_pos_count\(30),
-	datad => \VGA_86_image|square_pos_count\(28),
-	combout => \VGA_86_image|Equal3~9_combout\);
+	dataa => \VGA_86_image|Equal2~8_combout\,
+	datab => \VGA_86_image|color_shift_count\(1),
+	datac => \VGA_86_image|color_shift_count\(2),
+	datad => \VGA_86_image|color_shift_count\(0),
+	combout => \VGA_86_image|Equal2~9_combout\);
 
--- Location: LCCOMB_X63_Y33_N2
-\VGA_86_image|Add10~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X23_Y25_N20
+\VGA_86_image|Equal2~6\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add10~0_combout\ = \VGA_86_image|square_pos_count\(0) $ (VCC)
--- \VGA_86_image|Add10~1\ = CARRY(\VGA_86_image|square_pos_count\(0))
+-- \VGA_86_image|Equal2~6_combout\ = (!\VGA_86_image|color_shift_count\(9) & (\VGA_86_image|color_shift_count\(10) & (\VGA_86_image|color_shift_count\(8) & !\VGA_86_image|color_shift_count\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(9),
+	datab => \VGA_86_image|color_shift_count\(10),
+	datac => \VGA_86_image|color_shift_count\(8),
+	datad => \VGA_86_image|color_shift_count\(7),
+	combout => \VGA_86_image|Equal2~6_combout\);
+
+-- Location: LCCOMB_X23_Y25_N6
+\VGA_86_image|Equal2~5\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal2~5_combout\ = (\VGA_86_image|color_shift_count\(11) & (!\VGA_86_image|color_shift_count\(14) & (\VGA_86_image|color_shift_count\(13) & !\VGA_86_image|color_shift_count\(12))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(11),
+	datab => \VGA_86_image|color_shift_count\(14),
+	datac => \VGA_86_image|color_shift_count\(13),
+	datad => \VGA_86_image|color_shift_count\(12),
+	combout => \VGA_86_image|Equal2~5_combout\);
+
+-- Location: LCCOMB_X24_Y19_N2
+\VGA_86_image|Equal2~7\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal2~7_combout\ = (\VGA_86_image|Equal2~6_combout\ & \VGA_86_image|Equal2~5_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \VGA_86_image|Equal2~6_combout\,
+	datad => \VGA_86_image|Equal2~5_combout\,
+	combout => \VGA_86_image|Equal2~7_combout\);
+
+-- Location: LCCOMB_X26_Y25_N2
+\VGA_86_image|Add3~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~0_combout\ = \VGA_86_image|color_shift_count\(0) $ (VCC)
+-- \VGA_86_image|Add3~1\ = CARRY(\VGA_86_image|color_shift_count\(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3027,3200 +1930,30 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(0),
-	datad => VCC,
-	combout => \VGA_86_image|Add10~0_combout\,
-	cout => \VGA_86_image|Add10~1\);
-
--- Location: LCCOMB_X62_Y33_N6
-\VGA_86_image|square_pos_count~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~2_combout\ = (\VGA_86_image|Add10~0_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~0_combout\,
-	combout => \VGA_86_image|square_pos_count~2_combout\);
-
--- Location: FF_X62_Y33_N7
-\VGA_86_image|square_pos_count[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~2_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(0));
-
--- Location: LCCOMB_X63_Y33_N4
-\VGA_86_image|Add10~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~2_combout\ = (\VGA_86_image|square_pos_count\(1) & (!\VGA_86_image|Add10~1\)) # (!\VGA_86_image|square_pos_count\(1) & ((\VGA_86_image|Add10~1\) # (GND)))
--- \VGA_86_image|Add10~3\ = CARRY((!\VGA_86_image|Add10~1\) # (!\VGA_86_image|square_pos_count\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(1),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~1\,
-	combout => \VGA_86_image|Add10~2_combout\,
-	cout => \VGA_86_image|Add10~3\);
-
--- Location: FF_X63_Y33_N5
-\VGA_86_image|square_pos_count[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~2_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(1));
-
--- Location: LCCOMB_X63_Y33_N6
-\VGA_86_image|Add10~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~4_combout\ = (\VGA_86_image|square_pos_count\(2) & (\VGA_86_image|Add10~3\ $ (GND))) # (!\VGA_86_image|square_pos_count\(2) & (!\VGA_86_image|Add10~3\ & VCC))
--- \VGA_86_image|Add10~5\ = CARRY((\VGA_86_image|square_pos_count\(2) & !\VGA_86_image|Add10~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(2),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~3\,
-	combout => \VGA_86_image|Add10~4_combout\,
-	cout => \VGA_86_image|Add10~5\);
-
--- Location: FF_X63_Y33_N7
-\VGA_86_image|square_pos_count[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~4_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(2));
-
--- Location: LCCOMB_X63_Y33_N8
-\VGA_86_image|Add10~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add10~6_combout\ = (\VGA_86_image|square_pos_count\(3) & (!\VGA_86_image|Add10~5\)) # (!\VGA_86_image|square_pos_count\(3) & ((\VGA_86_image|Add10~5\) # (GND)))
--- \VGA_86_image|Add10~7\ = CARRY((!\VGA_86_image|Add10~5\) # (!\VGA_86_image|square_pos_count\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_pos_count\(3),
-	datad => VCC,
-	cin => \VGA_86_image|Add10~5\,
-	combout => \VGA_86_image|Add10~6_combout\,
-	cout => \VGA_86_image|Add10~7\);
-
--- Location: FF_X63_Y33_N9
-\VGA_86_image|square_pos_count[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~6_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(3));
-
--- Location: FF_X63_Y33_N11
-\VGA_86_image|square_pos_count[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add10~8_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(4));
-
--- Location: LCCOMB_X62_Y33_N12
-\VGA_86_image|Equal3~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~1_combout\ = (!\VGA_86_image|square_pos_count\(4) & (!\VGA_86_image|square_pos_count\(6) & (!\VGA_86_image|square_pos_count\(3) & \VGA_86_image|square_pos_count\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(4),
-	datab => \VGA_86_image|square_pos_count\(6),
-	datac => \VGA_86_image|square_pos_count\(3),
-	datad => \VGA_86_image|square_pos_count\(5),
-	combout => \VGA_86_image|Equal3~1_combout\);
-
--- Location: LCCOMB_X62_Y33_N0
-\VGA_86_image|Equal3~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~2_combout\ = (!\VGA_86_image|square_pos_count\(2) & (!\VGA_86_image|square_pos_count\(11) & (!\VGA_86_image|square_pos_count\(0) & !\VGA_86_image|square_pos_count\(1))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(2),
-	datab => \VGA_86_image|square_pos_count\(11),
-	datac => \VGA_86_image|square_pos_count\(0),
-	datad => \VGA_86_image|square_pos_count\(1),
-	combout => \VGA_86_image|Equal3~2_combout\);
-
--- Location: LCCOMB_X63_Y33_N0
-\VGA_86_image|Equal3~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~0_combout\ = (\VGA_86_image|square_pos_count\(8) & (!\VGA_86_image|square_pos_count\(9) & (!\VGA_86_image|square_pos_count\(10) & !\VGA_86_image|square_pos_count\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(8),
-	datab => \VGA_86_image|square_pos_count\(9),
-	datac => \VGA_86_image|square_pos_count\(10),
-	datad => \VGA_86_image|square_pos_count\(7),
-	combout => \VGA_86_image|Equal3~0_combout\);
-
--- Location: LCCOMB_X62_Y33_N14
-\VGA_86_image|Equal3~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~3_combout\ = (!\VGA_86_image|square_pos_count\(12) & (\VGA_86_image|square_pos_count\(15) & (!\VGA_86_image|square_pos_count\(14) & \VGA_86_image|square_pos_count\(13))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(12),
-	datab => \VGA_86_image|square_pos_count\(15),
-	datac => \VGA_86_image|square_pos_count\(14),
-	datad => \VGA_86_image|square_pos_count\(13),
-	combout => \VGA_86_image|Equal3~3_combout\);
-
--- Location: LCCOMB_X62_Y33_N24
-\VGA_86_image|Equal3~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~4_combout\ = (\VGA_86_image|Equal3~1_combout\ & (\VGA_86_image|Equal3~2_combout\ & (\VGA_86_image|Equal3~0_combout\ & \VGA_86_image|Equal3~3_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~1_combout\,
-	datab => \VGA_86_image|Equal3~2_combout\,
-	datac => \VGA_86_image|Equal3~0_combout\,
-	datad => \VGA_86_image|Equal3~3_combout\,
-	combout => \VGA_86_image|Equal3~4_combout\);
-
--- Location: LCCOMB_X62_Y33_N26
-\VGA_86_image|square_pos_count~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_pos_count~5_combout\ = (\VGA_86_image|Add10~32_combout\ & (((!\VGA_86_image|Equal3~9_combout\) # (!\VGA_86_image|Equal3~4_combout\)) # (!\VGA_86_image|Equal3~7_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|Equal3~4_combout\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Add10~32_combout\,
-	combout => \VGA_86_image|square_pos_count~5_combout\);
-
--- Location: FF_X62_Y33_N27
-\VGA_86_image|square_pos_count[16]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_pos_count~5_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_pos_count\(16));
-
--- Location: LCCOMB_X62_Y32_N0
-\VGA_86_image|Equal3~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~6_combout\ = (!\VGA_86_image|square_pos_count\(22) & (!\VGA_86_image|square_pos_count\(21) & (!\VGA_86_image|square_pos_count\(20) & !\VGA_86_image|square_pos_count\(23))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(22),
-	datab => \VGA_86_image|square_pos_count\(21),
-	datac => \VGA_86_image|square_pos_count\(20),
-	datad => \VGA_86_image|square_pos_count\(23),
-	combout => \VGA_86_image|Equal3~6_combout\);
-
--- Location: LCCOMB_X62_Y33_N8
-\VGA_86_image|Equal3~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~5_combout\ = (\VGA_86_image|square_pos_count\(18) & !\VGA_86_image|square_pos_count\(19))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000001010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(18),
-	datac => \VGA_86_image|square_pos_count\(19),
-	combout => \VGA_86_image|Equal3~5_combout\);
-
--- Location: LCCOMB_X62_Y33_N10
-\VGA_86_image|Equal3~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal3~7_combout\ = (\VGA_86_image|square_pos_count\(16) & (\VGA_86_image|Equal3~6_combout\ & (\VGA_86_image|Equal3~5_combout\ & \VGA_86_image|square_pos_count\(17))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_pos_count\(16),
-	datab => \VGA_86_image|Equal3~6_combout\,
-	datac => \VGA_86_image|Equal3~5_combout\,
-	datad => \VGA_86_image|square_pos_count\(17),
-	combout => \VGA_86_image|Equal3~7_combout\);
-
--- Location: LCCOMB_X62_Y33_N4
-\VGA_86_image|square_h_pos[3]~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[3]~9_combout\ = (\VGA_86_image|Equal3~7_combout\ & (!\VGA_86_image|blank_2~q\ & (\VGA_86_image|Equal3~9_combout\ & \VGA_86_image|Equal3~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal3~7_combout\,
-	datab => \VGA_86_image|blank_2~q\,
-	datac => \VGA_86_image|Equal3~9_combout\,
-	datad => \VGA_86_image|Equal3~4_combout\,
-	combout => \VGA_86_image|square_h_pos[3]~9_combout\);
-
--- Location: LCCOMB_X50_Y30_N2
-\VGA_86_image|square_h_pos[0]~28\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[0]~28_combout\ = \VGA_86_image|square_h_pos[3]~9_combout\ $ (\VGA_86_image|square_h_pos\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos[3]~9_combout\,
-	datac => \VGA_86_image|square_h_pos\(0),
-	combout => \VGA_86_image|square_h_pos[0]~28_combout\);
-
--- Location: FF_X50_Y30_N3
-\VGA_86_image|square_h_pos[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[0]~28_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(0));
-
--- Location: LCCOMB_X50_Y30_N10
-\VGA_86_image|square_h_pos[1]~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[1]~10_combout\ = (\VGA_86_image|square_h_pos\(0) & (\VGA_86_image|square_h_pos\(1) $ (VCC))) # (!\VGA_86_image|square_h_pos\(0) & (\VGA_86_image|square_h_pos\(1) & VCC))
--- \VGA_86_image|square_h_pos[1]~11\ = CARRY((\VGA_86_image|square_h_pos\(0) & \VGA_86_image|square_h_pos\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(0),
-	datab => \VGA_86_image|square_h_pos\(1),
-	datad => VCC,
-	combout => \VGA_86_image|square_h_pos[1]~10_combout\,
-	cout => \VGA_86_image|square_h_pos[1]~11\);
-
--- Location: FF_X50_Y30_N11
-\VGA_86_image|square_h_pos[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[1]~10_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(1));
-
--- Location: LCCOMB_X50_Y30_N12
-\VGA_86_image|square_h_pos[2]~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[2]~12_combout\ = (\VGA_86_image|square_h_pos\(2) & (!\VGA_86_image|square_h_pos[1]~11\)) # (!\VGA_86_image|square_h_pos\(2) & ((\VGA_86_image|square_h_pos[1]~11\) # (GND)))
--- \VGA_86_image|square_h_pos[2]~13\ = CARRY((!\VGA_86_image|square_h_pos[1]~11\) # (!\VGA_86_image|square_h_pos\(2)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(2),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[1]~11\,
-	combout => \VGA_86_image|square_h_pos[2]~12_combout\,
-	cout => \VGA_86_image|square_h_pos[2]~13\);
-
--- Location: FF_X50_Y30_N13
-\VGA_86_image|square_h_pos[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[2]~12_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(2));
-
--- Location: LCCOMB_X50_Y30_N14
-\VGA_86_image|square_h_pos[3]~14\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[3]~14_combout\ = (\VGA_86_image|square_h_pos\(3) & (\VGA_86_image|square_h_pos[2]~13\ $ (GND))) # (!\VGA_86_image|square_h_pos\(3) & (!\VGA_86_image|square_h_pos[2]~13\ & VCC))
--- \VGA_86_image|square_h_pos[3]~15\ = CARRY((\VGA_86_image|square_h_pos\(3) & !\VGA_86_image|square_h_pos[2]~13\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(3),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[2]~13\,
-	combout => \VGA_86_image|square_h_pos[3]~14_combout\,
-	cout => \VGA_86_image|square_h_pos[3]~15\);
-
--- Location: FF_X50_Y30_N15
-\VGA_86_image|square_h_pos[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[3]~14_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(3));
-
--- Location: LCCOMB_X50_Y30_N16
-\VGA_86_image|square_h_pos[4]~16\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[4]~16_combout\ = (\VGA_86_image|square_h_pos\(4) & (!\VGA_86_image|square_h_pos[3]~15\)) # (!\VGA_86_image|square_h_pos\(4) & ((\VGA_86_image|square_h_pos[3]~15\) # (GND)))
--- \VGA_86_image|square_h_pos[4]~17\ = CARRY((!\VGA_86_image|square_h_pos[3]~15\) # (!\VGA_86_image|square_h_pos\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(4),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[3]~15\,
-	combout => \VGA_86_image|square_h_pos[4]~16_combout\,
-	cout => \VGA_86_image|square_h_pos[4]~17\);
-
--- Location: FF_X50_Y30_N17
-\VGA_86_image|square_h_pos[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[4]~16_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(4));
-
--- Location: LCCOMB_X50_Y30_N18
-\VGA_86_image|square_h_pos[5]~18\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[5]~18_combout\ = (\VGA_86_image|square_h_pos\(5) & (\VGA_86_image|square_h_pos[4]~17\ $ (GND))) # (!\VGA_86_image|square_h_pos\(5) & (!\VGA_86_image|square_h_pos[4]~17\ & VCC))
--- \VGA_86_image|square_h_pos[5]~19\ = CARRY((\VGA_86_image|square_h_pos\(5) & !\VGA_86_image|square_h_pos[4]~17\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[4]~17\,
-	combout => \VGA_86_image|square_h_pos[5]~18_combout\,
-	cout => \VGA_86_image|square_h_pos[5]~19\);
-
--- Location: FF_X50_Y30_N19
-\VGA_86_image|square_h_pos[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[5]~18_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(5));
-
--- Location: LCCOMB_X50_Y30_N20
-\VGA_86_image|square_h_pos[6]~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[6]~20_combout\ = (\VGA_86_image|square_h_pos\(6) & (!\VGA_86_image|square_h_pos[5]~19\)) # (!\VGA_86_image|square_h_pos\(6) & ((\VGA_86_image|square_h_pos[5]~19\) # (GND)))
--- \VGA_86_image|square_h_pos[6]~21\ = CARRY((!\VGA_86_image|square_h_pos[5]~19\) # (!\VGA_86_image|square_h_pos\(6)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[5]~19\,
-	combout => \VGA_86_image|square_h_pos[6]~20_combout\,
-	cout => \VGA_86_image|square_h_pos[6]~21\);
-
--- Location: FF_X50_Y30_N21
-\VGA_86_image|square_h_pos[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[6]~20_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(6));
-
--- Location: LCCOMB_X50_Y30_N22
-\VGA_86_image|square_h_pos[7]~22\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[7]~22_combout\ = (\VGA_86_image|square_h_pos\(7) & (\VGA_86_image|square_h_pos[6]~21\ $ (GND))) # (!\VGA_86_image|square_h_pos\(7) & (!\VGA_86_image|square_h_pos[6]~21\ & VCC))
--- \VGA_86_image|square_h_pos[7]~23\ = CARRY((\VGA_86_image|square_h_pos\(7) & !\VGA_86_image|square_h_pos[6]~21\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[6]~21\,
-	combout => \VGA_86_image|square_h_pos[7]~22_combout\,
-	cout => \VGA_86_image|square_h_pos[7]~23\);
-
--- Location: FF_X50_Y30_N23
-\VGA_86_image|square_h_pos[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[7]~22_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(7));
-
--- Location: LCCOMB_X50_Y30_N24
-\VGA_86_image|square_h_pos[8]~24\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[8]~24_combout\ = (\VGA_86_image|square_h_pos\(8) & (!\VGA_86_image|square_h_pos[7]~23\)) # (!\VGA_86_image|square_h_pos\(8) & ((\VGA_86_image|square_h_pos[7]~23\) # (GND)))
--- \VGA_86_image|square_h_pos[8]~25\ = CARRY((!\VGA_86_image|square_h_pos[7]~23\) # (!\VGA_86_image|square_h_pos\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|square_h_pos[7]~23\,
-	combout => \VGA_86_image|square_h_pos[8]~24_combout\,
-	cout => \VGA_86_image|square_h_pos[8]~25\);
-
--- Location: FF_X50_Y30_N25
-\VGA_86_image|square_h_pos[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[8]~24_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(8));
-
--- Location: LCCOMB_X50_Y30_N26
-\VGA_86_image|square_h_pos[9]~26\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_h_pos[9]~26_combout\ = \VGA_86_image|square_h_pos\(9) $ (!\VGA_86_image|square_h_pos[8]~25\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010110100101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(9),
-	cin => \VGA_86_image|square_h_pos[8]~25\,
-	combout => \VGA_86_image|square_h_pos[9]~26_combout\);
-
--- Location: FF_X50_Y30_N27
-\VGA_86_image|square_h_pos[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_h_pos[9]~26_combout\,
-	ena => \VGA_86_image|square_h_pos[3]~9_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_h_pos\(9));
-
--- Location: LCCOMB_X51_Y30_N14
-\VGA_86_image|Add2~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~0_combout\ = (\VGA_86_image|square_h_pos\(2) & (\VGA_86_image|square_h_pos\(3) $ (VCC))) # (!\VGA_86_image|square_h_pos\(2) & (\VGA_86_image|square_h_pos\(3) & VCC))
--- \VGA_86_image|Add2~1\ = CARRY((\VGA_86_image|square_h_pos\(2) & \VGA_86_image|square_h_pos\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(2),
-	datab => \VGA_86_image|square_h_pos\(3),
-	datad => VCC,
-	combout => \VGA_86_image|Add2~0_combout\,
-	cout => \VGA_86_image|Add2~1\);
-
--- Location: LCCOMB_X51_Y30_N16
-\VGA_86_image|Add2~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~2_combout\ = (\VGA_86_image|square_h_pos\(4) & (!\VGA_86_image|Add2~1\)) # (!\VGA_86_image|square_h_pos\(4) & ((\VGA_86_image|Add2~1\) # (GND)))
--- \VGA_86_image|Add2~3\ = CARRY((!\VGA_86_image|Add2~1\) # (!\VGA_86_image|square_h_pos\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(4),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~1\,
-	combout => \VGA_86_image|Add2~2_combout\,
-	cout => \VGA_86_image|Add2~3\);
-
--- Location: LCCOMB_X51_Y30_N18
-\VGA_86_image|Add2~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~4_combout\ = (\VGA_86_image|square_h_pos\(5) & ((GND) # (!\VGA_86_image|Add2~3\))) # (!\VGA_86_image|square_h_pos\(5) & (\VGA_86_image|Add2~3\ $ (GND)))
--- \VGA_86_image|Add2~5\ = CARRY((\VGA_86_image|square_h_pos\(5)) # (!\VGA_86_image|Add2~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~3\,
-	combout => \VGA_86_image|Add2~4_combout\,
-	cout => \VGA_86_image|Add2~5\);
-
--- Location: LCCOMB_X51_Y30_N20
-\VGA_86_image|Add2~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~6_combout\ = (\VGA_86_image|square_h_pos\(6) & (\VGA_86_image|Add2~5\ & VCC)) # (!\VGA_86_image|square_h_pos\(6) & (!\VGA_86_image|Add2~5\))
--- \VGA_86_image|Add2~7\ = CARRY((!\VGA_86_image|square_h_pos\(6) & !\VGA_86_image|Add2~5\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~5\,
-	combout => \VGA_86_image|Add2~6_combout\,
-	cout => \VGA_86_image|Add2~7\);
-
--- Location: LCCOMB_X51_Y30_N22
-\VGA_86_image|Add2~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~8_combout\ = (\VGA_86_image|square_h_pos\(7) & (\VGA_86_image|Add2~7\ $ (GND))) # (!\VGA_86_image|square_h_pos\(7) & (!\VGA_86_image|Add2~7\ & VCC))
--- \VGA_86_image|Add2~9\ = CARRY((\VGA_86_image|square_h_pos\(7) & !\VGA_86_image|Add2~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~7\,
-	combout => \VGA_86_image|Add2~8_combout\,
-	cout => \VGA_86_image|Add2~9\);
-
--- Location: LCCOMB_X51_Y30_N24
-\VGA_86_image|Add2~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~10_combout\ = (\VGA_86_image|square_h_pos\(8) & (!\VGA_86_image|Add2~9\)) # (!\VGA_86_image|square_h_pos\(8) & ((\VGA_86_image|Add2~9\) # (GND)))
--- \VGA_86_image|Add2~11\ = CARRY((!\VGA_86_image|Add2~9\) # (!\VGA_86_image|square_h_pos\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~9\,
-	combout => \VGA_86_image|Add2~10_combout\,
-	cout => \VGA_86_image|Add2~11\);
-
--- Location: LCCOMB_X51_Y30_N26
-\VGA_86_image|Add2~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~12_combout\ = (\VGA_86_image|square_h_pos\(9) & (\VGA_86_image|Add2~11\ $ (GND))) # (!\VGA_86_image|square_h_pos\(9) & (!\VGA_86_image|Add2~11\ & VCC))
--- \VGA_86_image|Add2~13\ = CARRY((\VGA_86_image|square_h_pos\(9) & !\VGA_86_image|Add2~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add2~11\,
-	combout => \VGA_86_image|Add2~12_combout\,
-	cout => \VGA_86_image|Add2~13\);
-
--- Location: LCCOMB_X51_Y30_N28
-\VGA_86_image|Add2~14\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add2~14_combout\ = \VGA_86_image|Add2~13\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	cin => \VGA_86_image|Add2~13\,
-	combout => \VGA_86_image|Add2~14_combout\);
-
--- Location: LCCOMB_X50_Y31_N0
-\VGA_86_image|LessThan6~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~1_cout\ = CARRY((\VGA_86_image|square_h_pos\(0) & !\VGA_86_image|h_count\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000100010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(0),
-	datab => \VGA_86_image|h_count\(0),
-	datad => VCC,
-	cout => \VGA_86_image|LessThan6~1_cout\);
-
--- Location: LCCOMB_X50_Y31_N2
-\VGA_86_image|LessThan6~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~3_cout\ = CARRY((\VGA_86_image|square_h_pos\(1) & (\VGA_86_image|h_count\(1) & !\VGA_86_image|LessThan6~1_cout\)) # (!\VGA_86_image|square_h_pos\(1) & ((\VGA_86_image|h_count\(1)) # (!\VGA_86_image|LessThan6~1_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(1),
-	datab => \VGA_86_image|h_count\(1),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~1_cout\,
-	cout => \VGA_86_image|LessThan6~3_cout\);
-
--- Location: LCCOMB_X50_Y31_N4
-\VGA_86_image|LessThan6~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~5_cout\ = CARRY((\VGA_86_image|h_count\(2) & (!\VGA_86_image|square_h_pos\(2) & !\VGA_86_image|LessThan6~3_cout\)) # (!\VGA_86_image|h_count\(2) & ((!\VGA_86_image|LessThan6~3_cout\) # (!\VGA_86_image|square_h_pos\(2)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(2),
-	datab => \VGA_86_image|square_h_pos\(2),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~3_cout\,
-	cout => \VGA_86_image|LessThan6~5_cout\);
-
--- Location: LCCOMB_X50_Y31_N6
-\VGA_86_image|LessThan6~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~7_cout\ = CARRY((\VGA_86_image|h_count\(3) & ((!\VGA_86_image|LessThan6~5_cout\) # (!\VGA_86_image|Add2~0_combout\))) # (!\VGA_86_image|h_count\(3) & (!\VGA_86_image|Add2~0_combout\ & !\VGA_86_image|LessThan6~5_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(3),
-	datab => \VGA_86_image|Add2~0_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~5_cout\,
-	cout => \VGA_86_image|LessThan6~7_cout\);
-
--- Location: LCCOMB_X50_Y31_N8
-\VGA_86_image|LessThan6~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~9_cout\ = CARRY((\VGA_86_image|h_count\(4) & (\VGA_86_image|Add2~2_combout\ & !\VGA_86_image|LessThan6~7_cout\)) # (!\VGA_86_image|h_count\(4) & ((\VGA_86_image|Add2~2_combout\) # (!\VGA_86_image|LessThan6~7_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(4),
-	datab => \VGA_86_image|Add2~2_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~7_cout\,
-	cout => \VGA_86_image|LessThan6~9_cout\);
-
--- Location: LCCOMB_X50_Y31_N10
-\VGA_86_image|LessThan6~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~11_cout\ = CARRY((\VGA_86_image|Add2~4_combout\ & (\VGA_86_image|h_count\(5) & !\VGA_86_image|LessThan6~9_cout\)) # (!\VGA_86_image|Add2~4_combout\ & ((\VGA_86_image|h_count\(5)) # (!\VGA_86_image|LessThan6~9_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add2~4_combout\,
-	datab => \VGA_86_image|h_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~9_cout\,
-	cout => \VGA_86_image|LessThan6~11_cout\);
-
--- Location: LCCOMB_X50_Y31_N12
-\VGA_86_image|LessThan6~13\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~13_cout\ = CARRY((\VGA_86_image|h_count\(6) & (\VGA_86_image|Add2~6_combout\ & !\VGA_86_image|LessThan6~11_cout\)) # (!\VGA_86_image|h_count\(6) & ((\VGA_86_image|Add2~6_combout\) # (!\VGA_86_image|LessThan6~11_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(6),
-	datab => \VGA_86_image|Add2~6_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~11_cout\,
-	cout => \VGA_86_image|LessThan6~13_cout\);
-
--- Location: LCCOMB_X50_Y31_N14
-\VGA_86_image|LessThan6~15\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~15_cout\ = CARRY((\VGA_86_image|h_count\(7) & ((!\VGA_86_image|LessThan6~13_cout\) # (!\VGA_86_image|Add2~8_combout\))) # (!\VGA_86_image|h_count\(7) & (!\VGA_86_image|Add2~8_combout\ & !\VGA_86_image|LessThan6~13_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(7),
-	datab => \VGA_86_image|Add2~8_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~13_cout\,
-	cout => \VGA_86_image|LessThan6~15_cout\);
-
--- Location: LCCOMB_X50_Y31_N16
-\VGA_86_image|LessThan6~17\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~17_cout\ = CARRY((\VGA_86_image|h_count\(8) & (\VGA_86_image|Add2~10_combout\ & !\VGA_86_image|LessThan6~15_cout\)) # (!\VGA_86_image|h_count\(8) & ((\VGA_86_image|Add2~10_combout\) # (!\VGA_86_image|LessThan6~15_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
-	datab => \VGA_86_image|Add2~10_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~15_cout\,
-	cout => \VGA_86_image|LessThan6~17_cout\);
-
--- Location: LCCOMB_X50_Y31_N18
-\VGA_86_image|LessThan6~19\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~19_cout\ = CARRY((\VGA_86_image|h_count\(9) & ((!\VGA_86_image|LessThan6~17_cout\) # (!\VGA_86_image|Add2~12_combout\))) # (!\VGA_86_image|h_count\(9) & (!\VGA_86_image|Add2~12_combout\ & !\VGA_86_image|LessThan6~17_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(9),
-	datab => \VGA_86_image|Add2~12_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan6~17_cout\,
-	cout => \VGA_86_image|LessThan6~19_cout\);
-
--- Location: LCCOMB_X50_Y31_N20
-\VGA_86_image|LessThan6~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan6~20_combout\ = (\VGA_86_image|Add2~14_combout\ & ((!\VGA_86_image|h_count\(10)) # (!\VGA_86_image|LessThan6~19_cout\))) # (!\VGA_86_image|Add2~14_combout\ & (!\VGA_86_image|LessThan6~19_cout\ & !\VGA_86_image|h_count\(10)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add2~14_combout\,
-	datad => \VGA_86_image|h_count\(10),
-	cin => \VGA_86_image|LessThan6~19_cout\,
-	combout => \VGA_86_image|LessThan6~20_combout\);
-
--- Location: LCCOMB_X51_Y30_N30
-\VGA_86_image|square_v_pos[3]~25\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[3]~25_combout\ = (!\VGA_86_image|square_h_pos\(6) & (!\VGA_86_image|square_h_pos\(7) & (!\VGA_86_image|square_h_pos\(4) & \VGA_86_image|square_h_pos\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(6),
-	datab => \VGA_86_image|square_h_pos\(7),
-	datac => \VGA_86_image|square_h_pos\(4),
-	datad => \VGA_86_image|square_h_pos\(5),
-	combout => \VGA_86_image|square_v_pos[3]~25_combout\);
-
--- Location: LCCOMB_X50_Y30_N28
-\VGA_86_image|square_v_pos[3]~24\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[3]~24_combout\ = (!\VGA_86_image|square_h_pos\(2) & (!\VGA_86_image|square_h_pos\(1) & (!\VGA_86_image|square_h_pos\(3) & !\VGA_86_image|square_h_pos\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(2),
-	datab => \VGA_86_image|square_h_pos\(1),
-	datac => \VGA_86_image|square_h_pos\(3),
-	datad => \VGA_86_image|square_h_pos\(0),
-	combout => \VGA_86_image|square_v_pos[3]~24_combout\);
-
--- Location: LCCOMB_X50_Y30_N6
-\VGA_86_image|square_v_pos[3]~26\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[3]~26_combout\ = (\VGA_86_image|square_v_pos[3]~25_combout\ & (\VGA_86_image|square_v_pos[3]~24_combout\ & (\VGA_86_image|square_h_pos\(9) & \VGA_86_image|square_h_pos\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos[3]~25_combout\,
-	datab => \VGA_86_image|square_v_pos[3]~24_combout\,
-	datac => \VGA_86_image|square_h_pos\(9),
-	datad => \VGA_86_image|square_h_pos\(8),
-	combout => \VGA_86_image|square_v_pos[3]~26_combout\);
-
--- Location: LCCOMB_X50_Y30_N8
-\VGA_86_image|square_v_pos[1]~28\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[1]~28_combout\ = \VGA_86_image|square_v_pos\(1) $ (((\VGA_86_image|square_h_pos[3]~9_combout\ & \VGA_86_image|square_v_pos[3]~26_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos[3]~9_combout\,
-	datac => \VGA_86_image|square_v_pos\(1),
-	datad => \VGA_86_image|square_v_pos[3]~26_combout\,
-	combout => \VGA_86_image|square_v_pos[1]~28_combout\);
-
--- Location: FF_X50_Y30_N9
-\VGA_86_image|square_v_pos[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[1]~28_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(1));
-
--- Location: LCCOMB_X50_Y29_N16
-\VGA_86_image|square_v_pos[2]~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[2]~8_combout\ = (\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|square_v_pos\(1) $ (VCC))) # (!\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|square_v_pos\(1) & VCC))
--- \VGA_86_image|square_v_pos[2]~9\ = CARRY((\VGA_86_image|square_v_pos\(2) & \VGA_86_image|square_v_pos\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(2),
-	datab => \VGA_86_image|square_v_pos\(1),
-	datad => VCC,
-	combout => \VGA_86_image|square_v_pos[2]~8_combout\,
-	cout => \VGA_86_image|square_v_pos[2]~9\);
-
--- Location: LCCOMB_X50_Y30_N0
-\VGA_86_image|square_v_pos[3]~27\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[3]~27_combout\ = (\VGA_86_image|square_v_pos[3]~26_combout\ & \VGA_86_image|square_h_pos[3]~9_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000010100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos[3]~26_combout\,
-	datac => \VGA_86_image|square_h_pos[3]~9_combout\,
-	combout => \VGA_86_image|square_v_pos[3]~27_combout\);
-
--- Location: FF_X50_Y29_N17
-\VGA_86_image|square_v_pos[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[2]~8_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(2));
-
--- Location: LCCOMB_X50_Y29_N18
-\VGA_86_image|square_v_pos[3]~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[3]~10_combout\ = (\VGA_86_image|square_v_pos\(3) & (!\VGA_86_image|square_v_pos[2]~9\)) # (!\VGA_86_image|square_v_pos\(3) & ((\VGA_86_image|square_v_pos[2]~9\) # (GND)))
--- \VGA_86_image|square_v_pos[3]~11\ = CARRY((!\VGA_86_image|square_v_pos[2]~9\) # (!\VGA_86_image|square_v_pos\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(3),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[2]~9\,
-	combout => \VGA_86_image|square_v_pos[3]~10_combout\,
-	cout => \VGA_86_image|square_v_pos[3]~11\);
-
--- Location: FF_X50_Y29_N19
-\VGA_86_image|square_v_pos[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[3]~10_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(3));
-
--- Location: LCCOMB_X50_Y29_N20
-\VGA_86_image|square_v_pos[4]~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[4]~12_combout\ = (\VGA_86_image|square_v_pos\(4) & ((GND) # (!\VGA_86_image|square_v_pos[3]~11\))) # (!\VGA_86_image|square_v_pos\(4) & (\VGA_86_image|square_v_pos[3]~11\ $ (GND)))
--- \VGA_86_image|square_v_pos[4]~13\ = CARRY((\VGA_86_image|square_v_pos\(4)) # (!\VGA_86_image|square_v_pos[3]~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(4),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[3]~11\,
-	combout => \VGA_86_image|square_v_pos[4]~12_combout\,
-	cout => \VGA_86_image|square_v_pos[4]~13\);
-
--- Location: FF_X50_Y29_N21
-\VGA_86_image|square_v_pos[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[4]~12_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(4));
-
--- Location: LCCOMB_X50_Y29_N22
-\VGA_86_image|square_v_pos[5]~14\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[5]~14_combout\ = (\VGA_86_image|square_v_pos\(5) & (\VGA_86_image|square_v_pos[4]~13\ & VCC)) # (!\VGA_86_image|square_v_pos\(5) & (!\VGA_86_image|square_v_pos[4]~13\))
--- \VGA_86_image|square_v_pos[5]~15\ = CARRY((!\VGA_86_image|square_v_pos\(5) & !\VGA_86_image|square_v_pos[4]~13\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[4]~13\,
-	combout => \VGA_86_image|square_v_pos[5]~14_combout\,
-	cout => \VGA_86_image|square_v_pos[5]~15\);
-
--- Location: FF_X50_Y29_N23
-\VGA_86_image|square_v_pos[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[5]~14_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(5));
-
--- Location: LCCOMB_X50_Y29_N24
-\VGA_86_image|square_v_pos[6]~16\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[6]~16_combout\ = (\VGA_86_image|square_v_pos\(6) & (\VGA_86_image|square_v_pos[5]~15\ $ (GND))) # (!\VGA_86_image|square_v_pos\(6) & (!\VGA_86_image|square_v_pos[5]~15\ & VCC))
--- \VGA_86_image|square_v_pos[6]~17\ = CARRY((\VGA_86_image|square_v_pos\(6) & !\VGA_86_image|square_v_pos[5]~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[5]~15\,
-	combout => \VGA_86_image|square_v_pos[6]~16_combout\,
-	cout => \VGA_86_image|square_v_pos[6]~17\);
-
--- Location: FF_X50_Y29_N25
-\VGA_86_image|square_v_pos[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[6]~16_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(6));
-
--- Location: LCCOMB_X50_Y29_N26
-\VGA_86_image|square_v_pos[7]~18\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[7]~18_combout\ = (\VGA_86_image|square_v_pos\(7) & (!\VGA_86_image|square_v_pos[6]~17\)) # (!\VGA_86_image|square_v_pos\(7) & ((\VGA_86_image|square_v_pos[6]~17\) # (GND)))
--- \VGA_86_image|square_v_pos[7]~19\ = CARRY((!\VGA_86_image|square_v_pos[6]~17\) # (!\VGA_86_image|square_v_pos\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[6]~17\,
-	combout => \VGA_86_image|square_v_pos[7]~18_combout\,
-	cout => \VGA_86_image|square_v_pos[7]~19\);
-
--- Location: FF_X50_Y29_N27
-\VGA_86_image|square_v_pos[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[7]~18_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(7));
-
--- Location: LCCOMB_X50_Y29_N28
-\VGA_86_image|square_v_pos[8]~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[8]~20_combout\ = (\VGA_86_image|square_v_pos\(8) & (\VGA_86_image|square_v_pos[7]~19\ $ (GND))) # (!\VGA_86_image|square_v_pos\(8) & (!\VGA_86_image|square_v_pos[7]~19\ & VCC))
--- \VGA_86_image|square_v_pos[8]~21\ = CARRY((\VGA_86_image|square_v_pos\(8) & !\VGA_86_image|square_v_pos[7]~19\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|square_v_pos[7]~19\,
-	combout => \VGA_86_image|square_v_pos[8]~20_combout\,
-	cout => \VGA_86_image|square_v_pos[8]~21\);
-
--- Location: FF_X50_Y29_N29
-\VGA_86_image|square_v_pos[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[8]~20_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(8));
-
--- Location: LCCOMB_X50_Y29_N30
-\VGA_86_image|square_v_pos[9]~22\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|square_v_pos[9]~22_combout\ = \VGA_86_image|square_v_pos\(9) $ (\VGA_86_image|square_v_pos[8]~21\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(9),
-	cin => \VGA_86_image|square_v_pos[8]~21\,
-	combout => \VGA_86_image|square_v_pos[9]~22_combout\);
-
--- Location: FF_X50_Y29_N31
-\VGA_86_image|square_v_pos[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|square_v_pos[9]~22_combout\,
-	ena => \VGA_86_image|square_v_pos[3]~27_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|square_v_pos\(9));
-
--- Location: LCCOMB_X49_Y29_N16
-\VGA_86_image|Add5~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~0_combout\ = (\VGA_86_image|square_v_pos\(4) & (\VGA_86_image|square_v_pos\(3) $ (VCC))) # (!\VGA_86_image|square_v_pos\(4) & (\VGA_86_image|square_v_pos\(3) & VCC))
--- \VGA_86_image|Add5~1\ = CARRY((\VGA_86_image|square_v_pos\(4) & \VGA_86_image|square_v_pos\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(4),
-	datab => \VGA_86_image|square_v_pos\(3),
-	datad => VCC,
-	combout => \VGA_86_image|Add5~0_combout\,
-	cout => \VGA_86_image|Add5~1\);
-
--- Location: LCCOMB_X49_Y29_N18
-\VGA_86_image|Add5~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~2_combout\ = (\VGA_86_image|square_v_pos\(5) & (!\VGA_86_image|Add5~1\)) # (!\VGA_86_image|square_v_pos\(5) & ((\VGA_86_image|Add5~1\) # (GND)))
--- \VGA_86_image|Add5~3\ = CARRY((!\VGA_86_image|Add5~1\) # (!\VGA_86_image|square_v_pos\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add5~1\,
-	combout => \VGA_86_image|Add5~2_combout\,
-	cout => \VGA_86_image|Add5~3\);
-
--- Location: LCCOMB_X49_Y29_N20
-\VGA_86_image|Add5~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~4_combout\ = (\VGA_86_image|square_v_pos\(6) & ((GND) # (!\VGA_86_image|Add5~3\))) # (!\VGA_86_image|square_v_pos\(6) & (\VGA_86_image|Add5~3\ $ (GND)))
--- \VGA_86_image|Add5~5\ = CARRY((\VGA_86_image|square_v_pos\(6)) # (!\VGA_86_image|Add5~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add5~3\,
-	combout => \VGA_86_image|Add5~4_combout\,
-	cout => \VGA_86_image|Add5~5\);
-
--- Location: LCCOMB_X49_Y29_N22
-\VGA_86_image|Add5~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~6_combout\ = (\VGA_86_image|square_v_pos\(7) & (\VGA_86_image|Add5~5\ & VCC)) # (!\VGA_86_image|square_v_pos\(7) & (!\VGA_86_image|Add5~5\))
--- \VGA_86_image|Add5~7\ = CARRY((!\VGA_86_image|square_v_pos\(7) & !\VGA_86_image|Add5~5\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add5~5\,
-	combout => \VGA_86_image|Add5~6_combout\,
-	cout => \VGA_86_image|Add5~7\);
-
--- Location: LCCOMB_X49_Y29_N24
-\VGA_86_image|Add5~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~8_combout\ = (\VGA_86_image|square_v_pos\(8) & (\VGA_86_image|Add5~7\ $ (GND))) # (!\VGA_86_image|square_v_pos\(8) & (!\VGA_86_image|Add5~7\ & VCC))
--- \VGA_86_image|Add5~9\ = CARRY((\VGA_86_image|square_v_pos\(8) & !\VGA_86_image|Add5~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add5~7\,
-	combout => \VGA_86_image|Add5~8_combout\,
-	cout => \VGA_86_image|Add5~9\);
-
--- Location: LCCOMB_X49_Y29_N26
-\VGA_86_image|Add5~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~10_combout\ = (\VGA_86_image|square_v_pos\(9) & (!\VGA_86_image|Add5~9\)) # (!\VGA_86_image|square_v_pos\(9) & ((\VGA_86_image|Add5~9\) # (GND)))
--- \VGA_86_image|Add5~11\ = CARRY((!\VGA_86_image|Add5~9\) # (!\VGA_86_image|square_v_pos\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add5~9\,
-	combout => \VGA_86_image|Add5~10_combout\,
-	cout => \VGA_86_image|Add5~11\);
-
--- Location: LCCOMB_X49_Y29_N28
-\VGA_86_image|Add5~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add5~12_combout\ = !\VGA_86_image|Add5~11\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	cin => \VGA_86_image|Add5~11\,
-	combout => \VGA_86_image|Add5~12_combout\);
-
--- Location: LCCOMB_X49_Y30_N10
-\VGA_86_image|LessThan9~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~1_cout\ = CARRY(\VGA_86_image|v_count\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|v_count\(0),
-	datad => VCC,
-	cout => \VGA_86_image|LessThan9~1_cout\);
-
--- Location: LCCOMB_X49_Y30_N12
-\VGA_86_image|LessThan9~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~3_cout\ = CARRY((\VGA_86_image|v_count\(1) & (\VGA_86_image|square_v_pos\(1) & !\VGA_86_image|LessThan9~1_cout\)) # (!\VGA_86_image|v_count\(1) & ((\VGA_86_image|square_v_pos\(1)) # (!\VGA_86_image|LessThan9~1_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(1),
-	datab => \VGA_86_image|square_v_pos\(1),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~1_cout\,
-	cout => \VGA_86_image|LessThan9~3_cout\);
-
--- Location: LCCOMB_X49_Y30_N14
-\VGA_86_image|LessThan9~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~5_cout\ = CARRY((\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|v_count\(2) & !\VGA_86_image|LessThan9~3_cout\)) # (!\VGA_86_image|square_v_pos\(2) & ((\VGA_86_image|v_count\(2)) # (!\VGA_86_image|LessThan9~3_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(2),
-	datab => \VGA_86_image|v_count\(2),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~3_cout\,
-	cout => \VGA_86_image|LessThan9~5_cout\);
-
--- Location: LCCOMB_X49_Y30_N16
-\VGA_86_image|LessThan9~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~7_cout\ = CARRY((\VGA_86_image|square_v_pos\(3) & (!\VGA_86_image|v_count\(3) & !\VGA_86_image|LessThan9~5_cout\)) # (!\VGA_86_image|square_v_pos\(3) & ((!\VGA_86_image|LessThan9~5_cout\) # (!\VGA_86_image|v_count\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(3),
-	datab => \VGA_86_image|v_count\(3),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~5_cout\,
-	cout => \VGA_86_image|LessThan9~7_cout\);
-
--- Location: LCCOMB_X49_Y30_N18
-\VGA_86_image|LessThan9~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~9_cout\ = CARRY((\VGA_86_image|v_count\(4) & ((!\VGA_86_image|LessThan9~7_cout\) # (!\VGA_86_image|Add5~0_combout\))) # (!\VGA_86_image|v_count\(4) & (!\VGA_86_image|Add5~0_combout\ & !\VGA_86_image|LessThan9~7_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(4),
-	datab => \VGA_86_image|Add5~0_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~7_cout\,
-	cout => \VGA_86_image|LessThan9~9_cout\);
-
--- Location: LCCOMB_X49_Y30_N20
-\VGA_86_image|LessThan9~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~11_cout\ = CARRY((\VGA_86_image|Add5~2_combout\ & ((!\VGA_86_image|LessThan9~9_cout\) # (!\VGA_86_image|v_count\(5)))) # (!\VGA_86_image|Add5~2_combout\ & (!\VGA_86_image|v_count\(5) & !\VGA_86_image|LessThan9~9_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add5~2_combout\,
-	datab => \VGA_86_image|v_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~9_cout\,
-	cout => \VGA_86_image|LessThan9~11_cout\);
-
--- Location: LCCOMB_X49_Y30_N22
-\VGA_86_image|LessThan9~13\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~13_cout\ = CARRY((\VGA_86_image|Add5~4_combout\ & (\VGA_86_image|v_count\(6) & !\VGA_86_image|LessThan9~11_cout\)) # (!\VGA_86_image|Add5~4_combout\ & ((\VGA_86_image|v_count\(6)) # (!\VGA_86_image|LessThan9~11_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add5~4_combout\,
-	datab => \VGA_86_image|v_count\(6),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~11_cout\,
-	cout => \VGA_86_image|LessThan9~13_cout\);
-
--- Location: LCCOMB_X49_Y30_N24
-\VGA_86_image|LessThan9~15\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~15_cout\ = CARRY((\VGA_86_image|v_count\(7) & (\VGA_86_image|Add5~6_combout\ & !\VGA_86_image|LessThan9~13_cout\)) # (!\VGA_86_image|v_count\(7) & ((\VGA_86_image|Add5~6_combout\) # (!\VGA_86_image|LessThan9~13_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(7),
-	datab => \VGA_86_image|Add5~6_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~13_cout\,
-	cout => \VGA_86_image|LessThan9~15_cout\);
-
--- Location: LCCOMB_X49_Y30_N26
-\VGA_86_image|LessThan9~17\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~17_cout\ = CARRY((\VGA_86_image|v_count\(8) & ((!\VGA_86_image|LessThan9~15_cout\) # (!\VGA_86_image|Add5~8_combout\))) # (!\VGA_86_image|v_count\(8) & (!\VGA_86_image|Add5~8_combout\ & !\VGA_86_image|LessThan9~15_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(8),
-	datab => \VGA_86_image|Add5~8_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan9~15_cout\,
-	cout => \VGA_86_image|LessThan9~17_cout\);
-
--- Location: LCCOMB_X49_Y30_N28
-\VGA_86_image|LessThan9~18\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan9~18_combout\ = (\VGA_86_image|v_count\(9) & ((\VGA_86_image|LessThan9~17_cout\) # (!\VGA_86_image|Add5~10_combout\))) # (!\VGA_86_image|v_count\(9) & (\VGA_86_image|LessThan9~17_cout\ & !\VGA_86_image|Add5~10_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010000011111010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(9),
-	datad => \VGA_86_image|Add5~10_combout\,
-	cin => \VGA_86_image|LessThan9~17_cout\,
-	combout => \VGA_86_image|LessThan9~18_combout\);
-
--- Location: LCCOMB_X51_Y30_N0
-\VGA_86_image|Add3~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~0_combout\ = (\VGA_86_image|square_h_pos\(3) & (\VGA_86_image|square_h_pos\(4) $ (VCC))) # (!\VGA_86_image|square_h_pos\(3) & (\VGA_86_image|square_h_pos\(4) & VCC))
--- \VGA_86_image|Add3~1\ = CARRY((\VGA_86_image|square_h_pos\(3) & \VGA_86_image|square_h_pos\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(3),
-	datab => \VGA_86_image|square_h_pos\(4),
+	datab => \VGA_86_image|color_shift_count\(0),
 	datad => VCC,
 	combout => \VGA_86_image|Add3~0_combout\,
 	cout => \VGA_86_image|Add3~1\);
 
--- Location: LCCOMB_X51_Y30_N2
-\VGA_86_image|Add3~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~2_combout\ = (\VGA_86_image|square_h_pos\(5) & (!\VGA_86_image|Add3~1\)) # (!\VGA_86_image|square_h_pos\(5) & ((\VGA_86_image|Add3~1\) # (GND)))
--- \VGA_86_image|Add3~3\ = CARRY((!\VGA_86_image|Add3~1\) # (!\VGA_86_image|square_h_pos\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add3~1\,
-	combout => \VGA_86_image|Add3~2_combout\,
-	cout => \VGA_86_image|Add3~3\);
-
--- Location: LCCOMB_X51_Y30_N4
-\VGA_86_image|Add3~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~4_combout\ = (\VGA_86_image|square_h_pos\(6) & ((GND) # (!\VGA_86_image|Add3~3\))) # (!\VGA_86_image|square_h_pos\(6) & (\VGA_86_image|Add3~3\ $ (GND)))
--- \VGA_86_image|Add3~5\ = CARRY((\VGA_86_image|square_h_pos\(6)) # (!\VGA_86_image|Add3~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add3~3\,
-	combout => \VGA_86_image|Add3~4_combout\,
-	cout => \VGA_86_image|Add3~5\);
-
--- Location: LCCOMB_X51_Y30_N6
-\VGA_86_image|Add3~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~6_combout\ = (\VGA_86_image|square_h_pos\(7) & (\VGA_86_image|Add3~5\ & VCC)) # (!\VGA_86_image|square_h_pos\(7) & (!\VGA_86_image|Add3~5\))
--- \VGA_86_image|Add3~7\ = CARRY((!\VGA_86_image|square_h_pos\(7) & !\VGA_86_image|Add3~5\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add3~5\,
-	combout => \VGA_86_image|Add3~6_combout\,
-	cout => \VGA_86_image|Add3~7\);
-
--- Location: LCCOMB_X51_Y30_N8
-\VGA_86_image|Add3~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~8_combout\ = (\VGA_86_image|square_h_pos\(8) & (\VGA_86_image|Add3~7\ $ (GND))) # (!\VGA_86_image|square_h_pos\(8) & (!\VGA_86_image|Add3~7\ & VCC))
--- \VGA_86_image|Add3~9\ = CARRY((\VGA_86_image|square_h_pos\(8) & !\VGA_86_image|Add3~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_h_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add3~7\,
-	combout => \VGA_86_image|Add3~8_combout\,
-	cout => \VGA_86_image|Add3~9\);
-
--- Location: LCCOMB_X51_Y30_N10
-\VGA_86_image|Add3~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~10_combout\ = (\VGA_86_image|square_h_pos\(9) & (!\VGA_86_image|Add3~9\)) # (!\VGA_86_image|square_h_pos\(9) & ((\VGA_86_image|Add3~9\) # (GND)))
--- \VGA_86_image|Add3~11\ = CARRY((!\VGA_86_image|Add3~9\) # (!\VGA_86_image|square_h_pos\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add3~9\,
-	combout => \VGA_86_image|Add3~10_combout\,
-	cout => \VGA_86_image|Add3~11\);
-
--- Location: LCCOMB_X51_Y30_N12
-\VGA_86_image|Add3~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add3~12_combout\ = !\VGA_86_image|Add3~11\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	cin => \VGA_86_image|Add3~11\,
-	combout => \VGA_86_image|Add3~12_combout\);
-
--- Location: LCCOMB_X51_Y31_N4
-\VGA_86_image|LessThan7~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~1_cout\ = CARRY((\VGA_86_image|h_count\(0) & !\VGA_86_image|square_h_pos\(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000100010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(0),
-	datab => \VGA_86_image|square_h_pos\(0),
-	datad => VCC,
-	cout => \VGA_86_image|LessThan7~1_cout\);
-
--- Location: LCCOMB_X51_Y31_N6
-\VGA_86_image|LessThan7~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~3_cout\ = CARRY((\VGA_86_image|h_count\(1) & (\VGA_86_image|square_h_pos\(1) & !\VGA_86_image|LessThan7~1_cout\)) # (!\VGA_86_image|h_count\(1) & ((\VGA_86_image|square_h_pos\(1)) # (!\VGA_86_image|LessThan7~1_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(1),
-	datab => \VGA_86_image|square_h_pos\(1),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~1_cout\,
-	cout => \VGA_86_image|LessThan7~3_cout\);
-
--- Location: LCCOMB_X51_Y31_N8
-\VGA_86_image|LessThan7~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~5_cout\ = CARRY((\VGA_86_image|square_h_pos\(2) & (\VGA_86_image|h_count\(2) & !\VGA_86_image|LessThan7~3_cout\)) # (!\VGA_86_image|square_h_pos\(2) & ((\VGA_86_image|h_count\(2)) # (!\VGA_86_image|LessThan7~3_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_h_pos\(2),
-	datab => \VGA_86_image|h_count\(2),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~3_cout\,
-	cout => \VGA_86_image|LessThan7~5_cout\);
-
--- Location: LCCOMB_X51_Y31_N10
-\VGA_86_image|LessThan7~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~7_cout\ = CARRY((\VGA_86_image|h_count\(3) & (!\VGA_86_image|square_h_pos\(3) & !\VGA_86_image|LessThan7~5_cout\)) # (!\VGA_86_image|h_count\(3) & ((!\VGA_86_image|LessThan7~5_cout\) # (!\VGA_86_image|square_h_pos\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(3),
-	datab => \VGA_86_image|square_h_pos\(3),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~5_cout\,
-	cout => \VGA_86_image|LessThan7~7_cout\);
-
--- Location: LCCOMB_X51_Y31_N12
-\VGA_86_image|LessThan7~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~9_cout\ = CARRY((\VGA_86_image|h_count\(4) & ((!\VGA_86_image|LessThan7~7_cout\) # (!\VGA_86_image|Add3~0_combout\))) # (!\VGA_86_image|h_count\(4) & (!\VGA_86_image|Add3~0_combout\ & !\VGA_86_image|LessThan7~7_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(4),
-	datab => \VGA_86_image|Add3~0_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~7_cout\,
-	cout => \VGA_86_image|LessThan7~9_cout\);
-
--- Location: LCCOMB_X51_Y31_N14
-\VGA_86_image|LessThan7~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~11_cout\ = CARRY((\VGA_86_image|Add3~2_combout\ & ((!\VGA_86_image|LessThan7~9_cout\) # (!\VGA_86_image|h_count\(5)))) # (!\VGA_86_image|Add3~2_combout\ & (!\VGA_86_image|h_count\(5) & !\VGA_86_image|LessThan7~9_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add3~2_combout\,
-	datab => \VGA_86_image|h_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~9_cout\,
-	cout => \VGA_86_image|LessThan7~11_cout\);
-
--- Location: LCCOMB_X51_Y31_N16
-\VGA_86_image|LessThan7~13\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~13_cout\ = CARRY((\VGA_86_image|Add3~4_combout\ & (\VGA_86_image|h_count\(6) & !\VGA_86_image|LessThan7~11_cout\)) # (!\VGA_86_image|Add3~4_combout\ & ((\VGA_86_image|h_count\(6)) # (!\VGA_86_image|LessThan7~11_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add3~4_combout\,
-	datab => \VGA_86_image|h_count\(6),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~11_cout\,
-	cout => \VGA_86_image|LessThan7~13_cout\);
-
--- Location: LCCOMB_X51_Y31_N18
-\VGA_86_image|LessThan7~15\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~15_cout\ = CARRY((\VGA_86_image|Add3~6_combout\ & ((!\VGA_86_image|LessThan7~13_cout\) # (!\VGA_86_image|h_count\(7)))) # (!\VGA_86_image|Add3~6_combout\ & (!\VGA_86_image|h_count\(7) & !\VGA_86_image|LessThan7~13_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add3~6_combout\,
-	datab => \VGA_86_image|h_count\(7),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~13_cout\,
-	cout => \VGA_86_image|LessThan7~15_cout\);
-
--- Location: LCCOMB_X51_Y31_N20
-\VGA_86_image|LessThan7~17\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~17_cout\ = CARRY((\VGA_86_image|h_count\(8) & ((!\VGA_86_image|LessThan7~15_cout\) # (!\VGA_86_image|Add3~8_combout\))) # (!\VGA_86_image|h_count\(8) & (!\VGA_86_image|Add3~8_combout\ & !\VGA_86_image|LessThan7~15_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(8),
-	datab => \VGA_86_image|Add3~8_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~15_cout\,
-	cout => \VGA_86_image|LessThan7~17_cout\);
-
--- Location: LCCOMB_X51_Y31_N22
-\VGA_86_image|LessThan7~19\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~19_cout\ = CARRY((\VGA_86_image|h_count\(9) & (\VGA_86_image|Add3~10_combout\ & !\VGA_86_image|LessThan7~17_cout\)) # (!\VGA_86_image|h_count\(9) & ((\VGA_86_image|Add3~10_combout\) # (!\VGA_86_image|LessThan7~17_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|h_count\(9),
-	datab => \VGA_86_image|Add3~10_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan7~17_cout\,
-	cout => \VGA_86_image|LessThan7~19_cout\);
-
--- Location: LCCOMB_X51_Y31_N24
-\VGA_86_image|LessThan7~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan7~20_combout\ = (\VGA_86_image|h_count\(10) & ((!\VGA_86_image|Add3~12_combout\) # (!\VGA_86_image|LessThan7~19_cout\))) # (!\VGA_86_image|h_count\(10) & (!\VGA_86_image|LessThan7~19_cout\ & !\VGA_86_image|Add3~12_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000110011001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|h_count\(10),
-	datad => \VGA_86_image|Add3~12_combout\,
-	cin => \VGA_86_image|LessThan7~19_cout\,
-	combout => \VGA_86_image|LessThan7~20_combout\);
-
--- Location: LCCOMB_X49_Y29_N6
-\VGA_86_image|process_1~15\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|process_1~15_combout\ = (!\VGA_86_image|LessThan6~20_combout\ & (!\VGA_86_image|LessThan7~20_combout\ & ((\VGA_86_image|Add5~12_combout\) # (!\VGA_86_image|LessThan9~18_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|LessThan6~20_combout\,
-	datab => \VGA_86_image|Add5~12_combout\,
-	datac => \VGA_86_image|LessThan9~18_combout\,
-	datad => \VGA_86_image|LessThan7~20_combout\,
-	combout => \VGA_86_image|process_1~15_combout\);
-
--- Location: LCCOMB_X50_Y29_N0
-\VGA_86_image|Add4~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~0_combout\ = (\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|square_v_pos\(3) $ (VCC))) # (!\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|square_v_pos\(3) & VCC))
--- \VGA_86_image|Add4~1\ = CARRY((\VGA_86_image|square_v_pos\(2) & \VGA_86_image|square_v_pos\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(2),
-	datab => \VGA_86_image|square_v_pos\(3),
-	datad => VCC,
-	combout => \VGA_86_image|Add4~0_combout\,
-	cout => \VGA_86_image|Add4~1\);
-
--- Location: LCCOMB_X50_Y29_N2
-\VGA_86_image|Add4~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~2_combout\ = (\VGA_86_image|square_v_pos\(4) & (!\VGA_86_image|Add4~1\)) # (!\VGA_86_image|square_v_pos\(4) & ((\VGA_86_image|Add4~1\) # (GND)))
--- \VGA_86_image|Add4~3\ = CARRY((!\VGA_86_image|Add4~1\) # (!\VGA_86_image|square_v_pos\(4)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(4),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~1\,
-	combout => \VGA_86_image|Add4~2_combout\,
-	cout => \VGA_86_image|Add4~3\);
-
--- Location: LCCOMB_X50_Y29_N4
-\VGA_86_image|Add4~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~4_combout\ = (\VGA_86_image|square_v_pos\(5) & ((GND) # (!\VGA_86_image|Add4~3\))) # (!\VGA_86_image|square_v_pos\(5) & (\VGA_86_image|Add4~3\ $ (GND)))
--- \VGA_86_image|Add4~5\ = CARRY((\VGA_86_image|square_v_pos\(5)) # (!\VGA_86_image|Add4~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101010101111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~3\,
-	combout => \VGA_86_image|Add4~4_combout\,
-	cout => \VGA_86_image|Add4~5\);
-
--- Location: LCCOMB_X50_Y29_N6
-\VGA_86_image|Add4~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~6_combout\ = (\VGA_86_image|square_v_pos\(6) & (\VGA_86_image|Add4~5\ & VCC)) # (!\VGA_86_image|square_v_pos\(6) & (!\VGA_86_image|Add4~5\))
--- \VGA_86_image|Add4~7\ = CARRY((!\VGA_86_image|square_v_pos\(6) & !\VGA_86_image|Add4~5\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~5\,
-	combout => \VGA_86_image|Add4~6_combout\,
-	cout => \VGA_86_image|Add4~7\);
-
--- Location: LCCOMB_X50_Y29_N8
-\VGA_86_image|Add4~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~8_combout\ = (\VGA_86_image|square_v_pos\(7) & (\VGA_86_image|Add4~7\ $ (GND))) # (!\VGA_86_image|square_v_pos\(7) & (!\VGA_86_image|Add4~7\ & VCC))
--- \VGA_86_image|Add4~9\ = CARRY((\VGA_86_image|square_v_pos\(7) & !\VGA_86_image|Add4~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~7\,
-	combout => \VGA_86_image|Add4~8_combout\,
-	cout => \VGA_86_image|Add4~9\);
-
--- Location: LCCOMB_X50_Y29_N10
-\VGA_86_image|Add4~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~10_combout\ = (\VGA_86_image|square_v_pos\(8) & (!\VGA_86_image|Add4~9\)) # (!\VGA_86_image|square_v_pos\(8) & ((\VGA_86_image|Add4~9\) # (GND)))
--- \VGA_86_image|Add4~11\ = CARRY((!\VGA_86_image|Add4~9\) # (!\VGA_86_image|square_v_pos\(8)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|square_v_pos\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~9\,
-	combout => \VGA_86_image|Add4~10_combout\,
-	cout => \VGA_86_image|Add4~11\);
-
--- Location: LCCOMB_X50_Y29_N12
-\VGA_86_image|Add4~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add4~12_combout\ = (\VGA_86_image|square_v_pos\(9) & (\VGA_86_image|Add4~11\ $ (GND))) # (!\VGA_86_image|square_v_pos\(9) & (!\VGA_86_image|Add4~11\ & VCC))
--- \VGA_86_image|Add4~13\ = CARRY((\VGA_86_image|square_v_pos\(9) & !\VGA_86_image|Add4~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add4~11\,
-	combout => \VGA_86_image|Add4~12_combout\,
-	cout => \VGA_86_image|Add4~13\);
-
--- Location: LCCOMB_X47_Y29_N8
-\VGA_86_image|LessThan8~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~1_cout\ = CARRY((!\VGA_86_image|v_count\(1) & \VGA_86_image|square_v_pos\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001000100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(1),
-	datab => \VGA_86_image|square_v_pos\(1),
-	datad => VCC,
-	cout => \VGA_86_image|LessThan8~1_cout\);
-
--- Location: LCCOMB_X47_Y29_N10
-\VGA_86_image|LessThan8~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~3_cout\ = CARRY((\VGA_86_image|square_v_pos\(2) & ((\VGA_86_image|v_count\(2)) # (!\VGA_86_image|LessThan8~1_cout\))) # (!\VGA_86_image|square_v_pos\(2) & (\VGA_86_image|v_count\(2) & !\VGA_86_image|LessThan8~1_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000010001110",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|square_v_pos\(2),
-	datab => \VGA_86_image|v_count\(2),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~1_cout\,
-	cout => \VGA_86_image|LessThan8~3_cout\);
-
--- Location: LCCOMB_X47_Y29_N12
-\VGA_86_image|LessThan8~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~5_cout\ = CARRY((\VGA_86_image|v_count\(3) & (\VGA_86_image|Add4~0_combout\ & !\VGA_86_image|LessThan8~3_cout\)) # (!\VGA_86_image|v_count\(3) & ((\VGA_86_image|Add4~0_combout\) # (!\VGA_86_image|LessThan8~3_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(3),
-	datab => \VGA_86_image|Add4~0_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~3_cout\,
-	cout => \VGA_86_image|LessThan8~5_cout\);
-
--- Location: LCCOMB_X47_Y29_N14
-\VGA_86_image|LessThan8~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~7_cout\ = CARRY((\VGA_86_image|Add4~2_combout\ & (\VGA_86_image|v_count\(4) & !\VGA_86_image|LessThan8~5_cout\)) # (!\VGA_86_image|Add4~2_combout\ & ((\VGA_86_image|v_count\(4)) # (!\VGA_86_image|LessThan8~5_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add4~2_combout\,
-	datab => \VGA_86_image|v_count\(4),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~5_cout\,
-	cout => \VGA_86_image|LessThan8~7_cout\);
-
--- Location: LCCOMB_X47_Y29_N16
-\VGA_86_image|LessThan8~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~9_cout\ = CARRY((\VGA_86_image|Add4~4_combout\ & ((!\VGA_86_image|LessThan8~7_cout\) # (!\VGA_86_image|v_count\(5)))) # (!\VGA_86_image|Add4~4_combout\ & (!\VGA_86_image|v_count\(5) & !\VGA_86_image|LessThan8~7_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Add4~4_combout\,
-	datab => \VGA_86_image|v_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~7_cout\,
-	cout => \VGA_86_image|LessThan8~9_cout\);
-
--- Location: LCCOMB_X47_Y29_N18
-\VGA_86_image|LessThan8~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~11_cout\ = CARRY((\VGA_86_image|v_count\(6) & ((!\VGA_86_image|LessThan8~9_cout\) # (!\VGA_86_image|Add4~6_combout\))) # (!\VGA_86_image|v_count\(6) & (!\VGA_86_image|Add4~6_combout\ & !\VGA_86_image|LessThan8~9_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(6),
-	datab => \VGA_86_image|Add4~6_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~9_cout\,
-	cout => \VGA_86_image|LessThan8~11_cout\);
-
--- Location: LCCOMB_X47_Y29_N20
-\VGA_86_image|LessThan8~13\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~13_cout\ = CARRY((\VGA_86_image|v_count\(7) & (\VGA_86_image|Add4~8_combout\ & !\VGA_86_image|LessThan8~11_cout\)) # (!\VGA_86_image|v_count\(7) & ((\VGA_86_image|Add4~8_combout\) # (!\VGA_86_image|LessThan8~11_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001001101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(7),
-	datab => \VGA_86_image|Add4~8_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~11_cout\,
-	cout => \VGA_86_image|LessThan8~13_cout\);
-
--- Location: LCCOMB_X47_Y29_N22
-\VGA_86_image|LessThan8~15\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~15_cout\ = CARRY((\VGA_86_image|v_count\(8) & ((!\VGA_86_image|LessThan8~13_cout\) # (!\VGA_86_image|Add4~10_combout\))) # (!\VGA_86_image|v_count\(8) & (!\VGA_86_image|Add4~10_combout\ & !\VGA_86_image|LessThan8~13_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000101011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(8),
-	datab => \VGA_86_image|Add4~10_combout\,
-	datad => VCC,
-	cin => \VGA_86_image|LessThan8~13_cout\,
-	cout => \VGA_86_image|LessThan8~15_cout\);
-
--- Location: LCCOMB_X47_Y29_N24
-\VGA_86_image|LessThan8~16\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|LessThan8~16_combout\ = (\VGA_86_image|v_count\(9) & (!\VGA_86_image|LessThan8~15_cout\ & \VGA_86_image|Add4~12_combout\)) # (!\VGA_86_image|v_count\(9) & ((\VGA_86_image|Add4~12_combout\) # (!\VGA_86_image|LessThan8~15_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101111100000101",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|v_count\(9),
-	datad => \VGA_86_image|Add4~12_combout\,
-	cin => \VGA_86_image|LessThan8~15_cout\,
-	combout => \VGA_86_image|LessThan8~16_combout\);
-
--- Location: LCCOMB_X45_Y28_N2
-\VGA_86_image|Add7~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~0_combout\ = \VGA_86_image|color_shift_count\(0) $ (VCC)
--- \VGA_86_image|Add7~1\ = CARRY(\VGA_86_image|color_shift_count\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010110101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(0),
-	datad => VCC,
-	combout => \VGA_86_image|Add7~0_combout\,
-	cout => \VGA_86_image|Add7~1\);
-
--- Location: LCCOMB_X44_Y28_N16
-\VGA_86_image|color_shift_count~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~0_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~0_combout\,
-	combout => \VGA_86_image|color_shift_count~0_combout\);
-
--- Location: FF_X44_Y28_N17
-\VGA_86_image|color_shift_count[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~0_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(0));
-
--- Location: LCCOMB_X45_Y28_N4
-\VGA_86_image|Add7~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~2_combout\ = (\VGA_86_image|color_shift_count\(1) & (!\VGA_86_image|Add7~1\)) # (!\VGA_86_image|color_shift_count\(1) & ((\VGA_86_image|Add7~1\) # (GND)))
--- \VGA_86_image|Add7~3\ = CARRY((!\VGA_86_image|Add7~1\) # (!\VGA_86_image|color_shift_count\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(1),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~1\,
-	combout => \VGA_86_image|Add7~2_combout\,
-	cout => \VGA_86_image|Add7~3\);
-
--- Location: FF_X45_Y28_N5
-\VGA_86_image|color_shift_count[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~2_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(1));
-
--- Location: LCCOMB_X45_Y28_N6
-\VGA_86_image|Add7~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~4_combout\ = (\VGA_86_image|color_shift_count\(2) & (\VGA_86_image|Add7~3\ $ (GND))) # (!\VGA_86_image|color_shift_count\(2) & (!\VGA_86_image|Add7~3\ & VCC))
--- \VGA_86_image|Add7~5\ = CARRY((\VGA_86_image|color_shift_count\(2) & !\VGA_86_image|Add7~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(2),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~3\,
-	combout => \VGA_86_image|Add7~4_combout\,
-	cout => \VGA_86_image|Add7~5\);
-
--- Location: FF_X45_Y28_N7
-\VGA_86_image|color_shift_count[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~4_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(2));
-
--- Location: LCCOMB_X45_Y28_N8
-\VGA_86_image|Add7~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~6_combout\ = (\VGA_86_image|color_shift_count\(3) & (!\VGA_86_image|Add7~5\)) # (!\VGA_86_image|color_shift_count\(3) & ((\VGA_86_image|Add7~5\) # (GND)))
--- \VGA_86_image|Add7~7\ = CARRY((!\VGA_86_image|Add7~5\) # (!\VGA_86_image|color_shift_count\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(3),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~5\,
-	combout => \VGA_86_image|Add7~6_combout\,
-	cout => \VGA_86_image|Add7~7\);
-
--- Location: FF_X45_Y28_N9
-\VGA_86_image|color_shift_count[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~6_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(3));
-
--- Location: LCCOMB_X44_Y28_N10
-\VGA_86_image|Equal2~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~0_combout\ = (!\VGA_86_image|color_shift_count\(1) & (!\VGA_86_image|color_shift_count\(0) & (!\VGA_86_image|color_shift_count\(3) & !\VGA_86_image|color_shift_count\(2))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(1),
-	datab => \VGA_86_image|color_shift_count\(0),
-	datac => \VGA_86_image|color_shift_count\(3),
-	datad => \VGA_86_image|color_shift_count\(2),
-	combout => \VGA_86_image|Equal2~0_combout\);
-
--- Location: LCCOMB_X45_Y28_N10
-\VGA_86_image|Add7~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~8_combout\ = (\VGA_86_image|color_shift_count\(4) & (\VGA_86_image|Add7~7\ $ (GND))) # (!\VGA_86_image|color_shift_count\(4) & (!\VGA_86_image|Add7~7\ & VCC))
--- \VGA_86_image|Add7~9\ = CARRY((\VGA_86_image|color_shift_count\(4) & !\VGA_86_image|Add7~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(4),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~7\,
-	combout => \VGA_86_image|Add7~8_combout\,
-	cout => \VGA_86_image|Add7~9\);
-
--- Location: FF_X45_Y28_N11
-\VGA_86_image|color_shift_count[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~8_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(4));
-
--- Location: LCCOMB_X45_Y28_N12
-\VGA_86_image|Add7~10\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~10_combout\ = (\VGA_86_image|color_shift_count\(5) & (!\VGA_86_image|Add7~9\)) # (!\VGA_86_image|color_shift_count\(5) & ((\VGA_86_image|Add7~9\) # (GND)))
--- \VGA_86_image|Add7~11\ = CARRY((!\VGA_86_image|Add7~9\) # (!\VGA_86_image|color_shift_count\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(5),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~9\,
-	combout => \VGA_86_image|Add7~10_combout\,
-	cout => \VGA_86_image|Add7~11\);
-
--- Location: FF_X45_Y28_N13
-\VGA_86_image|color_shift_count[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~10_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(5));
-
--- Location: LCCOMB_X45_Y28_N14
-\VGA_86_image|Add7~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~12_combout\ = (\VGA_86_image|color_shift_count\(6) & (\VGA_86_image|Add7~11\ $ (GND))) # (!\VGA_86_image|color_shift_count\(6) & (!\VGA_86_image|Add7~11\ & VCC))
--- \VGA_86_image|Add7~13\ = CARRY((\VGA_86_image|color_shift_count\(6) & !\VGA_86_image|Add7~11\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(6),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~11\,
-	combout => \VGA_86_image|Add7~12_combout\,
-	cout => \VGA_86_image|Add7~13\);
-
--- Location: FF_X45_Y28_N15
-\VGA_86_image|color_shift_count[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~12_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(6));
-
--- Location: LCCOMB_X45_Y28_N16
-\VGA_86_image|Add7~14\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~14_combout\ = (\VGA_86_image|color_shift_count\(7) & (!\VGA_86_image|Add7~13\)) # (!\VGA_86_image|color_shift_count\(7) & ((\VGA_86_image|Add7~13\) # (GND)))
--- \VGA_86_image|Add7~15\ = CARRY((!\VGA_86_image|Add7~13\) # (!\VGA_86_image|color_shift_count\(7)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(7),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~13\,
-	combout => \VGA_86_image|Add7~14_combout\,
-	cout => \VGA_86_image|Add7~15\);
-
--- Location: FF_X45_Y28_N17
-\VGA_86_image|color_shift_count[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~14_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(7));
-
--- Location: LCCOMB_X44_Y28_N4
-\VGA_86_image|Equal2~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~1_combout\ = (!\VGA_86_image|color_shift_count\(5) & (!\VGA_86_image|color_shift_count\(6) & (!\VGA_86_image|color_shift_count\(4) & !\VGA_86_image|color_shift_count\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(5),
-	datab => \VGA_86_image|color_shift_count\(6),
-	datac => \VGA_86_image|color_shift_count\(4),
-	datad => \VGA_86_image|color_shift_count\(7),
-	combout => \VGA_86_image|Equal2~1_combout\);
-
--- Location: LCCOMB_X45_Y28_N18
-\VGA_86_image|Add7~16\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~16_combout\ = (\VGA_86_image|color_shift_count\(8) & (\VGA_86_image|Add7~15\ $ (GND))) # (!\VGA_86_image|color_shift_count\(8) & (!\VGA_86_image|Add7~15\ & VCC))
--- \VGA_86_image|Add7~17\ = CARRY((\VGA_86_image|color_shift_count\(8) & !\VGA_86_image|Add7~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(8),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~15\,
-	combout => \VGA_86_image|Add7~16_combout\,
-	cout => \VGA_86_image|Add7~17\);
-
--- Location: FF_X45_Y28_N19
-\VGA_86_image|color_shift_count[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~16_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(8));
-
--- Location: LCCOMB_X45_Y28_N20
-\VGA_86_image|Add7~18\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~18_combout\ = (\VGA_86_image|color_shift_count\(9) & (!\VGA_86_image|Add7~17\)) # (!\VGA_86_image|color_shift_count\(9) & ((\VGA_86_image|Add7~17\) # (GND)))
--- \VGA_86_image|Add7~19\ = CARRY((!\VGA_86_image|Add7~17\) # (!\VGA_86_image|color_shift_count\(9)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(9),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~17\,
-	combout => \VGA_86_image|Add7~18_combout\,
-	cout => \VGA_86_image|Add7~19\);
-
--- Location: LCCOMB_X44_Y28_N30
-\VGA_86_image|color_shift_count~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~1_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~18_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datac => \VGA_86_image|Add7~18_combout\,
-	combout => \VGA_86_image|color_shift_count~1_combout\);
-
--- Location: FF_X44_Y28_N31
-\VGA_86_image|color_shift_count[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~1_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(9));
-
--- Location: LCCOMB_X45_Y28_N22
-\VGA_86_image|Add7~20\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~20_combout\ = (\VGA_86_image|color_shift_count\(10) & (\VGA_86_image|Add7~19\ $ (GND))) # (!\VGA_86_image|color_shift_count\(10) & (!\VGA_86_image|Add7~19\ & VCC))
--- \VGA_86_image|Add7~21\ = CARRY((\VGA_86_image|color_shift_count\(10) & !\VGA_86_image|Add7~19\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(10),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~19\,
-	combout => \VGA_86_image|Add7~20_combout\,
-	cout => \VGA_86_image|Add7~21\);
-
--- Location: FF_X45_Y28_N23
-\VGA_86_image|color_shift_count[10]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~20_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(10));
-
--- Location: LCCOMB_X45_Y28_N24
-\VGA_86_image|Add7~22\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~22_combout\ = (\VGA_86_image|color_shift_count\(11) & (!\VGA_86_image|Add7~21\)) # (!\VGA_86_image|color_shift_count\(11) & ((\VGA_86_image|Add7~21\) # (GND)))
--- \VGA_86_image|Add7~23\ = CARRY((!\VGA_86_image|Add7~21\) # (!\VGA_86_image|color_shift_count\(11)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(11),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~21\,
-	combout => \VGA_86_image|Add7~22_combout\,
-	cout => \VGA_86_image|Add7~23\);
-
--- Location: FF_X45_Y28_N25
-\VGA_86_image|color_shift_count[11]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~22_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(11));
-
--- Location: LCCOMB_X45_Y28_N26
-\VGA_86_image|Add7~24\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~24_combout\ = (\VGA_86_image|color_shift_count\(12) & (\VGA_86_image|Add7~23\ $ (GND))) # (!\VGA_86_image|color_shift_count\(12) & (!\VGA_86_image|Add7~23\ & VCC))
--- \VGA_86_image|Add7~25\ = CARRY((\VGA_86_image|color_shift_count\(12) & !\VGA_86_image|Add7~23\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(12),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~23\,
-	combout => \VGA_86_image|Add7~24_combout\,
-	cout => \VGA_86_image|Add7~25\);
-
--- Location: FF_X45_Y28_N27
-\VGA_86_image|color_shift_count[12]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~24_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(12));
-
--- Location: LCCOMB_X45_Y28_N28
-\VGA_86_image|Add7~26\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~26_combout\ = (\VGA_86_image|color_shift_count\(13) & (!\VGA_86_image|Add7~25\)) # (!\VGA_86_image|color_shift_count\(13) & ((\VGA_86_image|Add7~25\) # (GND)))
--- \VGA_86_image|Add7~27\ = CARRY((!\VGA_86_image|Add7~25\) # (!\VGA_86_image|color_shift_count\(13)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(13),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~25\,
-	combout => \VGA_86_image|Add7~26_combout\,
-	cout => \VGA_86_image|Add7~27\);
-
--- Location: FF_X45_Y28_N29
-\VGA_86_image|color_shift_count[13]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~26_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(13));
-
--- Location: LCCOMB_X45_Y28_N30
-\VGA_86_image|Add7~28\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~28_combout\ = (\VGA_86_image|color_shift_count\(14) & (\VGA_86_image|Add7~27\ $ (GND))) # (!\VGA_86_image|color_shift_count\(14) & (!\VGA_86_image|Add7~27\ & VCC))
--- \VGA_86_image|Add7~29\ = CARRY((\VGA_86_image|color_shift_count\(14) & !\VGA_86_image|Add7~27\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(14),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~27\,
-	combout => \VGA_86_image|Add7~28_combout\,
-	cout => \VGA_86_image|Add7~29\);
-
--- Location: LCCOMB_X44_Y28_N2
-\VGA_86_image|color_shift_count~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~2_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~28_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101000001010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datac => \VGA_86_image|Add7~28_combout\,
-	combout => \VGA_86_image|color_shift_count~2_combout\);
-
--- Location: FF_X44_Y28_N3
-\VGA_86_image|color_shift_count[14]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~2_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(14));
-
--- Location: LCCOMB_X45_Y27_N0
-\VGA_86_image|Add7~30\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~30_combout\ = (\VGA_86_image|color_shift_count\(15) & (!\VGA_86_image|Add7~29\)) # (!\VGA_86_image|color_shift_count\(15) & ((\VGA_86_image|Add7~29\) # (GND)))
--- \VGA_86_image|Add7~31\ = CARRY((!\VGA_86_image|Add7~29\) # (!\VGA_86_image|color_shift_count\(15)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(15),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~29\,
-	combout => \VGA_86_image|Add7~30_combout\,
-	cout => \VGA_86_image|Add7~31\);
-
--- Location: LCCOMB_X46_Y27_N2
-\VGA_86_image|color_shift_count~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~3_combout\ = (\VGA_86_image|Add7~30_combout\ & !\VGA_86_image|Equal2~9_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \VGA_86_image|Add7~30_combout\,
-	datad => \VGA_86_image|Equal2~9_combout\,
-	combout => \VGA_86_image|color_shift_count~3_combout\);
-
--- Location: FF_X46_Y27_N3
-\VGA_86_image|color_shift_count[15]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~3_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(15));
-
--- Location: LCCOMB_X45_Y28_N0
-\VGA_86_image|Equal2~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~3_combout\ = (\VGA_86_image|color_shift_count\(14) & (!\VGA_86_image|color_shift_count\(13) & (!\VGA_86_image|color_shift_count\(12) & \VGA_86_image|color_shift_count\(15))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(14),
-	datab => \VGA_86_image|color_shift_count\(13),
-	datac => \VGA_86_image|color_shift_count\(12),
-	datad => \VGA_86_image|color_shift_count\(15),
-	combout => \VGA_86_image|Equal2~3_combout\);
-
--- Location: LCCOMB_X44_Y28_N0
-\VGA_86_image|Equal2~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~2_combout\ = (!\VGA_86_image|color_shift_count\(10) & (!\VGA_86_image|color_shift_count\(11) & (\VGA_86_image|color_shift_count\(9) & !\VGA_86_image|color_shift_count\(8))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(10),
-	datab => \VGA_86_image|color_shift_count\(11),
-	datac => \VGA_86_image|color_shift_count\(9),
-	datad => \VGA_86_image|color_shift_count\(8),
-	combout => \VGA_86_image|Equal2~2_combout\);
-
--- Location: LCCOMB_X44_Y28_N12
-\VGA_86_image|Equal2~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~4_combout\ = (\VGA_86_image|Equal2~0_combout\ & (\VGA_86_image|Equal2~1_combout\ & (\VGA_86_image|Equal2~3_combout\ & \VGA_86_image|Equal2~2_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~0_combout\,
-	datab => \VGA_86_image|Equal2~1_combout\,
-	datac => \VGA_86_image|Equal2~3_combout\,
-	datad => \VGA_86_image|Equal2~2_combout\,
-	combout => \VGA_86_image|Equal2~4_combout\);
-
--- Location: LCCOMB_X45_Y27_N2
-\VGA_86_image|Add7~32\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~32_combout\ = (\VGA_86_image|color_shift_count\(16) & (\VGA_86_image|Add7~31\ $ (GND))) # (!\VGA_86_image|color_shift_count\(16) & (!\VGA_86_image|Add7~31\ & VCC))
--- \VGA_86_image|Add7~33\ = CARRY((\VGA_86_image|color_shift_count\(16) & !\VGA_86_image|Add7~31\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(16),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~31\,
-	combout => \VGA_86_image|Add7~32_combout\,
-	cout => \VGA_86_image|Add7~33\);
-
--- Location: LCCOMB_X46_Y27_N12
-\VGA_86_image|color_shift_count~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~4_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~32_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~32_combout\,
-	combout => \VGA_86_image|color_shift_count~4_combout\);
-
--- Location: FF_X46_Y27_N13
-\VGA_86_image|color_shift_count[16]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~4_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(16));
-
--- Location: LCCOMB_X45_Y27_N4
-\VGA_86_image|Add7~34\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~34_combout\ = (\VGA_86_image|color_shift_count\(17) & (!\VGA_86_image|Add7~33\)) # (!\VGA_86_image|color_shift_count\(17) & ((\VGA_86_image|Add7~33\) # (GND)))
--- \VGA_86_image|Add7~35\ = CARRY((!\VGA_86_image|Add7~33\) # (!\VGA_86_image|color_shift_count\(17)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(17),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~33\,
-	combout => \VGA_86_image|Add7~34_combout\,
-	cout => \VGA_86_image|Add7~35\);
-
--- Location: LCCOMB_X46_Y27_N30
-\VGA_86_image|color_shift_count~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~5_combout\ = (\VGA_86_image|Add7~34_combout\ & !\VGA_86_image|Equal2~9_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \VGA_86_image|Add7~34_combout\,
-	datad => \VGA_86_image|Equal2~9_combout\,
-	combout => \VGA_86_image|color_shift_count~5_combout\);
-
--- Location: FF_X46_Y27_N31
-\VGA_86_image|color_shift_count[17]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~5_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(17));
-
--- Location: LCCOMB_X45_Y27_N6
-\VGA_86_image|Add7~36\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~36_combout\ = (\VGA_86_image|color_shift_count\(18) & (\VGA_86_image|Add7~35\ $ (GND))) # (!\VGA_86_image|color_shift_count\(18) & (!\VGA_86_image|Add7~35\ & VCC))
--- \VGA_86_image|Add7~37\ = CARRY((\VGA_86_image|color_shift_count\(18) & !\VGA_86_image|Add7~35\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(18),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~35\,
-	combout => \VGA_86_image|Add7~36_combout\,
-	cout => \VGA_86_image|Add7~37\);
-
--- Location: FF_X45_Y27_N7
-\VGA_86_image|color_shift_count[18]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~36_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(18));
-
--- Location: LCCOMB_X45_Y27_N8
-\VGA_86_image|Add7~38\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~38_combout\ = (\VGA_86_image|color_shift_count\(19) & (!\VGA_86_image|Add7~37\)) # (!\VGA_86_image|color_shift_count\(19) & ((\VGA_86_image|Add7~37\) # (GND)))
--- \VGA_86_image|Add7~39\ = CARRY((!\VGA_86_image|Add7~37\) # (!\VGA_86_image|color_shift_count\(19)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(19),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~37\,
-	combout => \VGA_86_image|Add7~38_combout\,
-	cout => \VGA_86_image|Add7~39\);
-
--- Location: LCCOMB_X46_Y27_N16
-\VGA_86_image|color_shift_count~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~6_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~38_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~38_combout\,
-	combout => \VGA_86_image|color_shift_count~6_combout\);
-
--- Location: FF_X46_Y27_N17
-\VGA_86_image|color_shift_count[19]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~6_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(19));
-
--- Location: LCCOMB_X45_Y27_N10
-\VGA_86_image|Add7~40\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~40_combout\ = (\VGA_86_image|color_shift_count\(20) & (\VGA_86_image|Add7~39\ $ (GND))) # (!\VGA_86_image|color_shift_count\(20) & (!\VGA_86_image|Add7~39\ & VCC))
--- \VGA_86_image|Add7~41\ = CARRY((\VGA_86_image|color_shift_count\(20) & !\VGA_86_image|Add7~39\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(20),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~39\,
-	combout => \VGA_86_image|Add7~40_combout\,
-	cout => \VGA_86_image|Add7~41\);
-
--- Location: FF_X45_Y27_N11
-\VGA_86_image|color_shift_count[20]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~40_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(20));
-
--- Location: LCCOMB_X45_Y27_N12
-\VGA_86_image|Add7~42\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~42_combout\ = (\VGA_86_image|color_shift_count\(21) & (!\VGA_86_image|Add7~41\)) # (!\VGA_86_image|color_shift_count\(21) & ((\VGA_86_image|Add7~41\) # (GND)))
--- \VGA_86_image|Add7~43\ = CARRY((!\VGA_86_image|Add7~41\) # (!\VGA_86_image|color_shift_count\(21)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(21),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~41\,
-	combout => \VGA_86_image|Add7~42_combout\,
-	cout => \VGA_86_image|Add7~43\);
-
--- Location: LCCOMB_X44_Y28_N6
-\VGA_86_image|color_shift_count~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~7_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~42_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~42_combout\,
-	combout => \VGA_86_image|color_shift_count~7_combout\);
-
--- Location: FF_X44_Y28_N7
-\VGA_86_image|color_shift_count[21]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~7_combout\,
-	ena => \VGA_86_image|ALT_INV_blank_2~q\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \VGA_86_image|color_shift_count\(21));
-
--- Location: LCCOMB_X45_Y27_N14
-\VGA_86_image|Add7~44\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~44_combout\ = (\VGA_86_image|color_shift_count\(22) & (\VGA_86_image|Add7~43\ $ (GND))) # (!\VGA_86_image|color_shift_count\(22) & (!\VGA_86_image|Add7~43\ & VCC))
--- \VGA_86_image|Add7~45\ = CARRY((\VGA_86_image|color_shift_count\(22) & !\VGA_86_image|Add7~43\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \VGA_86_image|color_shift_count\(22),
-	datad => VCC,
-	cin => \VGA_86_image|Add7~43\,
-	combout => \VGA_86_image|Add7~44_combout\,
-	cout => \VGA_86_image|Add7~45\);
-
--- Location: LCCOMB_X44_Y28_N24
+-- Location: LCCOMB_X23_Y25_N14
 \VGA_86_image|color_shift_count~8\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|color_shift_count~8_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~44_combout\)
+-- \VGA_86_image|color_shift_count~8_combout\ = (\VGA_86_image|Add3~0_combout\ & (((!\VGA_86_image|Equal2~4_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~9_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101000001010000",
+	lut_mask => "0111000011110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \VGA_86_image|Equal2~9_combout\,
-	datac => \VGA_86_image|Add7~44_combout\,
+	datab => \VGA_86_image|Equal2~7_combout\,
+	datac => \VGA_86_image|Add3~0_combout\,
+	datad => \VGA_86_image|Equal2~4_combout\,
 	combout => \VGA_86_image|color_shift_count~8_combout\);
 
--- Location: FF_X44_Y28_N25
-\VGA_86_image|color_shift_count[22]\ : dffeas
+-- Location: FF_X23_Y25_N15
+\VGA_86_image|color_shift_count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -6232,13 +1965,871 @@ PORT MAP (
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(0));
+
+-- Location: LCCOMB_X26_Y25_N4
+\VGA_86_image|Add3~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~2_combout\ = (\VGA_86_image|color_shift_count\(1) & (!\VGA_86_image|Add3~1\)) # (!\VGA_86_image|color_shift_count\(1) & ((\VGA_86_image|Add3~1\) # (GND)))
+-- \VGA_86_image|Add3~3\ = CARRY((!\VGA_86_image|Add3~1\) # (!\VGA_86_image|color_shift_count\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(1),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~1\,
+	combout => \VGA_86_image|Add3~2_combout\,
+	cout => \VGA_86_image|Add3~3\);
+
+-- Location: FF_X26_Y25_N5
+\VGA_86_image|color_shift_count[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~2_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(1));
+
+-- Location: LCCOMB_X26_Y25_N6
+\VGA_86_image|Add3~4\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~4_combout\ = (\VGA_86_image|color_shift_count\(2) & (\VGA_86_image|Add3~3\ $ (GND))) # (!\VGA_86_image|color_shift_count\(2) & (!\VGA_86_image|Add3~3\ & VCC))
+-- \VGA_86_image|Add3~5\ = CARRY((\VGA_86_image|color_shift_count\(2) & !\VGA_86_image|Add3~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(2),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~3\,
+	combout => \VGA_86_image|Add3~4_combout\,
+	cout => \VGA_86_image|Add3~5\);
+
+-- Location: FF_X26_Y25_N7
+\VGA_86_image|color_shift_count[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~4_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(2));
+
+-- Location: LCCOMB_X26_Y25_N8
+\VGA_86_image|Add3~6\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~6_combout\ = (\VGA_86_image|color_shift_count\(3) & (!\VGA_86_image|Add3~5\)) # (!\VGA_86_image|color_shift_count\(3) & ((\VGA_86_image|Add3~5\) # (GND)))
+-- \VGA_86_image|Add3~7\ = CARRY((!\VGA_86_image|Add3~5\) # (!\VGA_86_image|color_shift_count\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(3),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~5\,
+	combout => \VGA_86_image|Add3~6_combout\,
+	cout => \VGA_86_image|Add3~7\);
+
+-- Location: FF_X26_Y25_N9
+\VGA_86_image|color_shift_count[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~6_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(3));
+
+-- Location: LCCOMB_X26_Y25_N10
+\VGA_86_image|Add3~8\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~8_combout\ = (\VGA_86_image|color_shift_count\(4) & (\VGA_86_image|Add3~7\ $ (GND))) # (!\VGA_86_image|color_shift_count\(4) & (!\VGA_86_image|Add3~7\ & VCC))
+-- \VGA_86_image|Add3~9\ = CARRY((\VGA_86_image|color_shift_count\(4) & !\VGA_86_image|Add3~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(4),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~7\,
+	combout => \VGA_86_image|Add3~8_combout\,
+	cout => \VGA_86_image|Add3~9\);
+
+-- Location: FF_X26_Y25_N11
+\VGA_86_image|color_shift_count[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~8_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(4));
+
+-- Location: LCCOMB_X26_Y25_N12
+\VGA_86_image|Add3~10\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~10_combout\ = (\VGA_86_image|color_shift_count\(5) & (!\VGA_86_image|Add3~9\)) # (!\VGA_86_image|color_shift_count\(5) & ((\VGA_86_image|Add3~9\) # (GND)))
+-- \VGA_86_image|Add3~11\ = CARRY((!\VGA_86_image|Add3~9\) # (!\VGA_86_image|color_shift_count\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(5),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~9\,
+	combout => \VGA_86_image|Add3~10_combout\,
+	cout => \VGA_86_image|Add3~11\);
+
+-- Location: FF_X26_Y25_N13
+\VGA_86_image|color_shift_count[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~10_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(5));
+
+-- Location: LCCOMB_X26_Y25_N14
+\VGA_86_image|Add3~12\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~12_combout\ = (\VGA_86_image|color_shift_count\(6) & (\VGA_86_image|Add3~11\ $ (GND))) # (!\VGA_86_image|color_shift_count\(6) & (!\VGA_86_image|Add3~11\ & VCC))
+-- \VGA_86_image|Add3~13\ = CARRY((\VGA_86_image|color_shift_count\(6) & !\VGA_86_image|Add3~11\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(6),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~11\,
+	combout => \VGA_86_image|Add3~12_combout\,
+	cout => \VGA_86_image|Add3~13\);
+
+-- Location: FF_X26_Y25_N15
+\VGA_86_image|color_shift_count[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~12_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(6));
+
+-- Location: LCCOMB_X26_Y25_N16
+\VGA_86_image|Add3~14\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~14_combout\ = (\VGA_86_image|color_shift_count\(7) & (!\VGA_86_image|Add3~13\)) # (!\VGA_86_image|color_shift_count\(7) & ((\VGA_86_image|Add3~13\) # (GND)))
+-- \VGA_86_image|Add3~15\ = CARRY((!\VGA_86_image|Add3~13\) # (!\VGA_86_image|color_shift_count\(7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(7),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~13\,
+	combout => \VGA_86_image|Add3~14_combout\,
+	cout => \VGA_86_image|Add3~15\);
+
+-- Location: FF_X26_Y25_N17
+\VGA_86_image|color_shift_count[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~14_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(7));
+
+-- Location: LCCOMB_X26_Y25_N18
+\VGA_86_image|Add3~16\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~16_combout\ = (\VGA_86_image|color_shift_count\(8) & (\VGA_86_image|Add3~15\ $ (GND))) # (!\VGA_86_image|color_shift_count\(8) & (!\VGA_86_image|Add3~15\ & VCC))
+-- \VGA_86_image|Add3~17\ = CARRY((\VGA_86_image|color_shift_count\(8) & !\VGA_86_image|Add3~15\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(8),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~15\,
+	combout => \VGA_86_image|Add3~16_combout\,
+	cout => \VGA_86_image|Add3~17\);
+
+-- Location: LCCOMB_X23_Y25_N2
+\VGA_86_image|color_shift_count~7\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~7_combout\ = (\VGA_86_image|Add3~16_combout\ & (((!\VGA_86_image|Equal2~9_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Add3~16_combout\,
+	datab => \VGA_86_image|Equal2~4_combout\,
+	datac => \VGA_86_image|Equal2~7_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|color_shift_count~7_combout\);
+
+-- Location: FF_X23_Y25_N3
+\VGA_86_image|color_shift_count[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~7_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(8));
+
+-- Location: LCCOMB_X26_Y25_N20
+\VGA_86_image|Add3~18\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~18_combout\ = (\VGA_86_image|color_shift_count\(9) & (!\VGA_86_image|Add3~17\)) # (!\VGA_86_image|color_shift_count\(9) & ((\VGA_86_image|Add3~17\) # (GND)))
+-- \VGA_86_image|Add3~19\ = CARRY((!\VGA_86_image|Add3~17\) # (!\VGA_86_image|color_shift_count\(9)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(9),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~17\,
+	combout => \VGA_86_image|Add3~18_combout\,
+	cout => \VGA_86_image|Add3~19\);
+
+-- Location: FF_X26_Y25_N21
+\VGA_86_image|color_shift_count[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~18_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(9));
+
+-- Location: LCCOMB_X26_Y25_N22
+\VGA_86_image|Add3~20\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~20_combout\ = (\VGA_86_image|color_shift_count\(10) & (\VGA_86_image|Add3~19\ $ (GND))) # (!\VGA_86_image|color_shift_count\(10) & (!\VGA_86_image|Add3~19\ & VCC))
+-- \VGA_86_image|Add3~21\ = CARRY((\VGA_86_image|color_shift_count\(10) & !\VGA_86_image|Add3~19\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(10),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~19\,
+	combout => \VGA_86_image|Add3~20_combout\,
+	cout => \VGA_86_image|Add3~21\);
+
+-- Location: LCCOMB_X23_Y25_N24
+\VGA_86_image|color_shift_count~6\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~6_combout\ = (\VGA_86_image|Add3~20_combout\ & (((!\VGA_86_image|Equal2~9_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Add3~20_combout\,
+	datab => \VGA_86_image|Equal2~4_combout\,
+	datac => \VGA_86_image|Equal2~7_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|color_shift_count~6_combout\);
+
+-- Location: FF_X23_Y25_N25
+\VGA_86_image|color_shift_count[10]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~6_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(10));
+
+-- Location: LCCOMB_X26_Y25_N24
+\VGA_86_image|Add3~22\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~22_combout\ = (\VGA_86_image|color_shift_count\(11) & (!\VGA_86_image|Add3~21\)) # (!\VGA_86_image|color_shift_count\(11) & ((\VGA_86_image|Add3~21\) # (GND)))
+-- \VGA_86_image|Add3~23\ = CARRY((!\VGA_86_image|Add3~21\) # (!\VGA_86_image|color_shift_count\(11)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(11),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~21\,
+	combout => \VGA_86_image|Add3~22_combout\,
+	cout => \VGA_86_image|Add3~23\);
+
+-- Location: LCCOMB_X23_Y25_N12
+\VGA_86_image|color_shift_count~5\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~5_combout\ = (\VGA_86_image|Add3~22_combout\ & (((!\VGA_86_image|Equal2~9_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Add3~22_combout\,
+	datab => \VGA_86_image|Equal2~4_combout\,
+	datac => \VGA_86_image|Equal2~7_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|color_shift_count~5_combout\);
+
+-- Location: FF_X23_Y25_N13
+\VGA_86_image|color_shift_count[11]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~5_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(11));
+
+-- Location: LCCOMB_X26_Y25_N26
+\VGA_86_image|Add3~24\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~24_combout\ = (\VGA_86_image|color_shift_count\(12) & (\VGA_86_image|Add3~23\ $ (GND))) # (!\VGA_86_image|color_shift_count\(12) & (!\VGA_86_image|Add3~23\ & VCC))
+-- \VGA_86_image|Add3~25\ = CARRY((\VGA_86_image|color_shift_count\(12) & !\VGA_86_image|Add3~23\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(12),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~23\,
+	combout => \VGA_86_image|Add3~24_combout\,
+	cout => \VGA_86_image|Add3~25\);
+
+-- Location: FF_X26_Y25_N27
+\VGA_86_image|color_shift_count[12]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~24_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(12));
+
+-- Location: LCCOMB_X26_Y25_N28
+\VGA_86_image|Add3~26\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~26_combout\ = (\VGA_86_image|color_shift_count\(13) & (!\VGA_86_image|Add3~25\)) # (!\VGA_86_image|color_shift_count\(13) & ((\VGA_86_image|Add3~25\) # (GND)))
+-- \VGA_86_image|Add3~27\ = CARRY((!\VGA_86_image|Add3~25\) # (!\VGA_86_image|color_shift_count\(13)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(13),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~25\,
+	combout => \VGA_86_image|Add3~26_combout\,
+	cout => \VGA_86_image|Add3~27\);
+
+-- Location: LCCOMB_X23_Y25_N26
+\VGA_86_image|color_shift_count~4\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~4_combout\ = (\VGA_86_image|Add3~26_combout\ & (((!\VGA_86_image|Equal2~9_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Add3~26_combout\,
+	datab => \VGA_86_image|Equal2~4_combout\,
+	datac => \VGA_86_image|Equal2~7_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|color_shift_count~4_combout\);
+
+-- Location: FF_X23_Y25_N27
+\VGA_86_image|color_shift_count[13]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~4_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(13));
+
+-- Location: LCCOMB_X26_Y25_N30
+\VGA_86_image|Add3~28\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~28_combout\ = (\VGA_86_image|color_shift_count\(14) & (\VGA_86_image|Add3~27\ $ (GND))) # (!\VGA_86_image|color_shift_count\(14) & (!\VGA_86_image|Add3~27\ & VCC))
+-- \VGA_86_image|Add3~29\ = CARRY((\VGA_86_image|color_shift_count\(14) & !\VGA_86_image|Add3~27\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(14),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~27\,
+	combout => \VGA_86_image|Add3~28_combout\,
+	cout => \VGA_86_image|Add3~29\);
+
+-- Location: FF_X26_Y25_N31
+\VGA_86_image|color_shift_count[14]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~28_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(14));
+
+-- Location: LCCOMB_X26_Y24_N0
+\VGA_86_image|Add3~30\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~30_combout\ = (\VGA_86_image|color_shift_count\(15) & (!\VGA_86_image|Add3~29\)) # (!\VGA_86_image|color_shift_count\(15) & ((\VGA_86_image|Add3~29\) # (GND)))
+-- \VGA_86_image|Add3~31\ = CARRY((!\VGA_86_image|Add3~29\) # (!\VGA_86_image|color_shift_count\(15)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(15),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~29\,
+	combout => \VGA_86_image|Add3~30_combout\,
+	cout => \VGA_86_image|Add3~31\);
+
+-- Location: FF_X26_Y24_N1
+\VGA_86_image|color_shift_count[15]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~30_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(15));
+
+-- Location: LCCOMB_X26_Y24_N2
+\VGA_86_image|Add3~32\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~32_combout\ = (\VGA_86_image|color_shift_count\(16) & (\VGA_86_image|Add3~31\ $ (GND))) # (!\VGA_86_image|color_shift_count\(16) & (!\VGA_86_image|Add3~31\ & VCC))
+-- \VGA_86_image|Add3~33\ = CARRY((\VGA_86_image|color_shift_count\(16) & !\VGA_86_image|Add3~31\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(16),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~31\,
+	combout => \VGA_86_image|Add3~32_combout\,
+	cout => \VGA_86_image|Add3~33\);
+
+-- Location: LCCOMB_X23_Y25_N30
+\VGA_86_image|color_shift_count~3\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~3_combout\ = (\VGA_86_image|Add3~32_combout\ & (((!\VGA_86_image|Equal2~9_combout\) # (!\VGA_86_image|Equal2~7_combout\)) # (!\VGA_86_image|Equal2~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Add3~32_combout\,
+	datab => \VGA_86_image|Equal2~4_combout\,
+	datac => \VGA_86_image|Equal2~7_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|color_shift_count~3_combout\);
+
+-- Location: FF_X23_Y25_N31
+\VGA_86_image|color_shift_count[16]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~3_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(16));
+
+-- Location: LCCOMB_X26_Y24_N4
+\VGA_86_image|Add3~34\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~34_combout\ = (\VGA_86_image|color_shift_count\(17) & (!\VGA_86_image|Add3~33\)) # (!\VGA_86_image|color_shift_count\(17) & ((\VGA_86_image|Add3~33\) # (GND)))
+-- \VGA_86_image|Add3~35\ = CARRY((!\VGA_86_image|Add3~33\) # (!\VGA_86_image|color_shift_count\(17)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(17),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~33\,
+	combout => \VGA_86_image|Add3~34_combout\,
+	cout => \VGA_86_image|Add3~35\);
+
+-- Location: FF_X26_Y24_N5
+\VGA_86_image|color_shift_count[17]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~34_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(17));
+
+-- Location: LCCOMB_X26_Y24_N6
+\VGA_86_image|Add3~36\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~36_combout\ = (\VGA_86_image|color_shift_count\(18) & (\VGA_86_image|Add3~35\ $ (GND))) # (!\VGA_86_image|color_shift_count\(18) & (!\VGA_86_image|Add3~35\ & VCC))
+-- \VGA_86_image|Add3~37\ = CARRY((\VGA_86_image|color_shift_count\(18) & !\VGA_86_image|Add3~35\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(18),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~35\,
+	combout => \VGA_86_image|Add3~36_combout\,
+	cout => \VGA_86_image|Add3~37\);
+
+-- Location: FF_X26_Y24_N7
+\VGA_86_image|color_shift_count[18]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~36_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(18));
+
+-- Location: LCCOMB_X26_Y24_N8
+\VGA_86_image|Add3~38\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~38_combout\ = (\VGA_86_image|color_shift_count\(19) & (!\VGA_86_image|Add3~37\)) # (!\VGA_86_image|color_shift_count\(19) & ((\VGA_86_image|Add3~37\) # (GND)))
+-- \VGA_86_image|Add3~39\ = CARRY((!\VGA_86_image|Add3~37\) # (!\VGA_86_image|color_shift_count\(19)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(19),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~37\,
+	combout => \VGA_86_image|Add3~38_combout\,
+	cout => \VGA_86_image|Add3~39\);
+
+-- Location: FF_X26_Y24_N9
+\VGA_86_image|color_shift_count[19]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~38_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(19));
+
+-- Location: LCCOMB_X26_Y24_N10
+\VGA_86_image|Add3~40\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~40_combout\ = (\VGA_86_image|color_shift_count\(20) & (\VGA_86_image|Add3~39\ $ (GND))) # (!\VGA_86_image|color_shift_count\(20) & (!\VGA_86_image|Add3~39\ & VCC))
+-- \VGA_86_image|Add3~41\ = CARRY((\VGA_86_image|color_shift_count\(20) & !\VGA_86_image|Add3~39\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(20),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~39\,
+	combout => \VGA_86_image|Add3~40_combout\,
+	cout => \VGA_86_image|Add3~41\);
+
+-- Location: LCCOMB_X23_Y25_N28
+\VGA_86_image|color_shift_count~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~2_combout\ = (!\VGA_86_image|Equal2~10_combout\ & \VGA_86_image|Add3~40_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|Equal2~10_combout\,
+	datad => \VGA_86_image|Add3~40_combout\,
+	combout => \VGA_86_image|color_shift_count~2_combout\);
+
+-- Location: FF_X23_Y25_N29
+\VGA_86_image|color_shift_count[20]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~2_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(20));
+
+-- Location: LCCOMB_X26_Y24_N12
+\VGA_86_image|Add3~42\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~42_combout\ = (\VGA_86_image|color_shift_count\(21) & (!\VGA_86_image|Add3~41\)) # (!\VGA_86_image|color_shift_count\(21) & ((\VGA_86_image|Add3~41\) # (GND)))
+-- \VGA_86_image|Add3~43\ = CARRY((!\VGA_86_image|Add3~41\) # (!\VGA_86_image|color_shift_count\(21)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(21),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~41\,
+	combout => \VGA_86_image|Add3~42_combout\,
+	cout => \VGA_86_image|Add3~43\);
+
+-- Location: LCCOMB_X23_Y25_N18
+\VGA_86_image|color_shift_count~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|color_shift_count~1_combout\ = (!\VGA_86_image|Equal2~10_combout\ & \VGA_86_image|Add3~42_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|Equal2~10_combout\,
+	datad => \VGA_86_image|Add3~42_combout\,
+	combout => \VGA_86_image|color_shift_count~1_combout\);
+
+-- Location: FF_X23_Y25_N19
+\VGA_86_image|color_shift_count[21]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|color_shift_count~1_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \VGA_86_image|color_shift_count\(21));
+
+-- Location: LCCOMB_X26_Y24_N14
+\VGA_86_image|Add3~44\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~44_combout\ = (\VGA_86_image|color_shift_count\(22) & (\VGA_86_image|Add3~43\ $ (GND))) # (!\VGA_86_image|color_shift_count\(22) & (!\VGA_86_image|Add3~43\ & VCC))
+-- \VGA_86_image|Add3~45\ = CARRY((\VGA_86_image|color_shift_count\(22) & !\VGA_86_image|Add3~43\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \VGA_86_image|color_shift_count\(22),
+	datad => VCC,
+	cin => \VGA_86_image|Add3~43\,
+	combout => \VGA_86_image|Add3~44_combout\,
+	cout => \VGA_86_image|Add3~45\);
+
+-- Location: FF_X26_Y24_N15
+\VGA_86_image|color_shift_count[22]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \VGA_86_image|Add3~44_combout\,
+	ena => \VGA_86_image|ALT_INV_blank_2~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(22));
 
--- Location: LCCOMB_X45_Y27_N16
-\VGA_86_image|Add7~46\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X27_Y24_N2
+\VGA_86_image|Equal2~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~46_combout\ = (\VGA_86_image|color_shift_count\(23) & (!\VGA_86_image|Add7~45\)) # (!\VGA_86_image|color_shift_count\(23) & ((\VGA_86_image|Add7~45\) # (GND)))
--- \VGA_86_image|Add7~47\ = CARRY((!\VGA_86_image|Add7~45\) # (!\VGA_86_image|color_shift_count\(23)))
+-- \VGA_86_image|Equal2~2_combout\ = (!\VGA_86_image|color_shift_count\(22) & (\VGA_86_image|color_shift_count\(20) & (\VGA_86_image|color_shift_count\(21) & !\VGA_86_image|color_shift_count\(19))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(22),
+	datab => \VGA_86_image|color_shift_count\(20),
+	datac => \VGA_86_image|color_shift_count\(21),
+	datad => \VGA_86_image|color_shift_count\(19),
+	combout => \VGA_86_image|Equal2~2_combout\);
+
+-- Location: LCCOMB_X26_Y24_N16
+\VGA_86_image|Add3~46\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~46_combout\ = (\VGA_86_image|color_shift_count\(23) & (!\VGA_86_image|Add3~45\)) # (!\VGA_86_image|color_shift_count\(23) & ((\VGA_86_image|Add3~45\) # (GND)))
+-- \VGA_86_image|Add3~47\ = CARRY((!\VGA_86_image|Add3~45\) # (!\VGA_86_image|color_shift_count\(23)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6248,26 +2839,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|color_shift_count\(23),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~45\,
-	combout => \VGA_86_image|Add7~46_combout\,
-	cout => \VGA_86_image|Add7~47\);
+	cin => \VGA_86_image|Add3~45\,
+	combout => \VGA_86_image|Add3~46_combout\,
+	cout => \VGA_86_image|Add3~47\);
 
--- Location: LCCOMB_X44_Y28_N18
-\VGA_86_image|color_shift_count~9\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~9_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~46_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~46_combout\,
-	combout => \VGA_86_image|color_shift_count~9_combout\);
-
--- Location: FF_X44_Y28_N19
+-- Location: FF_X26_Y24_N17
 \VGA_86_image|color_shift_count[23]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6276,51 +2852,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~9_combout\,
+	d => \VGA_86_image|Add3~46_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(23));
 
--- Location: LCCOMB_X44_Y28_N28
-\VGA_86_image|Equal2~6\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N18
+\VGA_86_image|Add3~48\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal2~6_combout\ = (\VGA_86_image|color_shift_count\(22) & (\VGA_86_image|color_shift_count\(23) & (!\VGA_86_image|color_shift_count\(20) & \VGA_86_image|color_shift_count\(21))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(22),
-	datab => \VGA_86_image|color_shift_count\(23),
-	datac => \VGA_86_image|color_shift_count\(20),
-	datad => \VGA_86_image|color_shift_count\(21),
-	combout => \VGA_86_image|Equal2~6_combout\);
-
--- Location: LCCOMB_X46_Y27_N18
-\VGA_86_image|Equal2~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Equal2~5_combout\ = (\VGA_86_image|color_shift_count\(17) & (\VGA_86_image|color_shift_count\(19) & (!\VGA_86_image|color_shift_count\(18) & \VGA_86_image|color_shift_count\(16))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000100000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(17),
-	datab => \VGA_86_image|color_shift_count\(19),
-	datac => \VGA_86_image|color_shift_count\(18),
-	datad => \VGA_86_image|color_shift_count\(16),
-	combout => \VGA_86_image|Equal2~5_combout\);
-
--- Location: LCCOMB_X45_Y27_N18
-\VGA_86_image|Add7~48\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~48_combout\ = (\VGA_86_image|color_shift_count\(24) & (\VGA_86_image|Add7~47\ $ (GND))) # (!\VGA_86_image|color_shift_count\(24) & (!\VGA_86_image|Add7~47\ & VCC))
--- \VGA_86_image|Add7~49\ = CARRY((\VGA_86_image|color_shift_count\(24) & !\VGA_86_image|Add7~47\))
+-- \VGA_86_image|Add3~48_combout\ = (\VGA_86_image|color_shift_count\(24) & (\VGA_86_image|Add3~47\ $ (GND))) # (!\VGA_86_image|color_shift_count\(24) & (!\VGA_86_image|Add3~47\ & VCC))
+-- \VGA_86_image|Add3~49\ = CARRY((\VGA_86_image|color_shift_count\(24) & !\VGA_86_image|Add3~47\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6330,26 +2872,26 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \VGA_86_image|color_shift_count\(24),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~47\,
-	combout => \VGA_86_image|Add7~48_combout\,
-	cout => \VGA_86_image|Add7~49\);
+	cin => \VGA_86_image|Add3~47\,
+	combout => \VGA_86_image|Add3~48_combout\,
+	cout => \VGA_86_image|Add3~49\);
 
--- Location: LCCOMB_X46_Y27_N4
-\VGA_86_image|color_shift_count~10\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X23_Y25_N16
+\VGA_86_image|color_shift_count~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|color_shift_count~10_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~48_combout\)
+-- \VGA_86_image|color_shift_count~0_combout\ = (!\VGA_86_image|Equal2~10_combout\ & \VGA_86_image|Add3~48_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010100000000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~48_combout\,
-	combout => \VGA_86_image|color_shift_count~10_combout\);
+	datab => \VGA_86_image|Equal2~10_combout\,
+	datac => \VGA_86_image|Add3~48_combout\,
+	combout => \VGA_86_image|color_shift_count~0_combout\);
 
--- Location: FF_X46_Y27_N5
+-- Location: FF_X23_Y25_N17
 \VGA_86_image|color_shift_count[24]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6358,46 +2900,31 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~10_combout\,
+	d => \VGA_86_image|color_shift_count~0_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(24));
 
--- Location: LCCOMB_X45_Y27_N20
-\VGA_86_image|Add7~50\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N20
+\VGA_86_image|Add3~50\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~50_combout\ = (\VGA_86_image|color_shift_count\(25) & (!\VGA_86_image|Add7~49\)) # (!\VGA_86_image|color_shift_count\(25) & ((\VGA_86_image|Add7~49\) # (GND)))
--- \VGA_86_image|Add7~51\ = CARRY((!\VGA_86_image|Add7~49\) # (!\VGA_86_image|color_shift_count\(25)))
+-- \VGA_86_image|Add3~50_combout\ = (\VGA_86_image|color_shift_count\(25) & (!\VGA_86_image|Add3~49\)) # (!\VGA_86_image|color_shift_count\(25) & ((\VGA_86_image|Add3~49\) # (GND)))
+-- \VGA_86_image|Add3~51\ = CARRY((!\VGA_86_image|Add3~49\) # (!\VGA_86_image|color_shift_count\(25)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(25),
+	datab => \VGA_86_image|color_shift_count\(25),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~49\,
-	combout => \VGA_86_image|Add7~50_combout\,
-	cout => \VGA_86_image|Add7~51\);
+	cin => \VGA_86_image|Add3~49\,
+	combout => \VGA_86_image|Add3~50_combout\,
+	cout => \VGA_86_image|Add3~51\);
 
--- Location: LCCOMB_X46_Y27_N6
-\VGA_86_image|color_shift_count~11\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~11_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~50_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~50_combout\,
-	combout => \VGA_86_image|color_shift_count~11_combout\);
-
--- Location: FF_X46_Y27_N7
+-- Location: FF_X26_Y24_N21
 \VGA_86_image|color_shift_count[25]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6406,17 +2933,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~11_combout\,
+	d => \VGA_86_image|Add3~50_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(25));
 
--- Location: LCCOMB_X45_Y27_N22
-\VGA_86_image|Add7~52\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N22
+\VGA_86_image|Add3~52\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~52_combout\ = (\VGA_86_image|color_shift_count\(26) & (\VGA_86_image|Add7~51\ $ (GND))) # (!\VGA_86_image|color_shift_count\(26) & (!\VGA_86_image|Add7~51\ & VCC))
--- \VGA_86_image|Add7~53\ = CARRY((\VGA_86_image|color_shift_count\(26) & !\VGA_86_image|Add7~51\))
+-- \VGA_86_image|Add3~52_combout\ = (\VGA_86_image|color_shift_count\(26) & (\VGA_86_image|Add3~51\ $ (GND))) # (!\VGA_86_image|color_shift_count\(26) & (!\VGA_86_image|Add3~51\ & VCC))
+-- \VGA_86_image|Add3~53\ = CARRY((\VGA_86_image|color_shift_count\(26) & !\VGA_86_image|Add3~51\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6426,11 +2953,11 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \VGA_86_image|color_shift_count\(26),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~51\,
-	combout => \VGA_86_image|Add7~52_combout\,
-	cout => \VGA_86_image|Add7~53\);
+	cin => \VGA_86_image|Add3~51\,
+	combout => \VGA_86_image|Add3~52_combout\,
+	cout => \VGA_86_image|Add3~53\);
 
--- Location: FF_X45_Y27_N23
+-- Location: FF_X26_Y24_N23
 \VGA_86_image|color_shift_count[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6439,17 +2966,34 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~52_combout\,
+	d => \VGA_86_image|Add3~52_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(26));
 
--- Location: LCCOMB_X45_Y27_N24
-\VGA_86_image|Add7~54\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X24_Y24_N0
+\VGA_86_image|Equal2~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~54_combout\ = (\VGA_86_image|color_shift_count\(27) & (!\VGA_86_image|Add7~53\)) # (!\VGA_86_image|color_shift_count\(27) & ((\VGA_86_image|Add7~53\) # (GND)))
--- \VGA_86_image|Add7~55\ = CARRY((!\VGA_86_image|Add7~53\) # (!\VGA_86_image|color_shift_count\(27)))
+-- \VGA_86_image|Equal2~1_combout\ = (!\VGA_86_image|color_shift_count\(25) & (\VGA_86_image|color_shift_count\(24) & (!\VGA_86_image|color_shift_count\(26) & !\VGA_86_image|color_shift_count\(23))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(25),
+	datab => \VGA_86_image|color_shift_count\(24),
+	datac => \VGA_86_image|color_shift_count\(26),
+	datad => \VGA_86_image|color_shift_count\(23),
+	combout => \VGA_86_image|Equal2~1_combout\);
+
+-- Location: LCCOMB_X26_Y24_N24
+\VGA_86_image|Add3~54\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Add3~54_combout\ = (\VGA_86_image|color_shift_count\(27) & (!\VGA_86_image|Add3~53\)) # (!\VGA_86_image|color_shift_count\(27) & ((\VGA_86_image|Add3~53\) # (GND)))
+-- \VGA_86_image|Add3~55\ = CARRY((!\VGA_86_image|Add3~53\) # (!\VGA_86_image|color_shift_count\(27)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6459,26 +3003,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|color_shift_count\(27),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~53\,
-	combout => \VGA_86_image|Add7~54_combout\,
-	cout => \VGA_86_image|Add7~55\);
+	cin => \VGA_86_image|Add3~53\,
+	combout => \VGA_86_image|Add3~54_combout\,
+	cout => \VGA_86_image|Add3~55\);
 
--- Location: LCCOMB_X46_Y27_N0
-\VGA_86_image|color_shift_count~12\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|color_shift_count~12_combout\ = (!\VGA_86_image|Equal2~9_combout\ & \VGA_86_image|Add7~54_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
-	datad => \VGA_86_image|Add7~54_combout\,
-	combout => \VGA_86_image|color_shift_count~12_combout\);
-
--- Location: FF_X46_Y27_N1
+-- Location: FF_X26_Y24_N25
 \VGA_86_image|color_shift_count[27]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6487,34 +3016,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|color_shift_count~12_combout\,
+	d => \VGA_86_image|Add3~54_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(27));
 
--- Location: LCCOMB_X46_Y27_N26
-\VGA_86_image|Equal2~7\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N26
+\VGA_86_image|Add3~56\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal2~7_combout\ = (\VGA_86_image|color_shift_count\(25) & (!\VGA_86_image|color_shift_count\(26) & (\VGA_86_image|color_shift_count\(24) & \VGA_86_image|color_shift_count\(27))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|color_shift_count\(25),
-	datab => \VGA_86_image|color_shift_count\(26),
-	datac => \VGA_86_image|color_shift_count\(24),
-	datad => \VGA_86_image|color_shift_count\(27),
-	combout => \VGA_86_image|Equal2~7_combout\);
-
--- Location: LCCOMB_X45_Y27_N26
-\VGA_86_image|Add7~56\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|Add7~56_combout\ = (\VGA_86_image|color_shift_count\(28) & (\VGA_86_image|Add7~55\ $ (GND))) # (!\VGA_86_image|color_shift_count\(28) & (!\VGA_86_image|Add7~55\ & VCC))
--- \VGA_86_image|Add7~57\ = CARRY((\VGA_86_image|color_shift_count\(28) & !\VGA_86_image|Add7~55\))
+-- \VGA_86_image|Add3~56_combout\ = (\VGA_86_image|color_shift_count\(28) & (\VGA_86_image|Add3~55\ $ (GND))) # (!\VGA_86_image|color_shift_count\(28) & (!\VGA_86_image|Add3~55\ & VCC))
+-- \VGA_86_image|Add3~57\ = CARRY((\VGA_86_image|color_shift_count\(28) & !\VGA_86_image|Add3~55\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6524,11 +3036,11 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \VGA_86_image|color_shift_count\(28),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~55\,
-	combout => \VGA_86_image|Add7~56_combout\,
-	cout => \VGA_86_image|Add7~57\);
+	cin => \VGA_86_image|Add3~55\,
+	combout => \VGA_86_image|Add3~56_combout\,
+	cout => \VGA_86_image|Add3~57\);
 
--- Location: FF_X45_Y27_N27
+-- Location: FF_X26_Y24_N27
 \VGA_86_image|color_shift_count[28]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6537,17 +3049,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~56_combout\,
+	d => \VGA_86_image|Add3~56_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(28));
 
--- Location: LCCOMB_X45_Y27_N28
-\VGA_86_image|Add7~58\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N28
+\VGA_86_image|Add3~58\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~58_combout\ = (\VGA_86_image|color_shift_count\(29) & (!\VGA_86_image|Add7~57\)) # (!\VGA_86_image|color_shift_count\(29) & ((\VGA_86_image|Add7~57\) # (GND)))
--- \VGA_86_image|Add7~59\ = CARRY((!\VGA_86_image|Add7~57\) # (!\VGA_86_image|color_shift_count\(29)))
+-- \VGA_86_image|Add3~58_combout\ = (\VGA_86_image|color_shift_count\(29) & (!\VGA_86_image|Add3~57\)) # (!\VGA_86_image|color_shift_count\(29) & ((\VGA_86_image|Add3~57\) # (GND)))
+-- \VGA_86_image|Add3~59\ = CARRY((!\VGA_86_image|Add3~57\) # (!\VGA_86_image|color_shift_count\(29)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6557,11 +3069,11 @@ GENERIC MAP (
 PORT MAP (
 	datab => \VGA_86_image|color_shift_count\(29),
 	datad => VCC,
-	cin => \VGA_86_image|Add7~57\,
-	combout => \VGA_86_image|Add7~58_combout\,
-	cout => \VGA_86_image|Add7~59\);
+	cin => \VGA_86_image|Add3~57\,
+	combout => \VGA_86_image|Add3~58_combout\,
+	cout => \VGA_86_image|Add3~59\);
 
--- Location: FF_X45_Y27_N29
+-- Location: FF_X26_Y24_N29
 \VGA_86_image|color_shift_count[29]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6570,16 +3082,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~58_combout\,
+	d => \VGA_86_image|Add3~58_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(29));
 
--- Location: LCCOMB_X45_Y27_N30
-\VGA_86_image|Add7~60\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X26_Y24_N30
+\VGA_86_image|Add3~60\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add7~60_combout\ = \VGA_86_image|color_shift_count\(30) $ (!\VGA_86_image|Add7~59\)
+-- \VGA_86_image|Add3~60_combout\ = \VGA_86_image|color_shift_count\(30) $ (!\VGA_86_image|Add3~59\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6588,10 +3100,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \VGA_86_image|color_shift_count\(30),
-	cin => \VGA_86_image|Add7~59\,
-	combout => \VGA_86_image|Add7~60_combout\);
+	cin => \VGA_86_image|Add3~59\,
+	combout => \VGA_86_image|Add3~60_combout\);
 
--- Location: FF_X45_Y27_N31
+-- Location: FF_X26_Y24_N31
 \VGA_86_image|color_shift_count[30]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6600,33 +3112,67 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|Add7~60_combout\,
+	d => \VGA_86_image|Add3~60_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|color_shift_count\(30));
 
--- Location: LCCOMB_X46_Y27_N28
-\VGA_86_image|Equal2~8\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X27_Y24_N0
+\VGA_86_image|Equal2~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal2~8_combout\ = (\VGA_86_image|Equal2~7_combout\ & (!\VGA_86_image|color_shift_count\(30) & (!\VGA_86_image|color_shift_count\(28) & !\VGA_86_image|color_shift_count\(29))))
+-- \VGA_86_image|Equal2~0_combout\ = (!\VGA_86_image|color_shift_count\(27) & (!\VGA_86_image|color_shift_count\(29) & (!\VGA_86_image|color_shift_count\(28) & !\VGA_86_image|color_shift_count\(30))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000010",
+	lut_mask => "0000000000000001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Equal2~7_combout\,
-	datab => \VGA_86_image|color_shift_count\(30),
+	dataa => \VGA_86_image|color_shift_count\(27),
+	datab => \VGA_86_image|color_shift_count\(29),
 	datac => \VGA_86_image|color_shift_count\(28),
-	datad => \VGA_86_image|color_shift_count\(29),
-	combout => \VGA_86_image|Equal2~8_combout\);
+	datad => \VGA_86_image|color_shift_count\(30),
+	combout => \VGA_86_image|Equal2~0_combout\);
 
--- Location: LCCOMB_X44_Y28_N22
-\VGA_86_image|Equal2~9\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X27_Y25_N0
+\VGA_86_image|Equal2~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Equal2~9_combout\ = (\VGA_86_image|Equal2~4_combout\ & (\VGA_86_image|Equal2~6_combout\ & (\VGA_86_image|Equal2~5_combout\ & \VGA_86_image|Equal2~8_combout\)))
+-- \VGA_86_image|Equal2~3_combout\ = (!\VGA_86_image|color_shift_count\(17) & (!\VGA_86_image|color_shift_count\(18) & (\VGA_86_image|color_shift_count\(16) & !\VGA_86_image|color_shift_count\(15))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|color_shift_count\(17),
+	datab => \VGA_86_image|color_shift_count\(18),
+	datac => \VGA_86_image|color_shift_count\(16),
+	datad => \VGA_86_image|color_shift_count\(15),
+	combout => \VGA_86_image|Equal2~3_combout\);
+
+-- Location: LCCOMB_X23_Y25_N0
+\VGA_86_image|Equal2~4\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal2~4_combout\ = (\VGA_86_image|Equal2~2_combout\ & (\VGA_86_image|Equal2~1_combout\ & (\VGA_86_image|Equal2~0_combout\ & \VGA_86_image|Equal2~3_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \VGA_86_image|Equal2~2_combout\,
+	datab => \VGA_86_image|Equal2~1_combout\,
+	datac => \VGA_86_image|Equal2~0_combout\,
+	datad => \VGA_86_image|Equal2~3_combout\,
+	combout => \VGA_86_image|Equal2~4_combout\);
+
+-- Location: LCCOMB_X24_Y19_N28
+\VGA_86_image|Equal2~10\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \VGA_86_image|Equal2~10_combout\ = (\VGA_86_image|Equal2~4_combout\ & (\VGA_86_image|Equal2~5_combout\ & (\VGA_86_image|Equal2~6_combout\ & \VGA_86_image|Equal2~9_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6635,28 +3181,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \VGA_86_image|Equal2~4_combout\,
-	datab => \VGA_86_image|Equal2~6_combout\,
-	datac => \VGA_86_image|Equal2~5_combout\,
-	datad => \VGA_86_image|Equal2~8_combout\,
-	combout => \VGA_86_image|Equal2~9_combout\);
+	datab => \VGA_86_image|Equal2~5_combout\,
+	datac => \VGA_86_image|Equal2~6_combout\,
+	datad => \VGA_86_image|Equal2~9_combout\,
+	combout => \VGA_86_image|Equal2~10_combout\);
 
--- Location: LCCOMB_X46_Y27_N24
+-- Location: LCCOMB_X24_Y19_N26
 \VGA_86_image|rgb_count[11]~34\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_count[11]~34_combout\ = \VGA_86_image|rgb_count\(11) $ (((\VGA_86_image|Equal2~9_combout\ & !\VGA_86_image|blank_2~q\)))
+-- \VGA_86_image|rgb_count[11]~34_combout\ = \VGA_86_image|rgb_count\(11) $ (((!\VGA_86_image|blank_2~q\ & \VGA_86_image|Equal2~10_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000001011010",
+	lut_mask => "1011010010110100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Equal2~9_combout\,
+	dataa => \VGA_86_image|blank_2~q\,
+	datab => \VGA_86_image|Equal2~10_combout\,
 	datac => \VGA_86_image|rgb_count\(11),
-	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|rgb_count[11]~34_combout\);
 
--- Location: FF_X46_Y27_N25
+-- Location: FF_X24_Y19_N27
 \VGA_86_image|rgb_count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6670,7 +3216,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(11));
 
--- Location: LCCOMB_X46_Y29_N4
+-- Location: LCCOMB_X24_Y19_N4
 \VGA_86_image|rgb_count[10]~11\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[10]~11_combout\ = (\VGA_86_image|rgb_count\(11) & (\VGA_86_image|rgb_count\(10) $ (VCC))) # (!\VGA_86_image|rgb_count\(11) & (\VGA_86_image|rgb_count\(10) & VCC))
@@ -6688,22 +3234,24 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[10]~11_combout\,
 	cout => \VGA_86_image|rgb_count[10]~12\);
 
--- Location: LCCOMB_X46_Y29_N30
+-- Location: LCCOMB_X24_Y19_N0
 \VGA_86_image|rgb_count[3]~27\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_count[3]~27_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|Equal2~9_combout\)
+-- \VGA_86_image|rgb_count[3]~27_combout\ = (\VGA_86_image|Equal2~4_combout\ & (\VGA_86_image|Equal2~7_combout\ & (!\VGA_86_image|blank_2~q\ & \VGA_86_image|Equal2~9_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0000100000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \VGA_86_image|Equal2~4_combout\,
+	datab => \VGA_86_image|Equal2~7_combout\,
 	datac => \VGA_86_image|blank_2~q\,
 	datad => \VGA_86_image|Equal2~9_combout\,
 	combout => \VGA_86_image|rgb_count[3]~27_combout\);
 
--- Location: FF_X46_Y29_N5
+-- Location: FF_X24_Y19_N5
 \VGA_86_image|rgb_count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6718,7 +3266,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(10));
 
--- Location: LCCOMB_X46_Y29_N6
+-- Location: LCCOMB_X24_Y19_N6
 \VGA_86_image|rgb_count[9]~13\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[9]~13_combout\ = (\VGA_86_image|rgb_count\(9) & (!\VGA_86_image|rgb_count[10]~12\)) # (!\VGA_86_image|rgb_count\(9) & ((\VGA_86_image|rgb_count[10]~12\) # (GND)))
@@ -6736,7 +3284,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[9]~13_combout\,
 	cout => \VGA_86_image|rgb_count[9]~14\);
 
--- Location: FF_X46_Y29_N7
+-- Location: FF_X24_Y19_N7
 \VGA_86_image|rgb_count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6751,7 +3299,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(9));
 
--- Location: LCCOMB_X46_Y29_N8
+-- Location: LCCOMB_X24_Y19_N8
 \VGA_86_image|rgb_count[8]~15\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[8]~15_combout\ = (\VGA_86_image|rgb_count\(8) & (\VGA_86_image|rgb_count[9]~14\ $ (GND))) # (!\VGA_86_image|rgb_count\(8) & (!\VGA_86_image|rgb_count[9]~14\ & VCC))
@@ -6769,7 +3317,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[8]~15_combout\,
 	cout => \VGA_86_image|rgb_count[8]~16\);
 
--- Location: FF_X46_Y29_N9
+-- Location: FF_X24_Y19_N9
 \VGA_86_image|rgb_count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6784,7 +3332,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(8));
 
--- Location: LCCOMB_X46_Y29_N10
+-- Location: LCCOMB_X24_Y19_N10
 \VGA_86_image|rgb_count[7]~17\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[7]~17_combout\ = (\VGA_86_image|rgb_count\(7) & (!\VGA_86_image|rgb_count[8]~16\)) # (!\VGA_86_image|rgb_count\(7) & ((\VGA_86_image|rgb_count[8]~16\) # (GND)))
@@ -6792,17 +3340,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(7),
+	datab => \VGA_86_image|rgb_count\(7),
 	datad => VCC,
 	cin => \VGA_86_image|rgb_count[8]~16\,
 	combout => \VGA_86_image|rgb_count[7]~17_combout\,
 	cout => \VGA_86_image|rgb_count[7]~18\);
 
--- Location: FF_X46_Y29_N11
+-- Location: FF_X24_Y19_N11
 \VGA_86_image|rgb_count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6817,7 +3365,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(7));
 
--- Location: LCCOMB_X46_Y29_N12
+-- Location: LCCOMB_X24_Y19_N12
 \VGA_86_image|rgb_count[6]~19\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[6]~19_combout\ = (\VGA_86_image|rgb_count\(6) & (\VGA_86_image|rgb_count[7]~18\ $ (GND))) # (!\VGA_86_image|rgb_count\(6) & (!\VGA_86_image|rgb_count[7]~18\ & VCC))
@@ -6835,7 +3383,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[6]~19_combout\,
 	cout => \VGA_86_image|rgb_count[6]~20\);
 
--- Location: FF_X46_Y29_N13
+-- Location: FF_X24_Y19_N13
 \VGA_86_image|rgb_count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6850,7 +3398,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(6));
 
--- Location: LCCOMB_X46_Y29_N14
+-- Location: LCCOMB_X24_Y19_N14
 \VGA_86_image|rgb_count[5]~21\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[5]~21_combout\ = (\VGA_86_image|rgb_count\(5) & (!\VGA_86_image|rgb_count[6]~20\)) # (!\VGA_86_image|rgb_count\(5) & ((\VGA_86_image|rgb_count[6]~20\) # (GND)))
@@ -6868,7 +3416,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[5]~21_combout\,
 	cout => \VGA_86_image|rgb_count[5]~22\);
 
--- Location: FF_X46_Y29_N15
+-- Location: FF_X24_Y19_N15
 \VGA_86_image|rgb_count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6883,7 +3431,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(5));
 
--- Location: LCCOMB_X46_Y29_N16
+-- Location: LCCOMB_X24_Y19_N16
 \VGA_86_image|rgb_count[4]~23\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[4]~23_combout\ = (\VGA_86_image|rgb_count\(4) & (\VGA_86_image|rgb_count[5]~22\ $ (GND))) # (!\VGA_86_image|rgb_count\(4) & (!\VGA_86_image|rgb_count[5]~22\ & VCC))
@@ -6891,17 +3439,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|rgb_count\(4),
+	dataa => \VGA_86_image|rgb_count\(4),
 	datad => VCC,
 	cin => \VGA_86_image|rgb_count[5]~22\,
 	combout => \VGA_86_image|rgb_count[4]~23_combout\,
 	cout => \VGA_86_image|rgb_count[4]~24\);
 
--- Location: FF_X46_Y29_N17
+-- Location: FF_X24_Y19_N17
 \VGA_86_image|rgb_count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6916,7 +3464,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(4));
 
--- Location: LCCOMB_X46_Y29_N18
+-- Location: LCCOMB_X24_Y19_N18
 \VGA_86_image|rgb_count[3]~25\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[3]~25_combout\ = (\VGA_86_image|rgb_count\(3) & (!\VGA_86_image|rgb_count[4]~24\)) # (!\VGA_86_image|rgb_count\(3) & ((\VGA_86_image|rgb_count[4]~24\) # (GND)))
@@ -6934,7 +3482,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[3]~25_combout\,
 	cout => \VGA_86_image|rgb_count[3]~26\);
 
--- Location: FF_X46_Y29_N19
+-- Location: FF_X24_Y19_N19
 \VGA_86_image|rgb_count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6949,38 +3497,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(3));
 
--- Location: LCCOMB_X50_Y29_N14
-\VGA_86_image|Add4~14\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X23_Y19_N8
+\VGA_86_image|rgb_2[3]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|Add4~14_combout\ = \VGA_86_image|Add4~13\
+-- \VGA_86_image|rgb_2[3]~feeder_combout\ = \VGA_86_image|rgb_count\(3)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011110000",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	cin => \VGA_86_image|Add4~13\,
-	combout => \VGA_86_image|Add4~14_combout\);
-
--- Location: LCCOMB_X49_Y29_N30
-\VGA_86_image|rgb_2~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~0_combout\ = \VGA_86_image|rgb_count\(3) $ (((\VGA_86_image|process_1~15_combout\ & (!\VGA_86_image|LessThan8~16_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011010010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|process_1~15_combout\,
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|rgb_count\(3),
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~0_combout\);
+	datad => \VGA_86_image|rgb_count\(3),
+	combout => \VGA_86_image|rgb_2[3]~feeder_combout\);
 
--- Location: FF_X49_Y29_N31
+-- Location: FF_X23_Y19_N9
 \VGA_86_image|rgb_2[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6989,28 +3520,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~0_combout\,
+	d => \VGA_86_image|rgb_2[3]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(3));
 
--- Location: LCCOMB_X49_Y29_N8
+-- Location: LCCOMB_X23_Y19_N24
 \VGA_86_image|r_out~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|r_out~0_combout\ = (\VGA_86_image|rgb_2\(3) & !\VGA_86_image|blank_2~q\)
+-- \VGA_86_image|r_out~0_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|rgb_2\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	datab => \VGA_86_image|blank_2~q\,
 	datac => \VGA_86_image|rgb_2\(3),
-	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|r_out~0_combout\);
 
--- Location: FF_X49_Y29_N9
+-- Location: FF_X23_Y19_N25
 \VGA_86_image|r_out[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7024,7 +3555,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|r_out\(3));
 
--- Location: LCCOMB_X46_Y29_N20
+-- Location: LCCOMB_X24_Y19_N20
 \VGA_86_image|rgb_count[2]~28\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[2]~28_combout\ = (\VGA_86_image|rgb_count\(2) & (\VGA_86_image|rgb_count[3]~26\ $ (GND))) # (!\VGA_86_image|rgb_count\(2) & (!\VGA_86_image|rgb_count[3]~26\ & VCC))
@@ -7042,7 +3573,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[2]~28_combout\,
 	cout => \VGA_86_image|rgb_count[2]~29\);
 
--- Location: FF_X46_Y29_N21
+-- Location: FF_X24_Y19_N21
 \VGA_86_image|rgb_count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7057,24 +3588,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(2));
 
--- Location: LCCOMB_X47_Y29_N0
-\VGA_86_image|rgb_2~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~1_combout\ = \VGA_86_image|rgb_count\(2) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(2),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~1_combout\);
-
--- Location: FF_X47_Y29_N1
+-- Location: FF_X23_Y19_N11
 \VGA_86_image|rgb_2[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7083,28 +3597,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~1_combout\,
+	asdata => \VGA_86_image|rgb_count\(2),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(2));
 
--- Location: LCCOMB_X46_Y29_N0
+-- Location: LCCOMB_X23_Y19_N26
 \VGA_86_image|r_out~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|r_out~1_combout\ = (\VGA_86_image|rgb_2\(2) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110000001100",
+	lut_mask => "0000101000001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \VGA_86_image|rgb_2\(2),
+	dataa => \VGA_86_image|rgb_2\(2),
 	datac => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|r_out~1_combout\);
 
--- Location: FF_X46_Y29_N1
+-- Location: FF_X23_Y19_N27
 \VGA_86_image|r_out[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7118,7 +3633,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|r_out\(2));
 
--- Location: LCCOMB_X46_Y29_N22
+-- Location: LCCOMB_X24_Y19_N22
 \VGA_86_image|rgb_count[1]~30\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[1]~30_combout\ = (\VGA_86_image|rgb_count\(1) & (!\VGA_86_image|rgb_count[2]~29\)) # (!\VGA_86_image|rgb_count\(1) & ((\VGA_86_image|rgb_count[2]~29\) # (GND)))
@@ -7136,7 +3651,7 @@ PORT MAP (
 	combout => \VGA_86_image|rgb_count[1]~30_combout\,
 	cout => \VGA_86_image|rgb_count[1]~31\);
 
--- Location: FF_X46_Y29_N23
+-- Location: FF_X24_Y19_N23
 \VGA_86_image|rgb_count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7151,24 +3666,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(1));
 
--- Location: LCCOMB_X49_Y29_N0
-\VGA_86_image|rgb_2~2\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X23_Y19_N28
+\VGA_86_image|rgb_2[1]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_2~2_combout\ = \VGA_86_image|rgb_count\(1) $ (((\VGA_86_image|process_1~15_combout\ & (!\VGA_86_image|LessThan8~16_combout\ & !\VGA_86_image|Add4~14_combout\))))
+-- \VGA_86_image|rgb_2[1]~feeder_combout\ = \VGA_86_image|rgb_count\(1)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011010010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|process_1~15_combout\,
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|rgb_count\(1),
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~2_combout\);
+	datad => \VGA_86_image|rgb_count\(1),
+	combout => \VGA_86_image|rgb_2[1]~feeder_combout\);
 
--- Location: FF_X49_Y29_N1
+-- Location: FF_X23_Y19_N29
 \VGA_86_image|rgb_2[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7177,28 +3689,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~2_combout\,
+	d => \VGA_86_image|rgb_2[1]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(1));
 
--- Location: LCCOMB_X49_Y29_N10
+-- Location: LCCOMB_X23_Y19_N20
 \VGA_86_image|r_out~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|r_out~2_combout\ = (\VGA_86_image|rgb_2\(1) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011001100",
+	lut_mask => "0000110000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	datab => \VGA_86_image|rgb_2\(1),
-	datad => \VGA_86_image|blank_2~q\,
+	datac => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|r_out~2_combout\);
 
--- Location: FF_X49_Y29_N11
+-- Location: FF_X23_Y19_N21
 \VGA_86_image|r_out[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7212,7 +3724,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|r_out\(1));
 
--- Location: LCCOMB_X46_Y29_N24
+-- Location: LCCOMB_X24_Y19_N24
 \VGA_86_image|rgb_count[0]~32\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|rgb_count[0]~32_combout\ = \VGA_86_image|rgb_count[1]~31\ $ (!\VGA_86_image|rgb_count\(0))
@@ -7227,7 +3739,7 @@ PORT MAP (
 	cin => \VGA_86_image|rgb_count[1]~31\,
 	combout => \VGA_86_image|rgb_count[0]~32_combout\);
 
--- Location: FF_X46_Y29_N25
+-- Location: FF_X24_Y19_N25
 \VGA_86_image|rgb_count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7242,24 +3754,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_count\(0));
 
--- Location: LCCOMB_X47_Y29_N2
-\VGA_86_image|rgb_2~3\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X23_Y19_N6
+\VGA_86_image|rgb_2[0]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_2~3_combout\ = \VGA_86_image|rgb_count\(0) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
+-- \VGA_86_image|rgb_2[0]~feeder_combout\ = \VGA_86_image|rgb_count\(0)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010011010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(0),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~3_combout\);
+	datad => \VGA_86_image|rgb_count\(0),
+	combout => \VGA_86_image|rgb_2[0]~feeder_combout\);
 
--- Location: FF_X47_Y29_N3
+-- Location: FF_X23_Y19_N7
 \VGA_86_image|rgb_2[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7268,28 +3777,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~3_combout\,
+	d => \VGA_86_image|rgb_2[0]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(0));
 
--- Location: LCCOMB_X46_Y29_N2
+-- Location: LCCOMB_X23_Y19_N22
 \VGA_86_image|r_out~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|r_out~3_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|rgb_2\(0))
+-- \VGA_86_image|r_out~3_combout\ = (\VGA_86_image|rgb_2\(0) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0000101000001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \VGA_86_image|rgb_2\(0),
 	datac => \VGA_86_image|blank_2~q\,
-	datad => \VGA_86_image|rgb_2\(0),
 	combout => \VGA_86_image|r_out~3_combout\);
 
--- Location: FF_X46_Y29_N3
+-- Location: FF_X23_Y19_N23
 \VGA_86_image|r_out[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7303,24 +3812,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|r_out\(0));
 
--- Location: LCCOMB_X47_Y29_N28
-\VGA_86_image|rgb_2~4\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~4_combout\ = \VGA_86_image|rgb_count\(7) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(7),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~4_combout\);
-
--- Location: FF_X47_Y29_N29
+-- Location: FF_X23_Y19_N17
 \VGA_86_image|rgb_2[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7329,28 +3821,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~4_combout\,
+	asdata => \VGA_86_image|rgb_count\(7),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(7));
 
--- Location: LCCOMB_X46_Y27_N8
+-- Location: LCCOMB_X23_Y19_N0
 \VGA_86_image|g_out~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|g_out~0_combout\ = (\VGA_86_image|rgb_2\(7) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0000110000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|rgb_2\(7),
-	datad => \VGA_86_image|blank_2~q\,
+	datab => \VGA_86_image|rgb_2\(7),
+	datac => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|g_out~0_combout\);
 
--- Location: FF_X46_Y27_N9
+-- Location: FF_X23_Y19_N1
 \VGA_86_image|g_out[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7364,24 +3857,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|g_out\(3));
 
--- Location: LCCOMB_X47_Y29_N30
-\VGA_86_image|rgb_2~5\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~5_combout\ = \VGA_86_image|rgb_count\(6) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(6),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~5_combout\);
-
--- Location: FF_X47_Y29_N31
+-- Location: FF_X23_Y19_N3
 \VGA_86_image|rgb_2[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7390,28 +3866,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~5_combout\,
+	asdata => \VGA_86_image|rgb_count\(6),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(6));
 
--- Location: LCCOMB_X46_Y27_N10
+-- Location: LCCOMB_X23_Y19_N18
 \VGA_86_image|g_out~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|g_out~1_combout\ = (\VGA_86_image|rgb_2\(6) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010101010",
+	lut_mask => "0000110000001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|rgb_2\(6),
-	datad => \VGA_86_image|blank_2~q\,
+	datab => \VGA_86_image|rgb_2\(6),
+	datac => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|g_out~1_combout\);
 
--- Location: FF_X46_Y27_N11
+-- Location: FF_X23_Y19_N19
 \VGA_86_image|g_out[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7425,24 +3902,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|g_out\(2));
 
--- Location: LCCOMB_X49_Y29_N2
-\VGA_86_image|rgb_2~6\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~6_combout\ = \VGA_86_image|rgb_count\(5) $ (((\VGA_86_image|process_1~15_combout\ & (!\VGA_86_image|LessThan8~16_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011010010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|process_1~15_combout\,
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|rgb_count\(5),
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~6_combout\);
-
--- Location: FF_X49_Y29_N3
+-- Location: FF_X23_Y19_N13
 \VGA_86_image|rgb_2[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7451,28 +3911,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~6_combout\,
+	asdata => \VGA_86_image|rgb_count\(5),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(5));
 
--- Location: LCCOMB_X45_Y29_N16
+-- Location: LCCOMB_X23_Y19_N4
 \VGA_86_image|g_out~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|g_out~2_combout\ = (\VGA_86_image|rgb_2\(5) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0000101000001010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|rgb_2\(5),
-	datad => \VGA_86_image|blank_2~q\,
+	dataa => \VGA_86_image|rgb_2\(5),
+	datac => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|g_out~2_combout\);
 
--- Location: FF_X45_Y29_N17
+-- Location: FF_X23_Y19_N5
 \VGA_86_image|g_out[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7486,24 +3947,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|g_out\(1));
 
--- Location: LCCOMB_X47_Y29_N26
-\VGA_86_image|rgb_2~7\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~7_combout\ = \VGA_86_image|rgb_count\(4) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010101010011010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(4),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~7_combout\);
-
--- Location: FF_X47_Y29_N27
+-- Location: FF_X23_Y19_N31
 \VGA_86_image|rgb_2[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7512,28 +3956,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~7_combout\,
+	asdata => \VGA_86_image|rgb_count\(4),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(4));
 
--- Location: LCCOMB_X46_Y27_N20
+-- Location: LCCOMB_X23_Y19_N14
 \VGA_86_image|g_out~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|g_out~3_combout\ = (\VGA_86_image|rgb_2\(4) & !\VGA_86_image|blank_2~q\)
+-- \VGA_86_image|g_out~3_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|rgb_2\(4))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000010101010",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|rgb_2\(4),
-	datad => \VGA_86_image|blank_2~q\,
+	datab => \VGA_86_image|blank_2~q\,
+	datac => \VGA_86_image|rgb_2\(4),
 	combout => \VGA_86_image|g_out~3_combout\);
 
--- Location: FF_X46_Y27_N21
+-- Location: FF_X23_Y19_N15
 \VGA_86_image|g_out[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7547,24 +3992,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|g_out\(0));
 
--- Location: LCCOMB_X49_Y29_N4
-\VGA_86_image|rgb_2~8\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \VGA_86_image|rgb_2~8_combout\ = \VGA_86_image|rgb_count\(11) $ (((\VGA_86_image|process_1~15_combout\ & (!\VGA_86_image|LessThan8~16_combout\ & !\VGA_86_image|Add4~14_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011010010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \VGA_86_image|process_1~15_combout\,
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|rgb_count\(11),
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~8_combout\);
-
--- Location: FF_X49_Y29_N5
+-- Location: FF_X21_Y18_N25
 \VGA_86_image|rgb_2[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7573,28 +4001,29 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~8_combout\,
+	asdata => \VGA_86_image|rgb_count\(11),
+	sload => VCC,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(11));
 
--- Location: LCCOMB_X49_Y29_N12
+-- Location: LCCOMB_X21_Y18_N16
 \VGA_86_image|b_out~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|b_out~0_combout\ = (\VGA_86_image|rgb_2\(11) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0000000011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|rgb_2\(11),
+	datab => \VGA_86_image|rgb_2\(11),
 	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|b_out~0_combout\);
 
--- Location: FF_X49_Y29_N13
+-- Location: FF_X21_Y18_N17
 \VGA_86_image|b_out[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7608,24 +4037,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|b_out\(3));
 
--- Location: LCCOMB_X47_Y29_N4
-\VGA_86_image|rgb_2~9\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y18_N10
+\VGA_86_image|rgb_2[10]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_2~9_combout\ = \VGA_86_image|rgb_count\(10) $ (((!\VGA_86_image|Add4~14_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|LessThan8~16_combout\))))
+-- \VGA_86_image|rgb_2[10]~feeder_combout\ = \VGA_86_image|rgb_count\(10)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100110010011100",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|Add4~14_combout\,
-	datab => \VGA_86_image|rgb_count\(10),
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|LessThan8~16_combout\,
-	combout => \VGA_86_image|rgb_2~9_combout\);
+	datad => \VGA_86_image|rgb_count\(10),
+	combout => \VGA_86_image|rgb_2[10]~feeder_combout\);
 
--- Location: FF_X47_Y29_N5
+-- Location: FF_X21_Y18_N11
 \VGA_86_image|rgb_2[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7634,28 +4060,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~9_combout\,
+	d => \VGA_86_image|rgb_2[10]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(10));
 
--- Location: LCCOMB_X46_Y29_N26
+-- Location: LCCOMB_X21_Y18_N2
 \VGA_86_image|b_out~1\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|b_out~1_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|rgb_2\(10))
+-- \VGA_86_image|b_out~1_combout\ = (\VGA_86_image|rgb_2\(10) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0000000010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|blank_2~q\,
-	datad => \VGA_86_image|rgb_2\(10),
+	dataa => \VGA_86_image|rgb_2\(10),
+	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|b_out~1_combout\);
 
--- Location: FF_X46_Y29_N27
+-- Location: FF_X21_Y18_N3
 \VGA_86_image|b_out[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7669,24 +4095,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|b_out\(2));
 
--- Location: LCCOMB_X49_Y29_N14
-\VGA_86_image|rgb_2~10\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y18_N12
+\VGA_86_image|rgb_2[9]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_2~10_combout\ = \VGA_86_image|rgb_count\(9) $ (((\VGA_86_image|process_1~15_combout\ & (!\VGA_86_image|LessThan8~16_combout\ & !\VGA_86_image|Add4~14_combout\))))
+-- \VGA_86_image|rgb_2[9]~feeder_combout\ = \VGA_86_image|rgb_count\(9)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011010010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|process_1~15_combout\,
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|rgb_count\(9),
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~10_combout\);
+	datad => \VGA_86_image|rgb_count\(9),
+	combout => \VGA_86_image|rgb_2[9]~feeder_combout\);
 
--- Location: FF_X49_Y29_N15
+-- Location: FF_X21_Y18_N13
 \VGA_86_image|rgb_2[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7695,28 +4118,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~10_combout\,
+	d => \VGA_86_image|rgb_2[9]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(9));
 
--- Location: LCCOMB_X46_Y27_N14
+-- Location: LCCOMB_X21_Y18_N20
 \VGA_86_image|b_out~2\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \VGA_86_image|b_out~2_combout\ = (\VGA_86_image|rgb_2\(9) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011110000",
+	lut_mask => "0000000010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|rgb_2\(9),
+	dataa => \VGA_86_image|rgb_2\(9),
 	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|b_out~2_combout\);
 
--- Location: FF_X46_Y27_N15
+-- Location: FF_X21_Y18_N21
 \VGA_86_image|b_out[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7730,24 +4153,21 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \VGA_86_image|b_out\(1));
 
--- Location: LCCOMB_X47_Y29_N6
-\VGA_86_image|rgb_2~11\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X21_Y18_N6
+\VGA_86_image|rgb_2[8]~feeder\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|rgb_2~11_combout\ = \VGA_86_image|rgb_count\(8) $ (((!\VGA_86_image|LessThan8~16_combout\ & (\VGA_86_image|process_1~15_combout\ & !\VGA_86_image|Add4~14_combout\))))
+-- \VGA_86_image|rgb_2[8]~feeder_combout\ = \VGA_86_image|rgb_count\(8)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101010011010",
+	lut_mask => "1111111100000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \VGA_86_image|rgb_count\(8),
-	datab => \VGA_86_image|LessThan8~16_combout\,
-	datac => \VGA_86_image|process_1~15_combout\,
-	datad => \VGA_86_image|Add4~14_combout\,
-	combout => \VGA_86_image|rgb_2~11_combout\);
+	datad => \VGA_86_image|rgb_count\(8),
+	combout => \VGA_86_image|rgb_2[8]~feeder_combout\);
 
--- Location: FF_X47_Y29_N7
+-- Location: FF_X21_Y18_N7
 \VGA_86_image|rgb_2[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -7756,28 +4176,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clock_40_inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \VGA_86_image|rgb_2~11_combout\,
+	d => \VGA_86_image|rgb_2[8]~feeder_combout\,
 	ena => \VGA_86_image|ALT_INV_blank_2~q\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \VGA_86_image|rgb_2\(8));
 
--- Location: LCCOMB_X46_Y29_N28
+-- Location: LCCOMB_X21_Y18_N30
 \VGA_86_image|b_out~3\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \VGA_86_image|b_out~3_combout\ = (!\VGA_86_image|blank_2~q\ & \VGA_86_image|rgb_2\(8))
+-- \VGA_86_image|b_out~3_combout\ = (\VGA_86_image|rgb_2\(8) & !\VGA_86_image|blank_2~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100000000",
+	lut_mask => "0000000010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \VGA_86_image|blank_2~q\,
-	datad => \VGA_86_image|rgb_2\(8),
+	dataa => \VGA_86_image|rgb_2\(8),
+	datad => \VGA_86_image|blank_2~q\,
 	combout => \VGA_86_image|b_out~3_combout\);
 
--- Location: FF_X46_Y29_N29
+-- Location: FF_X21_Y18_N31
 \VGA_86_image|b_out[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (

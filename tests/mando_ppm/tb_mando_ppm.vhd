@@ -22,8 +22,8 @@ architecture test_bench of tb_mando_ppm is
     signal s_val : sfixed(3 downto -3) := "0101010" ;
     signal u_val : ufixed(3 downto -3) := "0011000" ;
     
-    constant width_pix  : natural range 0 to 1920 := 160;  -- MUST ALSO CHANGE ppm file header 
-    constant height_pix : natural range 0 to 1080 := 120;  -- width & height
+    constant width_pix  : natural range 0 to 1920 := 80;  -- MUST ALSO CHANGE ppm file header 
+    constant height_pix : natural range 0 to 1080 := 60;  -- width & height
     
     constant max_iters  : natural range 0 to 500  := 30;
     constant ppm_colors : natural range 0 to 15   := 15;
@@ -55,8 +55,8 @@ architecture test_bench of tb_mando_ppm is
         variable iters_cnt     : natural := 0 ;--range 0 to max_iters := 0 ;
         variable iters_cnt_slv : std_logic_vector(0 to 31) ;
     
-        constant min_x     : float32 := x_coord - (x_range / 2.0 );
-        constant max_y     : float32 := y_coord + (y_range / 2.0 );    
+        constant min_x     : float32 := x_coord - (x_range / 2 );
+        constant max_y     : float32 := y_coord + (y_range / 2 );    
     
         variable old_x     : float32 ; -- related to x_coord
         variable old_y     : float32 ; -- related to y_coord
@@ -83,7 +83,7 @@ architecture test_bench of tb_mando_ppm is
 	  begin
         -- ppm file header
 		write(brot_out_file, "P3" & LF); -- magic number, , full color PPM, ASCII characters
-		write(brot_out_file, "160 120" & LF); -- image width & height
+		write(brot_out_file, "80 60" & LF); -- image width & height
 		write(brot_out_file, "15" & LF); -- max colors
         
 --        write(brot_out_file, LF & "float_test" & LF);  -- -1.359375 correct

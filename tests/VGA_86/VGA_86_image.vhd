@@ -10,6 +10,15 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 use ieee.std_logic_unsigned.all;
 
+ --these two ARE mutually exclusive yah know !
+--use ieee.fixed_pkg.all; -- use for GHDL sim
+--use ieee.float_pkg.all;
+
+library floatfixlib;  -- use for quartus / questa sim
+use floatfixlib.fixed_pkg.all;
+use floatfixlib.float_pkg.all;
+
+
 entity VGA_86_image is
 
     generic(
@@ -48,6 +57,10 @@ architecture behave of VGA_86_image is
 
     constant h_active  : natural := (h_pixels - (h_f_porch + h_pulse + h_b_porch) );
     constant v_active  : natural := (v_lines - (v_f_porch + v_pulse + v_b_porch) );
+    constant width_pix  : natural range 0 to 1920 := 800;  -- width & height, critically related to the generic settings
+    constant height_pix : natural range 0 to 1080 := 600;
+    constant max_iters  : natural range 0 to 500  := 10;
+
 
     signal   color_shift_count : natural := 0 ;
 
@@ -69,7 +82,10 @@ architecture behave of VGA_86_image is
     signal h_sync_2, v_sync_2, blank_2 : std_logic;
 
     signal rgb_2     : std_logic_vector(0 to 11);
-
+    
+    constant x_range    : float32 := to_float(4.0);
+    constant y_range    : float32 := to_float(3.0);
+    
 
   begin
 
@@ -77,6 +93,10 @@ architecture behave of VGA_86_image is
   
     
     process(clock) -- primary counters with reset
+        
+
+
+    
       begin
         if rising_edge(clock) then
 
@@ -114,7 +134,36 @@ architecture behave of VGA_86_image is
  
  
 -- pipeline-stages for generation of image content and sync-signals
-    process(clock) 
+    process(clock)
+    
+        variable x_coord   : float32 := to_float(-0.5); -- float32, same as "float (8 downto –23)" --(5 downto -7) ;
+        variable y_coord   : float32 := to_float(0.0);    
+        variable esc       : float32 ;
+        
+        variable iters_cnt     : natural := 0 ;--range 0 to max_iters := 0 ;
+        variable iters_cnt_slv : std_logic_vector(0 to 31) ;
+    
+        constant min_x     : float32 := x_coord - (x_range / 2.0 );
+        constant max_y     : float32 := y_coord + (y_range / 2.0 );    
+    
+        variable old_x     : float32 ; -- related to x_coord
+        variable old_y     : float32 ; -- related to y_coord
+        variable a_comp    : float32 ;
+        variable b_comp    : float32 ;
+        variable distance  : float32 ;
+        variable dist_int  : integer := 0 ;
+        variable dist_slv  : std_logic_vector(0 to 31) ;
+        
+        variable dist_red, dist_grn, dist_blu : std_logic_vector(0 to 3) ;
+
+
+        variable dist_str  : string(1 to 8) := "distress"; 
+
+		variable brot_red  : natural range 0 to 15 := 6 ;
+        variable brot_grn  : natural range 0 to 15 := 6 ;
+        variable brot_blu  : natural range 0 to 15 := 6 ;
+        
+
       begin
         if rising_edge(clock) then
       
@@ -139,6 +188,13 @@ architecture behave of VGA_86_image is
    
           if(h_count < h_active AND v_count < v_active) then -- blanking time, required, blank when not active
             blank_1 <= '0'; -- blanking off
+            
+           -- old_x := h_count ; -- natural
+            --old_y := v_count ;
+           -- x_coord := min_x + to_float(old_x);--+ (col * x_range / width_pix) ;
+
+            
+
           else                                                
             blank_1 <= '1'; -- blanking on, rgb black
           end if;
@@ -152,19 +208,41 @@ architecture behave of VGA_86_image is
             
             if blank_2 = '0' then -- not blanking
 
-                
-              if 
-                h_count >= square_h_pos + 100 AND
-                h_count <= square_h_pos + 200 AND
-                v_count >= square_v_pos + 100 AND
-                v_count <= square_v_pos + 200 
-              then
-                rgb_2 <= NOT rgb_count ; --"001100110111" ; -- blurple
-              
-              else
+               -- old_y   := to_float(v_count) ;
+
+            
                 rgb_2 <= rgb_count ;
                 
-              end if;
+                
+              --  for row in 0 to (height_pix - 1) loop
+
+                 --   for col in 0 to (width_pix - 1) loop
+
+
+                      --  a_comp    := (x_coord * x_coord); -- - (y_coord * y_coord) ;
+                        
+                        for iters in 0 to max_iters loop  -- not including a "+ 1" equivs the - 1 from python
+                            iters_cnt := iters;
+                           -- a_comp    :=  x_coord * x_coord ; -- (x_coord * x_coord) - (y_coord * y_coord) ; --real component of z^2
+                        end loop;  -- iters
+                        
+                        
+                        
+                 --   end loop;  -- col
+               -- end loop;  -- row
+                
+--              if 
+--                h_count >= square_h_pos + 100 AND
+--                h_count <= square_h_pos + 200 AND
+--                v_count >= square_v_pos + 100 AND
+--                v_count <= square_v_pos + 200 
+--              then
+--                rgb_2 <= NOT rgb_count ; --"001100110111" ; -- blurple
+--              
+--              else
+--                rgb_2 <= rgb_count ;
+--                
+--              end if;
 
                 
                 if color_shift_count = 20000000 then  -- 20000000 
