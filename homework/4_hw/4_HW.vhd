@@ -98,10 +98,51 @@ function get_hex_digit (
     digit     :  hex_digit;
     lamp_mode :  lamp_configuration := default_lamp_config
 ) return seven_segment_config;
-is
+  is
     variable ret : seven_segment_config;
   begin
     ret := SEVEN_SEGMENT_TABLE(digit);
     return ret;
 end function;
 
+
+-- 4_HW_Quest_5
+function lamps_off (
+    lamp_mode : lamp_configuration := default_lamp_config
+) return seven_segment_config
+  is
+    variable off_state : std_logic;
+  begin
+  -- Common anode off = 1 (v+)
+  -- Common cathode off = 0 (grounded)
+    if lamp_mode = common_anode then
+        off_state := '0';
+    else
+        off_state := '1';
+    end if;
+
+    return (
+        a => off_state, 
+        b => off_state, 
+        c => off_state, 
+        d => off_state, 
+        e => off_state,
+        f => off_state, 
+        g => off_state, 
+        dp => off_state
+    );
+
+end function lamps_off;
+
+-- 4_HW_Quest_6
+-- TCL array
+-- set sseg_lamps {
+--     {PIN_C14 PIN_E15 PIN_C15 PIN_C16 PIN_E16 PIN_D17 PIN_C17 PIN_D15} -- HEX0
+--     {PIN_C18 PIN_D18 PIN_E18 PIN_B16 PIN_A17 PIN_A18 PIN_B17 PIN_A16} -- HEX1
+--     {PIN_B20 PIN_A20 PIN_B19 PIN_A21 PIN_B21 PIN_C22 PIN_B22 PIN_A19} -- HEX2
+--     {PIN_F21 PIN_E22 PIN_E21 PIN_C19 PIN_C20 PIN_D19 PIN_E17 PIN_D22} -- HEX3
+--     {PIN_F18 PIN_E20 PIN_E19 PIN_J18 PIN_H19 PIN_F19 PIN_F20 PIN_F17} -- HEX4
+--     {PIN_J20 PIN_K20 PIN_L18 PIN_N18 PIN_M20 PIN_N19 PIN_N20 PIN_L19} -- HEX5
+-- }
+
+-- 4_HW_Quest_7
