@@ -1,20 +1,22 @@
 -- 4_HW_Quest_1.a
-  type seven_segment_config is record
-      a   : std_logic;
-      b   : std_logic;
-      c   : std_logic;
-      d   : std_logic;
-      e   : std_logic;
-      f   : std_logic;
-      g   : std_logic;
-      dp  : std_logic;
-    end record seven_segment_config;
+type seven_segment_config is record
+    a   : std_logic;
+    b   : std_logic;
+    c   : std_logic;
+    d   : std_logic;
+    e   : std_logic;
+    f   : std_logic;
+    g   : std_logic;
+    dp  : std_logic;
+end record seven_segment_config;
+
 -- 4_HW_Quest_1.b
-  type seven_seg_config_arr is array(natural range <>) of seven_segment_config;
+type seven_seg_config_arr is array(natural range <>) of seven_segment_config;
+
 
 -- 4_HW_Quest_2
-  type lamp_configuration is (common_anode, common_cathode);
-  constant default_lamp_config : lamp_configuration := common_anode;
+type lamp_configuration is (common_anode, common_cathode);
+constant default_lamp_config : lamp_configuration := common_anode;
   -- Pin assignments will be handled at the top level. Not going to create a record here for it.
   -- Pin mapping belowl
   ------     set_location_assignment PIN_C14 -to HEX0[0]
@@ -66,4 +68,40 @@
   ------     set_location_assignment PIN_N20 -to HEX5[6]
   ------     set_location_assignment PIN_L19 -to HEX5[7]
 
-  
+
+-- 4_HW_Quest_3
+constant SEVEN_SEGMENT_TALBE : seven_seg_config_arr := (
+    (a => '1', b => '1', c => '1', d => '1', e => '1', f => '1', g => '0', dp => '0'), -- 0
+    (a => '0', b => '1', c => '1', d => '0', e => '0', f => '0', g => '0', dp => '0'), -- 1
+    (a => '1', b => '1', c => '0', d => '1', e => '1', f => '0', g => '1', dp => '0'), -- 2
+    (a => '1', b => '1', c => '1', d => '1', e => '0', f => '0', g => '1', dp => '0'), -- 3
+    (a => '0', b => '1', c => '1', d => '0', e => '0', f => '1', g => '1', dp => '0'), -- 4
+    (a => '1', b => '0', c => '1', d => '1', e => '0', f => '1', g => '1', dp => '0'), -- 5
+    (a => '1', b => '0', c => '1', d => '1', e => '1', f => '1', g => '1', dp => '0'), -- 6
+    (a => '1', b => '1', c => '1', d => '0', e => '0', f => '0', g => '0', dp => '0'), -- 7
+    (a => '1', b => '1', c => '1', d => '1', e => '1', f => '1', g => '1', dp => '0'), -- 8
+    (a => '1', b => '1', c => '1', d => '0', e => '0', f => '1', g => '1', dp => '0'), -- 9
+    (a => '1', b => '1', c => '0', d => '1', e => '1', f => '1', g => '1', dp => '0'), -- 0  (A)
+    (a => '0', b => '0', c => '1', d => '1', e => '1', f => '1', g => '1', dp => '0'), -- 11 (b)
+    (a => '1', b => '0', c => '0', d => '1', e => '1', f => '1', g => '0', dp => '0'), -- 12 (C)
+    (a => '0', b => '1', c => '1', d => '1', e => '1', f => '0', g => '1', dp => '0'), -- 13 (d)
+    (a => '1', b => '0', c => '0', d => '1', e => '1', f => '1', g => '1', dp => '0'), -- 14 (E)
+    (a => '1', b => '0', c => '0', d => '0', e => '1', f => '1', g => '1', dp => '0')  --  15 (f)
+);
+
+
+-- 4_HW_Quest_4.a
+subtype hex_digit is natural range 16 downto 0;
+
+-- 4_HW_Quest_4.b_c
+function get_hex_digit (
+    digit     :  hex_digit;
+    lamp_mode :  lamp_configuration := default_lamp_config
+) return seven_segment_config;
+is
+    variable ret : seven_segment_config;
+  begin
+    ret := SEVEN_SEGMENT_TABLE(digit);
+    return ret;
+end function;
+
