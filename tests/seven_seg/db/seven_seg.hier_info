@@ -1,0 +1,41 @@
+|seven_seg
+max10_clk1_50 => count_time[0].CLK
+max10_clk1_50 => count_time[1].CLK
+max10_clk1_50 => count_time[2].CLK
+max10_clk1_50 => count_time[3].CLK
+max10_clk1_50 => count_time[4].CLK
+max10_clk1_50 => count_time[5].CLK
+max10_clk1_50 => count_time[6].CLK
+max10_clk1_50 => count_time[7].CLK
+max10_clk1_50 => count_time[8].CLK
+max10_clk1_50 => count_time[9].CLK
+max10_clk1_50 => count_time[10].CLK
+max10_clk1_50 => count_time[11].CLK
+max10_clk1_50 => count_time[12].CLK
+max10_clk1_50 => count_time[13].CLK
+max10_clk1_50 => count_time[14].CLK
+max10_clk1_50 => count_time[15].CLK
+max10_clk1_50 => count_time[16].CLK
+max10_clk1_50 => count_time[17].CLK
+max10_clk1_50 => count_time[18].CLK
+max10_clk1_50 => count_time[19].CLK
+max10_clk1_50 => count_time[20].CLK
+max10_clk1_50 => count_time[21].CLK
+max10_clk1_50 => count_time[22].CLK
+max10_clk1_50 => count_time[23].CLK
+max10_clk1_50 => count_time[24].CLK
+max10_clk1_50 => count_time[25].CLK
+max10_clk1_50 => count_time[26].CLK
+max10_clk1_50 => count_0_seg[0].CLK
+max10_clk1_50 => count_0_seg[1].CLK
+max10_clk1_50 => count_0_seg[2].CLK
+max10_clk1_50 => count_0_seg[3].CLK
+seg_0_0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_4 <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_5 <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_6 <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+
+

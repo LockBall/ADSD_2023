@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seg_0_0",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_1",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_2",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_3",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_4",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_5",
+					"strict" : false
+				},
+				{
+					"name" : "seg_0_6",
+					"strict" : false
+				},
+				{
+					"name" : "max10_clk1_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

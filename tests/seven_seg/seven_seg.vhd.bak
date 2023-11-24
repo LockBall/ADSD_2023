@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity seven_seg is
+
+    port(
+        clock_50 : in std_logic;
+    );
+
+end entity seven_seg;
+
+
+architecture behave of seven_sed is
+
+    signal clock : std_logic ;
+    signal count_1_sec : std_logic_vector 0 to 26
+    signal count_0_seg : std_logic_vector 0 to 3 := "0000" ;
+    
+  begin
+  
+  clock <= clock_50
+  
+  process(clock)
+    begin
+      if rising_edge(clock) then
+      
+        if count_1_sec = 50000000 then
+        
+        else
+            count_1_sec <= count_1_sec + 1 ;
+        end if;
+        
+      end if;
+      
+    
+end achitecture behave;

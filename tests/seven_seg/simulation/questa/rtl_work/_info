@@ -1,0 +1,118 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/simulation/questa
+T_opt
+!s110 1700848550
+V483kGMh;>_0The2U5JHU?0
+04 12 3 work seven_seg_tb sim 1
+=1-d0509975fd67-6560e3a5-2de-863c
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Eseven_seg
+Z2 w1700848484
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R1
+Z7 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd
+Z8 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd
+l0
+L7 1
+VSgbIJcji]mgUe=9gJ8iGS0
+!s100 PMlJWlaW@l2eNF@1LO@nL3
+Z9 OL;C;2021.2;73
+31
+Z10 !s110 1700848548
+!i10b 1
+Z11 !s108 1700848548.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd|
+Z13 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd|
+!i113 0
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Abehave
+R3
+R4
+R5
+R6
+Z16 DEx4 work 9 seven_seg 0 22 SgbIJcji]mgUe=9gJ8iGS0
+!i122 0
+l38
+L25 73
+VRK>B7h:jQiDT8Y3ORQ7E<2
+!s100 OUakRoz4<50M9J5Kk^2hb3
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Eseven_seg_tb
+Z17 w1700844869
+R5
+R6
+!i122 1
+R1
+Z18 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd
+Z19 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd
+l0
+L5 1
+VU27<Oj7QjHLOEm=@4ZkoV2
+!s100 HI:L[kcQEKeg63DKfg8[j2
+R9
+31
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd|
+Z21 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd|
+!i113 0
+R14
+R15
+Asim
+R3
+R4
+R16
+R5
+R6
+DEx4 work 12 seven_seg_tb 0 22 U27<Oj7QjHLOEm=@4ZkoV2
+!i122 1
+l19
+L8 29
+VV^YPVTBmUEP[cmUSS_dF_2
+!s100 [DL]@dmPPh7Eb_92ckdfc0
+R9
+31
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 0
+R14
+R15

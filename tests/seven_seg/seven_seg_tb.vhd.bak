@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity seven_seg_tb is
+end entity;
+
+architecture sim of tb_seven_seg is
+    signal max10_clk1_50_tb : std_logic := '0' ; -- must be initialized to have toggleable value
+    max10_clk1_50_tb <= not max10_clk1_50_tb after 10 ns;  -- 50 MHz
+
+end architecture sim;
+
+    UUT : entity work.VGA_86 port map(
+        max10_clk1_50 => max10_clk1_50_tb,
+        seg_0_0 => seg_0_0_tb
+    );
