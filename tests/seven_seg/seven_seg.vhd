@@ -9,6 +9,8 @@ entity seven_seg is
     port(
         max10_clk1_50 : in  std_logic ;
         
+        key : in std_logic_vector(0 downto 0);  -- push button for reset
+        
         seg_0_0 : out std_logic;
         seg_0_1 : out std_logic;
         seg_0_2 : out std_logic;
@@ -24,12 +26,16 @@ end entity;
 
 architecture behave of seven_seg is
 
-    signal clock : std_logic ;
+    signal clock_50 : std_logic ;
+    signal clock_10 : std_logic ;
+    signal reset    : std_logic ;
+    
+    signal clock_10_ADC : std_logic ;
+    
     signal count_time : std_logic_vector(26 downto 0) := (others => '0');
     
     signal bits_4      : std_logic_vector(3 downto 0) := (others => '0');
     signal segs        : std_logic_vector(0 to 6) := "1111110";
-    
     
     signal count_0_seg : std_logic_vector(3 downto 0) := (others => '0');
     
@@ -37,7 +43,11 @@ architecture behave of seven_seg is
 
   begin
   
-    clock <= max10_clk1_50 ;
+    clock_50     <= max10_clk1_50 ;
+    clock_10_ADC <= clock_10 ;
+    
+    reset <= key(0);
+
     seg_0_0 <= segs(0) ;
     seg_0_1 <= segs(1) ;
     seg_0_2 <= segs(2) ;
@@ -49,19 +59,24 @@ architecture behave of seven_seg is
     bits_4 <= count_0_seg ;
 
 
-    process(clock)
+    process(clock_50)
       begin
     
-      if rising_edge(clock) then
+      if rising_edge(clock_50) then
       
-      
-        if (count_time = 50000000) then -- 50000000
+        if (reset = '0') then
+            count_time  <= (others => '0') ;
+            count_0_seg <= (others => '0') ;
+            
+        elsif (count_time = 50000000) then -- 50000000
             count_0_seg <= count_0_seg + 1 ;
             count_time <= (others => '0') ;
-
+        
         else
-            count_time <= count_time + 1 ;
-        end if;
+            count_time <= count_time + 1 ;        
+            
+        end if; -- (reset = '0')
+                    
         
       end if; -- rising_edge(clock)
       
@@ -92,6 +107,14 @@ architecture behave of seven_seg is
         end case;
         
     end process; -- (bits_4)   
+
+
+    clock_10_inst : entity work.clock_10 PORT MAP (
+		areset	 => reset,
+		inclk0	 => clock_50,
+		c0	     => clock_10,  -- clock out
+		locked	 => open -- locked_sig
+	);
 
     
 end architecture behave;

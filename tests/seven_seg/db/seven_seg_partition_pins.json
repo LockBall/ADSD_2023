@@ -32,6 +32,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "key[0]",
+					"strict" : false
+				},
+				{
 					"name" : "max10_clk1_50",
 					"strict" : false
 				}

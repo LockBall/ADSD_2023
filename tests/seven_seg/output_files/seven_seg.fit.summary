@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri Nov 24 13:03:06 2023
+Fitter Status : Successful - Fri Nov 24 21:12:52 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : seven_seg
 Top-level Entity Name : seven_seg
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 62 / 49,760 ( < 1 % )
-    Total combinational functions : 62 / 49,760 ( < 1 % )
+Total logic elements : 49 / 49,760 ( < 1 % )
+    Total combinational functions : 49 / 49,760 ( < 1 % )
     Dedicated logic registers : 31 / 49,760 ( < 1 % )
 Total registers : 31
-Total pins : 8 / 360 ( 2 % )
+Total pins : 9 / 360 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
