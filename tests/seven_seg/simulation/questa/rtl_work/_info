@@ -5,6 +5,7 @@ Z0 !s99 nomlopt
 R0
 R0
 R0
+R0
 !s11e MIXED_VERSIONS
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
@@ -15,10 +16,10 @@ R0
 cModel Technology
 Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/simulation/questa
 T_opt
-!s110 1700877816
-Vzcoig6GY]JZEYB;bZWdKf3
+!s110 1700887181
+V`IXkBMAHa]JZZS4C30BN;3
 04 12 3 work seven_seg_tb sim 1
-=1-d0509975fd67-656155f8-12c-46e8
+=1-d0509975fd67-65617a8d-12c-7b28
 !s124 OEM10U3 
 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
 Z2 tCvgOpt 0
@@ -38,9 +39,9 @@ Vejbzg=aL11Wn`[bA[h74B0
 !s100 ?jX;7DDdA3C;FKiiM>HjQ0
 Z8 OL;C;2021.2;73
 31
-Z9 !s110 1700877814
+Z9 !s110 1700887179
 !i10b 1
-Z10 !s108 1700877814.000000
+Z10 !s108 1700887179.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd|
 Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd|
 !i113 0
@@ -89,7 +90,7 @@ o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L i
 !s92 -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 Eseven_seg
-Z16 w1700877741
+Z16 w1700887100
 Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R4
@@ -100,8 +101,8 @@ Z19 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd
 Z20 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd
 l0
 L7 1
-VgI_C5J`ngJ0N@9Jl<:@@L0
-!s100 Z;9aYI3zo;VkR`8]3Df]h0
+Vi`>Je86W6:5coaKa6K<@N2
+!s100 :]zTNAcFJ>_ja>LAOV`7[0
 R8
 31
 R9
@@ -118,12 +119,12 @@ R17
 R18
 R4
 R5
-Z23 DEx4 work 9 seven_seg 0 22 gI_C5J`ngJ0N@9Jl<:@@L0
+Z23 DEx4 work 9 seven_seg 0 22 i`>Je86W6:5coaKa6K<@N2
 !i122 2
-l44
-L27 94
-V1D7GNoR7@;6nM4bO9P[@F0
-!s100 =HW9W<AC>k4F7^FdnQ@e72
+l42
+L28 91
+VY;`KeFEbBb:Y_aL_<j?6H3
+!s100 7PYD=VbBYg7Kndm7z=9Yb0
 R8
 31
 R9
@@ -135,7 +136,7 @@ R22
 R13
 R14
 Eseven_seg_tb
-Z24 w1700877756
+Z24 w1700887101
 R4
 R5
 !i122 3

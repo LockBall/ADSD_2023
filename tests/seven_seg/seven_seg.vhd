@@ -19,9 +19,10 @@ entity seven_seg is
         seg_0_5 : out std_logic;
         seg_0_6 : out std_logic
         
+        
     );
 
-end entity;
+end entity seven_seg;
 
 
 architecture behave of seven_seg is
@@ -29,9 +30,7 @@ architecture behave of seven_seg is
     signal clock_50 : std_logic ;
     signal clock_10 : std_logic ;
     signal reset    : std_logic ;
-    
-    signal clock_10_ADC : std_logic ;
-    
+       
     signal count_time : std_logic_vector(26 downto 0) := (others => '0');
     
     signal bits_4      : std_logic_vector(3 downto 0) := (others => '0');
@@ -39,14 +38,12 @@ architecture behave of seven_seg is
     
     signal count_0_seg : std_logic_vector(3 downto 0) := (others => '0');
     
-    
 
   begin
   
     clock_50     <= max10_clk1_50 ;
-    clock_10_ADC <= clock_10 ;
     
-    reset <= key(0);
+    reset <= NOT key(0);  -- button goes low when pressed but PLL requires high
 
     seg_0_0 <= segs(0) ;
     seg_0_1 <= segs(1) ;
@@ -64,7 +61,8 @@ architecture behave of seven_seg is
     
       if rising_edge(clock_50) then
       
-        if (reset = '0') then
+        if (reset = '1') then
+        
             count_time  <= (others => '0') ;
             count_0_seg <= (others => '0') ;
             
@@ -75,7 +73,7 @@ architecture behave of seven_seg is
         else
             count_time <= count_time + 1 ;        
             
-        end if; -- (reset = '0')
+        end if; -- (reset = '1')
                     
         
       end if; -- rising_edge(clock)

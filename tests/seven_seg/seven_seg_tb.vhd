@@ -21,7 +21,7 @@ architecture sim of seven_seg_tb is
     
   begin
     max10_clk1_50_tb <= not max10_clk1_50_tb after 10 ns;  -- 50 MHz
-    key_tb <= "1", "0" after 75 ns, "1" after 150 ns ; -- low resets counter, high allows counts
+    key_tb <= "1", "0" after 75 ns, "1" after 150 ns ; -- 
     
     -- connect main code to testbench
     UUT : entity work.seven_seg port map(
