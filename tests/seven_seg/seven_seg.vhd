@@ -43,7 +43,7 @@ architecture behave of seven_seg is
   
     clock_50     <= max10_clk1_50 ;
     
-    reset <= NOT key(0);  -- button goes low when pressed but PLL requires high
+    reset <= key(0);  -- button goes low when pressed but PLL requires high
 
     seg_0_0 <= segs(0) ;
     seg_0_1 <= segs(1) ;
@@ -61,7 +61,7 @@ architecture behave of seven_seg is
     
       if rising_edge(clock_50) then
       
-        if (reset = '1') then
+        if (reset = '0') then
         
             count_time  <= (others => '0') ;
             count_0_seg <= (others => '0') ;
@@ -108,10 +108,8 @@ architecture behave of seven_seg is
 
 
     clock_10_inst : entity work.clock_10 PORT MAP (
-		areset	 => reset,
 		inclk0	 => clock_50,
-		c0	     => clock_10,  -- clock out
-		locked	 => open -- locked_sig
+		c0	     => clock_10  -- clock out
 	);
 
     

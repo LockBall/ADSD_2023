@@ -4,8 +4,6 @@ z2
 Z0 !s99 nomlopt
 R0
 R0
-R0
-R0
 !s11e MIXED_VERSIONS
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
@@ -16,17 +14,17 @@ R0
 cModel Technology
 Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/simulation/questa
 T_opt
-!s110 1700887181
-V`IXkBMAHa]JZZS4C30BN;3
+!s110 1700931055
+VIcOhiad1A1=WLCL?_eChU3
 04 12 3 work seven_seg_tb sim 1
-=1-d0509975fd67-65617a8d-12c-7b28
+=1-d0509975fd67-656225ef-9f-5420
 !s124 OEM10U3 
 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
 Z2 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
 Eclock_10
-Z3 w1700874440
+Z3 w1700929693
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 1
@@ -35,13 +33,13 @@ Z6 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd
 Z7 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd
 l0
 L43 1
-Vejbzg=aL11Wn`[bA[h74B0
-!s100 ?jX;7DDdA3C;FKiiM>HjQ0
+VILnUTiC1bXm4kDcA2][IP3
+!s100 `9V?LYfRFjI`8W:<PG;h>2
 Z8 OL;C;2021.2;73
 31
-Z9 !s110 1700887179
+Z9 !s110 1700931053
 !i10b 1
-Z10 !s108 1700887179.000000
+Z10 !s108 1700931053.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd|
 Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd|
 !i113 0
@@ -50,12 +48,12 @@ Z14 tExplicit 1 CvgOpt 0
 Asyn
 R4
 R5
-Z15 DEx4 work 8 clock_10 0 22 ejbzg=aL11Wn`[bA[h74B0
+Z15 DEx4 work 8 clock_10 0 22 ILnUTiC1bXm4kDcA2][IP3
 !i122 1
-l132
-L54 155
-Vc0U;Amzg70DgGS@bAC<KX2
-!s100 lZfBZHmVR2@5S86M:mkOG0
+l126
+L52 147
+VJ^IK]9MDWlnX[2Jo^mK<a2
+!s100 192]:n70PR331T_eW0Z;X0
 R8
 31
 R9
@@ -69,14 +67,14 @@ R14
 vclock_10_altpll
 R9
 !i10b 1
-!s100 gDL25Q6?z_]e<Zc=8OZh03
-I5`j]Ka<F1mXU3]MB6JUcY0
+!s100 i`FU>WNoo?Az?VJ0SN?4R2
+I:DBGlVHF?j_Z]fFeAFRBV1
 R1
-w1700876512
+w1700930003
 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v
 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v
 !i122 0
-L0 31 79
+L0 30 63
 VDg1SIo80bB@j0V0VzS_@n1
 OL;L;2021.2;73
 r1
@@ -90,7 +88,7 @@ o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L i
 !s92 -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 Eseven_seg
-Z16 w1700887100
+Z16 w1700931020
 Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R4
@@ -122,9 +120,9 @@ R5
 Z23 DEx4 work 9 seven_seg 0 22 i`>Je86W6:5coaKa6K<@N2
 !i122 2
 l42
-L28 91
-VY;`KeFEbBb:Y_aL_<j?6H3
-!s100 7PYD=VbBYg7Kndm7z=9Yb0
+L28 89
+V7d]>04AdY<^U3cTJ2S]a:0
+!s100 <ESkne0kWoTiGT]4lPW553
 R8
 31
 R9

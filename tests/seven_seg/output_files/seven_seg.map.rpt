@@ -1,5 +1,5 @@
 Analysis & Synthesis report for seven_seg
-Fri Nov 24 23:38:32 2023
+Sun Nov 26 15:44:12 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 23:38:32 2023          ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 26 15:44:12 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; seven_seg                                      ;
 ; Top-level Entity Name              ; seven_seg                                      ;
@@ -591,7 +591,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PORT_FBIN                     ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_PLLENA                   ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_CLKSWITCH                ; PORT_UNUSED                ; Untyped                        ;
-; PORT_ARESET                   ; PORT_USED                  ; Untyped                        ;
+; PORT_ARESET                   ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_PFDENA                   ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_SCANCLK                  ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_SCANACLR                 ; PORT_UNUSED                ; Untyped                        ;
@@ -599,7 +599,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PORT_SCANWRITE                ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_ENABLE0                  ; PORT_CONNECTIVITY          ; Untyped                        ;
 ; PORT_ENABLE1                  ; PORT_CONNECTIVITY          ; Untyped                        ;
-; PORT_LOCKED                   ; PORT_USED                  ; Untyped                        ;
+; PORT_LOCKED                   ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_CONFIGUPDATE             ; PORT_UNUSED                ; Untyped                        ;
 ; PORT_FBOUT                    ; PORT_CONNECTIVITY          ; Untyped                        ;
 ; PORT_PHASEDONE                ; PORT_UNUSED                ; Untyped                        ;
@@ -654,14 +654,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clock_10:clock_10_inst"                                                               ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; c0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; locked ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_10:clock_10_inst"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -692,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -702,7 +701,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Nov 24 23:38:21 2023
+    Info: Processing started: Sun Nov 26 15:44:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seven_seg -c seven_seg
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file seven_seg.vhd
@@ -712,14 +711,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file seven_s
     Info (12022): Found design unit 1: seven_seg_tb-sim File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd Line: 8
     Info (12023): Found entity 1: seven_seg_tb File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock_10.vhd
-    Info (12022): Found design unit 1: clock_10-SYN File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 54
+    Info (12022): Found design unit 1: clock_10-SYN File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 52
     Info (12023): Found entity 1: clock_10 File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 43
 Info (12127): Elaborating entity "seven_seg" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at seven_seg.vhd(31): object "clock_10" assigned a value but never read File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd Line: 31
 Info (12128): Elaborating entity "clock_10" for hierarchy "clock_10:clock_10_inst" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/seven_seg.vhd Line: 110
-Info (12128): Elaborating entity "altpll" for hierarchy "clock_10:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 141
-Info (12130): Elaborated megafunction instantiation "clock_10:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 141
-Info (12133): Instantiated megafunction "clock_10:clock_10_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 141
+Info (12128): Elaborating entity "altpll" for hierarchy "clock_10:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 134
+Info (12130): Elaborated megafunction instantiation "clock_10:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 134
+Info (12133): Instantiated megafunction "clock_10:clock_10_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/clock_10.vhd Line: 134
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -733,7 +732,7 @@ Info (12133): Instantiated megafunction "clock_10:clock_10_inst|altpll:altpll_co
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "pll_type" = "AUTO"
     Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
-    Info (12134): Parameter "port_areset" = "PORT_USED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
     Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
     Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
     Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
@@ -742,7 +741,7 @@ Info (12133): Instantiated megafunction "clock_10:clock_10_inst|altpll:altpll_co
     Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
     Info (12134): Parameter "port_inclk0" = "PORT_USED"
     Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
-    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_locked" = "PORT_UNUSED"
     Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
     Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
     Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
@@ -773,14 +772,13 @@ Info (12133): Instantiated megafunction "clock_10:clock_10_inst|altpll:altpll_co
     Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
-    Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/clock_10_altpll.v
-    Info (12023): Found entity 1: clock_10_altpll File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v Line: 31
+    Info (12023): Found entity 1: clock_10_altpll File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v Line: 30
 Info (12128): Elaborating entity "clock_10_altpll" for hierarchy "clock_10:clock_10_inst|altpll:altpll_component|clock_10_altpll:auto_generated" File: c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "clock_10:clock_10_inst|altpll:altpll_component|clock_10_altpll:auto_generated|wire_pll1_clk[0]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v Line: 93
+        Warning (14320): Synthesized away node "clock_10:clock_10_inst|altpll:altpll_component|clock_10_altpll:auto_generated|wire_pll1_clk[0]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg/db/clock_10_altpll.v Line: 78
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -789,9 +787,9 @@ Info (21057): Implemented 57 device resources after synthesis - the final resour
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 48 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Fri Nov 24 23:38:32 2023
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Sun Nov 26 15:44:12 2023
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:23
 
 

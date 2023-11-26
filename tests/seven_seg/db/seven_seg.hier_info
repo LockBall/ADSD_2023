@@ -62,21 +62,18 @@ key[0] => count_0_seg.OUTPUTSELECT
 key[0] => count_0_seg.OUTPUTSELECT
 key[0] => count_0_seg.OUTPUTSELECT
 key[0] => count_0_seg.OUTPUTSELECT
-key[0] => clock_10:clock_10_inst.areset
-seg_0_0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_3 <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_4 <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_5 <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-seg_0_6 <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_0 << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_1 << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_2 << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_3 << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_4 << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_5 << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg_0_6 << Mux6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |seven_seg|clock_10:clock_10_inst
-areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
-locked <= altpll:altpll_component.locked
 
 
 |seven_seg|clock_10:clock_10_inst|altpll:altpll_component
@@ -85,7 +82,7 @@ inclk[1] => clock_10_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
 pllena => ~NO_FANOUT~
 clkswitch => ~NO_FANOUT~
-areset => clock_10_altpll:auto_generated.areset
+areset => ~NO_FANOUT~
 pfdena => ~NO_FANOUT~
 clkena[0] => ~NO_FANOUT~
 clkena[1] => ~NO_FANOUT~
@@ -126,7 +123,7 @@ enable1 <= <GND>
 enable0 <= <GND>
 activeclock <= <GND>
 clkloss <= <GND>
-locked <= clock_10_altpll:auto_generated.locked
+locked <= <GND>
 scandataout <= <GND>
 scandone <= <GND>
 sclkout0 <= <GND>
@@ -140,8 +137,6 @@ icdrclk <= <GND>
 
 
 |seven_seg|clock_10:clock_10_inst|altpll:altpll_component|clock_10_altpll:auto_generated
-areset => pll_lock_sync.ACLR
-areset => pll1.ARESET
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
@@ -149,6 +144,5 @@ clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
-locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
