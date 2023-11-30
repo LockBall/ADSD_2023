@@ -1,0 +1,9 @@
+	component TSD_ADC is
+		port (
+			altpll_0_inclk_interface_clk         : in std_logic := 'X'; -- clk
+			altpll_0_inclk_interface_reset_reset : in std_logic := 'X'; -- reset
+			clk_clk                              : in std_logic := 'X'; -- clk
+			reset_reset_n                        : in std_logic := 'X'  -- reset_n
+		);
+	end component TSD_ADC;
+

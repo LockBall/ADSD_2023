@@ -1,0 +1,757 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/simulation/questa
+valtera_avalon_packets_to_master
+Z1 !s110 1701117961
+!i10b 1
+!s100 :Idl<^F<FQRQ86WS<:O_]0
+I=gI?0gdk`L=kk6bkVH=m51
+R0
+Z2 w1701113523
+Z3 8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v
+Z4 FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v
+!i122 6
+L0 22 119
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z7 !s108 1701117961.000000
+Z8 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v|
+!i113 0
+Z10 o-vlog01compat -work TSD_ADC -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+valtera_avalon_st_bytes_to_packets
+Z13 !s110 1701117962
+!i10b 1
+!s100 87R9?ZTA:nYA:d?Gi73d13
+I5GFl=:P:VaHIW;@IU]?1l3
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+!i122 8
+L0 19 192
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v|
+!i113 0
+R10
+R11
+R12
+valtera_avalon_st_clock_crosser
+R13
+!i10b 1
+!s100 H=`^Ql63IT2=X`Fg8A2h00
+IXh851>zKS0`PRNoJ^^=3W2
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v
+!i122 13
+L0 22 120
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1701117962.000000
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v|
+!i113 0
+R10
+R11
+R12
+valtera_avalon_st_idle_inserter
+R13
+!i10b 1
+!s100 eTmZ13oC3iUnI^gZf?`Fi3
+IO_i]E:kGUdfeLUS?de[z@0
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v
+!i122 16
+L0 19 54
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v|
+!i113 0
+R10
+R11
+R12
+valtera_avalon_st_idle_remover
+R13
+!i10b 1
+!s100 >JYA?iNnoDRF82UP7YAe00
+InYLAib8Xn1IGoT4_`X^lC3
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v
+!i122 15
+L0 19 52
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v|
+!i113 0
+R10
+R11
+R12
+valtera_avalon_st_jtag_interface
+R13
+!i10b 1
+!s100 EJ^<ZUXEoEjgb:ohB3mYX2
+IkiWlQGRA1hG:EV^4nmV5R2
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v
+!i122 9
+L0 20 205
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v|
+!i113 0
+R10
+R11
+R12
+valtera_avalon_st_packets_to_bytes
+R1
+!i10b 1
+!s100 >EIWQ>;XO]mh5T9XDQQEa0
+IlE0IgOMkfb9o3IK<V<M8R1
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+!i122 7
+L0 19 235
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v|
+!i113 0
+R10
+R11
+R12
+valtera_jtag_control_signal_crosser
+R13
+!i10b 1
+!s100 ;h]Tl>KMkdbQk[iC]l4A42
+I4Hg]^i3kzmalZmN]208dI1
+R0
+R2
+Z15 8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v
+Z16 FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v
+!i122 10
+L0 30 40
+R5
+R6
+r1
+!s85 0
+31
+R14
+Z17 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v|
+!i113 0
+R10
+R11
+R12
+valtera_jtag_dc_streaming
+R13
+!i10b 1
+!s100 H5[Rm@IlC4WQbYL8<IJoj3
+IS_@lN5RAYHGYGJmzd@=Qg2
+R0
+R2
+R15
+R16
+!i122 10
+L0 135 127
+R5
+R6
+r1
+!s85 0
+31
+R14
+R17
+R18
+!i113 0
+R10
+R11
+R12
+valtera_jtag_sld_node
+R13
+!i10b 1
+!s100 ?2GS?Jjnlh1bnMW<^87RW3
+IRYoXH=c`JMcX`Y>4hXEBZ1
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v
+!i122 11
+L0 17 245
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v|
+!i113 0
+R10
+R11
+R12
+valtera_jtag_src_crosser
+R13
+!i10b 1
+!s100 VR9LI;cmKHCe6HNZ=SaG@0
+IBdJYLAY0Uo;`o2c5AmJ=N3
+R0
+R2
+R15
+R16
+!i122 10
+L0 72 62
+R5
+R6
+r1
+!s85 0
+31
+R14
+R17
+R18
+!i113 0
+R10
+R11
+R12
+valtera_jtag_streaming
+R13
+!i10b 1
+!s100 6aN?B?JS@7FL^]@F=`Ad=3
+I9KfVg^7aeM0]O_YzEOJ_i2
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v
+!i122 12
+L0 18 617
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v|
+!i113 0
+R10
+R11
+R12
+valtera_modular_adc_sample_store
+!s110 1701117963
+!i10b 1
+!s100 Mkj;RPCk81D>3I4=@@<<:2
+Iz?5O:aEbd`z9SQV8:S`Bb3
+R0
+w1701113521
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v
+!i122 20
+L0 18 199
+R5
+R6
+r1
+!s85 0
+31
+!s108 1701117963.000000
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v|
+!i113 0
+R10
+R11
+R12
+valtera_reset_controller
+!s110 1701117960
+!i10b 1
+!s100 oA9lUzaO95KXSKU3fUHXM0
+I>Szb1c`M4^bYL[WeCQB0Y2
+R0
+Z19 w1701113519
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v
+!i122 0
+L0 42 278
+R5
+R6
+r1
+!s85 0
+31
+!s108 1701117960.000000
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v|
+!i113 0
+R10
+R11
+R12
+valtera_reset_synchronizer
+R1
+!i10b 1
+!s100 D^dgdIfBaVUo6:<:oWOdC3
+ITUn;m;i8Degi9IoMocCB43
+R0
+R19
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v
+!i122 1
+L0 24 63
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 0
+R10
+R11
+R12
+valtera_std_synchronizer_nocut
+R13
+!i10b 1
+!s100 [nQ?Ko;JA7Fom`zZTMhNc2
+I?Xnh6cK6Y>]7daP<Ehk5b0
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v
+!i122 14
+L0 44 149
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v|
+!i113 0
+R10
+R11
+R12
+vfifo_buffer
+R1
+!i10b 1
+!s100 AmLKl7Yae]fFc]ezF^@5M1
+IE05B<bJ]]bJm`O0ob9>Bb0
+R0
+R2
+R3
+R4
+!i122 6
+L0 627 65
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfifo_buffer_scfifo_with_controls
+R1
+!i10b 1
+!s100 QgT7L3GJ2H<eUgSg0fRhh2
+IXab3cQ9k9cER]S_@ZfC@30
+R0
+R2
+R3
+R4
+!i122 6
+L0 573 49
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfifo_buffer_single_clock_fifo
+R1
+!i10b 1
+!s100 jh9[LIG8:RZ1BEG^3TITk1
+I<8@H;^W>m51ZZ7:V2cG?O3
+R0
+R2
+R3
+R4
+!i122 6
+L0 512 54
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfifo_to_packet
+R1
+!i10b 1
+!s100 bK23SNUj[F@801ciNBK>Q1
+IE?nnmDPbzjRg5IBB@O47J2
+R0
+R2
+R3
+R4
+!i122 6
+L0 697 150
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vpackets_to_fifo
+R1
+!i10b 1
+!s100 `SGY4XSJFUZTza=8F:hU]3
+I>2oMm?8@V@eXUUg<da_5`2
+R0
+R2
+R3
+R4
+!i122 6
+L0 142 362
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vpackets_to_master
+R1
+!i10b 1
+!s100 PLzEcDB36P@[4g05QX:GK0
+I:K?>`[:2AYC4J<YNcd9Ff2
+R0
+R2
+R3
+R4
+!i122 6
+L0 851 390
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vTSD_ADC_ADC_TSD
+R13
+!i10b 1
+!s100 EoE:7@7b>LNSVSk5nJW5S2
+IbZh^`7V;hI`kG2>36;5YZ2
+R0
+w1701113512
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v
+!i122 17
+L0 9 562
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_@a@d@c_@t@s@d
+vTSD_ADC_ADC_TSD_avalon_st_adapter
+R13
+!i10b 1
+!s100 <o7aPeLNI12OeGCWB;`j92
+I`hL^M=U28J8R`V1?aC`Km0
+R0
+w1701113522
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v
+!i122 19
+Z20 L0 9 252
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_@a@d@c_@t@s@d_avalon_st_adapter
+vTSD_ADC_ADC_TSD_avalon_st_adapter_001
+R13
+!i10b 1
+!s100 kDlbm@6Y56n]JXY^9=UhI1
+InkBmb32oHXkjmW`zkh:5N2
+R0
+R2
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v
+!i122 18
+R20
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_@a@d@c_@t@s@d_avalon_st_adapter_001
+vTSD_ADC_altpll_0
+R1
+!i10b 1
+!s100 WYf5D3@]TUK0`jZzAlVlL0
+IIoJhE;<W=jdUD_lBPd?W=2
+R0
+Z21 w1701113514
+Z22 8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v
+Z23 FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v
+!i122 4
+L0 214 113
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z24 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v|
+Z25 !s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_altpll_0
+vTSD_ADC_altpll_0_altpll_5q22
+R1
+!i10b 1
+!s100 P]I:gWQ@Y0@]G4:3bB`CZ1
+IoMg1]73gXc48JDDROQ^D_2
+R0
+R21
+R22
+R23
+!i122 4
+L0 131 78
+R5
+R6
+r1
+!s85 0
+31
+R7
+R24
+R25
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_altpll_0_altpll_5q22
+vTSD_ADC_altpll_0_dffpipe_l2c
+R1
+!i10b 1
+!s100 35j^LoM?;n[eABMQ>X9Oi3
+I1:`^;NIJm;4>CRN8z:hz41
+R0
+R21
+R22
+R23
+!i122 4
+L0 38 56
+R5
+R6
+r1
+!s85 0
+31
+R7
+R24
+R25
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_altpll_0_dffpipe_l2c
+vTSD_ADC_altpll_0_stdsync_sv6
+R1
+!i10b 1
+!s100 ccbD:W^kjm<o=A^V];^250
+I[1P@cK74U6R0^BKKKJ9463
+R0
+R21
+R22
+R23
+!i122 4
+L0 99 22
+R5
+R6
+r1
+!s85 0
+31
+R7
+R24
+R25
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_altpll_0_stdsync_sv6
+vTSD_ADC_AvalonBridge
+R1
+!i10b 1
+!s100 ?em0>W4]XQYbb@aH;>OE01
+IG[oNYdS@:h>_nckSmGmX23
+R0
+w1701113513
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v
+!i122 5
+L0 9 346
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_@avalon@bridge
+vTSD_ADC_mm_interconnect_0
+R1
+!i10b 1
+!s100 XAh>K37[Yd<i4RmN53JdM2
+IVgKlajF6Khj_FB^hIFVGe0
+R0
+R19
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v
+!i122 2
+L0 9 970
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_mm_interconnect_0
+vTSD_ADC_mm_interconnect_0_avalon_st_adapter
+R1
+!i10b 1
+!s100 P0J0CC^`b63Ye:Z[i=Mg@2
+I:McL`9994zjC4ka45;]cl1
+R0
+w1701113524
+8C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v
+FC:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v
+!i122 3
+L0 9 194
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|TSD_ADC|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules|C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v|
+!i113 0
+R10
+R11
+R12
+n@t@s@d_@a@d@c_mm_interconnect_0_avalon_st_adapter

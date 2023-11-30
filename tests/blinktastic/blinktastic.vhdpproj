@@ -1,0 +1,12 @@
+﻿<Project>
+  <ItemGroup>
+    <File Include="blinktastic.vhd" />
+    <File Include="blinktastic_tb.vhd" />
+    <File Include="blinktastic_tb_Sim.ghdp" />
+  </ItemGroup>
+  <PropertyGroup>
+    <HardwareStartPath>blinktastic.vhd</HardwareStartPath>
+    <SelectedFpga>DE10-Lite</SelectedFpga>
+    <IoVoltage>3.3V</IoVoltage>
+  </PropertyGroup>
+</Project>

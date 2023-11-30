@@ -11,10 +11,10 @@ entity mando_bro is
 
     port (
         clock  : in     std_logic;
-        u_test : in ufixed(3 downto -3);
-        s_test : in sfixed(3 downto -3)
-
-    ) ;
+        u_test : in ufixed(3 downto -4);
+        s_test : in sfixed(3 downto -4);
+        m_test : in sfixed(3 downto -4)
+    );
     
 
 end mando_bro;

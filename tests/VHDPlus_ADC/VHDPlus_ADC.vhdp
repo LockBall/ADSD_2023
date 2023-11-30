@@ -1,0 +1,32 @@
+Main
+(
+
+)
+{
+
+    SIGNAL ADC_MAX10_Data: ADC_data_type := (others => 0);
+    
+    NewComponent ADC_MAX10
+    (
+       -- MAX1000 => false,
+
+        Data    => ADC_MAX10_Data,
+    );
+    
+    
+    SIGNAL ISSP_source: std_logic_vector(7 downto 0);
+    SIGNAL ISSP_probe: std_logic_vector(31 downto 0) := (others => 'X');
+    
+    NewComponent ISSP
+    (
+        source => ISSP_source,
+        probe  => ISSP_probe,
+    );
+    
+    Process()
+    {
+        ISSP_probe <= STD_LOGIC_VECTOR(TO_UNSIGNED( ADC_MAX10_Data(0) , ISSP_probe'LENGTH));
+    }
+    
+    
+}

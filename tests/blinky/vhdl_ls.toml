@@ -1,0 +1,10 @@
+# auto-generated
+[Libraries]
+work.files = [
+	'Generated/blinky.vhd'
+]
+[libraries.work]
+files = [
+	'Generated/blinky.vhd'
+]
+# auto-generated-end

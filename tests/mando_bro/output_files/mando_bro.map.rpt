@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mando_bro
-Mon Nov  6 18:36:43 2023
+Tue Nov 14 15:18:34 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov  6 18:36:43 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 14 15:18:34 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; mando_bro                                      ;
 ; Top-level Entity Name              ; mando_bro                                      ;
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 0                                              ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 15                                             ;
+; Total pins                         ; 25                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -194,13 +194,13 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 15    ;
+; I/O pins                                    ; 25    ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 15    ;
+; Total fan-out                               ; 25    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |mando_bro                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |mando_bro          ; mando_bro   ; work         ;
+; |mando_bro                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |mando_bro          ; mando_bro   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 15                              ;
+; boundary_port     ; 25                              ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -257,7 +257,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov  6 18:36:34 2023
+    Info: Processing started: Tue Nov 14 15:18:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mando_bro -c mando_bro
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file mando_bro.vhd
@@ -267,10 +267,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_mand
     Info (12022): Found design unit 1: tb_mando_bro-test_bench File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 15
     Info (12023): Found entity 1: tb_mando_bro File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/tb_mando_bro.vhd Line: 12
 Info (12127): Elaborating entity "mando_bro" for the top level hierarchy
+Warning (12158): Entity "mando_bro" contains only dangling pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
+Warning (21074): Design contains 25 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clock" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 13
+    Warning (15610): No output dependent on input pin "u_test[-4]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
     Warning (15610): No output dependent on input pin "u_test[-3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
     Warning (15610): No output dependent on input pin "u_test[-2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
     Warning (15610): No output dependent on input pin "u_test[-1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
@@ -278,6 +280,7 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "u_test[1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
     Warning (15610): No output dependent on input pin "u_test[2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
     Warning (15610): No output dependent on input pin "u_test[3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 14
+    Warning (15610): No output dependent on input pin "s_test[-4]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
     Warning (15610): No output dependent on input pin "s_test[-3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
     Warning (15610): No output dependent on input pin "s_test[-2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
     Warning (15610): No output dependent on input pin "s_test[-1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
@@ -285,13 +288,21 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "s_test[1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
     Warning (15610): No output dependent on input pin "s_test[2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
     Warning (15610): No output dependent on input pin "s_test[3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 15
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+    Warning (15610): No output dependent on input pin "m_test[-4]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[-3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[-2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[-1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[0]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[1]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[2]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+    Warning (15610): No output dependent on input pin "m_test[3]" File: C:/FPGA/2023/from_git/ADSD_2023/tests/mando_bro/mando_bro.vhd Line: 16
+Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
     Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Mon Nov  6 18:36:43 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Tue Nov 14 15:18:34 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 

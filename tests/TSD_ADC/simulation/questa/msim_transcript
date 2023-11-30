@@ -1,0 +1,252 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do TSD_ADC_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/22.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlib TSD_ADC
+# vmap TSD_ADC TSD_ADC
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap TSD_ADC TSD_ADC 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:00 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 15:46:00 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0.v 
+# -- Compiling module TSD_ADC_mm_interconnect_0
+# 
+# Top level modules:
+# 	TSD_ADC_mm_interconnect_0
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_mm_interconnect_0_avalon_st_adapter.v 
+# -- Compiling module TSD_ADC_mm_interconnect_0_avalon_st_adapter
+# 
+# Top level modules:
+# 	TSD_ADC_mm_interconnect_0_avalon_st_adapter
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_altpll_0.v 
+# -- Compiling module TSD_ADC_altpll_0_dffpipe_l2c
+# -- Compiling module TSD_ADC_altpll_0_stdsync_sv6
+# -- Compiling module TSD_ADC_altpll_0_altpll_5q22
+# -- Compiling module TSD_ADC_altpll_0
+# 
+# Top level modules:
+# 	TSD_ADC_altpll_0
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_AvalonBridge.v 
+# -- Compiling module TSD_ADC_AvalonBridge
+# 
+# Top level modules:
+# 	TSD_ADC_AvalonBridge
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_packets_to_master.v 
+# -- Compiling module altera_avalon_packets_to_master
+# -- Compiling module packets_to_fifo
+# -- Compiling module fifo_buffer_single_clock_fifo
+# -- Compiling module fifo_buffer_scfifo_with_controls
+# -- Compiling module fifo_buffer
+# -- Compiling module fifo_to_packet
+# -- Compiling module packets_to_master
+# 
+# Top level modules:
+# 	altera_avalon_packets_to_master
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_packets_to_bytes.v 
+# -- Compiling module altera_avalon_st_packets_to_bytes
+# 
+# Top level modules:
+# 	altera_avalon_st_packets_to_bytes
+# End time: 15:46:01 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:01 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_bytes_to_packets.v 
+# -- Compiling module altera_avalon_st_bytes_to_packets
+# 
+# Top level modules:
+# 	altera_avalon_st_bytes_to_packets
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_jtag_interface.v 
+# -- Compiling module altera_avalon_st_jtag_interface
+# 
+# Top level modules:
+# 	altera_avalon_st_jtag_interface
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_dc_streaming.v 
+# -- Compiling module altera_jtag_control_signal_crosser
+# -- Compiling module altera_jtag_src_crosser
+# -- Compiling module altera_jtag_dc_streaming
+# 
+# Top level modules:
+# 	altera_jtag_dc_streaming
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_sld_node.v 
+# -- Compiling module altera_jtag_sld_node
+# 
+# Top level modules:
+# 	altera_jtag_sld_node
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_jtag_streaming.v 
+# -- Compiling module altera_jtag_streaming
+# 
+# Top level modules:
+# 	altera_jtag_streaming
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_clock_crosser.v 
+# -- Compiling module altera_avalon_st_clock_crosser
+# 
+# Top level modules:
+# 	altera_avalon_st_clock_crosser
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_std_synchronizer_nocut.v 
+# -- Compiling module altera_std_synchronizer_nocut
+# 
+# Top level modules:
+# 	altera_std_synchronizer_nocut
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_remover.v 
+# -- Compiling module altera_avalon_st_idle_remover
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_remover
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_avalon_st_idle_inserter.v 
+# -- Compiling module altera_avalon_st_idle_inserter
+# 
+# Top level modules:
+# 	altera_avalon_st_idle_inserter
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD.v 
+# -- Compiling module TSD_ADC_ADC_TSD
+# 
+# Top level modules:
+# 	TSD_ADC_ADC_TSD
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter_001.v 
+# -- Compiling module TSD_ADC_ADC_TSD_avalon_st_adapter_001
+# 
+# Top level modules:
+# 	TSD_ADC_ADC_TSD_avalon_st_adapter_001
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:02 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/TSD_ADC_ADC_TSD_avalon_st_adapter.v 
+# -- Compiling module TSD_ADC_ADC_TSD_avalon_st_adapter
+# 
+# Top level modules:
+# 	TSD_ADC_ADC_TSD_avalon_st_adapter
+# End time: 15:46:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work TSD_ADC +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules {C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:46:03 on Nov 27,2023
+# vlog -reportprogress 300 -vlog01compat -work TSD_ADC "+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules" C:/FPGA/2023/from_git/ADSD_2023/tests/TSD_ADC/TSD_ADC/synthesis/submodules/altera_modular_adc_sample_store.v 
+# -- Compiling module altera_modular_adc_sample_store
+# 
+# Top level modules:
+# 	altera_modular_adc_sample_store
+# End time: 15:46:03 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

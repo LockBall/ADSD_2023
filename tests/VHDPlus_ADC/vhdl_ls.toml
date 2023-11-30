@@ -1,0 +1,14 @@
+# auto-generated
+[Libraries]
+work.files = [
+	'Generated/ADC_MAX10.vhd',
+	'Generated/ADC_MAX10_Single.vhd',
+	'Generated/VHDPlus_ADC.vhd'
+]
+[libraries.work]
+files = [
+	'Generated/ADC_MAX10.vhd',
+	'Generated/ADC_MAX10_Single.vhd',
+	'Generated/VHDPlus_ADC.vhd'
+]
+# auto-generated-end

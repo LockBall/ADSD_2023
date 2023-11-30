@@ -1,0 +1,18 @@
+﻿<Project>
+  <ItemGroup>
+    <File Include="Generated/ADC_MAX10.vhd" />
+    <File Include="Generated/ADC_MAX10_Single.vhd" />
+    <File Include="Generated/VHDPlus_ADC.vhd" />
+    <File Include="Libraries/ISSP/ISSP.qsys" />
+    <File Include="Libraries/ISSP/ISSP.qsys.vhdp" />
+    <File Include="Libraries/MAX10_ADC/ADC_MAX10.vhdp" />
+    <File Include="Libraries/MAX10_ADC/ADC_MAX10_Single.vhdp" />
+    <File Include="Libraries/MAX10_ADC/ADC_QSYS.qsys" />
+    <File Include="Libraries/MAX10_ADC/ADC_QSYS.qsys.vhdp" />
+    <File Include="VHDPlus_ADC.vhdp" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SelectedFpga>DE10-Lite</SelectedFpga>
+    <IoVoltage>3.3V</IoVoltage>
+  </PropertyGroup>
+</Project>

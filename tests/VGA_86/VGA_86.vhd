@@ -19,7 +19,7 @@ entity VGA_86 is
 
     port (
         max10_clk1_50  : in  std_logic;                     -- input clock 50 MHz
-        key            : in  std_logic_vector(0 downto 0);  -- push button for reset
+        key            : in  std_logic_vector(0 downto 0);  -- reset buton, B8, schmitt trigger
         vga_vs         : out std_logic;                     -- video out (4 bit resolution)
         vga_hs         : out std_logic;
         

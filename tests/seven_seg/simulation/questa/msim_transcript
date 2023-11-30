@@ -305,3 +305,5 @@ run
 # ** Note: MAX 10 PLL locked to incoming clock
 #    Time: 90 ns  Iteration: 3  Instance: /seven_seg_tb/UUT/clock_10_inst/altpll_component/CYCLONEIII_ALTPLL/M5
 run
+# End time: 10:42:49 on Nov 27,2023, Elapsed time: 46:51:55
+# Errors: 0, Warnings: 0

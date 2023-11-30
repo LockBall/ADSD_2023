@@ -1,5 +1,5 @@
 Flow report for LED_blink
-Sat Nov 11 00:12:35 2023
+Mon Nov 27 21:56:15 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 11 00:12:32 2023          ;
+; Flow Status                        ; Successful - Mon Nov 27 21:56:12 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; LED_blink                                      ;
 ; Top-level Entity Name              ; LED_blink                                      ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2023 00:12:12 ;
+; Start date & time ; 11/27/2023 21:55:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LED_blink           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 229044590607719.169967953202788        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 229044590607719.170114015128936        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME            ; NA                                     ; --            ; --          ; LED_blink_TB                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -104,11 +104,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4827 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 5640 MB             ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4827 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 5644 MB             ; 00:00:09                           ;
 ; Assembler            ; 00:00:02     ; 1.0                     ; 4720 MB             ; 00:00:02                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4830 MB             ; 00:00:02                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:34                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

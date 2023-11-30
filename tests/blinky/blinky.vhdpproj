@@ -1,0 +1,10 @@
+﻿<Project>
+  <ItemGroup>
+    <File Include="Generated/blinky.vhd" />
+    <File Include="blinky.vhdp" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SelectedFpga>DE10-Lite</SelectedFpga>
+    <IoVoltage>3.3V</IoVoltage>
+  </PropertyGroup>
+</Project>

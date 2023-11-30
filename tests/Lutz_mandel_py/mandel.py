@@ -11,9 +11,9 @@ for num_runs in range(1):
     start = time.time()
     # os.remove("output.png")
     #frame parameters
-    width_pix = 20 # pixels, 1000, 800
-    height_pix = 15
-    max_iters = 10 # 500
+    width_pix = 800 # pixels, 1000, 800
+    height_pix = 600
+    max_iters = 75 # 500
     #aspectRatio = 4/3 # 16/9
     ppm_max_colors = 15 # 15, 255
     x_coord = -0.5 # centers image of interest within frame
@@ -39,7 +39,11 @@ for num_runs in range(1):
 
     dist_list =[]
     x_list = []
+    y_list = []
     esc_list =[]
+    a_comp_list =[]
+    b_comp_list =[]
+
     esc_cnt = 0
     
     #def logColor(distance, base, const, scale):
@@ -53,7 +57,7 @@ for num_runs in range(1):
     #    return tuple(round(i * 255) for i in rgb)
     
     def color_4bit(distance):
-        print(distance)
+        #print(distance)
         dist_str = (str(distance)[2:8]).ljust(8, '0')
         #print(dist_str)
         red = round(float(dist_str[0:2]) / 100 * 15)
@@ -73,8 +77,9 @@ for num_runs in range(1):
             #print("pre_x_coord: ", x_coord)
             x_coord = min_x + col * x_range / width_pix
             #print("post_x_coord: ", x_coord, "\n")
-            #x_list.append(x_coord)
+            x_list.append(x_coord)
             y_coord = max_y - (row * y_range / height_pix)
+            y_list.append(x_coord)
             #print("post_y_coord: ", y_coord)
             old_x = x_coord
             old_y = y_coord
@@ -84,10 +89,14 @@ for num_runs in range(1):
                 iters_cnt = iters #_cnt + 1
                 #print("for", iters)
                 a_comp = (x_coord * x_coord) - (y_coord * y_coord) #real component of z^2
+                a_comp_list.append(a_comp)
                 b_comp = 2 * x_coord * y_coord #imaginary component of z^2
+                b_comp_list.append(b_comp)
                 x_coord = a_comp + old_x #real component of new z
-                #x_list.append(x_coord)
+                x_list.append(x_coord)
                 y_coord = b_comp + old_y #imaginary component of new z
+                y_list.append(y_coord)
+
                 #print("y_coord", y_coord)
 
                 escape = (x_coord * x_coord) + (y_coord * y_coord)
@@ -138,8 +147,17 @@ for num_runs in range(1):
     print("dist_min: ", min(dist_list))
     print("dist_max: ", max(dist_list))
 
-    #print("x_min: ", min(x_list))
-    #print("x_max: ", max(x_list))
+    print("x_coord_min: ", min(x_list))
+    print("x_coord_max: ", max(x_list))
+
+    print("y_coord_min: ", min(y_list))
+    print("y_coord_max: ", max(y_list))
+
+    print("a_comp_min: ", min(y_list))
+    print("a_comp_max: ", max(y_list))
+
+    print("b_comp_min: ", min(y_list))
+    print("b_comp_max: ", max(y_list))
 
     print("esc_cnt: ", esc_cnt)
     print("esc_min: ", min(esc_list))

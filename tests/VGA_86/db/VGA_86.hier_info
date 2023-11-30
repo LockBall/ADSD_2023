@@ -4,20 +4,20 @@ max10_clk1_50 => clock_40:clock_40_inst.inclk0
 key[0] => clock_25.OUTPUTSELECT
 key[0] => vga_86_image:VGA_86_image.reset
 key[0] => clock_40:clock_40_inst.areset
-vga_vs << vga_86_image:VGA_86_image.v_sync_out
-vga_hs << vga_86_image:VGA_86_image.h_sync_out
-vga_r[3] << vga_86_image:VGA_86_image.r_out[3]
-vga_r[2] << vga_86_image:VGA_86_image.r_out[2]
-vga_r[1] << vga_86_image:VGA_86_image.r_out[1]
-vga_r[0] << vga_86_image:VGA_86_image.r_out[0]
-vga_g[3] << vga_86_image:VGA_86_image.g_out[3]
-vga_g[2] << vga_86_image:VGA_86_image.g_out[2]
-vga_g[1] << vga_86_image:VGA_86_image.g_out[1]
-vga_g[0] << vga_86_image:VGA_86_image.g_out[0]
-vga_b[3] << vga_86_image:VGA_86_image.b_out[3]
-vga_b[2] << vga_86_image:VGA_86_image.b_out[2]
-vga_b[1] << vga_86_image:VGA_86_image.b_out[1]
-vga_b[0] << vga_86_image:VGA_86_image.b_out[0]
+vga_vs <= vga_86_image:VGA_86_image.v_sync_out
+vga_hs <= vga_86_image:VGA_86_image.h_sync_out
+vga_r[3] <= vga_86_image:VGA_86_image.r_out[3]
+vga_r[2] <= vga_86_image:VGA_86_image.r_out[2]
+vga_r[1] <= vga_86_image:VGA_86_image.r_out[1]
+vga_r[0] <= vga_86_image:VGA_86_image.r_out[0]
+vga_g[3] <= vga_86_image:VGA_86_image.g_out[3]
+vga_g[2] <= vga_86_image:VGA_86_image.g_out[2]
+vga_g[1] <= vga_86_image:VGA_86_image.g_out[1]
+vga_g[0] <= vga_86_image:VGA_86_image.g_out[0]
+vga_b[3] <= vga_86_image:VGA_86_image.b_out[3]
+vga_b[2] <= vga_86_image:VGA_86_image.b_out[2]
+vga_b[1] <= vga_86_image:VGA_86_image.b_out[1]
+vga_b[0] <= vga_86_image:VGA_86_image.b_out[0]
 
 
 |VGA_86|VGA_86_image:VGA_86_image

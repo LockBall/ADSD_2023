@@ -1,0 +1,12 @@
+# auto-generated
+[Libraries]
+work.files = [
+	'blinktastic.vhd',
+	'blinktastic_tb.vhd'
+]
+[libraries.work]
+files = [
+	'blinktastic.vhd',
+	'blinktastic_tb.vhd'
+]
+# auto-generated-end

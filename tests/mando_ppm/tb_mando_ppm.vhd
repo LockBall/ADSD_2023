@@ -18,38 +18,30 @@ end entity tb_mando_ppm;
 
 architecture test_bench of tb_mando_ppm is
 
-	signal clock : std_logic := '0'    ;
-    signal s_val : sfixed(3 downto -3) := "0101010" ;
-    signal u_val : ufixed(3 downto -3) := "0011000" ;
+	--signal clock : std_logic := '0'    ;
+   -- signal s_val : sfixed(3 downto -3) := "0101010" ;
+   -- signal u_val : ufixed(3 downto -3) := "0011000" ;
     
-    constant width_pix  : natural range 0 to 1920 := 80;  -- MUST ALSO CHANGE ppm file header 
-    constant height_pix : natural range 0 to 1080 := 60;  -- width & height
+    constant width_pix  : natural range 0 to 1920 := 20;  -- MUST ALSO CHANGE ppm file header 
+    constant height_pix : natural range 0 to 1080 := 15;  -- width & height
     
-    constant max_iters  : natural range 0 to 500  := 30;
+    constant max_iters  : natural range 0 to 500  := 6;
     constant ppm_colors : natural range 0 to 15   := 15;
     
     constant x_range    : float32 := to_float(4.0);
     constant y_range    : float32 := to_float(3.0);
 
-
    
   begin
     
-	--UUT : entity work.mando_bro port map (
-        
-  --      s_test => s_val,
-  --      u_test => u_val,
-  --      clock  => clock
-  --  );
     
-    clock <= not clock after 10 ns; -- 50 MHz
+-- clock <= not clock after 10 ns; -- 50 MHz
 
 
     write_brot : process is
-    
         variable x_coord   : float32 := to_float(-0.5); -- float32, same as "float (8 downto –23)" --(5 downto -7) ;
         variable y_coord   : float32 := to_float(0.0);
-        variable esc       : float32 ;
+        variable esc       : float32 ; --sfixed(2 downto -8);
         --variable esc_cnt   : natural := 0 ;
         
         variable iters_cnt     : natural := 0 ;--range 0 to max_iters := 0 ;
@@ -63,15 +55,15 @@ architecture test_bench of tb_mando_ppm is
         variable a_comp    : float32 ;
         variable b_comp    : float32 ;
         variable distance  : float32 ;
+        variable dist_fix  : sfixed(3 downto -12); -- float32 ;
+        variable dist_str  : string(1 to 12); --:= "distress";
+        
         variable dist_int  : integer := 0 ;
         variable dist_slv  : std_logic_vector(0 to 31) ;
         
-        variable dist_red, dist_grn, dist_blu : std_logic_vector(0 to 3) ;
+        variable dist_red, dist_grn, dist_blu : std_logic_vector(0 to 3) := "0101" ;
 
-
-        variable dist_str  : string(1 to 8) := "distress"; 
-
-    
+ 
 		file brot_out_file : text open write_mode is "brot.ppm";
         variable brot_out_line : line;
 
@@ -83,7 +75,7 @@ architecture test_bench of tb_mando_ppm is
 	  begin
         -- ppm file header
 		write(brot_out_file, "P3" & LF); -- magic number, , full color PPM, ASCII characters
-		write(brot_out_file, "80 60" & LF); -- image width & height
+		write(brot_out_file, "20 15" & LF); -- image width & height
 		write(brot_out_file, "15" & LF); -- max colors
         
 --        write(brot_out_file, LF & "float_test" & LF);  -- -1.359375 correct
@@ -142,12 +134,13 @@ architecture test_bench of tb_mando_ppm is
 --                );
 --                writeline(brot_out_file, brot_out_line);                
     
-
+--** 1
                 x_coord := min_x + (col * x_range / width_pix) ;
                 y_coord := max_y - (row * y_range / height_pix) ;
                 
                 old_x   := x_coord ;
                 old_y   := y_coord ;
+--** 1
                 
                 --write(brot_out_file, LF & "old_x" & LF);
 --                write(    
@@ -160,11 +153,12 @@ architecture test_bench of tb_mando_ppm is
                 --write(brot_out_file, "        iters" & LF);
                 for iters in 0 to max_iters loop  -- not including a "+ 1" equivs the - 1 from python
                     iters_cnt := iters;
-
+--** 2
                     a_comp  := (x_coord * x_coord) - (y_coord * y_coord) ; --real component of z^2
                     b_comp  := (2.0 * x_coord * y_coord) ; --imaginary component of z^2
                     x_coord := a_comp + old_x ; --real component of new z
                     y_coord := b_comp + old_y ; --imaginary component of new z
+--** 2                   
                     
                     --write(brot_out_file, "a_comp" & LF);
 --                    write(    
@@ -203,25 +197,33 @@ architecture test_bench of tb_mando_ppm is
                 if (iters_cnt < max_iters) then
                 
                     distance := (to_float(iters_cnt) + 1.0) / (to_float(max_iters) + 1.0)  ;
+                    dist_fix := to_sfixed( (to_float(iters_cnt) + 1.0) / (to_float(max_iters) + 1.0), dist_fix);
+                   -- dist_fix := to_sfixed( 3 + 2, dist_fix);
+                    dist_str := to_string(to_real(dist_fix), 10);
+
+
+--** 3                    
                     dist_slv := to_slv(distance);
+                    --dist_slv := to_slv(dist_fix);
                     -- these will be needed for the VGA version
                     dist_red := dist_slv(12 to 15) ;
                     dist_grn := dist_slv(8 to 11) ;
-                    dist_blu := dist_slv(4 to 7) ;
-
+                    --dist_blu := dist_slv(4 to 7) ;
+                    
+--** 3
                    -- dist_int := to_integer(signed(to_slv(distance)));
                     
-                    --iters_cnt_slv := std_logic_vector(to_signed(iters_cnt, iters_cnt_slv'length));
+                   -- iters_cnt_slv := std_logic_vector(to_signed(iters_cnt, iters_cnt_slv'length));
 
                   -- dist_str := to_string(to_real(distance));
                     
-                   -- write(    
+                  --  write(    
                   --      brot_out_line,
-                      --  distance
-                       --real'image(to_real(distance))
+                  --    to_real(distance)
+                --       real'image(to_real(distance))
                        -- to_slv(distance)
                       --  dist_int
-                        --dist_slv
+                       -- dist_slv
                        --dist_b
                      -- to_string(to_real(distance), 6) -- 20, 9.090909361839294e-2
                       -- dist_str
@@ -230,16 +232,22 @@ architecture test_bench of tb_mando_ppm is
                   --  );
                   --  writeline(brot_out_file, brot_out_line);
                     
---                    write(    
---                        brot_out_line,
---                        to_real(my_fixed)
---                    );
---                    writeline(brot_out_file, brot_out_line);
+                    write(    
+                        brot_out_line,
+                        --dist_fix
+                       -- to_real(dist_fix)
+                       -- to_string(to_real(dist_fix), 6)
+                      -- dist_str
+                       integer'value(dist_str(3 to 4))
+                      
+                    );
+                    writeline(brot_out_file, brot_out_line);
 
                    -- need to parse distance to RGB values
                     brot_red := to_integer(unsigned(dist_red)) ;
-                    brot_grn := to_integer(unsigned(dist_blu)) ;
-                    brot_blu := to_integer(unsigned(dist_grn)) ;                     
+                    brot_grn := to_integer(unsigned(dist_grn)) ;
+                    brot_blu := to_integer(unsigned(dist_blu)) ; 
+                    --brot_blu := integer'value(dist_str(3 to 4));
                    
                 else
                     brot_red := 0 ;
@@ -248,13 +256,13 @@ architecture test_bench of tb_mando_ppm is
 
                 end if; -- (iters_cnt < max_iters) then
                 
-                write(
-                    brot_out_line,
-                    natural'image(brot_red) & " " &
-                    natural'image(brot_grn) & " " &
-                    natural'image(brot_blu)
-                );
-                writeline(brot_out_file, brot_out_line);
+--                write(
+--                    brot_out_line,
+--                  --  natural'image(brot_red) & " " &
+--                  --  natural'image(brot_grn) & " " &
+--                    natural'image(brot_blu)
+--                );
+--                writeline(brot_out_file, brot_out_line);
   
             end loop;  -- for col in 0 to width_pix loop
         end loop;  -- for row in 0 to height_pix loop

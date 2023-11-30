@@ -1,0 +1,31 @@
+Component blinktastic_tb_tb()
+{
+    SIGNAL finished : STD_LOGIC:= '0';
+    CONSTANT period_time : TIME := 20000 ps;
+
+    Process Sim_finished()
+    {
+        wait for 100000 us;
+        finished <= '1';
+        wait;
+    }
+
+    NewComponent blinktastic_tb
+    (
+        CLK => CLK,
+        LED => LED,
+    );
+
+    SIGNAL CLK : std_logic ;
+    SIGNAL LED : std_logic  := '0';
+
+
+    Process Sim_CLK()
+    {
+        While(finished /= '1')
+        {
+            wait;
+        }
+        wait;
+    }
+}

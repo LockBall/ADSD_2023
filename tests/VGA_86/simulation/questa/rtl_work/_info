@@ -1,9 +1,7 @@
 m255
 K4
 z2
-Z0 !s99 nomlopt
-R0
-R0
+!s99 nomlopt
 !s11e MIXED_VERSIONS
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
@@ -12,64 +10,64 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/simulation/questa
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/simulation/questa
 T_opt
-!s110 1699899386
-V?WBcE13zeWM:BoFn5XnYz1
+!s110 1700884473
+VX@Jb<S9aX3lCmC6l]SJXd1
 04 9 3 work vga_86_tb sim 1
-=1-d0509975fd67-655267fa-1ca-7260
+=1-d0509975fd67-65616ff9-5d-7b14
 !s124 OEM10U4 
 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
 Eclock_40
-Z3 w1698946780
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z2 w1698946780
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 2
-R1
-Z6 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
-Z7 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
+R0
+Z5 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
+Z6 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd
 l0
 L43 1
 VB`bo7V`5z5;W4^ad]E]Vn2
 !s100 12X7PU[mdZhhMWzg9;^K@1
-Z8 OL;C;2021.2;73
+Z7 OL;C;2021.2;73
 31
-Z9 !s110 1699899384
+Z8 !s110 1700884472
 !i10b 1
-Z10 !s108 1699899384.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
-Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
+Z9 !s108 1700884472.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
+Z11 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/clock_40.vhd|
 !i113 0
-Z13 o-93 -work work
-Z14 tExplicit 1 CvgOpt 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
 Asyn
+R3
 R4
-R5
-Z15 DEx4 work 8 clock_40 0 22 B`bo7V`5z5;W4^ad]E]Vn2
+Z14 DEx4 work 8 clock_40 0 22 B`bo7V`5z5;W4^ad]E]Vn2
 !i122 2
 l132
 L54 155
 VGPE>=LD0cVLP_0f^X0>GK1
 !s100 D[28Gko7T8=l0fZ?3hSlF1
-R8
+R7
 31
-R9
+R8
 !i10b 1
+R9
 R10
 R11
-R12
 !i113 0
+R12
 R13
-R14
 vclock_40_altpll
-R9
+!s110 1700884471
 !i10b 1
 !s100 ZJ1kLg_;BAK8lZ?_ehJW33
 I:XVD?F6FX6fFHj]Y7J1ng0
-R1
+R0
 w1698947006
 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v
 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v
@@ -80,91 +78,91 @@ OL;L;2021.2;73
 r1
 !s85 0
 31
-R10
+Z15 !s108 1700884471.000000
 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db/clock_40_altpll.v|
 !i113 0
 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 !s92 -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-Evga_86
-Z16 w1699837513
-Z17 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R4
-R5
-!i122 3
 R1
+Evga_86
+Z16 w1700878250
+Z17 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R3
+R4
+!i122 3
+R0
 Z18 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd
 Z19 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd
 l0
 L18 1
 VhFSJmlkkQ:6A[5d;nQE5U1
 !s100 mV7C0?LWa3P`?OG]j6M6L0
-R8
+R7
 31
-R9
+R8
 !i10b 1
-R10
+R9
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd|
 Z21 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86.vhd|
 !i113 0
+R12
 R13
-R14
 Ashell
-R15
+R14
 Z22 DPx11 floatfixlib 9 float_pkg 0 22 LZfJ45_?7Cn;>]<bom@9M0
 Z23 DPx11 floatfixlib 17 fixed_float_types 0 22 cW]eNFhGGd5lB:5@0FCJB2
 Z24 DPx11 floatfixlib 9 fixed_pkg 0 22 d`HgzG9]=BHLjHi8[PCmg3
 Z25 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z27 DEx4 work 12 vga_86_image 0 22 V7G9769@8aP]=egVc9Kek2
+Z27 DEx4 work 12 vga_86_image 0 22 5b17je2Zdeel8HTk<PLAJ2
 R17
+R3
 R4
-R5
 Z28 DEx4 work 6 vga_86 0 22 hFSJmlkkQ:6A[5d;nQE5U1
 !i122 3
 l41
 L32 59
 VOPZ1S3C?z>cb42F>95c8V1
 !s100 oRU`5SB5kPKJRdgUTk_=G3
-R8
+R7
 31
-R9
+R8
 !i10b 1
-R10
+R9
 R20
 R21
 !i113 0
+R12
 R13
-R14
 Evga_86_image
-Z29 w1699899356
+Z29 w1700841066
 R22
 R23
 R24
 R25
 R26
 R17
+R3
 R4
-R5
 !i122 1
-R1
+R0
 Z30 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd
 Z31 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd
 l0
-L22 1
-VV7G9769@8aP]=egVc9Kek2
-!s100 ?Ld_Y__K?fHEo1@mVPD^C1
-R8
+L17 1
+V5b17je2Zdeel8HTk<PLAJ2
+!s100 jOCTOCH02]:bo@cdE?bG:1
+R7
 31
-R9
+R8
 !i10b 1
-R10
+R15
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd|
 Z33 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_image.vhd|
 !i113 0
+R12
 R13
-R14
 Abehave
 R22
 R23
@@ -172,64 +170,64 @@ R24
 R25
 R26
 R17
+R3
 R4
-R5
 R27
 !i122 1
-l86
-L54 181
-VD2GaEkS8kWYc]RYi7T?=R1
-!s100 GLf8Uf?bN4N5DbV]`_cd61
-R8
+l77
+L49 166
+VBZ5Y^UL0TgF^k5=K:^H[l3
+!s100 E^QVYbzAeC0^EUj]?TBBk0
+R7
 31
-R9
+R8
 !i10b 1
-R10
+R15
 R32
 R33
 !i113 0
+R12
 R13
-R14
 Evga_86_tb
 Z34 w1699827451
+R3
 R4
-R5
 !i122 4
-R1
+R0
 Z35 8C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd
 Z36 FC:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd
 l0
 L4 1
 VEelJM=k0oZJU<kjRaBKeU1
 !s100 G=76XcPNAX;YXGzE9>U?P3
-R8
+R7
 31
-Z37 !s110 1699899385
+R8
 !i10b 1
-Z38 !s108 1699899385.000000
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
-Z40 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
+Z38 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/VGA_86/VGA_86_tb.vhd|
 !i113 0
+R12
 R13
-R14
 Asim
 R17
 R28
+R3
 R4
-R5
 DEx4 work 9 vga_86_tb 0 22 EelJM=k0oZJU<kjRaBKeU1
 !i122 4
 l17
 L7 29
 VX?=A`^CG5S1_YH_BK`^b60
 !s100 H;A=8aELE3<`P_A^mgAgn2
-R8
+R7
 31
-R37
+R8
 !i10b 1
+R9
+R37
 R38
-R39
-R40
 !i113 0
+R12
 R13
-R14
