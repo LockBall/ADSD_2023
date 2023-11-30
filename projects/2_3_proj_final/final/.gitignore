@@ -1,9 +1,0 @@
-*
-!*.qsf
-!*.qpf
-!*/
-!*.vhd
-!*.tcl
-!Makefile
-!.gitignore
-*pll*
