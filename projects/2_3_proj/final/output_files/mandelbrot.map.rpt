@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mandelbrot
-Fri Dec  1 15:17:46 2023
+Fri Dec  1 16:43:07 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -196,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  1 15:17:46 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  1 16:43:07 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; mandelbrot                                     ;
 ; Top-level Entity Name              ; mandelbrot                                     ;
@@ -314,8 +314,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
 
@@ -9771,7 +9771,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:25     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -9781,7 +9781,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Dec  1 15:17:10 2023
+    Info: Processing started: Fri Dec  1 16:42:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mandelbrot -c mandelbrot
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -9790,7 +9790,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file vga_fsm
     Info (12023): Found entity 1: vga_fsm File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd Line: 7
 Info (12021): Found 2 design units, including 0 entities, in source file vga_data.vhd
     Info (12022): Found design unit 1: vga_data (vga) File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd Line: 4
-    Info (12022): Found design unit 2: vga_data-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd Line: 142
+    Info (12022): Found design unit 2: vga_data-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd Line: 143
 Info (12021): Found 1 design units, including 0 entities, in source file de10_vga.vhd
     Info (12022): Found design unit 1: de10_vga (vga) File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd Line: 1
 Info (12021): Found 2 design units, including 0 entities, in source file ads_fixed.vhd
@@ -9803,7 +9803,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mandelb
     Info (12022): Found design unit 1: mandelbrot-top File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 29
     Info (12023): Found entity 1: mandelbrot File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline.vhd
-    Info (12022): Found design unit 1: pipeline-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 25
+    Info (12022): Found design unit 1: pipeline-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 24
     Info (12023): Found entity 1: pipeline File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_stage.vhd
     Info (12022): Found design unit 1: pipeline_stage-behavior File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline_stage.vhd Line: 22
@@ -9814,24 +9814,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
     Info (12022): Found design unit 1: pll-SYN File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd Line: 52
     Info (12023): Found entity 1: pll File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd Line: 43
 Info (12127): Elaborating entity "mandelbrot" for the top level hierarchy
-Info (12128): Elaborating entity "pipeline" for hierarchy "pipeline:p" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 121
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:0:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:1:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:2:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:3:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:4:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:5:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:6:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:7:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:8:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:9:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:10:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:11:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:12:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:13:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:14:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:15:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 41
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 134
+Info (12128): Elaborating entity "pipeline" for hierarchy "pipeline:p" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 126
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:0:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:1:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:2:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:3:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:4:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:5:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:6:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:7:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:8:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:9:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:10:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:11:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:12:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:13:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:14:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pipeline_stage" for hierarchy "pipeline:p|pipeline_stage:\stages:15:s" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pipeline.vhd Line: 40
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 140
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd Line: 134
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd Line: 134
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd Line: 134
@@ -9892,7 +9892,7 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "vga_fsm" for hierarchy "vga_fsm:vga" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 140
+Info (12128): Elaborating entity "vga_fsm" for hierarchy "vga_fsm:vga" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/mandelbrot.vhd Line: 146
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "vga_fsm:vga|h_sync_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
@@ -10184,9 +10184,9 @@ Info (21057): Implemented 13620 device resources after synthesis - the final res
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 288 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4957 megabytes
-    Info: Processing ended: Fri Dec  1 15:17:46 2023
+    Info: Peak virtual memory: 4997 megabytes
+    Info: Processing ended: Fri Dec  1 16:43:08 2023
     Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Total CPU time (on all processors): 00:00:47
 
 

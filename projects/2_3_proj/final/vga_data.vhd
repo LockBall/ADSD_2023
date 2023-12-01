@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 
 package vga_data is
 
-	
 	type color_map is record
 
 		red	: std_logic_vector (0 to 3);
@@ -12,12 +11,14 @@ package vga_data is
 
 	end record color_map;
 
+
 	type timing_data is record
 		active:			natural;
 		front_porch:	natural;
 		sync_width:		natural;
 		back_porch:		natural;
 	end record timing_data;
+
 
 	type polarity is ( active_low, active_high );
 
@@ -234,25 +235,27 @@ package body vga_data is
 	end function make_coordinate;
 
 	function next_coordinate (
-    point: in coordinate;
-    vga_res: in vga_timing := vga_res_default
-	) return coordinate is
-		variable ret: coordinate;
-	begin
-		ret.x := point.x + 1;
-		ret.y := point.y;
-		-- Wrap around logic for horizontal coordinates
-		if ret.x = timing_range(vga_res, horizontal) then
-			ret.x := 0;
-			ret.y := ret.y + 1;
-		end if;
+		point: in coordinate;
+		vga_res: in vga_timing := vga_res_default
+		) return coordinate is
+			variable ret: coordinate;
+		begin
+			ret.x := point.x + 1;
+			ret.y := point.y;
+			-- Wrap around logic for horizontal coordinates
+			if ret.x = timing_range(vga_res, horizontal) then
+				ret.x := 0;
+				ret.y := ret.y + 1;
+			end if;
 
-		-- Wrap around logic for vertical coordinates
-		if ret.y = timing_range(vga_res, vertical) then
-			ret.y := 0;
-		end if;
-    return ret;
-end function next_coordinate;
+			-- Wrap around logic for vertical coordinates
+			if ret.y = timing_range(vga_res, vertical) then
+				ret.y := 0;
+			end if;
+
+		return ret;
+	end function next_coordinate;
+
 
 	function do_horizontal_sync (
 			point:		in	coordinate;
@@ -261,6 +264,7 @@ end function next_coordinate;
 	begin
 		return do_sync(point, vga_res, horizontal);
 	end function do_horizontal_sync;
+
 
 	function do_vertical_sync (
 		point: in coordinate;

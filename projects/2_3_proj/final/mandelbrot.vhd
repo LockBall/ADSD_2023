@@ -27,6 +27,7 @@ entity mandelbrot is
 end entity mandelbrot;
 
 architecture top of mandelbrot is
+
 	component vga_fsm is
 		 generic (
 			  vga_res:    vga_timing := vga_res_default
@@ -44,8 +45,7 @@ architecture top of mandelbrot is
 	end component vga_fsm;
 	
 	component pll
-		PORT
-		(
+		port (
 			inclk0		: IN STD_LOGIC  := '0';
 			c0		: OUT STD_LOGIC 
 		);
@@ -66,6 +66,7 @@ architecture top of mandelbrot is
 			ov_out: out natural
 		);
 	end component pipeline;
+
 
 	type point_valid_sreg_type is array(0 to pipeline_length) of boolean;
 	signal point_valid_sreg: point_valid_sreg_type;
@@ -90,7 +91,8 @@ architecture top of mandelbrot is
 		constant max_vga_y: natural := vga_res.vertical.active;
 		-- viewing area
 		-- mandelbrot looks good on RE from -2.2 to 1, IM from -1.2 to 1.2
-		-- these could be adjusted for a better aspect ratio
+		-- julia set: RE -2.9333 to 2.9333, IM -2.2 to 2.2
+		-- thse shift the center of the imaginary plane
 		constant min_re: real := -2.9333;
 		constant max_re: real := 2.9333;
 		constant min_im: real := -2.2;
@@ -100,22 +102,25 @@ architecture top of mandelbrot is
 		constant delta_y: ads_sfixed := to_ads_sfixed((min_im - max_im)/real(max_vga_y));
 		
 		variable ret: ads_complex;
-	begin
+	  begin
 		ret.re := delta_x * to_ads_sfixed(pt.x) + to_ads_sfixed(min_re);
 		ret.im := delta_y * to_ads_sfixed(pt.y) + to_ads_sfixed(max_im);
 		
 		return ret;
 	end function gen_complex;
-	
-begin
+
+
+  begin
 
 	set_seed: process(vga_clock, reset) is
-	begin
+	  begin
+
 		if reset = '0' then
 			seed <= complex_zero;
 		elsif rising_edge(vga_clock) then
 			seed <= gen_complex(point);
 		end if;
+
 	end process set_seed;
 
 	p: pipeline
@@ -131,12 +136,13 @@ begin
 			ov_out =>	ov_out
 		);
 
+
 	pll_inst : pll PORT MAP (
-			inclk0	 => clock,
-			c0	 => vga_clock
+			inclk0 => clock,
+			c0	   => vga_clock
 		);
 
-
+		
 	vga: vga_fsm
 		generic map (
 			vga_res => vga_res
@@ -148,9 +154,9 @@ begin
 			point_valid =>	vga_point_valid,
 			h_sync =>		vga_h_sync,	-- todo: feed through shift register after adding pipeline!
 			v_sync =>		vga_v_sync	-- todo: same as above!
-			
 		);
 	
+
 	sync: process(vga_clock) is
 	begin
 		if rising_edge(vga_clock) then

@@ -17,8 +17,7 @@ entity pipeline is
         reset:  in  std_logic;
         c:      in  ads_complex;
         z:      in  ads_complex;
-
-        ov_out: out natural
+        ov_out: out natural  -- overflow
     );
 end entity pipeline;
 

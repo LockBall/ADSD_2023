@@ -60,20 +60,20 @@ reset => seed.re[7].ACLR
 reset => seed.re[8].ACLR
 reset => seed.re[9].ACLR
 reset => seed.re[10].ACLR
-h_sync << h_sync_sreg[16].DB_MAX_OUTPUT_PORT_TYPE
-v_sync << v_sync_sreg[16].DB_MAX_OUTPUT_PORT_TYPE
-color.blue[0] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.blue[1] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.blue[2] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.blue[3] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.green[0] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.green[1] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.green[2] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.green[3] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.red[0] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.red[1] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.red[2] << color.DB_MAX_OUTPUT_PORT_TYPE
-color.red[3] << color.DB_MAX_OUTPUT_PORT_TYPE
+h_sync <= h_sync_sreg[16].DB_MAX_OUTPUT_PORT_TYPE
+v_sync <= v_sync_sreg[16].DB_MAX_OUTPUT_PORT_TYPE
+color.blue[0] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.blue[1] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.blue[2] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.blue[3] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.green[0] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.green[1] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.green[2] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.green[3] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.red[0] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.red[1] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.red[2] <= color.DB_MAX_OUTPUT_PORT_TYPE
+color.red[3] <= color.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mandelbrot|pipeline:p
