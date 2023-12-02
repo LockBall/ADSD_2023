@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Dec  1 21:35:52 2023
+Analysis & Synthesis Status : Successful - Fri Dec  1 23:21:58 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : mandelbrot
 Top-level Entity Name : mandelbrot
 Family : MAX 10
-Total logic elements : 12,773
-    Total combinational functions : 12,022
-    Dedicated logic registers : 1,689
-Total registers : 1689
+Total logic elements : 13,465
+    Total combinational functions : 13,430
+    Dedicated logic registers : 1,035
+Total registers : 1035
 Total pins : 16
 Total virtual pins : 0
 Total memory bits : 48

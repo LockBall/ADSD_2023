@@ -1,5 +1,5 @@
 Flow report for mandelbrot
-Fri Dec  1 21:36:57 2023
+Fri Dec  1 23:23:01 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec  1 21:36:57 2023          ;
+; Flow Status                        ; Successful - Fri Dec  1 23:23:01 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; mandelbrot                                     ;
 ; Top-level Entity Name              ; mandelbrot                                     ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C6GES                               ;
 ; Timing Models                      ; Preliminary                                    ;
-; Total logic elements               ; 12,397 / 49,760 ( 25 % )                       ;
-;     Total combinational functions  ; 12,024 / 49,760 ( 24 % )                       ;
-;     Dedicated logic registers      ; 1,644 / 49,760 ( 3 % )                         ;
-; Total registers                    ; 1644                                           ;
+; Total logic elements               ; 13,498 / 49,760 ( 27 % )                       ;
+;     Total combinational functions  ; 13,432 / 49,760 ( 27 % )                       ;
+;     Dedicated logic registers      ; 990 / 49,760 ( 2 % )                           ;
+; Total registers                    ; 990                                            ;
 ; Total pins                         ; 16 / 360 ( 4 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 48 / 1,677,312 ( < 1 % )                       ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/01/2023 21:35:17 ;
+; Start date & time ; 12/01/2023 23:21:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mandelbrot          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 229044590607719.170148451718004        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 229044590607719.170149088117972        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -105,10 +105,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 4957 MB             ; 00:00:47                           ;
-; Fitter               ; 00:00:50     ; 1.5                     ; 5814 MB             ; 00:01:56                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4779 MB             ; 00:00:03                           ;
-; Total                ; 00:01:27     ; --                      ; --                  ; 00:02:46                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4997 MB             ; 00:00:49                           ;
+; Fitter               ; 00:00:52     ; 1.6                     ; 5824 MB             ; 00:01:59                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4773 MB             ; 00:00:03                           ;
+; Total                ; 00:01:31     ; --                      ; --                  ; 00:02:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
