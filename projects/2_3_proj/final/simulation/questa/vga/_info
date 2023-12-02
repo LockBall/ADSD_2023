@@ -1,0 +1,116 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/simulation/questa
+Pde10_vga
+!i122 1
+Z1 w1701382560
+R0
+8C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd
+FC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd
+l0
+L1 1
+V:3>F]3@JFbCi8fao`dzF?2
+!s100 KT7WC7NicSj`oN9L?JhRN3
+Z2 OL;C;2021.2;73
+31
+Z3 !s110 1701472110
+!i10b 1
+Z4 !s108 1701472110.000000
+!s90 -reportprogress|300|-93|-work|vga|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd|
+!s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd|
+!i113 0
+Z5 o-93 -work vga
+Z6 tExplicit 1 CvgOpt 0
+Pvga_data
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+Z9 w1701466889
+R0
+Z10 8C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd
+Z11 FC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd
+l0
+L4 1
+Vg^MAIzJabZ:H;M@KV68<D3
+!s100 ^9[]UU9@0S[;3bnJJ_@jR2
+R2
+31
+b1
+R3
+!i10b 1
+R4
+Z12 !s90 -reportprogress|300|-93|-work|vga|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd|
+Z13 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd|
+!i113 0
+R5
+R6
+Bbody
+DPx4 work 8 vga_data 0 22 g^MAIzJabZ:H;M@KV68<D3
+R7
+R8
+!i122 0
+l0
+L143 1
+VJ59[R=oncUc:EcJ];X=FQ3
+!s100 [8m@0]KTLMm8VQa0Y5hdd0
+R2
+31
+R3
+!i10b 1
+R4
+R12
+R13
+!i113 0
+R5
+R6
+Evga_fsm
+R1
+Z14 DPx3 vga 8 vga_data 0 22 g^MAIzJabZ:H;M@KV68<D3
+R7
+R8
+!i122 2
+R0
+Z15 8C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd
+Z16 FC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd
+l0
+L7 1
+Vo1CiaNmZze`2X_f2fiHPm2
+!s100 Ynoj3lSfe5AK]VfHLK0R`1
+R2
+31
+Z17 !s110 1701472111
+!i10b 1
+R4
+Z18 !s90 -reportprogress|300|-93|-work|vga|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd|
+!s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd|
+!i113 0
+R5
+R6
+Afsm
+R14
+R7
+R8
+DEx4 work 7 vga_fsm 0 22 o1CiaNmZze`2X_f2fiHPm2
+!i122 2
+l33
+L23 72
+VHlL8QCBU@59iCPkc5CLfk0
+!s100 QaRS8W4R>7PB7J3@14GE^0
+R2
+31
+R17
+!i10b 1
+R4
+R18
+Z19 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd|
+!i113 0
+R5
+R6

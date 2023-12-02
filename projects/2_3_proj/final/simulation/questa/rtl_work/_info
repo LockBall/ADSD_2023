@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/simulation/questa
+Epll
+Z1 w1701386797
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd
+Z5 FC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd
+l0
+L43 1
+VgW:;d_[FbV`?`II2Ceei<2
+!s100 A<H4AY;Y0hFFY7nE=<T@T1
+Z6 OL;C;2021.2;73
+31
+Z7 !s110 1701472110
+!i10b 1
+Z8 !s108 1701472110.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
+!s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
+!i113 0
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Asyn
+R2
+R3
+DEx4 work 3 pll 0 22 gW:;d_[FbV`?`II2Ceei<2
+!i122 1
+l126
+L52 147
+VBJQD>=Q3E?cooiC:2VB<A2
+!s100 ]mYUb:S<=0GZT9Ek5zkO^3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
+!i113 0
+R10
+R11
+vpll_altpll
+!s110 1701472109
+!i10b 1
+!s100 L[QzPWKg:3iCk@Hh`7g061
+I6kH:hR4;>l;iB<1fTTeL]2
+R0
+w1701386847
+8C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v
+FC:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v
+!i122 0
+L0 30 63
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1701472109.000000
+!s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

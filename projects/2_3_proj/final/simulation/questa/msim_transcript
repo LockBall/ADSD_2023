@@ -1,0 +1,121 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do mandelbrot_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/22.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:29 on Dec 01,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db" C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 18:08:29 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib vga
+# vmap vga vga
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap vga vga 
+# Modifying modelsim.ini
+# vcom -93 -work vga {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:30 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work vga C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_data.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package vga_data
+# -- Compiling package body vga_data
+# -- Loading package vga_data
+# End time: 18:08:30 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work vga {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:30 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work vga C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd 
+# -- Loading package STANDARD
+# -- Compiling package de10_vga
+# End time: 18:08:30 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib ads
+# vmap ads ads
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap ads ads 
+# Modifying modelsim.ini
+# vcom -93 -work ads {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:30 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work ads C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package ads_fixed_pkg
+# -- Compiling package body ads_fixed_pkg
+# -- Loading package ads_fixed_pkg
+# End time: 18:08:30 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:30 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll
+# -- Compiling architecture SYN of pll
+# End time: 18:08:30 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work vga {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:30 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work vga C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/vga_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package vga_data
+# -- Compiling entity vga_fsm
+# -- Compiling architecture fsm of vga_fsm
+# End time: 18:08:31 on Dec 01,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work ads {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 18:08:31 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work ads C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ads_fixed_pkg
+# -- Compiling package ads_complex_pkg
+# ** Error (suppressible): C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd(28): (vcom-1594) Cannot call subprogram "ads_cmplx" before it is elaborated. 
+# ** Note: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd(60): VHDL Compiler exiting
+# End time: 18:08:31 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: c:/intelfpga_lite/22.1/questa_fse/win64/vcom failed.
+# Error in macro ./mandelbrot_run_msim_rtl_verilog.do line 18
+# c:/intelfpga_lite/22.1/questa_fse/win64/vcom failed.
+#     while executing
+# "vcom -93 -work ads {C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd}"
