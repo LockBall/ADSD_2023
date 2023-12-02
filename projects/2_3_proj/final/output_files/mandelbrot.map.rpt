@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mandelbrot
-Fri Dec  1 21:03:28 2023
+Fri Dec  1 21:35:52 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,8 +43,8 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  35. Parameter Settings for User Entity Instance: pll:pll_inst|altpll:altpll_component
  36. Parameter Settings for User Entity Instance: vga_fsm:vga
  37. Parameter Settings for Inferred Entity Instance: vga_fsm:vga|altshift_taps:h_sync_rtl_0
- 38. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2
- 39. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1
+ 38. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1
+ 39. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2
  40. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2
  41. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult1
  42. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult0
@@ -86,10 +86,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  78. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult0
  79. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
  80. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 81. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
- 82. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8
- 83. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
- 84. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8
+ 81. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
+ 82. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8
+ 83. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
+ 84. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8
  85. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
  86. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8
  87. Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7
@@ -169,13 +169,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  1 21:03:28 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  1 21:35:52 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; mandelbrot                                     ;
 ; Top-level Entity Name              ; mandelbrot                                     ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 12,520                                         ;
-;     Total combinational functions  ; 11,769                                         ;
+; Total logic elements               ; 12,773                                         ;
+;     Total combinational functions  ; 12,022                                         ;
 ;     Dedicated logic registers      ; 1,689                                          ;
 ; Total registers                    ; 1689                                           ;
 ; Total pins                         ; 16                                             ;
@@ -344,16 +344,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                           ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 12,520                                                                          ;
+; Estimated Total logic elements              ; 12,773                                                                          ;
 ;                                             ;                                                                                 ;
-; Total combinational functions               ; 11769                                                                           ;
+; Total combinational functions               ; 12022                                                                           ;
 ; Logic element usage by number of LUT inputs ;                                                                                 ;
-;     -- 4 input functions                    ; 3505                                                                            ;
-;     -- 3 input functions                    ; 6564                                                                            ;
-;     -- <=2 input functions                  ; 1700                                                                            ;
+;     -- 4 input functions                    ; 3762                                                                            ;
+;     -- 3 input functions                    ; 6545                                                                            ;
+;     -- <=2 input functions                  ; 1715                                                                            ;
 ;                                             ;                                                                                 ;
 ; Logic elements by mode                      ;                                                                                 ;
-;     -- normal mode                          ; 5106                                                                            ;
+;     -- normal mode                          ; 5359                                                                            ;
 ;     -- arithmetic mode                      ; 6663                                                                            ;
 ;                                             ;                                                                                 ;
 ; Total registers                             ; 1689                                                                            ;
@@ -370,8 +370,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                                 ;
 ; Maximum fan-out node                        ; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 1693                                                                            ;
-; Total fan-out                               ; 45462                                                                           ;
-; Average fan-out                             ; 3.30                                                                            ;
+; Total fan-out                               ; 46463                                                                           ;
+; Average fan-out                             ; 3.31                                                                            ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
 
 
@@ -380,13 +380,13 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                          ; Entity Name     ; Library Name ;
 +--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |mandelbrot                                      ; 11769 (152)         ; 1689 (56)                 ; 48          ; 0          ; 288          ; 0       ; 144       ; 16   ; 0            ; 0          ; |mandelbrot                                                                                                                                                  ; mandelbrot      ; work         ;
+; |mandelbrot                                      ; 12022 (159)         ; 1689 (56)                 ; 48          ; 0          ; 288          ; 0       ; 144       ; 16   ; 0            ; 0          ; |mandelbrot                                                                                                                                                  ; mandelbrot      ; work         ;
 ;    |lpm_mult:Mult0|                              ; 35 (0)              ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |mandelbrot|lpm_mult:Mult0                                                                                                                                   ; lpm_mult        ; work         ;
 ;       |mult_dks:auto_generated|                  ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |mandelbrot|lpm_mult:Mult0|mult_dks:auto_generated                                                                                                           ; mult_dks        ; work         ;
 ;    |lpm_mult:Mult1|                              ; 35 (0)              ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |mandelbrot|lpm_mult:Mult1                                                                                                                                   ; lpm_mult        ; work         ;
 ;       |mult_dks:auto_generated|                  ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |mandelbrot|lpm_mult:Mult1|mult_dks:auto_generated                                                                                                           ; mult_dks        ; work         ;
-;    |pipeline:p|                                  ; 11429 (3)           ; 1545 (1545)               ; 0           ; 0          ; 280          ; 0       ; 140       ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p                                                                                                                                       ; pipeline        ; work         ;
-;       |pipeline_stage:\stages:10:s|              ; 1042 (318)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s                                                                                                           ; pipeline_stage  ; work         ;
+;    |pipeline:p|                                  ; 11675 (3)           ; 1545 (1545)               ; 0           ; 0          ; 280          ; 0       ; 140       ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p                                                                                                                                       ; pipeline        ; work         ;
+;       |pipeline_stage:\stages:10:s|              ; 1060 (336)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s                                                                                                           ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 233 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult0                                                                                            ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 233 (80)            ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                    ; mult_9hs        ; work         ;
 ;                |alt_mac_mult:mac_mult7|          ; 153 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult0|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
@@ -402,7 +402,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 165 (165)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1 ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:11:s|              ; 1040 (316)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s                                                                                                           ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:11:s|              ; 1060 (336)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s                                                                                                           ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 233 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult0                                                                                            ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 233 (80)            ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                    ; mult_9hs        ; work         ;
 ;                |alt_mac_mult:mac_mult7|          ; 153 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult0|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
@@ -418,7 +418,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 165 (165)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:11:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1 ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:12:s|              ; 1041 (317)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s                                                                                                           ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:12:s|              ; 1061 (337)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s                                                                                                           ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 233 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult0                                                                                            ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 233 (80)            ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                    ; mult_9hs        ; work         ;
 ;                |alt_mac_mult:mac_mult7|          ; 153 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult0|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
@@ -434,7 +434,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 165 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 165 (165)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:12:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1 ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:13:s|              ; 1042 (318)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s                                                                                                           ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:13:s|              ; 1060 (336)          ; 0 (0)                     ; 0           ; 0          ; 18           ; 0       ; 9         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s                                                                                                           ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 233 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult0                                                                                            ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 233 (80)            ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                    ; mult_9hs        ; work         ;
 ;                |alt_mac_mult:mac_mult7|          ; 153 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult0|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                             ; alt_mac_mult    ; work         ;
@@ -462,35 +462,35 @@ https://fpgasoftware.intel.com/eula.
 ;                   |mac_mult_0kg1:auto_generated| ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 166 (166)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1 ; mult_qqn        ; work         ;
 ;       |pipeline_stage:\stages:15:s|              ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:15:s                                                                                                           ; pipeline_stage  ; work         ;
-;       |pipeline_stage:\stages:1:s|               ; 554 (314)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:1:s|               ; 571 (331)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult1|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult2|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult2                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:1:s|lpm_mult:Mult2|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
-;       |pipeline_stage:\stages:2:s|               ; 554 (314)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:2:s|               ; 574 (334)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult1|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult2|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult2                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:2:s|lpm_mult:Mult2|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
-;       |pipeline_stage:\stages:3:s|               ; 554 (314)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:3:s|               ; 576 (336)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult1|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult2|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult2                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:3:s|lpm_mult:Mult2|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
-;       |pipeline_stage:\stages:4:s|               ; 556 (316)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:4:s|               ; 576 (336)           ; 0 (0)                     ; 0           ; 0          ; 24           ; 0       ; 12        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult1|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult2|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult2                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:4:s|lpm_mult:Mult2|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
-;       |pipeline_stage:\stages:5:s|               ; 887 (315)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:5:s|               ; 906 (334)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 246 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
@@ -503,7 +503,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                              ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                 ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 166 (166)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:5:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1  ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:6:s|               ; 889 (317)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:6:s|               ; 907 (335)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 246 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
@@ -516,7 +516,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                              ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                 ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 166 (166)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:6:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1  ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:7:s|               ; 888 (316)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:7:s|               ; 906 (334)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 246 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
@@ -529,7 +529,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                              ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                 ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 166 (166)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:7:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1  ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:8:s|               ; 889 (317)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:8:s|               ; 907 (335)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 246 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
@@ -542,7 +542,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_mac_mult:mac_mult7|          ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7                                              ; alt_mac_mult    ; work         ;
 ;                   |mac_mult_0kg1:auto_generated| ; 166 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated                 ; mac_mult_0kg1   ; work         ;
 ;                      |mult_qqn:mult1|            ; 166 (166)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:8:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7|mac_mult_0kg1:auto_generated|mult_qqn:mult1  ; mult_qqn        ; work         ;
-;       |pipeline_stage:\stages:9:s|               ; 889 (317)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:9:s                                                                                                            ; pipeline_stage  ; work         ;
+;       |pipeline_stage:\stages:9:s|               ; 907 (335)           ; 0 (0)                     ; 0           ; 0          ; 20           ; 0       ; 10        ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:9:s                                                                                                            ; pipeline_stage  ; work         ;
 ;          |lpm_mult:Mult0|                        ; 80 (0)              ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:9:s|lpm_mult:Mult0                                                                                             ; lpm_mult        ; work         ;
 ;             |mult_9hs:auto_generated|            ; 80 (80)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:9:s|lpm_mult:Mult0|mult_9hs:auto_generated                                                                     ; mult_9hs        ; work         ;
 ;          |lpm_mult:Mult1|                        ; 246 (0)             ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |mandelbrot|pipeline:p|pipeline_stage:\stages:9:s|lpm_mult:Mult1                                                                                             ; lpm_mult        ; work         ;
@@ -759,32 +759,32 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[14].z.im[-12]          ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[14].z.re[10]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[13].z.im[-2]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[13].z.re[-16]          ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[12].z.im[-1]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[12].z.re[-5]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[11].z.im[-5]           ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[14].z.im[1]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[14].z.re[-13]          ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[13].z.im[-11]          ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[13].z.re[5]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[12].z.im[5]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[12].z.re[6]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[11].z.im[-6]           ;
 ; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[11].z.re[-3]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[10].z.im[-16]          ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[10].z.re[-4]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[9].z.im[7]             ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[9].z.re[-12]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[8].z.im[-3]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[8].z.re[7]             ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[7].z.im[-16]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[7].z.re[-4]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[6].z.im[-16]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[6].z.re[-7]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[5].z.im[-4]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[5].z.re[-1]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[4].z.im[8]             ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[4].z.re[-14]           ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[3].z.im[-9]            ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[3].z.re[7]             ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[2].z.im[6]             ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[2].z.re[0]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[10].z.im[-4]           ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[10].z.re[-10]          ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[9].z.im[-4]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[9].z.re[9]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[8].z.im[1]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[8].z.re[-1]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[7].z.im[4]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[7].z.re[-6]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[6].z.im[9]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[6].z.re[-1]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[5].z.im[-10]           ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[5].z.re[-4]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[4].z.im[-4]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[4].z.re[-6]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[3].z.im[-1]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[3].z.re[-4]            ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[2].z.im[3]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |mandelbrot|pipeline:p|pipeline_in[2].z.re[-10]           ;
 ; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |mandelbrot|pipeline:p|pipeline_stage:\stages:14:s|result ;
 ; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s|result ;
 ; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |mandelbrot|pipeline:p|pipeline_stage:\stages:13:s|result ;
@@ -1436,7 +1436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1 ;
 +------------------------------------------------+----------+--------------------------------------------+
 ; Parameter Name                                 ; Value    ; Type                                       ;
 +------------------------------------------------+----------+--------------------------------------------+
@@ -1471,7 +1471,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2 ;
 +------------------------------------------------+----------+--------------------------------------------+
 ; Parameter Name                                 ; Value    ; Type                                       ;
 +------------------------------------------------+----------+--------------------------------------------+
@@ -2941,7 +2941,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7 ;
 +------------------------------+---------------+--------------------------------------------------------------------------------------------------------+
 ; Parameter Name               ; Value         ; Type                                                                                                   ;
 +------------------------------+---------------+--------------------------------------------------------------------------------------------------------+
@@ -2988,7 +2988,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8 ;
 +-------------------------------+--------------+------------------------------------------------------------------------------------------------------+
 ; Parameter Name                ; Value        ; Type                                                                                                 ;
 +-------------------------------+--------------+------------------------------------------------------------------------------------------------------+
@@ -3090,7 +3090,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7 ;
 +------------------------------+---------------+--------------------------------------------------------------------------------------------------------+
 ; Parameter Name               ; Value         ; Type                                                                                                   ;
 +------------------------------+---------------+--------------------------------------------------------------------------------------------------------+
@@ -3137,7 +3137,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8 ;
+; Parameter Settings for Inferred Entity Instance: pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8 ;
 +-------------------------------+--------------+------------------------------------------------------------------------------------------------------+
 ; Parameter Name                ; Value        ; Type                                                                                                 ;
 +-------------------------------+--------------+------------------------------------------------------------------------------------------------------+
@@ -6552,7 +6552,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                                                 ;
 +---------------------------------------+-------------------------------------------------------+
 ; Number of entity instances            ; 43                                                    ;
-; Entity Instance                       ; pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2 ;
+; Entity Instance                       ; pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 29                                                    ;
 ;     -- LPM_WIDTHB                     ; 29                                                    ;
 ;     -- LPM_WIDTHP                     ; 58                                                    ;
@@ -6563,7 +6563,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                    ;
-; Entity Instance                       ; pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1 ;
+; Entity Instance                       ; pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 29                                                    ;
 ;     -- LPM_WIDTHB                     ; 29                                                    ;
 ;     -- LPM_WIDTHP                     ; 58                                                    ;
@@ -7068,24 +7068,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 1689                        ;
 ;     CLR               ; 1663                        ;
 ;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 11769                       ;
+; cycloneiii_lcell_comb ; 12022                       ;
 ;     arith             ; 6663                        ;
 ;         1 data inputs ; 96                          ;
-;         2 data inputs ; 1118                        ;
-;         3 data inputs ; 5449                        ;
-;     normal            ; 5106                        ;
+;         2 data inputs ; 1099                        ;
+;         3 data inputs ; 5468                        ;
+;     normal            ; 5359                        ;
 ;         0 data inputs ; 214                         ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 264                         ;
-;         3 data inputs ; 1115                        ;
-;         4 data inputs ; 3505                        ;
+;         2 data inputs ; 298                         ;
+;         3 data inputs ; 1077                        ;
+;         4 data inputs ; 3762                        ;
 ; cycloneiii_mac_mult   ; 144                         ;
 ; cycloneiii_mac_out    ; 144                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 19.20                       ;
-; Average LUT depth     ; 12.09                       ;
+; Average LUT depth     ; 12.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -7104,7 +7104,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Dec  1 21:02:53 2023
+    Info: Processing started: Fri Dec  1 21:35:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mandelbrot -c mandelbrot
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -7118,7 +7118,7 @@ Info (12021): Found 1 design units, including 0 entities, in source file de10_vg
     Info (12022): Found design unit 1: de10_vga (vga) File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/de10_vga.vhd Line: 1
 Info (12021): Found 2 design units, including 0 entities, in source file ads_fixed.vhd
     Info (12022): Found design unit 1: ads_fixed_pkg (ads) File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 7
-    Info (12022): Found design unit 2: ads_fixed_pkg-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 62
+    Info (12022): Found design unit 2: ads_fixed_pkg-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 63
 Info (12021): Found 2 design units, including 0 entities, in source file ads_complex.vhd
     Info (12022): Found design unit 1: ads_complex_pkg (ads) File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd Line: 5
     Info (12022): Found design unit 2: ads_complex_pkg-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_complex.vhd Line: 62
@@ -7222,49 +7222,49 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter TAP_DISTANCE set to 18
         Info (286033): Parameter WIDTH set to 3
 Info (278001): Inferred 43 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:14:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:14:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:14:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:14:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:13:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:12:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:11:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:10:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:9:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:8:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:7:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:6:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:5:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:4:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:3:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:2:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pipeline:p|pipeline_stage:\stages:1:s|Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
 Info (12130): Elaborated megafunction instantiation "vga_fsm:vga|altshift_taps:h_sync_rtl_0"
 Info (12133): Instantiated megafunction "vga_fsm:vga|altshift_taps:h_sync_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -7276,8 +7276,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_so71 File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/altsyncram_so71.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i5f.tdf
     Info (12023): Found entity 1: cntr_i5f File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/cntr_i5f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
+Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
     Info (12134): Parameter "LPM_WIDTHA" = "29"
     Info (12134): Parameter "LPM_WIDTHB" = "29"
     Info (12134): Parameter "LPM_WIDTHP" = "58"
@@ -7289,8 +7289,8 @@ Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_9hs.tdf
     Info (12023): Found entity 1: mult_9hs File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult1" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "29"
     Info (12134): Parameter "LPM_WIDTHP" = "41"
@@ -7302,8 +7302,8 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult1" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_dks.tdf
     Info (12023): Found entity 1: mult_dks File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_dks.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 328
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/ads_fixed.vhd Line: 329
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "29"
     Info (12134): Parameter "LPM_WIDTHP" = "41"
@@ -7317,12 +7317,12 @@ Info (270001): Converted 24 DSP block slices
     Info (270002): Used 168 DSP blocks before DSP block balancing
         Info (270003): Used 168 DSP block slices in "Simple Multiplier (18-bit)" mode implemented in approximately 168 DSP blocks
     Info (270013): Converted the following 24 DSP block slices to logic elements
-        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
-            Info (270004): DSP block output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
-            Info (270005): DSP block multiplier node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
         Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
             Info (270004): DSP block output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
             Info (270005): DSP block multiplier node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
+        Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
+            Info (270004): DSP block output node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
+            Info (270005): DSP block multiplier node "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
         Info (270006): DSP block slice in "Simple Multiplier (18-bit)" mode with output node "pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
             Info (270004): DSP block output node "pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
             Info (270005): DSP block multiplier node "pipeline:p|pipeline_stage:\stages:13:s|lpm_mult:Mult2|mult_9hs:auto_generated|mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
@@ -7391,8 +7391,8 @@ Info (270001): Converted 24 DSP block slices
             Info (270005): DSP block multiplier node "pipeline:p|pipeline_stage:\stages:10:s|lpm_mult:Mult0|mult_9hs:auto_generated|mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
     Info (270002): Used 144 DSP blocks after DSP block balancing
         Info (270003): Used 144 DSP block slices in "Simple Multiplier (18-bit)" mode implemented in approximately 144 DSP blocks
-Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
-Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
+Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
+Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_mult:mac_mult7" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 67
     Info (12134): Parameter "MULT_REPRESENTATION_A" = "SIGNED"
     Info (12134): Parameter "MULT_REPRESENTATION_B" = "SIGNED"
     Info (12134): Parameter "MULT_PIPELINE" = "0"
@@ -7417,8 +7417,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mac_
     Info (12023): Found entity 1: mac_mult_0kg1 File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mac_mult_0kg1.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_qqn.tdf
     Info (12023): Found entity 1: mult_qqn File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_qqn.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
-Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult2|mult_9hs:auto_generated|alt_mac_out:mac_out8" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
+Info (12130): Elaborated megafunction instantiation "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
+Info (12133): Instantiated megafunction "pipeline:p|pipeline_stage:\stages:14:s|lpm_mult:Mult1|mult_9hs:auto_generated|alt_mac_out:mac_out8" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/mult_9hs.tdf Line: 91
     Info (12134): Parameter "OPERATION_MODE" = "OUTPUT_ONLY"
     Info (12134): Parameter "dataa_width" = "22"
     Info (12134): Parameter "datab_width" = "0"
@@ -7460,17 +7460,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 40 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 12883 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 13136 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 12575 logic cells
+    Info (21061): Implemented 12828 logic cells
     Info (21064): Implemented 3 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 288 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4968 megabytes
-    Info: Processing ended: Fri Dec  1 21:03:28 2023
+    Info: Peak virtual memory: 4957 megabytes
+    Info: Processing ended: Fri Dec  1 21:35:52 2023
     Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Total CPU time (on all processors): 00:00:48
 
 
