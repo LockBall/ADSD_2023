@@ -24,9 +24,9 @@ VgW:;d_[FbV`?`II2Ceei<2
 !s100 A<H4AY;Y0hFFY7nE=<T@T1
 Z6 OL;C;2021.2;73
 31
-Z7 !s110 1701472110
+Z7 !s110 1701543212
 !i10b 1
-Z8 !s108 1701472110.000000
+Z8 !s108 1701543212.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
 !i113 0
@@ -52,7 +52,7 @@ Z12 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/pll.vhd|
 R10
 R11
 vpll_altpll
-!s110 1701472109
+!s110 1701543211
 !i10b 1
 !s100 L[QzPWKg:3iCk@Hh`7g061
 I6kH:hR4;>l;iB<1fTTeL]2
@@ -67,7 +67,7 @@ OL;L;2021.2;73
 r1
 !s85 0
 31
-!s108 1701472109.000000
+!s108 1701543211.000000
 !s107 C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db|C:/FPGA/2023/from_git/ADSD_2023/projects/2_3_proj/final/db/pll_altpll.v|
 !i113 0

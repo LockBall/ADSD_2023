@@ -100,10 +100,10 @@ architecture top of mandelbrot is
         -- 'works' for julia but is partially out of frame
 
 		-- julia set: RE -2.9333 to 2.9333, IM -2.2 to 2.2
-		constant min_re: real := -2.0;
-		constant max_re: real :=  2.0;
-		constant min_im: real := -1.5;
-		constant max_im: real :=  1.5;
+		constant min_re: real := -2.9333;
+		constant max_re: real :=  2.9333;
+		constant min_im: real := -2.2;
+		constant max_im: real :=  2.2;
 		
 		constant delta_x: ads_sfixed := to_ads_sfixed((max_re - min_re)/real(max_vga_x));
 		constant delta_y: ads_sfixed := to_ads_sfixed((min_im - max_im)/real(max_vga_y));
@@ -140,7 +140,7 @@ architecture top of mandelbrot is
 			clock => vga_clock,
 			reset => reset,
             -- julia
-			c     => ads_cmplx(to_ads_sfixed(-1), to_ads_sfixed(0)),
+			c     => ads_cmplx(to_ads_sfixed(-1.1), to_ads_sfixed(0.1)),  -- -1, 0
 			z     => seed,
             
             -- mandelbrot
@@ -177,6 +177,8 @@ architecture top of mandelbrot is
 			h_sync_sreg <= vga_h_sync & h_sync_sreg(0 to h_sync_sreg'high - 1);
 			v_sync_sreg <= vga_v_sync & v_sync_sreg(0 to v_sync_sreg'high - 1);
 			point_valid_sreg <= vga_point_valid & point_valid_sreg(0 to point_valid_sreg'high - 1);
+            
+            
 		end if;
 	end process sync;
 	
