@@ -26,7 +26,7 @@ architecture shell of street_de10 is
 signal clk_25   : std_logic;
 signal reset    : std_logic;
 signal reset_a, reset_b, reset_c, reset_d, reset_e : std_logic;
-signal r, g, b  : std_logic_vector(7 downto 0);
+signal r_sig, g_sig, b_sig  : std_logic_vector(7 downto 0);
 
 begin
 
@@ -54,17 +54,19 @@ end process;
 
 -- generic submodule
 street: entity work.street_image
-    port map (clk_25    => clk_25,
-              reset     => reset_e,
-              vs_out    => vga_vs,
-              hs_out    => vga_hs,
-              de_out    => open,
-              r_out     => r,
-              g_out     => g,
-              b_out     => b);
+    port map (
+      clk_25    => clk_25,
+      reset     => reset_e,
+      vs_out    => vga_vs,
+      hs_out    => vga_hs,
+      de_out    => open,
+      r_out     => r_sig,
+      g_out     => g_sig,
+      b_out     => b_sig
+    );
 
-vga_r <= r(7 downto 4);
-vga_g <= g(7 downto 4);
-vga_b <= b(7 downto 4);
+vga_r <= r_sig(7 downto 4);
+vga_g <= g_sig(7 downto 4);
+vga_b <= b_sig(7 downto 4);
 
 end shell;

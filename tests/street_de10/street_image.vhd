@@ -70,16 +70,17 @@ begin
 	new_frame   <= '0';
     frame_num   <= 500;
   else
-	
-	new_frame  <= '0'; -- default
-	if (h_count = 799) then
-	  h_count <= 0;
-	  if ( v_count = 524 ) then
-        v_count     <= 0;
-        new_frame   <= '1';                
-      else
-        v_count <= v_count + 1;
+    new_frame  <= '0'; -- default
+    if (h_count = 799) then
+      h_count <= 0;
+
+      if ( v_count = 524 ) then
+          v_count     <= 0;
+          new_frame   <= '1';                
+        else
+          v_count <= v_count + 1;
       end if; -- v_count
+
     else  
       h_count <= h_count + 1;
     end if; -- h_count

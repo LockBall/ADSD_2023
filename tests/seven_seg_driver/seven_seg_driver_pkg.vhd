@@ -125,29 +125,34 @@ package body seven_seg_driver_pkg is
     return ret;
   end function;
 
+
   function lamps_off (
       lamp_mode : lamp_configuration := default_lamp_config
   ) return seven_segment_config
   is
-  variable off_state : std_logic;
-  begin
-    -- Common anode off = 1 (v+)
-    -- Common cathode off = 0 (grounded)
-    if lamp_mode = common_anode then
-      off_state := '0';
-    else
-      off_state := '1';
-    end if;
-    return (
-      a => off_state, 
-      b => off_state, 
-      c => off_state, 
-      d => off_state, 
-      e => off_state,
-      f => off_state, 
-      g => off_state, 
-      dp => off_state);
+    variable off_state : std_logic;
+   begin
+      -- Common anode off = 1 (v+)
+      -- Common cathode off = 0 (grounded)
+      if lamp_mode = common_anode then
+        off_state := '0';
+      else
+        off_state := '1';
+      end if;
+
+      return (
+        a => off_state, 
+        b => off_state, 
+        c => off_state, 
+        d => off_state, 
+        e => off_state,
+        f => off_state, 
+        g => off_state, 
+        dp => off_state
+      );
+
   end function lamps_off;
+
 
   function get_num_segs(
     vector_width : natural
