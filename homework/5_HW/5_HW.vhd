@@ -6,25 +6,25 @@ entity seven_segment_agent  is
 	generic (
 		lamp_mode       : lamp_configuration := default_lamp_config;
 		decimal_support : boolean            := TRUE;
-		implementer     : natural            := range(0 to 255);
-        revision        : natural            := range(0 to 255) := 0
+		implementer     : natural range 0 to 255 := 100;
+        revision        : natural range 0 to 255 := 0
 	);
 	port (
 		clock      : in  std_logic;
 		reset_n    : in  std_logic;
-		address    : out std_logic_vector;
+		address    : out std_logic_vector(1 downto 0);
 		read       : out std_logic;
-		read_data  : out std_logic_vector;
+		read_data  : out std_logic_vector(31 downto 0);
         write      : in  std_logic;
-        write_data : in  std_logic_vector;
-        lamps      : out std_logic_vector
+        write_data : in  std_logic_vector(31 downto 0);
+        lamps      : out std_logic_vector(41 downto 0)
 	);
 end entity seven_segment_agent;
 
 
 architecture behave of seven_segment_agent is
     signal data    : std_logic_vector (31 downto 0);
-    signal control : std_logic_vector (31 downto 0);
+    signal control : std_logic_vector (1 downto 0); -- only using 2 bits of control for now, 4 for EC
 
 
 	-- seven_segment_config is 8 item record of std_logic
@@ -32,12 +32,11 @@ architecture behave of seven_segment_agent is
 		ary_6_ssc: in array of seven_segment_config(0 to 5);
 	) return std_logic_vector
 	is
-		variable ret_slv std_logic_vector(0 to 47);
+		variable ret_slv: std_logic_vector(41 downto 0);
 	begin
 		
-		for i in 1 to ary_6_ssc'length loop    -- indexing may be wrong
-			-- ret_slv := ret_slv & ary_6_ssc(i)  -- concatenate elements here
-			ret_slv := arr_in(i).g & arr_in(i).f & arr_in(i).e & arr_in(i).d & arr_in(i).c & arr_in(i).b & arr_in(i).a;
+		for i in ary_6_ssc'range loop    -- indexing may be wrong
+			ret_slv(7*i+6 downto 7*i) := arr_in(i).g & arr_in(i).f & arr_in(i).e & arr_in(i).d & arr_in(i).c & arr_in(i).b & arr_in(i).a;
 		end loop;
 
 		return ret_slv;
@@ -59,18 +58,37 @@ architecture behave of seven_segment_agent is
                     when "00" => -- data
                         read_data <= data;
                     when "01" =>  -- control
-                        read_data <= control;
+                        read_data <= (31 downto 2 => '0') & control;
                     when "10" =>  -- features (status)
+                        read_data(31 downto 24) <= std_logic_vector(to_unsigned(implementer, 8));
+                        read_data(23 downto 16) <= std_logic_vector(to_unsigned(revision, 8));
+                        read_data(15 downto  4) <= (others => '0');
+
+                        if lamp_configuration = common_anode then
+                            read_data(3) <= '1';
+                        else
+                            read_data(3) <= '0';
+                        end if;
+
+                        read_data(2 downto  1) <= (others => '0');
+
+                        if decimal_support = TRUE then
+                            read_data(0) <= '1';
+                        else
+                            read_data(0) <= '0';
+                        end if;
+
+                    when "11" =>
+                        read_data <= x"41445335";-- magic
                     
-                    when "11" =>  -- magic
-                    
-                    when others =>
+                    when others => null
                 end case;
+                
             elsif write = '1' then -- write operation
                 case address is
-                    when "00" => -- data
-                    when "01" => -- control
-                    when others =>
+                    when "00" => data <= write_data;-- data
+                    when "01" => control <= write_data(1 downto 0); -- control
+                    when others => null
                 end case;
             end if;
 
