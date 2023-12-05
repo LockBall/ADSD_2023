@@ -1,0 +1,104 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/simulation/questa
+Eseven_seg_driver
+Z1 w1701633904
+Z2 DPx16 seven_seg_driver 20 seven_seg_driver_pkg 0 22 ]od?ZfYT@h6eUn:;1Qm2E0
+Z3 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z7 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd
+Z8 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd
+l0
+L11 1
+V9DLIKzbXHkYzToXIL>bWM2
+!s100 ZNG?ECEDlYY3B4@0P7IEa0
+Z9 OL;C;2021.2;73
+31
+Z10 !s110 1701637856
+!i10b 1
+Z11 !s108 1701637856.000000
+Z12 !s90 -reportprogress|300|-93|-work|seven_seg_driver|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd|
+Z13 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd|
+!i113 0
+Z14 o-93 -work seven_seg_driver
+Z15 tExplicit 1 CvgOpt 0
+Asyn
+R2
+R3
+R4
+R5
+R6
+Z16 DEx4 work 16 seven_seg_driver 0 22 9DLIKzbXHkYzToXIL>bWM2
+!i122 3
+l27
+Z17 L26 21
+Z18 VN]`;^1WUnBT=;H1MZFMOa3
+Z19 !s100 KgYOF73`1?`2P9=I@HJWA2
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Pseven_seg_driver_pkg
+R3
+R6
+R5
+R4
+!i122 2
+Z20 w1701633905
+R0
+Z21 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd
+Z22 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd
+l0
+L6 1
+V]od?ZfYT@h6eUn:;1Qm2E0
+!s100 :5W]^0oL^ZR7>bnko2DDo2
+R9
+31
+b1
+R10
+!i10b 1
+R11
+Z23 !s90 -reportprogress|300|-93|-work|seven_seg_driver|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd|
+Z24 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd|
+!i113 0
+R14
+R15
+Bbody
+DPx4 work 20 seven_seg_driver_pkg 0 22 ]od?ZfYT@h6eUn:;1Qm2E0
+R3
+R6
+R5
+R4
+!i122 2
+l0
+L115 1
+V=Y`VY>UchJ1YZ`8e>az@[2
+!s100 GIBfWb[BdCRZ2BJ`IF08j1
+R9
+31
+R10
+!i10b 1
+R11
+R23
+R24
+!i113 0
+R14
+R15
