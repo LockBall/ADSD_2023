@@ -1,6 +1,0 @@
-|seven_seg_driver
-clk => ~NO_FANOUT~
-rst => ~NO_FANOUT~
-input_valid => ~NO_FANOUT~
-
-
