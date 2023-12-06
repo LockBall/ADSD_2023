@@ -1,5 +1,5 @@
 Analysis & Synthesis report for seven_seg_driver
-Sun Dec  3 17:26:43 2023
+Mon Dec  4 21:01:56 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |seven_seg_driver
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,22 +37,22 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec  3 17:26:43 2023          ;
+; Analysis & Synthesis Status        ; Failed - Mon Dec  4 21:01:56 2023              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; seven_seg_driver                               ;
 ; Top-level Entity Name              ; seven_seg_driver                               ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 0                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 3                                              ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
+; UFM blocks                         ; N/A until Partition Merge                      ;
+; ADC blocks                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -155,7 +148,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -166,138 +159,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library          ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+------------------+
-; seven_seg_driver.vhd             ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd     ; seven_seg_driver ;
-; seven_seg_driver_pkg.vhd         ; yes             ; User VHDL File  ; C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd ; seven_seg_driver ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+------------------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 3     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 3     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+------------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name      ; Library Name     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+------------------+
-; |seven_seg_driver          ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |seven_seg_driver   ; seven_seg_driver ; seven_seg_driver ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+------------------+------------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |seven_seg_driver ;
-+-----------------+-------+--------------------------------------------------------+
-; Parameter Name  ; Value ; Type                                                   ;
-+-----------------+-------+--------------------------------------------------------+
-; INPUT_BIT_WIDTH ; 0     ; Signed Integer                                         ;
-+-----------------+-------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 3                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Dec  3 17:26:34 2023
+    Info: Processing started: Mon Dec  4 21:01:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seven_seg_driver -c seven_seg_driver
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
-Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_driver_tb.vhd
-    Info (12022): Found design unit 1: seven_seg_driver_tb-tb File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd Line: 18
-    Info (12023): Found entity 1: seven_seg_driver_tb File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_driver.vhd
-    Info (12022): Found design unit 1: seven_seg_driver-syn File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 26
-    Info (12023): Found entity 1: seven_seg_driver File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 11
+    Info (12022): Found design unit 1: seven_seg_driver-syn File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 26
+    Info (12023): Found entity 1: seven_seg_driver File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 11
 Info (12021): Found 2 design units, including 0 entities, in source file seven_seg_driver_pkg.vhd
-    Info (12022): Found design unit 1: seven_seg_driver_pkg (seven_seg_driver) File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 6
-    Info (12022): Found design unit 2: seven_seg_driver_pkg-body File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 115
-Info (12127): Elaborating entity "seven_seg_driver" for the top level hierarchy
-Warning (10445): VHDL Subtype or Type Declaration warning at seven_seg_driver.vhd(19): subtype or type has null range File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 19
-Warning (10445): VHDL Subtype or Type Declaration warning at seven_seg_driver.vhd(21): subtype or type has null range File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 21
-Warning (12158): Entity "seven_seg_driver" contains only dangling pins
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 16
-    Warning (15610): No output dependent on input pin "rst" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input_valid" File: C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd Line: 18
-Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Sun Dec  3 17:26:43 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (12022): Found design unit 1: seven_seg_driver_pkg (seven_seg_driver) File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 6
+    Info (12022): Found design unit 2: seven_seg_driver_pkg-body File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 115
+Info (12021): Found 2 design units, including 1 entities, in source file seven_seg_driver_tb.vhd
+    Info (12022): Found design unit 1: seven_seg_driver_tb-behavior File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd Line: 23
+    Info (12023): Found entity 1: seven_seg_driver_tb File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd Line: 11
+Error (10517): VHDL type mismatch error at seven_seg_driver_tb.vhd(40): std_logic type does not match integer literal File: C:/FPGA/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd Line: 40
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 4790 megabytes
+    Error: Processing ended: Mon Dec  4 21:01:56 2023
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:28
 
 

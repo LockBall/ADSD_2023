@@ -33,7 +33,7 @@ architecture syn of seven_seg_driver is
     process(clk)
       begin
       if rising_edge(clk) then
-        if rst = '1' then
+        if rst = '0' then
           output_signals(i) <= lamps_off;
         else
           if input_valid = '1' then
