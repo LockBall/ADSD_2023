@@ -25,14 +25,14 @@ end entity seven_seg_driver;
 
 
 architecture syn of seven_seg_driver is
-    
+
+-- ******************************** TEST ********************************
     signal test_clock_1_sec_cnt : natural range 0 to 50000000   := 50000000 ;
     signal test_cnt             : natural range 0 to 15         := 0; 
     signal test_input : std_logic_vector(INPUT_BIT_WIDTH-1 downto 0) ;
-    
+-- ******************************** TEST ********************************
     
   begin
---    test_input <= x"8888" ;
     
 
     gen_seg_ctrls: for i in output_signals'range generate
@@ -49,7 +49,7 @@ architecture syn of seven_seg_driver is
                 else
                 
                     if input_valid = '1' then
-                        array_slice <= test_input(((i+1)*4)-1 downto (i*4));  -- input
+                        array_slice <= test_input(((i+1)*4)-1 downto (i*4));  -- TEST input
                         -- Using the appropriate vector slice, get the segment configuration to represent the value.
                         output_signals(i) <= get_hex_digit(to_integer(unsigned(array_slice)));
                     end if;
