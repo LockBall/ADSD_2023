@@ -66,27 +66,6 @@ architecture tb of tb_TDPDC_RAM is
     addr_a  <=  "0001" ;
     data_a  <= x"5100" ;    
     we_a    <= '1' after 55 ns , '0' after 65 ns ;
-
-
-    -- clock process
---    clock_process : process
---      begin
---        wait for 10 ns;
---        clock_50 <= not clock_50;
---    end process;
-    
-    
-    -- stimulus process
---    stim_proc : process(clock_50) is
---    
---      begin
---        
---        if rising_edge(clock_50) then
---            addr_a <= addr_a + 1 ;
---            
---        end if;
---
---    end process stim_proc;
     
   
     UUT : TDPDC_RAM  -- entity work.
