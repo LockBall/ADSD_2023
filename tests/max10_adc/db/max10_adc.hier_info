@@ -1,0 +1,20 @@
+|max10_adc
+pll_clk => primitive_instance.I_CLKIN_FROM_PLL_C0
+soc => primitive_instance.I_SOC
+tsen => primitive_instance.I_TSEN
+dout[0] <= primitive_instance.O_DOUT
+dout[1] <= primitive_instance.O_DOUT1
+dout[2] <= primitive_instance.O_DOUT2
+dout[3] <= primitive_instance.O_DOUT3
+dout[4] <= primitive_instance.O_DOUT4
+dout[5] <= primitive_instance.O_DOUT5
+dout[6] <= primitive_instance.O_DOUT6
+dout[7] <= primitive_instance.O_DOUT7
+dout[8] <= primitive_instance.O_DOUT8
+dout[9] <= primitive_instance.O_DOUT9
+dout[10] <= primitive_instance.O_DOUT10
+dout[11] <= primitive_instance.O_DOUT11
+eoc <= primitive_instance.O_EOC
+clk_dft <= primitive_instance.O_CLK_DFT
+
+

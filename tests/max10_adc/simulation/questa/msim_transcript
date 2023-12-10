@@ -1,0 +1,811 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/22.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:37:52 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:37:52 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:37:52 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Loading entity max10_adc
+# End time: 16:37:52 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:37:52 on Dec 10,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd(35): (vopt-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#         Region: /tb_max10_adc
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.tb_max10_adc(tb)#1
+# ** Warning: (vsim-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc File: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+# Loading work.max10_adc(wrapper)#1
+# Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)#1
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc/UUT
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch0" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch1" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch2" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch3" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch4" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch5" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch6" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch7" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch8" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch9" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch10" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch11" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch12" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch13" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch14" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch15" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch16" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# Error opening C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/simulation/questa/intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v
+# Path name 'C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/simulation/questa/intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v' doesn't exist.
+# Error opening C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/simulation/questa/intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v
+# Path name 'C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/simulation/questa/intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v' doesn't exist.
+# A time value could not be extracted from the current line
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:43:16 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:43:16 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:43:16 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:43:16 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:43:17 on Dec 10,2023, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 36
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:43:17 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd(35): (vopt-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#         Region: /tb_max10_adc
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# ** Warning: (vsim-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc File: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:44:55 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:44:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:44:55 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:44:55 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:44:56 on Dec 10,2023, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:44:56 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:46:53 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:46:53 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:46:53 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:46:53 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:46:54 on Dec 10,2023, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:46:54 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:48:09 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:48:09 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:48:09 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:48:09 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:48:10 on Dec 10,2023, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:48:10 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:49:59 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:49:59 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:49:59 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:49:59 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:50:00 on Dec 10,2023, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:50:00 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd(35): (vopt-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#         Region: /tb_max10_adc
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# ** Warning: (vsim-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc File: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:52:37 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:52:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:52:37 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# End time: 16:52:37 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:52:38 on Dec 10,2023, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:52:38 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd(35): (vopt-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#         Region: /tb_max10_adc
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_max10_adc(tb)#1
+# ** Warning: (vsim-3473) Component instance "clock_10_inst : clock_10_comp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc File: C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:55:04 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 16:55:04 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:55:04 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# -- Loading package NUMERIC_STD
+# -- Loading entity max10_adc
+# End time: 16:55:04 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 16:55:05 on Dec 10,2023, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 16:55:05 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_max10_adc(tb)#1
+# Loading work.max10_adc(wrapper)#1
+# ** Warning: (vsim-8683) Uninitialized out port /tb_max10_adc/UUT/eoc has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_max10_adc/UUT/clk_dft has no driver.
+# This port will contribute value (U) to the signal network.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc/UUT
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:00:46 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 17:00:46 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:00:46 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Loading entity max10_adc
+# End time: 17:00:46 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 17:00:47 on Dec 10,2023, Elapsed time: 0:05:42
+# Errors: 0, Warnings: 3
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 17:00:47 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.tb_max10_adc(tb)#1
+# Loading work.max10_adc(wrapper)#1
+# ** Warning: (vsim-8683) Uninitialized out port /tb_max10_adc/UUT/eoc has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_max10_adc/UUT/clk_dft has no driver.
+# This port will contribute value (U) to the signal network.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc/UUT
+do max10_adc_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is D00D@GAMEON.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:02:46 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity max10_adc
+# -- Compiling architecture wrapper of max10_adc
+# End time: 17:02:46 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 17:02:46 on Dec 10,2023
+# vcom -reportprogress 300 -93 -work work C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_max10_adc
+# -- Compiling architecture tb of tb_max10_adc
+# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Loading entity max10_adc
+# End time: 17:02:46 on Dec 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  tb_max10_adc
+# End time: 17:02:47 on Dec 10,2023, Elapsed time: 0:02:00
+# Errors: 0, Warnings: 3
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" tb_max10_adc 
+# Start time: 17:02:47 on Dec 10,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: $MODEL_TECH/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=7.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.tb_max10_adc(tb)#1
+# Loading work.max10_adc(wrapper)#1
+# Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)#1
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/<protected>/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 400 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_max10_adc/UUT
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch0" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch1" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch2" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch3" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch4" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch5" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch6" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch7" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch8" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch9" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch10" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch11" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch12" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch13" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch14" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch15" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "simfilename_ch16" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1/questa_fse/win64/../intel/vhdl/src/fiftyfivenm/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /tb_max10_adc/UUT/primitive_instance/inst/<protected>/<protected>/<protected>
+# End time: 17:08:12 on Dec 10,2023, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 34

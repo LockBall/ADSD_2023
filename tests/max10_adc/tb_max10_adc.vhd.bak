@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_max10_adc is
+end tb_max10_adc;
+
+
+architecture tb of tb_max10_adc is
+
+
+end architecture tb;
