@@ -1,0 +1,7 @@
+
+State Machine - |proj_4|producer:adc_control|state
+Name state.advance_and_store state.wait_for_head_advance state.wait_for_eoc state.start 
+state.start 0 0 0 0 
+state.wait_for_eoc 0 0 1 1 
+state.wait_for_head_advance 0 1 0 1 
+state.advance_and_store 1 0 0 1 

@@ -4,33 +4,35 @@ use ieee.numeric_std.all;
 
 library wysiwyg;
 use wysiwyg.fiftyfivenm_components.all;
-
---library fiftyfivenm;
---use fiftyfivenm.fiftyfivenm_components.all;
-
+----
+-- port map:
+--
+-- pll_clk:	clock input (10 MHz)
+-- chsel:	channel select
+-- soc:		start of conversion
+-- tsen:	0 - normal mode
+--			1 - temperature sensing mode
+-- dout:	data output
+-- eoc:		end of conversion
+-- clk_dft:	clock output from clock divider
 
 entity max10_adc is
-	port(
-		pll_clk     : in  std_logic;						-- 10 MHz
-		soc         : in  std_logic; 						-- start of conversion
-		tsen        : in  std_logic;						-- mode: 0, normal 1, temp sense
-        
-		dout        : out natural range 0 to 2**12 - 1;	-- data output
-		eoc         : out std_logic;						-- end of conversion
-		clk_dft     : out std_logic						-- clock output from clock divider
+	port (
+		pll_clk:	in	std_logic;
+		chsel:		in	natural range 0 to 2**5 - 1;
+		soc:		in	std_logic;
+		tsen:		in	std_logic;
+		dout:		out	natural range 0 to 2**12 - 1;
+		eoc:		out	std_logic;
+		clk_dft:	out	std_logic
 	);
 end entity max10_adc;
 
-
 architecture wrapper of max10_adc is
-	signal adc_dout  : std_logic_vector(11 downto 0);
-	signal adc_chsel : std_logic_vector(4 downto 0);
-    constant  chsel  : natural range 0 to 2**5 - 1 := 0 ;	-- channel select
+	signal adc_dout: std_logic_vector(11 downto 0);
+	signal adc_chsel: std_logic_vector(4 downto 0);
+begin
 
-    
-
-  begin
-  
 	dout <= to_integer(unsigned(adc_dout));
 	adc_chsel <= std_logic_vector(to_unsigned(chsel, adc_chsel'length));
 
@@ -59,8 +61,8 @@ architecture wrapper of max10_adc is
 	-- reference_voltage_sim
 
 
-	primitive_instance : fiftyfivenm_adcblock
-		generic map(
+	primitive_instance: fiftyfivenm_adcblock
+		generic map (
 			clkdiv		=> 2,	-- first stage clock divider
 			tsclkdiv	=> 1,
 			tsclksel	=> 1,
@@ -90,8 +92,7 @@ architecture wrapper of max10_adc is
 --			simfilename_ch15	=> "",
 --			simfilename_ch16	=> ""
 		)
-        
-		port map(
+		port map (
 			chsel		=> adc_chsel,	-- input: channel select
 			soc			=> soc,			-- input: start conversion
 			eoc			=> eoc,			-- output: end of conversion
@@ -99,7 +100,7 @@ architecture wrapper of max10_adc is
 			tsen		=> tsen,		-- input: temperature sensing mode if 1
 			clk_dft		=> clk_dft,		-- output: scaled clock
 			dout		=> adc_dout,	-- output: result of conversion
-			clkin_from_pll_c0	=> pll_clk -- pll_clk	-- input: 10 MHz clock
+			clkin_from_pll_c0	=> pll_clk	-- input: 10 MHz clock
 		);
 
 end architecture wrapper;
