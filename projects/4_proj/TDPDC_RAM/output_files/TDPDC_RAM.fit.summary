@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sat Dec  9 19:14:06 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : TDPDC_RAM
+Top-level Entity Name : TDPDC_RAM
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 9 / 49,760 ( < 1 % )
+    Total combinational functions : 1 / 49,760 ( < 1 % )
+    Dedicated logic registers : 8 / 49,760 ( < 1 % )
+Total registers : 8
+Total pins : 76 / 360 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 256 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

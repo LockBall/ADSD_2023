@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output_signals[0].g",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].f",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].e",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].d",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].c",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].b",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[0].a",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].g",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].f",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].e",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].d",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].c",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].b",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[1].a",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].g",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].f",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].e",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].d",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].c",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].b",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[2].a",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].g",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].f",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].e",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].d",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].c",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].b",
+					"strict" : false
+				},
+				{
+					"name" : "output_signals[3].a",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "input_valid",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
