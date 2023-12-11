@@ -1,0 +1,129 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/simulation/questa
+T_opt
+!s110 1702245768
+V;?6kW^7fgNIgebaaFXgJJ1
+04 12 2 work tb_max10_adc tb 1
+=1-d0509975fd67-65763588-53-6ae8
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Emax10_adc
+Z2 w1702245735
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 d[ZBZCchVhI@aZ@hngZ0f1
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 moe6]I7ZkROIH3PfJMkXh1
+Z7 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R1
+Z10 8C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd
+Z11 FC:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd
+l0
+L12 1
+V2dZ<Qj?EhZ@0lU7@j5>IJ2
+!s100 F0C8dU3XDSWnGzh4eSC@n2
+Z12 OL;C;2021.2;73
+31
+Z13 !s110 1702245766
+!i10b 1
+Z14 !s108 1702245766.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd|
+Z16 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/max10_adc.vhd|
+!i113 0
+Z17 o-93 -work work
+Z18 tExplicit 1 CvgOpt 0
+Awrapper
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+Z19 DEx4 work 9 max10_adc 0 22 2dZ<Qj?EhZ@0lU7@j5>IJ2
+!i122 0
+l32
+L25 81
+VGnL`0f@<@03;hMV75X_iG2
+!s100 :=_8JD]B@lcDFHhfPSCZn2
+R12
+31
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Etb_max10_adc
+Z20 w1702245271
+R8
+R9
+!i122 1
+R1
+Z21 8C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+Z22 FC:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd
+l0
+L4 1
+V>V<a^ECmEXi8WRHi^37:<0
+!s100 9YDeN<[>RlmO2L[Yo;@FQ1
+R12
+31
+R13
+!i10b 1
+R14
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd|
+Z24 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/max10_adc/tb_max10_adc.vhd|
+!i113 0
+R17
+R18
+Atb
+R3
+R4
+R5
+R6
+R7
+R19
+R8
+R9
+DEx4 work 12 tb_max10_adc 0 22 >V<a^ECmEXi8WRHi^37:<0
+!i122 1
+l30
+L8 44
+VkkkXO5@E?78W:U;QL3a[Z3
+!s100 SnifcIVjg>IZ5YKPh]e>_3
+R12
+31
+R13
+!i10b 1
+R14
+R23
+R24
+!i113 0
+R17
+R18

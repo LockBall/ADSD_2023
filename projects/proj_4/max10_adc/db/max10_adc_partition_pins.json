@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "eoc",
+					"strict" : false
+				},
+				{
+					"name" : "clk_dft",
+					"strict" : false
+				},
+				{
+					"name" : "soc",
+					"strict" : false
+				},
+				{
+					"name" : "tsen",
+					"strict" : false
+				},
+				{
+					"name" : "pll_clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+|proj_4
+clock_50 => ~NO_FANOUT~
+clock_10 => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+
+

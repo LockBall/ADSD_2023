@@ -1,0 +1,176 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/simulation/questa
+Eseven_seg_driver
+Z1 w1701908948
+Z2 DPx16 seven_seg_driver 20 seven_seg_driver_pkg 0 22 PJczMSdn?EkYMBJ4neHW43
+Z3 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 110
+R0
+Z7 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd
+Z8 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd
+l0
+Z9 L11 1
+V1?TG9Jf:U[G0XXLHJzLaT2
+!s100 ?`bRm;I?]jhk1OMCB[_6j1
+Z10 OL;C;2021.2;73
+31
+Z11 !s110 1701908971
+!i10b 1
+Z12 !s108 1701908971.000000
+Z13 !s90 -reportprogress|300|-93|-work|seven_seg_driver|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd|
+Z14 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver.vhd|
+!i113 0
+Z15 o-93 -work seven_seg_driver
+Z16 tExplicit 1 CvgOpt 0
+Asyn
+R2
+R3
+R4
+R5
+R6
+DEx4 work 16 seven_seg_driver 0 22 1?TG9Jf:U[G0XXLHJzLaT2
+!i122 110
+l36
+L30 34
+V`aC>Cz4BWW[=k74XM^2;31
+!s100 27<gJT[eV_Y2k3FIJQNB^2
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Pseven_seg_driver_pkg
+R3
+R6
+R5
+R4
+!i122 109
+Z17 w1701901052
+R0
+Z18 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd
+Z19 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd
+l0
+L6 1
+VPJczMSdn?EkYMBJ4neHW43
+!s100 Z9F:jBXbPmP4e>XIMY^NH1
+R10
+31
+b1
+Z20 !s110 1701908970
+!i10b 1
+Z21 !s108 1701908970.000000
+Z22 !s90 -reportprogress|300|-93|-work|seven_seg_driver|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd|
+Z23 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_pkg.vhd|
+!i113 0
+R15
+R16
+Bbody
+DPx4 work 20 seven_seg_driver_pkg 0 22 PJczMSdn?EkYMBJ4neHW43
+R3
+R6
+R5
+R4
+!i122 109
+l0
+L85 1
+V6iMeRNI12548V1aI191XD0
+!s100 R;6^>UlT=BXANLcQ6`inn0
+R10
+31
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R15
+R16
+Eseven_seg_driver_tb
+Z24 w1701908323
+R3
+R2
+R4
+R5
+R6
+!i122 111
+R0
+Z25 8C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd
+Z26 FC:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd
+l0
+R9
+VKHR8b>2NonBJ7CTIS1fUJ1
+!s100 glXR9O=l^KIVOQ3_FDCok3
+R10
+31
+R11
+!i10b 1
+R12
+Z27 !s90 -reportprogress|300|-93|-work|seven_seg_driver|C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd|
+Z28 !s107 C:/FPGA/2023/from_git/ADSD_2023/tests/seven_seg_driver/seven_seg_driver_tb.vhd|
+!i113 0
+R15
+R16
+Atb
+Z29 DEx16 seven_seg_driver 16 seven_seg_driver 0 22 1?TG9Jf:U[G0XXLHJzLaT2
+R3
+R2
+R4
+R5
+R6
+Z30 DEx4 work 19 seven_seg_driver_tb 0 22 KHR8b>2NonBJ7CTIS1fUJ1
+!i122 111
+l38
+Z31 L17 89
+Z32 Vm6T;ZRPdXca`HCdV[=HR72
+Z33 !s100 __CgKEl:lg38WkAGkH2CP3
+R10
+31
+R11
+!i10b 1
+R12
+R27
+R28
+!i113 0
+R15
+R16
+Asim
+DEx16 seven_seg_driver 16 seven_seg_driver 0 22 MV?W:YFACJnMKIVWdENl43
+R3
+R4
+DPx16 seven_seg_driver 20 seven_seg_driver_pkg 0 22 jz5Z>JE5MD6obj3zR37DF2
+R5
+R6
+DEx4 work 19 seven_seg_driver_tb 0 22 kX:cSJHcllj21@4`8ZQo?0
+!i122 15
+l31
+L20 38
+V:LMlMVHUZ?CULhd1TZ7]^0
+!s100 B;9T[Uie2^Pz53I42bkdi1
+R10
+31
+!s110 1701885536
+!i10b 1
+!s108 1701885536.000000
+R27
+R28
+!i113 0
+R15
+R16
+w1701885447
