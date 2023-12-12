@@ -26,7 +26,6 @@ clock => count[22].CLK
 clock => count[23].CLK
 clock => count[24].CLK
 clock => count[25].CLK
-led << led_state.DB_MAX_OUTPUT_PORT_TYPE
 reset => led_state.ACLR
 reset => count[0].ACLR
 reset => count[1].ACLR
@@ -54,5 +53,6 @@ reset => count[22].ACLR
 reset => count[23].ACLR
 reset => count[24].ACLR
 reset => count[25].ACLR
+led <= led_state.DB_MAX_OUTPUT_PORT_TYPE
 
 

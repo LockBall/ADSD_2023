@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LED_blink
-Mon Nov 27 21:56:01 2023
+Tue Dec 12 12:12:52 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 27 21:56:01 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 12 12:12:52 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; LED_blink                                      ;
 ; Top-level Entity Name              ; LED_blink                                      ;
@@ -268,11 +268,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 27 21:55:51 2023
+    Info: Processing started: Tue Dec 12 12:12:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LED_blink -c LED_blink
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file led_blink.vhd
-    Info (12022): Found design unit 1: LED_blink-rtl File: C:/FPGA/2023/from_git/ADSD_2023/tests/LED_blink/LED_blink.vhd Line: 18
+    Info (12022): Found design unit 1: LED_blink-rtl File: C:/FPGA/2023/from_git/ADSD_2023/tests/LED_blink/LED_blink.vhd Line: 19
     Info (12023): Found entity 1: LED_blink File: C:/FPGA/2023/from_git/ADSD_2023/tests/LED_blink/LED_blink.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file led_blink_tb.vhd
     Info (12022): Found design unit 1: LED_blink_TB-sim File: C:/FPGA/2023/from_git/ADSD_2023/tests/LED_blink/LED_blink_TB.vhd Line: 7
@@ -286,9 +286,9 @@ Info (21057): Implemented 51 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 48 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Mon Nov 27 21:56:01 2023
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Tue Dec 12 12:12:52 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 
