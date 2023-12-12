@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
 use work.proj_4_pkg.all;
+use work.seven_seg_driver_pkg.all;
 
 entity proj_4 is
 	generic (
@@ -11,7 +12,9 @@ entity proj_4 is
 	port(
     	clock_50	: in  std_logic ; -- pin_P11   MAX10_CLK1_50
 		clock_10	: in std_logic ; 	--PLL, linked to ADC_CLK_10 pin_n5
-		reset		: in  std_logic := '0'  -- pin_B8 active low
+		reset		: in  std_logic := '0';  -- pin_B8 active low
+		
+		digits	: out seven_seg_config_arr(2 downto 0)
 	);
 
 end entity proj_4;
@@ -29,9 +32,34 @@ architecture qq of proj_4 is
 	-- clock domain B stuff (50 MHz)
 	signal head_ptr_b, tail_ptr_b: natural range 0 to 2**address_width - 1;
 	signal head_ptr_vect_b, tail_ptr_vect_b: std_logic_vector(address_width - 1 downto 0);
+	
+	-- clock pll 10 MHz
+	signal pll_clock_10 : std_logic;
 
+	function get_digits_output (
+			data_in: in std_logic_vector(11 downto 0)
+		) return seven_seg_config_arr
+	is
+		variable ret: seven_seg_config_arr(digits'range);
+		variable slice: std_logic_vector(3 downto 0);
+	begin
+		for i in ret'range loop
+			slice := data_in(4*i + 3 downto 4*i);
+			ret(i) := get_hex_digit(to_integer(unsigned(slice)));
+		end loop;
+		return ret;
+	end function get_digits_output;
 	
 begin
+
+	clock_10_inst : entity work.clock_10 PORT MAP (
+		inclk0	=> clock_10,
+		c0	 		=> pll_clock_10
+	);
+
+
+	digits <= get_digits_output(data_b);
+	
 
 	-- CLOCK DOMAIN A STUFF
 	adc_control: producer
@@ -41,7 +69,7 @@ begin
 		)
 		port map (
 			-- Clocks
-			clock_10 => clock_10, -- 10 Mhz
+			clock_10 => pll_clock_10, -- 10 Mhz
 			clock_1  => clock_1, -- 1 Mhz
 			
 			reset =>		reset,
@@ -53,6 +81,23 @@ begin
 			-- bin to gray interactions
 			head	=> head_ptr_a,
 			tail	=> tail_ptr_a
+		);
+		
+		
+		-- CLOCK DOMAIN B STUFF
+		segs7_FSM: consumer
+		generic map (
+			DATA_WIDTH => 12,
+			ADDR_WIDTH => address_width
+		)
+		port map (
+			-- Clocks
+			clock_50 => clock_50, -- 10 Mhz
+			reset =>		reset,
+
+			-- bin to gray interactions
+			head	=> head_ptr_b,
+			tail	=> tail_ptr_b
 		);
 
 	-- head ptr must go from 1 MHz clock to 50 MHz clock

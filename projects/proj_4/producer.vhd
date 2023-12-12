@@ -106,9 +106,7 @@ begin
             when start =>
                 next_state <= wait_for_eoc;
             when wait_for_eoc =>
-                if conversion_end = '0' then
-                    next_state <= wait_for_eoc;
-                else
+                if conversion_end = '1' then
                     next_state <= wait_for_head_advance;
                 end if;
             when wait_for_head_advance =>
@@ -133,10 +131,13 @@ begin
     output_function: process(adc_clock, reset) is
     begin
         if reset = '0' then
-            ---
-        elsif rising_edge(adc_clock) then
+				head_ptr <= 0;
+				
             conversion_start <= '0';
             write_enable <= '0';
+        elsif rising_edge(adc_clock) then
+--            conversion_start <= '0';
+--            write_enable <= '0';
             case state is
                 when start =>
                     conversion_start <= '1';

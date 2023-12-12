@@ -42,6 +42,22 @@ package proj_4_pkg is
 	end component producer;
 	
 	
+	component consumer is
+		generic(
+			DATA_WIDTH : natural := 8;
+			ADDR_WIDTH : natural := 6 
+		);
+		port(
+			-- Clocks
+			clock_50:	in  std_logic; -- 10 Mhz	
+			reset:		in	std_logic;
+
+			-- bin to gray interactions
+			head: in natural range 0 to 2**ADDR_WIDTH - 1;
+			tail: out  natural range 0 to 2**ADDR_WIDTH - 1
+		);
+	end component consumer;
+	
 	component TDPDC_RAM is
 		generic(
         data_width : natural := 16;

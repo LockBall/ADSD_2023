@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Mon Dec 11 18:25:23 2023
+Analysis & Synthesis Status : Successful - Mon Dec 11 21:29:06 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : proj_4
 Top-level Entity Name : proj_4
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 3
+Total logic elements : 447
+    Total combinational functions : 382
+    Dedicated logic registers : 140
+Total registers : 140
+Total pins : 27
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 786,432
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
 UFM blocks : 0
-ADC blocks : 0
+ADC blocks : 1
