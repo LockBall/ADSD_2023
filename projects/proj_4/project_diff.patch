@@ -1,0 +1,186 @@
+--- vhd_files/consumer.vhd	2023-12-11 21:51:21.000000000 -0500
++++ vhd_files/consumer.vhd	2023-12-12 17:42:32.046364841 -0500
+@@ -32,9 +32,9 @@ architecture behavior of consumer is
+         
+     begin
+ 
+-        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
++        if tail_pointer > head_pointer and not (head_pointer = 0 and tail_pointer = (2**ADDR_WIDTH - 1)) then
+             return true;
+-        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
++        elsif tail_pointer < head_pointer and (head_pointer - tail_pointer > 1) then
+             return true;
+         end if;
+ 
+@@ -61,6 +61,8 @@ begin
+             when wait_for_tail_advance =>
+                 if tail_can_advance then
+                     next_state <= advance_tail;
++				else
++					next_state <= wait_for_tail_advance;
+                 end if;
+             when advance_tail =>
+                 next_state <= start;
+@@ -81,16 +83,13 @@ begin
+         if reset = '0' then
+ 				tail_ptr <= 2**ADDR_WIDTH - 1;
+         elsif rising_edge(clock_50) then
+-            case state is
+-                when start => null;
+-                when wait_for_tail_advance => null;
+-                when advance_tail =>
+-                    if tail_ptr = (2**ADDR_WIDTH - 1) then
+-                        tail_ptr <= 0;
+-                    else
+-                        tail_ptr <= tail_ptr + 1;
+-                    end if;
+-            end case;
++			if state = advance_tail then
++				if tail_ptr = (2**ADDR_WIDTH - 1) then
++					tail_ptr <= 0;
++				else
++					tail_ptr <= tail_ptr + 1;
++				end if;
++			end if;
+         end if;
+     end process output_function;
+ 
+--- vhd_files/producer.vhd	2023-12-11 21:51:21.000000000 -0500
++++ vhd_files/producer.vhd	2023-12-12 17:49:54.206338912 -0500
+@@ -50,12 +50,17 @@ architecture behavior of producer is
+     ) return boolean is
+         
+     begin
+-
+-        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
+-            return true;
+-        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
+-            return true;
+-        end if;
++		if head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) and tail_pointer = 0) then
++			return true;
++		elsif head_pointer < tail_pointer and tail_pointer - head_pointer > 1 then
++			return true;
++		end if;
++	
++--        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
++--            return true;
++--        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
++--            return true;
++--        end if;
+ 
+         return false;
+     end function can_advance;
+@@ -79,7 +84,7 @@ begin
+     clock_1 <= adc_clock; -- Hook up clock to output clock to drive RAM
+ 
+     head <= head_ptr; -- Need a head pointer variable because we cant drive signals with out signal
+-    data <= std_logic_vector(to_unsigned(adc_data, 12)); -- Convert data to std_logic_vector
++    data <= std_logic_vector(to_unsigned(adc_data, data'length)); -- Convert data to std_logic_vector
+     head_can_advance <= can_advance(head_ptr, tail); -- Checks if the head can advance
+ 
+ 
+@@ -100,7 +105,7 @@ begin
+     -- Process runs every clock cycle because state is driven by the clock
+     -- eoc triggers the process on an end of conversion value change
+     -- Head can advance triggers the process once the head can advance
+-    transition: process(state, conversion_end, head_can_advance) is
++    transition: process(state, conversion_end, head_can_advance, head_ptr, tail) is
+     begin
+         case state is
+             when start =>
+@@ -108,10 +113,14 @@ begin
+             when wait_for_eoc =>
+                 if conversion_end = '1' then
+                     next_state <= wait_for_head_advance;
++				else
++					next_state <= wait_for_eoc;
+                 end if;
+             when wait_for_head_advance =>
+                 if head_can_advance then
+                     next_state <= advance_and_store;
++				else
++					next_state <= wait_for_head_advance;
+                 end if;
+             when advance_and_store =>
+                 next_state <= start;
+@@ -131,27 +140,25 @@ begin
+     output_function: process(adc_clock, reset) is
+     begin
+         if reset = '0' then
+-				head_ptr <= 0;
+-				
++			head_ptr <= 0;	
+             conversion_start <= '0';
+             write_enable <= '0';
+         elsif rising_edge(adc_clock) then
+---            conversion_start <= '0';
+---            write_enable <= '0';
+-            case state is
+-                when start =>
+-                    conversion_start <= '1';
+-                when wait_for_eoc =>
+-                    conversion_start <= '0';
+-                when wait_for_head_advance => null;
+-                when advance_and_store =>
+-                    write_enable <= '1';
+-                    if head_ptr = (2**ADDR_WIDTH - 1) then
+-                        head_ptr <= 0;
+-                    else
+-                        head_ptr <= head_ptr + 1;
+-                    end if;
+-            end case;
++			if state = start or state = wait_for_eoc then
++				conversion_start <= '1';
++			else
++				conversion_start <= '0';
++			end if;
++			if state = advance_and_store then
++				write_enable <= '1';
++				if head_ptr = (2**ADDR_WIDTH - 1) then
++					head_ptr <= 0;
++				else
++					head_ptr <= head_ptr + 1;
++				end if;
++			else
++				write_enable <= '0';
++			end if;
+         end if;
+     end process output_function;
+ 
+--- vhd_files/proj_4.vhd	2023-12-11 21:51:21.000000000 -0500
++++ vhd_files/proj_4.vhd	2023-12-12 17:53:29.662992945 -0500
+@@ -7,13 +7,15 @@ use work.seven_seg_driver_pkg.all;
+ 
+ entity proj_4 is
+ 	generic (
+-		address_width: positive := 12 -- ?? 16
++		address_width: positive := 6 -- ?? 16
+ 	);
+ 	port(
+     	clock_50	: in  std_logic ; -- pin_P11   MAX10_CLK1_50
+ 		clock_10	: in std_logic ; 	--PLL, linked to ADC_CLK_10 pin_n5
+ 		reset		: in  std_logic := '0';  -- pin_B8 active low
+ 		
++		leds		: out std_logic_vector(9 downto 0);
++		
+ 		digits	: out seven_seg_config_arr(2 downto 0)
+ 	);
+ 
+@@ -52,14 +54,14 @@ architecture qq of proj_4 is
+ 	
+ begin
+ 
+-	clock_10_inst : entity work.clock_10 PORT MAP (
++	clock_10_inst : entity work.pll PORT MAP (
+ 		inclk0	=> clock_10,
+ 		c0	 		=> pll_clock_10
+ 	);
+ 
+ 
+ 	digits <= get_digits_output(data_b);
+-
++	leds <= data_b(data_b'high downto data_b'length - leds'length);
+ 
+ 	-- CLOCK DOMAIN A STUFF
+ 	adc_control: producer

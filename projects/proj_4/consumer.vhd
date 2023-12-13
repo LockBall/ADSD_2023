@@ -32,9 +32,9 @@ architecture behavior of consumer is
         
     begin
 
-        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
+        if tail_pointer > head_pointer and not (head_pointer = 0 and tail_pointer = (2**ADDR_WIDTH - 1)) then
             return true;
-        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
+        elsif tail_pointer < head_pointer and (head_pointer - tail_pointer > 1) then
             return true;
         end if;
 
@@ -61,6 +61,8 @@ begin
             when wait_for_tail_advance =>
                 if tail_can_advance then
                     next_state <= advance_tail;
+				else
+					next_state <= wait_for_tail_advance;
                 end if;
             when advance_tail =>
                 next_state <= start;
@@ -76,21 +78,19 @@ begin
         end if;
     end process save_state;
 
+	 
     output_function: process(clock_50, reset) is
     begin
         if reset = '0' then
 				tail_ptr <= 2**ADDR_WIDTH - 1;
         elsif rising_edge(clock_50) then
-            case state is
-                when start => null;
-                when wait_for_tail_advance => null;
-                when advance_tail =>
-                    if tail_ptr = (2**ADDR_WIDTH - 1) then
-                        tail_ptr <= 0;
-                    else
-                        tail_ptr <= tail_ptr + 1;
-                    end if;
-            end case;
+			if state = advance_tail then
+				if tail_ptr = (2**ADDR_WIDTH - 1) then
+					tail_ptr <= 0;
+				else
+					tail_ptr <= tail_ptr + 1;
+				end if;
+			end if;
         end if;
     end process output_function;
 
