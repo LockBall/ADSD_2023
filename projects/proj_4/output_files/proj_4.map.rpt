@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj_4
-Wed Dec 13 11:49:50 2023
+Wed Dec 13 12:10:46 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 13 11:49:50 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 12:10:46 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; proj_4                                         ;
 ; Top-level Entity Name              ; proj_4                                         ;
@@ -93,7 +93,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; proj_4             ; proj_4             ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation              ; 6                  ;                    ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -177,50 +177,50 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+-------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
-+-------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; TDPDC_RAM/TDPDC_RAM.vhd                   ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd                   ;         ;
-; max10_adc/max10_adc.vhd                   ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd                   ;         ;
-; seven_seg_driver/seven_seg_driver_pkg.vhd ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd ;         ;
-; proj_4.vhd                                ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd                                ;         ;
-; Sync_parts/sync_stage.vhd                 ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd                 ;         ;
-; Sync_parts/gray_to_binary_sync.vhd        ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd        ;         ;
-; Sync_parts/binary_to_gray_sync.vhd        ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd        ;         ;
-; proj_4_pkg.vhd                            ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4_pkg.vhd                            ;         ;
-; producer.vhd                              ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/producer.vhd                              ;         ;
-; consumer.vhd                              ; yes             ; User VHDL File               ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd                              ;         ;
-; pll.vhd                                   ; yes             ; User Wizard-Generated File   ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd                                   ;         ;
-; altpll.tdf                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf                 ;         ;
-; aglobal221.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc             ;         ;
-; stratix_pll.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_pll.inc            ;         ;
-; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratixii_pll.inc          ;         ;
-; cycloneii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/cycloneii_pll.inc          ;         ;
-; db/pll_altpll.v                           ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/db/pll_altpll.v                           ;         ;
-; altsyncram.tdf                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf             ;         ;
-; stratix_ram_block.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc      ;         ;
-; lpm_mux.inc                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                ;         ;
-; lpm_decode.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
-; a_rdenreg.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc              ;         ;
-; altrom.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                 ;         ;
-; altram.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                 ;         ;
-; altdpram.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc               ;         ;
-; db/altsyncram_iac1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/from_git/ADSD_2023/projects/proj_4/db/altsyncram_iac1.tdf                    ;         ;
-+-------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; TDPDC_RAM/TDPDC_RAM.vhd                   ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd                   ;         ;
+; max10_adc/max10_adc.vhd                   ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd                   ;         ;
+; seven_seg_driver/seven_seg_driver_pkg.vhd ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd ;         ;
+; proj_4.vhd                                ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd                                ;         ;
+; Sync_parts/sync_stage.vhd                 ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd                 ;         ;
+; Sync_parts/gray_to_binary_sync.vhd        ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd        ;         ;
+; Sync_parts/binary_to_gray_sync.vhd        ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd        ;         ;
+; proj_4_pkg.vhd                            ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4_pkg.vhd                            ;         ;
+; producer.vhd                              ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/producer.vhd                              ;         ;
+; consumer.vhd                              ; yes             ; User VHDL File               ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd                              ;         ;
+; pll.vhd                                   ; yes             ; User Wizard-Generated File   ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd                                   ;         ;
+; altpll.tdf                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altpll.tdf                         ;         ;
+; aglobal221.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/aglobal221.inc                     ;         ;
+; stratix_pll.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/stratix_pll.inc                    ;         ;
+; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/stratixii_pll.inc                  ;         ;
+; cycloneii_pll.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/cycloneii_pll.inc                  ;         ;
+; db/pll_altpll.v                           ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/db/pll_altpll.v                           ;         ;
+; altsyncram.tdf                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altsyncram.tdf                     ;         ;
+; stratix_ram_block.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/stratix_ram_block.inc              ;         ;
+; lpm_mux.inc                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/lpm_mux.inc                        ;         ;
+; lpm_decode.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/lpm_decode.inc                     ;         ;
+; a_rdenreg.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/a_rdenreg.inc                      ;         ;
+; altrom.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altrom.inc                         ;         ;
+; altram.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altram.inc                         ;         ;
+; altdpram.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altdpram.inc                       ;         ;
+; db/altsyncram_iac1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/db/altsyncram_iac1.tdf                    ;         ;
++-------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -397,7 +397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; COMPENSATE_CLOCK              ; CLK0                  ; Untyped                        ;
 ; SCAN_CHAIN                    ; LONG                  ; Untyped                        ;
 ; PRIMARY_CLOCK                 ; INCLK0                ; Untyped                        ;
-; INCLK0_INPUT_FREQUENCY        ; 20000                 ; Signed Integer                 ;
+; INCLK0_INPUT_FREQUENCY        ; 100000                ; Signed Integer                 ;
 ; INCLK1_INPUT_FREQUENCY        ; 0                     ; Untyped                        ;
 ; GATE_LOCK_SIGNAL              ; NO                    ; Untyped                        ;
 ; GATE_LOCK_COUNTER             ; 0                     ; Untyped                        ;
@@ -437,7 +437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK3_DIVIDE_BY                ; 1                     ; Untyped                        ;
 ; CLK2_DIVIDE_BY                ; 1                     ; Untyped                        ;
 ; CLK1_DIVIDE_BY                ; 1                     ; Untyped                        ;
-; CLK0_DIVIDE_BY                ; 5                     ; Signed Integer                 ;
+; CLK0_DIVIDE_BY                ; 1                     ; Signed Integer                 ;
 ; CLK9_PHASE_SHIFT              ; 0                     ; Untyped                        ;
 ; CLK8_PHASE_SHIFT              ; 0                     ; Untyped                        ;
 ; CLK7_PHASE_SHIFT              ; 0                     ; Untyped                        ;
@@ -923,7 +923,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OPERATION_MODE         ; NORMAL                                    ;
 ;     -- PLL_TYPE               ; AUTO                                      ;
 ;     -- PRIMARY_CLOCK          ; INCLK0                                    ;
-;     -- INCLK0_INPUT_FREQUENCY ; 20000                                     ;
+;     -- INCLK0_INPUT_FREQUENCY ; 100000                                    ;
 ;     -- INCLK1_INPUT_FREQUENCY ; 0                                         ;
 ;     -- VCO_MULTIPLY_BY        ; 0                                         ;
 ;     -- VCO_DIVIDE_BY          ; 0                                         ;
@@ -1015,53 +1015,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 11:49:41 2023
+    Info: Processing started: Wed Dec 13 12:10:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj_4 -c proj_4
-Info (20032): Parallel compilation is enabled and will use up to 6 processors
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file tdpdc_ram/tdpdc_ram.vhd
-    Info (12022): Found design unit 1: TDPDC_RAM-rtl File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 35
-    Info (12023): Found entity 1: TDPDC_RAM File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 11
+    Info (12022): Found design unit 1: TDPDC_RAM-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 35
+    Info (12023): Found entity 1: TDPDC_RAM File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file max10_adc/max10_adc.vhd
-    Info (12022): Found design unit 1: max10_adc-wrapper File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd Line: 31
-    Info (12023): Found entity 1: max10_adc File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd Line: 19
+    Info (12022): Found design unit 1: max10_adc-wrapper File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd Line: 31
+    Info (12023): Found entity 1: max10_adc File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/max10_adc/max10_adc.vhd Line: 19
 Info (12021): Found 2 design units, including 0 entities, in source file seven_seg_driver/seven_seg_driver_pkg.vhd
-    Info (12022): Found design unit 1: seven_seg_driver_pkg File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 6
-    Info (12022): Found design unit 2: seven_seg_driver_pkg-body File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 66
+    Info (12022): Found design unit 1: seven_seg_driver_pkg File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 6
+    Info (12022): Found design unit 2: seven_seg_driver_pkg-body File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/seven_seg_driver/seven_seg_driver_pkg.vhd Line: 66
 Info (12021): Found 2 design units, including 1 entities, in source file proj_4.vhd
-    Info (12022): Found design unit 1: proj_4-qq File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 24
-    Info (12023): Found entity 1: proj_4 File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 8
+    Info (12022): Found design unit 1: proj_4-qq File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 24
+    Info (12023): Found entity 1: proj_4 File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file sync_parts/sync_stage.vhd
-    Info (12022): Found design unit 1: sync_stage-sync File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 20
-    Info (12023): Found entity 1: sync_stage File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 4
+    Info (12022): Found design unit 1: sync_stage-sync File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 20
+    Info (12023): Found entity 1: sync_stage File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sync_parts/gray_to_binary_sync.vhd
-    Info (12022): Found design unit 1: gray_to_bin-rtl File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd Line: 14
-    Info (12023): Found entity 1: gray_to_bin File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd Line: 4
+    Info (12022): Found design unit 1: gray_to_bin-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd Line: 14
+    Info (12023): Found entity 1: gray_to_bin File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/gray_to_binary_sync.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sync_parts/binary_to_gray_sync.vhd
-    Info (12022): Found design unit 1: bin_to_gray-rtl File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd Line: 14
-    Info (12023): Found entity 1: bin_to_gray File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd Line: 4
+    Info (12022): Found design unit 1: bin_to_gray-rtl File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd Line: 14
+    Info (12023): Found entity 1: bin_to_gray File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/binary_to_gray_sync.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file proj_4_pkg.vhd
-    Info (12022): Found design unit 1: proj_4_pkg File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4_pkg.vhd Line: 4
+    Info (12022): Found design unit 1: proj_4_pkg File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4_pkg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file producer.vhd
-    Info (12022): Found design unit 1: producer-behavior File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 30
-    Info (12023): Found entity 1: producer File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 5
+    Info (12022): Found design unit 1: producer-behavior File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 30
+    Info (12023): Found entity 1: producer File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file consumer.vhd
-    Info (12022): Found design unit 1: consumer-behavior File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 24
-    Info (12023): Found entity 1: consumer File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 6
+    Info (12022): Found design unit 1: consumer-behavior File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 24
+    Info (12023): Found entity 1: consumer File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-SYN File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 52
-    Info (12023): Found entity 1: pll File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 43
+    Info (12022): Found design unit 1: pll-SYN File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 52
+    Info (12023): Found entity 1: pll File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 43
 Info (12127): Elaborating entity "proj_4" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:clock_10_inst" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 57
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:clock_10_inst|altpll:altpll_component" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
-Info (12130): Elaborated megafunction instantiation "pll:clock_10_inst|altpll:altpll_component" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
-Info (12133): Instantiated megafunction "pll:clock_10_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
+Info (12128): Elaborating entity "pll" for hierarchy "pll:clock_10_inst" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 57
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
+Info (12130): Elaborated megafunction instantiation "pll:clock_10_inst|altpll:altpll_component" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
+Info (12133): Instantiated megafunction "pll:clock_10_inst|altpll:altpll_component" with the following parameter: File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/pll.vhd Line: 134
     Info (12134): Parameter "bandwidth_type" = "AUTO"
-    Info (12134): Parameter "clk0_divide_by" = "5"
+    Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_phase_shift" = "0"
     Info (12134): Parameter "compensate_clock" = "CLK0"
-    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "inclk0_input_frequency" = "100000"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
     Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=pll"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1110,17 +1110,17 @@ Info (12133): Instantiated megafunction "pll:clock_10_inst|altpll:altpll_compone
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/db/pll_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:clock_10_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "producer" for hierarchy "producer:adc_control" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 67
-Info (12128): Elaborating entity "max10_adc" for hierarchy "producer:adc_control|max10_adc:ADC" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 92
-Info (12128): Elaborating entity "consumer" for hierarchy "consumer:segs7_FSM" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 90
-Info (12128): Elaborating entity "sync_stage" for hierarchy "sync_stage:a_to_b_sync" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 110
-Info (12128): Elaborating entity "bin_to_gray" for hierarchy "sync_stage:a_to_b_sync|bin_to_gray:b2g" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 52
-Info (12128): Elaborating entity "gray_to_bin" for hierarchy "sync_stage:a_to_b_sync|gray_to_bin:g2b" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 61
-Info (12128): Elaborating entity "TDPDC_RAM" for hierarchy "TDPDC_RAM:RAM" File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 143
+    Info (12023): Found entity 1: pll_altpll File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/db/pll_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:clock_10_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/22.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "producer" for hierarchy "producer:adc_control" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 67
+Info (12128): Elaborating entity "max10_adc" for hierarchy "producer:adc_control|max10_adc:ADC" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/producer.vhd Line: 92
+Info (12128): Elaborating entity "consumer" for hierarchy "consumer:segs7_FSM" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 90
+Info (12128): Elaborating entity "sync_stage" for hierarchy "sync_stage:a_to_b_sync" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 110
+Info (12128): Elaborating entity "bin_to_gray" for hierarchy "sync_stage:a_to_b_sync|bin_to_gray:b2g" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 52
+Info (12128): Elaborating entity "gray_to_bin" for hierarchy "sync_stage:a_to_b_sync|gray_to_bin:g2b" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/Sync_parts/sync_stage.vhd Line: 61
+Info (12128): Elaborating entity "TDPDC_RAM" for hierarchy "TDPDC_RAM:RAM" File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 143
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "TDPDC_RAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 42
+    Info (276007): RAM logic "TDPDC_RAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 42
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "TDPDC_RAM:RAM|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1154,19 +1154,19 @@ Info (12133): Instantiated megafunction "TDPDC_RAM:RAM|altsyncram:ram_rtl_0" wit
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_iac1.tdf
-    Info (12023): Found entity 1: altsyncram_iac1 File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/db/altsyncram_iac1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_iac1 File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/db/altsyncram_iac1.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "digits[0].dp" is stuck at VCC File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
-    Warning (13410): Pin "digits[1].dp" is stuck at VCC File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
-    Warning (13410): Pin "digits[2].dp" is stuck at VCC File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
+    Warning (13410): Pin "digits[0].dp" is stuck at VCC File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
+    Warning (13410): Pin "digits[1].dp" is stuck at VCC File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
+    Warning (13410): Pin "digits[2].dp" is stuck at VCC File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[0] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[1] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[2] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[3] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[4] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[5] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[0] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[1] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[2] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[3] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[4] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[5] will power up to High File: C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 203 device resources after synthesis - the final resource count might be different
@@ -1176,9 +1176,9 @@ Info (21057): Implemented 203 device resources after synthesis - the final resou
     Info (21064): Implemented 12 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Wed Dec 13 11:49:50 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Wed Dec 13 12:10:46 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

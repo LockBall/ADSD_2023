@@ -66,7 +66,7 @@ set_global_assignment -name VHDL_FILE Sync_parts/binary_to_gray_sync.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 6
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
 set_location_assignment PIN_B8 -to reset
 set_location_assignment PIN_P11 -to clock_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clock_50

@@ -56,7 +56,7 @@ begin
 
 	clock_10_inst : entity work.pll PORT MAP (
 		inclk0	=> clock_10,
-		c0	 		=> pll_clock_10
+		c0	 	=> pll_clock_10
 	);
 
 
