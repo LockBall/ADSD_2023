@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/FPGA/2023/from_git/ADSD_2023/projects/proj_4/output_files/") File("proj_4.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/FPGA/from_git/ADSD_2023/projects/proj_4/output_files/") File("proj_4.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

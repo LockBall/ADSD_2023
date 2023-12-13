@@ -7,14 +7,12 @@ use work.seven_seg_driver_pkg.all;
 
 entity proj_4 is
 	generic (
-		address_width: positive := 6 -- ?? 16
+		address_width: positive := 12 -- ?? 16
 	);
 	port(
     	clock_50	: in  std_logic ; -- pin_P11   MAX10_CLK1_50
 		clock_10	: in std_logic ; 	--PLL, linked to ADC_CLK_10 pin_n5
 		reset		: in  std_logic := '0';  -- pin_B8 active low
-		
-		leds		: out std_logic_vector(9 downto 0);
 		
 		digits	: out seven_seg_config_arr(2 downto 0)
 	);
@@ -54,14 +52,14 @@ architecture qq of proj_4 is
 	
 begin
 
-	clock_10_inst : entity work.pll PORT MAP (
+	clock_10_inst : entity work.clock_10 PORT MAP (
 		inclk0	=> clock_10,
-		c0	 	=> pll_clock_10
+		c0	 		=> pll_clock_10
 	);
 
 
 	digits <= get_digits_output(data_b);
-	leds <= data_b(data_b'high downto data_b'length - leds'length);
+
 
 	-- CLOCK DOMAIN A STUFF
 	adc_control: producer
