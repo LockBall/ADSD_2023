@@ -88,11 +88,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock_50",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clock_50",
 					"strict" : false
 				}
 			]
