@@ -87,11 +87,17 @@ architecture behave of seven_segment_agent is
             elsif write = '1' then -- write operation
                 case address is
                     when "00" => data <= write_data;-- data
-                    when "01" => control <= write_data(1 downto 0); -- control
+
+                    -- set up to only write to bit 1 if decimal support is true
+                    when "01" =>
+                        control(0) <= write_data(0);
+                        if decimal_support = TRUE then
+                            control(1) <= write_data(1);
+                        end if;
+
                     when others => null
                 end case;
             end if;
-
         end if;
         
     end process hw_q_4_5;
