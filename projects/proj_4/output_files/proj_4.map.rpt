@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj_4
-Wed Dec 13 14:01:08 2023
+Wed Dec 13 15:47:19 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 13 14:01:08 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 15:47:19 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; proj_4                                         ;
 ; Top-level Entity Name              ; proj_4                                         ;
@@ -93,7 +93,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; proj_4             ; proj_4             ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Maximum processors allowed for parallel compilation              ; 6                  ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -178,14 +178,14 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 12          ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -1015,9 +1015,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Dec 13 14:00:58 2023
+    Info: Processing started: Wed Dec 13 15:47:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj_4 -c proj_4
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (20032): Parallel compilation is enabled and will use up to 6 processors
 Info (12021): Found 2 design units, including 1 entities, in source file tdpdc_ram/tdpdc_ram.vhd
     Info (12022): Found design unit 1: TDPDC_RAM-rtl File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 35
     Info (12023): Found entity 1: TDPDC_RAM File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/TDPDC_RAM/TDPDC_RAM.vhd Line: 11
@@ -1161,12 +1161,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "digits[2].dp" is stuck at VCC File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/proj_4.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[0] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[1] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[2] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[3] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[4] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
-    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[5] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 84
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[0] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[1] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[2] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[3] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[4] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
+    Critical Warning (18010): Register consumer:segs7_FSM|tail_ptr[5] will power up to High File: C:/FPGA/from_git/ADSD_2023/projects/proj_4/consumer.vhd Line: 83
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 203 device resources after synthesis - the final resource count might be different
@@ -1176,9 +1176,9 @@ Info (21057): Implemented 203 device resources after synthesis - the final resou
     Info (21064): Implemented 12 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Wed Dec 13 14:01:08 2023
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Wed Dec 13 15:47:19 2023
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:19
 
 

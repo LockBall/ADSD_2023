@@ -50,12 +50,17 @@ architecture behavior of producer is
     ) return boolean is
         
     begin
-
-        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
-            return true;
-        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
-            return true;
-        end if;
+		if head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) and tail_pointer = 0) then
+			return true;
+		elsif head_pointer < tail_pointer and tail_pointer - head_pointer > 1 then
+			return true;
+		end if;
+	
+--        if tail_pointer > head_pointer and tail_pointer - head_pointer > 1 then
+--            return true;
+--        elsif head_pointer > tail_pointer and not (head_pointer = (2**ADDR_WIDTH - 1) or tail_pointer = 0) then
+--            return true;
+--        end if;
 
         return false;
     end function can_advance;
@@ -79,7 +84,7 @@ begin
     clock_1 <= adc_clock; -- Hook up clock to output clock to drive RAM
 
     head <= head_ptr; -- Need a head pointer variable because we cant drive signals with out signal
-    data <= std_logic_vector(to_unsigned(adc_data, 12)); -- Convert data to std_logic_vector
+    data <= std_logic_vector(to_unsigned(adc_data, data'length)); -- Convert data to std_logic_vector
     head_can_advance <= can_advance(head_ptr, tail); -- Checks if the head can advance
 
 
@@ -100,7 +105,7 @@ begin
     -- Process runs every clock cycle because state is driven by the clock
     -- eoc triggers the process on an end of conversion value change
     -- Head can advance triggers the process once the head can advance
-    transition: process(state, conversion_end, head_can_advance) is
+    transition: process(state, conversion_end, head_can_advance, head_ptr, tail) is
     begin
         case state is
             when start =>
@@ -108,10 +113,14 @@ begin
             when wait_for_eoc =>
                 if conversion_end = '1' then
                     next_state <= wait_for_head_advance;
+				else
+					next_state <= wait_for_eoc;
                 end if;
             when wait_for_head_advance =>
                 if head_can_advance then
                     next_state <= advance_and_store;
+				else
+					next_state <= wait_for_head_advance;
                 end if;
             when advance_and_store =>
                 next_state <= start;
@@ -131,27 +140,25 @@ begin
     output_function: process(adc_clock, reset) is
     begin
         if reset = '0' then
-				head_ptr <= 0;
-				
+			head_ptr <= 0;
             conversion_start <= '0';
             write_enable <= '0';
         elsif rising_edge(adc_clock) then
---            conversion_start <= '0';
---            write_enable <= '0';
-            case state is
-                when start =>
-                    conversion_start <= '1';
-                when wait_for_eoc =>
-                    conversion_start <= '0';
-                when wait_for_head_advance => null;
-                when advance_and_store =>
-                    write_enable <= '1';
-                    if head_ptr = (2**ADDR_WIDTH - 1) then
-                        head_ptr <= 0;
-                    else
-                        head_ptr <= head_ptr + 1;
-                    end if;
-            end case;
+			if state = start or state = wait_for_eoc then
+				conversion_start <= '1';
+			else
+				conversion_start <= '0';
+			end if;
+			if state = advance_and_store then
+				write_enable <= '1';
+				if head_ptr = (2**ADDR_WIDTH - 1) then
+					head_ptr <= 0;
+				else
+					head_ptr <= head_ptr + 1;
+				end if;
+			else
+				write_enable <= '0';
+			end if;
         end if;
     end process output_function;
 
