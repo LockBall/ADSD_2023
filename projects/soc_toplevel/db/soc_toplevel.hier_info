@@ -1,0 +1,5 @@
+|soc_toplevel
+clk => ~NO_FANOUT~
+reset_n => ~NO_FANOUT~
+
+

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1702515218" />
+    <testcase name="testbench" classname="tb_toplevel_wrapper" file="/mnt/c/FPGA/from_git/ADSD_2023/projects/proj_5/sim/tb_toplevel_wrapper.py" lineno="141" time="60.68596816062927" sim_time_ns="2220.000001" ratio_time="36.58176788288023" />
+  </testsuite>
+</testsuites>
