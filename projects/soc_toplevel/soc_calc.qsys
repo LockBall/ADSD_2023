@@ -73,13 +73,13 @@
   <parameter name="lamp_mode_common_anode" value="true" />
   <parameter name="revision" value="0" />
  </module>
- <module name="clk_0" kind="clock_source" version="20.1" enabled="1">
+ <module name="clk_0" kind="clock_source" version="22.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module name="hps_0" kind="altera_hps" version="20.1" enabled="1">
+ <module name="hps_0" kind="altera_hps" version="22.1" enabled="1">
   <parameter name="ABSTRACT_REAL_COMPARE_TEST" value="false" />
   <parameter name="ABS_RAM_MEM_INIT_FILENAME" value="meminit" />
   <parameter name="ACV_PHY_CLK_ADD_FR_PHASE" value="0.0" />
@@ -611,7 +611,7 @@
  </module>
  <connection
    kind="avalon"
-   version="20.1"
+   version="22.1"
    start="hps_0.h2f_lw_axi_master"
    end="ads_seven_segment_0.avalon_agent_1">
   <parameter name="arbitrationPriority" value="1" />
@@ -620,17 +620,17 @@
  </connection>
  <connection
    kind="clock"
-   version="20.1"
+   version="22.1"
    start="clk_0.clk"
    end="ads_seven_segment_0.clock" />
  <connection
    kind="clock"
-   version="20.1"
+   version="22.1"
    start="clk_0.clk"
    end="hps_0.h2f_lw_axi_clock" />
  <connection
    kind="reset"
-   version="20.1"
+   version="22.1"
    start="clk_0.clk_reset"
    end="ads_seven_segment_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

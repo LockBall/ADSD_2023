@@ -1,0 +1,21 @@
+# system info soc_calc on 2023.12.15.15:22:20
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1702671719
+#
+#
+# Files generated for soc_calc on 2023.12.15.15:22:20
+files:
+filepath,kind,attributes,module,is_top
+simulation/soc_calc.vhd,VHDL,,soc_calc,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+soc_calc.ads_seven_segment_0,soc_calc_ads_seven_segment_0
+soc_calc.hps_0,soc_calc_hps_0
+soc_calc.mm_interconnect_0,soc_calc_mm_interconnect_0
+soc_calc.rst_controller,altera_reset_controller
+soc_calc.rst_controller_001,altera_reset_controller

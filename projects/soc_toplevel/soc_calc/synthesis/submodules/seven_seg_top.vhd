@@ -9,18 +9,19 @@ entity seven_segment_agent  is
 		lamp_mode_common_anode: boolean := true;
 		--lamp_mode       : lamp_configuration := default_lamp_config;
 		decimal_support : boolean            := TRUE;
-		implementer     : natural range 0 to 255 := 100;
-        revision        : natural range 0 to 255 := 0
+		implementer     : natural range 0 to 255 := 100;  -- vendor ID
+      revision       : natural range 0 to 255 := 0
 	);
 	port (
 		clk       : in  std_logic;
 		reset_n   : in  std_logic;
 		address   : in  std_logic_vector(1 downto 0);
 		read      : in  std_logic;
+      write     : in  std_logic;
+      writedata : in  std_logic_vector(31 downto 0);		
+		
 		readdata  : out std_logic_vector(31 downto 0);
-        write     : in  std_logic;
-        writedata : in  std_logic_vector(31 downto 0);
-        lamps     : out std_logic_vector(41 downto 0)
+      lamps     : out std_logic_vector(41 downto 0)
 	);
 end entity seven_segment_agent;
 

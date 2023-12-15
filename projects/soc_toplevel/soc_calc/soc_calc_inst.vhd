@@ -49,6 +49,7 @@
 			hps_io_hps_io_i2c0_inst_SCL     : inout std_logic                     := 'X';             -- hps_io_i2c0_inst_SCL
 			hps_io_hps_io_i2c1_inst_SDA     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SDA
 			hps_io_hps_io_i2c1_inst_SCL     : inout std_logic                     := 'X';             -- hps_io_i2c1_inst_SCL
+			lamps_export                    : out   std_logic_vector(41 downto 0);                    -- export
 			memory_mem_a                    : out   std_logic_vector(14 downto 0);                    -- mem_a
 			memory_mem_ba                   : out   std_logic_vector(2 downto 0);                     -- mem_ba
 			memory_mem_ck                   : out   std_logic;                                        -- mem_ck
@@ -65,8 +66,7 @@
 			memory_mem_odt                  : out   std_logic;                                        -- mem_odt
 			memory_mem_dm                   : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_oct_rzqin                : in    std_logic                     := 'X';             -- oct_rzqin
-			reset_reset_n                   : in    std_logic                     := 'X';             -- reset_n
-			lamps_export                    : out   std_logic_vector(41 downto 0)                     -- export
+			reset_reset_n                   : in    std_logic                     := 'X'              -- reset_n
 		);
 	end component soc_calc;
 
@@ -121,6 +121,7 @@
 			hps_io_hps_io_i2c0_inst_SCL     => CONNECTED_TO_hps_io_hps_io_i2c0_inst_SCL,     --       .hps_io_i2c0_inst_SCL
 			hps_io_hps_io_i2c1_inst_SDA     => CONNECTED_TO_hps_io_hps_io_i2c1_inst_SDA,     --       .hps_io_i2c1_inst_SDA
 			hps_io_hps_io_i2c1_inst_SCL     => CONNECTED_TO_hps_io_hps_io_i2c1_inst_SCL,     --       .hps_io_i2c1_inst_SCL
+			lamps_export                    => CONNECTED_TO_lamps_export,                    --  lamps.export
 			memory_mem_a                    => CONNECTED_TO_memory_mem_a,                    -- memory.mem_a
 			memory_mem_ba                   => CONNECTED_TO_memory_mem_ba,                   --       .mem_ba
 			memory_mem_ck                   => CONNECTED_TO_memory_mem_ck,                   --       .mem_ck
@@ -137,7 +138,6 @@
 			memory_mem_odt                  => CONNECTED_TO_memory_mem_odt,                  --       .mem_odt
 			memory_mem_dm                   => CONNECTED_TO_memory_mem_dm,                   --       .mem_dm
 			memory_oct_rzqin                => CONNECTED_TO_memory_oct_rzqin,                --       .oct_rzqin
-			reset_reset_n                   => CONNECTED_TO_reset_reset_n,                   --  reset.reset_n
-			lamps_export                    => CONNECTED_TO_lamps_export                     --  lamps.export
+			reset_reset_n                   => CONNECTED_TO_reset_reset_n                    --  reset.reset_n
 		);
 

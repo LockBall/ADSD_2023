@@ -16,11 +16,12 @@ preplace inst soc_calc.hps_0.gpio2 -pg 1
 preplace inst soc_calc.hps_0.timer3 -pg 1
 preplace inst soc_calc.hps_0.L2 -pg 1
 preplace inst soc_calc.hps_0.fpga_interfaces -pg 1
+preplace inst soc_calc.ads_seven_segment_0 -pg 1 -lvl 3 -y 40
 preplace inst soc_calc.hps_0.sdrctl -pg 1
 preplace inst soc_calc.hps_0.sdmmc -pg 1
 preplace inst soc_calc.hps_0.nand0 -pg 1
 preplace inst soc_calc.hps_0.wd_timer0 -pg 1
-preplace inst soc_calc.hps_0 -pg 1 -lvl 2 -y 90
+preplace inst soc_calc.hps_0 -pg 1 -lvl 2 -y 130
 preplace inst soc_calc.hps_0.timer -pg 1
 preplace inst soc_calc.hps_0.gmac0 -pg 1
 preplace inst soc_calc.hps_0.i2c0 -pg 1
@@ -43,7 +44,7 @@ preplace inst soc_calc.hps_0.sysmgr -pg 1
 preplace inst soc_calc.hps_0.arm_gic_0 -pg 1
 preplace inst soc_calc.hps_0.bridges -pg 1
 preplace inst soc_calc.hps_0.hps_io.border -pg 1
-preplace inst soc_calc.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst soc_calc.clk_0 -pg 1 -lvl 1 -y 70
 preplace inst soc_calc.hps_0.axi_sdram -pg 1
 preplace inst soc_calc.hps_0.qspi -pg 1
 preplace inst soc_calc.hps_0.uart0 -pg 1
@@ -53,10 +54,13 @@ preplace inst soc_calc.hps_0.eosc1 -pg 1
 preplace inst soc_calc.hps_0.rstmgr -pg 1
 preplace inst soc_calc.hps_0.f2s_sdram_ref_clk -pg 1
 preplace inst soc_calc.hps_0.eosc2 -pg 1
-preplace netloc POINT_TO_POINT<net_container>soc_calc</net_container>(MASTER)clk_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock) 1 1 1 260
-preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)soc_calc.hps_io,(SLAVE)hps_0.hps_io) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)hps_0.hps_io,(SLAVE)soc_calc.hps_io) 1 0 2 NJ 60 NJ
+preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)ads_seven_segment_0.lamps,(SLAVE)soc_calc.lamps) 1 0 3 NJ 40 NJ 40 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_calc</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)ads_seven_segment_0.avalon_agent_1) 1 2 1 650
+preplace netloc FAN_OUT<net_container>soc_calc</net_container>(MASTER)clk_0.clk,(SLAVE)ads_seven_segment_0.clock,(SLAVE)hps_0.h2f_lw_axi_clock) 1 1 2 280 70 N
 preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)soc_calc.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_calc</net_container>(SLAVE)ads_seven_segment_0.reset,(MASTER)clk_0.clk_reset) 1 1 2 NJ 90 610
 preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)soc_calc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)soc_calc.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 140 NJ
-levelinfo -pg 1 0 50 580
-levelinfo -hier soc_calc 60 90 380 570
+preplace netloc EXPORT<net_container>soc_calc</net_container>(SLAVE)soc_calc.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 180 NJ
+levelinfo -pg 1 0 50 840
+levelinfo -hier soc_calc 60 90 420 690 830

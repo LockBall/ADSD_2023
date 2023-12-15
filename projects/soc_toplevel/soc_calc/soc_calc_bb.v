@@ -49,6 +49,7 @@ module soc_calc (
 	hps_io_hps_io_i2c0_inst_SCL,
 	hps_io_hps_io_i2c1_inst_SDA,
 	hps_io_hps_io_i2c1_inst_SCL,
+	lamps_export,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -65,8 +66,7 @@ module soc_calc (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
-	reset_reset_n,
-	lamps_export);	
+	reset_reset_n);	
 
 	input		clk_clk;
 	output		hps_io_hps_io_emac1_inst_TX_CLK;
@@ -117,6 +117,7 @@ module soc_calc (
 	inout		hps_io_hps_io_i2c0_inst_SCL;
 	inout		hps_io_hps_io_i2c1_inst_SDA;
 	inout		hps_io_hps_io_i2c1_inst_SCL;
+	output	[41:0]	lamps_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -134,5 +135,4 @@ module soc_calc (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
-	output	[41:0]	lamps_export;
 endmodule

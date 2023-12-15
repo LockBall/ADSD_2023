@@ -1,0 +1,247 @@
+IP Upgrade report for soc_toplevel
+Fri Dec 15 15:24:01 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; IP Upgrade Summary                                                            ;
++------------------------------+------------------------------------------------+
+; IP Components Upgrade Status ; Passed - Fri Dec 15 15:24:01 2023              ;
+; Quartus Prime Version        ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                ; soc_toplevel                                   ;
+; Top-level Entity Name        ; soc_toplevel                                   ;
+; Family                       ; Cyclone V                                      ;
++------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                               ;
++-------------+----------------+---------+---------------------------------+----------------------+-----------------+--------------------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File            ; Generation File Path ; New Source File ; Message                                                ;
++-------------+----------------+---------+---------------------------------+----------------------+-----------------+--------------------------------------------------------+
+; soc_calc    ; Qsys           ; 20.1    ; soc_calc/synthesis/soc_calc.qip ; soc_calc.qsys        ;                 ; Error upgrading Platform Designer file "soc_calc.qsys" ;
++-------------+----------------+---------+---------------------------------+----------------------+-----------------+--------------------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "soc_calc.qsys" to "soc_calc.BAK.qsys"
+Info (11902): Backing up file "soc_calc/synthesis/soc_calc.vhd" to "soc_calc.BAK.vhd"
+Info (11837): Started upgrading IP component Qsys with file "soc_calc.qsys"
+Info: 2023.12.15.15:21:24 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2023.12.15.15:21:24 Info: Finished upgrading the ip cores
+Info: 2023.12.15.15:21:45 Info: Saving generation log to C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc
+Info: 2023.12.15.15:21:46 Info: Starting: Create simulation model
+Info: 2023.12.15.15:21:46 Info: qsys-generate C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2023.12.15.15:21:46 Info: Loading soc_toplevel
+Info: 2023.12.15.15:21:46 Info: Reading input file
+Info: 2023.12.15.15:21:46 Info: Adding ads_seven_segment_0 [ads_seven_segment 1.0]
+Info: 2023.12.15.15:21:46 Info: Parameterizing module ads_seven_segment_0
+Info: 2023.12.15.15:21:46 Info: Adding clk_0 [clock_source 22.1]
+Info: 2023.12.15.15:21:46 Info: Parameterizing module clk_0
+Info: 2023.12.15.15:21:46 Info: Adding hps_0 [altera_hps 22.1]
+Info: 2023.12.15.15:21:46 Info: Parameterizing module hps_0
+Info: 2023.12.15.15:21:46 Info: Building connections
+Info: 2023.12.15.15:21:46 Info: Parameterizing connections
+Info: 2023.12.15.15:21:46 Info: Validating
+Info: 2023.12.15.15:21:55 Info: Done reading input file
+Info: 2023.12.15.15:21:59 Info: soc_calc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.12.15.15:21:59 Info: soc_calc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.12.15.15:21:59 Warning: soc_calc.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.12.15.15:21:59 Warning: soc_calc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.12.15.15:22:01 Info: soc_calc: Generating soc_calc "soc_calc" for SIM_VHDL
+Info: 2023.12.15.15:22:07 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave ads_seven_segment_0.avalon_agent_1 because the master is of type axi and the slave is of type avalon.
+Error: 2023.12.15.15:22:20 Error: ads_seven_segment_0: ads_seven_segment does not support generation for VHDL Simulation. Generation is available for: Quartus Synthesis.
+Error: 2023.12.15.15:22:20 Error: Generation stopped, 4 or more modules remaining
+Info: 2023.12.15.15:22:20 Info: soc_calc: Done "soc_calc" with 5 modules, 1 files
+Error: 2023.12.15.15:22:20 Error: qsys-generate failed with exit code 1: 2 Errors, 3 Warnings
+Info: 2023.12.15.15:22:20 Info: Finished: Create simulation model
+Info: 2023.12.15.15:22:20 Info: Starting: Create Modelsim Project.
+Info: 2023.12.15.15:22:20 Info: sim-script-gen --spd=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc\soc_calc.spd --output-directory=C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/simulation
+Info: 2023.12.15.15:22:20 Info: Doing: ip-make-simscript --spd=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc\soc_calc.spd --output-directory=C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/simulation
+Info: 2023.12.15.15:22:21 Info: Generating the following file(s) for MODELSIM simulator in C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/simulation
+Info: 2023.12.15.15:22:22 Info:     mentor
+Info: 2023.12.15.15:22:22 Info: Generating the following file(s) for RIVIERA simulator in C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/simulation
+Info: 2023.12.15.15:22:22 Info:     aldec
+Info: 2023.12.15.15:22:22 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/simulation
+Info: 2023.12.15.15:22:22 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2023.12.15.15:22:22 Info: Finished: Create Modelsim Project.
+Info: 2023.12.15.15:22:22 Info: Starting: Create block symbol file (.bsf)
+Info: 2023.12.15.15:22:22 Info: qsys-generate C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc.qsys --block-symbol-file --output-directory=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2023.12.15.15:22:22 Info: Loading soc_toplevel
+Info: 2023.12.15.15:22:23 Info: Reading input file
+Info: 2023.12.15.15:22:23 Info: Adding ads_seven_segment_0 [ads_seven_segment 1.0]
+Info: 2023.12.15.15:22:23 Info: Parameterizing module ads_seven_segment_0
+Info: 2023.12.15.15:22:23 Info: Adding clk_0 [clock_source 22.1]
+Info: 2023.12.15.15:22:23 Info: Parameterizing module clk_0
+Info: 2023.12.15.15:22:23 Info: Adding hps_0 [altera_hps 22.1]
+Info: 2023.12.15.15:22:23 Info: Parameterizing module hps_0
+Info: 2023.12.15.15:22:23 Info: Building connections
+Info: 2023.12.15.15:22:23 Info: Parameterizing connections
+Info: 2023.12.15.15:22:23 Info: Validating
+Info: 2023.12.15.15:22:40 Info: Done reading input file
+Info: 2023.12.15.15:22:46 Info: soc_calc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.12.15.15:22:46 Info: soc_calc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.12.15.15:22:46 Warning: soc_calc.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.12.15.15:22:46 Warning: soc_calc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.12.15.15:22:46 Info: qsys-generate succeeded.
+Info: 2023.12.15.15:22:46 Info: Finished: Create block symbol file (.bsf)
+Info: 2023.12.15.15:22:46 Info:
+Info: 2023.12.15.15:22:46 Info: Starting: Create HDL design files for synthesis
+Info: 2023.12.15.15:22:46 Info: qsys-generate C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc.qsys --synthesis=VHDL --output-directory=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2023.12.15.15:22:46 Info: Loading soc_toplevel
+Info: 2023.12.15.15:22:47 Info: Reading input file
+Info: 2023.12.15.15:22:47 Info: Adding ads_seven_segment_0 [ads_seven_segment 1.0]
+Info: 2023.12.15.15:22:47 Info: Parameterizing module ads_seven_segment_0
+Info: 2023.12.15.15:22:47 Info: Adding clk_0 [clock_source 22.1]
+Info: 2023.12.15.15:22:47 Info: Parameterizing module clk_0
+Info: 2023.12.15.15:22:47 Info: Adding hps_0 [altera_hps 22.1]
+Info: 2023.12.15.15:22:47 Info: Parameterizing module hps_0
+Info: 2023.12.15.15:22:47 Info: Building connections
+Info: 2023.12.15.15:22:47 Info: Parameterizing connections
+Info: 2023.12.15.15:22:47 Info: Validating
+Info: 2023.12.15.15:22:56 Info: Done reading input file
+Info: 2023.12.15.15:23:01 Info: soc_calc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.12.15.15:23:01 Info: soc_calc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.12.15.15:23:01 Warning: soc_calc.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.12.15.15:23:01 Warning: soc_calc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.12.15.15:23:03 Info: soc_calc: Generating soc_calc "soc_calc" for QUARTUS_SYNTH
+Info: 2023.12.15.15:23:08 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave ads_seven_segment_0.avalon_agent_1 because the master is of type axi and the slave is of type avalon.
+Info: 2023.12.15.15:23:15 Info: ads_seven_segment_0: "soc_calc" instantiated ads_seven_segment "ads_seven_segment_0"
+Info: 2023.12.15.15:23:15 Info: hps_0: "Running  for module: hps_0"
+Info: 2023.12.15.15:23:15 Info: hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2023.12.15.15:23:16 Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2023.12.15.15:23:16 Warning: hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2023.12.15.15:23:16 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2023.12.15.15:23:21 Info: hps_0: "soc_calc" instantiated altera_hps "hps_0"
+Info: 2023.12.15.15:23:24 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2023.12.15.15:23:26 Info: mm_interconnect_0: "soc_calc" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2023.12.15.15:23:26 Info: rst_controller: "soc_calc" instantiated altera_reset_controller "rst_controller"
+Info: 2023.12.15.15:23:26 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: 2023.12.15.15:23:28 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: 2023.12.15.15:23:28 Info: ads_seven_segment_0_avalon_agent_1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ads_seven_segment_0_avalon_agent_1_translator"
+Info: 2023.12.15.15:23:28 Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: 2023.12.15.15:23:28 Info: ads_seven_segment_0_avalon_agent_1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ads_seven_segment_0_avalon_agent_1_agent"
+Info: 2023.12.15.15:23:28 Info: ads_seven_segment_0_avalon_agent_1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ads_seven_segment_0_avalon_agent_1_agent_rsp_fifo"
+Info: 2023.12.15.15:23:28 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2023.12.15.15:23:28 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: 2023.12.15.15:23:29 Info: ads_seven_segment_0_avalon_agent_1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "ads_seven_segment_0_avalon_agent_1_burst_adapter"
+Info: 2023.12.15.15:23:29 Info: Reusing file C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/synthesis/submodules
+Info: 2023.12.15.15:23:29 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2023.12.15.15:23:29 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2023.12.15.15:23:29 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2023.12.15.15:23:29 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2023.12.15.15:23:29 Info: Reusing file C:/FPGA/from_git/ADSD_2023/projects/soc_toplevel/soc_calc/synthesis/submodules
+Info: 2023.12.15.15:23:30 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Error: 2023.12.15.15:23:54 Error: border: Error during execution of script generate_hps_sdram.tcl: seq: Nios II Command Shell.bat requires Windows Subsystem for Linux (WSL) to run.
+Error: 2023.12.15.15:23:54 Error: border: Error during execution of script generate_hps_sdram.tcl: seq: Please install WSL and try again.
+Error: 2023.12.15.15:23:54 Error: border: Error during execution of script generate_hps_sdram.tcl: seq: child process exited abnormally
+Error: 2023.12.15.15:23:54 Error: border: Error during execution of script generate_hps_sdram.tcl: seq: add_fileset_file: No such file C:/Users/John/AppData/Local/Temp/alt9706_512640297223047825.dir/0004_seq_gen
+Error: 2023.12.15.15:23:54 Error: border: Error during execution of script generate_hps_sdram.tcl: Generation stopped, 3 or more modules remaining
+Error: 2023.12.15.15:23:54 Error: border: Execution of script generate_hps_sdram.tcl failed
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:32 Info:
+Error: 2023.12.15.15:23:54 Error: border: ********************************************************************************************************************
+Error: 2023.12.15.15:23:54 Error: border:
+Error: 2023.12.15.15:23:54 Error: border: Use qsys-generate for a simpler command-line interface for generating IP.
+Error: 2023.12.15.15:23:54 Error: border:
+Error: 2023.12.15.15:23:54 Error: border: Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
+Error: 2023.12.15.15:23:54 Error: border:
+Error: 2023.12.15.15:23:54 Error: border: ********************************************************************************************************************
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:36 Warning: Ignored parameter assignment device=5CSEMA5F31C6
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:36 Warning: Ignored parameter assignment extended_family_support=true
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram: 'Quick' simulation modes are NOT timing accurate. Some simulation memory models may issue warnings or errors
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.seq: This module has no ports or interfaces
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.p0: p0.scc must be exported, or connected to a matching conduit.
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.as: as.afi_init_cal_req must be exported, or connected to a matching conduit.
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.as: as.tracking must be exported, or connected to a matching conduit.
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.c0: c0.status must be exported, or connected to a matching conduit.
+Warning: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Warning: hps_sdram.p0: p0.avl must be connected to an Avalon-MM master
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:40 Info: hps_sdram: Generating altera_mem_if_hps_emif "hps_sdram" for QUARTUS_SYNTH
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:43 Info: pll: "hps_sdram" instantiated altera_mem_if_hps_pll "pll"
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:43 Info: p0: Generating clock pair generator
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:45 Info: p0: Generating hps_sdram_p0_altdqdqs
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0:
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0: *****************************
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0:
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0: Remember to run the hps_sdram_p0_pin_assignments.tcl
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0: script after running Synthesis and before Fitting.
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0:
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0: *****************************
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0:
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:52 Info: p0: "hps_sdram" instantiated altera_mem_if_ddr3_hard_phy_core "p0"
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:53 Error: seq: Nios II Command Shell.bat requires Windows Subsystem for Linux (WSL) to run.
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:53 Error: seq: Please install WSL and try again.
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:53 Error: seq: child process exited abnormally
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:53 Error: seq: add_fileset_file: No such file C:/Users/John/AppData/Local/Temp/alt9706_512640297223047825.dir/0004_seq_gen
+Error: 2023.12.15.15:23:54 Error: border: while executing
+Error: 2023.12.15.15:23:54 Error: border: "add_fileset_file $file_name [::alt_mem_if::util::hwtcl_utils::get_file_type $file_name 0] PATH $file_pathname"
+Error: 2023.12.15.15:23:54 Error: border: ("foreach" body line 4)
+Error: 2023.12.15.15:23:54 Error: border: invoked from within
+Error: 2023.12.15.15:23:54 Error: border: "foreach file_pathname $return_files_sw {
+Error: 2023.12.15.15:23:54 Error: border:         _dprint 1 "Preparing to add $file_pathname"
+Error: 2023.12.15.15:23:54 Error: border:         set file_name [file tail $file_pathname]
+Error: 2023.12.15.15:23:54 Error: border:         add_fileset_file $..."
+Error: 2023.12.15.15:23:54 Error: border: (procedure "generate_sw" line 18)
+Error: 2023.12.15.15:23:54 Error: border: invoked from within
+Error: 2023.12.15.15:23:54 Error: border: "generate_sw $name $fileset"
+Error: 2023.12.15.15:23:54 Error: border: ("if" then script line 4)
+Error: 2023.12.15.15:23:54 Error: border: invoked from within
+Error: 2023.12.15.15:23:54 Error: border: "if {[string compare -nocase $fileset QUARTUS_SYNTH] == 0} {
+Error: 2023.12.15.15:23:54 Error: border:         set top_level_file "altera_mem_if_hhp_qseq_synth_top.v"
+Error: 2023.12.15.15:23:54 Error: border:         add_fileset_file $top_level_fi..."
+Error: 2023.12.15.15:23:54 Error: border: (procedure "generate_files" line 4)
+Error: 2023.12.15.15:23:54 Error: border: invoked from within
+Error: 2023.12.15.15:23:54 Error: border: "generate_files $name QUARTUS_SYNTH"
+Error: 2023.12.15.15:23:54 Error: border: (procedure "generate_synth" line 3)
+Error: 2023.12.15.15:23:54 Error: border: invoked from within
+Error: 2023.12.15.15:23:54 Error: border: "generate_synth altera_mem_if_hhp_qseq_synth_top"
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:54 Info: seq: "hps_sdram" instantiated altera_mem_if_hhp_ddr3_qseq "seq"
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:54 Error: Generation stopped, 3 or more modules remaining
+Error: 2023.12.15.15:23:54 Error: border: 2023.12.15.15:23:54 Info: hps_sdram: Done "hps_sdram" with 7 modules, 33 files
+Info: 2023.12.15.15:23:55 Info: border: "hps_io" instantiated altera_interface_generator "border"
+Error: 2023.12.15.15:23:55 Error: Generation stopped, 1 or more modules remaining
+Info: 2023.12.15.15:23:55 Info: soc_calc: Done "soc_calc" with 21 modules, 69 files
+Error: 2023.12.15.15:23:56 Error: qsys-generate failed with exit code 1: 70 Errors, 6 Warnings
+Info: 2023.12.15.15:23:56 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "soc_calc.BAK.qsys" to "soc_calc.qsys"
+Error (14923): Error upgrading Platform Designer file "soc_calc.qsys"
+Error (11890): Unable to automatically upgrade Platform Designer component. Please manually upgrade "soc_calc.qsys" in Platform Designer
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/22.1std/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 68 errors, 21 warnings
+    Error: Peak virtual memory: 4877 megabytes
+    Error: Processing ended: Fri Dec 15 15:24:07 2023
+    Error: Elapsed time: 00:03:16
+    Error: Total CPU time (on all processors): 00:05:09
+
+

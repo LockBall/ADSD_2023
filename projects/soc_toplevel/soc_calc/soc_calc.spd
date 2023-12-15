@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="simulation/soc_calc.vhd" type="VHDL" />
+ <topLevel name="soc_calc" />
+ <deviceFamily name="cyclonev" />
+ <modelMap controllerPath="soc_calc.hps_0" modelPath="soc_calc.hps_0" />
+ <modelMap
+   controllerPath="soc_calc.hps_0.fpga_interfaces"
+   modelPath="soc_calc.hps_0.fpga_interfaces" />
+ <modelMap
+   controllerPath="soc_calc.hps_0.hps_io"
+   modelPath="soc_calc.hps_0.hps_io" />
+</simPackage>

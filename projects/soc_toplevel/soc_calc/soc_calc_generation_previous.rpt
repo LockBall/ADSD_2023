@@ -1,0 +1,21 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc.qsys --block-symbol-file --output-directory=C:\FPGA\from_git\ADSD_2023\projects\soc_toplevel\soc_calc --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading soc_toplevel/soc_calc.qsys
+Progress: Reading input file
+Progress: Adding ads_seven_segment_0 [ads_seven_segment 1.0]
+Progress: Parameterizing module ads_seven_segment_0
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 22.1]
+Progress: Parameterizing module hps_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_calc.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: soc_calc.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: soc_calc.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: soc_calc.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: soc_calc.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: qsys-generate succeeded.
+Info: Stopping: Create block symbol file (.bsf)
