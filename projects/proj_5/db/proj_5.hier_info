@@ -1,0 +1,5 @@
+|proj_5
+clk => ~NO_FANOUT~
+reset_n => ~NO_FANOUT~
+
+

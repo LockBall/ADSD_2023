@@ -13,14 +13,14 @@ entity seven_segment_agent  is
         revision        : natural range 0 to 255 := 0
 	);
 	port (
-		clk      : in  std_logic;
-		reset_n    : in  std_logic;
-		address    : in std_logic_vector(1 downto 0);
-		read       : in std_logic;
+		clk       : in  std_logic;
+		reset_n   : in  std_logic;
+		address   : in  std_logic_vector(1 downto 0);
+		read      : in  std_logic;
 		readdata  : out std_logic_vector(31 downto 0);
-        write      : in  std_logic;
+        write     : in  std_logic;
         writedata : in  std_logic_vector(31 downto 0);
-        lamps      : out std_logic_vector(41 downto 0)
+        lamps     : out std_logic_vector(41 downto 0)
 	);
 end entity seven_segment_agent;
 
@@ -52,6 +52,7 @@ architecture behave of seven_segment_agent is
 
 		return ret_slv;
 	end function concat_ssc;
+
 	
 	function to_bcd (
 		data_value: in std_logic_vector(15 downto 0)
@@ -59,7 +60,7 @@ architecture behave of seven_segment_agent is
 	is
 		variable ret: std_logic_vector(19 downto 0);
 		variable temp: std_logic_vector(data_value'range);
-	begin
+begin
 		temp	:= data_value;
 		ret	:= (others => '0');
 
@@ -76,6 +77,7 @@ architecture behave of seven_segment_agent is
 		end loop;
 		return ret;
 	end function to_bcd;
+
 	
 	function get_digits_output (
 			data_in: in std_logic_vector(23 downto 0)
@@ -92,6 +94,7 @@ architecture behave of seven_segment_agent is
 	end function get_digits_output;
 
 	signal digits_vector: std_logic_vector(23 downto 0) := (others => '0');
+
 	
 	function all_lamps_off
 		return seven_seg_config_arr

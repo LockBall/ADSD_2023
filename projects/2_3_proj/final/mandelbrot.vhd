@@ -26,6 +26,7 @@ entity mandelbrot is
 	);
 end entity mandelbrot;
 
+
 architecture top of mandelbrot is
 
 	component vga_fsm is
